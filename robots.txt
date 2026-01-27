@@ -1,0 +1,16 @@
+# Robots.txt - WeBoat Brasil
+# https://www.weboatbrasil.com.br
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.weboatbrasil.com.br/sitemap.xml
+
+# Bloquear diretórios de desenvolvimento
+Disallow: /templates/
+Disallow: /docs/
+
+# Bloquear arquivos de configuração
+Disallow: /*.md$
+Disallow: /CLAUDE.md

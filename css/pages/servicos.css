@@ -1,0 +1,518 @@
+/* ============================================
+   WEBOAT BRASIL - SERVIÇOS CSS
+   Página de Serviços Extras
+   ============================================ */
+
+/* ============================================
+   HERO SERVIÇOS
+   ============================================ */
+.servicos-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-16) 0;
+}
+
+.servicos-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero-overlay);
+  z-index: 1;
+}
+
+.servicos-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.servicos-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.servicos-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.servicos-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--white);
+  line-height: var(--line-display);
+  margin-bottom: var(--space-4);
+}
+
+.servicos-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .servicos-hero {
+    min-height: 40vh;
+    padding: var(--space-12) 0;
+  }
+
+  .servicos-hero__title {
+    font-size: var(--text-h1);
+  }
+}
+
+/* ============================================
+   SEÇÃO SERVIÇOS
+   ============================================ */
+.servicos-section {
+  padding: var(--space-16) 0;
+}
+
+.servicos-section--alt {
+  background: var(--pearl-gray);
+}
+
+/* ============================================
+   SERVIÇO DESTAQUE
+   ============================================ */
+.servico-destaque {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.servico-destaque--reverse {
+  direction: rtl;
+}
+
+.servico-destaque--reverse > * {
+  direction: ltr;
+}
+
+.servico-destaque__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.servico-destaque__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.servico-destaque__content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.servico-destaque__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  width: fit-content;
+}
+
+.servico-destaque__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  line-height: var(--line-heading);
+}
+
+.servico-destaque__description {
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+
+.servico-destaque__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.servico-destaque__price-label {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+.servico-destaque__price-value {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+.servico-destaque__price-note {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+@media (max-width: 1024px) {
+  .servico-destaque {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .servico-destaque--reverse {
+    direction: ltr;
+  }
+}
+
+/* ============================================
+   OPÇÕES DO SERVIÇO
+   ============================================ */
+.servico-opcoes {
+  margin-top: var(--space-8);
+}
+
+.servico-opcoes__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.servico-opcoes__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.servico-opcao {
+  background: var(--white);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  transition: all var(--transition-base);
+}
+
+.servico-opcao:hover {
+  border-color: var(--wave-blue);
+  box-shadow: var(--shadow-md);
+}
+
+.servico-opcao--destaque {
+  border-color: var(--sunset-gold);
+  position: relative;
+}
+
+.servico-opcao--destaque::before {
+  content: 'Recomendado';
+  position: absolute;
+  top: -10px;
+  left: var(--space-4);
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-caption);
+  font-weight: 600;
+}
+
+.servico-opcao__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-3);
+}
+
+.servico-opcao__nome {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.servico-opcao__preco {
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  white-space: nowrap;
+}
+
+.servico-opcao__nota {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  font-weight: 400;
+}
+
+.servico-opcao__descricao {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+@media (max-width: 640px) {
+  .servico-opcoes__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   LISTA DE ITENS INCLUSOS
+   ============================================ */
+.servico-inclui {
+  margin-top: var(--space-6);
+}
+
+.servico-inclui__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-3);
+}
+
+.servico-inclui__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2);
+}
+
+.servico-inclui__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.servico-inclui__item i {
+  color: var(--success);
+  font-size: 1rem;
+}
+
+@media (max-width: 640px) {
+  .servico-inclui__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   GRID DE CARDS DE SERVIÇOS
+   ============================================ */
+.servicos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.servico-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.servico-card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.servico-card__image {
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.servico-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.servico-card:hover .servico-card__image img {
+  transform: scale(1.05);
+}
+
+.servico-card__content {
+  padding: var(--space-5);
+}
+
+.servico-card__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.servico-card__description {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-bottom: var(--space-4);
+}
+
+.servico-card__price {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+}
+
+.servico-card__price-label {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+.servico-card__price-value {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--sunset-gold);
+}
+
+@media (max-width: 1024px) {
+  .servicos-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .servicos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   COMO CONTRATAR
+   ============================================ */
+.servicos-como {
+  padding: var(--space-16) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.servicos-como__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-12);
+}
+
+.servicos-como__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+}
+
+.servicos-como__step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.servicos-como__step-number {
+  width: 56px;
+  height: 56px;
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  margin-bottom: var(--space-4);
+}
+
+.servicos-como__step-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: var(--space-2);
+}
+
+.servicos-como__step-text {
+  font-size: var(--text-body-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .servicos-como__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8) var(--space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .servicos-como__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CTA FINAL SERVIÇOS
+   ============================================ */
+.servicos-cta {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+  text-align: center;
+}
+
+.servicos-cta__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.servicos-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.servicos-cta__text {
+  font-size: var(--text-body-lg);
+  color: var(--driftwood);
+  margin-bottom: var(--space-8);
+}
+
+.servicos-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .servicos-cta__buttons {
+    flex-direction: column;
+  }
+
+  .servicos-cta__buttons .btn {
+    width: 100%;
+  }
+}

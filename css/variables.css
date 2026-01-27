@@ -61,6 +61,15 @@
   --error-light: #FEE2E2;
   
   /* ----------------------------------------
+     CORES DE ROTEIROS (Mapa)
+     ---------------------------------------- */
+  --route-green: #4CAF50;
+  --route-blue: #2196F3;
+  --route-orange: #FF9800;
+  --route-purple: #9C27B0;
+  --route-pink: #E91E63;
+
+  /* ----------------------------------------
      WHATSAPP
      ---------------------------------------- */
   --whatsapp-green: #25D366;

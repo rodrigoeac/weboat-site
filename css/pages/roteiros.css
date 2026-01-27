@@ -87,11 +87,11 @@
   flex-shrink: 0;
 }
 
-.roteiros-map__legend-dot--urca { background-color: #4CAF50; }
-.roteiros-map__legend-dot--praia-vermelha { background-color: #2196F3; }
-.roteiros-map__legend-dot--copacabana { background-color: #FF9800; }
-.roteiros-map__legend-dot--cagarras { background-color: #9C27B0; }
-.roteiros-map__legend-dot--itaipu { background-color: #E91E63; }
+.roteiros-map__legend-dot--urca { background-color: var(--route-green); }
+.roteiros-map__legend-dot--praia-vermelha { background-color: var(--route-blue); }
+.roteiros-map__legend-dot--copacabana { background-color: var(--route-orange); }
+.roteiros-map__legend-dot--cagarras { background-color: var(--route-purple); }
+.roteiros-map__legend-dot--itaipu { background-color: var(--route-pink); }
 
 .roteiros-map__legend-text {
   font-size: var(--text-body-sm);
@@ -174,7 +174,7 @@
 }
 
 .card-roteiro__badge--bestseller {
-  background: #E53935;
+  background: var(--error);
 }
 
 .card-roteiro__badge i {
@@ -322,7 +322,7 @@
 .roteiros-compare__bestseller {
   display: inline-block;
   padding: var(--space-1) var(--space-2);
-  background: #E53935;
+  background: var(--error);
   color: var(--white);
   font-size: 0.625rem;
   font-weight: 600;
@@ -480,6 +480,10 @@
 
 .roteiro-hero__badge i {
   font-size: 1.125rem;
+}
+
+.roteiro-hero__badge--bestseller {
+  background: var(--error);
 }
 
 .roteiro-hero__title {
@@ -919,7 +923,7 @@
    ROTEIRO VOLTA COMPLETA - Especial
    ============================================ */
 .roteiro-volta-completa {
-  background: linear-gradient(135deg, var(--sunset-gold) 0%, #C49643 100%);
+  background: linear-gradient(135deg, var(--sunset-gold) 0%, var(--sunset-gold-hover) 100%);
   padding: var(--space-2) var(--space-3);
   display: inline-flex;
   align-items: center;

@@ -1,0 +1,552 @@
+/* ============================================
+   WEBOAT BRASIL - SOBRE CSS
+   Página Sobre Nós
+   ============================================ */
+
+/* ============================================
+   HERO SOBRE
+   ============================================ */
+.sobre-hero {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-16) 0;
+}
+
+.sobre-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero-overlay);
+  z-index: 1;
+}
+
+.sobre-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.sobre-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.sobre-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--white);
+  line-height: var(--line-display);
+  margin-bottom: var(--space-4);
+}
+
+.sobre-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+@media (max-width: 768px) {
+  .sobre-hero {
+    min-height: 40vh;
+    padding: var(--space-12) 0;
+  }
+
+  .sobre-hero__title {
+    font-size: var(--text-h1);
+  }
+}
+
+/* ============================================
+   HISTÓRIA
+   ============================================ */
+.sobre-historia {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.sobre-historia__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.sobre-historia__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sobre-historia__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  line-height: var(--line-heading);
+}
+
+.sobre-historia__description {
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  line-height: 1.8;
+}
+
+.sobre-historia__highlight {
+  background: var(--pearl-gray);
+  border-left: 4px solid var(--sunset-gold);
+  padding: var(--space-4) var(--space-5);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  font-style: italic;
+  color: var(--ocean-deep);
+}
+
+.sobre-historia__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.sobre-historia__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .sobre-historia__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .sobre-historia__image {
+    order: -1;
+  }
+}
+
+/* ============================================
+   MISSÃO, VISÃO, VALORES
+   ============================================ */
+.sobre-mvv {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.sobre-mvv__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.sobre-mvv__card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  text-align: center;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.sobre-mvv__card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.sobre-mvv__icon {
+  width: 72px;
+  height: 72px;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-5);
+  font-size: 2rem;
+  color: var(--sunset-gold);
+}
+
+.sobre-mvv__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-3);
+}
+
+.sobre-mvv__text {
+  font-size: var(--text-body);
+  color: var(--driftwood);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .sobre-mvv__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   NÚMEROS
+   ============================================ */
+.sobre-numeros {
+  padding: var(--space-16) 0;
+  background: var(--ocean-deep);
+}
+
+.sobre-numeros__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.sobre-numero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sobre-numero__icon {
+  font-size: 2.5rem;
+  color: var(--sunset-gold);
+  margin-bottom: var(--space-3);
+}
+
+.sobre-numero__valor {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--white);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.sobre-numero__label {
+  font-size: var(--text-body);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 1024px) {
+  .sobre-numeros__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8) var(--space-6);
+  }
+}
+
+@media (max-width: 640px) {
+  .sobre-numero__valor {
+    font-size: var(--text-h1);
+  }
+}
+
+/* ============================================
+   EQUIPE
+   ============================================ */
+.sobre-equipe {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.sobre-equipe__intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+}
+
+.sobre-equipe__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.sobre-equipe__description {
+  font-size: var(--text-body-lg);
+  color: var(--driftwood);
+}
+
+.sobre-equipe__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.sobre-membro {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.sobre-membro:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.sobre-membro__image {
+  aspect-ratio: 1;
+  overflow: hidden;
+  background: var(--pearl-gray);
+}
+
+.sobre-membro__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sobre-membro__content {
+  padding: var(--space-5);
+  text-align: center;
+}
+
+.sobre-membro__nome {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-1);
+}
+
+.sobre-membro__cargo {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+@media (max-width: 1024px) {
+  .sobre-equipe__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .sobre-equipe__grid {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   ESTRUTURA / MARINA
+   ============================================ */
+.sobre-estrutura {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.sobre-estrutura__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.sobre-estrutura__text {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.sobre-estrutura__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  line-height: var(--line-heading);
+}
+
+.sobre-estrutura__description {
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  line-height: 1.8;
+}
+
+.sobre-estrutura__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.sobre-estrutura__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.sobre-estrutura__feature-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--sunset-gold);
+  flex-shrink: 0;
+}
+
+.sobre-estrutura__feature-content {
+  flex: 1;
+}
+
+.sobre-estrutura__feature-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-1);
+}
+
+.sobre-estrutura__feature-text {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+.sobre-estrutura__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.sobre-estrutura__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 1024px) {
+  .sobre-estrutura__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
+
+/* ============================================
+   COMPROMISSO
+   ============================================ */
+.sobre-compromisso {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.sobre-compromisso__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.sobre-compromisso__card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.sobre-compromisso__card:hover {
+  border-color: var(--wave-blue);
+}
+
+.sobre-compromisso__icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(74, 144, 184, 0.1), rgba(74, 144, 184, 0.2));
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  font-size: 1.5rem;
+  color: var(--wave-blue);
+}
+
+.sobre-compromisso__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.sobre-compromisso__text {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .sobre-compromisso__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.sobre-cta {
+  padding: var(--space-20) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.sobre-cta__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.sobre-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.sobre-cta__text {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-8);
+}
+
+.sobre-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .sobre-cta {
+    padding: var(--space-16) 0;
+  }
+
+  .sobre-cta__buttons {
+    flex-direction: column;
+  }
+
+  .sobre-cta__buttons .btn {
+    width: 100%;
+  }
+}

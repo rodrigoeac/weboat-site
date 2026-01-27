@@ -1,0 +1,587 @@
+/* ============================================
+   WEBOAT BRASIL - CONTATO CSS
+   Página de Contato
+   ============================================ */
+
+/* ============================================
+   HERO CONTATO
+   ============================================ */
+.contato-hero {
+  padding: var(--space-16) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.contato-hero__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contato-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--white);
+  line-height: var(--line-display);
+  margin-bottom: var(--space-4);
+}
+
+.contato-hero__subtitle {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 768px) {
+  .contato-hero {
+    padding: var(--space-12) 0;
+  }
+
+  .contato-hero__title {
+    font-size: var(--text-h1);
+  }
+}
+
+/* ============================================
+   CONTATO CONTENT
+   ============================================ */
+.contato-content {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.contato-content__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .contato-content__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-10);
+  }
+}
+
+/* ============================================
+   INFORMAÇÕES DE CONTATO
+   ============================================ */
+.contato-info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+.contato-info__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.contato-info__description {
+  font-size: var(--text-body);
+  color: var(--driftwood);
+  line-height: 1.7;
+}
+
+/* Canais de Contato */
+.contato-canais {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contato-canal {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.contato-canal:hover {
+  border-color: var(--wave-blue);
+  box-shadow: var(--shadow-md);
+}
+
+.contato-canal--whatsapp:hover {
+  border-color: var(--whatsapp-green);
+}
+
+.contato-canal__icon {
+  width: 56px;
+  height: 56px;
+  background: var(--pearl-gray);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--wave-blue);
+  flex-shrink: 0;
+}
+
+.contato-canal--whatsapp .contato-canal__icon {
+  background: rgba(37, 211, 102, 0.1);
+  color: var(--whatsapp-green);
+}
+
+.contato-canal__content {
+  flex: 1;
+}
+
+.contato-canal__label {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-bottom: var(--space-1);
+}
+
+.contato-canal__value {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.contato-canal__value a {
+  color: var(--ocean-deep);
+  text-decoration: none;
+}
+
+.contato-canal__value a:hover {
+  color: var(--wave-blue);
+}
+
+.contato-canal__note {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-top: var(--space-2);
+}
+
+/* ============================================
+   HORÁRIOS DE ATENDIMENTO
+   ============================================ */
+.contato-horarios {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+}
+
+.contato-horarios__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.contato-horarios__title i {
+  color: var(--sunset-gold);
+}
+
+.contato-horarios__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.contato-horario {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.contato-horario:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.contato-horario__dia {
+  font-size: var(--text-body);
+  color: var(--charcoal);
+}
+
+.contato-horario__tempo {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+/* ============================================
+   FORMULÁRIO
+   ============================================ */
+.contato-form {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+}
+
+.contato-form__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.contato-form__description {
+  font-size: var(--text-body);
+  color: var(--driftwood);
+  margin-bottom: var(--space-6);
+}
+
+.contato-form__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-5);
+}
+
+.contato-form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-form__group--full {
+  grid-column: span 2;
+}
+
+.contato-form__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.contato-form__label--required::after {
+  content: ' *';
+  color: var(--error);
+}
+
+.contato-form__input,
+.contato-form__select,
+.contato-form__textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  background: var(--sand-white);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.contato-form__input:focus,
+.contato-form__select:focus,
+.contato-form__textarea:focus {
+  outline: none;
+  border-color: var(--wave-blue);
+  background: var(--white);
+  box-shadow: 0 0 0 3px rgba(74, 144, 184, 0.15);
+}
+
+.contato-form__input::placeholder,
+.contato-form__textarea::placeholder {
+  color: var(--driftwood);
+}
+
+.contato-form__select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
+.contato-form__textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.contato-form__hint {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  margin-top: var(--space-1);
+}
+
+.contato-form__actions {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.contato-form__submit {
+  width: 100%;
+}
+
+.contato-form__privacy {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  text-align: center;
+}
+
+.contato-form__privacy a {
+  color: var(--wave-blue);
+  text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+  .contato-form {
+    padding: var(--space-6);
+  }
+
+  .contato-form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contato-form__group--full {
+    grid-column: auto;
+  }
+}
+
+/* ============================================
+   MAPA
+   ============================================ */
+.contato-mapa {
+  padding: var(--space-16) 0 0;
+  background: var(--sand-white);
+}
+
+.contato-mapa__header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-10);
+}
+
+.contato-mapa__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.contato-mapa__description {
+  font-size: var(--text-body-lg);
+  color: var(--driftwood);
+}
+
+.contato-mapa__container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.contato-mapa__container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.contato-mapa__overlay {
+  position: absolute;
+  bottom: var(--space-6);
+  left: var(--space-6);
+  right: var(--space-6);
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.contato-mapa__address {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.contato-mapa__address-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--pearl-gray);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--sunset-gold);
+}
+
+.contato-mapa__address-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contato-mapa__address-label {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+.contato-mapa__address-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+@media (max-width: 768px) {
+  .contato-mapa__container {
+    height: 350px;
+    border-radius: 0;
+  }
+
+  .contato-mapa__overlay {
+    position: static;
+    border-radius: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .contato-mapa__overlay .btn {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   COMO CHEGAR
+   ============================================ */
+.contato-como-chegar {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.contato-como-chegar__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  text-align: center;
+  margin-bottom: var(--space-10);
+}
+
+.contato-como-chegar__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.contato-transporte {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.contato-transporte:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.contato-transporte__icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--space-4);
+  font-size: 1.75rem;
+  color: var(--sunset-gold);
+}
+
+.contato-transporte__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.contato-transporte__text {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  line-height: 1.7;
+}
+
+@media (max-width: 1024px) {
+  .contato-como-chegar__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+/* ============================================
+   REDES SOCIAIS
+   ============================================ */
+.contato-social {
+  padding: var(--space-12) 0;
+  background: var(--white);
+  text-align: center;
+}
+
+.contato-social__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-6);
+}
+
+.contato-social__grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+.contato-social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: var(--pearl-gray);
+  border-radius: var(--radius-full);
+  font-size: 1.5rem;
+  color: var(--ocean-deep);
+  transition: all var(--transition-base);
+}
+
+.contato-social__link:hover {
+  background: var(--ocean-deep);
+  color: var(--white);
+  transform: translateY(-4px);
+}
+
+.contato-social__link--instagram:hover {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.contato-social__link--whatsapp:hover {
+  background: var(--whatsapp-green);
+}

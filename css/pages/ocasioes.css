@@ -1,0 +1,879 @@
+/* ============================================
+   WEBOAT BRASIL - OCASIÕES CSS
+   Landing Pages: Despedida, Aniversário,
+   Corporativo, Réveillon
+   ============================================ */
+
+/* ============================================
+   HERO OCASIÃO
+   ============================================ */
+.ocasiao-hero {
+  position: relative;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: var(--space-16) 0;
+}
+
+.ocasiao-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gradient-hero-overlay);
+  z-index: 1;
+}
+
+.ocasiao-hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.ocasiao-hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ocasiao-hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.ocasiao-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-4);
+}
+
+.ocasiao-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--white);
+  line-height: var(--line-display);
+  margin-bottom: var(--space-4);
+}
+
+.ocasiao-hero__subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: var(--space-8);
+}
+
+.ocasiao-hero__ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .ocasiao-hero {
+    min-height: 60vh;
+    padding: var(--space-12) 0;
+  }
+
+  .ocasiao-hero__title {
+    font-size: var(--text-h1);
+  }
+
+  .ocasiao-hero__ctas {
+    flex-direction: column;
+  }
+
+  .ocasiao-hero__ctas .btn {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   BENEFÍCIOS DA OCASIÃO
+   ============================================ */
+.ocasiao-beneficios {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.ocasiao-beneficios__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.ocasiao-beneficio {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.ocasiao-beneficio:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.ocasiao-beneficio__icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  font-size: 1.75rem;
+  color: var(--sunset-gold);
+}
+
+.ocasiao-beneficio__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.ocasiao-beneficio__text {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+@media (max-width: 1024px) {
+  .ocasiao-beneficios__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ocasiao-beneficios__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   COMO FUNCIONA
+   ============================================ */
+.ocasiao-como {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.ocasiao-como__steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.ocasiao-step {
+  text-align: center;
+  position: relative;
+}
+
+.ocasiao-step::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  right: -50%;
+  width: 100%;
+  height: 2px;
+  background: var(--border-light);
+}
+
+.ocasiao-step:last-child::after {
+  display: none;
+}
+
+.ocasiao-step__number {
+  width: 48px;
+  height: 48px;
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  margin: 0 auto var(--space-4);
+  position: relative;
+  z-index: 1;
+}
+
+.ocasiao-step__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.ocasiao-step__text {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+@media (max-width: 1024px) {
+  .ocasiao-como__steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8);
+  }
+
+  .ocasiao-step::after {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .ocasiao-como__steps {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   GALERIA
+   ============================================ */
+.ocasiao-galeria {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.ocasiao-galeria__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 200px);
+  gap: var(--space-4);
+}
+
+.ocasiao-galeria__item {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.ocasiao-galeria__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.ocasiao-galeria__item:hover img {
+  transform: scale(1.05);
+}
+
+.ocasiao-galeria__item--featured {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+@media (max-width: 768px) {
+  .ocasiao-galeria__grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .ocasiao-galeria__item--featured {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+
+  .ocasiao-galeria__item {
+    height: 200px;
+  }
+}
+
+/* ============================================
+   PACOTES
+   ============================================ */
+.ocasiao-pacotes {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.ocasiao-pacotes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.ocasiao-pacote {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 2px solid var(--border-light);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.ocasiao-pacote:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.ocasiao-pacote--destaque {
+  border-color: var(--sunset-gold);
+  position: relative;
+}
+
+.ocasiao-pacote--destaque::before {
+  content: 'Mais Popular';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  text-align: center;
+  padding: var(--space-2) 0;
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ocasiao-pacote__header {
+  padding: var(--space-6);
+  border-bottom: 1px solid var(--border-light);
+  text-align: center;
+}
+
+.ocasiao-pacote--destaque .ocasiao-pacote__header {
+  padding-top: calc(var(--space-6) + 32px);
+}
+
+.ocasiao-pacote__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.ocasiao-pacote__capacidade {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+.ocasiao-pacote__body {
+  padding: var(--space-6);
+}
+
+.ocasiao-pacote__preco {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.ocasiao-pacote__preco-valor {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 800;
+  color: var(--ocean-deep);
+  line-height: 1;
+}
+
+.ocasiao-pacote__preco-nota {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-top: var(--space-1);
+}
+
+.ocasiao-pacote__features {
+  margin-bottom: var(--space-6);
+}
+
+.ocasiao-pacote__feature {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.ocasiao-pacote__feature:last-child {
+  border-bottom: none;
+}
+
+.ocasiao-pacote__feature-icon {
+  color: var(--success);
+  font-size: 1.25rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ocasiao-pacote__feature-icon--extra {
+  color: var(--sunset-gold);
+}
+
+.ocasiao-pacote__feature-text {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.ocasiao-pacote__footer {
+  padding: 0 var(--space-6) var(--space-6);
+}
+
+.ocasiao-pacote__footer .btn {
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .ocasiao-pacotes__grid {
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ocasiao-pacote--destaque {
+    order: -1;
+  }
+}
+
+/* ============================================
+   DEPOIMENTOS
+   ============================================ */
+.ocasiao-depoimentos {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.ocasiao-depoimentos__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+.ocasiao-depoimento {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+}
+
+.ocasiao-depoimento__stars {
+  color: var(--sunset-gold);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-4);
+}
+
+.ocasiao-depoimento__text {
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  font-style: italic;
+  margin-bottom: var(--space-4);
+  line-height: 1.7;
+}
+
+.ocasiao-depoimento__autor {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.ocasiao-depoimento__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--pearl-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.ocasiao-depoimento__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.ocasiao-depoimento__nome {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.ocasiao-depoimento__ocasiao {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+@media (max-width: 1024px) {
+  .ocasiao-depoimentos__grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ============================================
+   FAQ OCASIÃO
+   ============================================ */
+.ocasiao-faq {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.ocasiao-faq__list {
+  max-width: 800px;
+  margin: var(--space-12) auto 0;
+}
+
+.ocasiao-faq-item {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+  margin-bottom: var(--space-4);
+  overflow: hidden;
+}
+
+.ocasiao-faq-item__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  padding: var(--space-5);
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  text-align: left;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.ocasiao-faq-item__question:hover {
+  background: var(--pearl-gray);
+}
+
+.ocasiao-faq-item__question i {
+  font-size: 1.25rem;
+  color: var(--wave-blue);
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.ocasiao-faq-item[open] .ocasiao-faq-item__question i {
+  transform: rotate(180deg);
+}
+
+.ocasiao-faq-item__answer {
+  padding: 0 var(--space-5) var(--space-5);
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.ocasiao-cta {
+  padding: var(--space-20) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.ocasiao-cta__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.ocasiao-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.ocasiao-cta__text {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-8);
+}
+
+.ocasiao-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .ocasiao-cta {
+    padding: var(--space-16) 0;
+  }
+
+  .ocasiao-cta__buttons {
+    flex-direction: column;
+  }
+
+  .ocasiao-cta__buttons .btn {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   LANCHAS DISPONÍVEIS
+   ============================================ */
+.ocasiao-lanchas {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.ocasiao-lanchas__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-12);
+}
+
+@media (max-width: 1024px) {
+  .ocasiao-lanchas__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ocasiao-lanchas__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   SEÇÃO ESPECÍFICA: RÉVEILLON
+   ============================================ */
+.reveillon-countdown {
+  padding: var(--space-12) 0;
+  background: var(--gradient-ocean-depth);
+  text-align: center;
+}
+
+.reveillon-countdown__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  color: var(--white);
+  margin-bottom: var(--space-6);
+}
+
+.reveillon-countdown__grid {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-6);
+}
+
+.reveillon-countdown__item {
+  text-align: center;
+}
+
+.reveillon-countdown__number {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: 800;
+  color: var(--sunset-gold);
+  line-height: 1;
+}
+
+.reveillon-countdown__label {
+  font-size: var(--text-body-sm);
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: var(--space-2);
+}
+
+@media (max-width: 640px) {
+  .reveillon-countdown__grid {
+    gap: var(--space-4);
+  }
+
+  .reveillon-countdown__number {
+    font-size: var(--text-h1);
+  }
+}
+
+/* ============================================
+   SEÇÃO ESPECÍFICA: CORPORATIVO
+   ============================================ */
+.corporativo-empresas {
+  padding: var(--space-12) 0;
+  background: var(--pearl-gray);
+}
+
+.corporativo-empresas__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  color: var(--driftwood);
+  text-align: center;
+  margin-bottom: var(--space-8);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.corporativo-empresas__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-10);
+  opacity: 0.6;
+}
+
+.corporativo-empresas__logo {
+  height: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  transition: all var(--transition-base);
+}
+
+.corporativo-empresas__logo:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* ============================================
+   SEÇÃO DIFERENCIAIS
+   ============================================ */
+.ocasiao-diferenciais {
+  padding: var(--space-16) 0;
+  background: var(--white);
+}
+
+.ocasiao-diferenciais__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: center;
+}
+
+.ocasiao-diferenciais__image {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.ocasiao-diferenciais__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ocasiao-diferenciais__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.ocasiao-diferencial {
+  display: flex;
+  gap: var(--space-4);
+}
+
+.ocasiao-diferencial__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--pearl-gray);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--sunset-gold);
+  flex-shrink: 0;
+}
+
+.ocasiao-diferencial__content {
+  flex: 1;
+}
+
+.ocasiao-diferencial__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-1);
+}
+
+.ocasiao-diferencial__text {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+@media (max-width: 1024px) {
+  .ocasiao-diferenciais__content {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+
+  .ocasiao-diferenciais__image {
+    order: -1;
+  }
+}
+
+/* ============================================
+   SOCIAL PROOF MINI
+   ============================================ */
+.ocasiao-social-proof {
+  padding: var(--space-8) 0;
+  background: var(--ocean-deep);
+}
+
+.ocasiao-social-proof__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.ocasiao-social-proof__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ocasiao-social-proof__number {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--sunset-gold);
+}
+
+.ocasiao-social-proof__label {
+  font-size: var(--text-body-sm);
+  color: rgba(255, 255, 255, 0.7);
+}
