@@ -1,0 +1,942 @@
+/* ============================================
+   WEBOAT BRASIL - ROTEIROS PAGE STYLES
+   Página de listagem e detalhe de roteiros
+   ============================================ */
+
+/* ============================================
+   PAGE HEADER - ROTEIROS
+   ============================================ */
+.roteiros-header {
+  background: linear-gradient(180deg, rgba(30, 58, 95, 0.9) 0%, rgba(30, 58, 95, 0.95) 100%),
+              url('/assets/images/roteiros/hero-roteiros.jpg') center/cover no-repeat;
+  padding: var(--space-20) 0 var(--space-16);
+  text-align: center;
+  color: var(--white);
+}
+
+.roteiros-header__overline {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  color: var(--sunset-gold);
+  margin-bottom: var(--space-3);
+}
+
+.roteiros-header__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: var(--weight-h1);
+  line-height: var(--line-h1);
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.roteiros-header__description {
+  font-size: var(--text-body-lg);
+  line-height: var(--line-body-lg);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   MAPA VISUAL - Roteiros Overview
+   ============================================ */
+.roteiros-map {
+  padding: var(--space-16) 0;
+  background-color: var(--sand-white);
+}
+
+.roteiros-map__visual {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-md);
+  margin-bottom: var(--space-8);
+}
+
+.roteiros-map__image {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+}
+
+.roteiros-map__legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-6);
+}
+
+.roteiros-map__legend-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+}
+
+.roteiros-map__legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.roteiros-map__legend-dot--urca { background-color: #4CAF50; }
+.roteiros-map__legend-dot--praia-vermelha { background-color: #2196F3; }
+.roteiros-map__legend-dot--copacabana { background-color: #FF9800; }
+.roteiros-map__legend-dot--cagarras { background-color: #9C27B0; }
+.roteiros-map__legend-dot--itaipu { background-color: #E91E63; }
+
+.roteiros-map__legend-text {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+/* ============================================
+   ROTEIROS GRID - Cards de Roteiro
+   ============================================ */
+.roteiros-grid {
+  padding: var(--space-16) 0;
+  background-color: var(--pearl-gray);
+}
+
+.roteiros-grid__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .roteiros-grid__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   CARD ROTEIRO - Individual
+   ============================================ */
+.card-roteiro {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.card-roteiro:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-roteiro--featured {
+  border: 2px solid var(--sunset-gold);
+}
+
+.card-roteiro__image {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+}
+
+.card-roteiro__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card-roteiro:hover .card-roteiro__image img {
+  transform: scale(1.05);
+}
+
+.card-roteiro__badge {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: var(--sunset-gold);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.card-roteiro__badge--bestseller {
+  background: #E53935;
+}
+
+.card-roteiro__badge i {
+  font-size: 1rem;
+}
+
+.card-roteiro__duration {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-3);
+  background: rgba(30, 58, 95, 0.9);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  border-radius: var(--radius-md);
+}
+
+.card-roteiro__content {
+  padding: var(--space-6);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-roteiro__number {
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--wave-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.card-roteiro__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-h3);
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-3);
+}
+
+.card-roteiro__description {
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  color: var(--driftwood);
+  margin-bottom: var(--space-4);
+  flex: 1;
+}
+
+.card-roteiro__route {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.card-roteiro__stop {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-sm);
+  font-size: var(--text-caption);
+  color: var(--charcoal);
+}
+
+.card-roteiro__stop i {
+  color: var(--wave-blue);
+  font-size: 0.875rem;
+}
+
+.card-roteiro__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+.card-roteiro__price-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-roteiro__price-label {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+.card-roteiro__price {
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+/* ============================================
+   ROTEIRO COMPARATIVO - Tabela
+   ============================================ */
+.roteiros-compare {
+  padding: var(--space-16) 0;
+  background-color: var(--white);
+}
+
+.roteiros-compare__table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.roteiros-compare__table th,
+.roteiros-compare__table td {
+  padding: var(--space-4);
+  text-align: left;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.roteiros-compare__table th {
+  background: var(--ocean-deep);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-body-sm);
+}
+
+.roteiros-compare__table tbody tr:hover {
+  background-color: var(--pearl-gray);
+}
+
+.roteiros-compare__table td:first-child {
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.roteiros-compare__bestseller {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  background: #E53935;
+  color: var(--white);
+  font-size: 0.625rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-transform: uppercase;
+  margin-left: var(--space-2);
+}
+
+@media (max-width: 768px) {
+  .roteiros-compare__table {
+    font-size: var(--text-body-sm);
+  }
+
+  .roteiros-compare__table th,
+  .roteiros-compare__table td {
+    padding: var(--space-3);
+  }
+
+  .roteiros-compare__table th:nth-child(4),
+  .roteiros-compare__table td:nth-child(4) {
+    display: none;
+  }
+}
+
+/* ============================================
+   RECOMENDAÇÃO
+   ============================================ */
+.roteiros-recommendation {
+  background: linear-gradient(135deg, var(--wave-blue) 0%, var(--ocean-deep) 100%);
+  padding: var(--space-8);
+  border-radius: var(--radius-xl);
+  margin-top: var(--space-8);
+  color: var(--white);
+  text-align: center;
+}
+
+.roteiros-recommendation__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  margin-bottom: var(--space-4);
+}
+
+.roteiros-recommendation__icon i {
+  font-size: 1.75rem;
+  color: var(--sunset-gold);
+}
+
+.roteiros-recommendation__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-h3);
+  margin-bottom: var(--space-3);
+}
+
+.roteiros-recommendation__text {
+  font-size: var(--text-body-lg);
+  line-height: var(--line-body-lg);
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto var(--space-6);
+}
+
+.roteiros-recommendation .btn {
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+}
+
+.roteiros-recommendation .btn:hover {
+  background: var(--sunset-gold-hover);
+}
+
+/* ============================================
+   CTA FINAL - ROTEIROS
+   ============================================ */
+.roteiros-cta {
+  padding: var(--space-16) 0;
+  background: linear-gradient(180deg, var(--pearl-gray) 0%, var(--sand-white) 100%);
+}
+
+.roteiros-cta__content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.roteiros-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-h2);
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.roteiros-cta__text {
+  font-size: var(--text-body-lg);
+  line-height: var(--line-body-lg);
+  color: var(--driftwood);
+  margin-bottom: var(--space-6);
+}
+
+/* ============================================
+   PÁGINA DE DETALHE - ROTEIRO
+   ============================================ */
+
+/* Hero do Roteiro */
+.roteiro-hero {
+  position: relative;
+  height: 50vh;
+  min-height: 400px;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.roteiro-hero__image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.roteiro-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(30, 58, 95, 0.3) 0%, rgba(30, 58, 95, 0.8) 100%);
+}
+
+.roteiro-hero__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-8) 0;
+  color: var(--white);
+}
+
+.roteiro-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--sunset-gold);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-hero__badge i {
+  font-size: 1.125rem;
+}
+
+.roteiro-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: var(--weight-h1);
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.roteiro-hero__meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-lg);
+}
+
+.roteiro-hero__meta-item i {
+  font-size: 1.25rem;
+  color: var(--sunset-gold);
+}
+
+/* Conteúdo Principal do Roteiro */
+.roteiro-content {
+  padding: var(--space-12) 0;
+}
+
+.roteiro-content__grid {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-8);
+}
+
+@media (max-width: 1024px) {
+  .roteiro-content__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roteiro-content__main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-8);
+}
+
+/* Descrição do Roteiro */
+.roteiro-description {
+  background: var(--white);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.roteiro-description__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-h3);
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-description__text {
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  color: var(--charcoal);
+}
+
+.roteiro-description__text p {
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-description__text p:last-child {
+  margin-bottom: 0;
+}
+
+/* Trajeto Visual */
+.roteiro-trajeto {
+  background: var(--white);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.roteiro-trajeto__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-h3);
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-6);
+}
+
+.roteiro-trajeto__timeline {
+  position: relative;
+  padding-left: var(--space-8);
+}
+
+.roteiro-trajeto__timeline::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--wave-blue) 0%, var(--sunset-gold) 100%);
+}
+
+.roteiro-trajeto__stop {
+  position: relative;
+  padding-bottom: var(--space-6);
+}
+
+.roteiro-trajeto__stop:last-child {
+  padding-bottom: 0;
+}
+
+.roteiro-trajeto__stop::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-8) + 4px);
+  top: 4px;
+  width: 16px;
+  height: 16px;
+  background: var(--wave-blue);
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--wave-blue);
+}
+
+.roteiro-trajeto__stop--highlight::before {
+  background: var(--sunset-gold);
+  box-shadow: 0 0 0 2px var(--sunset-gold);
+}
+
+.roteiro-trajeto__stop-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-1);
+}
+
+.roteiro-trajeto__stop-description {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+.roteiro-trajeto__stop-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  margin-top: var(--space-2);
+  padding: var(--space-1) var(--space-2);
+  background: rgba(74, 144, 184, 0.1);
+  color: var(--wave-blue);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+}
+
+.roteiro-trajeto__stop-tag i {
+  font-size: 0.875rem;
+}
+
+/* Destaques do Roteiro */
+.roteiro-highlights {
+  background: var(--white);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.roteiro-highlights__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-h3);
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-highlights__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 600px) {
+  .roteiro-highlights__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roteiro-highlights__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+}
+
+.roteiro-highlights__item i {
+  font-size: 1.5rem;
+  color: var(--wave-blue);
+  flex-shrink: 0;
+}
+
+.roteiro-highlights__item span {
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  line-height: 1.4;
+}
+
+/* Aviso do Roteiro */
+.roteiro-warning {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background: rgba(217, 119, 6, 0.1);
+  border: 1px solid var(--warning);
+  border-radius: var(--radius-lg);
+  margin-top: var(--space-6);
+}
+
+.roteiro-warning__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--warning);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.roteiro-warning__icon i {
+  font-size: 1.25rem;
+  color: var(--white);
+}
+
+.roteiro-warning__content {
+  flex: 1;
+}
+
+.roteiro-warning__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--warning);
+  margin-bottom: var(--space-1);
+}
+
+.roteiro-warning__text {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  line-height: 1.5;
+}
+
+/* Sidebar de Preços/CTA */
+.roteiro-sidebar {
+  position: sticky;
+  top: 100px;
+}
+
+@media (max-width: 1024px) {
+  .roteiro-sidebar {
+    position: static;
+  }
+}
+
+.roteiro-price-card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.roteiro-price-card__header {
+  background: var(--ocean-deep);
+  padding: var(--space-5);
+  text-align: center;
+  color: var(--white);
+}
+
+.roteiro-price-card__label {
+  font-size: var(--text-body-sm);
+  opacity: 0.8;
+  margin-bottom: var(--space-1);
+}
+
+.roteiro-price-card__price {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+}
+
+.roteiro-price-card__note {
+  font-size: var(--text-caption);
+  opacity: 0.7;
+  margin-top: var(--space-1);
+}
+
+.roteiro-price-card__body {
+  padding: var(--space-5);
+}
+
+.roteiro-price-card__table {
+  width: 100%;
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-price-card__table th,
+.roteiro-price-card__table td {
+  padding: var(--space-2) 0;
+  text-align: left;
+  font-size: var(--text-body-sm);
+}
+
+.roteiro-price-card__table th {
+  color: var(--driftwood);
+  font-weight: 500;
+}
+
+.roteiro-price-card__table td {
+  color: var(--ocean-deep);
+  font-weight: 600;
+  text-align: right;
+}
+
+.roteiro-price-card__table tr {
+  border-bottom: 1px solid var(--border-light);
+}
+
+.roteiro-price-card__table tr:last-child {
+  border-bottom: none;
+}
+
+.roteiro-price-card__cta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.roteiro-price-card__cta .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.roteiro-price-card__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding-top: var(--space-4);
+  margin-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+.roteiro-price-card__info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+.roteiro-price-card__info-item i {
+  color: var(--success);
+}
+
+/* Lanchas Disponíveis */
+.roteiro-lanchas {
+  background: var(--white);
+  padding: var(--space-6);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-sm);
+  margin-top: var(--space-6);
+}
+
+.roteiro-lanchas__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-h3);
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-lanchas__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-4);
+}
+
+.roteiro-lanchas__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.roteiro-lanchas__item:hover {
+  background: var(--border-light);
+}
+
+.roteiro-lanchas__item-image {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+}
+
+.roteiro-lanchas__item-info {
+  flex: 1;
+}
+
+.roteiro-lanchas__item-name {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.roteiro-lanchas__item-capacity {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+/* ============================================
+   ROTEIRO VOLTA COMPLETA - Especial
+   ============================================ */
+.roteiro-volta-completa {
+  background: linear-gradient(135deg, var(--sunset-gold) 0%, #C49643 100%);
+  padding: var(--space-2) var(--space-3);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
+}
+
+.roteiro-volta-completa i {
+  color: var(--white);
+}
+
+.roteiro-volta-completa span {
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--white);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
