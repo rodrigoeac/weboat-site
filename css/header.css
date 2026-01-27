@@ -1,0 +1,364 @@
+/* ============================================
+   WEBOAT BRASIL - HEADER CSS
+   Versão: 1.0 | Janeiro 2026
+   ============================================ */
+
+/* ============================================
+   HEADER BASE
+   ============================================ */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-sticky);
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  transition: box-shadow var(--transition-base);
+}
+
+.header--scrolled {
+  box-shadow: var(--shadow-md);
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+  gap: var(--space-6);
+}
+
+/* ============================================
+   LOGO
+   ============================================ */
+.header__logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.header__logo img {
+  height: 40px;
+  width: auto;
+}
+
+.header__logo:hover {
+  opacity: 0.9;
+}
+
+/* ============================================
+   NAVEGAÇÃO DESKTOP
+   ============================================ */
+.header__nav {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header__nav {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.header__menu {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.header__menu > li > a,
+.header__dropdown-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 500;
+  color: var(--ocean-deep);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.header__menu > li > a:hover,
+.header__dropdown-toggle:hover,
+.header__menu > li > a.active {
+  background: var(--pearl-gray);
+  color: var(--ocean-deep);
+}
+
+/* ============================================
+   DROPDOWN
+   ============================================ */
+.header__dropdown {
+  position: relative;
+}
+
+.header__dropdown-toggle {
+  cursor: pointer;
+}
+
+.header__dropdown-toggle i {
+  font-size: 1rem;
+  transition: transform var(--transition-fast);
+}
+
+.header__dropdown.active .header__dropdown-toggle i {
+  transform: rotate(180deg);
+}
+
+.header__dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: var(--space-2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all var(--transition-fast);
+  z-index: var(--z-dropdown);
+}
+
+.header__dropdown.active .header__dropdown-menu,
+.header__dropdown:hover .header__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header__dropdown-menu li a {
+  display: block;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--charcoal);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.header__dropdown-menu li a:hover {
+  background: var(--pearl-gray);
+  color: var(--ocean-deep);
+}
+
+/* ============================================
+   CTA WHATSAPP (Header)
+   ============================================ */
+.header__cta {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .header__cta {
+    display: inline-flex;
+  }
+}
+
+.header__cta span {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .header__cta span {
+    display: inline;
+  }
+}
+
+/* ============================================
+   MENU MOBILE TOGGLE
+   ============================================ */
+.header__mobile-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: calc(var(--z-fixed) + 1);
+}
+
+@media (min-width: 1024px) {
+  .header__mobile-toggle {
+    display: none;
+  }
+}
+
+/* Hamburger Icon */
+.header__hamburger {
+  position: relative;
+  width: 24px;
+  height: 2px;
+  background: var(--ocean-deep);
+  border-radius: var(--radius-full);
+  transition: background var(--transition-fast);
+}
+
+.header__hamburger::before,
+.header__hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 24px;
+  height: 2px;
+  background: var(--ocean-deep);
+  border-radius: var(--radius-full);
+  transition: all var(--transition-base);
+}
+
+.header__hamburger::before {
+  top: -7px;
+}
+
+.header__hamburger::after {
+  bottom: -7px;
+}
+
+/* Hamburger Active (X) */
+.header__mobile-toggle[aria-expanded="true"] .header__hamburger {
+  background: transparent;
+}
+
+.header__mobile-toggle[aria-expanded="true"] .header__hamburger::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.header__mobile-toggle[aria-expanded="true"] .header__hamburger::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+/* ============================================
+   MENU MOBILE
+   ============================================ */
+.header__mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-fixed);
+  background: var(--white);
+  padding: calc(72px + var(--space-6)) var(--space-6) var(--space-6);
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all var(--transition-base);
+}
+
+.header__mobile-menu[aria-hidden="false"] {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+@media (min-width: 1024px) {
+  .header__mobile-menu {
+    display: none;
+  }
+}
+
+.header__mobile-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-8);
+}
+
+.header__mobile-list li a {
+  display: block;
+  padding: var(--space-4);
+  font-family: var(--font-heading);
+  font-size: var(--text-body-lg);
+  font-weight: 500;
+  color: var(--ocean-deep);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.header__mobile-list li a:hover,
+.header__mobile-list li a.active {
+  background: var(--pearl-gray);
+}
+
+/* WhatsApp button full width no mobile */
+.header__mobile-menu .btn--full {
+  width: 100%;
+  justify-content: center;
+}
+
+/* ============================================
+   BODY SCROLL LOCK
+   ============================================ */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ============================================
+   HEADER TRANSPARENT (para Hero)
+   ============================================ */
+.header--transparent {
+  position: absolute;
+  width: 100%;
+  background: transparent;
+  border-bottom: none;
+}
+
+.header--transparent .header__menu > li > a,
+.header--transparent .header__dropdown-toggle {
+  color: var(--white);
+}
+
+.header--transparent .header__menu > li > a:hover,
+.header--transparent .header__dropdown-toggle:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+}
+
+.header--transparent .header__hamburger,
+.header--transparent .header__hamburger::before,
+.header--transparent .header__hamburger::after {
+  background: var(--white);
+}
+
+.header--transparent .header__logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* When scrolled, revert to normal */
+.header--transparent.header--scrolled {
+  position: fixed;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.header--transparent.header--scrolled .header__menu > li > a,
+.header--transparent.header--scrolled .header__dropdown-toggle {
+  color: var(--ocean-deep);
+}
+
+.header--transparent.header--scrolled .header__menu > li > a:hover,
+.header--transparent.header--scrolled .header__dropdown-toggle:hover {
+  background: var(--pearl-gray);
+  color: var(--ocean-deep);
+}
+
+.header--transparent.header--scrolled .header__hamburger,
+.header--transparent.header--scrolled .header__hamburger::before,
+.header--transparent.header--scrolled .header__hamburger::after {
+  background: var(--ocean-deep);
+}
+
+.header--transparent.header--scrolled .header__logo img {
+  filter: none;
+}

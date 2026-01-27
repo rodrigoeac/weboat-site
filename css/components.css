@@ -1,0 +1,690 @@
+/* ============================================
+   WEBOAT BRASIL - COMPONENTES CSS
+   Versão: 1.0 | Janeiro 2026
+   ============================================ */
+
+/* ============================================
+   BOTÕES
+   ============================================ */
+
+/* Base */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--font-heading);
+  font-size: var(--text-button);
+  font-weight: var(--weight-button);
+  letter-spacing: var(--tracking-button);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  min-height: 48px;
+  white-space: nowrap;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--wave-blue);
+  outline-offset: 2px;
+}
+
+/* Primary - Sunset Gold */
+.btn-primary {
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  border-color: var(--sunset-gold);
+}
+
+.btn-primary:hover {
+  background: var(--sunset-gold-hover);
+  border-color: var(--sunset-gold-hover);
+  box-shadow: var(--shadow-button);
+  transform: translateY(-2px);
+  color: var(--ocean-deep);
+}
+
+/* Secondary - Wave Blue outline */
+.btn-secondary {
+  background: transparent;
+  color: var(--wave-blue);
+  border-color: var(--wave-blue);
+}
+
+.btn-secondary:hover {
+  background: var(--wave-blue);
+  color: var(--white);
+}
+
+/* Ghost - Transparente */
+.btn-ghost {
+  background: transparent;
+  color: var(--ocean-deep);
+  border-color: transparent;
+}
+
+.btn-ghost:hover {
+  background: var(--pearl-gray);
+}
+
+/* WhatsApp */
+.btn-whatsapp {
+  background: var(--whatsapp-green);
+  color: var(--white);
+  border-color: var(--whatsapp-green);
+}
+
+.btn-whatsapp:hover {
+  background: var(--whatsapp-green-hover);
+  border-color: var(--whatsapp-green-hover);
+  transform: translateY(-2px);
+  color: var(--white);
+}
+
+/* White (para fundos escuros) */
+.btn-white {
+  background: var(--white);
+  color: var(--ocean-deep);
+  border-color: var(--white);
+}
+
+.btn-white:hover {
+  background: var(--sand-white);
+  border-color: var(--sand-white);
+  color: var(--ocean-deep);
+}
+
+/* Outline White (para fundos escuros) */
+.btn-outline-white {
+  background: transparent;
+  color: var(--white);
+  border-color: var(--white);
+}
+
+.btn-outline-white:hover {
+  background: var(--white);
+  color: var(--ocean-deep);
+}
+
+/* Tamanhos */
+.btn-sm {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-body-sm);
+  min-height: 40px;
+}
+
+.btn-lg {
+  padding: var(--space-4) var(--space-8);
+  font-size: var(--text-body-lg);
+  min-height: 56px;
+}
+
+/* Full width */
+.btn-block {
+  width: 100%;
+}
+
+/* Ícone dentro do botão */
+.btn i, .btn svg {
+  font-size: 1.25em;
+}
+
+/* ============================================
+   CARDS - LANCHA
+   ============================================ */
+.card-boat {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  overflow: hidden;
+  transition: all var(--transition-base);
+  display: flex;
+  flex-direction: column;
+}
+
+.card-boat:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.card-boat__image {
+  position: relative;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.card-boat__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card-boat:hover .card-boat__image img {
+  transform: scale(1.05);
+}
+
+.card-boat__badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.card-boat__content {
+  padding: var(--space-5);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-boat__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.card-boat__capacity {
+  font-family: var(--font-body);
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.card-boat__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.card-boat__feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.card-boat__feature-icon {
+  color: var(--success);
+  font-size: 1rem;
+}
+
+.card-boat__footer {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-top: auto;
+}
+
+.card-boat__price-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-boat__price-label {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+.card-boat__price {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+.card-boat__price-note {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+/* ============================================
+   CARDS - ROTEIRO
+   ============================================ */
+.card-route {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  padding: var(--space-6);
+  transition: all var(--transition-base);
+}
+
+.card-route:hover {
+  box-shadow: var(--shadow-card-hover);
+  border-color: var(--wave-blue);
+}
+
+.card-route__header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.card-route__icon {
+  width: 48px;
+  height: 48px;
+  background: var(--pearl-gray);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.card-route__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-1);
+}
+
+.card-route__tag {
+  font-size: var(--text-caption);
+  color: var(--white);
+  background: var(--wave-blue);
+  padding: var(--space-1) var(--space-2);
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+.card-route__tag--popular {
+  background: var(--error);
+}
+
+.card-route__description {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  margin-bottom: var(--space-4);
+}
+
+.card-route__stops {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-bottom: var(--space-4);
+}
+
+.card-route__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-light);
+}
+
+.card-route__price {
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+/* ============================================
+   CARDS - SERVIÇO
+   ============================================ */
+.card-service {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  padding: var(--space-6);
+  text-align: center;
+  transition: all var(--transition-base);
+}
+
+.card-service:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.card-service__icon {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  font-size: 2rem;
+}
+
+.card-service__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.card-service__price {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--sunset-gold);
+  margin-bottom: var(--space-2);
+}
+
+.card-service__description {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+/* ============================================
+   BADGES
+   ============================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+}
+
+.badge-own {
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+}
+
+.badge-popular {
+  background: var(--error);
+  color: var(--white);
+}
+
+.badge-promo {
+  background: var(--success);
+  color: var(--white);
+}
+
+.badge-new {
+  background: var(--wave-blue);
+  color: var(--white);
+}
+
+.badge-outline {
+  background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--driftwood);
+}
+
+/* ============================================
+   FORMULÁRIOS
+   ============================================ */
+.form-group {
+  margin-bottom: var(--space-5);
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.form-label--required::after {
+  content: ' *';
+  color: var(--error);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  background: var(--white);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  min-height: 48px;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--wave-blue);
+  box-shadow: 0 0 0 3px rgba(74, 144, 184, 0.15);
+}
+
+.form-input::placeholder,
+.form-textarea::placeholder {
+  color: var(--driftwood);
+}
+
+.form-input--error,
+.form-select--error,
+.form-textarea--error {
+  border-color: var(--error);
+}
+
+.form-input--error:focus {
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Cpath fill='%236B7280' d='M4 6l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-4) center;
+  padding-right: var(--space-10);
+}
+
+.form-hint {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  margin-top: var(--space-1);
+}
+
+.form-error {
+  font-size: var(--text-caption);
+  color: var(--error);
+  margin-top: var(--space-1);
+}
+
+/* Checkbox & Radio */
+.form-check {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  cursor: pointer;
+}
+
+.form-check-input {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: var(--wave-blue);
+}
+
+.form-check-label {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  cursor: pointer;
+}
+
+/* ============================================
+   SOCIAL PROOF (Números)
+   ============================================ */
+.social-proof {
+  background: var(--ocean-deep);
+  padding: var(--space-16) 0;
+}
+
+.social-proof__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-8);
+  text-align: center;
+}
+
+.social-proof__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-proof__number {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--sunset-gold);
+  line-height: 1;
+  margin-bottom: var(--space-2);
+}
+
+.social-proof__label {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+@media (max-width: 1024px) {
+  .social-proof__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-8) var(--space-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .social-proof {
+    padding: var(--space-12) 0;
+  }
+  
+  .social-proof__number {
+    font-size: 2.5rem;
+  }
+}
+
+/* ============================================
+   WHATSAPP FLOAT
+   ============================================ */
+.whatsapp-float {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-whatsapp);
+}
+
+.whatsapp-float__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--whatsapp-green);
+  border-radius: var(--radius-full);
+  color: var(--white);
+  font-size: 2rem;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  animation: pulse-whatsapp 2s infinite;
+}
+
+.whatsapp-float__btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-xl);
+  color: var(--white);
+}
+
+@keyframes pulse-whatsapp {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    bottom: var(--space-4);
+    right: var(--space-4);
+  }
+  
+  .whatsapp-float__btn {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+  }
+}
+
+/* ============================================
+   SECTION HEADER (Título de seção)
+   ============================================ */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto var(--space-12);
+}
+
+.section-header__overline {
+  display: block;
+  margin-bottom: var(--space-3);
+}
+
+.section-header__title {
+  margin-bottom: var(--space-4);
+}
+
+.section-header__description {
+  font-size: var(--text-body-lg);
+  color: var(--driftwood);
+}
+
+.section-header--left {
+  text-align: left;
+  margin-left: 0;
+}
+
+/* ============================================
+   DIVIDER
+   ============================================ */
+.divider {
+  height: 1px;
+  background: var(--border-light);
+  margin: var(--space-8) 0;
+}
+
+.divider--gold {
+  height: 3px;
+  width: 60px;
+  background: var(--sunset-gold);
+  border-radius: var(--radius-full);
+}
