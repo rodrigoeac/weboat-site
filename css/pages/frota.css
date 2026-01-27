@@ -1,0 +1,286 @@
+/* ============================================
+   WEBOAT BRASIL - FROTA (LISTAGEM) CSS
+   Versão: 1.0 | Janeiro 2026
+   ============================================ */
+
+/* ============================================
+   PAGE HEADER
+   ============================================ */
+.page-header {
+  background: var(--ocean-deep);
+  padding: calc(72px + var(--space-12)) 0 var(--space-12);
+  text-align: center;
+}
+
+.page-header__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page-header__overline {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  color: var(--sunset-gold);
+  margin-bottom: var(--space-3);
+}
+
+.page-header__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: var(--weight-h1);
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.page-header__description {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: calc(72px + var(--space-8)) 0 var(--space-8);
+  }
+
+  .page-header__title {
+    font-size: var(--text-h2);
+  }
+}
+
+/* ============================================
+   FROTA SECTION
+   ============================================ */
+.frota {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.frota__section {
+  margin-bottom: var(--space-16);
+}
+
+.frota__section:last-child {
+  margin-bottom: 0;
+}
+
+.frota__section-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-8);
+}
+
+.frota__section-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--sunset-gold);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--ocean-deep);
+}
+
+.frota__section-title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin: 0;
+}
+
+.frota__section-subtitle {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin: 0;
+}
+
+.frota__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.frota__note {
+  text-align: center;
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-top: var(--space-8);
+}
+
+@media (max-width: 1024px) {
+  .frota__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .frota__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .frota {
+    padding: var(--space-12) 0;
+  }
+
+  .frota__section {
+    margin-bottom: var(--space-12);
+  }
+}
+
+/* ============================================
+   CARD BOAT ENHANCED
+   ============================================ */
+.card-boat--featured {
+  border: 2px solid var(--sunset-gold);
+}
+
+.card-boat--featured .card-boat__badge {
+  background: var(--sunset-gold);
+}
+
+/* ============================================
+   INFO BAR
+   ============================================ */
+.info-bar {
+  background: var(--pearl-gray);
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.info-bar__content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-6);
+}
+
+.info-bar__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.info-bar__item i {
+  font-size: 1.25rem;
+  color: var(--wave-blue);
+}
+
+@media (max-width: 640px) {
+  .info-bar__content {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}
+
+/* ============================================
+   CTA SECTION
+   ============================================ */
+.frota-cta {
+  background: var(--ocean-deep);
+  padding: var(--space-16) 0;
+  text-align: center;
+}
+
+.frota-cta__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.frota-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.frota-cta__text {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  .frota-cta {
+    padding: var(--space-12) 0;
+  }
+
+  .frota-cta__title {
+    font-size: var(--text-h3);
+  }
+}
+
+/* ============================================
+   INCLUDES SECTION
+   ============================================ */
+.includes {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.includes__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+}
+
+.includes__item {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  text-align: center;
+  border: 1px solid var(--border-light);
+}
+
+.includes__icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto var(--space-4);
+  font-size: 1.5rem;
+  color: var(--sunset-gold);
+}
+
+.includes__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-1);
+}
+
+.includes__text {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .includes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .includes__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .includes {
+    padding: var(--space-12) 0;
+  }
+}

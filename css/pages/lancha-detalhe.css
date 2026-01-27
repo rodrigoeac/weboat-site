@@ -1,0 +1,591 @@
+/* ============================================
+   WEBOAT BRASIL - LANCHA DETALHE CSS
+   Versão: 1.0 | Janeiro 2026
+   ============================================ */
+
+/* ============================================
+   LANCHA HERO
+   ============================================ */
+.lancha-hero {
+  padding: calc(72px + var(--space-8)) 0 var(--space-8);
+  background: var(--pearl-gray);
+}
+
+.lancha-hero__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+@media (max-width: 1024px) {
+  .lancha-hero__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   GALERIA
+   ============================================ */
+.lancha-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.lancha-gallery__main {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+
+.lancha-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform var(--transition-base);
+}
+
+.lancha-gallery__main img:hover {
+  transform: scale(1.02);
+}
+
+.lancha-gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-3);
+}
+
+.lancha-gallery__thumb {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.lancha-gallery__thumb:hover,
+.lancha-gallery__thumb.active {
+  border-color: var(--wave-blue);
+}
+
+.lancha-gallery__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ============================================
+   LANCHA INFO
+   ============================================ */
+.lancha-info {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-lg);
+}
+
+.lancha-info__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+}
+
+.lancha-info__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.lancha-info__subtitle {
+  font-size: var(--text-body);
+  color: var(--driftwood);
+  margin-bottom: var(--space-6);
+}
+
+.lancha-info__capacity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-heading);
+  font-size: var(--text-body-lg);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-6);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.lancha-info__capacity i {
+  font-size: 1.5rem;
+  color: var(--wave-blue);
+}
+
+/* Tabela de Preços */
+.lancha-prices {
+  margin-bottom: var(--space-6);
+}
+
+.lancha-prices__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.lancha-prices__table {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.lancha-prices__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3) var(--space-4);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+}
+
+.lancha-prices__row--highlight {
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border: 1px solid var(--sunset-gold);
+}
+
+.lancha-prices__label {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.lancha-prices__value {
+  font-family: var(--font-display);
+  font-size: var(--text-h4);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+.lancha-prices__note {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  margin-top: var(--space-3);
+}
+
+/* CTA Buttons */
+.lancha-info__ctas {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.lancha-info__ctas .btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .lancha-info {
+    padding: var(--space-6);
+  }
+
+  .lancha-info__title {
+    font-size: var(--text-h3);
+  }
+}
+
+/* ============================================
+   LANCHA DETAILS SECTIONS
+   ============================================ */
+.lancha-details {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.lancha-details__grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--space-8);
+}
+
+@media (max-width: 1024px) {
+  .lancha-details__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Main Content */
+.lancha-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+/* Sections */
+.lancha-section {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  border: 1px solid var(--border-light);
+}
+
+.lancha-section__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.lancha-section__title i {
+  font-size: 1.25rem;
+  color: var(--wave-blue);
+}
+
+/* Descrição */
+.lancha-section__description {
+  font-size: var(--text-body);
+  color: var(--charcoal);
+  line-height: 1.8;
+}
+
+/* Features Grid */
+.lancha-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.lancha-feature {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+}
+
+.lancha-feature__icon {
+  width: 40px;
+  height: 40px;
+  background: var(--white);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  color: var(--success);
+  flex-shrink: 0;
+}
+
+.lancha-feature__text {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+@media (max-width: 640px) {
+  .lancha-features {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Specs Table */
+.lancha-specs {
+  display: flex;
+  flex-direction: column;
+}
+
+.lancha-specs__row {
+  display: flex;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.lancha-specs__row:last-child {
+  border-bottom: none;
+}
+
+.lancha-specs__label {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+}
+
+.lancha-specs__value {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+/* ============================================
+   SIDEBAR
+   ============================================ */
+.lancha-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Sticky Card */
+.lancha-sticky {
+  position: sticky;
+  top: calc(72px + var(--space-6));
+}
+
+/* Quick Info Card */
+.lancha-quick {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+}
+
+.lancha-quick__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.lancha-quick__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.lancha-quick__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.lancha-quick__item i {
+  font-size: 1.25rem;
+  color: var(--wave-blue);
+}
+
+/* Related Boats */
+.lancha-related {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+}
+
+.lancha-related__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.lancha-related__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.lancha-related__item {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.lancha-related__item:hover {
+  background: var(--border-light);
+  transform: translateX(4px);
+}
+
+.lancha-related__image {
+  width: 80px;
+  height: 60px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.lancha-related__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lancha-related__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.lancha-related__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.lancha-related__price {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+/* ============================================
+   ROTEIROS SUGERIDOS
+   ============================================ */
+.lancha-roteiros {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.lancha-roteiros__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+@media (max-width: 1024px) {
+  .lancha-roteiros__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .lancha-roteiros__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .lancha-roteiros {
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.lancha-cta {
+  padding: var(--space-16) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.lancha-cta__content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lancha-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.lancha-cta__text {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-8);
+}
+
+.lancha-cta__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+@media (min-width: 480px) {
+  .lancha-cta__buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .lancha-cta {
+    padding: var(--space-12) 0;
+  }
+
+  .lancha-cta__title {
+    font-size: var(--text-h3);
+  }
+
+  .lancha-section {
+    padding: var(--space-6);
+  }
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+.lightbox-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.lightbox-content {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 44px;
+  height: 44px;
+  background: var(--white);
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.lightbox-close:hover {
+  background: var(--sunset-gold);
+}
