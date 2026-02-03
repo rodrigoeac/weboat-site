@@ -944,3 +944,90 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* ============================================
+   MINI FAQ - Roteiros
+   ============================================ */
+.roteiro-faq {
+  padding: var(--space-12) 0;
+  background-color: var(--pearl-gray);
+}
+
+.roteiro-faq__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: var(--weight-h3);
+  color: var(--ocean-deep);
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.roteiro-faq__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .roteiro-faq__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.roteiro-faq__item {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.roteiro-faq__question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  cursor: pointer;
+  list-style: none;
+  transition: background-color var(--transition-fast);
+}
+
+.roteiro-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.roteiro-faq__question:hover {
+  background-color: var(--pearl-gray);
+}
+
+.roteiro-faq__question span {
+  flex: 1;
+}
+
+.roteiro-faq__question i {
+  font-size: 1.25rem;
+  color: var(--wave-blue);
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.roteiro-faq__item[open] .roteiro-faq__question i {
+  transform: rotate(180deg);
+}
+
+.roteiro-faq__answer {
+  padding: 0 var(--space-4) var(--space-4);
+}
+
+.roteiro-faq__answer p {
+  font-size: var(--text-body-sm);
+  line-height: var(--line-body);
+  color: var(--charcoal);
+  margin: 0;
+}
