@@ -1,0 +1,622 @@
+# Plano de Atualização - Dados Reais WeBoat
+
+> **Fonte dos dados:** `/Users/rodrigocosta/weboat-proposal/src/data/`
+> **Data:** 03 de Fevereiro de 2026
+
+---
+
+## 📊 RESUMO DOS DADOS
+
+### Lanchas Próprias (4)
+| ID | Nome | Capacidade | Preço R1 (Promo) | Preço R1 (Normal) | Hora Extra |
+|----|------|------------|------------------|-------------------|------------|
+| weboat-32 | WeBoat 32 | 15 | R$ 2.300 | R$ 2.700 | R$ 800 |
+| weboat-oceanic-36 | WeBoat Oceanic 36 | 14 | R$ 2.400 | R$ 2.800 | R$ 800 |
+| weboat-390 | WeBoat 390 | 16 | R$ 2.600 | R$ 3.100 | R$ 800 |
+| weboat-rio-star-50 | WeBoat Rio Star 50 | 20-22 | R$ 4.000 | R$ 4.500 | R$ 1.200 |
+
+### Roteiros
+| ID | Nome | Duração |
+|----|------|---------|
+| R1 | Mureta da Urca | ~3h |
+| R2 | Praia Vermelha | ~3h |
+| R3 | Copacabana | ~4h |
+| R4 | Ilhas Cagarras | ~5h |
+| R5 | Itaipu/Camboinhas | ~5h |
+
+### Serviços
+| Categoria | Serviço | Preço Base |
+|-----------|---------|------------|
+| Churrasco | Kit Simples | R$ 100-150/pessoa |
+| Churrasco | Com Acompanhamentos | R$ 145-160/pessoa |
+| Open Bar | Básico | R$ 135-150/pessoa |
+| Open Bar | Premium | R$ 160-180/pessoa |
+| Combo | Churrasco + Open Bar Básico | R$ 205-230/pessoa |
+| Combo | Churrasco + Open Bar Premium | R$ 220-250/pessoa |
+| Mesa | Queijos & Vinhos | R$ 115-140/pessoa |
+| Mesa | Snacks Premium | R$ 120-150/pessoa |
+| Decoração | Kit Festa Premium | R$ 1.850-2.500 |
+| Decoração | Kit Despedida | R$ 135-150/pessoa |
+| Entretenimento | DJ com Equipamento | R$ 1.500 |
+| Entretenimento | Fotógrafo | R$ 800 |
+
+### O que Inclui (Padrão)
+- Combustível
+- Tripulação habilitada
+- Tapete flutuante
+- Macarrões
+- Som com Bluetooth
+- Coolers
+
+---
+
+## 🚀 FASES DE ATUALIZAÇÃO
+
+---
+
+## FASE A: LANCHAS PRÓPRIAS
+
+### A1: Listagem de Lanchas
+**Arquivo:** `pages/lanchas/index.html`
+- [ ] Atualizar preços de todas as lanchas
+- [ ] Atualizar capacidades
+- [ ] Revisar textos descritivos
+
+**COMMIT:** `feat(lanchas): atualizar listagem com preços reais`
+
+---
+
+### A2: WeBoat 32
+**Arquivo:** `pages/lanchas/weboat-32.html`
+- [ ] Atualizar especificações (capacidade: 15)
+- [ ] Tabela de preços por roteiro
+- [ ] Taxa churrasqueira: R$ 250
+- [ ] Hora extra: R$ 800
+- [ ] O que inclui
+- [ ] Adicionar Mini FAQ (3-4 perguntas)
+
+**COMMIT:** `feat(lanchas): atualizar WeBoat 32 com dados e mini FAQ`
+
+---
+
+### A3: WeBoat 390
+**Arquivo:** `pages/lanchas/weboat-390.html`
+- [ ] Atualizar especificações (capacidade: 16, com staff: 18)
+- [ ] Tabela de preços por roteiro
+- [ ] Taxa churrasqueira: R$ 250
+- [ ] Hora extra: R$ 800
+- [ ] O que inclui
+- [ ] Adicionar Mini FAQ (3-4 perguntas)
+
+**COMMIT:** `feat(lanchas): atualizar WeBoat 390 com dados e mini FAQ`
+
+---
+
+### A4: WeBoat Oceanic 36
+**Arquivo:** `pages/lanchas/weboat-oceanic-36.html`
+- [ ] Atualizar especificações (capacidade: 14)
+- [ ] Tabela de preços por roteiro
+- [ ] Taxa churrasqueira: R$ 250
+- [ ] Hora extra: R$ 800
+- [ ] O que inclui
+- [ ] Adicionar Mini FAQ (3-4 perguntas)
+
+**COMMIT:** `feat(lanchas): atualizar WeBoat Oceanic 36 com dados e mini FAQ`
+
+---
+
+### A5: WeBoat Rio Star 50
+**Arquivo:** `pages/lanchas/weboat-rio-star-50.html`
+- [ ] Atualizar especificações (capacidade: 20-22, com staff: 24)
+- [ ] Tabela de preços por roteiro
+- [ ] Taxa churrasqueira: R$ 250
+- [ ] Hora extra: R$ 1.200
+- [ ] Pessoa extra: R$ 250 (a partir de 21)
+- [ ] O que inclui
+- [ ] Adicionar Mini FAQ (3-4 perguntas)
+
+**COMMIT:** `feat(lanchas): atualizar WeBoat Rio Star 50 com dados e mini FAQ`
+
+---
+
+### A6: SEO e Schema - Lanchas
+**Arquivos:** Todos em `pages/lanchas/`
+- [ ] Verificar/adicionar Schema Product em cada lancha
+- [ ] Verificar/adicionar Schema FAQPage para mini FAQs
+- [ ] Verificar meta descriptions (150-160 chars)
+- [ ] Verificar títulos únicos
+- [ ] Verificar canonical URLs
+- [ ] Verificar Open Graph tags
+- [ ] Verificar alt text das imagens
+
+**COMMIT:** `chore(lanchas): verificar e ajustar SEO e schemas`
+
+---
+
+## FASE B: ROTEIROS
+
+### B1: Listagem de Roteiros
+**Arquivo:** `pages/roteiros/index.html`
+- [ ] Atualizar preços base (a partir de)
+- [ ] Atualizar durações
+- [ ] Revisar descrições
+
+**COMMIT:** `feat(roteiros): atualizar listagem com preços reais`
+
+---
+
+### B2: Mureta da Urca (R1)
+**Arquivo:** `pages/roteiros/mureta-da-urca.html`
+- [ ] Atualizar preços por lancha
+- [ ] Duração: ~3h (turno de 5h)
+- [ ] Pontos de parada
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(roteiros): atualizar Mureta da Urca com dados e mini FAQ`
+
+---
+
+### B3: Praia Vermelha (R2)
+**Arquivo:** `pages/roteiros/praia-vermelha.html`
+- [ ] Atualizar preços por lancha
+- [ ] Duração: ~3h (turno de 5h)
+- [ ] Pontos de parada
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(roteiros): atualizar Praia Vermelha com dados e mini FAQ`
+
+---
+
+### B4: Copacabana (R3)
+**Arquivo:** `pages/roteiros/copacabana.html`
+- [ ] Atualizar preços por lancha
+- [ ] Duração: ~4h (turno de 5h)
+- [ ] Pontos de parada
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(roteiros): atualizar Copacabana com dados e mini FAQ`
+
+---
+
+### B5: Ilhas Cagarras (R4)
+**Arquivo:** `pages/roteiros/ilhas-cagarras.html`
+- [ ] Atualizar preços por lancha
+- [ ] Duração: ~5h (turno de 5h)
+- [ ] Pontos de parada
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(roteiros): atualizar Ilhas Cagarras com dados e mini FAQ`
+
+---
+
+### B6: Itaipu e Camboinhas (R5)
+**Arquivo:** `pages/roteiros/itaipu-camboinhas.html`
+- [ ] Atualizar preços por lancha
+- [ ] Duração: ~5h (turno de 5h)
+- [ ] Pontos de parada
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(roteiros): atualizar Itaipu e Camboinhas com dados e mini FAQ`
+
+---
+
+### B7: SEO e Schema - Roteiros
+**Arquivos:** Todos em `pages/roteiros/`
+- [ ] Verificar/adicionar Schema TouristAttraction
+- [ ] Verificar/adicionar Schema FAQPage para mini FAQs
+- [ ] Verificar meta descriptions
+- [ ] Verificar títulos únicos
+- [ ] Verificar canonical URLs
+- [ ] Verificar Open Graph tags
+
+**COMMIT:** `chore(roteiros): verificar e ajustar SEO e schemas`
+
+---
+
+## FASE C: SERVIÇOS
+
+### C1: Churrasco
+**Arquivo:** `pages/servicos.html` (seção)
+- [ ] Kit Simples: preços por faixa de pessoas
+- [ ] Com Acompanhamentos: preços por faixa
+- [ ] O que inclui em cada kit
+
+**COMMIT:** `feat(servicos): atualizar seção de churrasco`
+
+---
+
+### C2: Open Bar
+**Arquivo:** `pages/servicos.html` (seção)
+- [ ] Open Bar Básico: preços por faixa
+- [ ] Open Bar Premium: preços por faixa
+- [ ] O que inclui em cada opção
+
+**COMMIT:** `feat(servicos): atualizar seção de open bar`
+
+---
+
+### C3: Combos, Mesas e Decoração
+**Arquivo:** `pages/servicos.html` (seções)
+- [ ] Combos: preços por faixa
+- [ ] Mesas: Queijos & Vinhos, Snacks Premium
+- [ ] Decoração: Kit Festa, Kit Despedida
+
+**COMMIT:** `feat(servicos): atualizar combos, mesas e decoração`
+
+---
+
+### C4: Entretenimento e Mini FAQ
+**Arquivo:** `pages/servicos.html`
+- [ ] DJ com Equipamento: R$ 1.500
+- [ ] Fotógrafo: R$ 800
+- [ ] Adicionar Mini FAQ geral sobre serviços
+
+**COMMIT:** `feat(servicos): atualizar entretenimento e adicionar mini FAQ`
+
+---
+
+### C5: SEO e Schema - Serviços
+**Arquivo:** `pages/servicos.html`
+- [ ] Verificar/adicionar Schema Service para cada serviço
+- [ ] Verificar/adicionar Schema ItemList
+- [ ] Verificar/adicionar Schema FAQPage
+- [ ] Verificar meta description
+- [ ] Verificar Open Graph
+
+**COMMIT:** `chore(servicos): verificar e ajustar SEO e schemas`
+
+---
+
+## FASE D: HOMEPAGE
+
+### D1: Cards de Lanchas e Roteiros
+**Arquivo:** `index.html`
+- [ ] Atualizar preços nos cards de lanchas
+- [ ] Atualizar preços nos cards de roteiros
+- [ ] Revisar textos
+
+**COMMIT:** `feat(home): atualizar cards com preços reais`
+
+---
+
+### D2: Seção Google Reviews
+**Arquivos:** `index.html`, `js/reviews.js` (criar), `css/pages/home.css`
+- [ ] Criar estrutura HTML para reviews
+- [ ] Implementar carrossel automático
+- [ ] Mostrar apenas 5 estrelas
+- [ ] Mostrar total de reviews
+- [ ] Estilizar componente
+
+**COMMIT:** `feat(home): adicionar seção de Google Reviews`
+
+---
+
+### D3: Seção Famosos
+**Arquivos:** `index.html`, `js/carousel.js` (criar), `css/pages/home.css`
+- [ ] Criar estrutura HTML para famosos
+- [ ] Implementar carrossel horizontal automático
+- [ ] Fotos com legendas (nomes)
+- [ ] Pausar no hover
+- [ ] Responsivo
+
+**COMMIT:** `feat(home): adicionar seção preferida dos famosos`
+
+---
+
+### D4: SEO e Schema - Homepage
+**Arquivo:** `index.html`
+- [ ] Verificar/adicionar Schema Organization
+- [ ] Verificar/adicionar Schema Review/AggregateRating
+- [ ] Verificar/adicionar Schema FAQPage (se tiver mini FAQ)
+- [ ] Verificar meta tags
+- [ ] Verificar Open Graph
+
+**COMMIT:** `chore(home): verificar e ajustar SEO e schemas`
+
+---
+
+## FASE E: OCASIÕES
+
+### E1: Despedida de Solteira
+**Arquivo:** `pages/ocasioes/despedida-solteira.html`
+- [ ] Atualizar preços de pacotes
+- [ ] Kit Despedida: R$ 135-150/pessoa
+- [ ] Serviços recomendados
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(ocasioes): atualizar despedida de solteira`
+
+---
+
+### E2: Aniversário
+**Arquivo:** `pages/ocasioes/aniversario.html`
+- [ ] Atualizar preços de pacotes
+- [ ] Kit Festa Premium: R$ 1.850-2.500
+- [ ] Serviços recomendados
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(ocasioes): atualizar aniversário`
+
+---
+
+### E3: Corporativo
+**Arquivo:** `pages/ocasioes/corporativo.html`
+- [ ] Atualizar preços
+- [ ] Lanchas recomendadas para grupos
+- [ ] Serviços corporativos
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(ocasioes): atualizar corporativo`
+
+---
+
+### E4: Réveillon
+**Arquivo:** `pages/ocasioes/reveillon.html`
+- [ ] Atualizar preços especiais
+- [ ] Informações específicas
+- [ ] Adicionar Mini FAQ
+
+**COMMIT:** `feat(ocasioes): atualizar réveillon`
+
+---
+
+### E5: SEO e Schema - Ocasiões
+**Arquivos:** Todos em `pages/ocasioes/`
+- [ ] Verificar/adicionar Schema Event
+- [ ] Verificar/adicionar Schema FAQPage
+- [ ] Verificar meta descriptions
+- [ ] Verificar Open Graph
+
+**COMMIT:** `chore(ocasioes): verificar e ajustar SEO e schemas`
+
+---
+
+## FASE F: FAQ E SUPORTE
+
+### F1: Perguntas ao Usuário
+**Ação:** Coletar informações antes de prosseguir
+
+**Perguntas:**
+1. Cancelamento: Qual a política? (48h antes = reembolso total?)
+2. Mau tempo: O que acontece? Reagendamento?
+3. Crianças: Idade mínima? Coletes especiais?
+4. Pets: São permitidos?
+5. Pagamento: Quais formas? PIX, cartão, dinheiro?
+6. Sinal: Quanto é o sinal para reservar?
+7. Estacionamento: Tem na Marina da Glória? É pago?
+8. Bebidas próprias: Pode levar? Tem taxa de rolha?
+9. Horário de chegada: Quanto tempo antes?
+10. Documentos: Precisa de algum documento?
+11. Outros detalhes relevantes?
+
+**COMMIT:** (nenhum - apenas coleta de informações)
+
+---
+
+### F2: Expandir FAQ Principal
+**Arquivo:** `pages/faq.html`
+- [ ] Adicionar novas perguntas baseadas nas respostas
+- [ ] Organizar por categorias
+- [ ] Melhorar respostas existentes
+
+**COMMIT:** `feat(faq): expandir com novas perguntas`
+
+---
+
+### F3: Mini FAQ - Sobre
+**Arquivo:** `pages/sobre.html`
+- [ ] Adicionar Mini FAQ sobre a empresa
+- [ ] Atualizar números/estatísticas
+
+**COMMIT:** `feat(sobre): adicionar mini FAQ e atualizar dados`
+
+---
+
+### F4: Mini FAQ - Contato
+**Arquivo:** `pages/contato.html`
+- [ ] Adicionar Mini FAQ sobre contato/reservas
+- [ ] Verificar informações de contato
+
+**COMMIT:** `feat(contato): adicionar mini FAQ`
+
+---
+
+### F5: SEO e Schema - FAQ e Suporte
+**Arquivos:** `pages/faq.html`, `pages/sobre.html`, `pages/contato.html`
+- [ ] Verificar Schema FAQPage completo
+- [ ] Verificar Schema AboutPage
+- [ ] Verificar Schema ContactPage
+- [ ] Verificar meta tags em todas
+
+**COMMIT:** `chore(suporte): verificar e ajustar SEO e schemas`
+
+---
+
+## FASE G: VERIFICAÇÃO FINAL
+
+### G1: Auditoria Geral de SEO
+**Todas as páginas:**
+- [ ] Executar verificador.sh
+- [ ] Verificar todas as meta tags
+- [ ] Verificar todos os títulos
+- [ ] Verificar todas as canonical URLs
+- [ ] Verificar todos os Open Graph
+- [ ] Verificar todos os alt texts
+
+**COMMIT:** `chore(seo): auditoria geral de meta tags`
+
+---
+
+### G2: Auditoria de Schemas
+**Todas as páginas:**
+- [ ] Validar todos os JSON-LD (sem erros de sintaxe)
+- [ ] Verificar LocalBusiness em todas
+- [ ] Verificar BreadcrumbList em internas
+- [ ] Verificar schemas específicos por tipo
+- [ ] Testar no Google Rich Results Test
+
+**COMMIT:** `chore(seo): auditoria e correção de schemas`
+
+---
+
+### G3: Atualizar Sitemap
+**Arquivo:** `sitemap.xml`
+- [ ] Verificar todas as URLs
+- [ ] Atualizar lastmod
+- [ ] Verificar prioridades
+
+**COMMIT:** `chore(seo): atualizar sitemap`
+
+---
+
+### G4: Verificação de Links
+**Todas as páginas:**
+- [ ] Verificar links internos
+- [ ] Verificar links externos
+- [ ] Verificar links do WhatsApp
+- [ ] Corrigir links quebrados
+
+**COMMIT:** `fix: corrigir links quebrados`
+
+---
+
+## FASE H: MÍDIAS
+
+### H1: Estrutura de Pastas
+**Criar estrutura:**
+- [ ] `/assets/images/lanchas/`
+- [ ] `/assets/images/roteiros/`
+- [ ] `/assets/images/servicos/`
+- [ ] `/assets/images/famosos/`
+- [ ] `/assets/images/hero/`
+- [ ] `/assets/images/og/`
+
+**COMMIT:** `chore(assets): criar estrutura de pastas para imagens`
+
+---
+
+### H2: Imagens de Lanchas
+**Ação:** Receber e otimizar imagens
+- [ ] WeBoat 32: hero, galeria, thumbnail
+- [ ] WeBoat 390: hero, galeria, thumbnail
+- [ ] WeBoat Oceanic 36: hero, galeria, thumbnail
+- [ ] WeBoat Rio Star 50: hero, galeria, thumbnail
+- [ ] Otimizar (WebP, compressão)
+- [ ] Atualizar referências no HTML
+
+**COMMIT:** `feat(assets): adicionar imagens das lanchas`
+
+---
+
+### H3: Imagens de Roteiros
+**Ação:** Receber e otimizar imagens
+- [ ] Mureta da Urca
+- [ ] Praia Vermelha
+- [ ] Copacabana
+- [ ] Ilhas Cagarras
+- [ ] Itaipu/Camboinhas
+- [ ] Mapa dos roteiros
+
+**COMMIT:** `feat(assets): adicionar imagens dos roteiros`
+
+---
+
+### H4: Imagens de Famosos
+**Ação:** Receber e otimizar imagens
+- [ ] Fotos de famosos (com autorização)
+- [ ] Otimizar para carrossel
+- [ ] Adicionar nomes/legendas
+
+**COMMIT:** `feat(assets): adicionar imagens de famosos`
+
+---
+
+### H5: Imagens Gerais
+**Ação:** Hero, OG, serviços
+- [ ] Hero images
+- [ ] Open Graph images
+- [ ] Imagens de serviços
+- [ ] Implementar lazy loading
+
+**COMMIT:** `feat(assets): adicionar imagens gerais e OG`
+
+---
+
+## 📋 RESUMO DOS COMMITS (33 total)
+
+| Fase | Subfase | Commit |
+|------|---------|--------|
+| A | A1 | `feat(lanchas): atualizar listagem com preços reais` |
+| A | A2 | `feat(lanchas): atualizar WeBoat 32 com dados e mini FAQ` |
+| A | A3 | `feat(lanchas): atualizar WeBoat 390 com dados e mini FAQ` |
+| A | A4 | `feat(lanchas): atualizar WeBoat Oceanic 36 com dados e mini FAQ` |
+| A | A5 | `feat(lanchas): atualizar WeBoat Rio Star 50 com dados e mini FAQ` |
+| A | A6 | `chore(lanchas): verificar e ajustar SEO e schemas` |
+| B | B1 | `feat(roteiros): atualizar listagem com preços reais` |
+| B | B2 | `feat(roteiros): atualizar Mureta da Urca com dados e mini FAQ` |
+| B | B3 | `feat(roteiros): atualizar Praia Vermelha com dados e mini FAQ` |
+| B | B4 | `feat(roteiros): atualizar Copacabana com dados e mini FAQ` |
+| B | B5 | `feat(roteiros): atualizar Ilhas Cagarras com dados e mini FAQ` |
+| B | B6 | `feat(roteiros): atualizar Itaipu e Camboinhas com dados e mini FAQ` |
+| B | B7 | `chore(roteiros): verificar e ajustar SEO e schemas` |
+| C | C1 | `feat(servicos): atualizar seção de churrasco` |
+| C | C2 | `feat(servicos): atualizar seção de open bar` |
+| C | C3 | `feat(servicos): atualizar combos, mesas e decoração` |
+| C | C4 | `feat(servicos): atualizar entretenimento e adicionar mini FAQ` |
+| C | C5 | `chore(servicos): verificar e ajustar SEO e schemas` |
+| D | D1 | `feat(home): atualizar cards com preços reais` |
+| D | D2 | `feat(home): adicionar seção de Google Reviews` |
+| D | D3 | `feat(home): adicionar seção preferida dos famosos` |
+| D | D4 | `chore(home): verificar e ajustar SEO e schemas` |
+| E | E1 | `feat(ocasioes): atualizar despedida de solteira` |
+| E | E2 | `feat(ocasioes): atualizar aniversário` |
+| E | E3 | `feat(ocasioes): atualizar corporativo` |
+| E | E4 | `feat(ocasioes): atualizar réveillon` |
+| E | E5 | `chore(ocasioes): verificar e ajustar SEO e schemas` |
+| F | F2 | `feat(faq): expandir com novas perguntas` |
+| F | F3 | `feat(sobre): adicionar mini FAQ e atualizar dados` |
+| F | F4 | `feat(contato): adicionar mini FAQ` |
+| F | F5 | `chore(suporte): verificar e ajustar SEO e schemas` |
+| G | G1 | `chore(seo): auditoria geral de meta tags` |
+| G | G2 | `chore(seo): auditoria e correção de schemas` |
+| G | G3 | `chore(seo): atualizar sitemap` |
+| G | G4 | `fix: corrigir links quebrados` |
+| H | H1 | `chore(assets): criar estrutura de pastas para imagens` |
+| H | H2 | `feat(assets): adicionar imagens das lanchas` |
+| H | H3 | `feat(assets): adicionar imagens dos roteiros` |
+| H | H4 | `feat(assets): adicionar imagens de famosos` |
+| H | H5 | `feat(assets): adicionar imagens gerais e OG` |
+
+---
+
+## ❓ PERGUNTAS PENDENTES (FASE F1)
+
+1. **Cancelamento:** Qual a política detalhada?
+2. **Mau tempo:** O que acontece? Reagendamento automático?
+3. **Crianças:** Idade mínima? Coletes especiais?
+4. **Pets:** São permitidos a bordo?
+5. **Pagamento:** Quais formas aceitas?
+6. **Sinal:** Qual valor/percentual para reservar?
+7. **Estacionamento:** Tem na Marina? Custo?
+8. **Bebidas próprias:** Pode levar? Taxa?
+9. **Horário de chegada:** Quanto tempo antes?
+10. **Documentos:** Necessários para embarque?
+
+---
+
+## ✅ PROGRESSO
+
+- [ ] **FASE A** - Lanchas (6 commits)
+- [ ] **FASE B** - Roteiros (7 commits)
+- [ ] **FASE C** - Serviços (5 commits)
+- [ ] **FASE D** - Homepage (4 commits)
+- [ ] **FASE E** - Ocasiões (5 commits)
+- [ ] **FASE F** - FAQ/Suporte (4 commits)
+- [ ] **FASE G** - Verificação (4 commits)
+- [ ] **FASE H** - Mídias (5 commits)
+
+**Total: 40 commits planejados**
+
+---
+
+**STATUS:** Aguardando aprovação para iniciar **FASE A1**
