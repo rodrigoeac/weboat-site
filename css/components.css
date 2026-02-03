@@ -692,9 +692,9 @@
 /* ============================================
    FAQ / ACCORDION
    ============================================ */
-.faq.section {
-  padding: var(--space-16) 0;
-  background-color: var(--pearl-gray);
+.faq {
+  padding: var(--space-20) 0;
+  background: var(--sand-white);
 }
 
 .faq__container {
@@ -706,11 +706,11 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
+  margin-bottom: var(--space-8);
 }
 
 .faq__cta {
   text-align: center;
-  margin-top: var(--space-8);
 }
 
 /* Accordion */
@@ -735,11 +735,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  gap: var(--space-4);
   padding: var(--space-5);
+  cursor: pointer;
   background: transparent;
   border: none;
-  cursor: pointer;
+  width: 100%;
   text-align: left;
 }
 
@@ -749,7 +750,6 @@
   font-weight: 600;
   color: var(--ocean-deep);
   margin: 0;
-  padding-right: var(--space-4);
 }
 
 .accordion__icon {
@@ -758,7 +758,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--sunset-gold);
+  font-size: 1.25rem;
+  color: var(--wave-blue);
   transition: transform var(--transition-base);
   flex-shrink: 0;
 }
@@ -785,7 +786,7 @@
 }
 
 @media (max-width: 768px) {
-  .faq.section {
+  .faq {
     padding: var(--space-12) 0;
   }
 
