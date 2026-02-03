@@ -688,3 +688,108 @@
   background: var(--sunset-gold);
   border-radius: var(--radius-full);
 }
+
+/* ============================================
+   FAQ / ACCORDION
+   ============================================ */
+.faq.section {
+  padding: var(--space-16) 0;
+  background-color: var(--pearl-gray);
+}
+
+.faq__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.faq__cta {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+/* Accordion */
+.accordion__item {
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.accordion__item:hover {
+  border-color: var(--wave-blue);
+}
+
+.accordion__item.active {
+  border-color: var(--wave-blue);
+  box-shadow: var(--shadow-md);
+}
+
+.accordion__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-5);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+}
+
+.accordion__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin: 0;
+  padding-right: var(--space-4);
+}
+
+.accordion__icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--sunset-gold);
+  transition: transform var(--transition-base);
+  flex-shrink: 0;
+}
+
+.accordion__item.active .accordion__icon {
+  transform: rotate(180deg);
+}
+
+.accordion__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+.accordion__body {
+  padding: 0 var(--space-5) var(--space-5);
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  line-height: 1.7;
+}
+
+.accordion__body p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .faq.section {
+    padding: var(--space-12) 0;
+  }
+
+  .accordion__title {
+    font-size: var(--text-body-sm);
+  }
+}
