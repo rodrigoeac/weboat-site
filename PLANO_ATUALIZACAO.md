@@ -135,81 +135,57 @@
 
 ## FASE B: ROTEIROS
 
-### B1: Listagem de Roteiros
+### B1: Padronizar Mini FAQ (padrão lanchas) ✅
+**Arquivos:** Todos os roteiros
+- [x] Usar classes faq-grid, faq-item do lancha-detalhe.css
+- [x] Atualizar CSS roteiros.css para reusar componente
+- [x] Atualizar mureta-da-urca.html
+- [x] Atualizar praia-vermelha.html
+- [x] Atualizar copacabana.html
+- [x] Atualizar ilhas-cagarras.html
+- [x] Atualizar itaipu-camboinhas.html
+
+**COMMIT:** `fix(roteiros): padronizar Mini FAQ com mesmo padrão das lanchas` ✅
+
+---
+
+### B2: Volta Completa - Trajeto Real ✅
+**Arquivo:** `pages/roteiros/volta-completa.html`
+- [x] Atualizar trajeto:
+  - Marina da Glória (embarque)
+  - Museu do Amanhã
+  - Ponte Rio-Niterói
+  - Museu de Arte Contemporânea (MAC)
+  - Icaraí
+  - Morcego (parada mergulho)
+  - Adão e Eva (parada mergulho)
+  - Fortes: Santa Cruz, Laje, São João
+  - Mureta da Urca (parada mergulho)
+  - Marina da Glória (desembarque)
+- [x] Adicionar Mini FAQ (padrão lanchas)
+- [x] Adicionar Schema FAQPage
+- [x] Corrigir capacidade Oceanic 36: 14 pessoas
+
+**COMMIT:** `feat(roteiros): atualizar Volta Completa com trajeto real e mini FAQ` ✅
+
+---
+
+### B3: Listagem de Roteiros + Mini FAQ ✅
 **Arquivo:** `pages/roteiros/index.html`
-- [ ] Atualizar preços base (a partir de)
-- [ ] Atualizar durações
-- [ ] Revisar descrições
+- [x] Adicionar seção Mini FAQ (4 perguntas gerais)
+- [x] Adicionar Schema FAQPage
+- [x] Verificar preços atualizados
 
-**COMMIT:** `feat(roteiros): atualizar listagem com preços reais`
-
----
-
-### B2: Mureta da Urca (R1)
-**Arquivo:** `pages/roteiros/mureta-da-urca.html`
-- [ ] Atualizar preços por lancha
-- [ ] Duração: ~3h (turno de 5h)
-- [ ] Pontos de parada
-- [ ] Adicionar Mini FAQ
-
-**COMMIT:** `feat(roteiros): atualizar Mureta da Urca com dados e mini FAQ`
+**COMMIT:** `feat(roteiros): adicionar Mini FAQ na listagem de roteiros` ✅
 
 ---
 
-### B3: Praia Vermelha (R2)
-**Arquivo:** `pages/roteiros/praia-vermelha.html`
-- [ ] Atualizar preços por lancha
-- [ ] Duração: ~3h (turno de 5h)
-- [ ] Pontos de parada
-- [ ] Adicionar Mini FAQ
+### B4: Listagem de Lanchas + Mini FAQ ✅
+**Arquivo:** `pages/lanchas/index.html`
+- [x] Adicionar seção Mini FAQ (4 perguntas gerais)
+- [x] Adicionar Schema FAQPage
 
-**COMMIT:** `feat(roteiros): atualizar Praia Vermelha com dados e mini FAQ`
-
----
-
-### B4: Copacabana (R3)
-**Arquivo:** `pages/roteiros/copacabana.html`
-- [ ] Atualizar preços por lancha
-- [ ] Duração: ~4h (turno de 5h)
-- [ ] Pontos de parada
-- [ ] Adicionar Mini FAQ
-
-**COMMIT:** `feat(roteiros): atualizar Copacabana com dados e mini FAQ`
-
----
-
-### B5: Ilhas Cagarras (R4)
-**Arquivo:** `pages/roteiros/ilhas-cagarras.html`
-- [ ] Atualizar preços por lancha
-- [ ] Duração: ~5h (turno de 5h)
-- [ ] Pontos de parada
-- [ ] Adicionar Mini FAQ
-
-**COMMIT:** `feat(roteiros): atualizar Ilhas Cagarras com dados e mini FAQ`
-
----
-
-### B6: Itaipu e Camboinhas (R5)
-**Arquivo:** `pages/roteiros/itaipu-camboinhas.html`
-- [ ] Atualizar preços por lancha
-- [ ] Duração: ~5h (turno de 5h)
-- [ ] Pontos de parada
-- [ ] Adicionar Mini FAQ
-
-**COMMIT:** `feat(roteiros): atualizar Itaipu e Camboinhas com dados e mini FAQ`
-
----
-
-### B7: SEO e Schema - Roteiros
-**Arquivos:** Todos em `pages/roteiros/`
-- [ ] Verificar/adicionar Schema TouristAttraction
-- [ ] Verificar/adicionar Schema FAQPage para mini FAQs
-- [ ] Verificar meta descriptions
-- [ ] Verificar títulos únicos
-- [ ] Verificar canonical URLs
-- [ ] Verificar Open Graph tags
-
-**COMMIT:** `chore(roteiros): verificar e ajustar SEO e schemas`
+**COMMIT:** `feat(lanchas): adicionar Mini FAQ na listagem de lanchas` ✅
 
 ---
 
@@ -606,8 +582,8 @@
 
 ## ✅ PROGRESSO
 
-- [ ] **FASE A** - Lanchas (6 commits)
-- [ ] **FASE B** - Roteiros (7 commits)
+- [x] **FASE A** - Lanchas (6 commits) ✅
+- [x] **FASE B** - Roteiros (4 commits) ✅
 - [ ] **FASE C** - Serviços (5 commits)
 - [ ] **FASE D** - Homepage (4 commits)
 - [ ] **FASE E** - Ocasiões (5 commits)
@@ -615,8 +591,8 @@
 - [ ] **FASE G** - Verificação (4 commits)
 - [ ] **FASE H** - Mídias (5 commits)
 
-**Total: 40 commits planejados**
+**Total: ~37 commits planejados**
 
 ---
 
-**STATUS:** Aguardando aprovação para iniciar **FASE A1**
+**STATUS:** FASE A e B concluídas. Próximo: **FASE C - Serviços**
