@@ -281,24 +281,22 @@
 
 ---
 
-### E3: Corporativo
+### E3: Corporativo ✅
 **Arquivo:** `pages/ocasioes/corporativo.html`
-- [ ] Atualizar preços
-- [ ] Lanchas recomendadas para grupos
-- [ ] Serviços corporativos
-- [ ] Adicionar Mini FAQ
+- [x] Preços já corretos (R$ 2.600, R$ 4.000)
+- [x] Serviços: Churrasco R$ 100, Open Bar R$ 135 (corretos)
+- [x] Mini FAQ já existia
 
-**COMMIT:** `feat(ocasioes): atualizar corporativo`
+**STATUS:** Já atualizado - sem alterações necessárias
 
 ---
 
-### E4: Réveillon
+### E4: Réveillon ✅
 **Arquivo:** `pages/ocasioes/reveillon.html`
-- [ ] Atualizar preços especiais
-- [ ] Informações específicas
-- [ ] Adicionar Mini FAQ
+- [x] Preços especiais já definidos (R$ 15.000, R$ 18.000, R$ 25.000)
+- [x] Mini FAQ já existia
 
-**COMMIT:** `feat(ocasioes): atualizar réveillon`
+**STATUS:** Já atualizado - sem alterações necessárias
 
 ---
 
@@ -548,11 +546,11 @@
 
 ## ✅ PROGRESSO
 
-- [x] **FASE A** - Lanchas (6 commits) ✅
-- [x] **FASE B** - Roteiros (4 commits) ✅
-- [x] **FASE C** - Serviços (1 commit) ✅
-- [x] **FASE D** - Homepage (já atualizada) ✅
-- [x] **FASE E** - Ocasiões (parcial) ✅
+- [x] **FASE A** - Lanchas ✅
+- [x] **FASE B** - Roteiros ✅
+- [x] **FASE C** - Serviços ✅
+- [x] **FASE D** - Homepage ✅
+- [x] **FASE E** - Ocasiões ✅
 - [ ] **FASE E** - Ocasiões (5 commits)
 - [ ] **FASE F** - FAQ/Suporte (4 commits)
 - [ ] **FASE G** - Verificação (4 commits)
@@ -562,4 +560,4 @@
 
 ---
 
-**STATUS:** FASES A, B, C, D e E (parcial) concluídas. Próximo: **FASE E3/E4 - Corporativo e Réveillon** ou **FASE F - FAQ/Suporte**
+**STATUS:** FASES A, B, C, D e E concluídas. Próximo: **FASE F - FAQ/Suporte** (requer informações do usuário) ou **FASE G - Verificação Final**
