@@ -111,7 +111,16 @@
   text-align: center;
   font-size: var(--text-body-sm);
   color: var(--driftwood);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.frota__note:first-of-type {
   margin-top: var(--space-8);
+}
+
+.frota__note + .frota__note {
+  margin-top: var(--space-1);
 }
 
 @media (max-width: 1024px) {
