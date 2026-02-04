@@ -78,6 +78,22 @@
   padding: var(--space-3) var(--space-4);
   background: var(--pearl-gray);
   border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.roteiros-map__legend-item--link {
+  cursor: pointer;
+}
+
+.roteiros-map__legend-item--link:hover {
+  background: var(--wave-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.roteiros-map__legend-item--link:hover .roteiros-map__legend-text {
+  color: var(--white);
 }
 
 .roteiros-map__legend-dot {
