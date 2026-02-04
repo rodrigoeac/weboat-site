@@ -271,6 +271,37 @@
   }
 
   // ============================================
+  // FILTRO DE LANCHAS PARCEIRAS
+  // ============================================
+  function initBoatFilter() {
+    const filters = document.querySelectorAll('.frota__filter');
+    const boats = document.querySelectorAll('.card-boat--parceira');
+
+    if (filters.length === 0 || boats.length === 0) return;
+
+    filters.forEach(function(filter) {
+      filter.addEventListener('click', function() {
+        const categoria = this.dataset.filter;
+
+        // Atualizar estado dos filtros
+        filters.forEach(function(f) {
+          f.classList.remove('frota__filter--active');
+        });
+        this.classList.add('frota__filter--active');
+
+        // Filtrar cards
+        boats.forEach(function(boat) {
+          if (categoria === 'all' || boat.dataset.categoria === categoria) {
+            boat.classList.remove('card-boat--hidden');
+          } else {
+            boat.classList.add('card-boat--hidden');
+          }
+        });
+      });
+    });
+  }
+
+  // ============================================
   // TABS
   // ============================================
   function initTabs() {
@@ -319,6 +350,7 @@
     initCounterAnimation();
     initGallery();
     initTabs();
+    initBoatFilter();
   }
 
   // Executar quando DOM estiver pronto

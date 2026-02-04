@@ -146,6 +146,124 @@
 }
 
 /* ============================================
+   LANCHAS PARCEIRAS
+   ============================================ */
+.frota__section--parceiras {
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--border-light);
+}
+
+.frota__section-icon--parceira {
+  background: var(--wave-blue);
+  color: var(--white);
+}
+
+/* Filtros */
+.frota__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-8);
+  justify-content: center;
+}
+
+.frota__filter {
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--charcoal);
+  background: var(--white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.frota__filter:hover {
+  border-color: var(--wave-blue);
+  color: var(--wave-blue);
+}
+
+.frota__filter--active {
+  background: var(--wave-blue);
+  border-color: var(--wave-blue);
+  color: var(--white);
+}
+
+/* Grid Parceiras - mais compacto */
+.frota__grid--parceiras {
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+}
+
+@media (max-width: 1200px) {
+  .frota__grid--parceiras {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .frota__grid--parceiras {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .frota__grid--parceiras {
+    grid-template-columns: 1fr;
+  }
+
+  .frota__filters {
+    gap: var(--space-2);
+  }
+
+  .frota__filter {
+    font-size: var(--text-caption);
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+/* Card Parceira */
+.card-boat--parceira {
+  border: 1px solid var(--border-light);
+}
+
+.card-boat--parceira .card-boat__content {
+  padding: var(--space-4);
+}
+
+.card-boat--parceira .card-boat__title {
+  font-size: var(--text-body);
+}
+
+.card-boat--parceira .card-boat__footer {
+  padding: var(--space-3) var(--space-4);
+}
+
+/* Badges por categoria */
+.card-boat__badge--parceira {
+  background: var(--wave-blue);
+}
+
+.card-boat__badge--grande {
+  background: var(--ocean-deep);
+}
+
+.card-boat__badge--evento {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.card-boat__badge--luxo {
+  background: linear-gradient(135deg, #b8860b, #daa520);
+}
+
+/* Hidden state para filtro */
+.card-boat--hidden {
+  display: none;
+}
+
+/* ============================================
    INFO BAR
    ============================================ */
 .info-bar {
