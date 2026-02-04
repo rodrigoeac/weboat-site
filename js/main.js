@@ -339,11 +339,58 @@
   }
 
   // ============================================
+  // TRUSTINDEX LAZY LOAD
+  // Carrega widget apenas quando visível ou após idle
+  // ============================================
+  function initTrustIndexLazy() {
+    const trustContainer = document.querySelector('.trustindex-widget');
+    if (!trustContainer) return;
+
+    // Extrair o ID do widget do script existente ou usar data attribute
+    const existingScript = trustContainer.querySelector('script[src*="trustindex"]');
+    if (existingScript) {
+      // Se já tem script, não fazer nada (fallback)
+      return;
+    }
+
+    const widgetId = trustContainer.dataset.widgetId;
+    if (!widgetId) return;
+
+    function loadTrustIndex() {
+      if (trustContainer.dataset.loaded === 'true') return;
+      trustContainer.dataset.loaded = 'true';
+
+      const script = document.createElement('script');
+      script.src = 'https://cdn.trustindex.io/loader.js?' + widgetId;
+      script.defer = true;
+      script.async = true;
+      trustContainer.appendChild(script);
+    }
+
+    // Carregar quando visível ou após 3s de idle
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+          loadTrustIndex();
+          observer.disconnect();
+        }
+      }, { rootMargin: '200px' });
+      observer.observe(trustContainer);
+    }
+
+    // Fallback: carregar após idle ou 5s
+    if ('requestIdleCallback' in window) {
+      requestIdleCallback(loadTrustIndex, { timeout: 5000 });
+    } else {
+      setTimeout(loadTrustIndex, 3000);
+    }
+  }
+
+  // ============================================
   // INICIALIZAÇÃO
   // ============================================
   function init() {
     initLazyLoading();
-    initSmoothScroll();
     initScrollAnimations();
     initAccordion();
     initPhoneFormatting();
@@ -351,6 +398,7 @@
     initGallery();
     initTabs();
     initBoatFilter();
+    initTrustIndexLazy();
   }
 
   // Executar quando DOM estiver pronto
