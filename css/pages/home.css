@@ -564,6 +564,22 @@
   color: var(--driftwood);
 }
 
+.card-servico__price-prefix {
+  font-size: var(--text-caption);
+  font-weight: 400;
+  color: var(--driftwood);
+  display: block;
+  margin-bottom: var(--space-1);
+}
+
+.servicos__note {
+  text-align: center;
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-top: var(--space-6);
+  margin-bottom: var(--space-4);
+}
+
 @media (max-width: 1024px) {
   .servicos__grid {
     grid-template-columns: repeat(2, 1fr);
@@ -689,5 +705,327 @@
 @media (max-width: 768px) {
   .section-header {
     margin-bottom: var(--space-8);
+  }
+}
+
+/* ============================================
+   EVENTOS SECTION (30+ pessoas)
+   ============================================ */
+.eventos {
+  padding: var(--space-20) 0;
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, #2a4a6e 100%);
+}
+
+.eventos .section-header__overline,
+.eventos .section-header__title,
+.eventos .section-header__description {
+  color: var(--white);
+}
+
+.eventos .section-header__overline {
+  color: var(--sunset-gold);
+}
+
+.eventos .section-header__description {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.eventos__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.eventos__cta {
+  text-align: center;
+}
+
+/* Card Evento */
+.card-evento {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.card-evento:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.card-evento__image {
+  position: relative;
+  aspect-ratio: 16/10;
+  overflow: hidden;
+}
+
+.card-evento__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.card-evento:hover .card-evento__image img {
+  transform: scale(1.05);
+}
+
+.card-evento__badge {
+  position: absolute;
+  top: var(--space-3);
+  left: var(--space-3);
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.card-evento__content {
+  padding: var(--space-5);
+}
+
+.card-evento__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.card-evento__capacity {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-bottom: var(--space-2);
+}
+
+.card-evento__capacity i {
+  color: var(--wave-blue);
+}
+
+.card-evento__features {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  margin-bottom: var(--space-4);
+}
+
+@media (max-width: 1200px) {
+  .eventos__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .eventos__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .eventos {
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ============================================
+   CLIENTES FAMOSOS SECTION
+   ============================================ */
+.clientes {
+  padding: var(--space-20) 0;
+  background: var(--sand-white);
+}
+
+.clientes__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-6);
+}
+
+.clientes__note {
+  text-align: center;
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  font-style: italic;
+}
+
+/* Card Cliente */
+.cliente-card {
+  text-align: center;
+}
+
+.cliente-card__image {
+  aspect-ratio: 1/1;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  margin-bottom: var(--space-3);
+  border: 3px solid var(--pearl-gray);
+  transition: all var(--transition-base);
+}
+
+.cliente-card:hover .cliente-card__image {
+  border-color: var(--sunset-gold);
+  transform: scale(1.05);
+}
+
+.cliente-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--pearl-gray);
+}
+
+.cliente-card__name {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .clientes__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .clientes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .clientes {
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ============================================
+   AVALIACOES GOOGLE SECTION
+   ============================================ */
+.avaliacoes {
+  background: var(--pearl-gray);
+}
+
+.avaliacoes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-bottom: var(--space-8);
+}
+
+.avaliacoes__cta {
+  text-align: center;
+}
+
+/* Review Card */
+.review-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.review-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.review-card__header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.review-card__avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background: var(--pearl-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--driftwood);
+  font-size: 24px;
+}
+
+.review-card__info {
+  flex: 1;
+}
+
+.review-card__name {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-body-sm);
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-1);
+}
+
+.review-card__stars {
+  display: flex;
+  gap: 2px;
+  color: #FBBC04;
+  font-size: 14px;
+}
+
+.review-card__text {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (max-width: 1024px) {
+  .avaliacoes__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .avaliacoes__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .avaliacoes {
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ============================================
+   CARD SERVICO HIGHLIGHT (Combo)
+   ============================================ */
+.card-servico--highlight {
+  border: 2px solid var(--sunset-gold);
+  position: relative;
+}
+
+.card-servico__badge {
+  position: absolute;
+  top: var(--space-3);
+  right: var(--space-3);
+  background: var(--sunset-gold);
+  color: var(--ocean-deep);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  z-index: 1;
+}
+
+.card-servico__image {
+  position: relative;
+}
+
+/* Ajuste grid serviços para 4 colunas */
+@media (min-width: 1200px) {
+  .servicos__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
