@@ -27,10 +27,15 @@ Site: https://www.weboatbrasil.com.br
 ### Métricas para Social Proof
 ```
 +1.000 passeios realizados
-5 lanchas próprias
+4 lanchas próprias (+ parceiros de 10 a 65 pessoas)
 +900 avaliações 5 estrelas
 +18.000 seguidores no Instagram
 ```
+
+### Documentação de Referência
+- **FAQ Completo:** `docs/weboat_faq.md` - Todas as perguntas e respostas oficiais
+- **Schemas:** `docs/weboat_schema_org.md` - JSON-LD para SEO
+- **Copywriting:** `docs/weboat_copywriting_seo.md` - Textos e palavras-chave
 
 ---
 
@@ -157,22 +162,31 @@ weboat-site/
 
 ## 🚤 DADOS DAS LANCHAS (REFERÊNCIA RÁPIDA)
 
-### Lanchas Próprias WeBoat
+### Lanchas Próprias WeBoat (4 lanchas)
 
 | Lancha | Capacidade | Preço Seg-Qui | Preço Sex-Dom | Destaque |
 |--------|------------|---------------|---------------|----------|
 | WeBoat 32 | 15 pessoas | R$ 2.300 | R$ 2.700 | Melhor custo-benefício |
-| WeBoat 390 | 16 pessoas | R$ 2.600 | R$ 3.100 | Churrasqueira disponível |
-| WeBoat Oceanic 36 | 15 pessoas | R$ 2.900 | R$ 3.400 | Conforto premium |
+| WeBoat 390 | 16 pessoas | R$ 2.600 | R$ 3.100 | Versátil, ótima para festas |
+| WeBoat Oceanic 36 | 14 pessoas | R$ 2.900 | R$ 3.400 | Conforto premium |
 | WeBoat Rio Star 50 | 22 pessoas | R$ 4.000 | R$ 4.500 | Maior capacidade |
-| WeBoat Vitória | 15 pessoas | R$ 2.400 | R$ 2.900 | Versátil |
+
+### Lanchas Parceiras
+- Disponíveis lanchas de **10 a 65 pessoas**
+- Todas com banheiro a bordo
 
 ### O que inclui (TODAS as lanchas)
 - Combustível
 - Marinheiro experiente
-- Gelo e coolers
+- Coolers (gelo não incluso)
 - Sistema de som Bluetooth
-- Coletes salva-vidas
+- Coletes salva-vidas (emergência)
+- Tapete e macarrões flutuantes
+- Seguro obrigatório
+
+### Churrasqueira
+- Todas as lanchas possuem churrasqueira
+- **Taxa adicional:** R$ 250 a R$ 600 (varia por embarcação)
 - Boias e equipamentos de segurança
 
 ---
