@@ -196,7 +196,7 @@
   ],
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Marina da Glória - Loja 06",
+    "streetAddress": "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória",
     "addressLocality": "Rio de Janeiro",
     "addressRegion": "RJ",
     "postalCode": "20021-140",

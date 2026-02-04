@@ -44,7 +44,7 @@ Este documento contém regras obrigatórias, restrições e diretrizes que o con
 ✅ DADOS OFICIAIS (use exatamente assim):
 - WhatsApp: (21) 97772-4114
 - Formato para link: +5521977724114
-- Endereço: Marina da Glória - Loja 06, Rio de Janeiro - RJ
+- Endereço: Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória - Glória, Rio de Janeiro - RJ, 20021-140
 - Instagram: @weboatbrasil
 
 ❌ NÃO FAÇA:

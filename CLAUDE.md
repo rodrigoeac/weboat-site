@@ -19,7 +19,7 @@
 Nome: WeBoat Brasil
 WhatsApp: (21) 97772-4114
 Link WhatsApp: https://wa.me/5521977724114
-Endereço: Marina da Glória - Loja 06, Rio de Janeiro - RJ
+Endereço: Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória - Glória, Rio de Janeiro - RJ, 20021-140
 Instagram: @weboatbrasil
 Site: https://www.weboatbrasil.com.br
 ```
@@ -458,7 +458,7 @@ COMMIT: "chore: SEO e finalização"
     "image": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Marina da Glória - Loja 06",
+      "streetAddress": "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória",
       "addressLocality": "Rio de Janeiro",
       "addressRegion": "RJ",
       "addressCountry": "BR"
