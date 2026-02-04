@@ -205,8 +205,8 @@
 }
 
 .ocasiao-step__number {
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   background: var(--sunset-gold);
   color: var(--ocean-deep);
   border-radius: var(--radius-full);
@@ -216,9 +216,10 @@
   font-family: var(--font-display);
   font-size: var(--text-h3);
   font-weight: 700;
-  margin: 0 auto var(--space-4);
+  margin: 0 auto var(--space-5);
   position: relative;
   z-index: 1;
+  padding: var(--space-3);
 }
 
 .ocasiao-step__title {
