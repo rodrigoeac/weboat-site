@@ -1,0 +1,336 @@
+/* ============================================
+   WEBOAT BRASIL - COMO FUNCIONA CSS
+   Página de processo passo a passo
+   ============================================ */
+
+/* ============================================
+   HEADER DA PÁGINA
+   ============================================ */
+.como-funciona-header {
+  padding: var(--space-12) 0 var(--space-8);
+  background: var(--pearl-gray);
+}
+
+.como-funciona-header__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--ocean-deep);
+  line-height: var(--line-display);
+  margin-bottom: var(--space-4);
+}
+
+.como-funciona-header__description {
+  font-size: var(--text-body-lg);
+  color: var(--driftwood);
+  max-width: 700px;
+}
+
+@media (max-width: 768px) {
+  .como-funciona-header {
+    padding: var(--space-8) 0 var(--space-6);
+  }
+
+  .como-funciona-header__title {
+    font-size: var(--text-h1);
+  }
+}
+
+/* ============================================
+   RESUMO RÁPIDO (Answer Capsule)
+   ============================================ */
+.como-funciona-resumo {
+  padding: var(--space-12) 0;
+  background: var(--sand-white);
+}
+
+.como-funciona-resumo__content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.como-funciona-resumo__content h2 {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.como-funciona-resumo__content .answer-capsule {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--charcoal);
+}
+
+/* ============================================
+   PASSO A PASSO
+   ============================================ */
+.como-funciona-passos {
+  padding: var(--space-16) 0;
+  background: var(--white);
+}
+
+.passo {
+  display: flex;
+  gap: var(--space-8);
+  padding: var(--space-10) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.passo:last-child {
+  border-bottom: none;
+}
+
+.passo__numero {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, var(--ocean-deep), var(--wave-blue));
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  color: var(--white);
+}
+
+.passo__content {
+  flex: 1;
+}
+
+.passo__titulo {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-4);
+}
+
+.passo__content .answer-capsule {
+  font-size: var(--text-body);
+  line-height: 1.8;
+  color: var(--charcoal);
+  margin-bottom: var(--space-5);
+}
+
+.passo__lista {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.passo__lista li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body);
+  color: var(--charcoal);
+}
+
+.passo__lista li i {
+  color: var(--whatsapp-green);
+  font-size: 1.25rem;
+}
+
+.passo__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+}
+
+.passo__card {
+  background: var(--pearl-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+
+.passo__card h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+}
+
+.passo__card p {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  margin-bottom: var(--space-3);
+}
+
+.passo__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--wave-blue);
+  text-decoration: none;
+  transition: color var(--transition-base);
+}
+
+.passo__link:hover {
+  color: var(--ocean-deep);
+}
+
+.passo__destaque {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  background: rgba(37, 211, 102, 0.1);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  margin-top: var(--space-4);
+}
+
+.passo__destaque i {
+  font-size: 1.5rem;
+  color: var(--whatsapp-green);
+  flex-shrink: 0;
+}
+
+.passo__destaque p {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  margin: 0;
+}
+
+.passo__mapa {
+  margin: var(--space-5) 0;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+
+.passo__incluso {
+  background: var(--pearl-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  margin-top: var(--space-5);
+}
+
+.passo__incluso h3 {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-3);
+}
+
+.passo__incluso-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.passo__incluso-lista li {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.passo__incluso-lista li i {
+  color: var(--sunset-gold);
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1024px) {
+  .passo__incluso-lista {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .passo {
+    flex-direction: column;
+    gap: var(--space-4);
+    padding: var(--space-8) 0;
+  }
+
+  .passo__numero {
+    width: 60px;
+    height: 60px;
+    font-size: var(--text-h2);
+  }
+
+  .passo__titulo {
+    font-size: var(--text-h3);
+  }
+
+  .passo__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .passo__incluso-lista {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
+   FAQ SECTION
+   ============================================ */
+.como-funciona-passos + .faq {
+  background: var(--pearl-gray);
+}
+
+/* ============================================
+   CTA FINAL
+   ============================================ */
+.como-funciona-cta {
+  padding: var(--space-20) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.como-funciona-cta__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.como-funciona-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.como-funciona-cta__text {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: var(--space-8);
+}
+
+.como-funciona-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .como-funciona-cta {
+    padding: var(--space-16) 0;
+  }
+
+  .como-funciona-cta__buttons {
+    flex-direction: column;
+  }
+
+  .como-funciona-cta__buttons .btn {
+    width: 100%;
+  }
+}

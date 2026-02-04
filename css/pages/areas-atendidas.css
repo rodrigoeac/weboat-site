@@ -1,0 +1,448 @@
+/* ============================================
+   WEBOAT BRASIL - AREAS ATENDIDAS PAGE STYLES
+   Pagina de listagem de areas de passeio
+   ============================================ */
+
+/* ============================================
+   PAGE HEADER - AREAS
+   ============================================ */
+.areas-header {
+  background: linear-gradient(180deg, rgba(30, 58, 95, 0.9) 0%, rgba(30, 58, 95, 0.95) 100%),
+              url('/assets/images/roteiros/hero-roteiros.jpg') center/cover no-repeat;
+  padding: var(--space-20) 0 var(--space-16);
+  text-align: center;
+  color: var(--white);
+}
+
+.areas-header__overline {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-overline);
+  letter-spacing: var(--tracking-overline);
+  text-transform: uppercase;
+  color: var(--sunset-gold);
+  margin-bottom: var(--space-3);
+}
+
+.areas-header__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h1);
+  font-weight: var(--weight-h1);
+  line-height: var(--line-h1);
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.areas-header__description {
+  font-size: var(--text-body-lg);
+  line-height: var(--line-body-lg);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   BREADCRUMB
+   ============================================ */
+.breadcrumb {
+  background: var(--sand-white);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.breadcrumb__list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-body-sm);
+}
+
+.breadcrumb__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.breadcrumb__item:not(:last-child)::after {
+  content: '/';
+  color: var(--driftwood);
+}
+
+.breadcrumb__item a {
+  color: var(--wave-blue);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.breadcrumb__item a:hover {
+  color: var(--ocean-deep);
+}
+
+.breadcrumb__item--active {
+  color: var(--driftwood);
+}
+
+/* ============================================
+   AREAS NAVIGATION - Quick Links
+   ============================================ */
+.areas-nav {
+  padding: var(--space-8) 0;
+  background: var(--white);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 80px;
+  z-index: var(--z-sticky);
+}
+
+.areas-nav__grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.areas-nav__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-full);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.areas-nav__item:hover {
+  background: var(--wave-blue);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.areas-nav__item:hover .areas-nav__text {
+  color: var(--white);
+}
+
+.areas-nav__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.areas-nav__dot--urca { background-color: var(--route-green); }
+.areas-nav__dot--praia-vermelha { background-color: var(--route-blue); }
+.areas-nav__dot--copacabana { background-color: var(--route-orange); }
+.areas-nav__dot--cagarras { background-color: var(--route-purple); }
+.areas-nav__dot--itaipu { background-color: var(--route-pink); }
+.areas-nav__dot--baia { background-color: var(--ocean-deep); }
+
+.areas-nav__text {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--charcoal);
+  transition: color var(--transition-fast);
+}
+
+@media (max-width: 768px) {
+  .areas-nav {
+    position: static;
+  }
+
+  .areas-nav__grid {
+    gap: var(--space-2);
+  }
+
+  .areas-nav__item {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .areas-nav__text {
+    font-size: var(--text-caption);
+  }
+}
+
+/* ============================================
+   AREAS GRID - Main Content
+   ============================================ */
+.areas-grid {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.areas-grid .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+}
+
+/* ============================================
+   AREA CARD - Individual
+   ============================================ */
+.area-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-8);
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow var(--transition-base);
+  scroll-margin-top: 160px;
+}
+
+.area-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.area-card--reverse {
+  direction: rtl;
+}
+
+.area-card--reverse > * {
+  direction: ltr;
+}
+
+@media (max-width: 1024px) {
+  .area-card,
+  .area-card--reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+  }
+}
+
+/* Area Card Image */
+.area-card__image {
+  position: relative;
+  min-height: 350px;
+  overflow: hidden;
+}
+
+.area-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.area-card:hover .area-card__image img {
+  transform: scale(1.05);
+}
+
+.area-card__badge {
+  position: absolute;
+  top: var(--space-4);
+  left: var(--space-4);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  background: var(--sunset-gold);
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  border-radius: var(--radius-full);
+}
+
+.area-card__badge i {
+  font-size: 1rem;
+}
+
+.area-card__badge--bestseller {
+  background: var(--error);
+}
+
+/* Area Card Content */
+.area-card__content {
+  padding: var(--space-8);
+  display: flex;
+  flex-direction: column;
+}
+
+.area-card__header {
+  margin-bottom: var(--space-4);
+}
+
+.area-card__number {
+  display: inline-block;
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: var(--wave-blue);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--space-2);
+}
+
+.area-card__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-h2);
+  color: var(--ocean-deep);
+  margin-bottom: 0;
+}
+
+.area-card__description {
+  font-size: var(--text-body);
+  line-height: var(--line-body);
+  color: var(--charcoal);
+  margin-bottom: var(--space-6);
+}
+
+/* Area Card Highlights */
+.area-card__highlights {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.area-card__highlight {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+}
+
+.area-card__highlight i {
+  font-size: 1.25rem;
+  color: var(--wave-blue);
+  flex-shrink: 0;
+}
+
+.area-card__highlight span {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+@media (max-width: 600px) {
+  .area-card__highlights {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Area Card Footer */
+.area-card__footer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: auto;
+  padding-top: var(--space-6);
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 768px) {
+  .area-card__content {
+    padding: var(--space-6);
+  }
+
+  .area-card__title {
+    font-size: var(--text-h3);
+  }
+
+  .area-card__footer {
+    flex-direction: column;
+  }
+
+  .area-card__footer .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ============================================
+   CTA FINAL - AREAS
+   ============================================ */
+.areas-cta {
+  padding: var(--space-20) 0;
+  background: linear-gradient(135deg, var(--ocean-deep) 0%, #2D4A6F 100%);
+}
+
+.areas-cta__content {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--white);
+}
+
+.areas-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: var(--weight-h2);
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.areas-cta__text {
+  font-size: var(--text-body-lg);
+  line-height: var(--line-body-lg);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-8);
+}
+
+.areas-cta__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+}
+
+@media (max-width: 600px) {
+  .areas-cta__buttons {
+    flex-direction: column;
+  }
+
+  .areas-cta__buttons .btn {
+    width: 100%;
+  }
+}
+
+/* ============================================
+   FAQ SECTION ADJUSTMENTS
+   ============================================ */
+.faq.section {
+  background: var(--pearl-gray);
+}
+
+/* ============================================
+   ANSWER CAPSULES - GEO/SEO
+   ============================================ */
+.answer-capsule {
+  margin: 0;
+}
+
+.answer-capsule strong {
+  color: var(--ocean-deep);
+}
+
+.answer-capsule a {
+  color: var(--wave-blue);
+  text-decoration: underline;
+}
+
+.answer-capsule a:hover {
+  color: var(--ocean-deep);
+}
+
+/* ============================================
+   SMOOTH SCROLL OFFSET
+   ============================================ */
+html {
+  scroll-padding-top: 160px;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 100px;
+  }
+
+  .area-card {
+    scroll-margin-top: 100px;
+  }
+}
