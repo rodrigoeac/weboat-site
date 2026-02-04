@@ -1313,6 +1313,37 @@
 
 ---
 
+## FASE N: ROTEIROS E INTEGRAÇÃO GMB
+
+### N1: Padronizar Duração dos Roteiros
+- [x] Todos os roteiros têm turno de 5h (exceto Volta Completa 6-7h)
+- [x] Tabela comparativa: colunas Turno, Navegação e Paradas
+- [x] R1/R2: mais tempo de paradas, ideal para eventos
+- [x] R4/R5: mais tempo de navegação, aventura
+- [x] Atualizar FAQs com explicação detalhada
+
+### N2: Atualizar Duração nas Páginas de Lanchas
+- [x] Alterar "Mínimo 3 horas" para "Passeio de 5 horas"
+- [x] Aplicado em 16 páginas de lanchas
+
+### N3: Mover Info Churrasqueira para Nota Discreta
+- [x] Remover da linha do card de adicionais
+- [x] Adicionar como nota abaixo (similar à nota do turno)
+- [x] Aplicado em 26 páginas de lanchas
+
+### N4: Reordenar Menu de Navegação
+- [x] FAQ por último (Contato → FAQ)
+- [x] Aplicado em 46 arquivos HTML
+
+### N5: Integrar TrustIndex Widgets para Reviews GMB
+- [x] Páginas de ocasiões: widget short (f8357391772b13022e66b003576)
+- [x] Páginas sobre e contato: badge (0176a66172f5130197562fbcffc)
+- [x] Substituir reviews estáticos por widget dinâmico
+
+**STATUS FASE N:** ✅ COMPLETO (5/5 tarefas)
+
+---
+
 ## PRÓXIMAS FASES
 
 - **FASE G** - Verificação Final (auditoria SEO, schemas, sitemap e links)
