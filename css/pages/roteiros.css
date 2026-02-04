@@ -134,6 +134,20 @@
   }
 }
 
+.roteiros-grid__cta {
+  margin-top: var(--space-10);
+  text-align: center;
+  padding: var(--space-8);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-xl);
+}
+
+.roteiros-grid__cta-text {
+  font-size: var(--text-body-lg);
+  color: var(--charcoal);
+  margin-bottom: var(--space-4);
+}
+
 /* ============================================
    CARD ROTEIRO - Individual
    ============================================ */
