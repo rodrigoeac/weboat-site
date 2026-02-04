@@ -417,14 +417,14 @@
 
 ---
 
-### F5: SEO e Schema - FAQ e Suporte
+### F5: SEO e Schema - FAQ e Suporte ✅
 **Arquivos:** `pages/faq.html`, `pages/sobre.html`, `pages/contato.html`
-- [x] Verificar Schema FAQPage completo (faq.html)
-- [ ] Verificar Schema AboutPage
-- [ ] Verificar Schema ContactPage
-- [ ] Verificar meta tags em todas
+- [x] Verificar Schema FAQPage completo (faq.html - 12 perguntas)
+- [x] Verificar Schema AboutPage (sobre.html)
+- [x] Verificar Schema ContactPage (contato.html)
+- [x] Verificar meta tags em todas (title, description, canonical, og:title)
 
-**COMMIT:** `chore(suporte): verificar e ajustar SEO e schemas`
+**STATUS:** Todos os schemas e meta tags estão corretos. Nenhuma alteração necessária.
 
 ---
 
@@ -607,15 +607,12 @@
 - [x] **FASE C** - Serviços ✅
 - [x] **FASE D** - Homepage ✅
 - [x] **FASE E** - Ocasiões ✅
-- [x] **FASE F** - FAQ Principal ✅ (F1, F2, F2.1, F2.2 concluídas)
-- [x] **FASE F** - Mini FAQs ✅ (todas verificadas e atualizadas)
-- [x] **FASE F** - Sobre e Contato ✅ (F3, F4 concluídas)
-- [ ] **FASE F** - SEO Schemas (F5 pendente)
+- [x] **FASE F** - FAQ e Suporte ✅ (F1 a F5 concluídas)
 - [ ] **FASE G** - Verificação Final (4 commits)
-- [ ] **FASE H** - Mídias (5 commits)
+- [ ] **FASE H** - Mídias (5 commits - aguardando imagens)
 
 **Total: ~37 commits planejados**
 
 ---
 
-**STATUS:** FASE F quase concluída. Próximo: **F5 - Verificar SEO e Schemas** nas páginas FAQ, Sobre e Contato.
+**STATUS:** FASE F concluída. Próximo: **FASE G - Verificação Final** (auditoria SEO, schemas, sitemap e links).
