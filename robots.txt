@@ -14,3 +14,41 @@ Disallow: /docs/
 # Bloquear arquivos de configuração
 Disallow: /*.md$
 Disallow: /CLAUDE.md
+
+# ============================================
+# Crawlers de IA - Configuração GEO/SEO
+# ============================================
+
+# ChatGPT Search (aparecer nos resultados de busca)
+User-agent: OAI-SearchBot
+Allow: /
+
+# Treinamento OpenAI (bloquear uso para treinar modelos)
+User-agent: GPTBot
+Disallow: /
+
+# ChatGPT navegação em tempo real (quando usuário pede para ler URL)
+User-agent: ChatGPT-User
+Allow: /
+
+# Claude (Anthropic)
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-SearchBot
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+
+# Google AI (Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# Meta AI
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Bytespider (TikTok/ByteDance)
+User-agent: Bytespider
+Disallow: /

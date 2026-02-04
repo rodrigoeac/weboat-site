@@ -37,6 +37,8 @@ Site: https://www.weboatbrasil.com.br
 - **Schemas:** `docs/weboat_schema_org.md` - JSON-LD para SEO
 - **Copywriting:** `docs/weboat_copywriting_seo.md` - Textos e palavras-chave
 - **Gerenciar Lanchas:** `docs/GERENCIAR_LANCHAS.md` - Como adicionar, modificar e excluir lanchas
+- **Otimização de Imagens:** `docs/OTIMIZACAO_IMAGENS.md` - Guia WebP, lazy load e ferramentas
+- **GEO/SEO para IA:** `plano-geo-seo-ia-2026-final.md` - Otimização para ChatGPT, Perplexity, Claude, Gemini
 
 ---
 

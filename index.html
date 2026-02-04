@@ -79,14 +79,34 @@
   }
   </script>
 
-  <!-- Schema.org - LocalBusiness -->
+  <!-- Schema.org - LocalBusiness (GEO/SEO para IA) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.weboatbrasil.com.br/#organization",
     "name": "WeBoat Brasil",
+    "alternateName": "WeBoat",
     "image": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png",
-    "description": "Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png"
+    },
+    "description": "Empresa de aluguel de lanchas no Rio de Janeiro especializada em passeios privativos. Oferece lanchas de 10 a 65 pessoas para festas, despedidas de solteira, aniversários e eventos corporativos, saindo da Marina da Glória.",
+    "slogan": "Seu momento no mar do Rio",
+    "foundingDate": "2018",
+    "knowsAbout": [
+      "aluguel de lancha",
+      "passeio de barco Rio de Janeiro",
+      "festa na lancha",
+      "despedida de solteira no mar",
+      "aniversário em lancha",
+      "evento corporativo náutico",
+      "réveillon na Baía de Guanabara",
+      "roteiro Ilhas Cagarras",
+      "roteiro Mureta da Urca",
+      "passeio Copacabana de lancha"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória",
@@ -100,10 +120,17 @@
       "latitude": "-22.9219",
       "longitude": "-43.1679"
     },
+    "areaServed": {
+      "@type": "City",
+      "name": "Rio de Janeiro",
+      "sameAs": "https://www.wikidata.org/wiki/Q8678"
+    },
     "telephone": "+5521977724114",
     "email": "contato@weboatbrasil.com.br",
     "url": "https://www.weboatbrasil.com.br",
     "priceRange": "$$",
+    "currenciesAccepted": "BRL",
+    "paymentAccepted": "Dinheiro, PIX, Cartão de Crédito, Cartão de Débito",
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -118,8 +145,44 @@
       "worstRating": "1"
     },
     "sameAs": [
-      "https://www.instagram.com/weboatbrasil"
-    ]
+      "https://www.instagram.com/weboatbrasil",
+      "https://www.facebook.com/weboatbrasil",
+      "https://www.google.com/maps/place/WeBoat+Brasil"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+5521977724114",
+      "contactType": "customer service",
+      "availableLanguage": ["Portuguese"],
+      "areaServed": "BR"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Lanchas para Aluguel",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Lancha para até 15 pessoas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Lancha para até 22 pessoas"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Lancha para até 65 pessoas"
+          }
+        }
+      ]
+    }
   }
   </script>
 </head>
