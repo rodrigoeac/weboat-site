@@ -48,6 +48,46 @@
 - Som com Bluetooth
 - Coolers
 
+### Lanchas Parceiras (21)
+
+#### Categoria: Padrão (10-18 pessoas)
+| ID | Nome | Capacidade | Preço R1 | Hora Extra | Observações |
+|----|------|------------|----------|------------|-------------|
+| magna-28 | Magna 28 | 10 | R$ 3.000 | R$ 600 | - |
+| boat-rio | Boat Rio 36 | 11 | R$ 3.500 | R$ 1.000 | - |
+| real-32 | WeBoat Real 32 | 12 | R$ 3.300 | R$ 650 | - |
+| favo | WeBoat Rival 36 | 12 | R$ 2.900 | R$ 1.000 | - |
+| malaga-32 | Malaga 32 | 14 | R$ 2.800 | R$ 800 | - |
+| oceanic-fantasma | WeBoat Ghost 36 | 15 | R$ 3.800 | R$ 800 | - |
+| carbrasmar-37 | WeBoat Carbrasmar 41 | 16 | R$ 3.700 | R$ 1.000 | - |
+| ibiza | WeBoat Ibiza 45 | 18 | R$ 4.200 | R$ 1.200 | - |
+| atol | Intermares 50 | 18 | R$ 4.500 | R$ 1.000 | - |
+
+#### Categoria: Grande (18-25 pessoas)
+| ID | Nome | Capacidade | Preço R1 | Hora Extra | Observações |
+|----|------|------------|----------|------------|-------------|
+| senna | WeBoat Senna 50 | 18-20 | R$ 5.500 | R$ 1.300 | +R$ 300/pessoa (19+) |
+| tecnomarine | Tecnomarine 50 | 20 | R$ 6.500 | R$ 1.500 | Ar-cond (+R$ 1.000) |
+| lobster | WeBoat 400 | 16-22 | R$ 4.000 | R$ 1.800 | +R$ 150/pessoa (17+) |
+| aquarius | WeBoat 600 | 18-22 | R$ 7.500 | R$ 1.000 | Ar-cond (+R$ 600) |
+| essence | WeBoat Essence | 22 | R$ 7.000 | R$ 1.000 | Ar-cond, só R1/R2 |
+| weboat-mares-50 | WeBoat Mares 50 | 25 | R$ 5.500 | R$ 1.300 | - |
+
+#### Categoria: Eventos (30-65 pessoas)
+| ID | Nome | Capacidade | Preço R1 | Hora Extra | Observações |
+|----|------|------------|----------|------------|-------------|
+| sagarana | Catamarã Sagarana | 20-35 | R$ 9.500 | - | +R$ 400/pessoa (21+) |
+| bota | Barco Gourmet 53 | 30-40 | R$ 7.000 | R$ 1.500 | Turno tarde +R$ 500 |
+| weboat-malik | WeBoat Malik | 35-50 | R$ 8.500 | R$ 2.000 | Turno tarde +R$ 1.000 |
+| oceano | Catamarã Oceano | 50-65 | R$ 14.000 | R$ 3.000 | Churrasq. R$ 600 |
+
+#### Categoria: Luxo (12-17 pessoas, 6h)
+| ID | Nome | Capacidade | Preço R1 | Hora Extra | Observações |
+|----|------|------------|----------|------------|-------------|
+| vib | Prestige 60 | 12 | R$ 15.000 | R$ 2.500 | Ar-cond, gerador |
+| rebecca | Schaefer 62 Fly | 16 | R$ 15.000 | R$ 2.500 | Ar-cond, gerador |
+| intermarine-60-fly | Intermarine 60 Fly | 17 | R$ 15.000 | R$ 2.500 | Ar-cond, gerador |
+
 ---
 
 ## 🚀 FASES DE ATUALIZAÇÃO
@@ -538,7 +578,103 @@
 
 ---
 
-## 📋 RESUMO DOS COMMITS (33 total)
+## FASE I: LANCHAS PARCEIRAS (21 embarcações)
+
+### I1: Estrutura e Listagem
+**Arquivo:** `pages/lanchas/index.html`
+- [ ] Adicionar seção "Lanchas Parceiras" abaixo das próprias
+- [ ] Criar cards para todas as 21 lanchas parceiras
+- [ ] Organizar por categoria (Padrão, Grande, Eventos, Luxo)
+- [ ] Filtros por capacidade
+
+**COMMIT:** `feat(lanchas): adicionar seção de lanchas parceiras na listagem`
+
+---
+
+### I2: Lanchas Padrão (9 embarcações, 10-18 pessoas)
+**Arquivos:** Criar páginas em `pages/lanchas/parceiras/`
+- [ ] `magna-28.html` - Magna 28 (10p, R$ 3.000)
+- [ ] `boat-rio-36.html` - Boat Rio 36 (11p, R$ 3.500)
+- [ ] `weboat-real-32.html` - WeBoat Real 32 (12p, R$ 3.300)
+- [ ] `weboat-rival-36.html` - WeBoat Rival 36 (12p, R$ 2.900)
+- [ ] `malaga-32.html` - Malaga 32 (14p, R$ 2.800)
+- [ ] `weboat-ghost-36.html` - WeBoat Ghost 36 (15p, R$ 3.800)
+- [ ] `weboat-carbrasmar-41.html` - WeBoat Carbrasmar 41 (16p, R$ 3.700)
+- [ ] `weboat-ibiza-45.html` - WeBoat Ibiza 45 (18p, R$ 4.200)
+- [ ] `intermares-50.html` - Intermares 50 (18p, R$ 4.500)
+
+**COMMIT:** `feat(lanchas): criar páginas das lanchas parceiras padrão`
+
+---
+
+### I3: Lanchas Grandes (6 embarcações, 18-25 pessoas)
+**Arquivos:** Criar páginas em `pages/lanchas/parceiras/`
+- [ ] `weboat-senna-50.html` - WeBoat Senna 50 (18-20p, R$ 5.500, +R$ 300/pessoa 19+)
+- [ ] `tecnomarine-50.html` - Tecnomarine 50 (20p, R$ 6.500, ar-cond +R$ 1.000)
+- [ ] `weboat-400.html` - WeBoat 400 (16-22p, R$ 4.000, +R$ 150/pessoa 17+)
+- [ ] `weboat-600.html` - WeBoat 600 (18-22p, R$ 7.500, ar-cond +R$ 600)
+- [ ] `weboat-essence.html` - WeBoat Essence (22p, R$ 7.000, só R1/R2)
+- [ ] `weboat-mares-50.html` - WeBoat Mares 50 (25p, R$ 5.500)
+
+**COMMIT:** `feat(lanchas): criar páginas das lanchas parceiras grandes`
+
+---
+
+### I4: Lanchas para Eventos (4 embarcações, 30-65 pessoas)
+**Arquivos:** Criar páginas em `pages/lanchas/parceiras/`
+- [ ] `catamara-sagarana.html` - Catamarã Sagarana (20-35p, R$ 9.500, +R$ 400/pessoa 21+)
+- [ ] `barco-gourmet-53.html` - Barco Gourmet 53 (30-40p, R$ 7.000, turno tarde +R$ 500)
+- [ ] `weboat-malik.html` - WeBoat Malik (35-50p, R$ 8.500, turno tarde +R$ 1.000)
+- [ ] `catamara-oceano.html` - Catamarã Oceano (50-65p, R$ 14.000, churrasq. R$ 600)
+
+**COMMIT:** `feat(lanchas): criar páginas das lanchas para eventos`
+
+---
+
+### I5: Lanchas de Luxo (3 embarcações, 6h de passeio)
+**Arquivos:** Criar páginas em `pages/lanchas/parceiras/`
+- [ ] `prestige-60.html` - Prestige 60 (12p, R$ 15.000, 6h, ar-cond)
+- [ ] `schaefer-62-fly.html` - Schaefer 62 Fly (16p, R$ 15.000, 6h, ar-cond)
+- [ ] `intermarine-60-fly.html` - Intermarine 60 Fly (17p, R$ 15.000, 6h, ar-cond)
+
+**COMMIT:** `feat(lanchas): criar páginas das lanchas de luxo`
+
+---
+
+### I6: CSS e Componentes
+**Arquivos:** CSS
+- [ ] Criar `css/pages/lancha-parceira.css` (variação do detalhe)
+- [ ] Atualizar `css/pages/frota.css` (seção parceiras)
+- [ ] Criar badges: "Parceira", "Ar-cond", "Eventos", "Luxo"
+
+**COMMIT:** `style(lanchas): adicionar estilos para lanchas parceiras`
+
+---
+
+### I7: SEO e Schema - Parceiras
+**Arquivos:** Todas as páginas de parceiras
+- [ ] Adicionar Schema Product em cada lancha
+- [ ] Adicionar Schema BreadcrumbList
+- [ ] Meta tags SEO (title, description, canonical)
+- [ ] Open Graph tags
+- [ ] Atualizar sitemap.xml com novas URLs
+
+**COMMIT:** `chore(lanchas): SEO e schemas para lanchas parceiras`
+
+---
+
+### I8: Atualizar Navegação e Links
+**Arquivos:** Várias páginas
+- [ ] Atualizar menu (se necessário)
+- [ ] Links nas páginas de roteiros
+- [ ] Links nas páginas de ocasiões
+- [ ] FAQ sobre lanchas parceiras
+
+**COMMIT:** `feat(nav): integrar lanchas parceiras na navegação`
+
+---
+
+## 📋 RESUMO DOS COMMITS (41 total)
 
 | Fase | Subfase | Commit |
 |------|---------|--------|
@@ -582,6 +718,14 @@
 | H | H3 | `feat(assets): adicionar imagens dos roteiros` |
 | H | H4 | `feat(assets): adicionar imagens de famosos` |
 | H | H5 | `feat(assets): adicionar imagens gerais e OG` |
+| I | I1 | `feat(lanchas): adicionar seção de lanchas parceiras na listagem` |
+| I | I2 | `feat(lanchas): criar páginas das lanchas parceiras padrão` |
+| I | I3 | `feat(lanchas): criar páginas das lanchas parceiras grandes` |
+| I | I4 | `feat(lanchas): criar páginas das lanchas para eventos` |
+| I | I5 | `feat(lanchas): criar páginas das lanchas de luxo` |
+| I | I6 | `style(lanchas): adicionar estilos para lanchas parceiras` |
+| I | I7 | `chore(lanchas): SEO e schemas para lanchas parceiras` |
+| I | I8 | `feat(nav): integrar lanchas parceiras na navegação` |
 
 ---
 
@@ -610,9 +754,13 @@
 - [x] **FASE F** - FAQ e Suporte ✅ (F1 a F5 concluídas)
 - [ ] **FASE G** - Verificação Final (4 commits)
 - [ ] **FASE H** - Mídias (5 commits - aguardando imagens)
+- [ ] **FASE I** - Lanchas Parceiras (8 commits - 21 embarcações)
 
-**Total: ~37 commits planejados**
+**Total: ~45 commits planejados**
 
 ---
 
-**STATUS:** FASE F concluída. Próximo: **FASE G - Verificação Final** (auditoria SEO, schemas, sitemap e links).
+**STATUS:** FASE F concluída. Próximas fases:
+- **FASE G** - Verificação Final (auditoria SEO, schemas, sitemap e links)
+- **FASE H** - Mídias (aguardando imagens)
+- **FASE I** - Lanchas Parceiras (21 embarcações novas)
