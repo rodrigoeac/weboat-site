@@ -42,12 +42,15 @@
   <!-- Preload Hero Image (LCP) -->
   <link rel="preload" as="image" href="/assets/images/hero/hero-home.jpg" fetchpriority="high">
 
-  <!-- CSS -->
+  <!-- CSS Crítico (acima da dobra) -->
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
   <link rel="stylesheet" href="/css/pages/home.css">
+
+  <!-- CSS Não-Crítico (abaixo da dobra) - carrega async -->
+  <link rel="preload" href="/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
 
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
