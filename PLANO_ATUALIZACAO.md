@@ -366,33 +366,33 @@
 
 ---
 
-### F2.2: Verificar Mini FAQs em Todas as Páginas
+### F2.2: Verificar Mini FAQs em Todas as Páginas ✅
 **Arquivos:** Todas as páginas com mini FAQ
-- [ ] Verificar consistência com FAQ principal
-- [ ] Atualizar informações desatualizadas
-- [ ] Verificar Schemas FAQPage
+- [x] Verificar consistência com FAQ principal
+- [x] Atualizar informações desatualizadas (gelo removido de todas)
+- [x] Atualizar churrasqueira (todas têm, requer serviço adicional)
+- [x] Verificar Schemas FAQPage
 
-**A verificar:**
-- [ ] `pages/lanchas/index.html`
-- [ ] `pages/lanchas/weboat-32.html`
-- [ ] `pages/lanchas/weboat-390.html`
-- [ ] `pages/lanchas/weboat-oceanic-36.html`
-- [ ] `pages/lanchas/weboat-rio-star-50.html`
-- [ ] `pages/roteiros/index.html`
-- [ ] `pages/roteiros/mureta-da-urca.html`
-- [ ] `pages/roteiros/praia-vermelha.html`
-- [ ] `pages/roteiros/copacabana.html`
-- [ ] `pages/roteiros/ilhas-cagarras.html`
-- [ ] `pages/roteiros/itaipu-camboinhas.html`
-- [ ] `pages/roteiros/volta-completa.html`
-- [ ] `pages/servicos.html`
-- [ ] `pages/ocasioes/despedida-solteira.html`
-- [ ] `pages/ocasioes/aniversario.html`
-- [ ] `pages/ocasioes/corporativo.html`
-- [ ] `pages/ocasioes/reveillon.html`
-- [ ] `index.html`
+**Páginas atualizadas (17 arquivos):**
+- [x] `index.html`
+- [x] `pages/lanchas/index.html`
+- [x] `pages/lanchas/weboat-32.html`
+- [x] `pages/lanchas/weboat-390.html`
+- [x] `pages/lanchas/weboat-oceanic-36.html`
+- [x] `pages/lanchas/weboat-rio-star-50.html`
+- [x] `pages/roteiros/index.html`
+- [x] `pages/roteiros/mureta-da-urca.html`
+- [x] `pages/roteiros/praia-vermelha.html`
+- [x] `pages/roteiros/copacabana.html`
+- [x] `pages/roteiros/ilhas-cagarras.html`
+- [x] `pages/roteiros/itaipu-camboinhas.html`
+- [x] `pages/roteiros/volta-completa.html`
+- [x] `pages/servicos.html`
+- [x] `pages/ocasioes/despedida-solteira.html`
+- [x] `pages/ocasioes/aniversario.html`
+- [x] `termos-de-uso.html`
 
-**COMMIT:** `fix: atualizar mini FAQs em todas as páginas para consistência`
+**COMMIT:** `fix: remover gelo dos itens inclusos em todas as páginas` ✅
 
 ---
 
