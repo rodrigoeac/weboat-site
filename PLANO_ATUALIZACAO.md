@@ -580,14 +580,17 @@
 
 ## FASE I: LANCHAS PARCEIRAS (21 embarcações)
 
-### I1: Estrutura e Listagem
+### I1: Estrutura e Listagem ✅
 **Arquivo:** `pages/lanchas/index.html`
-- [ ] Adicionar seção "Lanchas Parceiras" abaixo das próprias
-- [ ] Criar cards para todas as 21 lanchas parceiras
-- [ ] Organizar por categoria (Padrão, Grande, Eventos, Luxo)
-- [ ] Filtros por capacidade
+- [x] Adicionar seção "Lanchas Parceiras" abaixo das próprias
+- [x] Criar cards para todas as 21 lanchas parceiras
+- [x] Organizar por categoria (Padrão, Grande, Eventos, Luxo)
+- [x] Filtros por capacidade
+- [x] CSS para badges e filtros
+- [x] JavaScript para filtro de categorias
+- [x] Atualizar SEO e Schema CollectionPage
 
-**COMMIT:** `feat(lanchas): adicionar seção de lanchas parceiras na listagem`
+**COMMIT:** `feat(lanchas): adicionar seção de lanchas parceiras na listagem (I1)` ✅
 
 ---
 
@@ -760,7 +763,194 @@
 
 ---
 
-**STATUS:** FASE F concluída. Próximas fases:
+---
+
+## FASE J: CORREÇÕES DE DADOS E FUNCIONALIDADES
+
+### Dados de Referência - Horários e Turnos
+
+**Turno Padrão (maioria das lanchas):**
+- Manhã: 09:00-14:00 (5h)
+- Tarde: 14:30-19:30 (5h)
+
+**Turnos Especiais:**
+| Lancha | Manhã | Tarde | Obs. |
+|--------|-------|-------|------|
+| Catamarã Sagarana | 08:00-13:00 | 14:00-19:00 | - |
+| Barco Gourmet 53 | 09:00-14:00 | 14:30-19:30 | Tarde +R$ 500 |
+| WeBoat Malik | 08:30-13:30 | 14:30-19:30 | Tarde +R$ 1.000 |
+| Catamarã Oceano | 10:00-15:00 | 17:00-22:00 | - |
+
+**Lanchas Flexíveis (6h mínimo):**
+- Prestige 60, Schaefer 62 Fly, Intermarine 60 Fly
+
+**Sobre os Roteiros:**
+- Todos os passeios têm **5 horas de duração**
+- A diferença entre roteiros é o **tempo de navegação vs tempo parado**
+- Roteiros curtos (R1, R2): mais tempo de lancha parada
+- Roteiros longos (R4, R5): mais tempo de navegação
+
+---
+
+### J1: Corrigir Filtro de Categorias - Listagem Lanchas
+**Arquivo:** `js/main.js`
+- [ ] Corrigir função initBoatFilter() que não está funcionando
+- [ ] Verificar seletores CSS
+- [ ] Testar filtros por categoria
+
+**COMMIT:** `fix(lanchas): corrigir filtro de categorias na listagem`
+
+---
+
+### J2: Atualizar Cards Lanchas Próprias - Listagem
+**Arquivo:** `pages/lanchas/index.html`
+- [ ] Mostrar dois preços nos cards: Seg-Qui e Sex-Dom
+- [ ] WeBoat 32: R$ 2.300 (Seg-Qui) | R$ 2.700 (Sex-Dom)
+- [ ] WeBoat Oceanic 36: R$ 2.400 (Seg-Qui) | R$ 2.800 (Sex-Dom)
+- [ ] WeBoat 390: R$ 2.600 (Seg-Qui) | R$ 3.100 (Sex-Dom)
+- [ ] WeBoat Rio Star 50: R$ 4.000 (Seg-Qui) | R$ 4.500 (Sex-Dom)
+- [ ] Atualizar CSS para layout de dois preços
+
+**COMMIT:** `feat(lanchas): mostrar preços Seg-Qui e Sex-Dom nos cards`
+
+---
+
+### J3: Atualizar Rio Star 50 - Capacidade
+**Arquivos:** `pages/lanchas/weboat-rio-star-50.html`, `pages/lanchas/index.html`
+- [ ] Capacidade: 20-22 pessoas (base 20, máxima 22, com staff 24)
+- [ ] Pessoa extra: R$ 250 a partir de 21 pessoas
+- [ ] Tabela de preços completa por roteiro
+
+**Preços Rio Star 50:**
+| Roteiro | Seg-Qui (Promo) | Sex-Dom (Normal) |
+|---------|-----------------|------------------|
+| R1 - Mureta da Urca | R$ 4.000 | R$ 4.500 |
+| R2 - Praia Vermelha | R$ 4.300 | R$ 4.800 |
+| R3 - Copacabana | R$ 4.900 | R$ 5.500 |
+| R4 - Ilhas Cagarras | R$ 5.900 | R$ 6.500 |
+| R5 - Itaipu/Camboinhas | R$ 5.900 | R$ 6.500 |
+
+**COMMIT:** `fix(lanchas): corrigir capacidade e preços da Rio Star 50`
+
+---
+
+### J4: Atualizar Páginas Lanchas Próprias - Tabelas de Preços Completas
+**Arquivos:** Todas as páginas de lanchas próprias
+
+#### WeBoat 32 (15 pessoas)
+| Roteiro | Seg-Qui | Sex-Dom |
+|---------|---------|---------|
+| R1 - Mureta da Urca | R$ 2.300 | R$ 2.700 |
+| R2 - Praia Vermelha | R$ 2.500 | R$ 2.900 |
+| R3 - Copacabana | R$ 3.000 | R$ 3.400 |
+| R4 - Ilhas Cagarras | R$ 3.600 | R$ 4.000 |
+| R5 - Itaipu/Camboinhas | R$ 3.600 | R$ 4.000 |
+
+#### WeBoat Oceanic 36 (14 pessoas)
+| Roteiro | Seg-Qui | Sex-Dom |
+|---------|---------|---------|
+| R1 - Mureta da Urca | R$ 2.400 | R$ 2.800 |
+| R2 - Praia Vermelha | R$ 2.600 | R$ 3.000 |
+| R3 - Copacabana | R$ 3.100 | R$ 3.600 |
+| R4 - Ilhas Cagarras | R$ 3.700 | R$ 4.300 |
+| R5 - Itaipu/Camboinhas | R$ 3.700 | R$ 4.300 |
+
+#### WeBoat 390 (16 pessoas, com staff 18)
+| Roteiro | Seg-Qui | Sex-Dom |
+|---------|---------|---------|
+| R1 - Mureta da Urca | R$ 2.600 | R$ 3.100 |
+| R2 - Praia Vermelha | R$ 2.800 | R$ 3.300 |
+| R3 - Copacabana | R$ 3.300 | R$ 3.900 |
+| R4 - Ilhas Cagarras | R$ 3.900 | R$ 4.500 |
+| R5 - Itaipu/Camboinhas | R$ 3.900 | R$ 4.500 |
+
+**COMMIT:** `feat(lanchas): adicionar tabelas de preços por roteiro`
+
+---
+
+### J5: Atualizar Páginas Lanchas Parceiras - Preços por Roteiro
+**Arquivos:** Todas as páginas em `pages/lanchas/parceiras/`
+
+Adicionar tabela de preços por roteiro em cada página:
+
+**Parceiras com todos os roteiros (R1-R5):**
+| Lancha | R1 | R2 | R3 | R4 | R5 | Hora Extra |
+|--------|----|----|----|----|----| ---------- |
+| Malaga 32 | 2.800 | 2.900 | 3.250 | 3.500 | 3.400 | 800 |
+| Magna 28 | 3.000 | 3.400 | 3.800 | 4.300 | 4.300 | 600 |
+| WeBoat Real 32 | 3.300 | 3.800 | 4.300 | 4.800 | 4.800 | 650 |
+| WeBoat Rival 36 | 2.900 | 2.900 | 3.350 | 3.800 | 3.800 | 1.000 |
+| WeBoat Ghost 36 | 3.800 | 4.300 | 4.800 | 5.300 | 5.300 | 800 |
+| WeBoat Carbrasmar 41 | 3.700 | 4.000 | 4.800 | 5.500 | 5.500 | 1.000 |
+| WeBoat Ibiza 45 | 4.200 | 4.200 | 4.700 | 5.200 | 5.200 | 1.200 |
+| Intermares 50 | 4.500 | 4.500 | 4.950 | 5.400 | 5.400 | 1.000 |
+| Boat Rio 36 | 3.500 | 3.500 | 3.950 | 4.400 | 4.400 | 1.000 |
+| WeBoat 400 | 4.000 | 4.000 | 4.450 | 4.900 | 4.900 | 1.800 |
+| WeBoat Senna 50 | 5.500 | 6.500 | 7.500 | 8.500 | 8.500 | 1.300 |
+| WeBoat Mares 50 | 5.500 | 6.000 | 6.500 | 7.500 | 7.500 | 1.300 |
+| Tecnomarine 50 | 6.500 | 7.500 | 8.500 | 9.500 | 9.500 | 1.500 |
+| WeBoat 600 | 7.500 | 7.500 | 8.500 | 9.500 | 9.500 | 1.000 |
+| WeBoat Malik | 8.500 | 8.500 | 11.000 | 13.500 | 13.500 | 2.000 |
+
+**Parceiras só R1/R2:**
+| Lancha | R1 | R2 | Hora Extra |
+|--------|----|----|------------|
+| WeBoat Essence | 7.000 | 7.500 | 1.000 |
+| Catamarã Sagarana | 9.500 | 9.500 | - |
+| Barco Gourmet 53 | 7.000 | 7.000 | 1.500 |
+| Catamarã Oceano | 14.000 | 14.000 | 3.000 |
+| Prestige 60 | 15.000 | 15.000 | 2.500 |
+| Schaefer 62 Fly | 15.000 | 15.000 | 2.500 |
+| Intermarine 60 Fly | 15.000 | 15.000 | 2.500 |
+
+**COMMIT:** `feat(lanchas-parceiras): adicionar tabelas de preços por roteiro`
+
+---
+
+### J6: Adicionar FAQ sobre Roteiros e Duração
+**Arquivos:** `pages/faq.html`, páginas de roteiros
+
+Adicionar pergunta sobre diferença entre roteiros:
+
+**"Qual a diferença entre os roteiros?"**
+> Todos os passeios têm 5 horas de duração, que é o tempo do seu turno (manhã: 09h-14h ou tarde: 14h30-19h30). A diferença entre os roteiros é a proporção de tempo navegando versus tempo com a lancha parada:
+> - **Roteiros curtos (R1, R2):** Menos tempo de navegação, mais tempo parado para banho, sol e curtir o mar
+> - **Roteiros longos (R3, R4, R5):** Mais tempo navegando para chegar a destinos mais distantes, menos tempo parado
+
+**COMMIT:** `feat(faq): adicionar pergunta sobre diferença entre roteiros`
+
+---
+
+### J7: Atualizar Informações de Turnos
+**Arquivos:** Todas as páginas de lanchas
+
+- [ ] Adicionar informação sobre turnos em cada página
+- [ ] Manhã: 09:00-14:00 (5h)
+- [ ] Tarde: 14:30-19:30 (5h)
+- [ ] Destacar lanchas com horários especiais
+
+**COMMIT:** `feat(lanchas): adicionar informações de turnos nas páginas`
+
+---
+
+## ✅ PROGRESSO
+
+- [x] **FASE A** - Lanchas ✅
+- [x] **FASE B** - Roteiros ✅
+- [x] **FASE C** - Serviços ✅
+- [x] **FASE D** - Homepage ✅
+- [x] **FASE E** - Ocasiões ✅
+- [x] **FASE F** - FAQ e Suporte ✅
+- [ ] **FASE G** - Verificação Final (4 commits)
+- [ ] **FASE H** - Mídias (5 commits - aguardando imagens)
+- [x] **FASE I** - Lanchas Parceiras ✅ (22 páginas criadas)
+- [ ] **FASE J** - Correções de Dados e Funcionalidades (7 commits)
+
+**Total: ~52 commits planejados**
+
+---
+
+**STATUS:** FASE I concluída. Próximas fases:
+- **FASE J** - Correções de Dados e Funcionalidades (7 commits)
 - **FASE G** - Verificação Final (auditoria SEO, schemas, sitemap e links)
 - **FASE H** - Mídias (aguardando imagens)
-- **FASE I** - Lanchas Parceiras (21 embarcações novas)
