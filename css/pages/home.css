@@ -850,11 +850,29 @@
   background: var(--sand-white);
 }
 
-.clientes__grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: var(--space-5);
+/* Carrossel de Clientes */
+.clientes__carousel {
+  overflow: hidden;
   margin-bottom: var(--space-6);
+}
+
+.clientes__track {
+  display: flex;
+  gap: var(--space-6);
+  animation: scrollClientes 20s linear infinite;
+}
+
+.clientes__track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollClientes {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .clientes__note {
@@ -864,49 +882,41 @@
   font-style: italic;
 }
 
-/* Card Cliente */
-.cliente-card {
-  text-align: center;
+/* Card Cliente - Quadrado */
+.cliente-card--square {
+  flex-shrink: 0;
+  width: 300px;
 }
 
-.cliente-card__image {
+.cliente-card--square .cliente-card__image {
   aspect-ratio: 1/1;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-xl);
   overflow: hidden;
-  margin-bottom: var(--space-3);
   border: 3px solid var(--pearl-gray);
   transition: all var(--transition-base);
 }
 
-.cliente-card:hover .cliente-card__image {
+.cliente-card--square:hover .cliente-card__image {
   border-color: var(--sunset-gold);
-  transform: scale(1.05);
+  transform: scale(1.02);
+  box-shadow: var(--shadow-lg);
 }
 
-.cliente-card__image img {
+.cliente-card--square .cliente-card__image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   background: var(--pearl-gray);
 }
 
-.cliente-card__name {
-  font-family: var(--font-heading);
-  font-size: var(--text-body-sm);
-  font-weight: 600;
-  color: var(--ocean-deep);
-  margin: 0;
-}
-
-@media (max-width: 1024px) {
-  .clientes__grid {
-    grid-template-columns: repeat(3, 1fr);
+@media (max-width: 768px) {
+  .cliente-card--square {
+    width: calc(100vw - 48px);
+    max-width: 350px;
   }
-}
 
-@media (max-width: 640px) {
-  .clientes__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .clientes__track {
+    gap: var(--space-4);
   }
 
   .clientes {
