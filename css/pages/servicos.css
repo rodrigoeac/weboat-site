@@ -72,6 +72,17 @@
 }
 
 /* ============================================
+   OBSERVAÇÃO GERAL
+   ============================================ */
+.servicos-obs {
+  text-align: center;
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  padding: var(--space-4) 0;
+  margin: 0;
+}
+
+/* ============================================
    SEÇÃO SERVIÇOS
    ============================================ */
 .servicos-section {
