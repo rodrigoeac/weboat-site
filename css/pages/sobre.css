@@ -550,3 +550,31 @@
     width: 100%;
   }
 }
+
+/* ============================================
+   AVALIAÇÕES SOBRE (cor diferenciada)
+   ============================================ */
+.sobre-compromisso + .avaliacoes {
+  background: var(--pearl-gray);
+  padding: var(--space-16) 0;
+}
+
+@media (max-width: 768px) {
+  .sobre-compromisso + .avaliacoes {
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ============================================
+   FAQ SOBRE (cor diferenciada)
+   ============================================ */
+.sobre-faq {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+@media (max-width: 768px) {
+  .sobre-faq {
+    padding: var(--space-12) 0;
+  }
+}

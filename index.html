@@ -33,9 +33,14 @@
 
   <!-- Favicon -->
 
-  <!-- Preconnect -->
+  <!-- Preconnect & DNS Prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="dns-prefetch" href="https://cdn.trustindex.io">
+
+  <!-- Preload Hero Image (LCP) -->
+  <link rel="preload" as="image" href="/assets/images/hero/hero-home.jpg" fetchpriority="high">
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
@@ -46,6 +51,30 @@
 
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+
+  <!-- Schema.org - WebSite -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "WeBoat Brasil",
+    "url": "https://www.weboatbrasil.com.br",
+    "description": "Aluguel de lanchas no Rio de Janeiro para passeios privativos",
+    "publisher": {
+      "@type": "Organization",
+      "name": "WeBoat Brasil",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png"
+      }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://wa.me/5521977724114?text={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
 
   <!-- Schema.org - LocalBusiness -->
   <script type="application/ld+json">

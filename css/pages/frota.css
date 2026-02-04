@@ -412,3 +412,24 @@
   }
 }
 
+/* ============================================
+   AVALIAÇÕES SECTION (Página Lanchas)
+   ============================================ */
+.includes + .avaliacoes {
+  background: var(--sand-white);
+  padding: var(--space-16) 0;
+}
+
+@media (max-width: 768px) {
+  .includes + .avaliacoes {
+    padding: var(--space-12) 0;
+  }
+}
+
+/* ============================================
+   FAQ SECTION (Página Lanchas)
+   ============================================ */
+.avaliacoes + .faq {
+  background: var(--pearl-gray);
+}
+

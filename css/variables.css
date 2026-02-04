@@ -6,11 +6,12 @@
 
 /* ============================================
    GOOGLE FONTS IMPORT
-   Plus Jakarta Sans para H1/H2 (ATUALIZADO)
-   DM Sans para H3/H4/botões
-   Source Sans 3 para corpo
+   OTIMIZADO: Apenas weights necessários
+   Plus Jakarta Sans: 600, 700 (títulos)
+   DM Sans: 500, 600 (headings/botões)
+   Source Sans 3: 400, 600 (corpo)
    ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=DM+Sans:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap');
 
 /* ============================================
    CSS CUSTOM PROPERTIES (VARIÁVEIS)

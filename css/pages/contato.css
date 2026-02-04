@@ -585,3 +585,17 @@
 .contato-social__link--whatsapp:hover {
   background: var(--whatsapp-green);
 }
+
+/* ============================================
+   FAQ CONTATO (cor diferenciada)
+   ============================================ */
+.contato-faq {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+@media (max-width: 768px) {
+  .contato-faq {
+    padding: var(--space-12) 0;
+  }
+}
