@@ -12,17 +12,37 @@
 - Suportado por 97%+ dos navegadores (2026)
 - Fallback simples com `<picture>`
 
-### Ferramentas Recomendadas
+### Ferramentas Instaladas
 
 ```bash
-# Instalar cwebp (Google)
-brew install webp
+# Já instaladas neste projeto:
+brew install webp imagemagick oxipng jpegoptim svgo
 
-# Converter uma imagem
+# Ferramentas disponíveis:
+# - cwebp     → Converter para WebP
+# - convert   → Redimensionar (ImageMagick)
+# - oxipng    → Otimizar PNG (lossless)
+# - jpegoptim → Otimizar JPEG
+# - svgo      → Otimizar SVG
+```
+
+### Comandos Básicos
+
+```bash
+# Converter para WebP
 cwebp -q 80 input.jpg -o output.webp
 
 # Converter todas as imagens de uma pasta
 for f in *.jpg; do cwebp -q 80 "$f" -o "${f%.jpg}.webp"; done
+
+# Otimizar JPEG (sem perda de qualidade visual)
+jpegoptim --strip-all --max=85 image.jpg
+
+# Otimizar PNG (lossless)
+oxipng -o 4 --strip all image.png
+
+# Otimizar SVG
+svgo input.svg -o output.svg
 ```
 
 ### Qualidade Recomendada por Tipo
@@ -218,14 +238,14 @@ echo "Otimização concluída!"
 
 ## 7. Checklist de Implementação
 
-- [ ] Instalar ferramentas (imagemagick, webp)
+- [x] Instalar ferramentas (imagemagick, webp, oxipng, jpegoptim, svgo)
 - [ ] Auditar imagens atuais (tamanhos, formatos)
 - [ ] Criar script de otimização
 - [ ] Processar imagens hero (prioridade)
 - [ ] Processar imagens de lanchas
 - [ ] Processar demais imagens
 - [ ] Atualizar HTML com `<picture>` e srcset
-- [ ] Adicionar width/height em todas as `<img>`
+- [x] Adicionar width/height em todas as `<img>` (index.html feito)
 - [ ] Testar com Lighthouse
 - [ ] Verificar fallback em Safari antigo
 
