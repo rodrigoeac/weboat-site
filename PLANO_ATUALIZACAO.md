@@ -1250,26 +1250,66 @@
 
 ## ✅ PROGRESSO FASE L
 
-- [ ] L1 - Ajustar info churrasqueira layout
-- [ ] L2 - Remover espaçamento observações
-- [ ] L3 - Botões âncoras roteiros
-- [ ] L4 - Padronizar botão ver roteiro
-- [ ] L5 - Ajustar duração roteiros
-- [ ] L6 - CTA extra roteiros
-- [ ] L7 - Horários réveillon
-- [ ] L8 - Padding timeline réveillon
-- [ ] L9 - Reordenar serviços (combo primeiro)
-- [ ] L10 - "A partir de" serviços home
-- [ ] L11 - Obs valores página serviços
-- [ ] L12 - Ajustar despedida solteira
-- [ ] L13 - Cards lanchas despedida
-- [ ] L14 - Depoimentos GMB despedida
-- [ ] L15 - Cards lanchas corporativo
-- [ ] L16 - Avaliações GMB corporativo
-- [ ] L17 - Ajustar réveillon completo
-- [ ] L18 - Avaliações GMB réveillon
+- [x] L1 - Ajustar info churrasqueira layout
+- [x] L2 - Remover espaçamento observações
+- [x] L3 - Botões âncoras roteiros
+- [x] L4 - Padronizar botão ver roteiro
+- [x] L5 - Ajustar duração roteiros
+- [x] L6 - CTA extra roteiros
+- [x] L7 - Horários réveillon
+- [x] L8 - Padding timeline réveillon
+- [x] L9 - Reordenar serviços (combo primeiro)
+- [x] L10 - "A partir de" serviços home
+- [x] L11 - Obs valores página serviços
+- [x] L12 - Ajustar despedida solteira
+- [x] L13 - Cards lanchas despedida
+- [x] L14 - Depoimentos GMB despedida
+- [x] L15 - Cards lanchas corporativo
+- [x] L16 - Avaliações GMB corporativo
+- [x] L17 - Ajustar réveillon completo
+- [x] L18 - Avaliações GMB réveillon
 
-**STATUS FASE L:** 🔄 PENDENTE (0/18 tarefas)
+**STATUS FASE L:** ✅ COMPLETO (18/18 tarefas)
+
+---
+
+## FASE M: AJUSTES FINAIS E CORREÇÕES
+
+### M1: Corrigir Duração Ilhas Cagarras
+- [x] Alterar de "4-5 horas" para "5 horas" na página dedicada
+
+### M2: Adicionar Contato no Menu
+- [x] Adicionar link de Contato em todas as páginas (46 arquivos)
+
+### M3: Atualizar Endereço
+- [x] Schema.org: "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória"
+- [x] Footer: incluir bairro Glória
+- [x] CLAUDE.md: endereço completo com CEP
+
+### M4: Ajustar Espaçamento Observações Home
+- [x] Manter linhas separadas sem espaçamento extra
+
+### M5: Ajustar Observações Página Lanchas
+- [x] Separar em parágrafos distintos
+- [x] Ajustar CSS para espaçamento mínimo
+
+### M6: Padronizar Botões e CTAs Roteiros
+- [x] Alterar "Ver Roteiro" para "Ver Detalhes"
+- [x] Diferenciar CTA final do intermediário
+
+### M7: Atualizar Página Sobre
+- [x] Remover vestiários (não disponível)
+- [x] Adicionar mini mercado, farmácia, restaurantes
+- [x] Atualizar história com storytelling autêntico
+- [x] Atualizar propósito, visão e valores
+
+### M8: Fonte Menor na Observação Serviços
+- [x] Alterar de --text-body-sm para --text-caption
+
+### M9: Mover Info Churrasqueira Antes do Preço
+- [x] Inverter ordem em 26 páginas de lanchas
+
+**STATUS FASE M:** ✅ COMPLETO (9/9 tarefas)
 
 ---
 
