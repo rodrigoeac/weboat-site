@@ -396,21 +396,24 @@
 
 ---
 
-### F3: Mini FAQ - Sobre
+### F3: Mini FAQ - Sobre ✅
 **Arquivo:** `pages/sobre.html`
-- [ ] Adicionar Mini FAQ sobre a empresa
-- [ ] Atualizar números/estatísticas
+- [x] Adicionar Mini FAQ sobre a empresa
+- [x] Atualizar números/estatísticas (4 lanchas, não 5)
+- [x] Adicionar Schema FAQPage
 
-**COMMIT:** `feat(sobre): adicionar mini FAQ e atualizar dados`
+**COMMIT:** `feat(sobre): adicionar mini FAQ e corrigir número de lanchas` ✅
 
 ---
 
-### F4: Mini FAQ - Contato
+### F4: Mini FAQ - Contato ✅
 **Arquivo:** `pages/contato.html`
-- [ ] Adicionar Mini FAQ sobre contato/reservas
-- [ ] Verificar informações de contato
+- [x] Adicionar Mini FAQ sobre contato/reservas
+- [x] Verificar informações de contato
+- [x] Corrigir preço estacionamento (R$ 70)
+- [x] Adicionar Schema FAQPage
 
-**COMMIT:** `feat(contato): adicionar mini FAQ`
+**COMMIT:** `feat(contato): adicionar mini FAQ e Schema FAQPage` ✅
 
 ---
 
@@ -604,9 +607,10 @@
 - [x] **FASE C** - Serviços ✅
 - [x] **FASE D** - Homepage ✅
 - [x] **FASE E** - Ocasiões ✅
-- [x] **FASE F** - FAQ Principal ✅ (F1, F2, F2.1 concluídas)
-- [ ] **FASE F** - Mini FAQs (F2.2 - verificar consistência em todas as páginas)
-- [ ] **FASE F** - Sobre e Contato (F3, F4, F5)
+- [x] **FASE F** - FAQ Principal ✅ (F1, F2, F2.1, F2.2 concluídas)
+- [x] **FASE F** - Mini FAQs ✅ (todas verificadas e atualizadas)
+- [x] **FASE F** - Sobre e Contato ✅ (F3, F4 concluídas)
+- [ ] **FASE F** - SEO Schemas (F5 pendente)
 - [ ] **FASE G** - Verificação Final (4 commits)
 - [ ] **FASE H** - Mídias (5 commits)
 
@@ -614,4 +618,4 @@
 
 ---
 
-**STATUS:** FAQ principal completo. Próximo: **F2.2 - Verificar Mini FAQs** em todas as páginas para garantir consistência com as novas informações.
+**STATUS:** FASE F quase concluída. Próximo: **F5 - Verificar SEO e Schemas** nas páginas FAQ, Sobre e Contato.
