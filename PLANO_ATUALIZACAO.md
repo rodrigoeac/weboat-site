@@ -792,34 +792,36 @@
 
 ---
 
-### J1: Corrigir Filtro de Categorias - Listagem Lanchas
-**Arquivo:** `js/main.js`
-- [ ] Corrigir função initBoatFilter() que não está funcionando
-- [ ] Verificar seletores CSS
-- [ ] Testar filtros por categoria
-
-**COMMIT:** `fix(lanchas): corrigir filtro de categorias na listagem`
-
----
-
-### J2: Atualizar Cards Lanchas Próprias - Listagem
+### J1: Corrigir Filtro de Categorias - Listagem Lanchas ✅
 **Arquivo:** `pages/lanchas/index.html`
-- [ ] Mostrar dois preços nos cards: Seg-Qui e Sex-Dom
-- [ ] WeBoat 32: R$ 2.300 (Seg-Qui) | R$ 2.700 (Sex-Dom)
-- [ ] WeBoat Oceanic 36: R$ 2.400 (Seg-Qui) | R$ 2.800 (Sex-Dom)
-- [ ] WeBoat 390: R$ 2.600 (Seg-Qui) | R$ 3.100 (Sex-Dom)
-- [ ] WeBoat Rio Star 50: R$ 4.000 (Seg-Qui) | R$ 4.500 (Sex-Dom)
-- [ ] Atualizar CSS para layout de dois preços
+- [x] Adicionar type="button" nos filtros
+- [x] Verificar seletores CSS (OK)
+- [x] Testar filtros por categoria
 
-**COMMIT:** `feat(lanchas): mostrar preços Seg-Qui e Sex-Dom nos cards`
+**COMMIT:** `fix(lanchas): corrigir filtro, preços duplos e tabelas por roteiro (J1-J4, J6)` ✅
 
 ---
 
-### J3: Atualizar Rio Star 50 - Capacidade
+### J2: Atualizar Cards Lanchas Próprias - Listagem ✅
+**Arquivo:** `pages/lanchas/index.html`
+- [x] Mostrar dois preços nos cards: Seg-Qui e Sex-Dom
+- [x] WeBoat 32: R$ 2.300 (Seg-Qui) | R$ 2.700 (Sex-Dom)
+- [x] WeBoat Oceanic 36: R$ 2.400 (Seg-Qui) | R$ 2.800 (Sex-Dom)
+- [x] WeBoat 390: R$ 2.600 (Seg-Qui) | R$ 3.100 (Sex-Dom)
+- [x] WeBoat Rio Star 50: R$ 4.000 (Seg-Qui) | R$ 4.500 (Sex-Dom)
+- [x] Atualizar CSS para layout de dois preços
+
+**COMMIT:** Incluído no commit J1-J4, J6 ✅
+
+---
+
+### J3: Atualizar Rio Star 50 - Capacidade ✅
 **Arquivos:** `pages/lanchas/weboat-rio-star-50.html`, `pages/lanchas/index.html`
-- [ ] Capacidade: 20-22 pessoas (base 20, máxima 22, com staff 24)
-- [ ] Pessoa extra: R$ 250 a partir de 21 pessoas
-- [ ] Tabela de preços completa por roteiro
+- [x] Capacidade: 20-22 pessoas (base 20, máxima 22, com staff 24)
+- [x] Pessoa extra: R$ 250 a partir de 21 pessoas
+- [x] Tabela de preços completa por roteiro
+
+**COMMIT:** Incluído no commit J1-J4, J6 ✅
 
 **Preços Rio Star 50:**
 | Roteiro | Seg-Qui (Promo) | Sex-Dom (Normal) |
@@ -864,72 +866,42 @@
 | R4 - Ilhas Cagarras | R$ 3.900 | R$ 4.500 |
 | R5 - Itaipu/Camboinhas | R$ 3.900 | R$ 4.500 |
 
-**COMMIT:** `feat(lanchas): adicionar tabelas de preços por roteiro`
+**COMMIT:** Incluído no commit J1-J4, J6 ✅
 
 ---
 
-### J5: Atualizar Páginas Lanchas Parceiras - Preços por Roteiro
+### J5: Atualizar Páginas Lanchas Parceiras - Preços por Roteiro ✅
 **Arquivos:** Todas as páginas em `pages/lanchas/parceiras/`
 
-Adicionar tabela de preços por roteiro em cada página:
+- [x] Adicionar tabela de preços por roteiro em cada página (22 páginas)
+- [x] Incluir informações de turnos específicos
+- [x] Adicionar valores de adicionais (hora extra, churrasqueira, pessoa extra)
 
-**Parceiras com todos os roteiros (R1-R5):**
-| Lancha | R1 | R2 | R3 | R4 | R5 | Hora Extra |
-|--------|----|----|----|----|----| ---------- |
-| Malaga 32 | 2.800 | 2.900 | 3.250 | 3.500 | 3.400 | 800 |
-| Magna 28 | 3.000 | 3.400 | 3.800 | 4.300 | 4.300 | 600 |
-| WeBoat Real 32 | 3.300 | 3.800 | 4.300 | 4.800 | 4.800 | 650 |
-| WeBoat Rival 36 | 2.900 | 2.900 | 3.350 | 3.800 | 3.800 | 1.000 |
-| WeBoat Ghost 36 | 3.800 | 4.300 | 4.800 | 5.300 | 5.300 | 800 |
-| WeBoat Carbrasmar 41 | 3.700 | 4.000 | 4.800 | 5.500 | 5.500 | 1.000 |
-| WeBoat Ibiza 45 | 4.200 | 4.200 | 4.700 | 5.200 | 5.200 | 1.200 |
-| Intermares 50 | 4.500 | 4.500 | 4.950 | 5.400 | 5.400 | 1.000 |
-| Boat Rio 36 | 3.500 | 3.500 | 3.950 | 4.400 | 4.400 | 1.000 |
-| WeBoat 400 | 4.000 | 4.000 | 4.450 | 4.900 | 4.900 | 1.800 |
-| WeBoat Senna 50 | 5.500 | 6.500 | 7.500 | 8.500 | 8.500 | 1.300 |
-| WeBoat Mares 50 | 5.500 | 6.000 | 6.500 | 7.500 | 7.500 | 1.300 |
-| Tecnomarine 50 | 6.500 | 7.500 | 8.500 | 9.500 | 9.500 | 1.500 |
-| WeBoat 600 | 7.500 | 7.500 | 8.500 | 9.500 | 9.500 | 1.000 |
-| WeBoat Malik | 8.500 | 8.500 | 11.000 | 13.500 | 13.500 | 2.000 |
-
-**Parceiras só R1/R2:**
-| Lancha | R1 | R2 | Hora Extra |
-|--------|----|----|------------|
-| WeBoat Essence | 7.000 | 7.500 | 1.000 |
-| Catamarã Sagarana | 9.500 | 9.500 | - |
-| Barco Gourmet 53 | 7.000 | 7.000 | 1.500 |
-| Catamarã Oceano | 14.000 | 14.000 | 3.000 |
-| Prestige 60 | 15.000 | 15.000 | 2.500 |
-| Schaefer 62 Fly | 15.000 | 15.000 | 2.500 |
-| Intermarine 60 Fly | 15.000 | 15.000 | 2.500 |
-
-**COMMIT:** `feat(lanchas-parceiras): adicionar tabelas de preços por roteiro`
+**COMMIT:** `feat(lanchas): adicionar tabelas de preços por roteiro nas parceiras (J5)` ✅
 
 ---
 
-### J6: Adicionar FAQ sobre Roteiros e Duração
-**Arquivos:** `pages/faq.html`, páginas de roteiros
+### J6: Adicionar FAQ sobre Roteiros e Duração ✅
+**Arquivos:** `pages/faq.html`
 
-Adicionar pergunta sobre diferença entre roteiros:
+- [x] Adicionar pergunta "Qual a diferença entre os roteiros?"
+- [x] Explicar tempo de navegação vs tempo parado
+- [x] Incluir horários dos turnos (manhã e tarde)
+- [x] Adicionar ao Schema FAQPage
 
-**"Qual a diferença entre os roteiros?"**
-> Todos os passeios têm 5 horas de duração, que é o tempo do seu turno (manhã: 09h-14h ou tarde: 14h30-19h30). A diferença entre os roteiros é a proporção de tempo navegando versus tempo com a lancha parada:
-> - **Roteiros curtos (R1, R2):** Menos tempo de navegação, mais tempo parado para banho, sol e curtir o mar
-> - **Roteiros longos (R3, R4, R5):** Mais tempo navegando para chegar a destinos mais distantes, menos tempo parado
-
-**COMMIT:** `feat(faq): adicionar pergunta sobre diferença entre roteiros`
+**COMMIT:** Incluído no commit J1-J4, J6 ✅
 
 ---
 
-### J7: Atualizar Informações de Turnos
+### J7: Atualizar Informações de Turnos ✅
 **Arquivos:** Todas as páginas de lanchas
 
-- [ ] Adicionar informação sobre turnos em cada página
-- [ ] Manhã: 09:00-14:00 (5h)
-- [ ] Tarde: 14:30-19:30 (5h)
-- [ ] Destacar lanchas com horários especiais
+- [x] Informação sobre turnos já incluída nas tabelas de preços
+- [x] Manhã: 09:00-14:00 (5h) nas notas de preço
+- [x] Tarde: 14:30-19:30 (5h) nas notas de preço
+- [x] Lanchas com horários especiais já identificadas
 
-**COMMIT:** `feat(lanchas): adicionar informações de turnos nas páginas`
+**COMMIT:** Incluído nos commits J1-J6 ✅
 
 ---
 
@@ -944,13 +916,12 @@ Adicionar pergunta sobre diferença entre roteiros:
 - [ ] **FASE G** - Verificação Final (4 commits)
 - [ ] **FASE H** - Mídias (5 commits - aguardando imagens)
 - [x] **FASE I** - Lanchas Parceiras ✅ (22 páginas criadas)
-- [ ] **FASE J** - Correções de Dados e Funcionalidades (7 commits)
+- [x] **FASE J** - Correções de Dados e Funcionalidades ✅ (2 commits)
 
 **Total: ~52 commits planejados**
 
 ---
 
-**STATUS:** FASE I concluída. Próximas fases:
-- **FASE J** - Correções de Dados e Funcionalidades (7 commits)
+**STATUS:** FASE J concluída. Próximas fases:
 - **FASE G** - Verificação Final (auditoria SEO, schemas, sitemap e links)
 - **FASE H** - Mídias (aguardando imagens)
