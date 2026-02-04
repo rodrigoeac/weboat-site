@@ -260,6 +260,39 @@
   color: var(--driftwood);
 }
 
+/* Preços duplos para lanchas próprias */
+.card-boat__prices {
+  display: flex;
+  gap: var(--space-4);
+  flex: 1;
+}
+
+.card-boat__prices .card-boat__price-block {
+  flex: 1;
+}
+
+.card-boat__prices .card-boat__price {
+  font-size: var(--text-body);
+  font-weight: 700;
+}
+
+.card-boat__prices .card-boat__price-note {
+  font-size: 11px;
+}
+
+@media (max-width: 768px) {
+  .card-boat__prices {
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+
+  .card-boat__prices .card-boat__price-block {
+    flex-direction: row;
+    align-items: baseline;
+    gap: var(--space-2);
+  }
+}
+
 /* ============================================
    CARDS - ROTEIRO
    ============================================ */

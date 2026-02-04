@@ -101,6 +101,21 @@
   margin-bottom: var(--space-4);
 }
 
+.lancha-info__badge--parceira {
+  background: var(--wave-blue);
+  color: var(--white);
+}
+
+.lancha-info__badge--luxo {
+  background: linear-gradient(135deg, #b8860b, #daa520);
+  color: var(--white);
+}
+
+.lancha-info__badge--evento {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+  color: var(--white);
+}
+
 .lancha-info__title {
   font-family: var(--font-display);
   font-size: var(--text-h2);
@@ -182,6 +197,41 @@
   font-size: var(--text-caption);
   color: var(--driftwood);
   margin-top: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.lancha-prices__promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-4);
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border: 1px solid var(--sunset-gold);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-5);
+}
+
+.lancha-prices__promo-label {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.lancha-prices__promo-value {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+.lancha-prices__subtitle {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: var(--space-3);
+  margin-top: var(--space-4);
 }
 
 /* CTA Buttons */
