@@ -311,35 +311,88 @@
 
 ---
 
-## FASE F: FAQ E SUPORTE
+## FASE F: FAQ E SUPORTE ✅
 
-### F1: Perguntas ao Usuário
+### F1: Perguntas ao Usuário ✅
 **Ação:** Coletar informações antes de prosseguir
 
-**Perguntas:**
-1. Cancelamento: Qual a política? (48h antes = reembolso total?)
-2. Mau tempo: O que acontece? Reagendamento?
-3. Crianças: Idade mínima? Coletes especiais?
-4. Pets: São permitidos?
-5. Pagamento: Quais formas? PIX, cartão, dinheiro?
-6. Sinal: Quanto é o sinal para reservar?
-7. Estacionamento: Tem na Marina da Glória? É pago?
-8. Bebidas próprias: Pode levar? Tem taxa de rolha?
-9. Horário de chegada: Quanto tempo antes?
-10. Documentos: Precisa de algum documento?
-11. Outros detalhes relevantes?
-
-**COMMIT:** (nenhum - apenas coleta de informações)
+**Respostas obtidas:**
+- [x] Cancelamento: Sinal 50% não reembolsável, mas liberam se conseguirem outro cliente
+- [x] Mau tempo: Remarcação só com chuva forte; roteiro pode mudar para Baía de Guanabara
+- [x] Crianças: Sem restrição de idade, contam como passageiros
+- [x] Pets: Pequeno porte OK, médio/grande consultar
+- [x] Pagamento: PIX/transferência sem taxas; cartão com taxas (até 12x com juros)
+- [x] Sinal: 50% para confirmar reserva
+- [x] Estacionamento: ~R$ 70 para 5h (ESTAPAR)
+- [x] Bebidas próprias: Pode levar, PET/latas OK, vidro só para vinhos/destilados
+- [x] Horário de chegada: 30 minutos antes (atraso descontado)
+- [x] Itens proibidos: bronzeador, vinho tinto, narguilé, fogos, confetes
+- [x] Churrasqueira: todas têm, mas requer taxa adicional (R$ 250-600)
+- [x] Réveillon: 5h (21h-2h sugerido), horas extras cobradas à parte
 
 ---
 
-### F2: Expandir FAQ Principal
+### F2: Expandir FAQ Principal ✅
 **Arquivo:** `pages/faq.html`
-- [ ] Adicionar novas perguntas baseadas nas respostas
-- [ ] Organizar por categorias
-- [ ] Melhorar respostas existentes
+- [x] FAQ completo com 7 categorias
+- [x] Preços e Reservas (6 perguntas)
+- [x] Durante o Passeio (8 perguntas)
+- [x] Sobre as Lanchas (5 perguntas)
+- [x] Ocasiões Especiais (5 perguntas)
+- [x] Logística (3 perguntas)
+- [x] Crianças, Pets e Acessibilidade (4 perguntas)
+- [x] Políticas e Regras (4 perguntas)
+- [x] Schema FAQPage atualizado
 
-**COMMIT:** `feat(faq): expandir com novas perguntas`
+**COMMITS:**
+- `feat(faq): atualizar FAQ completo com políticas e regras reais` ✅
+- `fix(faq): ajustar respostas sobre nadar, fumar, bebidas e banheiros` ✅
+- `fix(faq): corrigir itens inclusos e informações sobre gelo` ✅
+- `fix(faq): remover sugestão sobre itens de valor` ✅
+- `fix(faq): ajustar texto de capacidade e coolers` ✅
+
+---
+
+### F2.1: Documento de Referência FAQ ✅
+**Arquivo:** `docs/weboat_faq.md`
+- [x] Criar arquivo MD com todas as perguntas e respostas
+- [x] Organizado por categorias
+- [x] Tabela resumo com informações rápidas
+- [x] Referenciar no CLAUDE.md
+
+**COMMITS:**
+- `docs: criar arquivo de referência FAQ completo` ✅
+- `docs: atualizar CLAUDE.md com referência ao FAQ e corrigir lanchas` ✅
+
+---
+
+### F2.2: Verificar Mini FAQs em Todas as Páginas
+**Arquivos:** Todas as páginas com mini FAQ
+- [ ] Verificar consistência com FAQ principal
+- [ ] Atualizar informações desatualizadas
+- [ ] Verificar Schemas FAQPage
+
+**A verificar:**
+- [ ] `pages/lanchas/index.html`
+- [ ] `pages/lanchas/weboat-32.html`
+- [ ] `pages/lanchas/weboat-390.html`
+- [ ] `pages/lanchas/weboat-oceanic-36.html`
+- [ ] `pages/lanchas/weboat-rio-star-50.html`
+- [ ] `pages/roteiros/index.html`
+- [ ] `pages/roteiros/mureta-da-urca.html`
+- [ ] `pages/roteiros/praia-vermelha.html`
+- [ ] `pages/roteiros/copacabana.html`
+- [ ] `pages/roteiros/ilhas-cagarras.html`
+- [ ] `pages/roteiros/itaipu-camboinhas.html`
+- [ ] `pages/roteiros/volta-completa.html`
+- [ ] `pages/servicos.html`
+- [ ] `pages/ocasioes/despedida-solteira.html`
+- [ ] `pages/ocasioes/aniversario.html`
+- [ ] `pages/ocasioes/corporativo.html`
+- [ ] `pages/ocasioes/reveillon.html`
+- [ ] `index.html`
+
+**COMMIT:** `fix: atualizar mini FAQs em todas as páginas para consistência`
 
 ---
 
@@ -363,7 +416,7 @@
 
 ### F5: SEO e Schema - FAQ e Suporte
 **Arquivos:** `pages/faq.html`, `pages/sobre.html`, `pages/contato.html`
-- [ ] Verificar Schema FAQPage completo
+- [x] Verificar Schema FAQPage completo (faq.html)
 - [ ] Verificar Schema AboutPage
 - [ ] Verificar Schema ContactPage
 - [ ] Verificar meta tags em todas
@@ -551,13 +604,14 @@
 - [x] **FASE C** - Serviços ✅
 - [x] **FASE D** - Homepage ✅
 - [x] **FASE E** - Ocasiões ✅
-- [ ] **FASE E** - Ocasiões (5 commits)
-- [ ] **FASE F** - FAQ/Suporte (4 commits)
-- [ ] **FASE G** - Verificação (4 commits)
+- [x] **FASE F** - FAQ Principal ✅ (F1, F2, F2.1 concluídas)
+- [ ] **FASE F** - Mini FAQs (F2.2 - verificar consistência em todas as páginas)
+- [ ] **FASE F** - Sobre e Contato (F3, F4, F5)
+- [ ] **FASE G** - Verificação Final (4 commits)
 - [ ] **FASE H** - Mídias (5 commits)
 
 **Total: ~37 commits planejados**
 
 ---
 
-**STATUS:** FASES A, B, C, D e E concluídas. Próximo: **FASE F - FAQ/Suporte** (requer informações do usuário) ou **FASE G - Verificação Final**
+**STATUS:** FAQ principal completo. Próximo: **F2.2 - Verificar Mini FAQs** em todas as páginas para garantir consistência com as novas informações.
