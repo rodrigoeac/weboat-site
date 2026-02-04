@@ -44,11 +44,12 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
-  <!-- Schema.org - LocalBusiness -->
+  <!-- Schema.org - LocalBusiness (GEO/SEO: @id consistente) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
+    "@id": "https://www.weboatbrasil.com.br/#organization",
     "name": "WeBoat Brasil",
     "image": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png",
     "description": "Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.",
@@ -134,7 +135,7 @@
   }
   </script>
 
-  <!-- Schema.org - FAQPage -->
+  <!-- Schema.org - FAQPage (GEO/SEO para IA) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -145,7 +146,7 @@
         "name": "Qual lancha é melhor para meu grupo?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Depende do tamanho do grupo e ocasião. Para grupos de até 14 pessoas, a WeBoat 32 ou Oceanic 36 são ideais. Para grupos maiores (até 22 pessoas), recomendamos a Rio Star 50. Se quiser churrasco a bordo, a WeBoat 390 é a única com churrasqueira."
+          "text": "A escolha depende do tamanho do grupo: até 15 pessoas, WeBoat 32 ou Oceanic 36. Até 22 pessoas, Rio Star 50. Para grupos de 30 a 65 pessoas, temos catamarãs e barcos para eventos. Se quiser churrasco a bordo, todas as lanchas possuem churrasqueira (taxa adicional de R$ 250 a R$ 600)."
         }
       },
       {
@@ -153,7 +154,7 @@
         "name": "O que está incluso no aluguel da lancha?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Todas as lanchas incluem: combustível para o roteiro, marinheiro habilitado, coolers, sistema de som Bluetooth, tapete flutuante, macarrões flutuantes, coletes salva-vidas e equipamentos de segurança homologados."
+          "text": "Todas as lanchas incluem combustível para o roteiro, marinheiro habilitado pela Marinha, coolers, som Bluetooth, tapete flutuante, macarrões e coletes salva-vidas. Você só paga extra por opcionais como churrasco, decoração e open bar."
         }
       },
       {
@@ -161,7 +162,7 @@
         "name": "Por que os preços são diferentes de segunda a quinta?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Os valores promocionais de segunda a quinta-feira são uma vantagem para quem tem flexibilidade de data. A demanda é menor nesses dias, permitindo oferecer preços mais acessíveis. Sexta, sábado e domingo têm alta procura."
+          "text": "Os valores de segunda a quinta são promocionais porque a demanda é menor. Sexta, sábado e domingo têm alta procura. Por exemplo, a WeBoat 32 custa R$ 2.300 seg-qui e R$ 2.700 sex-dom - economia de R$ 400."
         }
       },
       {
@@ -169,7 +170,23 @@
         "name": "Posso levar minhas próprias bebidas e comidas?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sim! Você pode trazer suas próprias bebidas e petiscos sem custo adicional. As lanchas já possuem coolers para armazenamento. Todas as lanchas possuem churrasqueira, mas o uso requer contratação de serviço adicional."
+          "text": "Sim, você pode trazer bebidas e petiscos sem custo adicional. As lanchas possuem coolers para armazenamento (gelo não incluso). Todas as lanchas possuem churrasqueira, mas o uso requer contratação de serviço adicional (R$ 250 a R$ 600)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre lanchas próprias e parceiras?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "As 4 lanchas próprias WeBoat têm prioridade no agendamento e atendimento direto da nossa equipe. As 21 lanchas parceiras ampliam as opções para grupos maiores e ocasiões especiais. Todas passam pela mesma vistoria de segurança e oferecem o padrão WeBoat de qualidade."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como faço para reservar uma lancha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Entre em contato pelo WhatsApp (21) 97772-4114, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão. O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes."
         }
       }
     ]
@@ -1213,72 +1230,114 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section - Answer Capsules para IA -->
     <section class="faq section" id="faq">
       <div class="container">
         <div class="faq__container">
           <header class="section-header">
             <span class="section-header__overline">Dúvidas</span>
-            <h2 class="section-header__title">Dúvidas Frequentes sobre Lanchas</h2>
+            <h2 class="section-header__title">Dúvidas Frequentes sobre Lanchas para Alugar</h2>
           </header>
 
           <div class="faq__list">
-            <!-- Pergunta 1 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 1: Qual lancha escolher -->
+            <div class="accordion__item" id="qual-lancha-escolher">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Qual lancha é melhor para meu grupo?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    Depende do tamanho do grupo e ocasião. Para grupos de <strong>até 14 pessoas</strong>, a WeBoat 32 ou Oceanic 36 são ideais. Para grupos maiores (<strong>até 22 pessoas</strong>), recomendamos a Rio Star 50. Se quiser <strong>churrasco a bordo</strong>, a WeBoat 390 é a única com churrasqueira.
+                  <p class="answer-capsule">
+                    <strong>A escolha depende do tamanho do grupo: até 15 pessoas, WeBoat 32 ou Oceanic 36. Até 22 pessoas, Rio Star 50. Para grupos de 30 a 65 pessoas, temos catamarãs e barcos para eventos.</strong>
+                    Se quiser churrasco a bordo, todas as lanchas possuem churrasqueira (taxa adicional de R$ 250 a R$ 600).
                   </p>
+                  <ul>
+                    <li><strong>Até 15 pessoas:</strong> WeBoat 32 (R$ 2.300) ou Oceanic 36 (R$ 2.400)</li>
+                    <li><strong>Até 22 pessoas:</strong> Rio Star 50 (R$ 4.000) ou WeBoat 390 (R$ 2.600)</li>
+                    <li><strong>30-65 pessoas:</strong> Catamarã Oceano ou Barco Gourmet</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Pergunta 2 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 2: O que inclui -->
+            <div class="accordion__item" id="o-que-inclui-lancha">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">O que está incluso no aluguel da lancha?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    Todas as lanchas incluem: <strong>combustível</strong> para o roteiro, <strong>marinheiro habilitado</strong>, coolers, sistema de som Bluetooth, tapete flutuante, macarrões flutuantes, coletes salva-vidas e equipamentos de segurança homologados.
+                  <p class="answer-capsule">
+                    <strong>Todas as lanchas incluem combustível para o roteiro, marinheiro habilitado pela Marinha, coolers, som Bluetooth, tapete flutuante, macarrões e coletes salva-vidas.</strong>
+                    Você só paga extra por opcionais como churrasco, decoração e open bar.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Pergunta 3 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 3: Preços diferentes -->
+            <div class="accordion__item" id="preco-semana-vs-fds">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Por que os preços são diferentes de segunda a quinta?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    Os <strong>valores promocionais</strong> de segunda a quinta-feira são uma vantagem para quem tem flexibilidade de data. A demanda é menor nesses dias, permitindo oferecer preços mais acessíveis. Sexta, sábado e domingo têm alta procura.
+                  <p class="answer-capsule">
+                    <strong>Os valores de segunda a quinta são promocionais porque a demanda é menor. Sexta, sábado e domingo têm alta procura.</strong>
+                    Por exemplo, a WeBoat 32 custa R$ 2.300 seg-qui e R$ 2.700 sex-dom - economia de R$ 400.
                   </p>
                 </div>
               </div>
             </div>
 
-            <!-- Pergunta 4 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 4: Bebidas e comidas -->
+            <div class="accordion__item" id="levar-bebidas-comidas">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Posso levar minhas próprias bebidas e comidas?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    <strong>Sim!</strong> Você pode trazer suas próprias bebidas e petiscos sem custo adicional. As lanchas já possuem coolers para armazenamento. Todas as lanchas possuem churrasqueira, mas o uso requer <strong>contratação de serviço adicional</strong>.
+                  <p class="answer-capsule">
+                    <strong>Sim, você pode trazer bebidas e petiscos sem custo adicional. As lanchas possuem coolers para armazenamento (gelo não incluso).</strong>
+                    Todas as lanchas possuem churrasqueira, mas o uso requer contratação de serviço adicional (R$ 250 a R$ 600).
                   </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Answer Capsule 5: Lanchas próprias vs parceiras -->
+            <div class="accordion__item" id="proprias-vs-parceiras">
+              <button class="accordion__header" aria-expanded="false">
+                <h3 class="accordion__title">Qual a diferença entre lanchas próprias e parceiras?</h3>
+                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__body">
+                  <p class="answer-capsule">
+                    <strong>As 4 lanchas próprias WeBoat têm prioridade no agendamento e atendimento direto da nossa equipe. As 21 lanchas parceiras ampliam as opções para grupos maiores e ocasiões especiais.</strong>
+                    Todas passam pela mesma vistoria de segurança e oferecem o padrão WeBoat de qualidade.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Answer Capsule 6: Como reservar -->
+            <div class="accordion__item" id="como-reservar-lancha">
+              <button class="accordion__header" aria-expanded="false">
+                <h3 class="accordion__title">Como faço para reservar uma lancha?</h3>
+                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__body">
+                  <p class="answer-capsule">
+                    <strong>Entre em contato pelo WhatsApp (21) 97772-4114, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão.</strong>
+                    O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes.
+                  </p>
+                  <p><a href="https://wa.me/5521977724114?text=Olá! Gostaria de reservar uma lancha." class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener noreferrer"><i class="ph ph-whatsapp-logo"></i> Reservar pelo WhatsApp</a></p>
                 </div>
               </div>
             </div>
