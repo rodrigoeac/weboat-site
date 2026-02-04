@@ -36,6 +36,7 @@ Site: https://www.weboatbrasil.com.br
 - **FAQ Completo:** `docs/weboat_faq.md` - Todas as perguntas e respostas oficiais
 - **Schemas:** `docs/weboat_schema_org.md` - JSON-LD para SEO
 - **Copywriting:** `docs/weboat_copywriting_seo.md` - Textos e palavras-chave
+- **Gerenciar Lanchas:** `docs/GERENCIAR_LANCHAS.md` - Como adicionar, modificar e excluir lanchas
 
 ---
 

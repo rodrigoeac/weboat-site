@@ -922,6 +922,358 @@
 
 ---
 
-**STATUS:** FASE J concluída. Próximas fases:
+**STATUS:** Iniciando FASE K - Novos Ajustes.
+
+---
+
+## FASE K: NOVOS AJUSTES E CORREÇÕES
+
+### K1: Corrigir Nomenclatura dos Roteiros
+**Arquivos:** Todas as páginas de lanchas (próprias e parceiras)
+- [ ] Mudar de "R1", "R2", etc para "Roteiro 1 - Mureta da Urca (3h)"
+- [ ] Padronizar duração nos nomes:
+  - Roteiro 1 - Mureta da Urca (3h)
+  - Roteiro 2 - Praia Vermelha (3h)
+  - Roteiro 3 - Copacabana (4h)
+  - Roteiro 4 - Ilhas Cagarras (5h)
+  - Roteiro 5 - Itaipu/Camboinhas (5h)
+
+**COMMIT:** `fix(lanchas): corrigir nomenclatura dos roteiros`
+
+---
+
+### K2: Remover Capacidade com Staff
+**Arquivos:** Todas as páginas de lanchas
+- [ ] Não informar capacidade com staff aos clientes
+- [ ] Remover menções a "com staff" nas capacidades
+
+**COMMIT:** `fix(lanchas): remover informação de capacidade com staff`
+
+---
+
+### K3: Reduzir Destaque Valor Promocional
+**Arquivos:** Lanchas próprias (weboat-32, weboat-390, weboat-oceanic-36, weboat-rio-star-50)
+- [ ] Diminuir destaque visual do preço promocional
+- [ ] Manter informação mas sem tanta ênfase
+
+**COMMIT:** `style(lanchas): reduzir destaque do valor promocional`
+
+---
+
+### K4: Remover Botões "Ligar Agora"
+**Arquivos:** Todas as páginas de lanchas
+- [ ] Remover botões de ligar abaixo de "Reservar pelo WhatsApp"
+
+**COMMIT:** `fix(lanchas): remover botões ligar agora`
+
+---
+
+### K5: Adicionar Info Churrasqueira por Categoria
+**Arquivos:** Todas as páginas de lanchas
+
+**Categorias de Churrasqueira:**
+- **Padrão:** Comandante/tripulação na churrasqueira, Gelo escama: 02 sacos (20kg cada), Gelo filtrado: 01 saco (10kg), Carvão
+- **Maior (Sagarana, Gourmet 53, Malik):** Tripulação na churrasqueira, Gelo escama: 04 sacos (20kg cada), Gelo filtrado: 02 sacos (10kg cada), Carvão
+- **Oceano (Catamarã Oceano):** Churrasqueira a gás, Churrasqueiro, Ajudante. ⚠️ GELO NÃO INCLUSO
+
+**COMMIT:** `feat(lanchas): adicionar info churrasqueira por categoria`
+
+---
+
+### K6: Adicionar Obs Promocional na Listagem
+**Arquivo:** `pages/lanchas/index.html`
+- [ ] Adicionar: *Valores promocionais de seg-qui, não é válido para períodos festivos e feriados.
+
+**COMMIT:** `fix(lanchas): adicionar obs promocional na listagem`
+
+---
+
+### K7: Remover Valores da Home e Roteiros
+**Arquivos:** `index.html`, `pages/roteiros/index.html`, todas as páginas individuais de roteiros
+- [ ] Remover preços dos cards de roteiros na home
+- [ ] Remover preços da listagem de roteiros
+- [ ] Remover preços das páginas individuais de roteiros
+
+**COMMIT:** `fix(roteiros): remover valores da home e páginas de roteiros`
+
+---
+
+### K8: Dois Valores na Home para Lanchas Próprias
+**Arquivo:** `index.html`
+- [ ] Mostrar preço Seg-Qui e Sex-Dom nos cards de lanchas próprias
+- [ ] Adicionar observações sobre valores promocionais
+
+**COMMIT:** `feat(home): adicionar dois valores nas lanchas próprias`
+
+---
+
+### K9: Destaque Lanchas Eventos 30+ Pessoas
+**Arquivo:** `index.html`
+- [ ] Adicionar seção/destaque para lanchas de eventos (30+ pessoas)
+- [ ] Incluir Barco Gourmet, Malik, Sagarana, Oceano
+
+**COMMIT:** `feat(home): adicionar destaque para lanchas de eventos`
+
+---
+
+### K10: Popular Seção Serviços com Combo
+**Arquivo:** `index.html`
+- [ ] Adicionar card de Combo (Churrasco + Open Bar) na seção de serviços
+- [ ] Incluir preços de combo
+
+**COMMIT:** `feat(home): adicionar combo na seção de serviços`
+
+---
+
+### K11: Criar Seção "Conheça Nossos Clientes"
+**Arquivo:** `index.html`
+- [ ] Criar seção para influencers e atores que já passearam
+- [ ] Placeholder para fotos de clientes famosos
+- [ ] Design de carrossel ou grid
+
+**COMMIT:** `feat(home): adicionar seção conheça nossos clientes`
+
+---
+
+### K12: Integração Google My Business Reviews
+**Arquivos:** `index.html`, `js/reviews.js` (criar)
+- [ ] Criar integração com Google My Business API
+- [ ] Puxar avaliações 5 estrelas em tempo real
+- [ ] Filtrar comentários com 100+ caracteres
+- [ ] Implementar scroll automático
+- [ ] Mostrar quantidade total de avaliações
+
+**COMMIT:** `feat(home): integrar Google My Business reviews`
+
+---
+
+### K13: Criar Documentação Gerenciamento de Lanchas
+**Arquivos:** `docs/GERENCIAR_LANCHAS.md`, atualizar `CLAUDE.md`
+- [ ] Criar guia de como adicionar nova lancha
+- [ ] Criar guia de como modificar lancha existente
+- [ ] Criar guia de como remover lancha
+- [ ] Referenciar no CLAUDE.md
+
+**COMMIT:** `docs: criar guia de gerenciamento de lanchas`
+
+---
+
+## ✅ PROGRESSO FASE K
+
+- [x] K1 - Nomenclatura roteiros ✅
+- [x] K2 - Remover capacidade staff ✅
+- [x] K3 - Reduzir destaque promocional ✅
+- [x] K4 - Remover botões ligar ✅
+- [x] K5 - Info churrasqueira ✅
+- [x] K6 - Obs promocional listagem ✅
+- [x] K7 - Remover valores roteiros ✅
+- [x] K8 - Dois valores home ✅
+- [x] K9 - Destaque eventos ✅
+- [x] K10 - Combo serviços ✅
+- [x] K11 - Seção clientes ✅
+- [x] K12 - Google Reviews ✅
+- [x] K13 - Doc gerenciamento ✅
+
+**STATUS FASE K:** ✅ COMPLETO (13/13 tarefas)
+
+---
+
+## FASE L: AJUSTES VISUAIS E DE CONTEÚDO
+
+### L1: Ajustar Info Churrasqueira nas Páginas de Lanchas
+**Arquivos:** Todas as páginas de lanchas
+- [ ] Mover informação da churrasqueira para ficar na mesma linha após "Churrasqueira R$ 250"
+- [ ] Usar fonte menor para a descrição
+- [ ] Layout: "Churrasqueira R$ 250 (Inclui: Tripulação, Gelo escama 2x20kg, Gelo filtrado 1x10kg, Carvão)"
+
+**COMMIT:** `style(lanchas): ajustar layout info churrasqueira`
+
+---
+
+### L2: Remover Espaçamento entre Observações - Listagem Lanchas
+**Arquivo:** `pages/lanchas/index.html`, `css/pages/frota.css`
+- [ ] Juntar as duas linhas de observação (sem quebra de linha entre elas)
+- [ ] "*Valores para o Roteiro 1 - Mureta da Urca. Consulte valores para outros roteiros."
+- [ ] "*Valores promocionais de seg-qui não são válidos para períodos festivos e feriados."
+
+**COMMIT:** `style(lanchas): remover espaçamento entre observações`
+
+---
+
+### L3: Botões de Roteiros como Âncoras - Página Roteiros
+**Arquivo:** `pages/roteiros/index.html`, `css/pages/roteiros.css`
+- [ ] Transformar os cards de cores dos roteiros em botões com âncoras
+- [ ] Ao clicar, descer para a seção do roteiro dentro da mesma página
+- [ ] IDs: #roteiro-1, #roteiro-2, etc.
+
+**COMMIT:** `feat(roteiros): adicionar navegação por âncoras nos roteiros`
+
+---
+
+### L4: Padronizar Botão "Ver Roteiro" - Página Roteiros
+**Arquivo:** `pages/roteiros/index.html`, `css/pages/roteiros.css`
+- [ ] Ajustar estilo do botão para ficar consistente com o resto do site
+- [ ] Usar classes padrão de botões (btn, btn-secondary, etc.)
+
+**COMMIT:** `style(roteiros): padronizar botões ver roteiro`
+
+---
+
+### L5: Ajustar Duração nas Páginas de Roteiros
+**Arquivos:** Todas as páginas de roteiros (index e individuais)
+- [ ] Verificar e corrigir duração em todas as páginas
+- [ ] Roteiro 1: 3h, Roteiro 2: 3h, Roteiro 3: 4h, Roteiro 4: 5h, Roteiro 5: 5h
+
+**COMMIT:** `fix(roteiros): ajustar duração em todas as páginas`
+
+---
+
+### L6: Adicionar CTA Extra na Página de Roteiros
+**Arquivo:** `pages/roteiros/index.html`
+- [ ] Adicionar mais um CTA (Call to Action) para WhatsApp
+- [ ] Posicionar estrategicamente na página
+
+**COMMIT:** `feat(roteiros): adicionar CTA extra`
+
+---
+
+### L7: Ajustar Horários da Página Réveillon
+**Arquivo:** `pages/ocasioes/reveillon.html`
+- [ ] Verificar e corrigir horários (embarque, navegação, virada, retorno)
+- [ ] Duração total: 5h no mar
+
+**COMMIT:** `fix(reveillon): ajustar horários do passeio`
+
+---
+
+### L8: Ajustar Padding nos Elementos de Timeline - Réveillon
+**Arquivo:** `pages/ocasioes/reveillon.html`, CSS
+- [ ] Aumentar padding nos elementos de aspas ("20h", "21h", "00h", "4h")
+- [ ] Melhorar espaçamento visual da timeline
+
+**COMMIT:** `style(reveillon): ajustar padding na timeline`
+
+---
+
+### L9: Reordenar Seção Serviços - Combo Primeiro
+**Arquivo:** `pages/servicos.html`
+- [ ] Mover opção de Combo para antes de "Churrasco na Lancha"
+- [ ] Combo deve ser a primeira opção mostrada
+
+**COMMIT:** `feat(servicos): reordenar combo como primeira opção`
+
+---
+
+### L10: Adicionar "A partir de" nos Serviços da Home
+**Arquivo:** `index.html`
+- [ ] Adicionar "a partir de" antes dos valores na seção de serviços
+- [ ] Adicionar observação: "*Valores variam de acordo com a quantidade de pessoas e tamanho da lancha."
+
+**COMMIT:** `fix(home): adicionar 'a partir de' nos serviços`
+
+---
+
+### L11: Adicionar Obs de Valores na Página de Serviços
+**Arquivo:** `pages/servicos.html`
+- [ ] Adicionar observação: "*Valores variam de acordo com a quantidade de pessoas e tamanho da lancha."
+
+**COMMIT:** `fix(servicos): adicionar observação de valores`
+
+---
+
+### L12: Ajustar Página Despedida de Solteira
+**Arquivo:** `pages/ocasioes/despedida-solteira.html`
+- [ ] Ajustar quantidade de horas do passeio (5h padrão)
+- [ ] Remover informação "16 amigas por lancha"
+- [ ] Adicionar "temos opções de 10 a 65 pessoas"
+
+**COMMIT:** `fix(despedida): ajustar informações de capacidade e duração`
+
+---
+
+### L13: Cards de Lanchas na Página Despedida - Escolha Seu Pacote
+**Arquivo:** `pages/ocasioes/despedida-solteira.html`
+- [ ] Na seção "Escolha seu pacote", adicionar cards das lanchas próprias
+- [ ] Adicionar cards das lanchas 30+ pessoas
+- [ ] Adicionar botão "Ver todas as opções" abaixo
+
+**COMMIT:** `feat(despedida): adicionar cards de lanchas na seção de pacotes`
+
+---
+
+### L14: Seção Depoimentos como na Home - Despedida
+**Arquivo:** `pages/ocasioes/despedida-solteira.html`
+- [ ] Implementar seção de depoimentos igual à home
+- [ ] Puxar avaliações do Google My Business (mesmo formato da home)
+
+**COMMIT:** `feat(despedida): adicionar seção de depoimentos do Google`
+
+---
+
+### L15: Cards de Lanchas na Página Corporativo
+**Arquivo:** `pages/ocasioes/corporativo.html`
+- [ ] Na seção "Escolha o formato ideal", adicionar cards das lanchas próprias
+- [ ] Adicionar cards das lanchas 30+ pessoas
+- [ ] Adicionar botão "Ver todas as opções" abaixo
+
+**COMMIT:** `feat(corporativo): adicionar cards de lanchas`
+
+---
+
+### L16: Seção Avaliações GMB - Corporativo
+**Arquivo:** `pages/ocasioes/corporativo.html`
+- [ ] Adicionar seção de avaliações do Google (mesmo formato da home)
+
+**COMMIT:** `feat(corporativo): adicionar seção de avaliações Google`
+
+---
+
+### L17: Ajustar Página Réveillon - Duração e Cards
+**Arquivo:** `pages/ocasioes/reveillon.html`
+- [ ] Ajustar duração para 5h no mar
+- [ ] Adicionar cards de lanchas (próprias e 30+) como nas outras páginas
+- [ ] Open bar, comida são ADICIONAIS (não inclusos)
+- [ ] Decoração também é adicional/à parte
+- [ ] Botão "Ver todas as opções" abaixo dos cards
+
+**COMMIT:** `fix(reveillon): ajustar duração, cards e informações de adicionais`
+
+---
+
+### L18: Seção Avaliações GMB - Réveillon
+**Arquivo:** `pages/ocasioes/reveillon.html`
+- [ ] Adicionar seção de avaliações do Google (mesmo formato da home)
+
+**COMMIT:** `feat(reveillon): adicionar seção de avaliações Google`
+
+---
+
+## ✅ PROGRESSO FASE L
+
+- [ ] L1 - Ajustar info churrasqueira layout
+- [ ] L2 - Remover espaçamento observações
+- [ ] L3 - Botões âncoras roteiros
+- [ ] L4 - Padronizar botão ver roteiro
+- [ ] L5 - Ajustar duração roteiros
+- [ ] L6 - CTA extra roteiros
+- [ ] L7 - Horários réveillon
+- [ ] L8 - Padding timeline réveillon
+- [ ] L9 - Reordenar serviços (combo primeiro)
+- [ ] L10 - "A partir de" serviços home
+- [ ] L11 - Obs valores página serviços
+- [ ] L12 - Ajustar despedida solteira
+- [ ] L13 - Cards lanchas despedida
+- [ ] L14 - Depoimentos GMB despedida
+- [ ] L15 - Cards lanchas corporativo
+- [ ] L16 - Avaliações GMB corporativo
+- [ ] L17 - Ajustar réveillon completo
+- [ ] L18 - Avaliações GMB réveillon
+
+**STATUS FASE L:** 🔄 PENDENTE (0/18 tarefas)
+
+---
+
+## PRÓXIMAS FASES
+
 - **FASE G** - Verificação Final (auditoria SEO, schemas, sitemap e links)
 - **FASE H** - Mídias (aguardando imagens)
