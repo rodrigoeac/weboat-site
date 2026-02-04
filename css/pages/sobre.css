@@ -72,6 +72,47 @@
 }
 
 /* ============================================
+   DECLARAÇÃO DE ENTIDADE (GEO/SEO para IA)
+   ============================================ */
+.sobre-entidade {
+  padding: var(--space-12) 0;
+  background: var(--pearl-gray);
+}
+
+.sobre-entidade__content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.sobre-entidade__lead {
+  font-size: var(--text-lg);
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin-bottom: var(--space-6);
+}
+
+.sobre-entidade__dados {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.sobre-entidade__dado {
+  font-size: var(--text-base);
+  color: var(--charcoal);
+}
+
+.sobre-entidade__dado strong {
+  color: var(--ocean-deep);
+}
+
+@media (max-width: 768px) {
+  .sobre-entidade__dados {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================
    HISTÓRIA
    ============================================ */
 .sobre-historia {

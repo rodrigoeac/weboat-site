@@ -55,6 +55,64 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
+  <!-- Schema.org - FAQPage (GEO/SEO para IA) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Quanto custa alugar uma lancha no Rio de Janeiro?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O aluguel de lancha no Rio de Janeiro custa a partir de R$ 2.300 para 3 horas de passeio. O preço varia conforme o tamanho da lancha (de 10 a 65 pessoas), dia da semana (seg-qui é mais barato que sex-dom) e roteiro escolhido. Combustível, marinheiro e equipamentos estão inclusos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que está incluso no aluguel de lancha no RJ?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Todos os passeios incluem combustível, marinheiro experiente, coolers, som Bluetooth, tapete flutuante, macarrões e coletes salva-vidas. Você só paga extra pelos opcionais como churrasco (R$ 250-600), decoração e open bar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona o aluguel de lancha na WeBoat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É simples: você escolhe a lancha, define data e roteiro, paga 50% de sinal para reservar, e no dia combina com o marinheiro na Marina da Glória. O passeio dura de 3 a 7 horas dependendo do roteiro. Pode levar bebidas e comidas a bordo."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Como funciona a despedida de solteira na lancha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A despedida de solteira na lancha é um dos passeios mais pedidos. Oferecemos pacotes com decoração temática, drinks e até brincadeiras. Ideal para grupos de 8 a 20 amigas. Roteiro mais popular: Mureta da Urca com parada para fotos no Pão de Açúcar."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "E se chover no dia do passeio de lancha?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Se as condições climáticas impedirem o passeio, você pode remarcar para outra data sem custo ou solicitar reembolso integral. Chuva fraca não cancela. A decisão é tomada em conjunto com o marinheiro no dia, considerando segurança."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Onde fica a Marina da Glória?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A Marina da Glória fica na Av. Infante Dom Henrique, S/N, no Aterro do Flamengo, Rio de Janeiro. É o ponto de partida de todos os nossos passeios. Há estacionamento pago no local. Fácil acesso pelo metrô (estação Glória) ou Uber."
+        }
+      }
+    ]
+  }
+  </script>
+
   <!-- Schema.org - WebSite -->
   <script type="application/ld+json">
   {
@@ -1030,7 +1088,7 @@
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section - Answer Capsules para IA -->
     <section class="faq section" id="faq">
       <div class="container">
         <div class="faq__container">
@@ -1040,72 +1098,126 @@
           </header>
 
           <div class="faq__list">
-            <!-- Pergunta 1 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 1: Preço -->
+            <div class="accordion__item" id="quanto-custa">
+              <button class="accordion__header" aria-expanded="false">
+                <h3 class="accordion__title">Quanto custa alugar uma lancha no Rio de Janeiro?</h3>
+                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__body">
+                  <p class="answer-capsule">
+                    <strong>O aluguel de lancha no Rio de Janeiro custa a partir de R$ 2.300 para 3 horas de passeio.</strong>
+                    O preço varia conforme o tamanho da lancha (de 10 a 65 pessoas), dia da semana (seg-qui é mais barato que sex-dom) e roteiro escolhido. Combustível, marinheiro e equipamentos estão inclusos.
+                  </p>
+                  <ul>
+                    <li><strong>Lanchas pequenas (até 15 pessoas):</strong> R$ 2.300 a R$ 2.700</li>
+                    <li><strong>Lanchas médias (16-22 pessoas):</strong> R$ 2.600 a R$ 4.500</li>
+                    <li><strong>Lanchas grandes (até 65 pessoas):</strong> sob consulta</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Answer Capsule 2: O que inclui -->
+            <div class="accordion__item" id="o-que-inclui">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">O que está incluso no aluguel de lancha no RJ?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    Nosso passeio de lancha no Rio de Janeiro inclui: combustível
-                    para o roteiro, tripulação habilitada, tapete flutuante,
-                    macarrões flutuantes, som Bluetooth e coolers.
-                    Você só paga extra pelos opcionais (churrasco, open bar, etc).
+                  <p class="answer-capsule">
+                    <strong>Todos os passeios incluem combustível, marinheiro experiente, coolers, som Bluetooth, tapete flutuante, macarrões e coletes salva-vidas.</strong>
+                    Você só paga extra pelos opcionais como churrasco (R$ 250-600), decoração e open bar.
                   </p>
+                  <ul>
+                    <li>Combustível para o roteiro completo</li>
+                    <li>Marinheiro habilitado pela Marinha</li>
+                    <li>Coolers (gelo não incluso)</li>
+                    <li>Som Bluetooth conectado</li>
+                    <li>Tapete e macarrões flutuantes</li>
+                    <li>Seguro obrigatório</li>
+                  </ul>
                 </div>
               </div>
             </div>
 
-            <!-- Pergunta 2 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 3: Como funciona -->
+            <div class="accordion__item" id="como-funciona">
               <button class="accordion__header" aria-expanded="false">
-                <h3 class="accordion__title">Posso fazer festa de aniversário na lancha?</h3>
+                <h3 class="accordion__title">Como funciona o aluguel de lancha na WeBoat?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    Sim! Temos lancha para festas no Rio de Janeiro com estrutura
-                    completa. Oferecemos decoração, churrasco na lancha, open bar e
-                    até bolo. É uma das ocasiões mais pedidas para aluguel de lancha RJ.
+                  <p class="answer-capsule">
+                    <strong>É simples: você escolhe a lancha, define data e roteiro, paga 50% de sinal para reservar, e no dia combina com o marinheiro na Marina da Glória.</strong>
+                    O passeio dura de 3 a 7 horas dependendo do roteiro. Pode levar bebidas e comidas a bordo.
                   </p>
+                  <ol>
+                    <li>Escolha a lancha ideal para o tamanho do seu grupo</li>
+                    <li>Defina a data e o roteiro (Urca, Copacabana, Ilhas Cagarras...)</li>
+                    <li>Pague 50% de sinal via PIX ou cartão</li>
+                    <li>No dia, encontre o marinheiro na Marina da Glória às 8h ou 14h</li>
+                    <li>Aproveite o passeio e pague o restante no final</li>
+                  </ol>
                 </div>
               </div>
             </div>
 
-            <!-- Pergunta 3 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 4: Despedida de Solteira -->
+            <div class="accordion__item" id="despedida-solteira">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Como funciona a despedida de solteira na lancha?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    A despedida de solteira na lancha é um dos nossos passeios
-                    mais populares! Oferecemos kit completo com decoração temática,
-                    drinks especiais e brincadeiras. Passeio de lancha perfeito
-                    para celebrar com as amigas.
+                  <p class="answer-capsule">
+                    <strong>A despedida de solteira na lancha é um dos passeios mais pedidos. Oferecemos pacotes com decoração temática, drinks e até brincadeiras.</strong>
+                    Ideal para grupos de 8 a 20 amigas. Roteiro mais popular: Mureta da Urca com parada para fotos no Pão de Açúcar.
                   </p>
+                  <ul>
+                    <li>Decoração rosa e branca (opcional)</li>
+                    <li>Drinks e espumante (open bar opcional)</li>
+                    <li>Som com playlist personalizada</li>
+                    <li>Parada para fotos com cenário icônico</li>
+                  </ul>
+                  <p><a href="/pages/ocasioes/despedida-solteira.html">Ver pacotes de despedida de solteira →</a></p>
                 </div>
               </div>
             </div>
 
-            <!-- Pergunta 4 -->
-            <div class="accordion__item">
+            <!-- Answer Capsule 5: Chuva -->
+            <div class="accordion__item" id="politica-chuva">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">E se chover no dia do passeio de lancha?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>
-                    Se as condições climáticas inviabilizarem seu passeio de lancha
-                    no Rio de Janeiro, você pode remarcar para outra data ou receber
-                    reembolso. Chuva fraca não cancela o aluguel de lancha.
+                  <p class="answer-capsule">
+                    <strong>Se as condições climáticas impedirem o passeio, você pode remarcar para outra data sem custo ou solicitar reembolso integral.</strong>
+                    Chuva fraca não cancela. A decisão é tomada em conjunto com o marinheiro no dia, considerando segurança.
                   </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Answer Capsule 6: Localização -->
+            <div class="accordion__item" id="onde-fica">
+              <button class="accordion__header" aria-expanded="false">
+                <h3 class="accordion__title">Onde fica a Marina da Glória?</h3>
+                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              </button>
+              <div class="accordion__content">
+                <div class="accordion__body">
+                  <p class="answer-capsule">
+                    <strong>A Marina da Glória fica na Av. Infante Dom Henrique, S/N, no Aterro do Flamengo, Rio de Janeiro.</strong>
+                    É o ponto de partida de todos os nossos passeios. Há estacionamento pago no local. Fácil acesso pelo metrô (estação Glória) ou Uber.
+                  </p>
+                  <p><a href="/pages/contato.html">Ver mapa e como chegar →</a></p>
                 </div>
               </div>
             </div>
