@@ -200,29 +200,47 @@
   margin-bottom: var(--space-4);
 }
 
+.lancha-prices__churrasqueira-info {
+  font-size: 11px;
+  color: var(--driftwood);
+  margin-left: var(--space-2);
+  font-weight: 400;
+}
+
+.lancha-prices__churrasqueira-info strong {
+  color: var(--error);
+}
+
+.lancha-prices__row--churrasqueira {
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+.lancha-prices__row--churrasqueira .lancha-prices__value {
+  margin-right: var(--space-1);
+}
+
 .lancha-prices__promo {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: var(--space-4);
-  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
-  border: 1px solid var(--sunset-gold);
-  border-radius: var(--radius-lg);
-  margin-bottom: var(--space-5);
+  align-items: flex-start;
+  padding: var(--space-3);
+  background: var(--pearl-gray);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-4);
 }
 
 .lancha-prices__promo-label {
   font-size: var(--text-caption);
   color: var(--driftwood);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
 }
 
 .lancha-prices__promo-value {
-  font-family: var(--font-display);
-  font-size: var(--text-h2);
-  font-weight: 700;
-  color: var(--ocean-deep);
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--charcoal);
 }
 
 .lancha-prices__subtitle {
