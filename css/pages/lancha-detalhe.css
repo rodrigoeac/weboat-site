@@ -31,6 +31,8 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .lancha-gallery__main {
@@ -52,18 +54,41 @@
 }
 
 .lancha-gallery__thumbs {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
   gap: var(--space-3);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: thin;
+  scrollbar-color: var(--wave-blue) var(--pearl-gray);
+  padding-bottom: var(--space-2);
+  max-width: 100%;
+}
+
+.lancha-gallery__thumbs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.lancha-gallery__thumbs::-webkit-scrollbar-track {
+  background: var(--pearl-gray);
+  border-radius: var(--radius-full);
+}
+
+.lancha-gallery__thumbs::-webkit-scrollbar-thumb {
+  background: var(--wave-blue);
+  border-radius: var(--radius-full);
 }
 
 .lancha-gallery__thumb {
+  flex: 0 0 auto;
+  width: calc(25% - var(--space-3));
+  min-width: 80px;
   border-radius: var(--radius-lg);
   overflow: hidden;
   aspect-ratio: 4/3;
   cursor: pointer;
   border: 2px solid transparent;
   transition: all var(--transition-fast);
+  scroll-snap-align: start;
 }
 
 .lancha-gallery__thumb:hover,
@@ -656,5 +681,68 @@
 
 .lightbox-close:hover {
   background: var(--sunset-gold);
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: var(--radius-full);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  color: var(--ocean-deep);
+}
+
+.lightbox-prev {
+  left: var(--space-4);
+}
+
+.lightbox-next {
+  right: var(--space-4);
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: var(--sunset-gold);
+  color: var(--white);
+}
+
+.lightbox-counter {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.7);
+  color: var(--white);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-full);
+  font-size: var(--text-body-sm);
+  font-family: var(--font-heading);
+}
+
+@media (max-width: 768px) {
+  .lightbox-prev,
+  .lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .lightbox-prev {
+    left: var(--space-2);
+  }
+
+  .lightbox-next {
+    right: var(--space-2);
+  }
 }
 

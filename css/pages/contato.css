@@ -587,11 +587,18 @@
 }
 
 /* ============================================
+   AVALIAÇÕES CONTATO (cor diferenciada)
+   ============================================ */
+.contato-como-chegar + .avaliacoes {
+  background: var(--sand-white);
+}
+
+/* ============================================
    FAQ CONTATO (cor diferenciada)
    ============================================ */
 .contato-faq {
   padding: var(--space-16) 0;
-  background: var(--sand-white);
+  background: var(--pearl-gray);
 }
 
 @media (max-width: 768px) {

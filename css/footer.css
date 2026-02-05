@@ -185,6 +185,26 @@
 }
 
 /* ============================================
+   FOOTER ÁREAS ATENDIDAS
+   ============================================ */
+.footer__areas {
+  padding: var(--space-6) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: var(--space-4);
+}
+
+.footer__areas p {
+  font-size: var(--text-body-sm);
+  color: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin: 0;
+}
+
+.footer__areas strong {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ============================================
    FOOTER BOTTOM
    ============================================ */
 .footer__bottom {

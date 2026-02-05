@@ -229,19 +229,136 @@
   }
 
   // ============================================
-  // GALERIA LIGHTBOX (básico)
+  // GALERIA LIGHTBOX COM NAVEGAÇÃO
   // ============================================
   function initGallery() {
-    const galleryImages = document.querySelectorAll('[data-lightbox]');
+    const mainImage = document.querySelector('.lancha-gallery__main img');
+    const thumbs = document.querySelectorAll('.lancha-gallery__thumb');
 
-    if (galleryImages.length === 0) return;
+    // Array de todas as imagens da galeria
+    let galleryImages = [];
+    let currentIndex = 0;
 
-    galleryImages.forEach(function(img) {
+    // Se há thumbnails, configurar galeria de lancha
+    if (mainImage && thumbs.length > 0) {
+      // Coletar todas as imagens
+      thumbs.forEach(function(thumb, index) {
+        const img = thumb.querySelector('img');
+        if (img) {
+          galleryImages.push({
+            src: img.src,
+            alt: img.alt
+          });
+        }
+
+        // Clique na thumbnail troca a imagem principal
+        thumb.addEventListener('click', function() {
+          const img = this.querySelector('img');
+          if (img && mainImage) {
+            mainImage.src = img.src;
+            mainImage.alt = img.alt;
+            currentIndex = index;
+
+            // Atualizar classe active
+            thumbs.forEach(function(t) {
+              t.classList.remove('active');
+            });
+            this.classList.add('active');
+          }
+        });
+      });
+
+      // Clique na imagem principal abre lightbox
+      mainImage.addEventListener('click', function() {
+        openLightbox(currentIndex);
+      });
+    }
+
+    // Função para abrir lightbox com navegação
+    function openLightbox(index) {
+      if (galleryImages.length === 0) return;
+
+      currentIndex = index;
+      const image = galleryImages[currentIndex];
+
+      // Criar overlay
+      const overlay = document.createElement('div');
+      overlay.className = 'lightbox-overlay';
+      overlay.innerHTML =
+        '<div class="lightbox-content">' +
+          '<img src="' + image.src + '" alt="' + image.alt + '">' +
+          '<button class="lightbox-close" aria-label="Fechar">&times;</button>' +
+          (galleryImages.length > 1 ?
+            '<button class="lightbox-prev" aria-label="Anterior"><i class="ph ph-caret-left"></i></button>' +
+            '<button class="lightbox-next" aria-label="Próxima"><i class="ph ph-caret-right"></i></button>' +
+            '<div class="lightbox-counter">' + (currentIndex + 1) + ' / ' + galleryImages.length + '</div>'
+          : '') +
+        '</div>';
+
+      document.body.appendChild(overlay);
+      document.body.style.overflow = 'hidden';
+
+      const lightboxImg = overlay.querySelector('img');
+      const counter = overlay.querySelector('.lightbox-counter');
+      const prevBtn = overlay.querySelector('.lightbox-prev');
+      const nextBtn = overlay.querySelector('.lightbox-next');
+
+      // Navegar para anterior
+      function showPrev() {
+        currentIndex = (currentIndex - 1 + galleryImages.length) % galleryImages.length;
+        updateLightboxImage();
+      }
+
+      // Navegar para próxima
+      function showNext() {
+        currentIndex = (currentIndex + 1) % galleryImages.length;
+        updateLightboxImage();
+      }
+
+      // Atualizar imagem do lightbox
+      function updateLightboxImage() {
+        const img = galleryImages[currentIndex];
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        if (counter) {
+          counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+        }
+      }
+
+      // Event listeners para navegação
+      if (prevBtn) prevBtn.addEventListener('click', showPrev);
+      if (nextBtn) nextBtn.addEventListener('click', showNext);
+
+      // Fechar ao clicar no overlay ou botão fechar
+      overlay.addEventListener('click', function(event) {
+        if (event.target === overlay || event.target.classList.contains('lightbox-close')) {
+          overlay.remove();
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Navegação por teclado
+      function handleKeydown(event) {
+        if (event.key === 'Escape') {
+          overlay.remove();
+          document.body.style.overflow = '';
+          document.removeEventListener('keydown', handleKeydown);
+        } else if (event.key === 'ArrowLeft') {
+          showPrev();
+        } else if (event.key === 'ArrowRight') {
+          showNext();
+        }
+      }
+      document.addEventListener('keydown', handleKeydown);
+    }
+
+    // Fallback para imagens com data-lightbox fora da galeria de lancha
+    const standaloneImages = document.querySelectorAll('[data-lightbox]:not(.lancha-gallery__main img)');
+    standaloneImages.forEach(function(img) {
       img.addEventListener('click', function() {
         const src = this.dataset.lightbox || this.src;
         const alt = this.alt || '';
 
-        // Criar overlay
         const overlay = document.createElement('div');
         overlay.className = 'lightbox-overlay';
         overlay.innerHTML = '<div class="lightbox-content"><img src="' + src + '" alt="' + alt + '"><button class="lightbox-close" aria-label="Fechar">&times;</button></div>';
@@ -249,7 +366,6 @@
         document.body.appendChild(overlay);
         document.body.style.overflow = 'hidden';
 
-        // Fechar ao clicar
         overlay.addEventListener('click', function(event) {
           if (event.target === overlay || event.target.classList.contains('lightbox-close')) {
             overlay.remove();
@@ -257,7 +373,6 @@
           }
         });
 
-        // Fechar com Escape
         function handleEscape(event) {
           if (event.key === 'Escape') {
             overlay.remove();

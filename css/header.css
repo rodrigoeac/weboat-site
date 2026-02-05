@@ -39,6 +39,11 @@
 .header__logo img {
   height: 40px;
   width: auto;
+  transition: height var(--transition-base);
+}
+
+.header--scrolled .header__logo img {
+  height: 32px;
 }
 
 .header__logo:hover {
@@ -331,8 +336,17 @@ body.menu-open {
   background: var(--white);
 }
 
-.header--transparent .header__logo img {
-  filter: brightness(0) invert(1);
+/* Logo switching for transparent header */
+.header__logo-white {
+  display: none;
+}
+
+.header--transparent .header__logo-white {
+  display: block;
+}
+
+.header--transparent .header__logo-dark {
+  display: none;
 }
 
 /* When scrolled, revert to normal */
@@ -359,6 +373,11 @@ body.menu-open {
   background: var(--ocean-deep);
 }
 
-.header--transparent.header--scrolled .header__logo img {
-  filter: none;
+/* When scrolled, show dark logo again */
+.header--transparent.header--scrolled .header__logo-white {
+  display: none;
+}
+
+.header--transparent.header--scrolled .header__logo-dark {
+  display: block;
 }

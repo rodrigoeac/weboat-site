@@ -73,10 +73,18 @@
 
 /* ============================================
    DECLARAÇÃO DE ENTIDADE (GEO/SEO para IA)
+   Visualmente integrada - para ser lida por IA
    ============================================ */
 .sobre-entidade {
-  padding: var(--space-12) 0;
-  background: var(--pearl-gray);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .sobre-entidade__content {
@@ -354,6 +362,10 @@
   object-fit: cover;
 }
 
+.sobre-membro__image img.focus-bottom {
+  object-position: center bottom;
+}
+
 .sobre-membro__content {
   padding: var(--space-5);
   text-align: center;
@@ -598,6 +610,10 @@
 .sobre-compromisso + .avaliacoes {
   background: var(--pearl-gray);
   padding: var(--space-16) 0;
+}
+
+.avaliacoes.section {
+  background: var(--pearl-gray);
 }
 
 @media (max-width: 768px) {

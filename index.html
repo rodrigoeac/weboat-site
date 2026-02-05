@@ -39,8 +39,9 @@
   <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="dns-prefetch" href="https://cdn.trustindex.io">
 
-  <!-- Preload Hero Image (LCP) -->
-  <link rel="preload" as="image" href="/assets/images/hero/hero-home.jpg" fetchpriority="high">
+  <!-- Preload Hero Images (LCP) -->
+  <link rel="preload" as="image" href="/assets/images/hero/hero-home-desktop.jpg" media="(min-width: 769px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero/hero-home-mobile.jpg" media="(max-width: 768px)" fetchpriority="high">
 
   <!-- CSS Crítico (acima da dobra) -->
   <link rel="stylesheet" href="/css/variables.css">
@@ -255,7 +256,8 @@
       <div class="header__inner">
         <!-- Logo -->
         <a href="/" class="header__logo" aria-label="WeBoat Brasil - Página inicial">
-          <img src="/assets/images/logo/logo.svg" alt="WeBoat Brasil" width="150" height="40">
+          <img src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40" class="header__logo-white">
+          <img src="/assets/images/logo/logo.svg" alt="WeBoat Brasil" width="150" height="40" class="header__logo-dark">
         </a>
 
         <!-- Navegação Desktop -->
@@ -333,7 +335,11 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
       <div class="hero__background">
-        <img src="/assets/images/hero/hero-home.jpg" alt="Lancha navegando na Baía de Guanabara com vista para o Pão de Açúcar" loading="eager" decoding="sync" fetchpriority="high" width="1920" height="1080">
+        <picture>
+          <source media="(min-width: 769px)" srcset="/assets/images/hero/hero-home-desktop.jpg">
+          <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile.jpg">
+          <img src="/assets/images/hero/hero-home-desktop.jpg" alt="Lancha navegando na Baía de Guanabara com vista para o Cristo Redentor ao pôr do sol" loading="eager" decoding="sync" fetchpriority="high" width="1920" height="1280">
+        </picture>
       </div>
       <div class="hero__overlay"></div>
 
@@ -841,7 +847,7 @@
 
         <div class="diferenciais__content">
           <div class="diferenciais__image">
-            <img src="/assets/images/hero/equipe-weboat.jpg" alt="Equipe WeBoat Brasil na Marina da Glória" loading="lazy" decoding="async" width="600" height="400">
+            <img src="/assets/images/hero/equipe-weboat-home.jpg" alt="Marinheiro WeBoat com camisa da empresa e Cristo Redentor ao fundo" loading="lazy" decoding="async" width="600" height="400">
           </div>
 
           <div class="diferenciais__list">
@@ -1344,7 +1350,7 @@
 
       <!-- Bottom -->
       <div class="footer__bottom">
-        <p>&copy; 2026 WeBoat Brasil. Todos os direitos reservados. CNPJ: XX.XXX.XXX/0001-XX</p>
+        <p>&copy; 2026 WeBoat Brasil. Todos os direitos reservados. CNPJ: 60.567.333/0001-29</p>
         <div class="footer__legal">
           <a href="/pages/sobre.html">Sobre a Empresa</a>
           <a href="/pages/contato.html">Fale Conosco</a>
