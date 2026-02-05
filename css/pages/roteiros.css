@@ -520,6 +520,7 @@
   font-family: var(--font-display);
   font-size: var(--text-h1);
   font-weight: var(--weight-h1);
+  color: var(--white);
   margin-bottom: var(--space-4);
 }
 
@@ -934,6 +935,8 @@
 }
 
 .roteiro-lanchas__item-info {
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
