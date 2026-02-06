@@ -198,12 +198,12 @@ weboat-site/
 
 | Roteiro | Duração | Preço Base | Badge |
 |---------|---------|------------|-------|
-| Mureta da Urca | 3h | R$ 2.300 | Melhor custo-benefício |
-| Praia Vermelha | 3h | R$ 2.500 | ⭐ Mais vendido |
-| Copacabana | 4h | R$ 3.000 | Vista icônica |
-| Ilhas Cagarras | 4-5h | R$ 3.600 | Mar aberto |
+| Mureta da Urca | 5h | R$ 2.300 | Melhor custo-benefício |
+| Praia Vermelha | 5h | R$ 2.500 | ⭐ Mais vendido |
+| Copacabana | 5h | R$ 3.000 | Vista icônica |
+| Ilhas Cagarras | 5h | R$ 3.600 | Mar aberto |
 | Itaipu e Camboinhas | 5h | R$ 3.600 | Praias desertas |
-| Volta Completa | 6-7h | R$ 4.500 | Experiência completa |
+| Volta Completa | 5h | R$ 4.500 | Experiência completa |
 
 ---
 
