@@ -746,3 +746,710 @@
   }
 }
 
+/* ============================================
+   MONTADOR DE PROPOSTA
+   ============================================ */
+.proposta {
+  background: var(--pearl-gray);
+}
+
+.proposta__layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.proposta__builder {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Steps */
+.proposta__step {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  border: 1px solid var(--border-light);
+}
+
+.proposta__step-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h4);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-6);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.proposta__step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--sunset-gold);
+  color: var(--white);
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: var(--text-body-sm);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.proposta__optional {
+  font-size: var(--text-body-sm);
+  font-weight: 400;
+  color: var(--driftwood);
+}
+
+/* ---- Roteiro Cards ---- */
+.proposta__roteiros {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: var(--space-3);
+}
+
+.proposta__roteiro-card {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  transition: all var(--transition-fast);
+  background: var(--white);
+}
+
+.proposta__roteiro-card:hover:not(.proposta__roteiro-card--disabled) {
+  border-color: var(--wave-blue);
+  box-shadow: var(--shadow-sm);
+}
+
+.proposta__roteiro-card--active {
+  border-color: var(--wave-blue);
+  background: rgba(var(--wave-blue-rgb), 0.05);
+  box-shadow: 0 0 0 1px var(--wave-blue);
+}
+
+.proposta__roteiro-card--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.proposta__roteiro-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.proposta__roteiro-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  width: 100%;
+}
+
+.proposta__roteiro-nome {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.proposta__roteiro-duracao {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+.proposta__roteiro-preco {
+  margin-top: var(--space-2);
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+}
+
+.proposta__preco-normal {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  text-decoration: line-through;
+}
+
+.proposta__preco-promo {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-lg);
+  font-weight: 700;
+  color: var(--success);
+}
+
+.proposta__preco-unico {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-lg);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+.proposta__roteiro-indisponivel {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  font-style: italic;
+}
+
+/* ---- Detalhes Grid ---- */
+.proposta__detalhes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-6);
+}
+
+.proposta__field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.proposta__label {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.proposta__label i {
+  color: var(--wave-blue);
+  font-size: 1.125rem;
+}
+
+.proposta__field-hint {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+.proposta__field-price {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  margin-left: auto;
+}
+
+/* Stepper */
+.proposta__stepper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  width: fit-content;
+}
+
+.proposta__stepper-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--pearl-gray);
+  border: none;
+  cursor: pointer;
+  color: var(--ocean-deep);
+  font-size: 1rem;
+  transition: background var(--transition-fast);
+}
+
+.proposta__stepper-btn:hover {
+  background: var(--wave-blue);
+  color: var(--white);
+}
+
+.proposta__stepper-input {
+  width: 56px;
+  height: 40px;
+  border: none;
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  background: var(--white);
+  -moz-appearance: textfield;
+}
+
+.proposta__stepper-input::-webkit-outer-spin-button,
+.proposta__stepper-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Checkbox (custom) */
+.proposta__checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.proposta__checkbox-label {
+  cursor: pointer;
+  flex-direction: row;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.proposta__checkbox-custom {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.proposta__checkbox:checked + .proposta__checkbox-custom {
+  background: var(--wave-blue);
+  border-color: var(--wave-blue);
+}
+
+.proposta__checkbox:checked + .proposta__checkbox-custom::after {
+  content: '';
+  display: block;
+  width: 5px;
+  height: 9px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -2px;
+}
+
+/* Turno options */
+.proposta__turno-options {
+  display: flex;
+  gap: var(--space-3);
+}
+
+.proposta__turno-option {
+  flex: 1;
+  display: flex;
+  cursor: pointer;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  transition: all var(--transition-fast);
+  background: var(--white);
+}
+
+.proposta__turno-option:hover {
+  border-color: var(--wave-blue);
+}
+
+.proposta__turno-option--active {
+  border-color: var(--wave-blue);
+  background: rgba(var(--wave-blue-rgb), 0.05);
+}
+
+.proposta__turno-radio {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.proposta__turno-label {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.proposta__turno-label i {
+  color: var(--wave-blue);
+  font-size: 1.25rem;
+}
+
+.proposta__turno-label small {
+  font-size: var(--text-caption);
+  font-weight: 400;
+  color: var(--driftwood);
+}
+
+/* ---- Avisos ---- */
+.proposta__avisos {
+  margin-top: var(--space-4);
+}
+
+.proposta__aviso {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--text-body-sm);
+}
+
+.proposta__aviso--erro {
+  background: var(--error-light);
+  color: var(--error);
+  border: 1px solid var(--error);
+}
+
+.proposta__aviso--aviso {
+  background: var(--warning-light);
+  color: var(--warning);
+  border: 1px solid var(--warning);
+}
+
+.proposta__aviso--info {
+  background: rgba(var(--wave-blue-rgb), 0.1);
+  color: var(--wave-blue);
+  border: 1px solid var(--wave-blue);
+}
+
+/* ---- Serviços Accordion ---- */
+.proposta__servico-group {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.proposta__servico-group + .proposta__servico-group {
+  margin-top: var(--space-3);
+}
+
+.proposta__servico-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--space-4);
+  background: var(--white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  transition: background var(--transition-fast);
+}
+
+.proposta__servico-group-header:hover {
+  background: var(--pearl-gray);
+}
+
+.proposta__servico-group-header span {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.proposta__servico-group-header i {
+  color: var(--wave-blue);
+}
+
+.proposta__servico-caret {
+  transition: transform var(--transition-fast);
+}
+
+.proposta__servico-group-header--open .proposta__servico-caret {
+  transform: rotate(180deg);
+}
+
+.proposta__servico-group-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-base);
+}
+
+.proposta__servico-group-body--open {
+  max-height: 600px;
+}
+
+.proposta__servico-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) var(--space-4);
+  border-top: 1px solid var(--border-light);
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.proposta__servico-item:hover {
+  background: var(--pearl-gray);
+}
+
+.proposta__servico-check {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.proposta__servico-item .proposta__checkbox-custom {
+  width: 18px;
+  height: 18px;
+}
+
+.proposta__servico-check:checked + .proposta__checkbox-custom {
+  background: var(--wave-blue);
+  border-color: var(--wave-blue);
+}
+
+.proposta__servico-check:checked + .proposta__checkbox-custom::after {
+  content: '';
+  display: block;
+  width: 4px;
+  height: 8px;
+  border: solid var(--white);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  margin-top: -1px;
+}
+
+.proposta__servico-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.proposta__servico-nome {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.proposta__servico-pp {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+}
+
+.proposta__servico-preco {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* ---- Resumo (Sidebar) ---- */
+.proposta__resumo {
+  position: sticky;
+  top: calc(72px + var(--space-6));
+}
+
+.proposta__resumo-inner {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-6);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+}
+
+.proposta__resumo-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-6);
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.proposta__resumo-title i {
+  color: var(--wave-blue);
+  font-size: 1.25rem;
+}
+
+.proposta__resumo-empty {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  text-align: center;
+  padding: var(--space-8) 0;
+}
+
+.proposta__resumo-list {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-2) var(--space-4);
+  margin: 0;
+}
+
+.proposta__resumo-list dt {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+}
+
+.proposta__resumo-list dd {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  text-align: right;
+  margin: 0;
+}
+
+.proposta__badge-promo {
+  display: inline-block;
+  background: var(--success-light);
+  color: var(--success);
+  font-size: 10px;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: var(--radius-sm);
+  vertical-align: middle;
+  margin-left: var(--space-1);
+}
+
+/* Total */
+.proposta__resumo-total {
+  margin-top: var(--space-6);
+  padding-top: var(--space-4);
+  border-top: 2px solid var(--ocean-deep);
+}
+
+.proposta__total-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.proposta__total-label {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.proposta__total-valor {
+  font-family: var(--font-display);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--ocean-deep);
+}
+
+.proposta__total-pp {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  text-align: right;
+  margin-top: var(--space-1);
+}
+
+/* WhatsApp CTA */
+.proposta__resumo-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  width: 100%;
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  font-size: var(--text-body);
+}
+
+/* ---- Mobile Bar (fixed bottom) ---- */
+.proposta__mobile-bar {
+  display: none;
+}
+
+/* ============================================
+   PROPOSTA - RESPONSIVE
+   ============================================ */
+@media (max-width: 1024px) {
+  .proposta__layout {
+    grid-template-columns: 1fr 340px;
+  }
+}
+
+@media (max-width: 768px) {
+  .proposta__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .proposta__step {
+    padding: var(--space-6);
+  }
+
+  .proposta__roteiros {
+    grid-template-columns: 1fr;
+  }
+
+  .proposta__detalhes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .proposta__turno-options {
+    flex-direction: column;
+  }
+
+  .proposta__resumo {
+    position: static;
+  }
+
+  .proposta__resumo-cta {
+    display: none;
+  }
+
+  .proposta__mobile-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: var(--z-fixed);
+    background: var(--white);
+    border-top: 1px solid var(--border-light);
+    box-shadow: 0 -4px 12px rgba(30, 58, 95, 0.1);
+    padding: var(--space-3) var(--space-4);
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+  }
+
+  .proposta__mobile-total {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .proposta__mobile-total-label {
+    font-size: var(--text-caption);
+    color: var(--driftwood);
+  }
+
+  .proposta__mobile-total-valor {
+    font-family: var(--font-display);
+    font-size: var(--text-h4);
+    font-weight: 700;
+    color: var(--ocean-deep);
+  }
+
+  .proposta__mobile-cta {
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .proposta__roteiro-preco {
+    flex-direction: column;
+    gap: var(--space-1);
+  }
+}
+
