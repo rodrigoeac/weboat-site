@@ -1146,17 +1146,18 @@
     font-size: var(--text-caption);
   }
 
-  .configurador__tab span {
-    font-size: 0.8125rem;
-  }
-
   .configurador__tabs {
-    gap: var(--space-1);
-    padding-bottom: var(--space-2);
+    gap: 6px;
+    justify-content: center;
   }
 
   .configurador__tab {
-    padding: var(--space-2) var(--space-3);
+    padding: 6px 10px;
+    font-size: 0.75rem;
+  }
+
+  .configurador__tab i {
+    display: none;
   }
 
   .configurador__resumo-inner {
