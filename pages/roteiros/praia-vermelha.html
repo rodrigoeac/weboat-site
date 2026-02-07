@@ -44,13 +44,13 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
-  <!-- Schema.org - TouristAttraction -->
+  <!-- Schema.org - TouristDestination (GEO/SEO Enhanced) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "Passeio de Lancha Praia Vermelha - WeBoat Brasil",
-    "description": "Nosso passeio de lancha mais vendido! Inclui Urca + Praia Vermelha com parada para banho e vista do bondinho.",
+    "@type": "TouristDestination",
+    "name": "Passeio de Lancha Praia Vermelha",
+    "description": "Nosso passeio de lancha mais vendido! Inclui Urca + Praia Vermelha com parada para banho e vista do bondinho. Duração de 5 horas com saída da Marina da Glória.",
     "image": "https://www.weboatbrasil.com.br/assets/images/roteiros/praia-vermelha.jpg",
     "url": "https://www.weboatbrasil.com.br/pages/roteiros/praia-vermelha.html",
     "geo": {
@@ -58,11 +58,35 @@
       "latitude": -22.9575,
       "longitude": -43.1652
     },
-    "isAccessibleForFree": false,
-    "touristType": "Passeio de Lancha",
+    "touristType": ["Passeio de Lancha", "Turismo Náutico", "Lazer ao Ar Livre"],
+    "includesAttraction": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Praia Vermelha",
+        "description": "Praia ao pé do Pão de Açúcar com águas calmas, ideal para parada e banho"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Mureta da Urca",
+        "description": "Bar e mirante à beira-mar com vista para o Pão de Açúcar"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Teleférico do Pão de Açúcar",
+        "description": "Vista do bondinho e do morro da Urca a partir do mar"
+      }
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.weboatbrasil.com.br/#organization"
+    },
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "price": "2500",
+      "priceCurrency": "BRL",
+      "priceValidUntil": "2026-12-31",
+      "description": "A partir de R$ 2.500 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro."
     }
   }
   </script>

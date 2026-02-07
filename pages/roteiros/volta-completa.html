@@ -44,20 +44,54 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
-  <!-- Schema.org - TouristAttraction -->
+  <!-- Schema.org - TouristDestination (GEO/SEO Enhanced) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "Volta Completa de Lancha - WeBoat Brasil",
-    "description": "A experiência definitiva de passeio de lancha no Rio de Janeiro. Todos os pontos turísticos em um único passeio.",
+    "@type": "TouristDestination",
+    "name": "Volta Completa de Lancha pela Baía de Guanabara",
+    "description": "A experiência definitiva de passeio de lancha no Rio de Janeiro. Todos os pontos turísticos em um único passeio de 5 horas pela Baía de Guanabara com saída da Marina da Glória.",
     "image": "https://www.weboatbrasil.com.br/assets/images/roteiros/volta-completa.jpg",
     "url": "https://www.weboatbrasil.com.br/pages/roteiros/volta-completa.html",
-    "isAccessibleForFree": false,
-    "touristType": "Passeio de Lancha",
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -22.9068,
+      "longitude": -43.1729
+    },
+    "touristType": ["Passeio de Lancha", "Turismo Náutico", "Tour Panorâmico"],
+    "includesAttraction": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Baía de Guanabara",
+        "description": "Navegação completa pela baía com vista para Niterói e centro do Rio"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Ponte Rio-Niterói",
+        "description": "Passagem sob a ponte com vista panorâmica"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Ilha Fiscal",
+        "description": "Castelo neogótico na baía, palco do último baile do Império"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Pão de Açúcar",
+        "description": "Vista do cartão-postal do Rio de Janeiro a partir do mar"
+      }
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.weboatbrasil.com.br/#organization"
+    },
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "price": "4500",
+      "priceCurrency": "BRL",
+      "priceValidUntil": "2026-12-31",
+      "description": "A partir de R$ 4.500 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro."
     }
   }
   </script>

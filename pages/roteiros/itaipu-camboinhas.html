@@ -44,13 +44,13 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
-  <!-- Schema.org - TouristAttraction -->
+  <!-- Schema.org - TouristDestination (GEO/SEO Enhanced) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "Passeio de Lancha Itaipu e Camboinhas - WeBoat Brasil",
-    "description": "Praias semi-desertas de Itaipu e Camboinhas em Niterói. O roteiro mais exclusivo.",
+    "@type": "TouristDestination",
+    "name": "Passeio de Lancha Itaipu e Camboinhas",
+    "description": "Praias semi-desertas de Itaipu e Camboinhas em Niterói. O roteiro mais exclusivo e tranquilo. Duração de 5 horas com saída da Marina da Glória.",
     "image": "https://www.weboatbrasil.com.br/assets/images/roteiros/itaipu-camboinhas.jpg",
     "url": "https://www.weboatbrasil.com.br/pages/roteiros/itaipu-camboinhas.html",
     "geo": {
@@ -58,11 +58,30 @@
       "latitude": -22.9789,
       "longitude": -43.0456
     },
-    "isAccessibleForFree": false,
-    "touristType": "Passeio de Lancha",
+    "touristType": ["Passeio de Lancha", "Turismo Náutico", "Praias Exclusivas"],
+    "includesAttraction": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Praia de Itaipu",
+        "description": "Praia de pescadores com águas calmas e areia clara em Niterói"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Praia de Camboinhas",
+        "description": "Praia semi-deserta com natureza preservada e águas cristalinas"
+      }
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.weboatbrasil.com.br/#organization"
+    },
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "price": "3600",
+      "priceCurrency": "BRL",
+      "priceValidUntil": "2026-12-31",
+      "description": "A partir de R$ 3.600 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro."
     }
   }
   </script>

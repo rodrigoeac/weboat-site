@@ -44,13 +44,13 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
-  <!-- Schema.org - TouristAttraction -->
+  <!-- Schema.org - TouristDestination (GEO/SEO Enhanced) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "TouristAttraction",
-    "name": "Passeio de Lancha Ilhas Cagarras - WeBoat Brasil",
-    "description": "Aventura em mar aberto até as Ilhas Cagarras. Águas cristalinas e vida marinha única.",
+    "@type": "TouristDestination",
+    "name": "Passeio de Lancha Ilhas Cagarras",
+    "description": "Aventura em mar aberto até as Ilhas Cagarras. Águas cristalinas, vida marinha única e oportunidade de mergulho e snorkeling. Duração de 5 horas com saída da Marina da Glória.",
     "image": "https://www.weboatbrasil.com.br/assets/images/roteiros/ilhas-cagarras.jpg",
     "url": "https://www.weboatbrasil.com.br/pages/roteiros/ilhas-cagarras.html",
     "geo": {
@@ -58,11 +58,30 @@
       "latitude": -23.0211,
       "longitude": -43.1917
     },
-    "isAccessibleForFree": false,
-    "touristType": "Passeio de Lancha",
+    "touristType": ["Passeio de Lancha", "Turismo Náutico", "Mergulho e Snorkeling"],
+    "includesAttraction": [
+      {
+        "@type": "TouristAttraction",
+        "name": "Arquipélago das Ilhas Cagarras",
+        "description": "Monumento natural com águas cristalinas, tartarugas e vida marinha abundante"
+      },
+      {
+        "@type": "TouristAttraction",
+        "name": "Ilha Comprida",
+        "description": "Ponto de mergulho e snorkeling com visibilidade excepcional"
+      }
+    ],
+    "provider": {
+      "@type": "LocalBusiness",
+      "@id": "https://www.weboatbrasil.com.br/#organization"
+    },
     "offers": {
       "@type": "Offer",
-      "availability": "https://schema.org/InStock"
+      "availability": "https://schema.org/InStock",
+      "price": "3600",
+      "priceCurrency": "BRL",
+      "priceValidUntil": "2026-12-31",
+      "description": "A partir de R$ 3.600 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro."
     }
   }
   </script>
