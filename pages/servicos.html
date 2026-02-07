@@ -757,24 +757,81 @@
       </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="servicos-cta">
+    <!-- Configurador Interativo -->
+    <section class="configurador" id="configurador">
       <div class="container">
-        <div class="servicos-cta__content">
-          <h2 class="servicos-cta__title">Monte o Pacote Ideal para Você</h2>
-          <p class="servicos-cta__text">
-            Combine churrasco, open bar e decoração com desconto especial. Fale com nossa equipe e receba uma proposta personalizada.
-          </p>
-          <div class="servicos-cta__buttons">
-            <a href="https://wa.me/5521977724114?text=Olá! Gostaria de montar um pacote personalizado de serviços para meu passeio de lancha."
-               class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
-              Montar Meu Pacote
-            </a>
-            <a href="/pages/lanchas/" class="btn btn-secondary btn-lg">
-              Ver Lanchas
-            </a>
+        <div class="configurador__header">
+          <h2 class="configurador__title">Monte seu Pacote de Serviços</h2>
+          <p class="configurador__subtitle">Selecione os serviços desejados e veja o orçamento estimado em tempo real.</p>
+        </div>
+
+        <div class="configurador__layout">
+          <!-- Coluna principal -->
+          <div class="configurador__main">
+            <!-- Input de pessoas -->
+            <div class="configurador__pessoas">
+              <label class="configurador__pessoas-label" for="configurador-num-pessoas">
+                <i class="ph ph-users-three"></i>
+                Número de pessoas
+              </label>
+              <div class="configurador__stepper">
+                <button type="button" class="configurador__stepper-btn" data-action="decrement" aria-label="Diminuir número de pessoas">
+                  <i class="ph ph-minus"></i>
+                </button>
+                <input type="number" id="configurador-num-pessoas" class="configurador__stepper-input"
+                       min="5" max="65" value="10" aria-label="Número de pessoas">
+                <button type="button" class="configurador__stepper-btn" data-action="increment" aria-label="Aumentar número de pessoas">
+                  <i class="ph ph-plus"></i>
+                </button>
+              </div>
+            </div>
+
+            <!-- Tabs de categoria -->
+            <div class="configurador__categorias" data-tabs>
+              <div class="configurador__tabs" role="tablist">
+                <!-- Preenchido via JS -->
+              </div>
+
+              <div class="configurador__panels">
+                <!-- Preenchido via JS -->
+              </div>
+            </div>
           </div>
+
+          <!-- Sidebar: Resumo -->
+          <aside class="configurador__resumo" id="configurador-resumo">
+            <div class="configurador__resumo-inner">
+              <h3 class="configurador__resumo-title">
+                <i class="ph ph-receipt"></i>
+                Resumo do Pacote
+              </h3>
+
+              <div class="configurador__resumo-vazio" id="configurador-resumo-vazio">
+                <i class="ph ph-hand-pointing"></i>
+                <p>Selecione serviços ao lado para ver o resumo aqui.</p>
+              </div>
+
+              <ul class="configurador__resumo-lista" id="configurador-resumo-lista">
+                <!-- Preenchido via JS -->
+              </ul>
+
+              <div class="configurador__resumo-avisos" id="configurador-avisos">
+                <!-- Avisos de conflito via JS -->
+              </div>
+
+              <div class="configurador__resumo-total" id="configurador-total" style="display:none;">
+                <div class="configurador__resumo-total-label">Total estimado</div>
+                <div class="configurador__resumo-total-valor" id="configurador-total-valor">R$ 0</div>
+                <div class="configurador__resumo-total-pp" id="configurador-total-pp"></div>
+              </div>
+
+              <a href="#" class="btn btn-whatsapp btn-lg configurador__resumo-cta" id="configurador-whatsapp-btn"
+                 target="_blank" rel="noopener noreferrer" style="display:none;">
+                <i class="ph ph-whatsapp-logo"></i>
+                Enviar pelo WhatsApp
+              </a>
+            </div>
+          </aside>
         </div>
       </div>
     </section>
@@ -940,5 +997,7 @@
   <!-- Scripts -->
   <script src="/js/menu.js" defer></script>
   <script src="/js/main.js" defer></script>
+  <script src="/js/data/servicos-data.js" defer></script>
+  <script src="/js/servicos-configurator.js" defer></script>
 </body>
 </html>
