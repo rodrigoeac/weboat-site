@@ -3,18 +3,20 @@
   <!-- Homepage -->
   <url>
     <loc>https://www.weboatbrasil.com.br/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
-  <!-- Frota -->
+  <!-- Frota (listagem) -->
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/lanchas/</loc>
     <lastmod>2026-02-04</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Lanchas Próprias -->
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/lanchas/weboat-32.html</loc>
     <lastmod>2026-02-04</lastmod>
@@ -121,7 +123,7 @@
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/lanchas/parceiras/barco-gourmet-53.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -174,46 +176,48 @@
     <priority>0.7</priority>
   </url>
 
-  <!-- Roteiros -->
+  <!-- Roteiros (listagem) -->
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/roteiros/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Roteiros (detalhe) -->
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/roteiros/mureta-da-urca.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/roteiros/praia-vermelha.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/roteiros/copacabana.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/roteiros/ilhas-cagarras.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/roteiros/itaipu-camboinhas.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/roteiros/volta-completa.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -253,7 +257,7 @@
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/pages/areas-atendidas.html</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
