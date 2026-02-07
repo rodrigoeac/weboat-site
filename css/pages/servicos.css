@@ -584,6 +584,7 @@
 .configurador {
   padding: var(--space-16) 0;
   background: var(--pearl-gray);
+  overflow-x: hidden;
 }
 
 .configurador__header {
@@ -749,7 +750,7 @@
 /* ─── Cards de serviço ─── */
 .configurador__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr));
   gap: var(--space-4);
 }
 
@@ -1025,12 +1026,22 @@
   margin-top: var(--space-1);
 }
 
-/* CTA WhatsApp */
+/* CTA buttons */
 .configurador__resumo-cta {
-  margin-top: var(--space-4);
+  margin-top: var(--space-3);
   width: 100%;
   text-align: center;
   justify-content: center;
+}
+
+.configurador__escolher-lancha-btn {
+  background: var(--ocean-deep);
+  color: var(--white);
+  border: none;
+}
+
+.configurador__escolher-lancha-btn:hover {
+  background: var(--wave-blue);
 }
 
 /* ─── Botão "Montar meu pacote" nas seções ─── */
@@ -1069,6 +1080,11 @@
 @media (max-width: 1024px) {
   .configurador__layout {
     grid-template-columns: 1fr;
+  }
+
+  .configurador__main {
+    min-width: 0;
+    overflow-x: hidden;
   }
 
   .configurador__resumo {
@@ -1130,8 +1146,25 @@
     grid-template-columns: 1fr;
   }
 
+  .configurador__card {
+    padding: var(--space-4);
+  }
+
+  .configurador__card-descricao {
+    font-size: var(--text-caption);
+  }
+
   .configurador__tab span {
     font-size: 0.8125rem;
+  }
+
+  .configurador__tabs {
+    gap: var(--space-1);
+    padding-bottom: var(--space-2);
+  }
+
+  .configurador__tab {
+    padding: var(--space-2) var(--space-3);
   }
 
   .configurador__resumo-inner {

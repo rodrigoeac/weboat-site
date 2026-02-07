@@ -313,9 +313,11 @@
     }
 
     linhas.push('');
-    linhas.push('--- Valores ---');
-    linhas.push('Roteiro' + (p.isPromocional ? ' (promocional)' : '') +
-      ': ' + formatarMoeda(b.precoRoteiro));
+    linhas.push('--- Valores (Sex-Dom) ---');
+    linhas.push('Roteiro: ' + formatarMoeda(b.precoRoteiro));
+    if (p.lancha.isPropria) {
+      linhas.push('_Gostaria de saber sobre desconto Seg-Qui, se disponível._');
+    }
 
     if (b.adicionalTurno > 0) {
       linhas.push('Adicional turno tarde: ' + formatarMoeda(b.adicionalTurno));
@@ -436,14 +438,16 @@
         indispSpan.textContent = 'Indisponível';
         precoEl.appendChild(indispSpan);
       } else if (precoData.normal !== undefined) {
+        // Show standard price (sex-dom) as the main price
         var normalSpan = document.createElement('span');
-        normalSpan.className = 'proposta__preco-normal';
+        normalSpan.className = 'proposta__preco-unico';
         normalSpan.textContent = formatarMoeda(precoData.normal);
-        var promoSpan = document.createElement('span');
-        promoSpan.className = 'proposta__preco-promo';
-        promoSpan.textContent = formatarMoeda(precoData.promocional);
         precoEl.appendChild(normalSpan);
-        precoEl.appendChild(promoSpan);
+        // Show seg-qui discount hint
+        var promoHint = document.createElement('span');
+        promoHint.className = 'proposta__preco-promo-hint';
+        promoHint.textContent = 'Seg-Qui: consulte desconto';
+        precoEl.appendChild(promoHint);
       } else {
         var unicoSpan = document.createElement('span');
         unicoSpan.className = 'proposta__preco-unico';
@@ -463,8 +467,8 @@
     for (var j = 0; j < radios.length; j++) {
       radios[j].addEventListener('change', function () {
         state.roteiroId = this.value;
-        var pd = state.lancha.roteiros[this.value];
-        state.isPromocional = !!(pd && pd.promocional !== undefined);
+        // Always use standard price (normal); promo requires WhatsApp confirmation
+        state.isPromocional = false;
         updateActiveCard(container, this);
         recalcular();
       });
@@ -615,6 +619,14 @@
         nomeSpan.className = 'proposta__servico-nome';
         nomeSpan.textContent = svc.nome;
         infoSpan.appendChild(nomeSpan);
+
+        // Show included items as compact description
+        if (svc.inclui && svc.inclui.length > 0) {
+          var incluiSmall = document.createElement('small');
+          incluiSmall.className = 'proposta__servico-inclui';
+          incluiSmall.textContent = svc.inclui.join(' · ');
+          infoSpan.appendChild(incluiSmall);
+        }
 
         if (svc.tipo === 'por_pessoa') {
           var faixa = findFaixa(svc, state.numPessoas);
@@ -911,10 +923,100 @@
   }
 
   function setupChurrasqueira() {
-    var chk = document.getElementById('proposta-churrasqueira');
-    if (!chk) return;
+    // Remove the static churrasqueira field from detalhes grid
+    var staticChk = document.getElementById('proposta-churrasqueira');
+    if (staticChk) {
+      var staticField = staticChk.closest('.proposta__field');
+      if (staticField) staticField.remove();
+    }
+
+    // Create enriched churrasqueira section after the detalhes grid
+    var detalhesStep = $('[data-step="detalhes"]');
+    var avisosEl = document.getElementById('proposta-avisos');
+    if (!detalhesStep) return;
+
+    var catChurr = Data.getCategoriaChurrasqueira
+      ? Data.getCategoriaChurrasqueira(state.lancha.id)
+      : 'padrao';
+    var infoChurr = Data.INFO_CHURRASQUEIRA
+      ? Data.INFO_CHURRASQUEIRA[catChurr]
+      : null;
+
+    var section = document.createElement('div');
+    section.className = 'proposta__churrasqueira-section';
+
+    var label = document.createElement('label');
+    label.className = 'proposta__churrasqueira-toggle';
+
+    var chk = document.createElement('input');
+    chk.type = 'checkbox';
+    chk.id = 'proposta-churrasqueira';
+    chk.className = 'proposta__checkbox';
+
+    var customChk = document.createElement('span');
+    customChk.className = 'proposta__checkbox-custom';
+
+    var icon = document.createElement('i');
+    icon.className = 'ph ph-fire';
+
+    var textSpan = document.createElement('span');
+    textSpan.className = 'proposta__churrasqueira-label-text';
+    textSpan.textContent = 'Churrasqueira';
+
+    var priceSpan = document.createElement('span');
+    priceSpan.className = 'proposta__field-price';
+    priceSpan.id = 'proposta-churr-preco';
+    priceSpan.textContent = formatarMoeda(state.lancha.churrasqueira);
+
+    label.appendChild(chk);
+    label.appendChild(customChk);
+    label.appendChild(icon);
+    label.appendChild(textSpan);
+    label.appendChild(priceSpan);
+    section.appendChild(label);
+
+    // Add included items
+    if (infoChurr && infoChurr.inclui) {
+      var incluiDiv = document.createElement('div');
+      incluiDiv.className = 'proposta__churrasqueira-inclui';
+
+      var incluiTitle = document.createElement('span');
+      incluiTitle.className = 'proposta__churrasqueira-inclui-title';
+      incluiTitle.textContent = 'Inclui:';
+      incluiDiv.appendChild(incluiTitle);
+
+      var ul = document.createElement('ul');
+      ul.className = 'proposta__churrasqueira-inclui-list';
+      for (var i = 0; i < infoChurr.inclui.length; i++) {
+        var li = document.createElement('li');
+        var checkIcon = document.createElement('i');
+        checkIcon.className = 'ph ph-check';
+        li.appendChild(checkIcon);
+        li.appendChild(document.createTextNode(' ' + infoChurr.inclui[i]));
+        ul.appendChild(li);
+      }
+      incluiDiv.appendChild(ul);
+
+      if (infoChurr.observacao) {
+        var obs = document.createElement('small');
+        obs.className = 'proposta__churrasqueira-obs';
+        obs.textContent = infoChurr.observacao;
+        incluiDiv.appendChild(obs);
+      }
+
+      section.appendChild(incluiDiv);
+    }
+
+    // Insert before avisos (which is after detalhes grid)
+    if (avisosEl) {
+      avisosEl.parentNode.insertBefore(section, avisosEl);
+    } else {
+      detalhesStep.appendChild(section);
+    }
+
     chk.addEventListener('change', function () {
       state.churrasqueiraAtiva = this.checked;
+      section.classList.toggle('proposta__churrasqueira-section--active', this.checked);
       recalcular();
     });
   }
@@ -1007,7 +1109,69 @@
     setupSteppers();
     setupChurrasqueira();
     setupACToggle();
+    restoreFromCart();
     recalcular();
+  }
+
+  function restoreFromCart() {
+    var raw = sessionStorage.getItem('weboat_servicos_cart');
+    if (!raw) return;
+
+    try {
+      var cart = JSON.parse(raw);
+    } catch (e) {
+      return;
+    }
+
+    // Restore number of people
+    if (cart.numPessoas) {
+      state.numPessoas = Math.max(1, Math.min(state.lancha.capacidade.maxima, cart.numPessoas));
+      var pessoasInput = document.getElementById('proposta-pessoas');
+      if (pessoasInput) pessoasInput.value = state.numPessoas;
+    }
+
+    // Pre-select services that exist in proposal-servicos-data
+    if (cart.servicosIds && cart.servicosIds.length > 0) {
+      // Map service IDs from configurator to proposal services
+      var checks = $$('.proposta__servico-check');
+      for (var i = 0; i < checks.length; i++) {
+        var svcId = checks[i].value;
+        if (cart.servicosIds.indexOf(svcId) !== -1) {
+          checks[i].checked = true;
+          if (state.servicosIds.indexOf(svcId) === -1) {
+            state.servicosIds.push(svcId);
+          }
+        }
+      }
+    }
+
+    // Show a notice that services were imported
+    if (state.servicosIds.length > 0) {
+      var notice = document.createElement('div');
+      notice.className = 'proposta__aviso proposta__aviso--info proposta__cart-notice';
+      var icon = document.createElement('i');
+      icon.className = 'ph ph-shopping-cart';
+      notice.appendChild(icon);
+      notice.appendChild(document.createTextNode(
+        ' ' + state.servicosIds.length + ' serviço(s) pré-selecionado(s) do seu pacote.'
+      ));
+      var dismiss = document.createElement('button');
+      dismiss.type = 'button';
+      dismiss.className = 'proposta__cart-notice-dismiss';
+      dismiss.textContent = '\u00D7';
+      dismiss.addEventListener('click', function () {
+        notice.remove();
+      });
+      notice.appendChild(dismiss);
+
+      var avisosEl = document.getElementById('proposta-avisos');
+      if (avisosEl) {
+        avisosEl.appendChild(notice);
+      }
+    }
+
+    // Clear cart after restoring to avoid re-applying on refresh
+    sessionStorage.removeItem('weboat_servicos_cart');
   }
 
   function setupMobileBar() {

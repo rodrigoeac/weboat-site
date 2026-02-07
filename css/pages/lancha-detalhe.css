@@ -910,6 +910,14 @@
   font-style: italic;
 }
 
+.proposta__preco-promo-hint {
+  font-size: var(--text-caption);
+  color: var(--success);
+  font-weight: 500;
+  display: block;
+  margin-top: 2px;
+}
+
 /* ---- Detalhes Grid ---- */
 .proposta__detalhes-grid {
   display: grid;
@@ -1095,6 +1103,93 @@
   color: var(--driftwood);
 }
 
+/* ---- Churrasqueira Section ---- */
+.proposta__churrasqueira-section {
+  margin-top: var(--space-6);
+  padding: var(--space-5);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  transition: border-color var(--transition-fast), background var(--transition-fast);
+}
+
+.proposta__churrasqueira-section--active {
+  border-color: var(--sunset-gold);
+  background: rgba(212, 168, 83, 0.04);
+}
+
+.proposta__churrasqueira-toggle {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+}
+
+.proposta__churrasqueira-toggle i.ph-fire {
+  color: var(--sunset-gold);
+  font-size: 1.25rem;
+}
+
+.proposta__churrasqueira-label-text {
+  flex: 1;
+}
+
+.proposta__churrasqueira-inclui {
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-light);
+}
+
+.proposta__churrasqueira-inclui-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body-sm);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.proposta__churrasqueira-inclui-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-1) var(--space-4);
+}
+
+.proposta__churrasqueira-inclui-list li {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.proposta__churrasqueira-inclui-list i {
+  color: var(--success);
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+
+.proposta__churrasqueira-obs {
+  display: block;
+  margin-top: var(--space-2);
+  font-size: var(--text-caption);
+  color: var(--error);
+  font-weight: 500;
+}
+
+@media (max-width: 640px) {
+  .proposta__churrasqueira-inclui-list {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ---- Avisos ---- */
 .proposta__avisos {
   margin-top: var(--space-4);
@@ -1125,6 +1220,23 @@
   background: rgba(var(--wave-blue-rgb), 0.1);
   color: var(--wave-blue);
   border: 1px solid var(--wave-blue);
+}
+
+.proposta__cart-notice {
+  position: relative;
+}
+
+.proposta__cart-notice-dismiss {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  background: none;
+  border: none;
+  color: var(--wave-blue);
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0;
 }
 
 /* ---- Serviços Accordion ---- */
@@ -1241,6 +1353,16 @@
   font-size: var(--text-body-sm);
   font-weight: 500;
   color: var(--charcoal);
+}
+
+.proposta__servico-inclui {
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .proposta__servico-pp {

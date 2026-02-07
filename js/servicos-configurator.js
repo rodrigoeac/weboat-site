@@ -37,6 +37,7 @@
     var elTotalValor = document.getElementById('configurador-total-valor');
     var elTotalPP = document.getElementById('configurador-total-pp');
     var elWhatsAppBtn = document.getElementById('configurador-whatsapp-btn');
+    var elEscolherLanchaBtn = document.getElementById('configurador-escolher-lancha-btn');
 
     if (!elPessoas || !elTabsContainer) return;
 
@@ -343,6 +344,7 @@
       updatePrecos();
       updateResumo();
       updateURL();
+      saveToSession();
     }
 
     function updatePrecos() {
@@ -366,6 +368,7 @@
       elResumoVazio.style.display = temServicos ? 'none' : '';
       elTotal.style.display = temServicos ? '' : 'none';
       elWhatsAppBtn.style.display = temServicos ? '' : 'none';
+      if (elEscolherLanchaBtn) elEscolherLanchaBtn.style.display = temServicos ? '' : 'none';
 
       if (!temServicos) {
         elResumoLista.textContent = '';
@@ -481,6 +484,30 @@
 
       var newURL = window.location.pathname + '?' + params.toString() + window.location.hash;
       history.replaceState(null, '', newURL);
+    }
+
+    // ─── Save to sessionStorage for cart flow ──
+    function saveToSession() {
+      var ids = Object.keys(state.selecionados);
+      if (ids.length === 0) {
+        sessionStorage.removeItem('weboat_servicos_cart');
+        return;
+      }
+      var cart = {
+        numPessoas: state.numPessoas,
+        servicosIds: ids,
+        tamanhoEmbarcacao: state.tamanhoEmbarcacao,
+      };
+      sessionStorage.setItem('weboat_servicos_cart', JSON.stringify(cart));
+    }
+
+    // "Escolher Lancha" button handler
+    if (elEscolherLanchaBtn) {
+      elEscolherLanchaBtn.addEventListener('click', function (e) {
+        e.preventDefault();
+        saveToSession();
+        window.location.href = '/pages/lanchas/';
+      });
     }
 
     function restoreFromURL() {
