@@ -382,9 +382,12 @@
           <!-- Roteiro 1 - Mureta da Urca -->
           <article class="card-roteiro" id="roteiro-1">
             <div class="card-roteiro__image">
-              <img src="/assets/images/roteiros/mureta-da-urca.jpg"
-                   alt="Passeio de lancha na Mureta da Urca com vista para o Pão de Açúcar"
-                   loading="lazy">
+              <picture>
+                <source srcset="/assets/images/roteiros/mureta-da-urca-400w.webp 400w, /assets/images/roteiros/mureta-da-urca-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/roteiros/mureta-da-urca.jpg"
+                     alt="Passeio de lancha na Mureta da Urca com vista para o Pão de Açúcar"
+                     loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-roteiro__badge">
                 <i class="ph ph-star-fill"></i>
                 Melhor custo-benefício
