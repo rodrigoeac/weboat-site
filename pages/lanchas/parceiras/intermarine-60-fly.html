@@ -424,6 +424,110 @@
       </div>
     </section>
 
+    <!-- Montador de Proposta -->
+    <section class="proposta section" id="montar-proposta" data-lancha-id="intermarine-60-fly">
+      <div class="container">
+        <header class="section-header">
+          <span class="section-header__overline">Monte sua proposta</span>
+          <h2 class="section-header__title">Personalize seu Passeio na Intermarine 60 Fly</h2>
+          <p class="section-header__subtitle">Selecione roteiro, serviços e veja o valor em tempo real</p>
+        </header>
+
+        <div class="proposta__layout">
+          <div class="proposta__builder">
+            <div class="proposta__step" data-step="roteiro">
+              <h3 class="proposta__step-title">
+                <span class="proposta__step-number">1</span>
+                Escolha o Roteiro
+              </h3>
+              <div class="proposta__roteiros" role="radiogroup" aria-label="Selecione um roteiro">
+              </div>
+            </div>
+
+            <div class="proposta__step" data-step="detalhes">
+              <h3 class="proposta__step-title">
+                <span class="proposta__step-number">2</span>
+                Detalhes do Passeio
+              </h3>
+              <div class="proposta__detalhes-grid">
+                <div class="proposta__field">
+                  <label class="proposta__label" for="proposta-pessoas">
+                    <i class="ph ph-users"></i> Número de Pessoas
+                  </label>
+                  <div class="proposta__stepper">
+                    <button type="button" class="proposta__stepper-btn" data-action="decrement" data-target="proposta-pessoas" aria-label="Diminuir">
+                      <i class="ph ph-minus"></i>
+                    </button>
+                    <input type="number" id="proposta-pessoas" class="proposta__stepper-input" value="10" min="1" aria-label="Número de pessoas">
+                    <button type="button" class="proposta__stepper-btn" data-action="increment" data-target="proposta-pessoas" aria-label="Aumentar">
+                      <i class="ph ph-plus"></i>
+                    </button>
+                  </div>
+                  <span class="proposta__field-hint" id="proposta-capacidade-hint"></span>
+                </div>
+                <div class="proposta__field">
+                  <label class="proposta__label">
+                    <i class="ph ph-sun-horizon"></i> Turno
+                  </label>
+                  <div class="proposta__turno-options" role="radiogroup" aria-label="Selecione o turno">
+                  </div>
+                </div>
+                <div class="proposta__field">
+                  <label class="proposta__label" for="proposta-horas-extras">
+                    <i class="ph ph-clock-countdown"></i> Horas Extras
+                  </label>
+                  <div class="proposta__stepper">
+                    <button type="button" class="proposta__stepper-btn" data-action="decrement" data-target="proposta-horas-extras" aria-label="Diminuir">
+                      <i class="ph ph-minus"></i>
+                    </button>
+                    <input type="number" id="proposta-horas-extras" class="proposta__stepper-input" value="0" min="0" max="3" aria-label="Horas extras">
+                    <button type="button" class="proposta__stepper-btn" data-action="increment" data-target="proposta-horas-extras" aria-label="Aumentar">
+                      <i class="ph ph-plus"></i>
+                    </button>
+                  </div>
+                  <span class="proposta__field-hint" id="proposta-hora-extra-hint"></span>
+                </div>
+                <div class="proposta__field">
+                  <label class="proposta__label proposta__checkbox-label">
+                    <input type="checkbox" id="proposta-churrasqueira" class="proposta__checkbox">
+                    <span class="proposta__checkbox-custom"></span>
+                    <i class="ph ph-fire"></i> Churrasqueira
+                    <span class="proposta__field-price" id="proposta-churr-preco"></span>
+                  </label>
+                </div>
+              </div>
+              <div class="proposta__avisos" id="proposta-avisos" aria-live="polite"></div>
+            </div>
+
+            <div class="proposta__step" data-step="servicos">
+              <h3 class="proposta__step-title">
+                <span class="proposta__step-number">3</span>
+                Serviços Extras <span class="proposta__optional">(opcional)</span>
+              </h3>
+              <div class="proposta__servicos-accordion" id="proposta-servicos">
+              </div>
+            </div>
+          </div>
+
+          <aside class="proposta__resumo" id="proposta-resumo">
+            <div class="proposta__resumo-inner">
+              <h3 class="proposta__resumo-title">
+                <i class="ph ph-receipt"></i> Resumo da Proposta
+              </h3>
+              <div class="proposta__resumo-body" id="proposta-resumo-body">
+                <p class="proposta__resumo-empty">Selecione um roteiro para começar</p>
+              </div>
+              <div class="proposta__resumo-total" id="proposta-resumo-total"></div>
+              <a href="#" class="btn btn-whatsapp proposta__resumo-cta" id="proposta-whatsapp-btn" target="_blank" rel="noopener noreferrer">
+                <i class="ph ph-whatsapp-logo"></i>
+                Enviar Proposta pelo WhatsApp
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
     <!-- CTA Final -->
     <section class="lancha-cta">
       <div class="container">
@@ -547,6 +651,9 @@
   </a>
 
   <!-- Scripts -->
+  <script src="/js/data/lanchas-data.js" defer></script>
+  <script src="/js/data/proposal-servicos-data.js" defer></script>
+  <script src="/js/proposal-builder.js" defer></script>
   <script src="/js/menu.js" defer></script>
   <script src="/js/main.js" defer></script>
 </body>
