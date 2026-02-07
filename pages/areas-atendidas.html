@@ -42,7 +42,7 @@
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 
-  <!-- Schema.org - LocalBusiness -->
+  <!-- Schema.org - LocalBusiness (GEO/SEO Enhanced) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -50,22 +50,74 @@
     "@id": "https://www.weboatbrasil.com.br/#organization",
     "name": "WeBoat Brasil",
     "image": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png",
-    "description": "Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e seguranca.",
+    "description": "Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Gloria",
+      "streetAddress": "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória",
       "addressLocality": "Rio de Janeiro",
       "addressRegion": "RJ",
       "postalCode": "20021-140",
       "addressCountry": "BR"
     },
     "telephone": "+5521977724114",
+    "url": "https://www.weboatbrasil.com.br",
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
       "reviewCount": "900"
-    }
+    },
+    "sameAs": [
+      "https://www.instagram.com/weboatbrasil",
+      "https://wa.me/5521977724114"
+    ],
+    "knowsAbout": [
+      "aluguel de lanchas",
+      "passeios de barco",
+      "eventos náuticos",
+      "turismo náutico Rio de Janeiro"
+    ],
+    "areaServed": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": -22.9068,
+        "longitude": -43.1729
+      },
+      "geoRadius": "50000"
+    },
+    "hasOfferCatalog": [
+      {
+        "@type": "OfferCatalog",
+        "name": "Lanchas para Aluguel",
+        "url": "https://www.weboatbrasil.com.br/pages/lanchas/",
+        "numberOfItems": 26,
+        "itemListElement": {
+          "@type": "Offer",
+          "description": "Lanchas de 10 a 65 pessoas, próprias e parceiras, com combustível, marinheiro e seguro inclusos"
+        }
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Roteiros de Passeio",
+        "url": "https://www.weboatbrasil.com.br/pages/roteiros/",
+        "numberOfItems": 6,
+        "itemListElement": {
+          "@type": "Offer",
+          "description": "6 roteiros de 5h pela Baía de Guanabara, Copacabana, Ilhas Cagarras e Niterói"
+        }
+      },
+      {
+        "@type": "OfferCatalog",
+        "name": "Serviços Extras",
+        "url": "https://www.weboatbrasil.com.br/pages/servicos.html",
+        "numberOfItems": 13,
+        "itemListElement": {
+          "@type": "Offer",
+          "description": "Churrasco, open bar, decoração, DJ e fotógrafo para passeios de lancha"
+        }
+      }
+    ]
   }
   </script>
 
