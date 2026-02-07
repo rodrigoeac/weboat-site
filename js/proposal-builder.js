@@ -9,6 +9,11 @@
   var Data = window.WeBoatData;
   var Servicos = window.WeBoatServicos;
 
+  if (!Data || !Servicos) {
+    console.warn('[WeBoatProposta] Data ou Servicos não carregados. Builder desativado.');
+    return;
+  }
+
   // ==================== CÁLCULOS ====================
 
   /**
@@ -578,6 +583,7 @@
       var header = document.createElement('button');
       header.type = 'button';
       header.className = 'proposta__servico-group-header';
+      header.setAttribute('aria-expanded', 'false');
       var headerSpan = document.createElement('span');
       var headerIcon = document.createElement('i');
       headerIcon.className = 'ph ' + cat.icone;
@@ -639,12 +645,23 @@
         return function () {
           bodyEl.classList.toggle('proposta__servico-group-body--open');
           this.classList.toggle('proposta__servico-group-header--open');
+          var expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', expanded ? 'false' : 'true');
         };
       })(body));
 
       group.appendChild(header);
       group.appendChild(body);
       container.appendChild(group);
+    }
+
+    // Abrir primeiro grupo por padrão
+    var firstBody = container.querySelector('.proposta__servico-group-body');
+    var firstHeader = container.querySelector('.proposta__servico-group-header');
+    if (firstBody) firstBody.classList.add('proposta__servico-group-body--open');
+    if (firstHeader) {
+      firstHeader.classList.add('proposta__servico-group-header--open');
+      firstHeader.setAttribute('aria-expanded', 'true');
     }
 
     var checks = $$('.proposta__servico-check', container);
