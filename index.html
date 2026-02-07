@@ -64,6 +64,11 @@
     .whatsapp-float:hover{transform:scale(1.1);box-shadow:var(--shadow-xl);color:var(--white)}
     @keyframes pulse-whatsapp{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 15px rgba(37,211,102,0)}}
     @media(max-width:768px){.whatsapp-float{bottom:var(--space-4);right:var(--space-4);width:56px;height:56px;font-size:1.75rem}}
+    .back-to-top{position:fixed;bottom:var(--space-6);left:var(--space-6);z-index:var(--z-whatsapp);display:flex;align-items:center;justify-content:center;width:48px;height:48px;background:var(--ocean-deep);border:2px solid var(--wave-blue);border-radius:var(--radius-full);color:var(--white);font-size:1.25rem;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(20px);transition:opacity .3s,visibility .3s,transform .3s;box-shadow:var(--shadow-md)}
+    .back-to-top[hidden]{display:none}
+    .back-to-top.visible{display:flex;opacity:1;visibility:visible;transform:translateY(0)}
+    .back-to-top:hover{background:var(--wave-blue);transform:translateY(-2px)}
+    @media(max-width:768px){.back-to-top{bottom:var(--space-4);left:var(--space-4);width:44px;height:44px;font-size:1.1rem}}
   </style>
 
   <!-- CSS Não-Crítico (below-fold: components, footer) - carrega async -->
@@ -1403,6 +1408,11 @@
       </div>
     </div>
   </footer>
+
+  <!-- Back to Top -->
+  <button class="back-to-top" aria-label="Voltar ao topo" hidden>
+    <i class="ph ph-caret-up"></i>
+  </button>
 
   <!-- WhatsApp Float -->
   <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha no Rio de Janeiro."

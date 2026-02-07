@@ -502,6 +502,28 @@
   }
 
   // ============================================
+  // BACK TO TOP BUTTON
+  // ============================================
+  function initBackToTop() {
+    var btn = document.querySelector('.back-to-top');
+    if (!btn) return;
+
+    btn.removeAttribute('hidden');
+
+    window.addEventListener('scroll', function() {
+      if (window.pageYOffset > 500) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    }, { passive: true });
+
+    btn.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // ============================================
   // INICIALIZAÇÃO
   // ============================================
   function init() {
@@ -514,6 +536,7 @@
     initTabs();
     initBoatFilter();
     initTrustIndexLazy();
+    initBackToTop();
   }
 
   // Executar quando DOM estiver pronto
