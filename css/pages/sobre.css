@@ -685,3 +685,13 @@
     padding: var(--space-12) 0;
   }
 }
+
+/* ============================================
+   Freshness Signal
+   ============================================ */
+.page-freshness {
+  text-align: center;
+  font-size: var(--text-caption);
+  color: var(--driftwood);
+  padding: var(--space-4) 0 var(--space-8);
+}
