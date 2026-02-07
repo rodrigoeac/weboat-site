@@ -11,6 +11,7 @@
   // LAZY LOADING IMAGES
   // ============================================
   function initLazyLoading() {
+    // Handle data-src lazy images (JS-managed)
     const lazyImages = document.querySelectorAll('img[data-src]');
 
     if ('IntersectionObserver' in window) {
@@ -43,6 +44,18 @@
         }
       });
     }
+
+    // Handle native loading="lazy" images (skeleton fade-in)
+    var nativeLazy = document.querySelectorAll('img[loading="lazy"]');
+    nativeLazy.forEach(function(img) {
+      if (img.complete) {
+        img.classList.add('loaded');
+      } else {
+        img.addEventListener('load', function() {
+          img.classList.add('loaded');
+        });
+      }
+    });
   }
 
   // ============================================

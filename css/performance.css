@@ -1,0 +1,50 @@
+/* ============================================
+   WEBOAT BRASIL - PERFORMANCE CSS
+   Skeleton loading states for lazy images
+   ============================================ */
+
+/* ============================================
+   SKELETON SHIMMER
+   ============================================ */
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: -400px 0;
+  }
+  100% {
+    background-position: 400px 0;
+  }
+}
+
+/* Apply skeleton to images that haven't loaded yet */
+img[loading="lazy"] {
+  background: linear-gradient(
+    90deg,
+    var(--pearl-gray) 0%,
+    #e8e8e4 40%,
+    var(--pearl-gray) 80%
+  );
+  background-size: 800px 100%;
+  animation: skeleton-shimmer 1.5s infinite linear;
+}
+
+/* Remove skeleton once loaded */
+img[loading="lazy"].loaded,
+img[loading="lazy"][complete] {
+  background: none;
+  animation: none;
+}
+
+/* Smooth fade-in for lazy images */
+img[loading="lazy"] {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+img[loading="lazy"].loaded {
+  opacity: 1;
+}
+
+/* Images that are already in viewport (no lazy) should be visible */
+img:not([loading="lazy"]) {
+  opacity: 1;
+}
