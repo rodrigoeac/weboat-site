@@ -302,7 +302,7 @@
       ' (' + getHorarioTurno(p.lancha, p.turno) + ')');
     linhas.push('*Pessoas:* ' + p.numPessoas);
 
-    if (p.breakdown.horaExtra.total > 0) {
+    if (b.horaExtra.total > 0 && p.lancha.horaExtra > 0) {
       var horas = Math.round(b.horaExtra.barco / p.lancha.horaExtra);
       linhas.push('*Horas extras:* ' + horas);
     }
@@ -353,6 +353,8 @@
     linhas.push('');
     linhas.push('*TOTAL: ' + formatarMoeda(p.total) + '*');
     linhas.push('(' + formatarMoeda(p.porPessoa) + ' por pessoa)');
+    linhas.push('');
+    linhas.push('Aguardo confirmação de disponibilidade. Obrigado!');
 
     return linhas.join('\n');
   }
