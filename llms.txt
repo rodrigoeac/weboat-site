@@ -1,43 +1,99 @@
-# WeBoat Brasil
+# WeBoat Brasil — Aluguel de Lanchas no Rio de Janeiro
 
-> Empresa de aluguel de lanchas no Rio de Janeiro. Oferece passeios privativos para festas, despedidas de solteira, aniversários e eventos corporativos, saindo da Marina da Glória. Lanchas de 10 a 65 pessoas, todas com combustível, marinheiro e equipamentos inclusos.
+> A WeBoat Brasil oferece aluguel de lanchas privativas no Rio de Janeiro, com saída da Marina da Glória. Frota de 25 embarcações (4 próprias + 21 parceiras) para 10 a 65 pessoas. Todos os passeios incluem combustível, marinheiro, som Bluetooth, coolers, coletes e seguro. Mais de 1.000 passeios realizados e 900+ avaliações 5 estrelas no Google.
 
-## Informações Principais
+## Dados da Empresa
 
-- **Localização:** Marina da Glória, Rio de Janeiro - RJ
-- **Capacidade:** Lanchas de 10 a 65 pessoas
-- **Preços:** A partir de R$ 2.300 (5h de passeio)
-- **Avaliações:** +900 avaliações 5 estrelas no Google
-- **WhatsApp:** (21) 97772-4114
+- Razão Social: WeBoat Brasil
+- CNPJ: 60.567.333/0001-29
+- Endereço: Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória, Rio de Janeiro, RJ 20021-140
+- WhatsApp: +55 21 97772-4114
+- Instagram: @weboatbrasil
+- Site: https://www.weboatbrasil.com.br
+- Horário comercial: 8h às 20h (suporte clientes: 24h)
 
-## Páginas do Site
+## Lanchas Próprias (4 embarcações)
 
-### Lanchas
-- [Nossa Frota](https://www.weboatbrasil.com.br/pages/lanchas/): Todas as lanchas disponíveis para aluguel
-- [WeBoat 32](https://www.weboatbrasil.com.br/pages/lanchas/weboat-32.html): Lancha para 15 pessoas, melhor custo-benefício
-- [WeBoat 390](https://www.weboatbrasil.com.br/pages/lanchas/weboat-390.html): Lancha para 16 pessoas, versátil
-- [WeBoat Oceanic 36](https://www.weboatbrasil.com.br/pages/lanchas/weboat-oceanic-36.html): Lancha premium para 14 pessoas
-- [WeBoat Rio Star 50](https://www.weboatbrasil.com.br/pages/lanchas/weboat-rio-star-50.html): Maior lancha própria, 22 pessoas
+| Lancha | Capacidade | Preço a partir de | Destaque |
+|--------|------------|-------------------|----------|
+| WeBoat 32 | 15 pessoas | R$ 2.300 | Melhor custo-benefício |
+| WeBoat Oceanic 36 | 14 pessoas | R$ 2.400 | Conforto premium |
+| WeBoat 390 | 16 pessoas | R$ 2.600 | Versátil, ótima para festas |
+| WeBoat Rio Star 50 | 22 pessoas | R$ 4.000 | Maior capacidade própria |
 
-### Roteiros
-- [Roteiros Disponíveis](https://www.weboatbrasil.com.br/pages/roteiros/): Todos os trajetos com duração e pontos de parada
-- [Mureta da Urca](https://www.weboatbrasil.com.br/pages/roteiros/mureta-da-urca.html): 5h, vista do Pão de Açúcar
-- [Praia Vermelha](https://www.weboatbrasil.com.br/pages/roteiros/praia-vermelha.html): 5h, mais vendido
-- [Copacabana](https://www.weboatbrasil.com.br/pages/roteiros/copacabana.html): 5h, vista icônica
-- [Ilhas Cagarras](https://www.weboatbrasil.com.br/pages/roteiros/ilhas-cagarras.html): 5h, mar aberto e mergulho
-- [Volta Completa](https://www.weboatbrasil.com.br/pages/roteiros/volta-completa.html): 5h, experiência completa
+## Lanchas Parceiras (21 embarcações)
 
-### Ocasiões Especiais
-- [Despedida de Solteira](https://www.weboatbrasil.com.br/pages/ocasioes/despedida-solteira.html): Pacotes para grupos femininos
-- [Aniversário](https://www.weboatbrasil.com.br/pages/ocasioes/aniversario.html): Festas de aniversário no mar
-- [Corporativo](https://www.weboatbrasil.com.br/pages/ocasioes/corporativo.html): Team building e eventos empresariais
-- [Réveillon](https://www.weboatbrasil.com.br/pages/ocasioes/reveillon.html): Queima de fogos de Copacabana vista do mar
+| Lancha | Capacidade | Preço a partir de |
+|--------|------------|-------------------|
+| Magna 28 | 10 pessoas | R$ 3.000 |
+| Boat Rio 36 | 11 pessoas | R$ 3.500 |
+| WeBoat Real 32 | 12 pessoas | R$ 3.300 |
+| WeBoat Rival 36 | 12 pessoas | R$ 2.900 |
+| Malaga 32 | 14 pessoas | R$ 2.800 |
+| WeBoat Ghost 36 | 15 pessoas | R$ 3.800 |
+| WeBoat Carbrasmar 41 | 16 pessoas | R$ 3.700 |
+| WeBoat 400 | até 22 pessoas | R$ 4.000 |
+| WeBoat Ibiza 45 | 18 pessoas | R$ 4.200 |
+| Intermares 50 | 18 pessoas | R$ 4.500 |
+| WeBoat Senna 50 | até 20 pessoas | R$ 5.500 |
+| Tecnomarine 50 | 20 pessoas | R$ 6.500 |
+| WeBoat Essence | 22 pessoas | R$ 7.000 |
+| WeBoat Mares 50 | 25 pessoas | R$ 5.500 |
+| Barco Gourmet 53 | até 40 pessoas | R$ 7.000 |
+| WeBoat Malik | até 50 pessoas | R$ 8.500 |
+| WeBoat 600 | até 22 pessoas | R$ 7.500 |
+| Prestige 60 | 12 pessoas | R$ 15.000 (6h) |
+| Intermarine 60 Fly | 17 pessoas | R$ 15.000 (6h) |
+| Schaefer 62 Fly | 16 pessoas | R$ 15.000 (6h) |
+| Catamarã Oceano | até 65 pessoas | R$ 14.000 |
+| Catamarã Sagarana | até 35 pessoas | R$ 9.500 |
 
-### Informações
-- [Serviços Extras](https://www.weboatbrasil.com.br/pages/servicos.html): Churrasco, decoração, open bar
-- [Sobre a WeBoat](https://www.weboatbrasil.com.br/pages/sobre.html): História e equipe
-- [FAQ](https://www.weboatbrasil.com.br/pages/faq.html): Perguntas frequentes
-- [Contato](https://www.weboatbrasil.com.br/pages/contato.html): WhatsApp, endereço e formulário
+Nota: São 21 lanchas parceiras + 2 catamarãs = 22 embarcações parceiras listadas + 4 próprias = 26 total na operação de propostas. O site lista 25 embarcações.
+
+## Roteiros Disponíveis (6 opções)
+
+| Roteiro | Duração | Preço base (WeBoat 32) | Destaque |
+|---------|---------|------------------------|----------|
+| R1 - Mureta da Urca | 5h | R$ 2.300 | Melhor custo-benefício, vista Pão de Açúcar |
+| R2 - Praia Vermelha | 5h | R$ 2.500 | Mais vendido |
+| R3 - Copacabana | 5h | R$ 3.000 | Vista icônica |
+| R4 - Ilhas Cagarras | 5h | R$ 3.600 | Mar aberto, mergulho |
+| R5 - Itaipu e Camboinhas | 5h | R$ 3.600 | Praias desertas |
+| R6 - Volta Completa | 5h | R$ 4.500 | Experiência completa pela Baía |
+
+## Serviços Extras
+
+### Churrasco
+- Utilização da churrasqueira: R$ 250 (inclui tripulante, gelo, carvão)
+- Kit Churrasco Simples: R$ 100–150/pessoa (picanha, linguiça, frango, pão de alho, refrigerantes)
+- Churrasco com Acompanhamentos: R$ 145–160/pessoa (carnes premium, acompanhamentos completos)
+
+### Open Bar
+- Open Bar Básico: R$ 135–150/pessoa (caipirinha, caipvodka, gin tônica, cerveja Brahma/Original)
+- Open Bar Premium: R$ 160–180/pessoa (Moscow Mule, Fitzgerald, Heineken/Stella, destilados premium)
+
+### Combos (Churrasco + Open Bar)
+- Combo Básico: R$ 205–230/pessoa
+- Combo Premium: R$ 220–250/pessoa
+
+### Mesas
+- Mesa de Queijos & Vinhos: R$ 115–140/pessoa
+- Mesa de Snacks Premium: R$ 120–150/pessoa
+
+### Decoração
+- Kit Festa e Decoração Premium: R$ 1.850 (até 36 pés) / R$ 2.500 (até 50 pés)
+- Kit Despedida de Solteira: R$ 135–150/pessoa
+
+### Entretenimento
+- DJ com Equipamento de Som: R$ 1.500
+- Fotógrafo Profissional: R$ 800
+
+## Ocasiões Especiais
+
+- Despedida de Solteira: pacotes com decoração temática, open bar e DJ
+- Aniversário: festas com bolo, decoração e churrasco a bordo
+- Eventos Corporativos: team building, confraternização e eventos empresariais
+- Réveillon: vista privilegiada da queima de fogos de Copacabana
 
 ## O que está incluído em todos os passeios
 
@@ -49,9 +105,62 @@
 - Coletes salva-vidas
 - Seguro obrigatório
 
+## Como funciona
+
+1. Escolha a lancha ideal para o seu grupo (10 a 65 pessoas)
+2. Selecione um dos 6 roteiros disponíveis
+3. Adicione serviços extras (churrasco, open bar, decoração)
+4. Reserve pelo WhatsApp: +55 21 97772-4114
+5. Embarque na Marina da Glória e aproveite
+
+## Áreas atendidas
+
+- Baía de Guanabara (Marina da Glória, Mureta da Urca, Praia Vermelha)
+- Zona Sul (Copacabana, Ipanema, Leblon)
+- Ilhas Cagarras (mergulho, snorkeling)
+- Niterói (Itaipu, Camboinhas)
+- Volta completa pela Baía de Guanabara
+
+## Perguntas Frequentes
+
+### Quanto custa alugar uma lancha no Rio de Janeiro?
+O aluguel de lancha na WeBoat começa a partir de R$ 2.300 (WeBoat 32, roteiro Mureta da Urca, seg-qui). Preços variam conforme a lancha, roteiro e dia da semana. Lanchas maiores para até 65 pessoas custam a partir de R$ 14.000.
+
+### Quantas pessoas cabem em uma lancha?
+A WeBoat tem lanchas para 10 a 65 pessoas. Lanchas próprias comportam 14 a 22 pessoas. Lanchas parceiras e catamarãs atendem grupos de até 65 pessoas.
+
+### Preciso ter habilitação náutica?
+Não. Todas as lanchas saem com marinheiro experiente. Os passageiros não precisam de habilitação.
+
+### O que está incluído no preço?
+Combustível, marinheiro, coolers, som Bluetooth, tapete flutuante, macarrões, coletes e seguro obrigatório. Gelo, alimentos e bebidas não estão inclusos (disponíveis como serviço extra).
+
+### Qual é a política de cancelamento?
+Cancelamentos com mais de 48 horas de antecedência: reembolso integral. Cancelamentos por mau tempo: reagendamento sem custo.
+
+### De onde saem os passeios?
+Todos os passeios saem da Marina da Glória, no bairro da Glória, Rio de Janeiro. Endereço: Av. Infante Dom Henrique, S/N, Loja 06.
+
 ## Contato
 
-- **WhatsApp:** [+55 21 97772-4114](https://wa.me/5521977724114)
-- **Instagram:** [@weboatbrasil](https://www.instagram.com/weboatbrasil)
-- **Endereço:** Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória, Rio de Janeiro - RJ
-- **Site:** [www.weboatbrasil.com.br](https://www.weboatbrasil.com.br)
+- WhatsApp: [+55 21 97772-4114](https://wa.me/5521977724114)
+- Instagram: [@weboatbrasil](https://www.instagram.com/weboatbrasil)
+- Site: [www.weboatbrasil.com.br](https://www.weboatbrasil.com.br)
+- Endereço: Marina da Glória, Rio de Janeiro - RJ
+
+## Páginas do Site
+
+- [Home](https://www.weboatbrasil.com.br/): Visão geral da WeBoat
+- [Nossa Frota](https://www.weboatbrasil.com.br/pages/lanchas/): Todas as 25 lanchas disponíveis
+- [Comparativo de Lanchas](https://www.weboatbrasil.com.br/pages/lanchas/comparativo.html): Compare lanchas lado a lado
+- [Roteiros](https://www.weboatbrasil.com.br/pages/roteiros/): 6 roteiros com trajeto e preços
+- [Serviços Extras](https://www.weboatbrasil.com.br/pages/servicos.html): Churrasco, open bar, decoração
+- [Como Funciona](https://www.weboatbrasil.com.br/pages/como-funciona.html): Passo a passo para reservar
+- [Áreas Atendidas](https://www.weboatbrasil.com.br/pages/areas-atendidas.html): Regiões cobertas pelos passeios
+- [Despedida de Solteira](https://www.weboatbrasil.com.br/pages/ocasioes/despedida-solteira.html): Pacotes para despedidas
+- [Aniversário](https://www.weboatbrasil.com.br/pages/ocasioes/aniversario.html): Festas de aniversário no mar
+- [Corporativo](https://www.weboatbrasil.com.br/pages/ocasioes/corporativo.html): Eventos empresariais
+- [Réveillon](https://www.weboatbrasil.com.br/pages/ocasioes/reveillon.html): Queima de fogos no mar
+- [Sobre](https://www.weboatbrasil.com.br/pages/sobre.html): História da WeBoat
+- [FAQ](https://www.weboatbrasil.com.br/pages/faq.html): Perguntas frequentes
+- [Contato](https://www.weboatbrasil.com.br/pages/contato.html): WhatsApp, endereço e formulário
