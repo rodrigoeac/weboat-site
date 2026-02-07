@@ -39,9 +39,9 @@
   <link rel="dns-prefetch" href="https://unpkg.com">
   <link rel="dns-prefetch" href="https://cdn.trustindex.io">
 
-  <!-- Preload Hero Images (LCP) -->
-  <link rel="preload" as="image" href="/assets/images/hero/hero-home-desktop.jpg" media="(min-width: 769px)" fetchpriority="high">
-  <link rel="preload" as="image" href="/assets/images/hero/hero-home-mobile.jpg" media="(max-width: 768px)" fetchpriority="high">
+  <!-- Preload Hero Images (LCP) - WebP com fallback -->
+  <link rel="preload" as="image" href="/assets/images/hero/hero-home-desktop.webp" media="(min-width: 769px)" fetchpriority="high" type="image/webp">
+  <link rel="preload" as="image" href="/assets/images/hero/hero-home-mobile.webp" media="(max-width: 768px)" fetchpriority="high" type="image/webp">
 
   <!-- CSS Crítico (acima da dobra) -->
   <link rel="stylesheet" href="/css/variables.css">
@@ -336,7 +336,9 @@
     <section class="hero" id="hero">
       <div class="hero__background">
         <picture>
+          <source media="(min-width: 769px)" srcset="/assets/images/hero/hero-home-desktop-800w.webp 800w, /assets/images/hero/hero-home-desktop-1600w.webp 1600w" sizes="100vw" type="image/webp">
           <source media="(min-width: 769px)" srcset="/assets/images/hero/hero-home-desktop.jpg">
+          <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile-800w.webp 800w, /assets/images/hero/hero-home-mobile-1600w.webp 1600w" sizes="100vw" type="image/webp">
           <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile.jpg">
           <img src="/assets/images/hero/hero-home-desktop.jpg" alt="Lancha navegando na Baía de Guanabara com vista para o Cristo Redentor ao pôr do sol" loading="eager" decoding="sync" fetchpriority="high" width="1920" height="1280">
         </picture>
@@ -411,7 +413,10 @@
           <!-- Card WeBoat 32 -->
           <article class="card-boat">
             <div class="card-boat__image">
-              <img src="/assets/images/lanchas/weboat-32.jpg" alt="WeBoat 32 - Lancha para 15 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/weboat-32-400w.webp 400w, /assets/images/lanchas/weboat-32-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/weboat-32.jpg" alt="WeBoat 32 - Lancha para 15 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-boat__badge">
                 <i class="ph ph-star-fill"></i>
                 Própria WeBoat
@@ -456,7 +461,10 @@
           <!-- Card WeBoat 390 -->
           <article class="card-boat">
             <div class="card-boat__image">
-              <img src="/assets/images/lanchas/weboat-390.jpg" alt="WeBoat 390 - Lancha para 16 pessoas com churrasqueira" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/weboat-390-400w.webp 400w, /assets/images/lanchas/weboat-390-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/weboat-390.jpg" alt="WeBoat 390 - Lancha para 16 pessoas com churrasqueira" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-boat__badge">
                 <i class="ph ph-star-fill"></i>
                 Própria WeBoat
@@ -501,7 +509,10 @@
           <!-- Card WeBoat Oceanic 36 -->
           <article class="card-boat">
             <div class="card-boat__image">
-              <img src="/assets/images/lanchas/weboat-oceanic-36.jpg" alt="WeBoat Oceanic 36 - Lancha premium para 14 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/weboat-oceanic-36-400w.webp 400w, /assets/images/lanchas/weboat-oceanic-36-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/weboat-oceanic-36.jpg" alt="WeBoat Oceanic 36 - Lancha premium para 14 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-boat__badge">
                 <i class="ph ph-star-fill"></i>
                 Própria WeBoat
@@ -546,7 +557,10 @@
           <!-- Card WeBoat Rio Star 50 -->
           <article class="card-boat">
             <div class="card-boat__image">
-              <img src="/assets/images/lanchas/weboat-rio-star-50.jpg" alt="WeBoat Rio Star 50 - Nossa maior lancha para 22 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/weboat-rio-star-50-400w.webp 400w, /assets/images/lanchas/weboat-rio-star-50-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/weboat-rio-star-50.jpg" alt="WeBoat Rio Star 50 - Nossa maior lancha para 22 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-boat__badge">
                 <i class="ph ph-star-fill"></i>
                 Própria WeBoat
@@ -617,7 +631,10 @@
           <!-- Barco Gourmet 53 -->
           <article class="card-evento">
             <div class="card-evento__image">
-              <img src="/assets/images/lanchas/parceiras/barco-gourmet-53.jpg" alt="Barco Gourmet 53 - Eventos para 30-40 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/parceiras/barco-gourmet-53-400w.webp 400w, /assets/images/lanchas/parceiras/barco-gourmet-53-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/parceiras/barco-gourmet-53.jpg" alt="Barco Gourmet 53 - Eventos para 30-40 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-evento__badge"><i class="ph ph-champagne"></i> Eventos</span>
             </div>
             <div class="card-evento__content">
@@ -631,7 +648,10 @@
           <!-- WeBoat Malik -->
           <article class="card-evento">
             <div class="card-evento__image">
-              <img src="/assets/images/lanchas/parceiras/weboat-malik.jpg" alt="WeBoat Malik - Eventos para 35-50 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/parceiras/weboat-malik-400w.webp 400w, /assets/images/lanchas/parceiras/weboat-malik-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/parceiras/weboat-malik.jpg" alt="WeBoat Malik - Eventos para 35-50 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-evento__badge"><i class="ph ph-speaker-high"></i> Som Profissional</span>
             </div>
             <div class="card-evento__content">
@@ -645,7 +665,10 @@
           <!-- Catamarã Sagarana -->
           <article class="card-evento">
             <div class="card-evento__image">
-              <img src="/assets/images/lanchas/parceiras/catamara-sagarana.jpg" alt="Catamarã Sagarana - Eventos para 20-35 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/parceiras/catamara-sagarana-400w.webp 400w, /assets/images/lanchas/parceiras/catamara-sagarana-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/parceiras/catamara-sagarana.jpg" alt="Catamarã Sagarana - Eventos para 20-35 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-evento__badge"><i class="ph ph-boat"></i> Catamarã</span>
             </div>
             <div class="card-evento__content">
@@ -659,7 +682,10 @@
           <!-- Catamarã Oceano -->
           <article class="card-evento">
             <div class="card-evento__image">
-              <img src="/assets/images/lanchas/parceiras/catamara-oceano.jpg" alt="Catamarã Oceano - Maior embarcação para 50-65 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source srcset="/assets/images/lanchas/parceiras/catamara-oceano-400w.webp 400w, /assets/images/lanchas/parceiras/catamara-oceano-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
+                <img src="/assets/images/lanchas/parceiras/catamara-oceano.jpg" alt="Catamarã Oceano - Maior embarcação para 50-65 pessoas" loading="lazy" decoding="async" width="400" height="300">
+              </picture>
               <span class="card-evento__badge"><i class="ph ph-crown"></i> Maior Capacidade</span>
             </div>
             <div class="card-evento__content">
@@ -847,7 +873,10 @@
 
         <div class="diferenciais__content">
           <div class="diferenciais__image">
-            <img src="/assets/images/hero/equipe-weboat-home.jpg" alt="Marinheiro WeBoat com camisa da empresa e Cristo Redentor ao fundo" loading="lazy" decoding="async" width="600" height="400">
+            <picture>
+              <source srcset="/assets/images/hero/equipe-weboat-home-800w.webp 800w, /assets/images/hero/equipe-weboat-home-1600w.webp 1600w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp">
+              <img src="/assets/images/hero/equipe-weboat-home.jpg" alt="Marinheiro WeBoat com camisa da empresa e Cristo Redentor ao fundo" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
           </div>
 
           <div class="diferenciais__list">
