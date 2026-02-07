@@ -1,37 +1,38 @@
 # Robots.txt - WeBoat Brasil
 # https://www.weboatbrasil.com.br
 
+# Regra padrão para todos os crawlers
 User-agent: *
 Allow: /
+Disallow: /templates/
+Disallow: /docs/
+Disallow: /*.md$
 
 # Sitemap
 Sitemap: https://www.weboatbrasil.com.br/sitemap.xml
 
-# Bloquear diretórios de desenvolvimento
-Disallow: /templates/
-Disallow: /docs/
-
-# Bloquear arquivos de configuração
-Disallow: /*.md$
-Disallow: /CLAUDE.md
+# LLMs.txt (informações estruturadas para IA)
+# https://www.weboatbrasil.com.br/llms.txt
 
 # ============================================
 # Crawlers de IA - Configuração GEO/SEO
 # ============================================
 
-# ChatGPT Search (aparecer nos resultados de busca)
-User-agent: OAI-SearchBot
+# --- PERMITIR: Crawlers de busca/retrieval ---
+
+# Bing (índice alimenta ChatGPT Search e Microsoft Copilot)
+User-agent: Bingbot
 Allow: /
 
-# Treinamento OpenAI (bloquear uso para treinar modelos)
-User-agent: GPTBot
-Disallow: /
+# ChatGPT Search (aparecer nos resultados de busca da OpenAI)
+User-agent: OAI-SearchBot
+Allow: /
 
 # ChatGPT navegação em tempo real (quando usuário pede para ler URL)
 User-agent: ChatGPT-User
 Allow: /
 
-# Claude (Anthropic)
+# Claude (Anthropic - busca e pesquisa)
 User-agent: ClaudeBot
 Allow: /
 User-agent: Claude-SearchBot
@@ -49,6 +50,12 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-# Bytespider (TikTok/ByteDance)
+# --- BLOQUEAR: Crawlers de treinamento ---
+
+# Treinamento OpenAI (bloquear uso para treinar modelos)
+User-agent: GPTBot
+Disallow: /
+
+# Bytespider (TikTok/ByteDance - treinamento)
 User-agent: Bytespider
 Disallow: /
