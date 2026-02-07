@@ -43,14 +43,33 @@
   <link rel="preload" as="image" href="/assets/images/hero/hero-home-desktop.webp" media="(min-width: 769px)" fetchpriority="high" type="image/webp">
   <link rel="preload" as="image" href="/assets/images/hero/hero-home-mobile.webp" media="(max-width: 768px)" fetchpriority="high" type="image/webp">
 
-  <!-- CSS Crítico (acima da dobra) -->
+  <!-- CSS Crítico (above-fold: variáveis, header, hero) -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/pages/home.css">
 
-  <!-- CSS Não-Crítico (abaixo da dobra) - carrega async -->
-  <link rel="preload" href="/css/footer.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <!-- Critical component styles (inline to avoid FOUC while components.css loads async) -->
+  <style>
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);padding:var(--space-3) var(--space-6);font-family:var(--font-heading);font-size:var(--text-button);font-weight:var(--weight-button);letter-spacing:var(--tracking-button);text-decoration:none;border-radius:var(--radius-md);border:2px solid transparent;cursor:pointer;transition:all var(--transition-base);min-height:48px;white-space:nowrap}
+    .btn:focus-visible{outline:2px solid var(--wave-blue);outline-offset:2px}
+    .btn-primary{background:var(--sunset-gold);color:var(--ocean-deep);border-color:var(--sunset-gold)}
+    .btn-primary:hover{background:var(--sunset-gold-hover);border-color:var(--sunset-gold-hover);box-shadow:var(--shadow-button);transform:translateY(-2px);color:var(--ocean-deep)}
+    .btn-whatsapp{background:var(--whatsapp-green);color:var(--white);border-color:var(--whatsapp-green)}
+    .btn-whatsapp:hover{background:var(--whatsapp-green-hover);border-color:var(--whatsapp-green-hover);transform:translateY(-2px);color:var(--white)}
+    .btn-outline-white{background:transparent;color:var(--white);border-color:var(--white)}
+    .btn-outline-white:hover{background:var(--white);color:var(--ocean-deep)}
+    .btn-lg{padding:var(--space-4) var(--space-8);font-size:var(--text-body-lg);min-height:56px}
+    .btn i,.btn svg{font-size:1.25em}
+    .whatsapp-float{position:fixed;bottom:var(--space-6);right:var(--space-6);z-index:var(--z-whatsapp);display:flex;align-items:center;justify-content:center;width:60px;height:60px;background:var(--whatsapp-green);border-radius:var(--radius-full);color:var(--white);font-size:2rem;box-shadow:var(--shadow-lg);transition:all var(--transition-base);animation:pulse-whatsapp 2s infinite}
+    .whatsapp-float:hover{transform:scale(1.1);box-shadow:var(--shadow-xl);color:var(--white)}
+    @keyframes pulse-whatsapp{0%,100%{box-shadow:0 0 0 0 rgba(37,211,102,.4)}50%{box-shadow:0 0 0 15px rgba(37,211,102,0)}}
+    @media(max-width:768px){.whatsapp-float{bottom:var(--space-4);right:var(--space-4);width:56px;height:56px;font-size:1.75rem}}
+  </style>
+
+  <!-- CSS Não-Crítico (below-fold: components, footer) - carrega async -->
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
 
   <!-- Phosphor Icons -->
