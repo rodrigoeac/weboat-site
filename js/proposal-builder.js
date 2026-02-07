@@ -365,6 +365,597 @@
     return 'https://wa.me/5521977724114?text=' + encodeURIComponent(msg);
   }
 
+  // ==================== UI / DOM ====================
+  // Note: All innerHTML assignments below use data from our own hardcoded
+  // data modules (lanchas-data.js, proposal-servicos-data.js). No user input
+  // is ever interpolated into HTML strings, so XSS is not a concern.
+
+  var state = {
+    lancha: null,
+    roteiroId: null,
+    isPromocional: false,
+    numPessoas: 10,
+    turno: 'manha',
+    horasExtras: 0,
+    servicosIds: [],
+    churrasqueiraAtiva: false,
+    acLigado: false,
+  };
+
+  var els = {};
+
+  function $(sel, ctx) { return (ctx || document).querySelector(sel); }
+  function $$(sel, ctx) { return (ctx || document).querySelectorAll(sel); }
+
+  function renderRoteiros() {
+    var container = els.roteiros;
+    if (!container) return;
+    container.textContent = '';
+    var rotKeys = ['R1', 'R2', 'R3', 'R4', 'R5'];
+
+    for (var i = 0; i < rotKeys.length; i++) {
+      var key = rotKeys[i];
+      var rot = Data.ROTEIROS[key];
+      var precoData = state.lancha.roteiros[key];
+      var disabled = precoData === null;
+
+      var card = document.createElement('label');
+      card.className = 'proposta__roteiro-card' + (disabled ? ' proposta__roteiro-card--disabled' : '');
+
+      var input = document.createElement('input');
+      input.type = 'radio';
+      input.name = 'proposta-roteiro';
+      input.value = key;
+      input.className = 'proposta__roteiro-radio';
+      input.disabled = disabled;
+
+      var content = document.createElement('div');
+      content.className = 'proposta__roteiro-content';
+
+      var nome = document.createElement('span');
+      nome.className = 'proposta__roteiro-nome';
+      nome.textContent = rot.nome;
+
+      var duracao = document.createElement('span');
+      duracao.className = 'proposta__roteiro-duracao';
+      duracao.textContent = rot.duracao + 'h';
+
+      var precoEl = document.createElement('div');
+      precoEl.className = 'proposta__roteiro-preco';
+
+      if (disabled) {
+        var indispSpan = document.createElement('span');
+        indispSpan.className = 'proposta__roteiro-indisponivel';
+        indispSpan.textContent = 'Indisponível';
+        precoEl.appendChild(indispSpan);
+      } else if (precoData.normal !== undefined) {
+        var normalSpan = document.createElement('span');
+        normalSpan.className = 'proposta__preco-normal';
+        normalSpan.textContent = formatarMoeda(precoData.normal);
+        var promoSpan = document.createElement('span');
+        promoSpan.className = 'proposta__preco-promo';
+        promoSpan.textContent = formatarMoeda(precoData.promocional);
+        precoEl.appendChild(normalSpan);
+        precoEl.appendChild(promoSpan);
+      } else {
+        var unicoSpan = document.createElement('span');
+        unicoSpan.className = 'proposta__preco-unico';
+        unicoSpan.textContent = formatarMoeda(precoData.preco);
+        precoEl.appendChild(unicoSpan);
+      }
+
+      content.appendChild(nome);
+      content.appendChild(duracao);
+      content.appendChild(precoEl);
+      card.appendChild(input);
+      card.appendChild(content);
+      container.appendChild(card);
+    }
+
+    var radios = $$('input[name="proposta-roteiro"]', container);
+    for (var j = 0; j < radios.length; j++) {
+      radios[j].addEventListener('change', function () {
+        state.roteiroId = this.value;
+        var pd = state.lancha.roteiros[this.value];
+        state.isPromocional = !!(pd && pd.promocional !== undefined);
+        updateActiveCard(container, this);
+        recalcular();
+      });
+    }
+  }
+
+  function updateActiveCard(container, activeInput) {
+    var cards = $$('.proposta__roteiro-card', container);
+    for (var i = 0; i < cards.length; i++) {
+      cards[i].classList.remove('proposta__roteiro-card--active');
+    }
+    if (activeInput && activeInput.parentElement) {
+      activeInput.parentElement.classList.add('proposta__roteiro-card--active');
+    }
+  }
+
+  function renderTurnos() {
+    var container = els.turnos;
+    if (!container) return;
+    container.textContent = '';
+    var lancha = state.lancha;
+
+    if (lancha.turnos.tipo === 'flexivel') {
+      var lbl = document.createElement('label');
+      lbl.className = 'proposta__turno-option proposta__turno-option--active';
+      var radio = document.createElement('input');
+      radio.type = 'radio'; radio.name = 'proposta-turno'; radio.value = 'manha';
+      radio.className = 'proposta__turno-radio'; radio.checked = true;
+      var span = document.createElement('span');
+      span.className = 'proposta__turno-label';
+      var icon = document.createElement('i');
+      icon.className = 'ph ph-sun';
+      span.appendChild(icon);
+      span.appendChild(document.createTextNode(' Horário Flexível'));
+      var small = document.createElement('small');
+      small.textContent = lancha.turnos.duracao + 'h de duração';
+      span.appendChild(small);
+      lbl.appendChild(radio);
+      lbl.appendChild(span);
+      container.appendChild(lbl);
+      state.turno = 'manha';
+      return;
+    }
+
+    var turnos = [
+      { key: 'manha', icon: 'ph-sun', label: 'Manhã', config: lancha.turnos.manha },
+      { key: 'tarde', icon: 'ph-moon', label: 'Tarde', config: lancha.turnos.tarde },
+    ];
+
+    for (var i = 0; i < turnos.length; i++) {
+      var t = turnos[i];
+      if (!t.config) continue;
+      var adicionalText = t.config.adicional ? ' (+' + formatarMoeda(t.config.adicional) + ')' : '';
+
+      var lbl2 = document.createElement('label');
+      lbl2.className = 'proposta__turno-option' + (i === 0 ? ' proposta__turno-option--active' : '');
+      var radio2 = document.createElement('input');
+      radio2.type = 'radio'; radio2.name = 'proposta-turno'; radio2.value = t.key;
+      radio2.className = 'proposta__turno-radio';
+      if (i === 0) radio2.checked = true;
+      var span2 = document.createElement('span');
+      span2.className = 'proposta__turno-label';
+      var icon2 = document.createElement('i');
+      icon2.className = 'ph ' + t.icon;
+      span2.appendChild(icon2);
+      span2.appendChild(document.createTextNode(' ' + t.label));
+      var small2 = document.createElement('small');
+      small2.textContent = t.config.horario + adicionalText;
+      span2.appendChild(small2);
+      lbl2.appendChild(radio2);
+      lbl2.appendChild(span2);
+      container.appendChild(lbl2);
+    }
+
+    var radios = $$('input[name="proposta-turno"]', container);
+    for (var j = 0; j < radios.length; j++) {
+      radios[j].addEventListener('change', function () {
+        state.turno = this.value;
+        var opts = $$('.proposta__turno-option', container);
+        for (var k = 0; k < opts.length; k++) opts[k].classList.remove('proposta__turno-option--active');
+        this.closest('.proposta__turno-option').classList.add('proposta__turno-option--active');
+        recalcular();
+      });
+    }
+  }
+
+  function findFaixa(svc, numPessoas) {
+    if (!svc.faixasPreco) return null;
+    for (var k = 0; k < svc.faixasPreco.length; k++) {
+      if (numPessoas >= svc.faixasPreco[k].min && numPessoas <= svc.faixasPreco[k].max) {
+        return svc.faixasPreco[k];
+      }
+    }
+    if (numPessoas > svc.faixasPreco[svc.faixasPreco.length - 1].max) {
+      return svc.faixasPreco[svc.faixasPreco.length - 1];
+    }
+    return null;
+  }
+
+  function renderServicos() {
+    var container = els.servicos;
+    if (!container) return;
+    container.textContent = '';
+    var cats = Servicos.CATEGORIAS;
+
+    var catKeys = Object.keys(cats);
+    for (var i = 0; i < catKeys.length; i++) {
+      var catKey = catKeys[i];
+      var cat = cats[catKey];
+      var services = Servicos.getServicosPorCategoria(catKey);
+      if (services.length === 0) continue;
+
+      var group = document.createElement('div');
+      group.className = 'proposta__servico-group';
+
+      var header = document.createElement('button');
+      header.type = 'button';
+      header.className = 'proposta__servico-group-header';
+      var headerSpan = document.createElement('span');
+      var headerIcon = document.createElement('i');
+      headerIcon.className = 'ph ' + cat.icone;
+      headerSpan.appendChild(headerIcon);
+      headerSpan.appendChild(document.createTextNode(' ' + cat.nome));
+      var caretIcon = document.createElement('i');
+      caretIcon.className = 'ph ph-caret-down proposta__servico-caret';
+      header.appendChild(headerSpan);
+      header.appendChild(caretIcon);
+
+      var body = document.createElement('div');
+      body.className = 'proposta__servico-group-body';
+
+      for (var j = 0; j < services.length; j++) {
+        var svc = services[j];
+        var item = document.createElement('label');
+        item.className = 'proposta__servico-item';
+
+        var check = document.createElement('input');
+        check.type = 'checkbox'; check.value = svc.id;
+        check.className = 'proposta__servico-check';
+
+        var customCheck = document.createElement('span');
+        customCheck.className = 'proposta__checkbox-custom';
+
+        var infoSpan = document.createElement('span');
+        infoSpan.className = 'proposta__servico-info';
+        var nomeSpan = document.createElement('span');
+        nomeSpan.className = 'proposta__servico-nome';
+        nomeSpan.textContent = svc.nome;
+        infoSpan.appendChild(nomeSpan);
+
+        if (svc.tipo === 'por_pessoa') {
+          var faixa = findFaixa(svc, state.numPessoas);
+          if (faixa) {
+            var ppSmall = document.createElement('small');
+            ppSmall.className = 'proposta__servico-pp';
+            ppSmall.textContent = formatarMoeda(faixa.valorPorPessoa) + '/pessoa';
+            infoSpan.appendChild(ppSmall);
+          }
+        }
+
+        var preco = Servicos.calcularPrecoServico(
+          svc, state.numPessoas,
+          Servicos.determinarTamanhoEmbarcacao(state.lancha.id)
+        );
+        var precoSpan = document.createElement('span');
+        precoSpan.className = 'proposta__servico-preco';
+        precoSpan.textContent = preco !== null ? formatarMoeda(preco) : '—';
+
+        item.appendChild(check);
+        item.appendChild(customCheck);
+        item.appendChild(infoSpan);
+        item.appendChild(precoSpan);
+        body.appendChild(item);
+      }
+
+      header.addEventListener('click', (function (bodyEl) {
+        return function () {
+          bodyEl.classList.toggle('proposta__servico-group-body--open');
+          this.classList.toggle('proposta__servico-group-header--open');
+        };
+      })(body));
+
+      group.appendChild(header);
+      group.appendChild(body);
+      container.appendChild(group);
+    }
+
+    var checks = $$('.proposta__servico-check', container);
+    for (var c = 0; c < checks.length; c++) {
+      checks[c].addEventListener('change', function () {
+        var idx = state.servicosIds.indexOf(this.value);
+        if (this.checked && idx === -1) {
+          state.servicosIds.push(this.value);
+        } else if (!this.checked && idx !== -1) {
+          state.servicosIds.splice(idx, 1);
+        }
+        recalcular();
+      });
+    }
+  }
+
+  function renderResumo(proposta) {
+    var body = els.resumoBody;
+    var totalEl = els.resumoTotal;
+    var btn = els.whatsappBtn;
+    if (!body) return;
+
+    if (!proposta || proposta.erro) {
+      body.textContent = '';
+      var emptyP = document.createElement('p');
+      emptyP.className = 'proposta__resumo-empty';
+      emptyP.textContent = proposta && proposta.erro ? proposta.erro : 'Selecione um roteiro para começar';
+      body.appendChild(emptyP);
+      totalEl.textContent = '';
+      btn.style.display = 'none';
+      return;
+    }
+
+    var b = proposta.breakdown;
+    var dl = document.createElement('dl');
+    dl.className = 'proposta__resumo-list';
+
+    function addLine(label, value, extraClass) {
+      var dt = document.createElement('dt');
+      if (extraClass) dt.className = extraClass;
+      dt.textContent = label;
+      var dd = document.createElement('dd');
+      dd.textContent = formatarMoeda(value);
+      dl.appendChild(dt);
+      dl.appendChild(dd);
+    }
+
+    var roteiroLabel = proposta.roteiro.nome;
+    if (proposta.isPromocional) roteiroLabel += ' (promo)';
+    addLine(roteiroLabel, b.precoRoteiro);
+
+    if (b.adicionalTurno > 0) addLine('Adicional turno tarde', b.adicionalTurno);
+    if (b.custoExtras > 0) addLine('Pessoas extras', b.custoExtras);
+    if (b.taxaChurrasqueira > 0) addLine('Churrasqueira', b.taxaChurrasqueira);
+    if (b.adicionalAC > 0) addLine('Ar-condicionado', b.adicionalAC);
+
+    for (var i = 0; i < b.servicos.length; i++) {
+      addLine(b.servicos[i].servico.nome, b.servicos[i].precoBase);
+    }
+
+    if (b.horaExtra.total > 0) {
+      addLine('Hora extra (embarcação)', b.horaExtra.barco);
+      if (b.horaExtra.servicos > 0) {
+        addLine('Hora extra (serviços +20%)', b.horaExtra.servicos);
+      }
+    }
+
+    if (b.guardaVidas > 0) addLine('Guarda-vidas', b.guardaVidas);
+
+    body.textContent = '';
+    body.appendChild(dl);
+
+    // Total
+    totalEl.textContent = '';
+    var totalLine = document.createElement('div');
+    totalLine.className = 'proposta__total-line';
+    var totalLabel = document.createElement('span');
+    totalLabel.className = 'proposta__total-label';
+    totalLabel.textContent = 'Total';
+    var totalValor = document.createElement('span');
+    totalValor.className = 'proposta__total-valor';
+    totalValor.textContent = formatarMoeda(proposta.total);
+    totalLine.appendChild(totalLabel);
+    totalLine.appendChild(totalValor);
+    totalEl.appendChild(totalLine);
+
+    var ppDiv = document.createElement('div');
+    ppDiv.className = 'proposta__total-pp';
+    ppDiv.textContent = formatarMoeda(proposta.porPessoa) + ' por pessoa (' + proposta.numPessoas + ' pessoas)';
+    totalEl.appendChild(ppDiv);
+
+    btn.href = gerarLinkWhatsApp(proposta);
+    btn.style.display = '';
+  }
+
+  function renderAvisos(proposta) {
+    var container = els.avisos;
+    if (!container) return;
+    container.textContent = '';
+
+    if (!proposta || !proposta.capacidade || !proposta.capacidade.tipo) return;
+
+    var div = document.createElement('div');
+    div.className = 'proposta__aviso proposta__aviso--' + proposta.capacidade.tipo;
+    var icon = document.createElement('i');
+    icon.className = 'ph ph-warning-circle';
+    div.appendChild(icon);
+    div.appendChild(document.createTextNode(' ' + proposta.capacidade.mensagem));
+    container.appendChild(div);
+  }
+
+  function recalcular() {
+    if (!state.roteiroId) {
+      renderResumo(null);
+      return;
+    }
+
+    var proposta = calcularTotalProposta(state);
+    renderResumo(proposta);
+    renderAvisos(proposta);
+
+    var churrHint = els.churrPreco;
+    if (churrHint) {
+      var excluida = false;
+      for (var i = 0; i < state.servicosIds.length; i++) {
+        var svc = Servicos.getServicoPorId(state.servicosIds[i]);
+        if (svc && svc.excluiTaxaChurrasqueira) { excluida = true; break; }
+      }
+      churrHint.textContent = excluida
+        ? '(inclusa no serviço)'
+        : formatarMoeda(state.lancha.churrasqueira);
+    }
+
+    var heHint = els.horaExtraHint;
+    if (heHint) {
+      heHint.textContent = state.lancha.horaExtra > 0
+        ? formatarMoeda(state.lancha.horaExtra) + '/hora'
+        : 'Não disponível';
+    }
+  }
+
+  function setupSteppers() {
+    var btns = $$('.proposta__stepper-btn');
+    for (var i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        var targetId = this.getAttribute('data-target');
+        var input = document.getElementById(targetId);
+        if (!input) return;
+
+        var val = parseInt(input.value, 10) || 0;
+        var min = parseInt(input.min, 10) || 0;
+        var max = parseInt(input.max, 10) || 999;
+        var action = this.getAttribute('data-action');
+
+        if (action === 'increment' && val < max) val++;
+        if (action === 'decrement' && val > min) val--;
+        input.value = val;
+
+        if (targetId === 'proposta-pessoas') {
+          state.numPessoas = val;
+          updateServicosPrecos();
+        }
+        if (targetId === 'proposta-horas-extras') {
+          state.horasExtras = val;
+        }
+        recalcular();
+      });
+    }
+
+    var pessoasInput = document.getElementById('proposta-pessoas');
+    if (pessoasInput) {
+      pessoasInput.addEventListener('input', function () {
+        state.numPessoas = parseInt(this.value, 10) || 1;
+        updateServicosPrecos();
+        recalcular();
+      });
+    }
+    var heInput = document.getElementById('proposta-horas-extras');
+    if (heInput) {
+      heInput.addEventListener('input', function () {
+        state.horasExtras = parseInt(this.value, 10) || 0;
+        recalcular();
+      });
+    }
+  }
+
+  function updateServicosPrecos() {
+    var items = $$('.proposta__servico-item');
+    var tamanho = Servicos.determinarTamanhoEmbarcacao(state.lancha.id);
+
+    for (var i = 0; i < items.length; i++) {
+      var check = $('.proposta__servico-check', items[i]);
+      if (!check) continue;
+      var svc = Servicos.getServicoPorId(check.value);
+      if (!svc) continue;
+
+      var preco = Servicos.calcularPrecoServico(svc, state.numPessoas, tamanho);
+      var precoEl = $('.proposta__servico-preco', items[i]);
+      if (precoEl) precoEl.textContent = preco !== null ? formatarMoeda(preco) : '—';
+
+      var ppEl = $('.proposta__servico-pp', items[i]);
+      if (ppEl && svc.tipo === 'por_pessoa') {
+        var faixa = findFaixa(svc, state.numPessoas);
+        ppEl.textContent = faixa ? formatarMoeda(faixa.valorPorPessoa) + '/pessoa' : '';
+      }
+    }
+  }
+
+  function setupChurrasqueira() {
+    var chk = document.getElementById('proposta-churrasqueira');
+    if (!chk) return;
+    chk.addEventListener('change', function () {
+      state.churrasqueiraAtiva = this.checked;
+      recalcular();
+    });
+  }
+
+  function setupACToggle() {
+    if (!state.lancha.gerador || !state.lancha.gerador.adicionalArCondicionado) return;
+
+    var detalhesGrid = $('.proposta__detalhes-grid');
+    if (!detalhesGrid) return;
+
+    var field = document.createElement('div');
+    field.className = 'proposta__field';
+    var lbl = document.createElement('label');
+    lbl.className = 'proposta__label proposta__checkbox-label';
+    var chk = document.createElement('input');
+    chk.type = 'checkbox'; chk.id = 'proposta-ac'; chk.className = 'proposta__checkbox';
+    var customChk = document.createElement('span');
+    customChk.className = 'proposta__checkbox-custom';
+    var icon = document.createElement('i');
+    icon.className = 'ph ph-snowflake';
+    var priceSpan = document.createElement('span');
+    priceSpan.className = 'proposta__field-price';
+    priceSpan.textContent = formatarMoeda(state.lancha.gerador.adicionalArCondicionado);
+    lbl.appendChild(chk);
+    lbl.appendChild(customChk);
+    lbl.appendChild(icon);
+    lbl.appendChild(document.createTextNode(' Ar-Condicionado'));
+    lbl.appendChild(priceSpan);
+    field.appendChild(lbl);
+    detalhesGrid.appendChild(field);
+
+    chk.addEventListener('change', function () {
+      state.acLigado = this.checked;
+      recalcular();
+    });
+  }
+
+  function initPropostaBuilder() {
+    var section = document.querySelector('[data-lancha-id]');
+    if (!section) return;
+
+    var lanchaId = section.getAttribute('data-lancha-id');
+    var lancha = Data.getLanchaById(lanchaId);
+    if (!lancha) return;
+
+    state.lancha = lancha;
+    state.numPessoas = Math.min(10, lancha.capacidade.base);
+
+    els.roteiros = document.querySelector('.proposta__roteiros');
+    els.turnos = document.querySelector('.proposta__turno-options');
+    els.servicos = document.getElementById('proposta-servicos');
+    els.resumoBody = document.getElementById('proposta-resumo-body');
+    els.resumoTotal = document.getElementById('proposta-resumo-total');
+    els.whatsappBtn = document.getElementById('proposta-whatsapp-btn');
+    els.avisos = document.getElementById('proposta-avisos');
+    els.churrPreco = document.getElementById('proposta-churr-preco');
+    els.horaExtraHint = document.getElementById('proposta-hora-extra-hint');
+    els.capacidadeHint = document.getElementById('proposta-capacidade-hint');
+
+    var pessoasInput = document.getElementById('proposta-pessoas');
+    if (pessoasInput) {
+      pessoasInput.max = lancha.capacidade.maxima;
+      pessoasInput.value = state.numPessoas;
+    }
+
+    if (els.capacidadeHint) {
+      els.capacidadeHint.textContent = 'Capacidade: ' + lancha.capacidade.base +
+        (lancha.capacidade.maxima > lancha.capacidade.base ? '–' + lancha.capacidade.maxima : '') + ' pessoas';
+    }
+
+    if (els.churrPreco) {
+      els.churrPreco.textContent = formatarMoeda(lancha.churrasqueira);
+    }
+
+    if (els.horaExtraHint) {
+      els.horaExtraHint.textContent = lancha.horaExtra > 0
+        ? formatarMoeda(lancha.horaExtra) + '/hora'
+        : 'Não disponível';
+    }
+
+    if (lancha.horaExtra === 0) {
+      var heField = els.horaExtraHint && els.horaExtraHint.closest('.proposta__field');
+      if (heField) heField.style.display = 'none';
+    }
+
+    renderRoteiros();
+    renderTurnos();
+    renderServicos();
+    setupSteppers();
+    setupChurrasqueira();
+    setupACToggle();
+    recalcular();
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initPropostaBuilder);
+  } else {
+    initPropostaBuilder();
+  }
+
   // Expose globally
   window.WeBoatProposta = {
     calcularPrecoRoteiro: calcularPrecoRoteiro,
