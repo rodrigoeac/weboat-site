@@ -142,6 +142,10 @@ convert_image() {
     ((sizes_generated++))
 
     # Gerar variantes responsivas com sufixo de largura
+    if [[ ${#sizes[@]} -eq 0 ]]; then
+        echo -e "  ${GREEN}OK${NC} $src ($sizes_generated variantes WebP)"
+        return
+    fi
     for size in "${sizes[@]}"; do
         if [[ $orig_width -ge $size ]] || [[ $max_size -ge $size ]]; then
             local out_webp="${dir}/${filename}-${size}w.webp"
