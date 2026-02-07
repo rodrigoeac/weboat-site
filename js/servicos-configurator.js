@@ -71,6 +71,20 @@
       });
     });
 
+    // ─── Smooth scroll para "Montar meu pacote" ────
+
+    document.querySelectorAll('.servicos-montar-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var target = document.getElementById('configurador');
+        if (target) {
+          var headerH = document.getElementById('header');
+          var offset = (headerH ? headerH.offsetHeight : 72) + 16;
+          window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+        }
+      });
+    });
+
     // ─── Renderizar tabs ────────────────────────────
 
     function renderTabs() {
@@ -89,6 +103,30 @@
         var span = document.createElement('span');
         span.textContent = ' ' + cat.nome;
         btn.appendChild(span);
+
+        btn.addEventListener('click', function () {
+          var targetId = this.getAttribute('data-tab');
+
+          // Deactivate all tabs
+          elTabsContainer.querySelectorAll('.configurador__tab').forEach(function (t) {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+          });
+          // Activate clicked tab
+          this.classList.add('active');
+          this.setAttribute('aria-selected', 'true');
+
+          // Switch panels
+          elPanelsContainer.querySelectorAll('.configurador__panel').forEach(function (panel) {
+            if (panel.getAttribute('data-tab-panel') === targetId) {
+              panel.classList.add('active');
+              panel.setAttribute('aria-hidden', 'false');
+            } else {
+              panel.classList.remove('active');
+              panel.setAttribute('aria-hidden', 'true');
+            }
+          });
+        });
 
         elTabsContainer.appendChild(btn);
       });
