@@ -694,16 +694,9 @@
 /* ─── Tabs de categoria ─── */
 .configurador__tabs {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--space-2);
   margin-bottom: var(--space-6);
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;
-  padding-bottom: var(--space-1);
-}
-
-.configurador__tabs::-webkit-scrollbar {
-  display: none;
 }
 
 .configurador__tab {
@@ -719,7 +712,6 @@
   font-weight: 500;
   color: var(--charcoal);
   cursor: pointer;
-  white-space: nowrap;
   transition: all var(--transition-fast);
 }
 

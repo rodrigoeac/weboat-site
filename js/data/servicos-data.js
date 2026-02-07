@@ -374,7 +374,12 @@
   }
 
   function getServicosPorCategoria(categoria) {
-    return SERVICOS.filter(function (s) { return s.categoria === categoria; });
+    return SERVICOS.filter(function (s) {
+      if (s.categoria === categoria) return true;
+      // Combos also appear in churrasco and openbar tabs
+      if (s.categoria === 'combo' && (categoria === 'churrasco' || categoria === 'openbar')) return true;
+      return false;
+    });
   }
 
   // ─── Exportar como global ────────────────────────────────
