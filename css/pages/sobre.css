@@ -556,55 +556,6 @@
 }
 
 /* ============================================
-   CTA FINAL
-   ============================================ */
-.sobre-cta {
-  padding: var(--space-20) 0;
-  background: var(--ocean-deep);
-  text-align: center;
-}
-
-.sobre-cta__content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.sobre-cta__title {
-  font-family: var(--font-display);
-  font-size: var(--text-h1);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: var(--space-4);
-}
-
-.sobre-cta__text {
-  font-size: var(--text-body-lg);
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--space-8);
-}
-
-.sobre-cta__buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-4);
-  justify-content: center;
-}
-
-@media (max-width: 640px) {
-  .sobre-cta {
-    padding: var(--space-16) 0;
-  }
-
-  .sobre-cta__buttons {
-    flex-direction: column;
-  }
-
-  .sobre-cta__buttons .btn {
-    width: 100%;
-  }
-}
-
-/* ============================================
    AVALIAÇÕES SOBRE (cor diferenciada)
    ============================================ */
 .sobre-compromisso + .avaliacoes {
@@ -684,14 +635,4 @@
   .sobre-faq {
     padding: var(--space-12) 0;
   }
-}
-
-/* ============================================
-   Freshness Signal
-   ============================================ */
-.page-freshness {
-  text-align: center;
-  font-size: var(--text-caption);
-  color: var(--driftwood);
-  padding: var(--space-4) 0 var(--space-8);
 }

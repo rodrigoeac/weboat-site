@@ -79,8 +79,8 @@
             behavior: 'smooth'
           });
 
-          // Atualizar URL sem recarregar
-          history.pushState(null, null, targetId);
+          // Atualizar URL sem recarregar (replaceState para não poluir histórico)
+          history.replaceState(null, null, targetId);
         }
       });
     });
@@ -129,6 +129,10 @@
       const content = item.querySelector('.accordion__content');
 
       if (header && content) {
+        // Inicializar estados ARIA
+        header.setAttribute('aria-expanded', 'false');
+        content.setAttribute('aria-hidden', 'true');
+
         header.addEventListener('click', function() {
           const isOpen = item.classList.contains('active');
 
@@ -136,9 +140,12 @@
           accordionItems.forEach(function(otherItem) {
             if (otherItem !== item) {
               otherItem.classList.remove('active');
-              const otherContent = otherItem.querySelector('.accordion__content');
+              var otherHeader = otherItem.querySelector('.accordion__header');
+              var otherContent = otherItem.querySelector('.accordion__content');
+              if (otherHeader) otherHeader.setAttribute('aria-expanded', 'false');
               if (otherContent) {
                 otherContent.style.maxHeight = null;
+                otherContent.setAttribute('aria-hidden', 'true');
               }
             }
           });
@@ -147,8 +154,12 @@
           item.classList.toggle('active');
           if (isOpen) {
             content.style.maxHeight = null;
+            header.setAttribute('aria-expanded', 'false');
+            content.setAttribute('aria-hidden', 'true');
           } else {
             content.style.maxHeight = content.scrollHeight + 'px';
+            header.setAttribute('aria-expanded', 'true');
+            content.setAttribute('aria-hidden', 'false');
           }
         });
 
@@ -163,38 +174,7 @@
     });
   }
 
-  // ============================================
-  // FORMATAÇÃO DE TELEFONE
-  // ============================================
-  function formatPhoneNumber(input) {
-    let value = input.value.replace(/\D/g, '');
-
-    if (value.length > 11) {
-      value = value.slice(0, 11);
-    }
-
-    if (value.length > 0) {
-      value = '(' + value;
-    }
-    if (value.length > 3) {
-      value = value.slice(0, 3) + ') ' + value.slice(3);
-    }
-    if (value.length > 10) {
-      value = value.slice(0, 10) + '-' + value.slice(10);
-    }
-
-    input.value = value;
-  }
-
-  function initPhoneFormatting() {
-    const phoneInputs = document.querySelectorAll('input[type="tel"]');
-
-    phoneInputs.forEach(function(input) {
-      input.addEventListener('input', function() {
-        formatPhoneNumber(this);
-      });
-    });
-  }
+  // Phone formatting removed — handled by form.js initPhoneMask() to avoid duplicate handlers
 
   // ============================================
   // CONTADOR ANIMADO (Social Proof)
@@ -294,27 +274,58 @@
       currentIndex = index;
       const image = galleryImages[currentIndex];
 
-      // Criar overlay
-      const overlay = document.createElement('div');
+      // Criar overlay via DOM (evita XSS por innerHTML)
+      var overlay = document.createElement('div');
       overlay.className = 'lightbox-overlay';
-      overlay.innerHTML =
-        '<div class="lightbox-content">' +
-          '<img src="' + image.src + '" alt="' + image.alt + '">' +
-          '<button class="lightbox-close" aria-label="Fechar">&times;</button>' +
-          (galleryImages.length > 1 ?
-            '<button class="lightbox-prev" aria-label="Anterior"><i class="ph ph-caret-left"></i></button>' +
-            '<button class="lightbox-next" aria-label="Próxima"><i class="ph ph-caret-right"></i></button>' +
-            '<div class="lightbox-counter">' + (currentIndex + 1) + ' / ' + galleryImages.length + '</div>'
-          : '') +
-        '</div>';
+      overlay.setAttribute('role', 'dialog');
+      overlay.setAttribute('aria-modal', 'true');
+      overlay.setAttribute('aria-label', 'Galeria de imagens');
 
+      var contentDiv = document.createElement('div');
+      contentDiv.className = 'lightbox-content';
+
+      var lightboxImg = document.createElement('img');
+      lightboxImg.src = image.src;
+      lightboxImg.alt = image.alt;
+      contentDiv.appendChild(lightboxImg);
+
+      var closeBtnEl = document.createElement('button');
+      closeBtnEl.className = 'lightbox-close';
+      closeBtnEl.setAttribute('aria-label', 'Fechar');
+      closeBtnEl.textContent = '\u00D7';
+      contentDiv.appendChild(closeBtnEl);
+
+      var prevBtn = null;
+      var nextBtn = null;
+      var counter = null;
+
+      if (galleryImages.length > 1) {
+        prevBtn = document.createElement('button');
+        prevBtn.className = 'lightbox-prev';
+        prevBtn.setAttribute('aria-label', 'Anterior');
+        var prevIcon = document.createElement('i');
+        prevIcon.className = 'ph ph-caret-left';
+        prevBtn.appendChild(prevIcon);
+        contentDiv.appendChild(prevBtn);
+
+        nextBtn = document.createElement('button');
+        nextBtn.className = 'lightbox-next';
+        nextBtn.setAttribute('aria-label', 'Próxima');
+        var nextIcon = document.createElement('i');
+        nextIcon.className = 'ph ph-caret-right';
+        nextBtn.appendChild(nextIcon);
+        contentDiv.appendChild(nextBtn);
+
+        counter = document.createElement('div');
+        counter.className = 'lightbox-counter';
+        counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
+        contentDiv.appendChild(counter);
+      }
+
+      overlay.appendChild(contentDiv);
       document.body.appendChild(overlay);
       document.body.style.overflow = 'hidden';
-
-      const lightboxImg = overlay.querySelector('img');
-      const counter = overlay.querySelector('.lightbox-counter');
-      const prevBtn = overlay.querySelector('.lightbox-prev');
-      const nextBtn = overlay.querySelector('.lightbox-next');
+      closeBtnEl.focus();
 
       // Navegar para anterior
       function showPrev() {
@@ -342,55 +353,99 @@
       if (prevBtn) prevBtn.addEventListener('click', showPrev);
       if (nextBtn) nextBtn.addEventListener('click', showNext);
 
+      // Função centralizada para fechar lightbox
+      function closeLightbox() {
+        overlay.remove();
+        document.body.style.overflow = '';
+        document.removeEventListener('keydown', handleKeydown);
+        if (mainImage) mainImage.focus();
+      }
+
       // Fechar ao clicar no overlay ou botão fechar
       overlay.addEventListener('click', function(event) {
         if (event.target === overlay || event.target.classList.contains('lightbox-close')) {
-          overlay.remove();
-          document.body.style.overflow = '';
+          closeLightbox();
         }
       });
+
+      // Focus trap — keep Tab within lightbox
+      var focusableEls = overlay.querySelectorAll('button');
+      var firstFocusable = focusableEls[0];
+      var lastFocusable = focusableEls[focusableEls.length - 1];
 
       // Navegação por teclado
       function handleKeydown(event) {
         if (event.key === 'Escape') {
-          overlay.remove();
-          document.body.style.overflow = '';
-          document.removeEventListener('keydown', handleKeydown);
+          closeLightbox();
         } else if (event.key === 'ArrowLeft') {
           showPrev();
         } else if (event.key === 'ArrowRight') {
           showNext();
+        } else if (event.key === 'Tab') {
+          if (event.shiftKey) {
+            if (document.activeElement === firstFocusable) {
+              event.preventDefault();
+              lastFocusable.focus();
+            }
+          } else {
+            if (document.activeElement === lastFocusable) {
+              event.preventDefault();
+              firstFocusable.focus();
+            }
+          }
         }
       }
       document.addEventListener('keydown', handleKeydown);
     }
 
     // Fallback para imagens com data-lightbox fora da galeria de lancha
-    const standaloneImages = document.querySelectorAll('[data-lightbox]:not(.lancha-gallery__main img)');
+    var standaloneImages = document.querySelectorAll('[data-lightbox]:not(.lancha-gallery__main img)');
     standaloneImages.forEach(function(img) {
       img.addEventListener('click', function() {
-        const src = this.dataset.lightbox || this.src;
-        const alt = this.alt || '';
+        var triggerEl = this;
+        var src = this.dataset.lightbox || this.src;
+        var alt = this.alt || '';
 
-        const overlay = document.createElement('div');
+        var overlay = document.createElement('div');
         overlay.className = 'lightbox-overlay';
-        overlay.innerHTML = '<div class="lightbox-content"><img src="' + src + '" alt="' + alt + '"><button class="lightbox-close" aria-label="Fechar">&times;</button></div>';
+        overlay.setAttribute('role', 'dialog');
+        overlay.setAttribute('aria-modal', 'true');
 
+        var contentDiv = document.createElement('div');
+        contentDiv.className = 'lightbox-content';
+
+        var imgEl = document.createElement('img');
+        imgEl.src = src;
+        imgEl.alt = alt;
+        contentDiv.appendChild(imgEl);
+
+        var closeBtn = document.createElement('button');
+        closeBtn.className = 'lightbox-close';
+        closeBtn.setAttribute('aria-label', 'Fechar');
+        closeBtn.textContent = '\u00D7';
+        contentDiv.appendChild(closeBtn);
+
+        overlay.appendChild(contentDiv);
         document.body.appendChild(overlay);
         document.body.style.overflow = 'hidden';
+        closeBtn.focus();
+
+        function closeStandalone() {
+          overlay.remove();
+          document.body.style.overflow = '';
+          document.removeEventListener('keydown', handleEscape);
+          triggerEl.focus();
+        }
 
         overlay.addEventListener('click', function(event) {
           if (event.target === overlay || event.target.classList.contains('lightbox-close')) {
-            overlay.remove();
-            document.body.style.overflow = '';
+            closeStandalone();
           }
         });
 
         function handleEscape(event) {
           if (event.key === 'Escape') {
-            overlay.remove();
-            document.body.style.overflow = '';
-            document.removeEventListener('keydown', handleEscape);
+            closeStandalone();
           }
         }
         document.addEventListener('keydown', handleEscape);
@@ -543,7 +598,7 @@
     initLazyLoading();
     initScrollAnimations();
     initAccordion();
-    initPhoneFormatting();
+    initSmoothScroll();
     initCounterAnimation();
     initGallery();
     initTabs();

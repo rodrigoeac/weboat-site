@@ -10,7 +10,6 @@
   var Servicos = window.WeBoatServicos;
 
   if (!Data || !Servicos) {
-    console.warn('[WeBoatProposta] Data ou Servicos não carregados. Builder desativado.');
     return;
   }
 
@@ -371,7 +370,8 @@
    */
   function gerarLinkWhatsApp(proposta) {
     var msg = gerarMensagemWhatsApp(proposta);
-    return 'https://wa.me/5521977724114?text=' + encodeURIComponent(msg);
+    var whatsappNum = (Servicos && Servicos.WHATSAPP_NUMERO) || '5521977724114';
+    return 'https://wa.me/' + whatsappNum + '?text=' + encodeURIComponent(msg);
   }
 
   // ==================== UI / DOM ====================

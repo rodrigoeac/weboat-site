@@ -161,6 +161,11 @@ Todos os passeios saem da Marina da Glória, no bairro da Glória, Rio de Janeir
 - [Aniversário](https://www.weboatbrasil.com.br/pages/ocasioes/aniversario.html): Festas de aniversário no mar
 - [Corporativo](https://www.weboatbrasil.com.br/pages/ocasioes/corporativo.html): Eventos empresariais
 - [Réveillon](https://www.weboatbrasil.com.br/pages/ocasioes/reveillon.html): Queima de fogos no mar
+- [Carnaval](https://www.weboatbrasil.com.br/pages/ocasioes/carnaval.html): Carnaval na lancha com DJ e open bar
 - [Sobre](https://www.weboatbrasil.com.br/pages/sobre.html): História da WeBoat
 - [FAQ](https://www.weboatbrasil.com.br/pages/faq.html): Perguntas frequentes
 - [Contato](https://www.weboatbrasil.com.br/pages/contato.html): WhatsApp, endereço e formulário
+- [Blog](https://www.weboatbrasil.com.br/pages/blog/): Dicas, guias e roteiros para passeios de lancha
+- [Melhores Praias de Lancha no RJ](https://www.weboatbrasil.com.br/pages/blog/melhores-praias-lancha-rj.html): As praias mais bonitas acessíveis de lancha
+- [O Que Vestir num Passeio de Lancha](https://www.weboatbrasil.com.br/pages/blog/o-que-vestir-passeio-lancha.html): Guia completo de roupas e acessórios
+- [Guia da Marina da Glória](https://www.weboatbrasil.com.br/pages/blog/guia-marina-da-gloria.html): Tudo sobre o ponto de embarque

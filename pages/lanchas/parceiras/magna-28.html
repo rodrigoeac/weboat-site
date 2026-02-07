@@ -42,7 +42,7 @@
   <link rel="stylesheet" href="/css/pages/lancha-detalhe.css">
 
   <!-- Phosphor Icons -->
-  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous" defer></script>
 
   <!-- Schema.org - Product -->
   <script type="application/ld+json">
@@ -122,7 +122,7 @@
     "@id": "https://www.weboatbrasil.com.br/#organization",
     "name": "WeBoat Brasil",
     "image": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png",
-    "description": "Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e seguranca.",
+    "description": "Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória",
@@ -153,7 +153,7 @@
         "name": "Quantas pessoas cabem na Magna 28?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A Magna 28 tem capacidade para ate 10 pessoas, incluindo criancas. Ideal para grupos menores que buscam uma experiencia mais intimista."
+          "text": "A Magna 28 tem capacidade para ate 10 pessoas, incluindo crianças. Ideal para grupos menores que buscam uma experiência mais intimista."
         }
       },
       {
@@ -169,7 +169,7 @@
         "name": "O que esta incluso no aluguel da Magna 28?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "O aluguel da Magna 28 inclui: combustivel para o roteiro contratado, tripulacao habilitada, tapete flutuante, macarroes, som Bluetooth e coolers."
+          "text": "O aluguel da Magna 28 inclui: combustível para o roteiro contratado, tripulacao habilitada, tapete flutuante, macarroes, som Bluetooth e coolers."
         }
       }
     ]
@@ -179,40 +179,42 @@
 </head>
 <body>
   <!-- Skip Link -->
-  <a href="#main-content" class="skip-link">Pular para o conteudo principal</a>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
       <div class="header__inner">
-        <a href="/" class="header__logo" aria-label="WeBoat Brasil - Pagina inicial">
+        <a href="/" class="header__logo" aria-label="WeBoat Brasil - Página inicial">
           <img src="/assets/images/logo/logo.svg" alt="WeBoat Brasil" width="150" height="40">
         </a>
 
-        <nav class="header__nav" aria-label="Navegacao principal">
+        <nav class="header__nav" aria-label="Navegação principal">
           <ul class="header__menu">
             <li><a href="/pages/lanchas/" class="active">Lanchas</a></li>
             <li><a href="/pages/roteiros/">Roteiros</a></li>
-            <li><a href="/pages/servicos.html">Servicos</a></li>
+            <li><a href="/pages/serviços.html">Serviços</a></li>
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
-                Ocasioes
+                Ocasiões
                 <i class="ph ph-caret-down"></i>
               </button>
               <ul class="header__dropdown-menu">
-                <li><a href="/pages/ocasioes/despedida-solteira.html">Despedida de Solteira</a></li>
-                <li><a href="/pages/ocasioes/aniversario.html">Aniversario</a></li>
-                <li><a href="/pages/ocasioes/corporativo.html">Corporativo</a></li>
-                <li><a href="/pages/ocasioes/reveillon.html">Reveillon</a></li>
+                <li><a href="/pages/ocasiões/despedida-solteira.html">Despedida de Solteira</a></li>
+                <li><a href="/pages/ocasiões/aniversário.html">Aniversário</a></li>
+                <li><a href="/pages/ocasiões/corporativo.html">Corporativo</a></li>
+                <li><a href="/pages/ocasiões/reveillon.html">Réveillon</a></li>
+                              <li><a href="/pages/ocasioes/carnaval.html">Carnaval</a></li>
               </ul>
             </li>
-            <li><a href="/pages/sobre.html">Sobre</a></li>
+            <li><a href="/pages/como-funciona.html">Como Funciona</a></li><li><a href="/pages/sobre.html">Sobre</a></li>
             <li><a href="/pages/contato.html">Contato</a></li>
             <li><a href="/pages/faq.html">FAQ</a></li>
+            <li><a href="/pages/blog/">Blog</a></li>
           </ul>
         </nav>
 
-        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. Poderia me enviar mais informacoes?"
+        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. Poderia me enviar mais informações? [via site - magna-28]"
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
@@ -227,20 +229,23 @@
     </div>
 
     <div class="header__mobile-menu" id="mobile-menu" aria-hidden="true">
-      <nav aria-label="Navegacao mobile">
+      <nav aria-label="Navegação mobile">
         <ul class="header__mobile-list">
           <li><a href="/pages/lanchas/" class="active">Lanchas</a></li>
           <li><a href="/pages/roteiros/">Roteiros</a></li>
-          <li><a href="/pages/servicos.html">Servicos</a></li>
-          <li><a href="/pages/ocasioes/despedida-solteira.html">Despedida de Solteira</a></li>
-          <li><a href="/pages/ocasioes/aniversario.html">Aniversario</a></li>
-          <li><a href="/pages/ocasioes/corporativo.html">Corporativo</a></li>
-          <li><a href="/pages/ocasioes/reveillon.html">Reveillon</a></li>
-          <li><a href="/pages/sobre.html">Sobre</a></li>
+          <li><a href="/pages/serviços.html">Serviços</a></li>
+          <li><a href="/pages/ocasiões/despedida-solteira.html">Despedida de Solteira</a></li>
+          <li><a href="/pages/ocasiões/aniversário.html">Aniversário</a></li>
+          <li><a href="/pages/ocasiões/corporativo.html">Corporativo</a></li>
+          <li><a href="/pages/ocasiões/reveillon.html">Réveillon</a></li>
+                              <li><a href="/pages/ocasioes/carnaval.html">Carnaval</a></li>
+<li><a href="/pages/como-funciona.html">Como Funciona</a></li>
+<li><a href="/pages/sobre.html">Sobre</a></li>
           <li><a href="/pages/contato.html">Contato</a></li>
             <li><a href="/pages/faq.html">FAQ</a></li>
+            <li><a href="/pages/blog/">Blog</a></li>
         </ul>
-        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28."
+        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. [via site - magna-28]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
           <i class="ph ph-whatsapp-logo"></i>
           Fale pelo WhatsApp
@@ -348,7 +353,7 @@
 
             <!-- CTAs -->
             <div class="lancha-info__ctas">
-              <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. Poderia me enviar mais informacoes?"
+              <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. Poderia me enviar mais informações? [via site - magna-28]"
                  class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
                 <i class="ph ph-whatsapp-logo"></i>
                 Reservar pelo WhatsApp
@@ -376,8 +381,8 @@
                 Sobre a Magna 28
               </h2>
               <div class="lancha-section__description">
-                <p>A Magna 28 e uma lancha parceira ideal para grupos menores que buscam uma experiencia mais intimista no mar do Rio de Janeiro. Com capacidade para ate 10 pessoas, oferece conforto e praticidade para passeios inesqueciveis.</p>
-                <p>Perfeita para casais, familias pequenas ou grupos de amigos que preferem um ambiente mais reservado, a Magna 28 garante um passeio agradavel com toda a estrutura necessaria.</p>
+                <p>A Magna 28 e uma lancha parceira ideal para grupos menores que buscam uma experiência mais intimista no mar do Rio de Janeiro. Com capacidade para ate 10 pessoas, oferece conforto e praticidade para passeios inesquecíveis.</p>
+                <p>Perfeita para casais, familias pequenas ou grupos de amigos que preferem um ambiente mais reservado, a Magna 28 garante um passeio agradavel com toda a estrutura necessária.</p>
               </div>
             </div>
 
@@ -390,7 +395,7 @@
               <div class="lancha-features">
                 <div class="lancha-feature">
                   <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
-                  <span class="lancha-feature__text">Combustivel para o roteiro</span>
+                  <span class="lancha-feature__text">Combustível para o roteiro</span>
                 </div>
                 <div class="lancha-feature">
                   <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
@@ -447,7 +452,7 @@
             <div class="lancha-sticky">
               <!-- Quick Info -->
               <div class="lancha-quick">
-                <h3 class="lancha-quick__title">Informacoes Rapidas</h3>
+                <h3 class="lancha-quick__title">Informações Rapidas</h3>
                 <ul class="lancha-quick__list">
                   <li class="lancha-quick__item">
                     <i class="ph ph-clock"></i>
@@ -455,7 +460,7 @@
                   </li>
                   <li class="lancha-quick__item">
                     <i class="ph ph-map-pin"></i>
-                    <span>Saida: Marina da Gloria</span>
+                    <span>Saida: Marina da Glória</span>
                   </li>
                   <li class="lancha-quick__item">
                     <i class="ph ph-calendar"></i>
@@ -466,7 +471,7 @@
                     <span>PIX, cartao ou transferencia</span>
                   </li>
                 </ul>
-                <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. Poderia me enviar mais informacoes?"
+                <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. Poderia me enviar mais informações? [via site - magna-28]"
                    class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
                   <i class="ph ph-whatsapp-logo"></i>
                   Consultar Disponibilidade
@@ -520,7 +525,7 @@
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>A Magna 28 tem capacidade para ate <strong>10 pessoas</strong>, incluindo criancas. E ideal para grupos menores que buscam uma experiencia mais intimista.</p>
+                  <p>A Magna 28 tem capacidade para ate <strong>10 pessoas</strong>, incluindo crianças. E ideal para grupos menores que buscam uma experiência mais intimista.</p>
                 </div>
               </div>
             </div>
@@ -544,7 +549,7 @@
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
-                  <p>O aluguel da Magna 28 inclui: combustivel para o roteiro contratado, tripulacao habilitada, tapete flutuante, macarroes, som Bluetooth e coolers.</p>
+                  <p>O aluguel da Magna 28 inclui: combustível para o roteiro contratado, tripulacao habilitada, tapete flutuante, macarroes, som Bluetooth e coolers.</p>
                 </div>
               </div>
             </div>
@@ -635,12 +640,12 @@
               <div class="proposta__avisos" id="proposta-avisos" aria-live="polite"></div>
             </div>
 
-            <div class="proposta__step" data-step="servicos">
+            <div class="proposta__step" data-step="serviços">
               <h3 class="proposta__step-title">
                 <span class="proposta__step-number">3</span>
                 Serviços Extras <span class="proposta__optional">(opcional)</span>
               </h3>
-              <div class="proposta__servicos-accordion" id="proposta-servicos">
+              <div class="proposta__serviços-accordion" id="proposta-serviços">
               </div>
             </div>
           </div>
@@ -664,16 +669,78 @@
       </div>
     </section>
 
-    <!-- CTA Final -->
-    <section class="lancha-cta">
+    <!-- Roteiros Disponíveis -->
+    <section class="roteiros-disponiveis section">
       <div class="container">
-        <div class="lancha-cta__content">
-          <h2 class="lancha-cta__title">Reserve a Magna 28 Agora</h2>
-          <p class="lancha-cta__text">
-            Garanta sua data e viva uma experiencia inesquecivel no mar do Rio de Janeiro.
+        <div class="section-header">
+          <h2 class="section-header__title">Roteiros Disponíveis</h2>
+          <p class="section-header__description">Escolha o destino ideal para seu passeio na Magna 28</p>
+        </div>
+        <div class="roteiros-disponiveis__grid">
+      <a href="/pages/roteiros/mureta-da-urca.html" class="card-route card-route--compact">
+        <div class="card-route__header">
+          <span class="card-route__tag">Melhor custo-benefício</span>
+          <h3 class="card-route__title">Mureta da Urca</h3>
+        </div>
+        <div class="card-route__footer">
+          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__price">R$ 3.000</span>
+        </div>
+      </a>
+      <a href="/pages/roteiros/praia-vermelha.html" class="card-route card-route--compact">
+        <div class="card-route__header">
+          <span class="card-route__tag">Mais vendido</span>
+          <h3 class="card-route__title">Praia Vermelha</h3>
+        </div>
+        <div class="card-route__footer">
+          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__price">R$ 3.400</span>
+        </div>
+      </a>
+      <a href="/pages/roteiros/copacabana.html" class="card-route card-route--compact">
+        <div class="card-route__header">
+          <span class="card-route__tag">Vista icônica</span>
+          <h3 class="card-route__title">Copacabana</h3>
+        </div>
+        <div class="card-route__footer">
+          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__price">R$ 3.800</span>
+        </div>
+      </a>
+      <a href="/pages/roteiros/ilhas-cagarras.html" class="card-route card-route--compact">
+        <div class="card-route__header">
+          <span class="card-route__tag">Mar aberto</span>
+          <h3 class="card-route__title">Ilhas Cagarras</h3>
+        </div>
+        <div class="card-route__footer">
+          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__price">R$ 4.300</span>
+        </div>
+      </a>
+      <a href="/pages/roteiros/itaipu-camboinhas.html" class="card-route card-route--compact">
+        <div class="card-route__header">
+          <span class="card-route__tag">Praias desertas</span>
+          <h3 class="card-route__title">Itaipu e Camboinhas</h3>
+        </div>
+        <div class="card-route__footer">
+          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__price">R$ 4.300</span>
+        </div>
+      </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="section-cta">
+      <div class="container">
+        <div class="section-cta__content">
+          <h2 class="section-cta__title">Reserve a Magna 28 Agora</h2>
+          <p class="section-cta__text">
+            Garanta sua data e viva uma experiência inesquecível no mar do Rio de Janeiro.
           </p>
-          <div class="lancha-cta__buttons">
-            <a href="https://wa.me/5521977724114?text=Ola! Quero reservar a lancha Magna 28."
+          <div class="section-cta__buttons">
+            <a href="https://wa.me/5521977724114?text=Ola! Quero reservar a lancha Magna 28. [via site - magna-28]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
               <i class="ph ph-whatsapp-logo"></i>
               Reservar pelo WhatsApp
@@ -718,8 +785,8 @@
           <ul class="footer__links">
             <li><a href="/pages/lanchas/">Aluguel de Lanchas</a></li>
             <li><a href="/pages/roteiros/">Roteiros de Passeio</a></li>
-            <li><a href="/pages/servicos.html">Churrasco na Lancha</a></li>
-            <li><a href="/pages/servicos.html">Decoração e Open Bar</a></li>
+            <li><a href="/pages/serviços.html">Churrasco na Lancha</a></li>
+            <li><a href="/pages/serviços.html">Decoração e Open Bar</a></li>
             <li><a href="/pages/faq.html">Perguntas Frequentes</a></li>
           </ul>
         </div>
@@ -728,10 +795,11 @@
         <div class="footer__col">
           <h4 class="footer__title">Ocasiões Especiais</h4>
           <ul class="footer__links">
-            <li><a href="/pages/ocasioes/despedida-solteira.html">Despedida de Solteira na Lancha</a></li>
-            <li><a href="/pages/ocasioes/aniversario.html">Festa de Aniversário no Mar</a></li>
-            <li><a href="/pages/ocasioes/corporativo.html">Eventos Corporativos</a></li>
-            <li><a href="/pages/ocasioes/reveillon.html">Réveillon na Baía de Guanabara</a></li>
+            <li><a href="/pages/ocasiões/despedida-solteira.html">Despedida de Solteira na Lancha</a></li>
+            <li><a href="/pages/ocasiões/aniversário.html">Festa de Aniversário no Mar</a></li>
+            <li><a href="/pages/ocasiões/corporativo.html">Eventos Corporativos</a></li>
+            <li><a href="/pages/ocasiões/reveillon.html">Réveillon na Baía de Guanabara</a></li>
+                      <li><a href="/pages/ocasioes/carnaval.html">Carnaval na Lancha</a></li>
           </ul>
         </div>
 
@@ -758,14 +826,14 @@
             </li>
             <li>
               <i class="ph ph-currency-circle-dollar"></i>
-              <span>A partir de R$ 2.300 (3h de passeio)</span>
+              <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>
         </div>
       </div>
 
       <!-- Áreas Atendidas -->
-      <div class="footer__areas">
+      <div class="footer__áreas">
         <p><strong>Áreas de passeio:</strong> Mureta da Urca • Praia Vermelha • Copacabana • Ilhas Cagarras • Itaipu e Camboinhas • Baía de Guanabara</p>
       </div>
 
@@ -775,20 +843,22 @@
         <div class="footer__legal">
           <a href="/pages/sobre.html">Sobre a Empresa</a>
           <a href="/pages/contato.html">Fale Conosco</a>
+          <a href="/politica-de-privacidade.html">Política de Privacidade</a>
+          <a href="/termos-de-uso.html">Termos de Uso</a>
         </div>
       </div>
     </div>
   </footer>
 
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28."
+  <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha Magna 28. [via site - magna-28]"
      class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Fale conosco pelo WhatsApp">
     <i class="ph-fill ph-whatsapp-logo"></i>
   </a>
 
   <!-- Scripts -->
   <script src="/js/data/lanchas-data.js" defer></script>
-  <script src="/js/data/proposal-servicos-data.js" defer></script>
+  <script src="/js/data/proposal-serviços-data.js" defer></script>
   <script src="/js/proposal-builder.js" defer></script>
   <script src="/js/menu.js" defer></script>
   <script src="/js/main.js" defer></script>

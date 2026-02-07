@@ -978,3 +978,38 @@
   letter-spacing: 0.05em;
 }
 
+/* ============================================
+   OUTROS ROTEIROS - Cross-linking
+   ============================================ */
+.outros-roteiros {
+  background: var(--pearl-gray);
+}
+
+.outros-roteiros__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.outros-roteiros__grid .card-route {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.outros-roteiros__grid .card-route__header {
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.outros-roteiros__grid .card-route__description {
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .outros-roteiros__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}

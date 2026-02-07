@@ -73,13 +73,23 @@
 
     if (isValid) {
       // Monta mensagem para WhatsApp
-      const nome = form.querySelector('#nome').value;
-      const telefone = form.querySelector('#telefone').value;
-      const email = form.querySelector('#email').value || 'Não informado';
-      const assunto = form.querySelector('#assunto').options[form.querySelector('#assunto').selectedIndex].text;
-      const data = form.querySelector('#data').value || 'Não informada';
-      const pessoas = form.querySelector('#pessoas').value || 'Não informado';
-      const mensagem = form.querySelector('#mensagem').value;
+      var nomeEl = form.querySelector('#nome');
+      var telefoneEl = form.querySelector('#telefone');
+      var emailEl = form.querySelector('#email');
+      var assuntoEl = form.querySelector('#assunto');
+      var dataEl = form.querySelector('#data');
+      var pessoasEl = form.querySelector('#pessoas');
+      var mensagemEl = form.querySelector('#mensagem');
+
+      if (!nomeEl || !telefoneEl || !mensagemEl) return;
+
+      const nome = nomeEl.value;
+      const telefone = telefoneEl.value;
+      const email = emailEl ? emailEl.value || 'Não informado' : 'Não informado';
+      const assunto = assuntoEl ? assuntoEl.options[assuntoEl.selectedIndex].text : 'Geral';
+      const data = dataEl ? dataEl.value || 'Não informada' : 'Não informada';
+      const pessoas = pessoasEl ? pessoasEl.value || 'Não informado' : 'Não informado';
+      const mensagem = mensagemEl.value;
 
       // Formata data para exibição
       let dataFormatada = data;
@@ -101,7 +111,8 @@
       );
 
       // Redireciona para WhatsApp
-      const whatsappUrl = 'https://wa.me/5521977724114?text=' + textoWhatsApp;
+      var whatsappNum = (window.WeBoatServicos && window.WeBoatServicos.WHATSAPP_NUMERO) || '5521977724114';
+      const whatsappUrl = 'https://wa.me/' + whatsappNum + '?text=' + textoWhatsApp;
       window.open(whatsappUrl, '_blank');
 
       // Feedback visual

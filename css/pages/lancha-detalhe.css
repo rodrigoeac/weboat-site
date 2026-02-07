@@ -576,57 +576,7 @@
   }
 }
 
-/* ============================================
-   CTA FINAL
-   ============================================ */
-.lancha-cta {
-  padding: var(--space-16) 0;
-  background: var(--ocean-deep);
-  text-align: center;
-}
-
-.lancha-cta__content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.lancha-cta__title {
-  font-family: var(--font-display);
-  font-size: var(--text-h2);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: var(--space-4);
-}
-
-.lancha-cta__text {
-  font-size: var(--text-body-lg);
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--space-8);
-}
-
-.lancha-cta__buttons {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  align-items: center;
-}
-
-@media (min-width: 480px) {
-  .lancha-cta__buttons {
-    flex-direction: row;
-    justify-content: center;
-  }
-}
-
 @media (max-width: 768px) {
-  .lancha-cta {
-    padding: var(--space-12) 0;
-  }
-
-  .lancha-cta__title {
-    font-size: var(--text-h3);
-  }
-
   .lancha-section {
     padding: var(--space-6);
   }
@@ -1596,3 +1546,72 @@
   }
 }
 
+/* ============================================
+   ROTEIROS DISPONÍVEIS (cross-link section)
+   ============================================ */
+.roteiros-disponiveis {
+  padding: var(--space-12) 0;
+  background: var(--pearl-gray);
+}
+
+.roteiros-disponiveis .section-header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.roteiros-disponiveis__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+}
+
+@media (max-width: 1024px) {
+  .roteiros-disponiveis__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .roteiros-disponiveis__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Compact card variant for cross-linking */
+.card-route--compact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-4) var(--space-5);
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.card-route--compact .card-route__header {
+  flex-direction: column;
+  gap: var(--space-2);
+  margin-bottom: var(--space-3);
+}
+
+.card-route--compact .card-route__title {
+  font-size: var(--text-body);
+  margin-bottom: 0;
+}
+
+.card-route--compact .card-route__footer {
+  padding-top: var(--space-3);
+}
+
+.card-route__duration {
+  font-size: var(--text-body-sm);
+  color: var(--driftwood);
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.card-route--compact .card-route__price {
+  font-size: var(--text-body);
+  font-weight: 600;
+}

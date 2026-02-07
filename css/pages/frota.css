@@ -4,55 +4,6 @@
    ============================================ */
 
 /* ============================================
-   PAGE HEADER
-   ============================================ */
-.page-header {
-  background: var(--ocean-deep);
-  padding: calc(72px + var(--space-12)) 0 var(--space-12);
-  text-align: center;
-}
-
-.page-header__content {
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.page-header__overline {
-  display: inline-block;
-  font-family: var(--font-heading);
-  font-size: var(--text-overline);
-  font-weight: var(--weight-overline);
-  letter-spacing: var(--tracking-overline);
-  text-transform: uppercase;
-  color: var(--sunset-gold);
-  margin-bottom: var(--space-3);
-}
-
-.page-header__title {
-  font-family: var(--font-display);
-  font-size: var(--text-h1);
-  font-weight: var(--weight-h1);
-  color: var(--white);
-  margin-bottom: var(--space-4);
-}
-
-.page-header__description {
-  font-size: var(--text-body-lg);
-  color: rgba(255, 255, 255, 0.8);
-  margin: 0;
-}
-
-@media (max-width: 768px) {
-  .page-header {
-    padding: calc(72px + var(--space-8)) 0 var(--space-8);
-  }
-
-  .page-header__title {
-    font-size: var(--text-h2);
-  }
-}
-
-/* ============================================
    FROTA SECTION
    ============================================ */
 .frota {
@@ -178,6 +129,7 @@
 
 .frota__filter {
   padding: var(--space-2) var(--space-4);
+  min-height: 44px;
   font-family: var(--font-heading);
   font-size: var(--text-body-sm);
   font-weight: 500;
@@ -192,6 +144,11 @@
 .frota__filter:hover {
   border-color: var(--wave-blue);
   color: var(--wave-blue);
+}
+
+.frota__filter:focus-visible {
+  outline: 2px solid var(--wave-blue);
+  outline-offset: 2px;
 }
 
 .frota__filter--active {
@@ -310,44 +267,6 @@
 }
 
 /* ============================================
-   CTA SECTION
-   ============================================ */
-.frota-cta {
-  background: var(--ocean-deep);
-  padding: var(--space-16) 0;
-  text-align: center;
-}
-
-.frota-cta__content {
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-.frota-cta__title {
-  font-family: var(--font-display);
-  font-size: var(--text-h2);
-  font-weight: 700;
-  color: var(--white);
-  margin-bottom: var(--space-4);
-}
-
-.frota-cta__text {
-  font-size: var(--text-body-lg);
-  color: rgba(255, 255, 255, 0.8);
-  margin-bottom: var(--space-8);
-}
-
-@media (max-width: 768px) {
-  .frota-cta {
-    padding: var(--space-12) 0;
-  }
-
-  .frota-cta__title {
-    font-size: var(--text-h3);
-  }
-}
-
-/* ============================================
    INCLUDES SECTION
    ============================================ */
 .includes {
@@ -432,4 +351,3 @@
 .avaliacoes + .faq {
   background: var(--pearl-gray);
 }
-

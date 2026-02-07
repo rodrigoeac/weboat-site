@@ -705,6 +705,7 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-2) var(--space-4);
+  min-height: 44px;
   background: var(--white);
   border: 2px solid var(--border-light);
   border-radius: var(--radius-full);
@@ -719,6 +720,11 @@
 .configurador__tab:hover {
   border-color: var(--wave-blue);
   color: var(--wave-blue);
+}
+
+.configurador__tab:focus-visible {
+  outline: 2px solid var(--wave-blue);
+  outline-offset: 2px;
 }
 
 .configurador__tab.active {

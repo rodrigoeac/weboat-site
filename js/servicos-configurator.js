@@ -488,17 +488,21 @@
 
     // ─── Save to sessionStorage for cart flow ──
     function saveToSession() {
-      var ids = Object.keys(state.selecionados);
-      if (ids.length === 0) {
-        sessionStorage.removeItem('weboat_servicos_cart');
-        return;
+      try {
+        var ids = Object.keys(state.selecionados);
+        if (ids.length === 0) {
+          sessionStorage.removeItem('weboat_servicos_cart');
+          return;
+        }
+        var cart = {
+          numPessoas: state.numPessoas,
+          servicosIds: ids,
+          tamanhoEmbarcacao: state.tamanhoEmbarcacao,
+        };
+        sessionStorage.setItem('weboat_servicos_cart', JSON.stringify(cart));
+      } catch (e) {
+        // sessionStorage unavailable (private browsing, quota exceeded)
       }
-      var cart = {
-        numPessoas: state.numPessoas,
-        servicosIds: ids,
-        tamanhoEmbarcacao: state.tamanhoEmbarcacao,
-      };
-      sessionStorage.setItem('weboat_servicos_cart', JSON.stringify(cart));
     }
 
     // "Escolher Lancha" button handler
