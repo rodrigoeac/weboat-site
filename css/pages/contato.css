@@ -594,6 +594,57 @@
 }
 
 /* ============================================
+   ANSWER CAPSULES - GEO/SEO
+   ============================================ */
+.contato-capsules {
+  padding: var(--space-16) 0;
+  background: var(--sand-white);
+}
+
+.contato-capsules__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.contato-capsule {
+  background: white;
+  padding: var(--space-6);
+  border-radius: 12px;
+  border: 1px solid var(--pearl-gray);
+}
+
+.contato-capsule__question {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-3);
+}
+
+.contato-capsule .answer-capsule {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--charcoal);
+  margin: 0;
+}
+
+.contato-capsule .answer-capsule strong {
+  color: var(--ocean-deep);
+}
+
+@media (max-width: 768px) {
+  .contato-capsules {
+    padding: var(--space-12) 0;
+  }
+
+  .contato-capsules__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+}
+
+/* ============================================
    FAQ CONTATO (cor diferenciada)
    ============================================ */
 .contato-faq {
