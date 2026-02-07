@@ -1365,6 +1365,12 @@
   font-size: var(--text-body);
 }
 
+.proposta__resumo-cta--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 /* ---- Mobile Bar (fixed bottom) ---- */
 .proposta__mobile-bar {
   display: none;

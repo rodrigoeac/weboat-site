@@ -745,26 +745,66 @@
     if (!container) return;
     container.textContent = '';
 
-    if (!proposta || !proposta.capacidade || !proposta.capacidade.tipo) return;
+    if (!proposta) return;
 
-    var div = document.createElement('div');
-    div.className = 'proposta__aviso proposta__aviso--' + proposta.capacidade.tipo;
-    var icon = document.createElement('i');
-    icon.className = 'ph ph-warning-circle';
-    div.appendChild(icon);
-    div.appendChild(document.createTextNode(' ' + proposta.capacidade.mensagem));
-    container.appendChild(div);
+    // Capacity warning
+    if (proposta.capacidade && proposta.capacidade.tipo) {
+      var div = document.createElement('div');
+      div.className = 'proposta__aviso proposta__aviso--' + proposta.capacidade.tipo;
+      var icon = document.createElement('i');
+      icon.className = 'ph ph-warning-circle';
+      div.appendChild(icon);
+      div.appendChild(document.createTextNode(' ' + proposta.capacidade.mensagem));
+      container.appendChild(div);
+    }
+
+    // Guarda-vidas notice for Oceano
+    if (proposta.breakdown && proposta.breakdown.guardaVidas > 0) {
+      var gvDiv = document.createElement('div');
+      gvDiv.className = 'proposta__aviso proposta__aviso--info';
+      var gvIcon = document.createElement('i');
+      gvIcon.className = 'ph ph-lifebuoy';
+      gvDiv.appendChild(gvIcon);
+      gvDiv.appendChild(document.createTextNode(
+        ' Guarda-vidas obrigatório incluso automaticamente (' +
+        formatarMoeda(Servicos.PRECO_GUARDA_VIDAS) + ')'
+      ));
+      container.appendChild(gvDiv);
+    }
+
+    // Disable WhatsApp button when capacity exceeded
+    var btn = els.whatsappBtn;
+    if (btn && proposta.capacidade && proposta.capacidade.tipo === 'erro') {
+      btn.classList.add('proposta__resumo-cta--disabled');
+      btn.removeAttribute('href');
+    } else if (btn) {
+      btn.classList.remove('proposta__resumo-cta--disabled');
+    }
+  }
+
+  function updateMobileBar(proposta) {
+    if (!els.mobileBar) return;
+    if (!proposta || proposta.erro) {
+      els.mobileBar.style.display = 'none';
+      return;
+    }
+    // Mobile bar visibility handled by CSS media query;
+    // we just ensure it has content
+    if (els.mobileValor) els.mobileValor.textContent = formatarMoeda(proposta.total);
+    if (els.mobileCta) els.mobileCta.href = gerarLinkWhatsApp(proposta);
   }
 
   function recalcular() {
     if (!state.roteiroId) {
       renderResumo(null);
+      updateMobileBar(null);
       return;
     }
 
     var proposta = calcularTotalProposta(state);
     renderResumo(proposta);
     renderAvisos(proposta);
+    updateMobileBar(proposta);
 
     var churrHint = els.churrPreco;
     if (churrHint) {
@@ -943,6 +983,7 @@
       if (heField) heField.style.display = 'none';
     }
 
+    setupMobileBar();
     renderRoteiros();
     renderTurnos();
     renderServicos();
@@ -950,6 +991,43 @@
     setupChurrasqueira();
     setupACToggle();
     recalcular();
+  }
+
+  function setupMobileBar() {
+    var bar = document.createElement('div');
+    bar.className = 'proposta__mobile-bar';
+    bar.id = 'proposta-mobile-bar';
+
+    var totalDiv = document.createElement('div');
+    totalDiv.className = 'proposta__mobile-total';
+    var label = document.createElement('span');
+    label.className = 'proposta__mobile-total-label';
+    label.textContent = 'Total da proposta';
+    var valor = document.createElement('span');
+    valor.className = 'proposta__mobile-total-valor';
+    valor.id = 'proposta-mobile-valor';
+    valor.textContent = '—';
+    totalDiv.appendChild(label);
+    totalDiv.appendChild(valor);
+
+    var cta = document.createElement('a');
+    cta.className = 'btn btn-whatsapp proposta__mobile-cta';
+    cta.id = 'proposta-mobile-whatsapp';
+    cta.target = '_blank';
+    cta.rel = 'noopener noreferrer';
+    cta.href = '#';
+    var ctaIcon = document.createElement('i');
+    ctaIcon.className = 'ph ph-whatsapp-logo';
+    cta.appendChild(ctaIcon);
+    cta.appendChild(document.createTextNode(' Enviar'));
+
+    bar.appendChild(totalDiv);
+    bar.appendChild(cta);
+    document.body.appendChild(bar);
+
+    els.mobileBar = bar;
+    els.mobileValor = valor;
+    els.mobileCta = cta;
   }
 
   if (document.readyState === 'loading') {
