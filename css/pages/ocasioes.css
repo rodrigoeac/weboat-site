@@ -273,14 +273,16 @@
   position: relative;
 }
 
-.ocasiao-galeria__item img {
+.ocasiao-galeria__item img,
+.ocasiao-galeria__item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform var(--transition-slow);
 }
 
-.ocasiao-galeria__item:hover img {
+.ocasiao-galeria__item:hover img,
+.ocasiao-galeria__item:hover video {
   transform: scale(1.05);
 }
 
