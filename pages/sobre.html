@@ -372,7 +372,14 @@
     <!-- Hero -->
     <section class="sobre-hero">
       <div class="sobre-hero__bg">
-        <img src="/assets/images/hero/sobre-hero.jpg" alt="Equipe WeBoat Brasil na Marina da Glória">
+        <picture>
+          <source srcset="/assets/images/hero/sobre-hero-400w.webp 400w, /assets/images/hero/sobre-hero-800w.webp 800w, /assets/images/hero/sobre-hero.webp 1600w" sizes="100vw" type="image/webp">
+          <img src="/assets/images/hero/sobre-hero.jpg"
+               srcset="/assets/images/hero/sobre-hero-400w.jpg 400w, /assets/images/hero/sobre-hero-800w.jpg 800w, /assets/images/hero/sobre-hero.jpg 1600w"
+               sizes="100vw"
+               alt="Vista aérea da Marina da Glória com Pão de Açúcar ao fundo - sede da WeBoat Brasil"
+               fetchpriority="high">
+        </picture>
       </div>
       <div class="sobre-hero__content">
         <h1 class="sobre-hero__title">Sobre a WeBoat Brasil</h1>
