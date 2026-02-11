@@ -76,7 +76,6 @@
 #### Categoria: Eventos (30-65 pessoas)
 | ID | Nome | Capacidade | Preço R1 | Hora Extra | Observações |
 |----|------|------------|----------|------------|-------------|
-| sagarana | Catamarã Sagarana | 20-35 | R$ 9.500 | - | +R$ 400/pessoa (21+) |
 | bota | Barco Gourmet 53 | 30-40 | R$ 7.000 | R$ 1.500 | Turno tarde +R$ 500 |
 | weboat-malik | WeBoat Malik | 35-50 | R$ 8.500 | R$ 2.000 | Turno tarde +R$ 1.000 |
 | oceano | Catamarã Oceano | 50-65 | R$ 14.000 | R$ 3.000 | Churrasq. R$ 600 |
@@ -625,7 +624,6 @@
 
 ### I4: Lanchas para Eventos (4 embarcações, 30-65 pessoas)
 **Arquivos:** Criar páginas em `pages/lanchas/parceiras/`
-- [ ] `catamara-sagarana.html` - Catamarã Sagarana (20-35p, R$ 9.500, +R$ 400/pessoa 21+)
 - [ ] `barco-gourmet-53.html` - Barco Gourmet 53 (30-40p, R$ 7.000, turno tarde +R$ 500)
 - [ ] `weboat-malik.html` - WeBoat Malik (35-50p, R$ 8.500, turno tarde +R$ 1.000)
 - [ ] `catamara-oceano.html` - Catamarã Oceano (50-65p, R$ 14.000, churrasq. R$ 600)
@@ -776,7 +774,6 @@
 **Turnos Especiais:**
 | Lancha | Manhã | Tarde | Obs. |
 |--------|-------|-------|------|
-| Catamarã Sagarana | 08:00-13:00 | 14:00-19:00 | - |
 | Barco Gourmet 53 | 09:00-14:00 | 14:30-19:30 | Tarde +R$ 500 |
 | WeBoat Malik | 08:30-13:30 | 14:30-19:30 | Tarde +R$ 1.000 |
 | Catamarã Oceano | 10:00-15:00 | 17:00-22:00 | - |
@@ -973,7 +970,7 @@
 
 **Categorias de Churrasqueira:**
 - **Padrão:** Comandante/tripulação na churrasqueira, Gelo escama: 02 sacos (20kg cada), Gelo filtrado: 01 saco (10kg), Carvão
-- **Maior (Sagarana, Gourmet 53, Malik):** Tripulação na churrasqueira, Gelo escama: 04 sacos (20kg cada), Gelo filtrado: 02 sacos (10kg cada), Carvão
+- **Maior (Gourmet 53, Malik):** Tripulação na churrasqueira, Gelo escama: 04 sacos (20kg cada), Gelo filtrado: 02 sacos (10kg cada), Carvão
 - **Oceano (Catamarã Oceano):** Churrasqueira a gás, Churrasqueiro, Ajudante. ⚠️ GELO NÃO INCLUSO
 
 **COMMIT:** `feat(lanchas): adicionar info churrasqueira por categoria`
@@ -1010,7 +1007,7 @@
 ### K9: Destaque Lanchas Eventos 30+ Pessoas
 **Arquivo:** `index.html`
 - [ ] Adicionar seção/destaque para lanchas de eventos (30+ pessoas)
-- [ ] Incluir Barco Gourmet, Malik, Sagarana, Oceano
+- [ ] Incluir Barco Gourmet, Malik, Oceano
 
 **COMMIT:** `feat(home): adicionar destaque para lanchas de eventos`
 

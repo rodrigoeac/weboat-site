@@ -100,7 +100,6 @@ jpegoptim --strip-all --max=85 imagem.jpg
 - [ ] WeBoat Essence
 - [ ] WeBoat Malik
 - [ ] Catamarã Oceano
-- [ ] Catamarã Sagarana
 
 ---
 

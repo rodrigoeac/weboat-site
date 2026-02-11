@@ -108,7 +108,7 @@ Para lanchas **padrão** (maioria):
 </p>
 ```
 
-Para lanchas **maiores** (Sagarana, Gourmet 53, Malik):
+Para lanchas **maiores** (Gourmet 53, Malik):
 ```html
 <p class="lancha-prices__churrasqueira-info">
   Inclui: Tripulação na churrasqueira, Gelo escama (4 sacos 20kg), Gelo filtrado (2 sacos 10kg), Carvão
@@ -312,12 +312,12 @@ Sempre use o padrão completo:
 | Categoria | Lanchas | Taxa | O que inclui |
 |-----------|---------|------|--------------|
 | Padrão | Maioria | R$ 250 | Tripulação, 2 sacos gelo escama, 1 saco gelo filtrado, carvão |
-| Maior | Sagarana, Gourmet 53, Malik | R$ 400 | Tripulação, 4 sacos gelo escama, 2 sacos gelo filtrado, carvão |
+| Maior | Gourmet 53, Malik | R$ 400 | Tripulação, 4 sacos gelo escama, 2 sacos gelo filtrado, carvão |
 | Oceano | Catamarã Oceano | R$ 600 | Churrasqueira a gás, churrasqueiro, ajudante (GELO NÃO INCLUSO) |
 
 ### Turnos
 - **Padrão:** Manhã 09h-14h / Tarde 14h30-19h30
-- **Especiais:** Verificar por lancha (Sagarana, Gourmet, Malik, Oceano)
+- **Especiais:** Verificar por lancha (Gourmet, Malik, Oceano)
 - **Flexível (6h):** Prestige 60, Schaefer 62, Intermarine 60
 
 ---

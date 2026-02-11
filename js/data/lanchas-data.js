@@ -58,7 +58,7 @@
     },
   };
 
-  var LANCHAS_CHURRASQUEIRA_MAIOR = ['sagarana', 'bota', 'weboat-malik'];
+  var LANCHAS_CHURRASQUEIRA_MAIOR = ['bota', 'weboat-malik'];
 
   function getCategoriaChurrasqueira(lanchaId) {
     if (lanchaId === 'oceano') return 'oceano';
@@ -424,30 +424,6 @@
       roteiros: {
         R1: { preco: 7000 },
         R2: { preco: 7500 },
-        R3: null,
-        R4: null,
-        R5: null,
-      },
-      incluido: INCLUIDO_PADRAO,
-    },
-    {
-      id: 'sagarana',
-      nome: 'Catamarã Sagarana',
-      isPropria: false,
-      capacidade: { base: 20, maxima: 35 },
-      churrasqueira: 400,
-      horaExtra: 0,
-      pessoaExtra: { valor: 400, aPartirDe: 21, tipo: 'por_pessoa' },
-      arCondicionado: false,
-      gerador: null,
-      turnos: {
-        tipo: 'especial',
-        manha: { horario: '08:00-13:00', duracao: 5 },
-        tarde: { horario: '14:00-19:00', duracao: 5 },
-      },
-      roteiros: {
-        R1: { preco: 9500 },
-        R2: { preco: 9500 },
         R3: null,
         R4: null,
         R5: null,
