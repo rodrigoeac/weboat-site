@@ -519,7 +519,18 @@
       <div class="container">
         <div class="servico-destaque servico-destaque--reverse">
           <div class="servico-destaque__image">
-            <img src="/assets/images/servicos/open-bar-lancha.jpg" alt="Barman preparando drinks a bordo da lancha">
+            <picture>
+              <source type="image/webp"
+                srcset="/assets/images/servicos/open-bar-lancha-400.webp 400w,
+                        /assets/images/servicos/open-bar-lancha-800.webp 800w"
+                sizes="(max-width: 768px) 100vw, 50vw">
+              <img src="/assets/images/servicos/open-bar-lancha-800.jpg"
+                srcset="/assets/images/servicos/open-bar-lancha-400.jpg 400w,
+                        /assets/images/servicos/open-bar-lancha-800.jpg 800w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Amigas brindando com drinks no open bar da lancha"
+                loading="lazy" decoding="async" width="800" height="600">
+            </picture>
           </div>
           <div class="servico-destaque__content">
             <span class="servico-destaque__badge">

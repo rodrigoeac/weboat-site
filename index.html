@@ -1021,7 +1021,18 @@
           <!-- Open Bar -->
           <article class="card-servico">
             <div class="card-servico__image">
-              <img src="/assets/images/hero/open-bar-lancha.jpg" alt="Drinks sendo servidos no open bar da lancha" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source type="image/webp"
+                  srcset="/assets/images/servicos/open-bar-lancha-400.webp 400w,
+                          /assets/images/servicos/open-bar-lancha-800.webp 800w"
+                  sizes="(max-width: 768px) 100vw, 400px">
+                <img src="/assets/images/servicos/open-bar-lancha-400.jpg"
+                  srcset="/assets/images/servicos/open-bar-lancha-400.jpg 400w,
+                          /assets/images/servicos/open-bar-lancha-800.jpg 800w"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  alt="Amigas brindando com drinks no open bar da lancha"
+                  loading="lazy" decoding="async" width="400" height="300">
+              </picture>
             </div>
             <div class="card-servico__content">
               <h3 class="card-servico__title">Open Bar</h3>
