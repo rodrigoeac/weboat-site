@@ -478,9 +478,18 @@
           <!-- Roteiro 3 - Copacabana -->
           <article class="card-roteiro" id="roteiro-3">
             <div class="card-roteiro__image">
-              <img src="/assets/images/roteiros/copacabana.jpg"
-                   alt="Passeio de lancha com vista panorâmica de Copacabana"
-                   loading="lazy">
+              <picture>
+                <source type="image/webp"
+                  srcset="/assets/images/roteiros/copacabana-400.webp 400w,
+                          /assets/images/roteiros/copacabana-800.webp 800w"
+                  sizes="(max-width: 768px) 100vw, 400px">
+                <img src="/assets/images/roteiros/copacabana-400.jpg"
+                  srcset="/assets/images/roteiros/copacabana-400.jpg 400w,
+                          /assets/images/roteiros/copacabana-800.jpg 800w"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  alt="Vista panorâmica da orla de Copacabana com Pão de Açúcar ao fundo"
+                  loading="lazy" decoding="async" width="400" height="250">
+              </picture>
               <span class="card-roteiro__badge">
                 <i class="ph ph-camera"></i>
                 Vista icônica
