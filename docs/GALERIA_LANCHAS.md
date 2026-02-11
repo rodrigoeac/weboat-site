@@ -94,8 +94,8 @@ jpegoptim --strip-all --max=85 imagem.jpg
 - [ ] Tecnomarine 50
 - [ ] Barco Gourmet 53
 - [ ] Prestige 60
-- [ ] Intermarine 60 Fly
-- [ ] Schaefer 62 Fly
+- [x] Intermarine 60 Fly (9 fotos - capa + 8 galeria)
+- [x] Schaefer 62 Fly (9 fotos - capa + 8 galeria)
 - [ ] WeBoat 600
 - [ ] WeBoat Essence
 - [ ] WeBoat Malik
