@@ -824,7 +824,19 @@
 .card-evento__features {
   font-size: var(--text-body-sm);
   color: var(--charcoal);
+  margin-bottom: var(--space-2);
+}
+
+.card-evento__price {
+  font-size: var(--text-body-sm);
+  color: var(--ocean-deep);
+  font-weight: 600;
   margin-bottom: var(--space-4);
+}
+
+.card-evento__price-label {
+  font-weight: 400;
+  color: var(--driftwood);
 }
 
 @media (max-width: 1200px) {
