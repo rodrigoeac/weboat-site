@@ -740,6 +740,23 @@
   color: rgba(255, 255, 255, 0.8);
 }
 
+/* Variante clara para intercalar */
+.eventos--light {
+  background: var(--pearl-gray);
+}
+
+.eventos--light .section-header__overline {
+  color: var(--sunset-gold);
+}
+
+.eventos--light .section-header__title {
+  color: var(--ocean-deep);
+}
+
+.eventos--light .section-header__description {
+  color: var(--charcoal);
+}
+
 .eventos__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
