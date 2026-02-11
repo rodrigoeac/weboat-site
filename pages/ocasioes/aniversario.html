@@ -402,7 +402,18 @@
             <img src="/assets/images/ocasioes/aniversario-galeria-3.jpg" alt="Churrasco no mar durante aniversário">
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/aniversario-galeria-4.jpg" alt="Decoração de aniversário na lancha">
+            <picture>
+              <source type="image/webp"
+                srcset="/assets/images/ocasioes/decoracao-aniversario-300.webp 300w,
+                        /assets/images/ocasioes/decoracao-aniversario-600.webp 600w"
+                sizes="(max-width: 768px) 50vw, 300px">
+              <img src="/assets/images/ocasioes/decoracao-aniversario-300.jpg"
+                srcset="/assets/images/ocasioes/decoracao-aniversario-300.jpg 300w,
+                        /assets/images/ocasioes/decoracao-aniversario-600.jpg 600w"
+                sizes="(max-width: 768px) 50vw, 300px"
+                alt="Decoração de aniversário na lancha com balões, bolo e letreiro Happy Birthday"
+                loading="lazy" decoding="async" width="300" height="300">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
             <img src="/assets/images/ocasioes/aniversario-galeria-5.jpg" alt="Amigos brindando no aniversário">

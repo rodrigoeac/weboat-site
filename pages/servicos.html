@@ -644,7 +644,18 @@
       <div class="container">
         <div class="servico-destaque">
           <div class="servico-destaque__image">
-            <img src="/assets/images/servicos/decoracao-lancha.jpg" alt="Lancha decorada para festa de aniversário">
+            <picture>
+              <source type="image/webp"
+                srcset="/assets/images/servicos/decoracao-lancha-400.webp 400w,
+                        /assets/images/servicos/decoracao-lancha-800.webp 800w"
+                sizes="(max-width: 768px) 100vw, 50vw">
+              <img src="/assets/images/servicos/decoracao-lancha-800.jpg"
+                srcset="/assets/images/servicos/decoracao-lancha-400.jpg 400w,
+                        /assets/images/servicos/decoracao-lancha-800.jpg 800w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                alt="Decoração de aniversário na lancha com balões, bolo e letreiro Happy Birthday"
+                loading="lazy" decoding="async" width="800" height="600">
+            </picture>
           </div>
           <div class="servico-destaque__content">
             <span class="servico-destaque__badge">
