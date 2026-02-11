@@ -742,9 +742,12 @@
 
 .eventos__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: var(--space-6);
   margin-bottom: var(--space-8);
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .eventos__cta {
@@ -839,7 +842,7 @@
   color: var(--driftwood);
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 900px) {
   .eventos__grid {
     grid-template-columns: repeat(2, 1fr);
   }
