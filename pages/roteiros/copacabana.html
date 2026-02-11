@@ -276,9 +276,26 @@
 
     <!-- Hero -->
     <section class="roteiro-hero">
-      <img src="/assets/images/roteiros/copacabana-hero.jpg"
-           alt="Passeio de lancha com vista panorâmica da orla de Copacabana"
-           class="roteiro-hero__image">
+      <picture>
+        <source
+          type="image/webp"
+          srcset="/assets/images/roteiros/copacabana-hero-400.webp 400w,
+                  /assets/images/roteiros/copacabana-hero-800.webp 800w,
+                  /assets/images/roteiros/copacabana-hero-1600.webp 1024w"
+          sizes="100vw">
+        <img src="/assets/images/roteiros/copacabana-hero-1600.jpg"
+             srcset="/assets/images/roteiros/copacabana-hero-400.jpg 400w,
+                     /assets/images/roteiros/copacabana-hero-800.jpg 800w,
+                     /assets/images/roteiros/copacabana-hero-1600.jpg 1024w"
+             sizes="100vw"
+             alt="Vista panorâmica da orla de Copacabana com Pão de Açúcar ao fundo"
+             class="roteiro-hero__image"
+             loading="eager"
+             fetchpriority="high"
+             decoding="sync"
+             width="1024"
+             height="768">
+      </picture>
       <div class="roteiro-hero__overlay"></div>
       <div class="roteiro-hero__content">
         <div class="container">
