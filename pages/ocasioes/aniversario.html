@@ -396,7 +396,18 @@
             <img src="/assets/images/ocasioes/aniversario-galeria-1.jpg" alt="Festa de aniversário na lancha com amigos">
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/aniversario-galeria-2.jpg" alt="Bolo de aniversário na lancha">
+            <picture>
+              <source type="image/webp"
+                srcset="/assets/images/ocasioes/aniversario-bolo-300.webp 300w,
+                        /assets/images/ocasioes/aniversario-bolo-600.webp 600w"
+                sizes="(max-width: 768px) 50vw, 300px">
+              <img src="/assets/images/ocasioes/aniversario-bolo-300.jpg"
+                srcset="/assets/images/ocasioes/aniversario-bolo-300.jpg 300w,
+                        /assets/images/ocasioes/aniversario-bolo-600.jpg 600w"
+                sizes="(max-width: 768px) 50vw, 300px"
+                alt="Aniversariante com bolo personalizado na lancha"
+                loading="lazy" decoding="async" width="300" height="300">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
             <img src="/assets/images/ocasioes/aniversario-galeria-3.jpg" alt="Churrasco no mar durante aniversário">
