@@ -742,7 +742,7 @@
 
 /* Variante clara para intercalar */
 .eventos--light {
-  background: var(--pearl-gray);
+  background: var(--sand-white);
 }
 
 .eventos--light .section-header__overline {
