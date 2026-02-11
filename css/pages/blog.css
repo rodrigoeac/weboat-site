@@ -314,3 +314,117 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ============================================
+   BLOG HERO (INDEX PAGE)
+   ============================================ */
+.blog-hero {
+  padding: var(--space-16) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.blog-hero__title {
+  font-family: var(--font-display);
+  font-size: var(--text-display);
+  font-weight: var(--weight-display);
+  color: var(--white);
+  line-height: var(--line-display);
+  margin-bottom: var(--space-4);
+}
+
+.blog-hero__description {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .blog-hero {
+    padding: var(--space-12) 0;
+  }
+
+  .blog-hero__title {
+    font-size: var(--text-h1);
+  }
+}
+
+/* ============================================
+   ARTICLE INFO BOX
+   ============================================ */
+.article-info-box {
+  background: linear-gradient(135deg, rgba(212, 168, 83, 0.1), rgba(212, 168, 83, 0.2));
+  border-left: 4px solid var(--sunset-gold);
+  border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+  padding: var(--space-5) var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.article-info-box__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.article-info-box__title i {
+  color: var(--sunset-gold);
+}
+
+.article-info-box p {
+  font-size: var(--text-body-sm);
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================
+   ARTICLE CTA SECTION (full-width)
+   ============================================ */
+.blog-cta {
+  padding: var(--space-16) 0;
+  background: var(--ocean-deep);
+  text-align: center;
+}
+
+.blog-cta__content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.blog-cta__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: var(--space-4);
+}
+
+.blog-cta__text {
+  font-size: var(--text-body-lg);
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: var(--space-8);
+}
+
+.blog-cta__buttons {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .blog-cta {
+    padding: var(--space-12) 0;
+  }
+
+  .blog-cta__buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
