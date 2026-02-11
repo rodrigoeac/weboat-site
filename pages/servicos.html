@@ -754,7 +754,18 @@
         <div class="servicos-grid">
           <div class="servico-card">
             <div class="servico-card__image">
-              <img src="/assets/images/servicos/dj-lancha.jpg" alt="DJ tocando música durante passeio de lancha">
+              <picture>
+                <source type="image/webp"
+                  srcset="/assets/images/servicos/dj-lancha-400.webp 400w,
+                          /assets/images/servicos/dj-lancha-800.webp 800w"
+                  sizes="(max-width: 768px) 100vw, 400px">
+                <img src="/assets/images/servicos/dj-lancha-400.jpg"
+                  srcset="/assets/images/servicos/dj-lancha-400.jpg 400w,
+                          /assets/images/servicos/dj-lancha-800.jpg 800w"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  alt="DJ profissional tocando na lancha com headphones e controladora"
+                  loading="lazy" decoding="async" width="400" height="300">
+              </picture>
             </div>
             <div class="servico-card__content">
               <h3 class="servico-card__title">DJ com Equipamento</h3>
