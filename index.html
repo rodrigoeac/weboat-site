@@ -1027,7 +1027,18 @@
           <!-- Combo -->
           <article class="card-servico card-servico--highlight">
             <div class="card-servico__image">
-              <img src="/assets/images/hero/combo-lancha.jpg" alt="Combo churrasco e open bar na lancha" loading="lazy" decoding="async" width="400" height="300">
+              <picture>
+                <source type="image/webp"
+                  srcset="/assets/images/servicos/churrasco-lancha-400.webp 400w,
+                          /assets/images/servicos/churrasco-lancha-800.webp 800w"
+                  sizes="(max-width: 768px) 100vw, 400px">
+                <img src="/assets/images/servicos/churrasco-lancha-400.jpg"
+                  srcset="/assets/images/servicos/churrasco-lancha-400.jpg 400w,
+                          /assets/images/servicos/churrasco-lancha-800.jpg 800w"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  alt="Combo churrasco e open bar na lancha"
+                  loading="lazy" decoding="async" width="400" height="500">
+              </picture>
               <span class="card-servico__badge">Mais Pedido</span>
             </div>
             <div class="card-servico__content">
