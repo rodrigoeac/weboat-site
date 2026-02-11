@@ -78,13 +78,13 @@ jpegoptim --strip-all --max=85 imagem.jpg
 - [ ] WeBoat Oceanic 36
 - [ ] WeBoat Rio Star 50
 
-### Lanchas Parceiras (22)
+### Lanchas Parceiras (21 — Sagarana removida)
 - [ ] Magna 28
 - [ ] Malaga 32
 - [ ] WeBoat Real 32
 - [ ] Boat Rio 36
 - [ ] WeBoat Ghost 36
-- [ ] WeBoat Rival 36
+- [x] WeBoat Rival 36 (11 fotos - capa + 10 galeria)
 - [ ] WeBoat 400
 - [ ] WeBoat Carbrasmar 41
 - [ ] WeBoat Ibiza 45
@@ -93,9 +93,9 @@ jpegoptim --strip-all --max=85 imagem.jpg
 - [ ] WeBoat Senna 50
 - [ ] Tecnomarine 50
 - [ ] Barco Gourmet 53
-- [ ] Prestige 60
+- [x] Prestige 60 (23 fotos - capa + 22 galeria)
 - [x] Intermarine 60 Fly (9 fotos - capa + 8 galeria)
-- [x] Schaefer 62 Fly (9 fotos - capa + 8 galeria)
+- [x] Schaefer 62 Fly (29 fotos - capa + 28 galeria)
 - [ ] WeBoat 600
 - [ ] WeBoat Essence
 - [ ] WeBoat Malik
