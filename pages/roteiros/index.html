@@ -529,9 +529,18 @@
           <!-- Roteiro 4 - Ilhas Cagarras -->
           <article class="card-roteiro" id="roteiro-4">
             <div class="card-roteiro__image">
-              <img src="/assets/images/roteiros/ilhas-cagarras.jpg"
-                   alt="Passeio de lancha nas Ilhas Cagarras - mergulho em águas cristalinas"
-                   loading="lazy">
+              <picture>
+                <source type="image/webp"
+                  srcset="/assets/images/roteiros/ilhas-cagarras-400.webp 400w,
+                          /assets/images/roteiros/ilhas-cagarras-800.webp 800w"
+                  sizes="(max-width: 768px) 100vw, 400px">
+                <img src="/assets/images/roteiros/ilhas-cagarras-400.jpg"
+                  srcset="/assets/images/roteiros/ilhas-cagarras-400.jpg 400w,
+                          /assets/images/roteiros/ilhas-cagarras-800.jpg 800w"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  alt="Vista aérea das Ilhas Cagarras com lancha ancorada em águas cristalinas"
+                  loading="lazy" decoding="async" width="400" height="250">
+              </picture>
               <span class="card-roteiro__badge">
                 <i class="ph ph-waves"></i>
                 Mar aberto
