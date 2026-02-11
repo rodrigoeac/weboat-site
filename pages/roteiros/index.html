@@ -580,9 +580,18 @@
           <!-- Roteiro 5 - Itaipu e Camboinhas -->
           <article class="card-roteiro" id="roteiro-5">
             <div class="card-roteiro__image">
-              <img src="/assets/images/roteiros/itaipu-camboinhas.jpg"
-                   alt="Passeio de lancha em Itaipu e Camboinhas - praias desertas em Niterói"
-                   loading="lazy">
+              <picture>
+                <source type="image/webp"
+                  srcset="/assets/images/roteiros/itaipu-card-400.webp 400w,
+                          /assets/images/roteiros/itaipu-card-800.webp 800w"
+                  sizes="(max-width: 768px) 100vw, 400px">
+                <img src="/assets/images/roteiros/itaipu-card-400.jpg"
+                  srcset="/assets/images/roteiros/itaipu-card-400.jpg 400w,
+                          /assets/images/roteiros/itaipu-card-800.jpg 800w"
+                  sizes="(max-width: 768px) 100vw, 400px"
+                  alt="Vista aérea da Praia de Itaipu em Niterói com mar cristalino"
+                  loading="lazy" decoding="async" width="400" height="250">
+              </picture>
               <span class="card-roteiro__badge">
                 <i class="ph ph-palm-tree"></i>
                 Praias desertas

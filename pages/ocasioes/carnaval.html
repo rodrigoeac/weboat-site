@@ -431,7 +431,18 @@
             <img src="/assets/images/ocasioes/carnaval-galeria-2.jpg" alt="Grupo fantasiado curtindo Carnaval no mar">
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/carnaval-galeria-3.jpg" alt="DJ tocando na lancha durante o Carnaval">
+            <picture>
+              <source type="image/webp"
+                srcset="/assets/images/ocasioes/carnaval-dj-300.webp 300w,
+                        /assets/images/ocasioes/carnaval-dj-600.webp 600w"
+                sizes="(max-width: 768px) 50vw, 300px">
+              <img src="/assets/images/ocasioes/carnaval-dj-300.jpg"
+                srcset="/assets/images/ocasioes/carnaval-dj-300.jpg 300w,
+                        /assets/images/ocasioes/carnaval-dj-600.jpg 600w"
+                sizes="(max-width: 768px) 50vw, 300px"
+                alt="DJ profissional tocando na lancha durante o Carnaval"
+                loading="lazy" decoding="async" width="300" height="300">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
             <img src="/assets/images/ocasioes/carnaval-galeria-4.jpg" alt="Open bar de Carnaval na lancha">
@@ -746,7 +757,18 @@
       <div class="container">
         <div class="ocasiao-diferenciais__content">
           <div class="ocasiao-diferenciais__image">
-            <img src="/assets/images/ocasioes/carnaval-servicos.jpg" alt="Festa de Carnaval com DJ e decoração na lancha">
+            <picture>
+              <source type="image/webp"
+                srcset="/assets/images/servicos/dj-lancha-400.webp 400w,
+                        /assets/images/servicos/dj-lancha-800.webp 800w"
+                sizes="(max-width: 768px) 100vw, 50vw">
+              <img src="/assets/images/servicos/dj-lancha-800.jpg"
+                srcset="/assets/images/servicos/dj-lancha-400.jpg 400w,
+                        /assets/images/servicos/dj-lancha-800.jpg 800w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+                alt="DJ profissional com headphones e controladora na lancha"
+                loading="lazy" decoding="async" width="800" height="600">
+            </picture>
           </div>
           <div class="ocasiao-diferenciais__info">
             <span class="text-overline">Serviços Adicionais</span>
