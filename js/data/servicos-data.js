@@ -37,7 +37,7 @@
       tipo: 'por_pessoa',
       premium: false,
       excluiTaxaChurrasqueira: true,
-      descricao: 'Picanha, contra filé, linguiça, drumete, pão de alho, farofa e bebidas',
+      descricao: 'Picanha, contra filé, linguiça, drumete, pão de alho e bebidas',
       faixasPreco: [
         { min: 5, max: 5, valorPorPessoa: 150 },
         { min: 6, max: 7, valorPorPessoa: 140 },

@@ -466,8 +466,8 @@
 .ocasiao-pacotes__extra {
   margin-top: var(--space-12);
   text-align: center;
-  padding: var(--space-8);
-  background: var(--pearl-gray);
+  padding: var(--space-10);
+  background: var(--ocean-deep);
   border-radius: var(--radius-xl);
 }
 
@@ -475,8 +475,12 @@
   font-family: var(--font-heading);
   font-size: var(--text-h3);
   font-weight: 600;
-  color: var(--ocean-deep);
+  color: var(--white);
   margin-bottom: var(--space-6);
+}
+
+.ocasiao-pacotes__extra .ocasiao-lanchas__grid {
+  gap: var(--space-6);
 }
 
 .ocasiao-lanchas-grid {
