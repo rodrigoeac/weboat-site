@@ -130,6 +130,54 @@ Substituir o bloco `<div class="lancha-gallery">...</div>` com todas as fotos.
 
 ---
 
+## Fotos de Páginas de Ocasiões
+
+### Despedida de Solteira
+- [x] Hero desktop (1600/800/400w JPG+WebP) — grupo de amigas
+- [x] Hero mobile portrait (600x800 JPG+WebP) — crop vertical
+- [x] Galeria 1 featured (1200x800) — grupo com drinks
+- [x] Galeria 2 (600x400) — buffet a bordo
+- [x] Galeria 3 (600x400) — Team Bride drink
+- [x] Galeria 4 (600x400) — noiva com óculos Team Bride
+- [x] Galeria 5 (600x400) — decoração temática Team Bride
+- [x] Extras (800x600) — silhueta pôr do sol com drink
+
+### Réveillon
+- [x] Hero (1600/800/400w JPG+WebP) — fogos de artifício
+- [x] Galeria 1 featured — vídeo fogos (MP4 2.3MB + WebM 1.9MB + poster)
+- [x] Galeria 2 (600x400) — brinde champanhe com luzes coloridas
+- [x] Galeria 3 (600x400) — celebração à noite
+- [x] Galeria 4 (600x400) — mesa decorada para ceia
+- [x] Galeria 5 (600x400) — vista noturna Baía de Guanabara
+- [x] Inclui/Extras (800x600) — Bar Oceano com bartenders
+
+### Aniversário
+- [x] Galeria 1 featured (1200x800) — buffet de frutas tropicais
+- [ ] Galeria 2 — placeholder (aniversario-bolo)
+- [x] Galeria 3 (600x400) — buffet mini hambúrgueres com balões rosa
+- [ ] Galeria 4 — placeholder (decoracao-aniversario)
+- [x] Galeria 5 (600x400) — churrasqueiro preparando espetinhos
+- [x] Extras (800x600) — equipe preparando churrasco na marina
+
+### Corporativo
+- [ ] Hero — placeholder
+- [ ] Galeria 1-5 — placeholders
+- [ ] Extras — placeholder
+
+### Serviços
+- [x] Hero (1600/800/400w JPG+WebP) — buffet/bar a bordo
+- [x] Fotógrafo (800x500) — silhueta casal com Cristo ao pôr do sol
+
+### Sobre
+- [x] Hero (1600/800/400w JPG+WebP) — Marina da Glória vista aérea
+- [x] Equipe 1 (600x600) — tripulante servindo churrasco
+- [x] Equipe 3 (600x600) — técnico nos motores MAN
+- [x] Equipe 4 (600x600) — tripulação no leme
+- [x] Marina da Glória (800x600) — vista aérea fisheye
+- [x] História WeBoat (800x600) — logo ao pôr do sol
+
+---
+
 ## Observações
 
 - A primeira thumbnail deve ter a classe `active`
