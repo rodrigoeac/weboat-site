@@ -176,6 +176,12 @@ Substituir o bloco `<div class="lancha-gallery">...</div>` com todas as fotos.
 - [x] Marina da Glória (800x600) — vista aérea fisheye
 - [x] História WeBoat (800x600) — logo ao pôr do sol
 
+### Blog
+- [x] Melhores Praias hero (1600x900, 385KB) — drone Praia Vermelha com Morro da Urca
+- [x] Melhores Praias card (600x400, 52KB) — mesma foto recortada
+- [x] O Que Vestir hero (1600x900, 195KB) — amigas de biquíni no solário da lancha
+- [x] Guia Marina hero (1600x900, 143KB) — vista aérea Marina da Glória com Pão de Açúcar
+
 ---
 
 ## Observações
