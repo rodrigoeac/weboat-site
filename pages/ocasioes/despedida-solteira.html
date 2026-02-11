@@ -260,7 +260,14 @@
     <!-- Hero -->
     <section class="ocasiao-hero">
       <div class="ocasiao-hero__bg">
-        <img src="/assets/images/ocasioes/despedida-solteira-hero.jpg" alt="Despedida de solteira na lancha no Rio de Janeiro">
+        <picture>
+          <source srcset="/assets/images/ocasioes/despedida-solteira-hero-400w.webp 400w, /assets/images/ocasioes/despedida-solteira-hero-800w.webp 800w, /assets/images/ocasioes/despedida-solteira-hero.webp 1600w" sizes="100vw" type="image/webp">
+          <img src="/assets/images/ocasioes/despedida-solteira-hero.jpg"
+               srcset="/assets/images/ocasioes/despedida-solteira-hero-400w.jpg 400w, /assets/images/ocasioes/despedida-solteira-hero-800w.jpg 800w, /assets/images/ocasioes/despedida-solteira-hero.jpg 1600w"
+               sizes="100vw"
+               alt="Grupo de amigas em despedida de solteira na lancha com Pão de Açúcar ao fundo"
+               fetchpriority="high">
+        </picture>
       </div>
       <div class="ocasiao-hero__content">
         <span class="ocasiao-hero__badge">
