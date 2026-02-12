@@ -614,7 +614,10 @@
         <div class="servicos-grid">
           <div class="servico-card">
             <div class="servico-card__image">
-              <img src="/assets/images/servicos/queijos-vinhos.jpg" alt="Mesa de queijos e vinhos na lancha">
+              <picture>
+                <source srcset="/assets/images/servicos/queijos-vinhos-400.webp 400w, /assets/images/servicos/queijos-vinhos-800.webp 800w" sizes="(max-width: 768px) 100vw, 400px" type="image/webp">
+                <img src="/assets/images/servicos/queijos-vinhos.jpg" alt="Mesa de queijos e vinhos na lancha" loading="lazy" decoding="async" width="800" height="500">
+              </picture>
             </div>
             <div class="servico-card__content">
               <h3 class="servico-card__title">Queijos & Vinhos</h3>
