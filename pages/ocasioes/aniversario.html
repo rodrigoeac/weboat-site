@@ -249,7 +249,13 @@
     <!-- Hero -->
     <section class="ocasiao-hero">
       <div class="ocasiao-hero__bg">
-        <img src="/assets/images/ocasioes/aniversario-hero.jpg" alt="Festa de aniversário na lancha no Rio de Janeiro">
+        <picture>
+          <source media="(max-width: 768px)" srcset="/assets/images/ocasioes/aniversario-hero-mobile.webp" type="image/webp">
+          <source media="(max-width: 768px)" srcset="/assets/images/ocasioes/aniversario-hero-mobile.jpg">
+          <source srcset="/assets/images/ocasioes/aniversario-hero.webp 1600w, /assets/images/ocasioes/aniversario-hero-800w.webp 800w, /assets/images/ocasioes/aniversario-hero-400w.webp 400w" sizes="100vw" type="image/webp">
+          <source srcset="/assets/images/ocasioes/aniversario-hero.jpg 1600w, /assets/images/ocasioes/aniversario-hero-800w.jpg 800w, /assets/images/ocasioes/aniversario-hero-400w.jpg 400w" sizes="100vw">
+          <img src="/assets/images/ocasioes/aniversario-hero.jpg" alt="Festa de aniversário na lancha no Rio de Janeiro" fetchpriority="high">
+        </picture>
       </div>
       <div class="ocasiao-hero__content">
         <span class="ocasiao-hero__badge">
