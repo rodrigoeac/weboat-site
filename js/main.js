@@ -398,59 +398,6 @@
       document.addEventListener('keydown', handleKeydown);
     }
 
-    // Fallback para imagens com data-lightbox fora da galeria de lancha
-    var standaloneImages = document.querySelectorAll('[data-lightbox]:not(.lancha-gallery__main img)');
-    standaloneImages.forEach(function(img) {
-      img.addEventListener('click', function() {
-        var triggerEl = this;
-        var src = this.dataset.lightbox || this.src;
-        var alt = this.alt || '';
-
-        var overlay = document.createElement('div');
-        overlay.className = 'lightbox-overlay';
-        overlay.setAttribute('role', 'dialog');
-        overlay.setAttribute('aria-modal', 'true');
-
-        var contentDiv = document.createElement('div');
-        contentDiv.className = 'lightbox-content';
-
-        var imgEl = document.createElement('img');
-        imgEl.src = src;
-        imgEl.alt = alt;
-        contentDiv.appendChild(imgEl);
-
-        var closeBtn = document.createElement('button');
-        closeBtn.className = 'lightbox-close';
-        closeBtn.setAttribute('aria-label', 'Fechar');
-        closeBtn.textContent = '\u00D7';
-        contentDiv.appendChild(closeBtn);
-
-        overlay.appendChild(contentDiv);
-        document.body.appendChild(overlay);
-        document.body.style.overflow = 'hidden';
-        closeBtn.focus();
-
-        function closeStandalone() {
-          overlay.remove();
-          document.body.style.overflow = '';
-          document.removeEventListener('keydown', handleEscape);
-          triggerEl.focus();
-        }
-
-        overlay.addEventListener('click', function(event) {
-          if (event.target === overlay || event.target.classList.contains('lightbox-close')) {
-            closeStandalone();
-          }
-        });
-
-        function handleEscape(event) {
-          if (event.key === 'Escape') {
-            closeStandalone();
-          }
-        }
-        document.addEventListener('keydown', handleEscape);
-      });
-    });
   }
 
   // ============================================

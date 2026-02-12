@@ -422,26 +422,3 @@
   font-weight: 500;
 }
 
-/* ============================================
-   SECTION CTA
-   ============================================ */
-.section--cta {
-  background: var(--ocean-deep);
-  padding: var(--space-16) 0;
-}
-
-.section--cta h2,
-.section--cta .h2 {
-  color: var(--white);
-  margin-bottom: var(--space-4);
-}
-
-.section--cta p {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-@media (max-width: 768px) {
-  .section--cta {
-    padding: var(--space-12) 0;
-  }
-}

@@ -212,7 +212,6 @@
     var successEl = document.createElement('div');
     successEl.className = 'form-success';
     successEl.innerHTML = '<i class="ph ph-check-circle"></i> Mensagem enviada! Você será redirecionado para o WhatsApp.';
-    successEl.style.cssText = 'background: var(--success); color: white; padding: var(--space-4); border-radius: var(--radius-md); text-align: center; margin-top: var(--space-4); display: flex; align-items: center; justify-content: center; gap: var(--space-2);';
 
     var actionsEl = form.querySelector('.contato-form__actions');
     if (actionsEl) {

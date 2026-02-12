@@ -59,17 +59,6 @@
   color: var(--white);
 }
 
-/* Ghost - Transparente */
-.btn-ghost {
-  background: transparent;
-  color: var(--ocean-deep);
-  border-color: transparent;
-}
-
-.btn-ghost:hover {
-  background: var(--pearl-gray);
-}
-
 /* WhatsApp */
 .btn-whatsapp {
   background: var(--whatsapp-green);
@@ -82,19 +71,6 @@
   border-color: var(--whatsapp-green-hover);
   transform: translateY(-2px);
   color: var(--white);
-}
-
-/* White (para fundos escuros) */
-.btn-white {
-  background: var(--white);
-  color: var(--ocean-deep);
-  border-color: var(--white);
-}
-
-.btn-white:hover {
-  background: var(--sand-white);
-  border-color: var(--sand-white);
-  color: var(--ocean-deep);
 }
 
 /* Outline White (para fundos escuros) */
@@ -120,11 +96,6 @@
   padding: var(--space-4) var(--space-8);
   font-size: var(--text-body-lg);
   min-height: 56px;
-}
-
-/* Full width */
-.btn-block {
-  width: 100%;
 }
 
 /* Ícone dentro do botão */
@@ -572,59 +543,6 @@
   cursor: pointer;
 }
 
-/* ============================================
-   SOCIAL PROOF (Números)
-   ============================================ */
-.social-proof {
-  background: var(--ocean-deep);
-  padding: var(--space-16) 0;
-}
-
-.social-proof__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-8);
-  text-align: center;
-}
-
-.social-proof__item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.social-proof__number {
-  font-family: var(--font-display);
-  font-size: var(--text-display);
-  font-weight: var(--weight-display);
-  color: var(--sunset-gold);
-  line-height: 1;
-  margin-bottom: var(--space-2);
-}
-
-.social-proof__label {
-  font-family: var(--font-body);
-  font-size: var(--text-body);
-  color: rgba(255, 255, 255, 0.8);
-}
-
-@media (max-width: 1024px) {
-  .social-proof__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-8) var(--space-6);
-  }
-}
-
-@media (max-width: 768px) {
-  .social-proof {
-    padding: var(--space-12) 0;
-  }
-  
-  .social-proof__number {
-    font-size: 2.5rem;
-  }
-}
-
 /* WhatsApp Float — defined in footer.css (single source) */
 
 /* ============================================
@@ -895,4 +813,37 @@
   font-size: var(--text-caption);
   color: var(--driftwood);
   padding: var(--space-4) 0 var(--space-8);
+}
+
+/* ============================================
+   FORM SUCCESS MESSAGE
+   ============================================ */
+.form-success {
+  background: var(--success);
+  color: white;
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin-top: var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+}
+
+/* ============================================
+   ANSWER CAPSULE (GEO/AI Optimization)
+   ============================================ */
+.answer-capsule {
+  border-left: 4px solid var(--sunset-gold);
+  background: var(--pearl-gray);
+  padding: var(--space-4) var(--space-5);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-bottom: var(--space-4);
+  font-size: var(--text-body);
+  line-height: 1.7;
+}
+
+.answer-capsule strong {
+  color: var(--ocean-deep);
 }

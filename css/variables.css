@@ -5,15 +5,6 @@
    ============================================ */
 
 /* ============================================
-   GOOGLE FONTS IMPORT
-   OTIMIZADO: Apenas weights necessários
-   Plus Jakarta Sans: 600, 700 (títulos)
-   DM Sans: 500, 600 (headings/botões)
-   Source Sans 3: 400, 600 (corpo)
-   ============================================ */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=DM+Sans:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap');
-
-/* ============================================
    CSS CUSTOM PROPERTIES (VARIÁVEIS)
    ============================================ */
 :root {
@@ -347,15 +338,8 @@ p:last-child { margin-bottom: 0; }
 /* ============================================
    UTILITIES
    ============================================ */
-.text-ocean { color: var(--ocean-deep); }
-.text-gold { color: var(--sunset-gold); }
-.text-blue { color: var(--wave-blue); }
 .text-white { color: var(--white); }
 .text-muted { color: var(--driftwood); }
-.bg-sand { background-color: var(--sand-white); }
-.bg-pearl { background-color: var(--pearl-gray); }
-.bg-ocean { background-color: var(--ocean-deep); }
-.bg-white { background-color: var(--white); }
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .font-semibold { font-weight: 600; }
