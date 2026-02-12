@@ -599,6 +599,15 @@ COMMIT: "chore: SEO e finalização"
 - TXT Google Site Verification
 - Nameservers: `moura.ns.cloudflare.com` + `pam.ns.cloudflare.com`
 
+### TODO — Pós-Migração
+- [ ] **Google Tag Manager (GTM)** — criar container e instalar `<script>` no `<head>` de todas as páginas
+- [ ] **Google Analytics 4 (GA4)** — configurar via GTM ou tag direta
+- [ ] **Meta Pixel (Facebook/Instagram)** — instalar via GTM ou `<script>` direto
+- [ ] **Microsoft Clarity** — opcional, heatmaps e session recordings
+- [ ] **Google Search Console** — verificar novo domínio no Cloudflare (TXT já migrado)
+- [ ] **DKIM** — configurar no Google Workspace para melhorar entregabilidade de email
+- [ ] **DMARC** — adicionar TXT record `_dmarc` com política de rejeição
+
 ### Deploy
 ```bash
 # Copiar para dir temporário (workaround permissões root)
