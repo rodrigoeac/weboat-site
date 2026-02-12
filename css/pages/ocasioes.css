@@ -686,21 +686,27 @@
 }
 
 .ocasiao-lanchas__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-6);
   margin-top: var(--space-12);
 }
 
+.ocasiao-lanchas__grid > .card-boat {
+  flex: 0 1 calc((100% - 2 * var(--space-6)) / 3);
+  min-width: 280px;
+}
+
 @media (max-width: 1024px) {
-  .ocasiao-lanchas__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .ocasiao-lanchas__grid > .card-boat {
+    flex: 0 1 calc((100% - var(--space-6)) / 2);
   }
 }
 
 @media (max-width: 640px) {
-  .ocasiao-lanchas__grid {
-    grid-template-columns: 1fr;
+  .ocasiao-lanchas__grid > .card-boat {
+    flex: 0 1 100%;
   }
 }
 
