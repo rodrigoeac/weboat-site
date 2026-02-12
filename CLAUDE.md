@@ -575,6 +575,46 @@ COMMIT: "chore: SEO e finalização"
 
 ---
 
+## 🌐 HOSPEDAGEM — CLOUDFLARE PAGES
+
+**Hosting:** Cloudflare Pages (migrado de Vercel+Wix em fev/2026)
+**Domínio:** weboatbrasil.com.br (Registro.br → Cloudflare NS)
+**Preview URL:** https://weboat-site.pages.dev
+**Deploy:** Direct Upload via wrangler CLI
+
+### URLs Limpas (Clean URLs)
+- Todas as páginas usam padrão `pasta/index.html` servido como `/pasta/`
+- Sem extensão `.html`, sem prefixo `/pages/`
+- Exemplo: `/lanchas/weboat-32/` serve `lanchas/weboat-32/index.html`
+- Parceiras achatadas: sem `/parceiras/` na URL
+- Ocasiões na raiz: `/despedida-solteira/`, `/aniversario/`, etc.
+
+### Redirects (`_redirects`)
+- 83 regras 301 (Wix legacy + URLs antigas com /pages/)
+- Regras explícitas por página (não usar :splat para .html)
+
+### DNS (Cloudflare)
+- 5 MX records → Google Workspace (email)
+- TXT SPF → `v=spf1 include:_spf.google.com ~all`
+- TXT Google Site Verification
+- Nameservers: `moura.ns.cloudflare.com` + `pam.ns.cloudflare.com`
+
+### Deploy
+```bash
+# Copiar para dir temporário (workaround permissões root)
+rsync -a --no-owner --no-group --chmod=u+rw \
+  --exclude='.git' --exclude='node_modules' --exclude='.DS_Store' \
+  --exclude='package.json' --exclude='package-lock.json' \
+  --exclude='images-originals' \
+  . /tmp/weboat-deploy/
+
+# Deploy para Cloudflare Pages
+cd /tmp/weboat-deploy
+npx wrangler pages deploy . --project-name weboat-site --branch main --commit-dirty=true
+```
+
+---
+
 ## 🔧 COMANDOS ÚTEIS
 
 ```bash
@@ -621,5 +661,5 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 
 ---
 
-**Última atualização:** Janeiro 2026  
-**Versão:** 2.0 - Estratégia Direta Claude Code
+**Última atualização:** Fevereiro 2026
+**Versão:** 3.0 - Clean URLs + Cloudflare Pages

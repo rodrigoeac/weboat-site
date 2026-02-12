@@ -1,2 +1,5 @@
 .vercel
 assets/images-originals/
+node_modules/
+package.json
+package-lock.json
