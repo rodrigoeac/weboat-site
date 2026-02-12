@@ -209,10 +209,16 @@
 }
 
 .lanchas__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: var(--space-6);
   margin-bottom: var(--space-8);
+}
+
+.lanchas__grid > .card-boat {
+  flex: 0 1 calc((100% - 2 * var(--space-6)) / 3);
+  min-width: 280px;
 }
 
 .lanchas__note {
@@ -236,14 +242,14 @@
 }
 
 @media (max-width: 1200px) {
-  .lanchas__grid {
-    grid-template-columns: repeat(2, 1fr);
+  .lanchas__grid > .card-boat {
+    flex: 0 1 calc((100% - var(--space-6)) / 2);
   }
 }
 
 @media (max-width: 640px) {
-  .lanchas__grid {
-    grid-template-columns: 1fr;
+  .lanchas__grid > .card-boat {
+    flex: 0 1 100%;
   }
 
   .lanchas {
