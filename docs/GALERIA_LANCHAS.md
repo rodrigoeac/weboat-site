@@ -72,10 +72,11 @@ jpegoptim --strip-all --max=85 imagem.jpg
 
 ## Lanchas para Atualizar
 
-### Lanchas Próprias (4)
+### Lanchas Próprias (5)
 - [ ] WeBoat 32 ✅ (11 fotos)
 - [ ] WeBoat 390
 - [ ] WeBoat Oceanic 36
+- [ ] WeBoat Ibiza 42
 - [ ] WeBoat Rio Star 50
 
 ### Lanchas Parceiras (21 — Sagarana removida)

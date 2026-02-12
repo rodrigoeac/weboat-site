@@ -1,6 +1,6 @@
 # WeBoat Brasil — Aluguel de Lanchas no Rio de Janeiro
 
-> A WeBoat Brasil oferece aluguel de lanchas privativas no Rio de Janeiro, com saída da Marina da Glória. Frota de 25 embarcações (4 próprias + 21 parceiras) para 10 a 65 pessoas. Todos os passeios incluem combustível, marinheiro, som Bluetooth, coolers, coletes e seguro. Mais de 1.000 passeios realizados e 900+ avaliações 5 estrelas no Google.
+> A WeBoat Brasil oferece aluguel de lanchas privativas no Rio de Janeiro, com saída da Marina da Glória. Frota de 26 embarcações (5 próprias + 21 parceiras) para 10 a 65 pessoas. Todos os passeios incluem combustível, marinheiro, som Bluetooth, coolers, coletes e seguro. Mais de 1.000 passeios realizados e 900+ avaliações 5 estrelas no Google.
 
 ## Dados da Empresa
 
@@ -12,13 +12,14 @@
 - Site: https://www.weboatbrasil.com.br
 - Horário comercial: 8h às 20h (suporte clientes: 24h)
 
-## Lanchas Próprias (4 embarcações)
+## Lanchas Próprias (5 embarcações)
 
 | Lancha | Capacidade | Preço a partir de | Destaque |
 |--------|------------|-------------------|----------|
 | WeBoat 32 | 15 pessoas | R$ 2.300 | Melhor custo-benefício |
 | WeBoat Oceanic 36 | 14 pessoas | R$ 2.400 | Conforto premium |
 | WeBoat 390 | 16 pessoas | R$ 2.600 | Versátil, ótima para festas |
+| WeBoat Ibiza 42 | 12 pessoas | R$ 2.700 | Flybridge exclusivo, churrasqueira |
 | WeBoat Rio Star 50 | 22 pessoas | R$ 4.000 | Maior capacidade própria |
 
 ## Lanchas Parceiras (21 embarcações)
@@ -47,7 +48,7 @@
 | Schaefer 62 Fly | 16 pessoas | R$ 15.000 (6h) |
 | Catamarã Oceano | até 65 pessoas | R$ 14.000 |
 
-Nota: São 21 lanchas parceiras + 2 catamarãs = 22 embarcações parceiras listadas + 4 próprias = 26 total na operação de propostas. O site lista 25 embarcações.
+Nota: São 21 lanchas parceiras + 2 catamarãs = 22 embarcações parceiras listadas + 5 próprias = 27 total na operação de propostas. O site lista 26 embarcações.
 
 ## Roteiros Disponíveis (6 opções)
 
@@ -126,7 +127,7 @@ Nota: São 21 lanchas parceiras + 2 catamarãs = 22 embarcações parceiras list
 O aluguel de lancha na WeBoat começa a partir de R$ 2.300 (WeBoat 32, roteiro Mureta da Urca, seg-qui). Preços variam conforme a lancha, roteiro e dia da semana. Lanchas maiores para até 65 pessoas custam a partir de R$ 14.000.
 
 ### Quantas pessoas cabem em uma lancha?
-A WeBoat tem lanchas para 10 a 65 pessoas. Lanchas próprias comportam 14 a 22 pessoas. Lanchas parceiras e catamarãs atendem grupos de até 65 pessoas.
+A WeBoat tem lanchas para 10 a 65 pessoas. Lanchas próprias comportam 12 a 22 pessoas. Lanchas parceiras e catamarãs atendem grupos de até 65 pessoas.
 
 ### Preciso ter habilitação náutica?
 Não. Todas as lanchas saem com marinheiro experiente. Os passageiros não precisam de habilitação.
@@ -150,7 +151,7 @@ Todos os passeios saem da Marina da Glória, no bairro da Glória, Rio de Janeir
 ## Páginas do Site
 
 - [Home](https://www.weboatbrasil.com.br/): Visão geral da WeBoat
-- [Nossa Frota](https://www.weboatbrasil.com.br/pages/lanchas/): Todas as 25 lanchas disponíveis
+- [Nossa Frota](https://www.weboatbrasil.com.br/pages/lanchas/): Todas as 26 lanchas disponíveis
 - [Comparativo de Lanchas](https://www.weboatbrasil.com.br/pages/lanchas/comparativo.html): Compare lanchas lado a lado
 - [Roteiros](https://www.weboatbrasil.com.br/pages/roteiros/): 6 roteiros com trajeto e preços
 - [Serviços Extras](https://www.weboatbrasil.com.br/pages/servicos.html): Churrasco, open bar, decoração

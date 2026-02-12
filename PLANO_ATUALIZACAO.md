@@ -438,7 +438,7 @@
 ### F3: Mini FAQ - Sobre ✅
 **Arquivo:** `pages/sobre.html`
 - [x] Adicionar Mini FAQ sobre a empresa
-- [x] Atualizar números/estatísticas (4 lanchas, não 5)
+- [x] Atualizar números/estatísticas (5 lanchas próprias)
 - [x] Adicionar Schema FAQPage
 
 **COMMIT:** `feat(sobre): adicionar mini FAQ e corrigir número de lanchas` ✅

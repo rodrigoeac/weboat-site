@@ -175,13 +175,14 @@ Todas as lanchas (próprias e de parceiros) possuem **banheiro a bordo**.
 
 ### Quantas pessoas cabem em uma lancha?
 
-**4 lanchas próprias WeBoat:**
+**5 lanchas próprias WeBoat:**
 
 | Lancha | Capacidade |
 |--------|------------|
 | WeBoat 32 | Até 15 pessoas |
 | WeBoat 390 | Até 16 pessoas |
 | WeBoat Oceanic 36 | Até 14 pessoas |
+| WeBoat Ibiza 42 | Até 12 pessoas |
 | WeBoat Rio Star 50 | Até 22 pessoas |
 
 **Lanchas parceiras:** de 10 a 65 pessoas.
@@ -211,6 +212,7 @@ Os valores variam entre **R$ 250 a R$ 600**, dependendo da embarcação e do que
 | **WeBoat 32** | Melhor custo-benefício, ideal para grupos de até 15 pessoas |
 | **WeBoat 390** | Mais versátil, até 16 pessoas, ótima para despedidas e festas |
 | **WeBoat Oceanic 36** | Conforto premium, acabamento superior, até 14 pessoas |
+| **WeBoat Ibiza 42** | Flybridge exclusivo, até 12 pessoas, ideal para casais e grupos pequenos |
 | **WeBoat Rio Star 50** | Maior capacidade (22 pessoas), perfeita para grupos grandes |
 
 ---
@@ -410,7 +412,7 @@ A embarcação contratada **não pode atracar ao lado de outros barcos** por que
 | **Sinal** | 50% (não reembolsável) |
 | **Pagamento preferencial** | PIX ou transferência |
 | **Antecedência chegada** | 30 minutos |
-| **Lanchas próprias** | 4 (14 a 22 pessoas) |
+| **Lanchas próprias** | 5 (12 a 22 pessoas) |
 | **Lanchas parceiras** | 10 a 65 pessoas |
 | **Churrasqueira** | Todas têm, taxa R$ 250-600 |
 | **Churrasco** | A partir de R$ 100/pessoa |

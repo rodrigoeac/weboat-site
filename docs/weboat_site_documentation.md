@@ -130,7 +130,7 @@
 |-------|-------|----------|
 | 1 | **Hero Banner** | Vídeo/imagem impactante + headline + CTA "Reserve Agora" |
 | 2 | **Proposta de Valor** | "Passeios de lancha privativos no Rio de Janeiro" |
-| 3 | **Lanchas em Destaque** | Cards com 4 lanchas principais (próprias) |
+| 3 | **Lanchas em Destaque** | Cards com 5 lanchas principais (próprias) |
 | 4 | **Roteiros** | Apresentação visual dos 5 roteiros |
 | 5 | **Por que WeBoat?** | 3-4 diferenciais principais |
 | 6 | **Serviços Extras** | Cards de churrasco, open bar, decoração |

@@ -149,6 +149,27 @@
       incluido: INCLUIDO_PADRAO,
     },
 
+    {
+      id: 'weboat-ibiza-42',
+      nome: 'WeBoat Ibiza 42',
+      isPropria: true,
+      capacidade: { base: 12, maxima: 12 },
+      churrasqueira: 250,
+      horaExtra: 800,
+      pessoaExtra: null,
+      arCondicionado: false,
+      gerador: null,
+      turnos: TURNO_PADRAO,
+      roteiros: {
+        R1: { normal: 3200, promocional: 2700 },
+        R2: { normal: 3400, promocional: 2900 },
+        R3: { normal: 4000, promocional: 3500 },
+        R4: { normal: 4600, promocional: 4100 },
+        R5: { normal: 4600, promocional: 4100 },
+      },
+      incluido: INCLUIDO_PADRAO,
+    },
+
     // ==================== PARCEIRAS ====================
     {
       id: 'malaga-32',

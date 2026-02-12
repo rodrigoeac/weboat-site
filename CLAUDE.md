@@ -27,7 +27,7 @@ Site: https://www.weboatbrasil.com.br
 ### Métricas para Social Proof
 ```
 +1.000 passeios realizados
-4 lanchas próprias (+ parceiros de 10 a 65 pessoas)
+5 lanchas próprias (+ parceiros de 10 a 65 pessoas)
 +900 avaliações 5 estrelas
 +18.000 seguidores no Instagram
 ```
@@ -165,13 +165,14 @@ weboat-site/
 
 ## 🚤 DADOS DAS LANCHAS (REFERÊNCIA RÁPIDA)
 
-### Lanchas Próprias WeBoat (4 lanchas)
+### Lanchas Próprias WeBoat (5 lanchas)
 
 | Lancha | Capacidade | Preço Seg-Qui | Preço Sex-Dom | Destaque |
 |--------|------------|---------------|---------------|----------|
 | WeBoat 32 | 15 pessoas | R$ 2.300 | R$ 2.700 | Melhor custo-benefício |
 | WeBoat 390 | 16 pessoas | R$ 2.600 | R$ 3.100 | Versátil, ótima para festas |
 | WeBoat Oceanic 36 | 14 pessoas | R$ 2.900 | R$ 3.400 | Conforto premium |
+| WeBoat Ibiza 42 | 12 pessoas | R$ 2.700 | R$ 3.200 | Flybridge exclusivo |
 | WeBoat Rio Star 50 | 22 pessoas | R$ 4.000 | R$ 4.500 | Maior capacidade |
 
 ### Lanchas Parceiras
