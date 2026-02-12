@@ -595,14 +595,20 @@ COMMIT: "chore: SEO e finalização"
 
 ### DNS (Cloudflare)
 - 5 MX records → Google Workspace (email)
+- A record: `api.weboatbrasil.com.br` → `5.161.72.207` (TTL 1h, DNS-only)
 - TXT SPF → `v=spf1 include:_spf.google.com ~all`
 - TXT Google Site Verification
 - Nameservers: `moura.ns.cloudflare.com` + `pam.ns.cloudflare.com`
 
+### Google Tag Manager
+- **Container ID:** GTM-K9LG4M2
+- Instalado em todas as 53 páginas HTML (head script + body noscript)
+- GA4, Ads, Meta Pixel e demais tags gerenciados via GTM
+
 ### TODO — Pós-Migração
-- [ ] **Google Tag Manager (GTM)** — criar container e instalar `<script>` no `<head>` de todas as páginas
-- [ ] **Google Analytics 4 (GA4)** — configurar via GTM ou tag direta
-- [ ] **Meta Pixel (Facebook/Instagram)** — instalar via GTM ou `<script>` direto
+- [x] **Google Tag Manager (GTM)** — GTM-K9LG4M2 instalado em 53 páginas
+- [ ] **Google Analytics 4 (GA4)** — configurar via GTM
+- [ ] **Meta Pixel (Facebook/Instagram)** — configurar via GTM
 - [ ] **Microsoft Clarity** — opcional, heatmaps e session recordings
 - [ ] **Google Search Console** — verificar novo domínio no Cloudflare (TXT já migrado)
 - [ ] **DKIM** — configurar no Google Workspace para melhorar entregabilidade de email
