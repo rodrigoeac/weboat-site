@@ -280,7 +280,28 @@
     <!-- Hero -->
     <section class="ocasiao-hero">
       <div class="ocasiao-hero__bg">
-        <img src="/assets/images/ocasioes/carnaval-hero.jpg" alt="Carnaval na lancha no Rio de Janeiro com vista da orla">
+        <picture>
+          <source media="(max-width: 768px)" type="image/webp"
+            srcset="/assets/images/ocasioes/carnaval-hero-mobile-400w.webp 400w,
+                    /assets/images/ocasioes/carnaval-hero-mobile.webp 800w"
+            sizes="100vw">
+          <source media="(max-width: 768px)"
+            srcset="/assets/images/ocasioes/carnaval-hero-mobile-400w.jpg 400w,
+                    /assets/images/ocasioes/carnaval-hero-mobile.jpg 800w"
+            sizes="100vw">
+          <source type="image/webp"
+            srcset="/assets/images/ocasioes/carnaval-hero-400w.webp 400w,
+                    /assets/images/ocasioes/carnaval-hero-800w.webp 800w,
+                    /assets/images/ocasioes/carnaval-hero.webp 1600w"
+            sizes="100vw">
+          <img src="/assets/images/ocasioes/carnaval-hero.jpg"
+            srcset="/assets/images/ocasioes/carnaval-hero-400w.jpg 400w,
+                    /assets/images/ocasioes/carnaval-hero-800w.jpg 800w,
+                    /assets/images/ocasioes/carnaval-hero.jpg 1600w"
+            sizes="100vw"
+            alt="Grupo de amigas com camisas do Brasil curtindo Carnaval na lancha com Pão de Açúcar ao fundo"
+            fetchpriority="high" decoding="async" width="1600" height="900">
+        </picture>
       </div>
       <div class="ocasiao-hero__content">
         <span class="ocasiao-hero__badge">
@@ -425,30 +446,34 @@
 
         <div class="ocasiao-galeria__grid">
           <div class="ocasiao-galeria__item ocasiao-galeria__item--featured">
-            <img src="/assets/images/ocasioes/carnaval-galeria-1.jpg" alt="Festa de Carnaval na lancha com decoração temática">
-          </div>
-          <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/carnaval-galeria-2.jpg" alt="Grupo fantasiado curtindo Carnaval no mar">
-          </div>
-          <div class="ocasiao-galeria__item">
             <picture>
-              <source type="image/webp"
-                srcset="/assets/images/ocasioes/carnaval-dj-300.webp 300w,
-                        /assets/images/ocasioes/carnaval-dj-600.webp 600w"
-                sizes="(max-width: 768px) 50vw, 300px">
-              <img src="/assets/images/ocasioes/carnaval-dj-300.jpg"
-                srcset="/assets/images/ocasioes/carnaval-dj-300.jpg 300w,
-                        /assets/images/ocasioes/carnaval-dj-600.jpg 600w"
-                sizes="(max-width: 768px) 50vw, 300px"
-                alt="DJ profissional tocando na lancha durante o Carnaval"
-                loading="lazy" decoding="async" width="300" height="300">
+              <source type="image/webp" srcset="/assets/images/ocasioes/carnaval-galeria-1.webp">
+              <img src="/assets/images/ocasioes/carnaval-galeria-1.jpg" alt="Três amigas tomando sol na proa da lancha durante Carnaval no Rio" loading="lazy" decoding="async" width="1200" height="800">
             </picture>
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/carnaval-galeria-4.jpg" alt="Open bar de Carnaval na lancha">
+            <picture>
+              <source type="image/webp" srcset="/assets/images/ocasioes/carnaval-galeria-2.webp">
+              <img src="/assets/images/ocasioes/carnaval-galeria-2.jpg" alt="Duas amigas brindando com cerveja na lancha com Pão de Açúcar ao fundo" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/carnaval-galeria-5.jpg" alt="Vista da orla do Rio de Janeiro da lancha no Carnaval">
+            <picture>
+              <source type="image/webp" srcset="/assets/images/ocasioes/carnaval-galeria-3.webp">
+              <img src="/assets/images/ocasioes/carnaval-galeria-3.jpg" alt="Amigas pulando da lancha no mar durante o Carnaval no Rio" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
+          </div>
+          <div class="ocasiao-galeria__item">
+            <picture>
+              <source type="image/webp" srcset="/assets/images/ocasioes/carnaval-galeria-4.webp">
+              <img src="/assets/images/ocasioes/carnaval-galeria-4.jpg" alt="Grupo de amigas se divertindo na água com tapete flutuante durante passeio de Carnaval" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
+          </div>
+          <div class="ocasiao-galeria__item">
+            <picture>
+              <source type="image/webp" srcset="/assets/images/ocasioes/carnaval-galeria-5.webp">
+              <img src="/assets/images/ocasioes/carnaval-galeria-5.jpg" alt="Grande grupo curtindo Carnaval na lancha com vista panorâmica do Rio" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
           </div>
         </div>
       </div>
