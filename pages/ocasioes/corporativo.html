@@ -245,7 +245,13 @@
     <!-- Hero -->
     <section class="ocasiao-hero">
       <div class="ocasiao-hero__bg">
-        <img src="/assets/images/ocasioes/corporativo-hero.jpg" alt="Evento corporativo na lancha no Rio de Janeiro">
+        <picture>
+          <source media="(max-width: 768px)" srcset="/assets/images/ocasioes/corporativo-hero-mobile.webp" type="image/webp">
+          <source media="(max-width: 768px)" srcset="/assets/images/ocasioes/corporativo-hero-mobile.jpg">
+          <source srcset="/assets/images/ocasioes/corporativo-hero.webp 1600w, /assets/images/ocasioes/corporativo-hero-800w.webp 800w, /assets/images/ocasioes/corporativo-hero-400w.webp 400w" sizes="100vw" type="image/webp">
+          <source srcset="/assets/images/ocasioes/corporativo-hero.jpg 1600w, /assets/images/ocasioes/corporativo-hero-800w.jpg 800w, /assets/images/ocasioes/corporativo-hero-400w.jpg 400w" sizes="100vw">
+          <img src="/assets/images/ocasioes/corporativo-hero.jpg" alt="Evento corporativo na lancha no Rio de Janeiro" fetchpriority="high">
+        </picture>
       </div>
       <div class="ocasiao-hero__content">
         <span class="ocasiao-hero__badge">
@@ -351,7 +357,10 @@
       <div class="container">
         <div class="ocasiao-diferenciais__content">
           <div class="ocasiao-diferenciais__image">
-            <img src="/assets/images/ocasioes/corporativo-diferenciais.jpg" alt="Equipe em evento corporativo na lancha">
+            <picture>
+              <source srcset="/assets/images/ocasioes/corporativo-diferenciais.webp" type="image/webp">
+              <img src="/assets/images/ocasioes/corporativo-diferenciais.jpg" alt="Equipe em evento corporativo na lancha" loading="lazy" decoding="async" width="800" height="600">
+            </picture>
           </div>
           <div class="ocasiao-diferenciais__info">
             <span class="text-overline">Por que escolher a WeBoat</span>
@@ -412,19 +421,34 @@
 
         <div class="ocasiao-galeria__grid">
           <div class="ocasiao-galeria__item ocasiao-galeria__item--featured">
-            <img src="/assets/images/ocasioes/corporativo-galeria-1.jpg" alt="Equipe em confraternização na lancha">
+            <picture>
+              <source srcset="/assets/images/ocasioes/corporativo-galeria-1.webp" type="image/webp">
+              <img src="/assets/images/ocasioes/corporativo-galeria-1.jpg" alt="Convidados com drinks em confraternização corporativa na lancha" loading="lazy" decoding="async" width="1200" height="800">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/corporativo-galeria-2.jpg" alt="Reunião executiva na lancha">
+            <picture>
+              <source srcset="/assets/images/ocasioes/corporativo-galeria-2.webp" type="image/webp">
+              <img src="/assets/images/ocasioes/corporativo-galeria-2.jpg" alt="Grupo brindando em evento corporativo no mar" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/corporativo-galeria-3.jpg" alt="Team building no mar">
+            <picture>
+              <source srcset="/assets/images/ocasioes/corporativo-galeria-3.webp" type="image/webp">
+              <img src="/assets/images/ocasioes/corporativo-galeria-3.jpg" alt="Colaboradores relaxando no deck da lancha" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/corporativo-galeria-4.jpg" alt="Premiação de colaboradores na lancha">
+            <picture>
+              <source srcset="/assets/images/ocasioes/corporativo-galeria-4.webp" type="image/webp">
+              <img src="/assets/images/ocasioes/corporativo-galeria-4.jpg" alt="Relaxamento no solário da lancha em evento corporativo" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
           </div>
           <div class="ocasiao-galeria__item">
-            <img src="/assets/images/ocasioes/corporativo-galeria-5.jpg" alt="Happy hour corporativo">
+            <picture>
+              <source srcset="/assets/images/ocasioes/corporativo-galeria-5.webp" type="image/webp">
+              <img src="/assets/images/ocasioes/corporativo-galeria-5.jpg" alt="Happy hour corporativo no mar com vista do Rio" loading="lazy" decoding="async" width="600" height="400">
+            </picture>
           </div>
         </div>
       </div>
