@@ -151,21 +151,21 @@ Todos os passeios saem da Marina da Glória, no bairro da Glória, Rio de Janeir
 ## Páginas do Site
 
 - [Home](https://www.weboatbrasil.com.br/): Visão geral da WeBoat
-- [Nossa Frota](https://www.weboatbrasil.com.br/pages/lanchas/): Todas as 26 lanchas disponíveis
-- [Comparativo de Lanchas](https://www.weboatbrasil.com.br/pages/lanchas/comparativo.html): Compare lanchas lado a lado
-- [Roteiros](https://www.weboatbrasil.com.br/pages/roteiros/): 6 roteiros com trajeto e preços
-- [Serviços Extras](https://www.weboatbrasil.com.br/pages/servicos.html): Churrasco, open bar, decoração
-- [Como Funciona](https://www.weboatbrasil.com.br/pages/como-funciona.html): Passo a passo para reservar
-- [Áreas Atendidas](https://www.weboatbrasil.com.br/pages/areas-atendidas.html): Regiões cobertas pelos passeios
-- [Despedida de Solteira](https://www.weboatbrasil.com.br/pages/ocasioes/despedida-solteira.html): Pacotes para despedidas
-- [Aniversário](https://www.weboatbrasil.com.br/pages/ocasioes/aniversario.html): Festas de aniversário no mar
-- [Corporativo](https://www.weboatbrasil.com.br/pages/ocasioes/corporativo.html): Eventos empresariais
-- [Réveillon](https://www.weboatbrasil.com.br/pages/ocasioes/reveillon.html): Queima de fogos no mar
-- [Carnaval](https://www.weboatbrasil.com.br/pages/ocasioes/carnaval.html): Carnaval na lancha com DJ e open bar
-- [Sobre](https://www.weboatbrasil.com.br/pages/sobre.html): História da WeBoat
-- [FAQ](https://www.weboatbrasil.com.br/pages/faq.html): Perguntas frequentes
-- [Contato](https://www.weboatbrasil.com.br/pages/contato.html): WhatsApp, endereço e formulário
-- [Blog](https://www.weboatbrasil.com.br/pages/blog/): Dicas, guias e roteiros para passeios de lancha
-- [Melhores Praias de Lancha no RJ](https://www.weboatbrasil.com.br/pages/blog/melhores-praias-lancha-rj.html): As praias mais bonitas acessíveis de lancha
-- [O Que Vestir num Passeio de Lancha](https://www.weboatbrasil.com.br/pages/blog/o-que-vestir-passeio-lancha.html): Guia completo de roupas e acessórios
-- [Guia da Marina da Glória](https://www.weboatbrasil.com.br/pages/blog/guia-marina-da-gloria.html): Tudo sobre o ponto de embarque
+- [Nossa Frota](https://www.weboatbrasil.com.br/lanchas/): Todas as 26 lanchas disponíveis
+- [Comparativo de Lanchas](https://www.weboatbrasil.com.br/lanchas/comparativo/): Compare lanchas lado a lado
+- [Roteiros](https://www.weboatbrasil.com.br/roteiros/): 6 roteiros com trajeto e preços
+- [Serviços Extras](https://www.weboatbrasil.com.br/servicos/): Churrasco, open bar, decoração
+- [Como Funciona](https://www.weboatbrasil.com.br/como-funciona/): Passo a passo para reservar
+- [Áreas Atendidas](https://www.weboatbrasil.com.br/areas-atendidas/): Regiões cobertas pelos passeios
+- [Despedida de Solteira](https://www.weboatbrasil.com.br/despedida-solteira/): Pacotes para despedidas
+- [Aniversário](https://www.weboatbrasil.com.br/aniversario/): Festas de aniversário no mar
+- [Corporativo](https://www.weboatbrasil.com.br/corporativo/): Eventos empresariais
+- [Réveillon](https://www.weboatbrasil.com.br/reveillon/): Queima de fogos no mar
+- [Carnaval](https://www.weboatbrasil.com.br/carnaval/): Carnaval na lancha com DJ e open bar
+- [Sobre](https://www.weboatbrasil.com.br/sobre/): História da WeBoat
+- [FAQ](https://www.weboatbrasil.com.br/faq/): Perguntas frequentes
+- [Contato](https://www.weboatbrasil.com.br/contato/): WhatsApp, endereço e formulário
+- [Blog](https://www.weboatbrasil.com.br/blog/): Dicas, guias e roteiros para passeios de lancha
+- [Melhores Praias de Lancha no RJ](https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/): As praias mais bonitas acessíveis de lancha
+- [O Que Vestir num Passeio de Lancha](https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/): Guia completo de roupas e acessórios
+- [Guia da Marina da Glória](https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/): Tudo sobre o ponto de embarque

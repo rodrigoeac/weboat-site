@@ -97,7 +97,43 @@ Site: https://www.weboatbrasil.com.br
 ```
 weboat-site/
 ├── CLAUDE.md                    ← VOCÊ ESTÁ AQUI
+├── _redirects                   ← Cloudflare Pages redirects (Wix + old URLs)
 ├── index.html                   ← Homepage
+├── lanchas/
+│   ├── index.html               ← Listagem de lanchas
+│   ├── weboat-32/index.html     ← Lanchas próprias (pasta/index.html)
+│   ├── weboat-390/index.html
+│   ├── weboat-oceanic-36/index.html
+│   ├── weboat-rio-star-50/index.html
+│   ├── weboat-ibiza-42/index.html
+│   ├── comparativo/index.html
+│   ├── magna-28/index.html      ← Parceiras (achatadas, sem /parceiras/)
+│   ├── malaga-32/index.html
+│   └── ... (21 parceiras total)
+├── roteiros/
+│   ├── index.html               ← Listagem de roteiros
+│   ├── mureta-da-urca/index.html
+│   ├── praia-vermelha/index.html
+│   ├── copacabana/index.html
+│   ├── ilhas-cagarras/index.html
+│   ├── itaipu-camboinhas/index.html
+│   └── volta-completa/index.html
+├── despedida-solteira/index.html ← Ocasiões (raiz, sem /ocasioes/)
+├── aniversario/index.html
+├── corporativo/index.html
+├── reveillon/index.html
+├── carnaval/index.html
+├── servicos/index.html
+├── sobre/index.html
+├── faq/index.html
+├── contato/index.html
+├── como-funciona/index.html
+├── areas-atendidas/index.html
+├── blog/
+│   ├── index.html
+│   ├── melhores-praias-lancha-rj/index.html
+│   ├── o-que-vestir-passeio-lancha/index.html
+│   └── guia-marina-da-gloria/index.html
 ├── css/
 │   ├── variables.css            ← Design System (NÃO ALTERAR)
 │   ├── components.css           ← Componentes (NÃO ALTERAR)
@@ -122,31 +158,6 @@ weboat-site/
 │       ├── lanchas/
 │       ├── roteiros/
 │       └── hero/
-├── pages/
-│   ├── lanchas/
-│   │   ├── index.html           ← Listagem de lanchas
-│   │   ├── weboat-32.html
-│   │   ├── weboat-390.html
-│   │   ├── weboat-oceanic-36.html
-│   │   ├── weboat-rio-star-50.html
-│   │   └── weboat-vitoria.html
-│   ├── roteiros/
-│   │   ├── index.html           ← Listagem de roteiros
-│   │   ├── mureta-da-urca.html
-│   │   ├── praia-vermelha.html
-│   │   ├── copacabana.html
-│   │   ├── ilhas-cagarras.html
-│   │   ├── itaipu-camboinhas.html
-│   │   └── volta-completa.html
-│   ├── ocasioes/
-│   │   ├── despedida-solteira.html
-│   │   ├── aniversario.html
-│   │   ├── corporativo.html
-│   │   └── reveillon.html
-│   ├── servicos.html
-│   ├── sobre.html
-│   ├── faq.html
-│   └── contato.html
 ├── templates/
 │   └── template-page.html       ← Template base
 ├── docs/                        ← Documentação de referência
@@ -160,6 +171,9 @@ weboat-site/
 ├── sitemap.xml
 └── robots.txt
 ```
+
+> **NOTA:** URLs são limpas (sem .html). Cloudflare Pages serve `folder/index.html` automaticamente.
+> Exemplo: `/lanchas/weboat-32/` serve `lanchas/weboat-32/index.html`
 
 ---
 

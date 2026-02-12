@@ -510,7 +510,7 @@
       elEscolherLanchaBtn.addEventListener('click', function (e) {
         e.preventDefault();
         saveToSession();
-        window.location.href = '/pages/lanchas/';
+        window.location.href = '/lanchas/';
       });
     }
 

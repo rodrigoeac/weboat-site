@@ -8,17 +8,16 @@
 
 ```
 weboat-site/
-├── pages/
-│   └── lanchas/
-│       ├── index.html           ← Listagem de todas as lanchas
-│       ├── weboat-32.html       ← Páginas de lanchas próprias
-│       ├── weboat-390.html
-│       ├── weboat-oceanic-36.html
-│       ├── weboat-rio-star-50.html
-│       └── parceiras/           ← Lanchas parceiras
-│           ├── malaga-32.html
-│           ├── magna-28.html
-│           └── ... (outras parceiras)
+├── lanchas/
+│   ├── index.html               ← Listagem de todas as lanchas
+│   ├── weboat-32/index.html     ← Lanchas próprias (pasta/index.html)
+│   ├── weboat-390/index.html
+│   ├── weboat-oceanic-36/index.html
+│   ├── weboat-rio-star-50/index.html
+│   ├── weboat-ibiza-42/index.html
+│   ├── magna-28/index.html      ← Parceiras (achatadas, sem /parceiras/)
+│   ├── malaga-32/index.html
+│   └── ... (21 parceiras total)
 ├── assets/images/lanchas/
 │   ├── weboat-32.jpg            ← Imagens das próprias
 │   └── parceiras/               ← Imagens das parceiras
@@ -26,6 +25,8 @@ weboat-site/
     ├── frota.css                ← Estilos da listagem
     └── lancha-detalhe.css       ← Estilos das páginas individuais
 ```
+
+> **URLs limpas:** Cada lancha é `lanchas/nome/index.html`, servida como `/lanchas/nome/` pelo Cloudflare Pages.
 
 ---
 
@@ -62,11 +63,11 @@ Antes de começar, tenha em mãos:
 <!-- Meta tags SEO -->
 <title>NOME DA LANCHA - Lancha para X Pessoas | WeBoat Brasil</title>
 <meta name="description" content="Alugue a NOME, lancha para até X pessoas...">
-<link rel="canonical" href="https://www.weboatbrasil.com.br/pages/lanchas/ARQUIVO.html">
+<link rel="canonical" href="https://www.weboatbrasil.com.br/lanchas/NOME/">
 
 <!-- Open Graph -->
 <meta property="og:title" content="NOME - Lancha para X Pessoas | WeBoat Brasil">
-<meta property="og:url" content="https://www.weboatbrasil.com.br/pages/lanchas/ARQUIVO.html">
+<meta property="og:url" content="https://www.weboatbrasil.com.br/lanchas/NOME/">
 <meta property="og:image" content="https://www.weboatbrasil.com.br/assets/images/lanchas/IMAGEM.jpg">
 
 <!-- Schema Product -->
@@ -125,7 +126,7 @@ Para **Catamarã Oceano**:
 
 ### Passo 3: Adicionar na Listagem
 
-Edite `pages/lanchas/index.html`:
+Edite `lanchas/index.html`:
 
 1. **Encontre a seção correta:**
    - Lancha própria: após os cards de lanchas próprias
@@ -155,7 +156,7 @@ Edite `pages/lanchas/index.html`:
       <span class="card-boat__price-label">A partir de</span>
       <span class="card-boat__price">R$ X.XXX</span>
     </div>
-    <a href="/pages/lanchas/parceiras/ARQUIVO.html" class="btn btn-secondary btn-sm">Ver Detalhes</a>
+    <a href="/lanchas/NOME/" class="btn btn-secondary btn-sm">Ver Detalhes</a>
   </div>
 </article>
 ```
@@ -183,9 +184,9 @@ Edite `pages/lanchas/index.html`:
 
 ### Passo 5: Atualizar Schema.org
 
-No `pages/lanchas/index.html`, adicione ao Schema CollectionPage:
+No `lanchas/index.html`, adicione ao Schema CollectionPage:
 ```json
-{"@type": "ListItem", "position": XX, "url": "https://www.weboatbrasil.com.br/pages/lanchas/parceiras/ARQUIVO.html", "name": "NOME"}
+{"@type": "ListItem", "position": XX, "url": "https://www.weboatbrasil.com.br/lanchas/NOME/", "name": "NOME"}
 ```
 
 ### Passo 6: Atualizar Sitemap
@@ -193,7 +194,7 @@ No `pages/lanchas/index.html`, adicione ao Schema CollectionPage:
 Edite `sitemap.xml`:
 ```xml
 <url>
-  <loc>https://www.weboatbrasil.com.br/pages/lanchas/parceiras/ARQUIVO.html</loc>
+  <loc>https://www.weboatbrasil.com.br/lanchas/NOME/</loc>
   <lastmod>2026-02-03</lastmod>
   <changefreq>monthly</changefreq>
   <priority>0.7</priority>
@@ -237,7 +238,7 @@ Edite `sitemap.xml`:
 
 ### Passo 1: Remover da Listagem
 
-1. Edite `pages/lanchas/index.html`
+1. Edite `lanchas/index.html`
 2. Delete o `<article class="card-boat">` correspondente
 
 ### Passo 2: Remover da Home (se aplicável)
@@ -246,7 +247,7 @@ Se a lancha aparece na home (`index.html`), remova o card.
 
 ### Passo 3: Atualizar Schema.org
 
-1. Remova do Schema CollectionPage em `pages/lanchas/index.html`
+1. Remova do Schema CollectionPage em `lanchas/index.html`
 2. Atualize o `numberOfItems`
 
 ### Passo 4: Atualizar Sitemap
@@ -258,7 +259,7 @@ Remova a URL do `sitemap.xml`
 **Opção A - Redirecionar (recomendado):**
 Mantenha a página mas adicione um redirecionamento:
 ```html
-<meta http-equiv="refresh" content="0;url=/pages/lanchas/">
+<meta http-equiv="refresh" content="0;url=/lanchas/">
 ```
 
 **Opção B - Deletar:**
