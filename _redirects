@@ -13,18 +13,70 @@
 /post/*         /blog/             301
 
 # --- Old /pages/ URLs → clean URLs ---
-/pages/lanchas/parceiras/*         /lanchas/:splat          301
-/pages/lanchas/*                   /lanchas/:splat          301
-/pages/roteiros/*                  /roteiros/:splat         301
-/pages/ocasioes/despedida-solteira* /despedida-solteira/    301
-/pages/ocasioes/aniversario*       /aniversario/            301
-/pages/ocasioes/corporativo*       /corporativo/            301
-/pages/ocasioes/reveillon*         /reveillon/              301
-/pages/ocasioes/carnaval*          /carnaval/               301
-/pages/servicos*                   /servicos/               301
-/pages/sobre*                      /sobre/                  301
-/pages/faq*                        /faq/                    301
-/pages/contato*                    /contato/                301
-/pages/como-funciona*              /como-funciona/          301
-/pages/areas-atendidas*            /areas-atendidas/        301
-/pages/blog/*                      /blog/:splat             301
+
+# Lanchas próprias (specific .html → clean)
+/pages/lanchas/weboat-32.html             /lanchas/weboat-32/             301
+/pages/lanchas/weboat-390.html            /lanchas/weboat-390/            301
+/pages/lanchas/weboat-oceanic-36.html     /lanchas/weboat-oceanic-36/     301
+/pages/lanchas/weboat-rio-star-50.html    /lanchas/weboat-rio-star-50/    301
+/pages/lanchas/weboat-ibiza-42.html       /lanchas/weboat-ibiza-42/       301
+/pages/lanchas/comparativo.html           /lanchas/comparativo/           301
+
+# Parceiras (flatten /parceiras/ + remove .html)
+/pages/lanchas/parceiras/barco-gourmet-53.html    /lanchas/barco-gourmet-53/    301
+/pages/lanchas/parceiras/boat-rio-36.html         /lanchas/boat-rio-36/         301
+/pages/lanchas/parceiras/catamara-oceano.html      /lanchas/catamara-oceano/      301
+/pages/lanchas/parceiras/intermares-50.html        /lanchas/intermares-50/        301
+/pages/lanchas/parceiras/intermarine-60-fly.html   /lanchas/intermarine-60-fly/   301
+/pages/lanchas/parceiras/magna-28.html             /lanchas/magna-28/             301
+/pages/lanchas/parceiras/malaga-32.html            /lanchas/malaga-32/            301
+/pages/lanchas/parceiras/prestige-60.html          /lanchas/prestige-60/          301
+/pages/lanchas/parceiras/schaefer-62-fly.html      /lanchas/schaefer-62-fly/      301
+/pages/lanchas/parceiras/tecnomarine-50.html       /lanchas/tecnomarine-50/       301
+/pages/lanchas/parceiras/weboat-400.html           /lanchas/weboat-400/           301
+/pages/lanchas/parceiras/weboat-600.html           /lanchas/weboat-600/           301
+/pages/lanchas/parceiras/weboat-carbrasmar-41.html /lanchas/weboat-carbrasmar-41/ 301
+/pages/lanchas/parceiras/weboat-essence.html       /lanchas/weboat-essence/       301
+/pages/lanchas/parceiras/weboat-ghost-36.html      /lanchas/weboat-ghost-36/      301
+/pages/lanchas/parceiras/weboat-ibiza-45.html      /lanchas/weboat-ibiza-45/      301
+/pages/lanchas/parceiras/weboat-malik.html         /lanchas/weboat-malik/         301
+/pages/lanchas/parceiras/weboat-mares-50.html      /lanchas/weboat-mares-50/      301
+/pages/lanchas/parceiras/weboat-real-32.html       /lanchas/weboat-real-32/       301
+/pages/lanchas/parceiras/weboat-rival-36.html      /lanchas/weboat-rival-36/      301
+/pages/lanchas/parceiras/weboat-senna-50.html      /lanchas/weboat-senna-50/      301
+
+# Lanchas index (catchall after specifics)
+/pages/lanchas/                           /lanchas/                       301
+/pages/lanchas/index.html                 /lanchas/                       301
+
+# Roteiros (specific .html → clean)
+/pages/roteiros/mureta-da-urca.html       /roteiros/mureta-da-urca/       301
+/pages/roteiros/copacabana.html           /roteiros/copacabana/           301
+/pages/roteiros/ilhas-cagarras.html       /roteiros/ilhas-cagarras/       301
+/pages/roteiros/itaipu-camboinhas.html    /roteiros/itaipu-camboinhas/    301
+/pages/roteiros/praia-vermelha.html       /roteiros/praia-vermelha/       301
+/pages/roteiros/volta-completa.html       /roteiros/volta-completa/       301
+/pages/roteiros/                          /roteiros/                      301
+/pages/roteiros/index.html                /roteiros/                      301
+
+# Ocasiões → raiz
+/pages/ocasioes/despedida-solteira.html   /despedida-solteira/            301
+/pages/ocasioes/aniversario.html          /aniversario/                   301
+/pages/ocasioes/corporativo.html          /corporativo/                   301
+/pages/ocasioes/reveillon.html            /reveillon/                     301
+/pages/ocasioes/carnaval.html             /carnaval/                      301
+
+# Páginas soltas
+/pages/servicos.html                      /servicos/                      301
+/pages/sobre.html                         /sobre/                         301
+/pages/faq.html                           /faq/                           301
+/pages/contato.html                       /contato/                       301
+/pages/como-funciona.html                 /como-funciona/                 301
+/pages/areas-atendidas.html               /areas-atendidas/               301
+
+# Blog
+/pages/blog/melhores-praias-lancha-rj.html    /blog/melhores-praias-lancha-rj/    301
+/pages/blog/o-que-vestir-passeio-lancha.html  /blog/o-que-vestir-passeio-lancha/  301
+/pages/blog/guia-marina-da-gloria.html        /blog/guia-marina-da-gloria/        301
+/pages/blog/                                  /blog/                              301
+/pages/blog/index.html                        /blog/                              301
