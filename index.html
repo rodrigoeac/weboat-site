@@ -43,19 +43,31 @@
   <!-- Preconnect & DNS Prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&family=DM+Sans:wght@500;600&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=DM+Sans:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=DM+Sans:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"></noscript>
   <link rel="dns-prefetch" href="https://cdn.trustindex.io">
 
-  <!-- Preload Hero Images (LCP) - WebP com fallback -->
-  <link rel="preload" as="image" href="/assets/images/hero/hero-home-desktop.webp" media="(min-width: 769px)" fetchpriority="high" type="image/webp">
-  <link rel="preload" as="image" href="/assets/images/hero/hero-home-mobile.webp" media="(max-width: 768px)" fetchpriority="high" type="image/webp">
+  <!-- Preload Hero Images (LCP) - AVIF preferred, WebP fallback -->
+  <link rel="preload" as="image" href="/assets/images/hero/hero-home-desktop-1600w.avif" media="(min-width: 769px)" fetchpriority="high" type="image/avif">
+  <link rel="preload" as="image" href="/assets/images/hero/hero-home-mobile-800w.avif" media="(max-width: 768px)" fetchpriority="high" type="image/avif">
 
   <!-- CSS Crítico (above-fold: variáveis, header, hero, skeleton) -->
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/pages/home.css">
-  <link rel="stylesheet" href="/css/performance.css">
+
+  <!-- Inline performance.css + TrustIndex CLS fix (avoids extra request) -->
+  <style>
+    @keyframes skeleton-shimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
+    img[loading="lazy"]{background:linear-gradient(90deg,var(--pearl-gray) 0%,#e8e8e4 40%,var(--pearl-gray) 80%);background-size:800px 100%;animation:skeleton-shimmer 1.5s infinite linear;opacity:0;transition:opacity .3s ease}
+    img[loading="lazy"].loaded,img[loading="lazy"][complete]{background:none;animation:none;opacity:1}
+    img:not([loading="lazy"]){opacity:1}
+    .trustindex-widget{min-height:300px}
+  </style>
+
+  <!-- Below-fold home CSS (async) -->
+  <link rel="stylesheet" href="/css/pages/home-below.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/pages/home-below.css"></noscript>
 
   <!-- Critical component styles (inline to avoid FOUC while components.css loads async) -->
   <style>
@@ -376,8 +388,10 @@
     <section class="hero" id="hero">
       <div class="hero__background">
         <picture>
+          <source media="(min-width: 769px)" srcset="/assets/images/hero/hero-home-desktop-800w.avif 800w, /assets/images/hero/hero-home-desktop-1600w.avif 1600w" sizes="100vw" type="image/avif">
           <source media="(min-width: 769px)" srcset="/assets/images/hero/hero-home-desktop-800w.webp 800w, /assets/images/hero/hero-home-desktop-1600w.webp 1600w" sizes="100vw" type="image/webp">
           <source media="(min-width: 769px)" srcset="/assets/images/hero/hero-home-desktop.jpg">
+          <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile-800w.avif 800w" sizes="100vw" type="image/avif">
           <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile-800w.webp 800w, /assets/images/hero/hero-home-mobile-1600w.webp 1600w" sizes="100vw" type="image/webp">
           <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile.jpg">
           <img src="/assets/images/hero/hero-home-desktop.jpg" alt="Lancha navegando na Baía de Guanabara com vista para o Cristo Redentor ao pôr do sol" loading="eager" decoding="sync" fetchpriority="high" width="1920" height="1280">

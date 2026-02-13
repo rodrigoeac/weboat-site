@@ -847,3 +847,11 @@
 .answer-capsule strong {
   color: var(--ocean-deep);
 }
+
+/* ============================================
+   TRUSTINDEX WIDGET CLS FIX
+   Reserve space to prevent layout shift
+   ============================================ */
+.trustindex-widget {
+  min-height: 300px;
+}
