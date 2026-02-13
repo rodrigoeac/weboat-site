@@ -27,6 +27,8 @@
     var payBtn = document.getElementById('pay-btn');
     var pixSection = document.getElementById('pix-section');
     var zelleSection = document.getElementById('zelle-section');
+    var parcelasSection = document.getElementById('parcelas-section');
+    var parcelasSelect = document.getElementById('parcelas-select');
 
     // ── Init ──
     function init() {
@@ -43,6 +45,11 @@
     function getTokenFromURL() {
         var params = new URLSearchParams(window.location.search);
         return params.get('token');
+    }
+
+    function getStatusFromURL() {
+        var params = new URLSearchParams(window.location.search);
+        return params.get('status');
     }
 
     // ── Load checkout data ──
@@ -68,9 +75,16 @@
                 checkoutData = data;
                 showLoading(false);
 
+                var urlStatus = getStatusFromURL();
+
                 if (data.alreadyPaid) {
                     goToStep(3);
                     renderConfirmation(data);
+                } else if (urlStatus === 'success') {
+                    // Redirect return from InfinitePay — show polling
+                    renderProposalSummary(data);
+                    goToStep(2);
+                    showCardProcessing();
                 } else if (data.status === 'aguardando_pagamento') {
                     renderProposalSummary(data);
                     goToStep(2);
@@ -193,6 +207,10 @@
                 this.classList.add('payment-method--selected');
                 selectedMethod = this.dataset.method;
                 if (payBtn) payBtn.disabled = false;
+                // Show/hide parcelas for credit card
+                if (parcelasSection) {
+                    parcelasSection.style.display = selectedMethod === 'credit_card' ? 'block' : 'none';
+                }
             });
         });
 
@@ -285,10 +303,15 @@
         payBtn.disabled = true;
         payBtn.textContent = 'Processando...';
 
+        var payBody = { metodo: selectedMethod };
+        if (selectedMethod === 'credit_card' && parcelasSelect) {
+            payBody.parcelas = parseInt(parcelasSelect.value, 10);
+        }
+
         fetch(API_BASE + '/checkout/' + encodeURIComponent(currentToken) + '/pay', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ metodo: selectedMethod })
+            body: JSON.stringify(payBody)
         })
         .then(function(res) {
             if (!res.ok) return res.json().then(function(d) { throw new Error(d.error); });
@@ -347,6 +370,30 @@
     function showZelleInstructions() {
         document.getElementById('method-selection').style.display = 'none';
         if (zelleSection) zelleSection.style.display = 'block';
+    }
+
+    function showCardProcessing() {
+        document.getElementById('method-selection').style.display = 'none';
+
+        var card = document.querySelector('[data-step="2"] .checkout-card');
+        if (!card) return;
+
+        var processingDiv = document.createElement('div');
+        processingDiv.className = 'pix-status';
+        processingDiv.style.padding = 'var(--space-8) 0';
+
+        var spinner = document.createElement('div');
+        spinner.className = 'pix-status__spinner';
+        processingDiv.appendChild(spinner);
+
+        var text = document.createElement('span');
+        text.textContent = 'Verificando pagamento...';
+        processingDiv.appendChild(text);
+
+        card.appendChild(processingDiv);
+
+        // Poll for confirmation
+        startPolling();
     }
 
     function startPixCountdown(expiry) {
