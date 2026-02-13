@@ -628,7 +628,7 @@ section.hero {
 │     [CTA Principal]  [CTA Secundário]                   │
 │                                                         │
 ├─────────────────────────────────────────────────────────┤
-│  +1.000    │    5     │   +900    │   +18k             │ Social Proof
+│  +1.000    │    5     │   +1000   │   +18k             │ Social Proof
 │  passeios  │ lanchas  │  5 stars  │  seguidores        │ 120px
 ├─────────────────────────────────────────────────────────┤
 │                                                         │
@@ -2406,7 +2406,7 @@ a:focus-visible {
       </div>
       
       <div class="social-proof__item animate-fade-up">
-        <span class="social-proof__number">+900</span>
+        <span class="social-proof__number">+1000</span>
         <span class="social-proof__label">avaliações 5★</span>
       </div>
       

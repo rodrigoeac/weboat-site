@@ -75,7 +75,7 @@
 <title>Aluguel de Lancha no Rio de Janeiro | Passeio Privativo de Lancha | WeBoat Brasil</title>
 
 <meta name="description" content="Aluguel de lancha no Rio de Janeiro para passeios privativos. 
-Lancha para festas, aniversários e despedida de solteira. +900 avaliações 5 estrelas. 
+Lancha para festas, aniversários e despedida de solteira. +1000 avaliações 5 estrelas. 
 Grupos de 2 a 65 pessoas. Alugar lancha RJ nunca foi tão fácil!">
 
 <meta name="keywords" content="aluguel de lancha rio de janeiro, passeio de lancha RJ, 
@@ -148,7 +148,7 @@ lanchas próprias para alugar
 
 **Card 3:**
 ```
-+900
++1000
 avaliações 5 estrelas no Google
 ```
 
@@ -392,7 +392,7 @@ Seu passeio de barco privativo no Rio de Janeiro com segurança.
 
 **Diferencial 5:**
 ```
-⭐ +900 Avaliações 5 Estrelas
+⭐ +1000 Avaliações 5 Estrelas
 
 Maior número de avaliações positivas entre empresas de 
 aluguel de lancha no Rio de Janeiro.
@@ -2643,7 +2643,7 @@ Respondemos rapidinho todas as suas dúvidas sobre passeio de lancha!
 <title>Sobre a WeBoat Brasil | Aluguel de Lancha no Rio de Janeiro | Nossa História</title>
 
 <meta name="description" content="Conheça a WeBoat Brasil, referência em aluguel de 
-lancha no Rio de Janeiro. +1000 passeios de lancha, +900 avaliações 5 estrelas. 
+lancha no Rio de Janeiro. +1000 passeios de lancha, +1000 avaliações 5 estrelas. 
 Frota própria na Marina da Glória. A história por trás do melhor passeio de lancha RJ.">
 ```
 
@@ -2696,7 +2696,7 @@ Nossos Números - Passeio de Lancha no Rio de Janeiro
 📊 WeBoat em Números:
 
 +1.000 passeios de lancha realizados
-+900 avaliações 5 estrelas no Google
++1000 avaliações 5 estrelas no Google
 5 lanchas próprias para aluguel
 9 funcionários dedicados ao seu passeio
 +18.000 seguidores no Instagram
@@ -2726,7 +2726,7 @@ de barco privativo com segurança garantida.
 9 funcionários focados no seu passeio de lancha no Rio 
 de Janeiro: marinheiros, recepcionista, atendimento.
 
-⭐ +900 Avaliações 5 Estrelas
+⭐ +1000 Avaliações 5 Estrelas
 Maior número de avaliações positivas entre empresas 
 de aluguel de lancha no Rio de Janeiro.
 

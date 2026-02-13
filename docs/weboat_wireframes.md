@@ -135,7 +135,7 @@ MOBILE (Hamburger Menu):
 
 ┌─────────────────────────────────────────────────────────────────────────────┐
 │                                                                             │
-│                    ⭐ +900 AVALIAÇÕES 5 ESTRELAS                            │
+│                    ⭐ +1000 AVALIAÇÕES 5 ESTRELAS                           │
 │                                                                             │
 │    ┌────────────┐    ┌────────────┐    ┌────────────┐    ┌────────────┐    │
 │    │            │    │            │    │            │    │            │    │
@@ -229,7 +229,7 @@ MOBILE (Hamburger Menu):
 │  │  │                 │              │  ✅ Mecânico próprio         │ │   │
 │  │  │                 │              │     Suporte imediato         │ │   │
 │  │  │                 │              │                              │ │   │
-│  │  └─────────────────┘              │  ✅ +900 avaliações          │ │   │
+│  │  └─────────────────┘              │  ✅ +1000 avaliações         │ │   │
 │  │                                   │     5 estrelas no Google     │ │   │
 │  │                                   │                              │ │   │
 │  │                                   └──────────────────────────────┘ │   │
@@ -1047,7 +1047,7 @@ MOBILE (Hamburger Menu):
 │  │  2025 ────────────────────────────────────●────────────────────────  │   │
 │  │                                           │                         │   │
 │  │                                           └─ +1.000 passeios       │   │
-│  │                                              +900 avaliações 5⭐    │   │
+│  │                                              +1000 avaliações 5⭐   │   │
 │  │                                              +18.000 seguidores     │   │
 │  │                                                                     │   │
 │  └─────────────────────────────────────────────────────────────────────┘   │
@@ -1093,7 +1093,7 @@ MOBILE (Hamburger Menu):
 │  │  │                  │   │  ✅ Mecânico próprio                 │   │   │
 │  │  │                  │   │     Suporte imediato                 │   │   │
 │  │  │                  │   │                                      │   │   │
-│  │  │                  │   │  ✅ +900 avaliações 5 estrelas       │   │   │
+│  │  │                  │   │  ✅ +1000 avaliações 5 estrelas      │   │   │
 │  │  │                  │   │     Maior número do segmento         │   │   │
 │  │  │                  │   │                                      │   │   │
 │  │  │                  │   │  ✅ Queridinha dos famosos           │   │   │
@@ -1466,7 +1466,7 @@ MOBILE (Hamburger Menu):
 
 ┌───────────────────────────┐
 │                           │
-│   ⭐ +900 AVALIAÇÕES     │
+│   ⭐ +1000 AVALIAÇÕES    │
 │      5 ESTRELAS          │
 │                           │
 │  ┌──────┐  ┌──────┐      │

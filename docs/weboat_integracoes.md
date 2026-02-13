@@ -970,7 +970,7 @@ YouTube: https://www.youtube.com/@weboatbrasil (se existir)
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.weboatbrasil.com.br/">
 <meta property="og:title" content="Aluguel de Lancha no Rio de Janeiro | WeBoat Brasil">
-<meta property="og:description" content="Passeio privativo de lancha no RJ. +900 avaliações 5 estrelas. Grupos de 2 a 65 pessoas.">
+<meta property="og:description" content="Passeio privativo de lancha no RJ. +1000 avaliações 5 estrelas. Grupos de 2 a 65 pessoas.">
 <meta property="og:image" content="https://www.weboatbrasil.com.br/images/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -981,7 +981,7 @@ YouTube: https://www.youtube.com/@weboatbrasil (se existir)
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:url" content="https://www.weboatbrasil.com.br/">
 <meta name="twitter:title" content="Aluguel de Lancha no Rio de Janeiro | WeBoat Brasil">
-<meta name="twitter:description" content="Passeio privativo de lancha no RJ. +900 avaliações 5 estrelas.">
+<meta name="twitter:description" content="Passeio privativo de lancha no RJ. +1000 avaliações 5 estrelas.">
 <meta name="twitter:image" content="https://www.weboatbrasil.com.br/images/og-image.jpg">
 ```
 
@@ -990,7 +990,7 @@ YouTube: https://www.youtube.com/@weboatbrasil (se existir)
 #### Home
 ```html
 <meta property="og:title" content="Aluguel de Lancha no Rio de Janeiro | WeBoat Brasil">
-<meta property="og:description" content="Passeio privativo de lancha no RJ. +900 avaliações 5 estrelas. Grupos de 2 a 65 pessoas.">
+<meta property="og:description" content="Passeio privativo de lancha no RJ. +1000 avaliações 5 estrelas. Grupos de 2 a 65 pessoas.">
 ```
 
 #### Página de Lancha
@@ -1122,7 +1122,7 @@ YouTube: https://www.youtube.com/@weboatbrasil (se existir)
   "aggregateRating": {
     "@type": "AggregateRating",
     "ratingValue": "5",
-    "reviewCount": "900"
+    "reviewCount": "1000"
   },
   "sameAs": [
     "https://www.instagram.com/weboatbrasil"

@@ -27,7 +27,7 @@
 | **Segmento** | Aluguel de Lanchas e Passeios Náuticos |
 | **Localização** | Marina da Glória, Rio de Janeiro - RJ |
 | **Fundação** | 2022 |
-| **Diferenciais** | Frota própria, loja própria, mecânico próprio, +900 avaliações 5 estrelas |
+| **Diferenciais** | Frota própria, loja própria, mecânico próprio, +1000 avaliações 5 estrelas |
 
 ## Objetivos do Novo Site
 
@@ -305,7 +305,7 @@ aluguel de lanchas do Rio de Janeiro, com:
 
 ✅ 5 lanchas próprias
 ✅ +1.000 passeios realizados
-✅ +900 avaliações 5 estrelas no Google
+✅ +1000 avaliações 5 estrelas no Google
 ✅ +18.000 seguidores no Instagram
 ✅ Queridinha dos famosos
 ```
@@ -326,7 +326,7 @@ aluguel de lanchas do Rio de Janeiro, com:
 - ✅ Mecânico próprio
 - ✅ Equipe completa (9 funcionários fixos)
 - ✅ Lanchas de parceiros vistoriadas
-- ✅ +900 avaliações 5 estrelas
+- ✅ +1000 avaliações 5 estrelas
 
 #### Celebridades que Escolheram a WeBoat
 
@@ -493,7 +493,7 @@ Fluxo:
 ```html
 <!-- Home -->
 <title>Aluguel de Lancha no Rio de Janeiro | WeBoat Brasil</title>
-<meta name="description" content="Passeios de lancha privativos na Baía de Guanabara. Frota própria, +900 avaliações 5 estrelas. Reserve agora seu passeio inesquecível!">
+<meta name="description" content="Passeios de lancha privativos na Baía de Guanabara. Frota própria, +1000 avaliações 5 estrelas. Reserve agora seu passeio inesquecível!">
 
 <!-- Frota -->
 <title>Lanchas para Aluguel no RJ - Até 65 Pessoas | WeBoat</title>

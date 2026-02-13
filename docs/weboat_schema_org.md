@@ -105,8 +105,8 @@
     "ratingValue": "5.0",
     "bestRating": "5",
     "worstRating": "1",
-    "ratingCount": "900",
-    "reviewCount": "900"
+    "ratingCount": "1000",
+    "reviewCount": "1000"
   },
   "review": [
     {
@@ -271,7 +271,7 @@
   "@id": "https://www.weboatbrasil.com.br/#webpage",
   "url": "https://www.weboatbrasil.com.br",
   "name": "Aluguel de Lancha no Rio de Janeiro | WeBoat Brasil",
-  "description": "Passeio privativo de lancha no RJ. +900 avaliações 5 estrelas. Frota própria. Grupos de 2 a 65 pessoas. Reserve pelo WhatsApp!",
+  "description": "Passeio privativo de lancha no RJ. +1000 avaliações 5 estrelas. Frota própria. Grupos de 2 a 65 pessoas. Reserve pelo WhatsApp!",
   "isPartOf": {
     "@id": "https://www.weboatbrasil.com.br/#website"
   },
@@ -1137,8 +1137,8 @@
   "ratingValue": "5.0",
   "bestRating": "5",
   "worstRating": "1",
-  "ratingCount": "900",
-  "reviewCount": "900"
+  "ratingCount": "1000",
+  "reviewCount": "1000"
 }
 </script>
 ```
