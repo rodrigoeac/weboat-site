@@ -37,9 +37,11 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=DM+Sans:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=DM+Sans:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"></noscript>
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/lancha-detalhe.css">
 
   <!-- Phosphor Icons -->
@@ -181,7 +183,7 @@
             <li><a href="/roteiros/">Roteiros</a></li>
             <li><a href="/servicos/">Servicos</a></li>
             <li class="header__dropdown">
-              <button class="header__dropdown-toggle" aria-expanded="false">Ocasioes<i class="ph ph-caret-down"></i></button>
+              <button class="header__dropdown-toggle" aria-expanded="false">Ocasioes<i class="ph ph-caret-down" aria-hidden="true"></i></button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
                 <li><a href="/aniversario/">Aniversario</a></li>
@@ -196,7 +198,7 @@
             <li><a href="/blog/">Blog</a></li>
           </ul>
         </nav>
-        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp header__cta" target="_blank"><i class="ph ph-whatsapp-logo"></i><span>WhatsApp</span></a>
+        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp header__cta" target="_blank"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i><span>WhatsApp</span></a>
         <button class="header__mobile-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu"><span class="header__hamburger"></span></button>
       </div>
     </div>
@@ -212,7 +214,7 @@
           <li><a href="/faq/">FAQ</a></li>
           <li><a href="/blog/">Blog</a></li>
         </ul>
-        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp btn--full" target="_blank"><i class="ph ph-whatsapp-logo"></i>Fale pelo WhatsApp</a>
+        <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp btn--full" target="_blank"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Fale pelo WhatsApp</a>
       </nav>
     </div>
   </header>
@@ -252,10 +254,10 @@
           </div>
 
           <div class="lancha-info">
-            <span class="lancha-info__badge"><i class="ph ph-binoculars"></i>Flybridge Exclusivo</span>
+            <span class="lancha-info__badge"><i class="ph ph-binoculars" aria-hidden="true"></i>Flybridge Exclusivo</span>
             <h1 class="lancha-info__title">WeBoat Ibiza 42</h1>
             <p class="lancha-info__subtitle">Lancha com flybridge, solario e churrasqueira</p>
-            <div class="lancha-info__capacity"><i class="ph ph-users"></i>Ate 12 pessoas</div>
+            <div class="lancha-info__capacity"><i class="ph ph-users" aria-hidden="true"></i>Ate 12 pessoas</div>
 
             <div class="lancha-prices">
               <h2 class="lancha-prices__title">Valores do Aluguel</h2>
@@ -305,9 +307,9 @@
             </div>
 
             <div class="lancha-info__ctas">
-              <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp btn-lg" target="_blank"><i class="ph ph-whatsapp-logo"></i>Reservar pelo WhatsApp</a>
+              <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp btn-lg" target="_blank"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Reservar pelo WhatsApp</a>
               <a href="#montar-proposta" class="btn btn-secondary btn-lg proposta__anchor-btn">
-                <i class="ph ph-calculator"></i>
+                <i class="ph ph-calculator" aria-hidden="true"></i>
                 Montar Proposta
               </a>
             </div>
@@ -322,7 +324,7 @@
         <div class="lancha-details__grid">
           <div class="lancha-main">
             <div class="lancha-section">
-              <h2 class="lancha-section__title"><i class="ph ph-info"></i>Sobre a WeBoat Ibiza 42</h2>
+              <h2 class="lancha-section__title"><i class="ph ph-info" aria-hidden="true"></i>Sobre a WeBoat Ibiza 42</h2>
               <div class="lancha-section__description">
                 <p>A WeBoat Ibiza 42 e a unica lancha propria da frota com flybridge — um segundo andar ao ar livre com solario, churrasqueira e vista panoramica 360 graus. Com 42 pes e capacidade para 12 pessoas, oferece uma experiencia diferenciada para quem busca espaco ao ar livre e conforto.</p>
                 <p>Ideal para casais, grupos pequenos exclusivos, churrascos intimos e quem valoriza a experiencia de navegar com vista panoramica do Rio de Janeiro.</p>
@@ -330,21 +332,21 @@
             </div>
 
             <div class="lancha-section">
-              <h2 class="lancha-section__title"><i class="ph ph-check-circle"></i>O que esta incluso</h2>
+              <h2 class="lancha-section__title"><i class="ph ph-check-circle" aria-hidden="true"></i>O que esta incluso</h2>
               <div class="lancha-features">
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Combustivel para o roteiro</span></div>
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Marinheiro experiente</span></div>
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Som Bluetooth</span></div>
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Coolers</span></div>
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Tapete flutuante</span></div>
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Coletes salva-vidas</span></div>
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Flybridge com solario</span></div>
-                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check"></i></div><span class="lancha-feature__text">Equipamentos de seguranca</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Combustivel para o roteiro</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Marinheiro experiente</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Som Bluetooth</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Coolers</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Tapete flutuante</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Coletes salva-vidas</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Flybridge com solario</span></div>
+                <div class="lancha-feature"><div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div><span class="lancha-feature__text">Equipamentos de seguranca</span></div>
               </div>
             </div>
 
             <div class="lancha-section">
-              <h2 class="lancha-section__title"><i class="ph ph-list-bullets"></i>Especificacoes Tecnicas</h2>
+              <h2 class="lancha-section__title"><i class="ph ph-list-bullets" aria-hidden="true"></i>Especificacoes Tecnicas</h2>
               <div class="lancha-specs">
                 <div class="lancha-specs__row"><span class="lancha-specs__label">Tamanho</span><span class="lancha-specs__value">42 pes</span></div>
                 <div class="lancha-specs__row"><span class="lancha-specs__label">Capacidade</span><span class="lancha-specs__value">Ate 12 pessoas</span></div>
@@ -362,12 +364,12 @@
               <div class="lancha-quick">
                 <h3 class="lancha-quick__title">Informacoes Rapidas</h3>
                 <ul class="lancha-quick__list">
-                  <li class="lancha-quick__item"><i class="ph ph-clock"></i><span>Passeio de 5 horas</span></li>
-                  <li class="lancha-quick__item"><i class="ph ph-map-pin"></i><span>Saida: Marina da Gloria</span></li>
-                  <li class="lancha-quick__item"><i class="ph ph-binoculars"></i><span>Flybridge com vista 360</span></li>
-                  <li class="lancha-quick__item"><i class="ph ph-credit-card"></i><span>PIX, cartao ou transferencia</span></li>
+                  <li class="lancha-quick__item"><i class="ph ph-clock" aria-hidden="true"></i><span>Passeio de 5 horas</span></li>
+                  <li class="lancha-quick__item"><i class="ph ph-map-pin" aria-hidden="true"></i><span>Saida: Marina da Gloria</span></li>
+                  <li class="lancha-quick__item"><i class="ph ph-binoculars" aria-hidden="true"></i><span>Flybridge com vista 360</span></li>
+                  <li class="lancha-quick__item"><i class="ph ph-credit-card" aria-hidden="true"></i><span>PIX, cartao ou transferencia</span></li>
                 </ul>
-                <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp" target="_blank"><i class="ph ph-whatsapp-logo"></i>Consultar Disponibilidade</a>
+                <a href="https://wa.me/5521977724114?text=Ola! Tenho interesse na lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp" target="_blank"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Consultar Disponibilidade</a>
               </div>
 
               <div class="lancha-related">
@@ -406,7 +408,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Quantas pessoas cabem na WeBoat Ibiza 42?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -418,7 +420,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">A WeBoat Ibiza 42 tem churrasqueira?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -430,7 +432,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">O que e o flybridge?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -442,7 +444,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">O que esta incluso no aluguel?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -455,7 +457,7 @@
           <div class="faq__cta">
             <a href="/faq/" class="btn btn-secondary">
               Ver Todas as Duvidas
-              <i class="ph ph-arrow-right"></i>
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -495,22 +497,22 @@
               <div class="proposta__detalhes-grid">
                 <div class="proposta__field">
                   <label class="proposta__label" for="proposta-pessoas">
-                    <i class="ph ph-users"></i> Numero de Pessoas
+                    <i class="ph ph-users" aria-hidden="true"></i> Numero de Pessoas
                   </label>
                   <div class="proposta__stepper">
                     <button type="button" class="proposta__stepper-btn" data-action="decrement" data-target="proposta-pessoas" aria-label="Diminuir">
-                      <i class="ph ph-minus"></i>
+                      <i class="ph ph-minus" aria-hidden="true"></i>
                     </button>
                     <input type="number" id="proposta-pessoas" class="proposta__stepper-input" value="8" min="1" aria-label="Numero de pessoas">
                     <button type="button" class="proposta__stepper-btn" data-action="increment" data-target="proposta-pessoas" aria-label="Aumentar">
-                      <i class="ph ph-plus"></i>
+                      <i class="ph ph-plus" aria-hidden="true"></i>
                     </button>
                   </div>
                   <span class="proposta__field-hint" id="proposta-capacidade-hint"></span>
                 </div>
                 <div class="proposta__field">
                   <label class="proposta__label">
-                    <i class="ph ph-sun-horizon"></i> Turno
+                    <i class="ph ph-sun-horizon" aria-hidden="true"></i> Turno
                   </label>
                   <div class="proposta__turno-options" role="radiogroup" aria-label="Selecione o turno">
                     <!-- Preenchido pelo JS -->
@@ -518,15 +520,15 @@
                 </div>
                 <div class="proposta__field">
                   <label class="proposta__label" for="proposta-horas-extras">
-                    <i class="ph ph-clock-countdown"></i> Horas Extras
+                    <i class="ph ph-clock-countdown" aria-hidden="true"></i> Horas Extras
                   </label>
                   <div class="proposta__stepper">
                     <button type="button" class="proposta__stepper-btn" data-action="decrement" data-target="proposta-horas-extras" aria-label="Diminuir">
-                      <i class="ph ph-minus"></i>
+                      <i class="ph ph-minus" aria-hidden="true"></i>
                     </button>
                     <input type="number" id="proposta-horas-extras" class="proposta__stepper-input" value="0" min="0" max="3" aria-label="Horas extras">
                     <button type="button" class="proposta__stepper-btn" data-action="increment" data-target="proposta-horas-extras" aria-label="Aumentar">
-                      <i class="ph ph-plus"></i>
+                      <i class="ph ph-plus" aria-hidden="true"></i>
                     </button>
                   </div>
                   <span class="proposta__field-hint" id="proposta-hora-extra-hint"></span>
@@ -535,7 +537,7 @@
                   <label class="proposta__label proposta__checkbox-label">
                     <input type="checkbox" id="proposta-churrasqueira" class="proposta__checkbox">
                     <span class="proposta__checkbox-custom"></span>
-                    <i class="ph ph-fire"></i> Churrasqueira
+                    <i class="ph ph-fire" aria-hidden="true"></i> Churrasqueira
                     <span class="proposta__field-price" id="proposta-churr-preco"></span>
                   </label>
                 </div>
@@ -559,14 +561,14 @@
           <aside class="proposta__resumo" id="proposta-resumo">
             <div class="proposta__resumo-inner">
               <h3 class="proposta__resumo-title">
-                <i class="ph ph-receipt"></i> Resumo da Proposta
+                <i class="ph ph-receipt" aria-hidden="true"></i> Resumo da Proposta
               </h3>
               <div class="proposta__resumo-body" id="proposta-resumo-body">
                 <p class="proposta__resumo-empty">Selecione um roteiro para comecar</p>
               </div>
               <div class="proposta__resumo-total" id="proposta-resumo-total"></div>
               <a href="#" class="btn btn-whatsapp proposta__resumo-cta" id="proposta-whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                <i class="ph ph-whatsapp-logo"></i>
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                 Enviar Proposta pelo WhatsApp
               </a>
             </div>
@@ -589,7 +591,7 @@
           <h3 class="card-route__title">Mureta da Urca</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">A partir de R$ 2.700</span>
         </div>
       </a>
@@ -599,7 +601,7 @@
           <h3 class="card-route__title">Praia Vermelha</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">A partir de R$ 2.900</span>
         </div>
       </a>
@@ -609,7 +611,7 @@
           <h3 class="card-route__title">Copacabana</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">A partir de R$ 3.500</span>
         </div>
       </a>
@@ -619,7 +621,7 @@
           <h3 class="card-route__title">Ilhas Cagarras</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">A partir de R$ 4.100</span>
         </div>
       </a>
@@ -629,7 +631,7 @@
           <h3 class="card-route__title">Itaipu e Camboinhas</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">A partir de R$ 4.100</span>
         </div>
       </a>
@@ -639,7 +641,7 @@
           <h3 class="card-route__title">Volta Completa</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">Consultar</span>
         </div>
       </a>
@@ -653,7 +655,7 @@
           <h2 class="section-cta__title">Reserve a WeBoat Ibiza 42 Agora</h2>
           <p class="section-cta__text">Navegue com flybridge exclusivo e vista panoramica no Rio de Janeiro.</p>
           <div class="section-cta__buttons">
-            <a href="https://wa.me/5521977724114?text=Ola! Quero reservar a lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp btn-lg" target="_blank"><i class="ph ph-whatsapp-logo"></i>Reservar pelo WhatsApp</a>
+            <a href="https://wa.me/5521977724114?text=Ola! Quero reservar a lancha WeBoat Ibiza 42. [via site - weboat-ibiza-42]" class="btn btn-whatsapp btn-lg" target="_blank"><i class="ph ph-whatsapp-logo" aria-hidden="true"></i>Reservar pelo WhatsApp</a>
             <a href="/lanchas/" class="btn btn-outline-white btn-lg">Ver Outras Lanchas</a>
           </div>
         </div>
@@ -677,10 +679,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -714,11 +716,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Gloria - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -727,11 +729,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h as 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

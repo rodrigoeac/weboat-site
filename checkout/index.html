@@ -26,7 +26,8 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/pages/checkout.css">
 
   <!-- Phosphor Icons -->
@@ -39,7 +40,7 @@
   <!-- Header simplificado -->
   <header class="checkout-header">
     <a href="/" aria-label="WeBoat Brasil">
-      <img class="checkout-header__logo" src="/assets/images/logo/logo-branco.svg" alt="WeBoat Brasil" width="150" height="40">
+      <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
     </a>
   </header>
 
@@ -64,20 +65,20 @@
     </div>
 
     <!-- Loading state -->
-    <div id="checkout-loading" class="checkout-loading">
+    <div id="checkout-loading" class="checkout-loading" role="status" aria-live="polite">
       <div class="checkout-loading__spinner"></div>
       <p>Carregando sua proposta...</p>
     </div>
 
     <!-- Error state -->
-    <div id="checkout-error" class="checkout-error" style="display:none">
+    <div id="checkout-error" class="checkout-error" role="alert" aria-live="assertive" style="display:none">
       <div class="checkout-error__icon">
-        <i class="ph ph-warning-circle"></i>
+        <i class="ph ph-warning-circle" aria-hidden="true"></i>
       </div>
       <h2 class="checkout-error__title">Erro</h2>
       <p class="checkout-error__message">Algo deu errado.</p>
       <a href="https://wa.me/5521977724114?text=Olá! Tive um problema com o link de pagamento." class="btn btn-whatsapp" target="_blank" rel="noopener">
-        <i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp
+        <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Falar no WhatsApp
       </a>
     </div>
 
@@ -94,23 +95,23 @@
           <div class="proposal-summary__boat" id="ps-boat"></div>
           <div class="proposal-summary__details">
             <div class="proposal-detail">
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <span id="ps-route"></span>
             </div>
             <div class="proposal-detail">
-              <i class="ph ph-calendar"></i>
+              <i class="ph ph-calendar" aria-hidden="true"></i>
               <span id="ps-date"></span>
             </div>
             <div class="proposal-detail">
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span id="ps-time"></span>
             </div>
             <div class="proposal-detail">
-              <i class="ph ph-timer"></i>
+              <i class="ph ph-timer" aria-hidden="true"></i>
               <span id="ps-duration"></span>
             </div>
             <div class="proposal-detail">
-              <i class="ph ph-users"></i>
+              <i class="ph ph-users" aria-hidden="true"></i>
               <span id="ps-people"></span>
             </div>
           </div>
@@ -130,8 +131,8 @@
         <form id="checkout-form" class="checkout-form" novalidate>
           <div class="form-group">
             <label class="form-label" for="customer-nome">Nome completo</label>
-            <input class="form-input" type="text" id="customer-nome" name="nome" required autocomplete="name">
-            <span class="form-error"></span>
+            <input class="form-input" type="text" id="customer-nome" name="nome" required aria-required="true" autocomplete="name" aria-describedby="customer-nome-error">
+            <span class="form-error" id="customer-nome-error"></span>
           </div>
 
           <label class="checkout-form__toggle">
@@ -141,32 +142,32 @@
 
           <div class="form-group" id="cpf-group">
             <label class="form-label" for="customer-cpf">CPF</label>
-            <input class="form-input" type="text" id="customer-cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" autocomplete="off">
-            <span class="form-error"></span>
+            <input class="form-input" type="text" id="customer-cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" autocomplete="off" aria-describedby="customer-cpf-error">
+            <span class="form-error" id="customer-cpf-error"></span>
           </div>
 
           <div class="form-group" id="passport-group" style="display:none">
             <label class="form-label" for="customer-passaporte">Passport number</label>
-            <input class="form-input" type="text" id="customer-passaporte" name="passaporte" autocomplete="off">
-            <span class="form-error"></span>
+            <input class="form-input" type="text" id="customer-passaporte" name="passaporte" autocomplete="off" aria-describedby="customer-passaporte-error">
+            <span class="form-error" id="customer-passaporte-error"></span>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="customer-phone">Telefone / Phone</label>
-            <input class="form-input" type="tel" id="customer-phone" name="phone" placeholder="(21) 99999-9999" inputmode="tel" autocomplete="tel">
-            <span class="form-error"></span>
+            <input class="form-input" type="tel" id="customer-phone" name="phone" placeholder="(21) 99999-9999" inputmode="tel" autocomplete="tel" aria-describedby="customer-phone-error">
+            <span class="form-error" id="customer-phone-error"></span>
           </div>
 
           <div class="form-group">
             <label class="form-label" for="customer-email">Email</label>
-            <input class="form-input" type="email" id="customer-email" name="email" required autocomplete="email">
-            <span class="form-error"></span>
+            <input class="form-input" type="email" id="customer-email" name="email" required aria-required="true" autocomplete="email" aria-describedby="customer-email-error">
+            <span class="form-error" id="customer-email-error"></span>
           </div>
 
           <div class="checkout-terms">
-            <input type="checkbox" id="termos-aceite" required>
+            <input type="checkbox" id="termos-aceite" required aria-required="true">
             <label for="termos-aceite">
-              Li e aceito os <a href="/termos/" target="_blank">Termos de Uso</a> e a <a href="/privacidade/" target="_blank">Política de Privacidade</a> da WeBoat Brasil.
+              Li e aceito os <a href="/termos-de-uso/" target="_blank">Termos de Uso</a> e a <a href="/politica-de-privacidade/" target="_blank">Política de Privacidade</a> da WeBoat Brasil.
             </label>
           </div>
 
@@ -191,7 +192,7 @@
           </p>
 
           <div class="payment-methods">
-            <div class="payment-method" data-method="pix" role="button" tabindex="0">
+            <div class="payment-method" data-method="pix" role="button" tabindex="0" aria-label="Selecionar PIX como método de pagamento">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PIX</div>
@@ -199,7 +200,7 @@
               </div>
             </div>
 
-            <div class="payment-method" data-method="credit_card" role="button" tabindex="0">
+            <div class="payment-method" data-method="credit_card" role="button" tabindex="0" aria-label="Selecionar cartão de crédito como método de pagamento">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Cartão de Crédito</div>
@@ -207,7 +208,7 @@
               </div>
             </div>
 
-            <div class="payment-method" data-method="paypal" role="button" tabindex="0" style="display:none;">
+            <div class="payment-method" data-method="paypal" role="button" tabindex="0" aria-label="Selecionar PayPal como método de pagamento" style="display:none;">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PayPal</div>
@@ -215,7 +216,7 @@
               </div>
             </div>
 
-            <div class="payment-method" data-method="zelle" role="button" tabindex="0" style="display:none;">
+            <div class="payment-method" data-method="zelle" role="button" tabindex="0" aria-label="Selecionar Zelle como método de pagamento" style="display:none;">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Zelle</div>
@@ -292,9 +293,9 @@
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="3" style="display:none">
       <div class="checkout-card">
-        <div class="confirmation">
+        <div class="confirmation" role="status" aria-live="polite">
           <div class="confirmation__check">
-            <i class="ph ph-check-circle"></i>
+            <i class="ph ph-check-circle" aria-hidden="true"></i>
           </div>
           <h2 class="confirmation__title">Reserva Confirmada!</h2>
           <p class="confirmation__subtitle">
@@ -303,7 +304,7 @@
 
           <div class="confirmation__actions">
             <a href="https://wa.me/5521977724114?text=Olá! Minha reserva foi confirmada e gostaria de mais informações sobre o embarque." class="btn btn-whatsapp" target="_blank" rel="noopener">
-              <i class="ph ph-whatsapp-logo"></i> Falar no WhatsApp
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Falar no WhatsApp
             </a>
             <a href="/" class="btn btn-secondary">
               Voltar ao Site

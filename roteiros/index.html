@@ -47,9 +47,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/roteiros.css">
 
   <!-- Phosphor Icons -->
@@ -265,7 +267,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -286,7 +288,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -320,7 +322,7 @@
            class="btn btn-whatsapp btn--full"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -415,11 +417,11 @@
                      loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-roteiro__badge">
-                <i class="ph ph-star-fill"></i>
+                <i class="ph ph-star-fill" aria-hidden="true"></i>
                 Melhor custo-benefício
               </span>
               <span class="card-roteiro__duration">
-                <i class="ph ph-clock"></i>
+                <i class="ph ph-clock" aria-hidden="true"></i>
                 5h
               </span>
             </div>
@@ -432,19 +434,19 @@
               </p>
               <div class="card-roteiro__route">
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                   Marina da Glória
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Flamengo
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Botafogo
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-swimming-pool"></i>
+                  <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                   Urca
                 </span>
               </div>
@@ -461,11 +463,11 @@
                    alt="Passeio de lancha na Praia Vermelha com bondinho do Pão de Açúcar"
                    loading="lazy">
               <span class="card-roteiro__badge card-roteiro__badge--bestseller">
-                <i class="ph ph-fire"></i>
+                <i class="ph ph-fire" aria-hidden="true"></i>
                 Mais Vendido
               </span>
               <span class="card-roteiro__duration">
-                <i class="ph ph-clock"></i>
+                <i class="ph ph-clock" aria-hidden="true"></i>
                 5h
               </span>
             </div>
@@ -478,15 +480,15 @@
               </p>
               <div class="card-roteiro__route">
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                   Marina
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Urca
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-swimming-pool"></i>
+                  <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                   Praia Vermelha
                 </span>
               </div>
@@ -512,11 +514,11 @@
                   loading="lazy" decoding="async" width="400" height="250">
               </picture>
               <span class="card-roteiro__badge">
-                <i class="ph ph-camera"></i>
+                <i class="ph ph-camera" aria-hidden="true"></i>
                 Vista icônica
               </span>
               <span class="card-roteiro__duration">
-                <i class="ph ph-clock"></i>
+                <i class="ph ph-clock" aria-hidden="true"></i>
                 5h
               </span>
             </div>
@@ -529,15 +531,15 @@
               </p>
               <div class="card-roteiro__route">
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                   Marina
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Urca + P. Vermelha
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-camera"></i>
+                  <i class="ph ph-camera" aria-hidden="true"></i>
                   Copacabana
                 </span>
               </div>
@@ -563,11 +565,11 @@
                   loading="lazy" decoding="async" width="400" height="250">
               </picture>
               <span class="card-roteiro__badge">
-                <i class="ph ph-waves"></i>
+                <i class="ph ph-waves" aria-hidden="true"></i>
                 Mar aberto
               </span>
               <span class="card-roteiro__duration">
-                <i class="ph ph-clock"></i>
+                <i class="ph ph-clock" aria-hidden="true"></i>
                 5h
               </span>
             </div>
@@ -580,15 +582,15 @@
               </p>
               <div class="card-roteiro__route">
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                   Marina
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Copacabana
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-island"></i>
+                  <i class="ph ph-island" aria-hidden="true"></i>
                   Ilhas Cagarras
                 </span>
               </div>
@@ -614,11 +616,11 @@
                   loading="lazy" decoding="async" width="400" height="250">
               </picture>
               <span class="card-roteiro__badge">
-                <i class="ph ph-palm-tree"></i>
+                <i class="ph ph-palm-tree" aria-hidden="true"></i>
                 Praias desertas
               </span>
               <span class="card-roteiro__duration">
-                <i class="ph ph-clock"></i>
+                <i class="ph ph-clock" aria-hidden="true"></i>
                 5h
               </span>
             </div>
@@ -631,19 +633,19 @@
               </p>
               <div class="card-roteiro__route">
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                   Marina
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Travessia
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-swimming-pool"></i>
+                  <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                   Camboinhas
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-swimming-pool"></i>
+                  <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                   Itaipu
                 </span>
               </div>
@@ -663,11 +665,11 @@
                      loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-roteiro__badge">
-                <i class="ph ph-crown"></i>
+                <i class="ph ph-crown" aria-hidden="true"></i>
                 Experiência completa
               </span>
               <span class="card-roteiro__duration">
-                <i class="ph ph-clock"></i>
+                <i class="ph ph-clock" aria-hidden="true"></i>
                 5h
               </span>
             </div>
@@ -680,19 +682,19 @@
               </p>
               <div class="card-roteiro__route">
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                   Marina
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Niterói
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Urca
                 </span>
                 <span class="card-roteiro__stop">
-                  <i class="ph ph-arrow-right"></i>
+                  <i class="ph ph-arrow-right" aria-hidden="true"></i>
                   Marina
                 </span>
               </div>
@@ -710,7 +712,7 @@
              class="btn btn-whatsapp btn-lg"
              target="_blank"
              rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Falar com Especialista
           </a>
         </div>
@@ -782,7 +784,7 @@
         <!-- Recomendação -->
         <div class="roteiros-recommendation">
           <div class="roteiros-recommendation__icon">
-            <i class="ph ph-lightbulb"></i>
+            <i class="ph ph-lightbulb" aria-hidden="true"></i>
           </div>
           <h3 class="roteiros-recommendation__title">Não sabe qual escolher?</h3>
           <p class="roteiros-recommendation__text">
@@ -810,7 +812,7 @@
             <div class="accordion__item" id="melhor-roteiro-primeira-vez">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Qual o melhor roteiro para primeira vez em passeio de lancha?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -826,7 +828,7 @@
             <div class="accordion__item" id="quanto-custa-passeio-lancha">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Quanto custa um passeio de lancha no Rio de Janeiro?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -842,7 +844,7 @@
             <div class="accordion__item" id="o-que-inclui-passeio">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">O que está incluso no passeio de lancha?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -858,7 +860,7 @@
             <div class="accordion__item" id="personalizar-roteiro">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Posso personalizar o roteiro do passeio?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -874,7 +876,7 @@
             <div class="accordion__item" id="melhor-epoca-passeio">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Qual a melhor época para fazer passeio de lancha no Rio?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -890,7 +892,7 @@
             <div class="accordion__item" id="cancelamento-passeio">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">E se o tempo estiver ruim no dia do passeio?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -906,7 +908,7 @@
           <div class="faq__cta">
             <a href="/faq/" class="btn btn-secondary">
               Ver Todas as Dúvidas
-              <i class="ph ph-arrow-right"></i>
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -926,7 +928,7 @@
              class="btn btn-whatsapp btn-lg"
              target="_blank"
              rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Reservar pelo WhatsApp
           </a>
         </div>
@@ -952,10 +954,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -989,11 +991,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -1002,11 +1004,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

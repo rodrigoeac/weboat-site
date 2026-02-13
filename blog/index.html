@@ -44,9 +44,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/blog.css">
 
   <!-- Phosphor Icons -->
@@ -133,7 +135,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -154,7 +156,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -183,7 +185,7 @@
         </ul>
         <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha. [via site - blog]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -227,7 +229,7 @@
                 Descubra as praias mais bonitas do Rio de Janeiro que só são acessíveis (ou muito melhores) de lancha. Da Praia Vermelha às Ilhas Cagarras.
               </p>
               <span class="blog-card__link">
-                Ler artigo <i class="ph ph-arrow-right"></i>
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
               </span>
             </div>
           </a>
@@ -247,7 +249,7 @@
                 Guia prático de como se vestir para um passeio de lancha no Rio. O que levar, o que evitar e dicas de proteção solar.
               </p>
               <span class="blog-card__link">
-                Ler artigo <i class="ph ph-arrow-right"></i>
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
               </span>
             </div>
           </a>
@@ -267,7 +269,7 @@
                 Tudo sobre a Marina da Glória: como chegar, estacionamento, o que esperar no dia do passeio e dicas para aproveitar ao máximo.
               </p>
               <span class="blog-card__link">
-                Ler artigo <i class="ph ph-arrow-right"></i>
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
               </span>
             </div>
           </a>
@@ -287,7 +289,7 @@
           <div class="section-cta__buttons">
             <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha no Rio de Janeiro. [via site - blog]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Fale pelo WhatsApp
             </a>
             <a href="/lanchas/" class="btn btn-outline-white btn-lg">
@@ -316,10 +318,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -347,11 +349,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -360,11 +362,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

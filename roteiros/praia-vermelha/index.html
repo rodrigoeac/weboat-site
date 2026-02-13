@@ -47,9 +47,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/roteiros.css">
 
   <!-- Phosphor Icons -->
@@ -231,7 +233,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -252,7 +254,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -286,7 +288,7 @@
            class="btn btn-whatsapp btn--full"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -322,17 +324,17 @@
       <div class="roteiro-hero__content">
         <div class="container">
           <span class="roteiro-hero__badge roteiro-hero__badge--bestseller">
-            <i class="ph ph-fire"></i>
+            <i class="ph ph-fire" aria-hidden="true"></i>
             Mais Vendido
           </span>
           <h1 class="roteiro-hero__title">Roteiro 2 - Praia Vermelha</h1>
           <div class="roteiro-hero__meta">
             <span class="roteiro-hero__meta-item">
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               Turno de 5h
             </span>
             <span class="roteiro-hero__meta-item">
-              <i class="ph ph-waves"></i>
+              <i class="ph ph-waves" aria-hidden="true"></i>
               Mar calmo a moderado
             </span>
           </div>
@@ -405,7 +407,7 @@
                   <span class="roteiro-trajeto__stop-name">Mureta da Urca</span>
                   <span class="roteiro-trajeto__stop-description">Primeira parada para mergulho em águas calmas</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-swimming-pool"></i>
+                    <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                     1ª Parada para mergulho
                   </span>
                 </div>
@@ -413,7 +415,7 @@
                   <span class="roteiro-trajeto__stop-name">Praia Vermelha</span>
                   <span class="roteiro-trajeto__stop-description">Segunda parada - vista única do bondinho do Pão de Açúcar</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-swimming-pool"></i>
+                    <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                     2ª Parada para mergulho
                   </span>
                 </div>
@@ -429,19 +431,19 @@
               <h2 class="roteiro-highlights__title">Por que é o mais vendido?</h2>
               <div class="roteiro-highlights__grid">
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-trophy"></i>
+                  <i class="ph ph-trophy" aria-hidden="true"></i>
                   <span>Escolha de 60% dos clientes</span>
                 </div>
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-swimming-pool"></i>
+                  <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                   <span>2 paradas para mergulho</span>
                 </div>
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-cable-car"></i>
+                  <i class="ph ph-cable-car" aria-hidden="true"></i>
                   <span>Vista única do bondinho</span>
                 </div>
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-scales"></i>
+                  <i class="ph ph-scales" aria-hidden="true"></i>
                   <span>Melhor custo-benefício</span>
                 </div>
               </div>
@@ -503,7 +505,7 @@
                 </a>
               </div>
               <a href="/lanchas/" class="btn btn-secondary" style="margin-top: var(--space-4);">
-                <i class="ph ph-boat"></i>
+                <i class="ph ph-boat" aria-hidden="true"></i>
                 Ver Todas as Lanchas
               </a>
             </div>
@@ -523,7 +525,7 @@
                      class="btn btn-whatsapp btn-lg"
                      target="_blank"
                      rel="noopener noreferrer">
-                    <i class="ph ph-whatsapp-logo"></i>
+                    <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                     Reservar pelo WhatsApp
                   </a>
                   <a href="/lanchas/" class="btn btn-outline">
@@ -533,19 +535,19 @@
 
                 <div class="roteiro-price-card__info">
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Combustível incluso
                   </span>
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Marinheiro habilitado
                   </span>
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Som Bluetooth
                   </span>
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Coolers
                   </span>
                 </div>
@@ -569,7 +571,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Por que é o roteiro mais vendido?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -581,7 +583,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Qual a duração do passeio?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -593,7 +595,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Como saber o valor do passeio?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -605,7 +607,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">O que está incluso no passeio?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -618,7 +620,7 @@
           <div class="faq__cta">
             <a href="/faq/" class="btn btn-secondary">
               Ver Todas as Dúvidas
-              <i class="ph ph-arrow-right"></i>
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -684,7 +686,7 @@
              class="btn btn-whatsapp btn-lg"
              target="_blank"
              rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Reservar Agora
           </a>
         </div>
@@ -709,10 +711,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -746,11 +748,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -759,11 +761,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

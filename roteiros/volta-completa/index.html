@@ -47,9 +47,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/roteiros.css">
 
   <!-- Phosphor Icons -->
@@ -236,7 +238,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -257,7 +259,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -291,7 +293,7 @@
            class="btn btn-whatsapp btn--full"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -310,23 +312,24 @@
              sizes="100vw"
              alt="MAC Niterói visto do mar com Cristo Redentor ao fundo - Roteiro Volta Completa"
              class="roteiro-hero__image"
-             fetchpriority="high">
+             width="1600" height="1067"
+             loading="eager" fetchpriority="high" decoding="sync">
       </picture>
       <div class="roteiro-hero__overlay"></div>
       <div class="roteiro-hero__content">
         <div class="container">
           <span class="roteiro-hero__badge">
-            <i class="ph ph-crown"></i>
+            <i class="ph ph-crown" aria-hidden="true"></i>
             Experiência Completa
           </span>
           <h1 class="roteiro-hero__title">Volta Completa</h1>
           <div class="roteiro-hero__meta">
             <span class="roteiro-hero__meta-item">
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               5 horas
             </span>
             <span class="roteiro-hero__meta-item">
-              <i class="ph ph-waves"></i>
+              <i class="ph ph-waves" aria-hidden="true"></i>
               Mar variado
             </span>
           </div>
@@ -359,7 +362,7 @@
           <div class="roteiro-content__main">
             <!-- Badge Especial -->
             <div class="roteiro-volta-completa">
-              <i class="ph ph-crown"></i>
+              <i class="ph ph-crown" aria-hidden="true"></i>
               <span>Roteiro Especial</span>
             </div>
 
@@ -399,7 +402,7 @@
                   <span class="roteiro-trajeto__stop-name">Museu do Amanhã</span>
                   <span class="roteiro-trajeto__stop-description">Vista panorâmica do centro e Praça Mauá</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-buildings"></i>
+                    <i class="ph ph-buildings" aria-hidden="true"></i>
                     Cartão postal
                   </span>
                 </div>
@@ -407,7 +410,7 @@
                   <span class="roteiro-trajeto__stop-name">Ponte Rio-Niterói</span>
                   <span class="roteiro-trajeto__stop-description">Navegação sob a maior ponte do Brasil</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-bridge"></i>
+                    <i class="ph ph-bridge" aria-hidden="true"></i>
                     Vista impressionante
                   </span>
                 </div>
@@ -415,7 +418,7 @@
                   <span class="roteiro-trajeto__stop-name">MAC - Museu de Arte Contemporânea</span>
                   <span class="roteiro-trajeto__stop-description">O icônico disco voador de Oscar Niemeyer</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-camera"></i>
+                    <i class="ph ph-camera" aria-hidden="true"></i>
                     Foto obrigatória
                   </span>
                 </div>
@@ -427,7 +430,7 @@
                   <span class="roteiro-trajeto__stop-name">Praia do Morcego</span>
                   <span class="roteiro-trajeto__stop-description">1ª parada para mergulho - águas calmas</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-swimming-pool"></i>
+                    <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                     Mergulho
                   </span>
                 </div>
@@ -435,7 +438,7 @@
                   <span class="roteiro-trajeto__stop-name">Praias de Adão e Eva</span>
                   <span class="roteiro-trajeto__stop-description">2ª parada para mergulho - praias paradisíacas</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-swimming-pool"></i>
+                    <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                     Mergulho
                   </span>
                 </div>
@@ -443,7 +446,7 @@
                   <span class="roteiro-trajeto__stop-name">Fortes Históricos</span>
                   <span class="roteiro-trajeto__stop-description">Santa Cruz, Laje e São João - história naval</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-castle-turret"></i>
+                    <i class="ph ph-castle-turret" aria-hidden="true"></i>
                     Patrimônio histórico
                   </span>
                 </div>
@@ -451,7 +454,7 @@
                   <span class="roteiro-trajeto__stop-name">Mureta da Urca</span>
                   <span class="roteiro-trajeto__stop-description">3ª parada para mergulho - vista do Pão de Açúcar</span>
                   <span class="roteiro-trajeto__stop-tag">
-                    <i class="ph ph-swimming-pool"></i>
+                    <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                     Mergulho
                   </span>
                 </div>
@@ -467,19 +470,19 @@
               <h2 class="roteiro-highlights__title">Por que escolher a Volta Completa?</h2>
               <div class="roteiro-highlights__grid">
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-clock"></i>
+                  <i class="ph ph-clock" aria-hidden="true"></i>
                   <span>5 horas de navegação</span>
                 </div>
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-swimming-pool"></i>
+                  <i class="ph ph-swimming-pool" aria-hidden="true"></i>
                   <span>3 paradas para mergulho</span>
                 </div>
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-bridge"></i>
+                  <i class="ph ph-bridge" aria-hidden="true"></i>
                   <span>Ponte Rio-Niterói por baixo</span>
                 </div>
                 <div class="roteiro-highlights__item">
-                  <i class="ph ph-castle-turret"></i>
+                  <i class="ph ph-castle-turret" aria-hidden="true"></i>
                   <span>Fortes históricos</span>
                 </div>
               </div>
@@ -488,7 +491,7 @@
             <!-- Recomendação -->
             <div class="roteiros-recommendation" style="margin-top: var(--space-6);">
               <div class="roteiros-recommendation__icon">
-                <i class="ph ph-lightbulb"></i>
+                <i class="ph ph-lightbulb" aria-hidden="true"></i>
               </div>
               <h3 class="roteiros-recommendation__title">Dica: Combine com Churrasco!</h3>
               <p class="roteiros-recommendation__text">
@@ -546,7 +549,7 @@
                 </a>
               </div>
               <a href="/lanchas/" class="btn btn-secondary" style="margin-top: var(--space-4);">
-                <i class="ph ph-boat"></i>
+                <i class="ph ph-boat" aria-hidden="true"></i>
                 Ver Todas as Lanchas
               </a>
             </div>
@@ -566,7 +569,7 @@
                      class="btn btn-whatsapp btn-lg"
                      target="_blank"
                      rel="noopener noreferrer">
-                    <i class="ph ph-whatsapp-logo"></i>
+                    <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                     Reservar pelo WhatsApp
                   </a>
                   <a href="/lanchas/" class="btn btn-outline">
@@ -576,23 +579,23 @@
 
                 <div class="roteiro-price-card__info">
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Combustível incluso
                   </span>
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Marinheiro experiente
                   </span>
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Som Bluetooth
                   </span>
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Coolers
                   </span>
                   <span class="roteiro-price-card__info-item">
-                    <i class="ph ph-check-circle"></i>
+                    <i class="ph ph-check-circle" aria-hidden="true"></i>
                     Equipamentos de segurança
                   </span>
                 </div>
@@ -616,7 +619,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Qual o trajeto da Volta Completa?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -628,7 +631,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Qual a duração da Volta Completa?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -640,7 +643,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Quantas paradas para mergulho?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -652,7 +655,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Como saber o valor da Volta Completa?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -665,7 +668,7 @@
           <div class="faq__cta">
             <a href="/faq/" class="btn btn-secondary">
               Ver Todas as Dúvidas
-              <i class="ph ph-arrow-right"></i>
+              <i class="ph ph-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -731,7 +734,7 @@
              class="btn btn-whatsapp btn-lg"
              target="_blank"
              rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Reservar Agora
           </a>
         </div>
@@ -756,10 +759,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -793,11 +796,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -806,11 +809,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

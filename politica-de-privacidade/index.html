@@ -37,9 +37,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
 
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous" defer></script>
@@ -115,7 +117,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -137,7 +139,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -166,7 +168,7 @@
         </ul>
         <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha. [via site - politica-de-privacidade]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -294,10 +296,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -328,11 +330,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -341,7 +343,7 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
           </ul>

@@ -48,9 +48,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/sobre.css">
 
   <!-- Phosphor Icons -->
@@ -313,7 +315,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -335,7 +337,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -364,7 +366,7 @@
         </ul>
         <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha. [via site - sobre]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -393,7 +395,8 @@
                srcset="/assets/images/hero/sobre-hero-400w.jpg 400w, /assets/images/hero/sobre-hero-800w.jpg 800w, /assets/images/hero/sobre-hero.jpg 1600w"
                sizes="100vw"
                alt="Vista aérea da Marina da Glória com Pão de Açúcar ao fundo - sede da WeBoat Brasil"
-               fetchpriority="high">
+               width="1600" height="1067"
+               loading="eager" fetchpriority="high" decoding="sync">
         </picture>
       </div>
       <div class="sobre-hero__content">
@@ -449,7 +452,7 @@
             </blockquote>
           </div>
           <div class="sobre-historia__image">
-            <img src="/assets/images/sobre/historia-weboat.jpg" alt="Lancha WeBoat com logo ao pôr do sol na Baía de Guanabara">
+            <img src="/assets/images/sobre/historia-weboat.jpg" alt="Lancha WeBoat com logo ao pôr do sol na Baía de Guanabara" width="600" height="400" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -461,7 +464,7 @@
         <div class="sobre-mvv__grid">
           <div class="sobre-mvv__card">
             <div class="sobre-mvv__icon">
-              <i class="ph ph-target"></i>
+              <i class="ph ph-target" aria-hidden="true"></i>
             </div>
             <h3 class="sobre-mvv__title">Propósito</h3>
             <p class="sobre-mvv__text">
@@ -470,7 +473,7 @@
           </div>
           <div class="sobre-mvv__card">
             <div class="sobre-mvv__icon">
-              <i class="ph ph-eye"></i>
+              <i class="ph ph-eye" aria-hidden="true"></i>
             </div>
             <h3 class="sobre-mvv__title">Visão</h3>
             <p class="sobre-mvv__text">
@@ -479,7 +482,7 @@
           </div>
           <div class="sobre-mvv__card">
             <div class="sobre-mvv__icon">
-              <i class="ph ph-heart"></i>
+              <i class="ph ph-heart" aria-hidden="true"></i>
             </div>
             <h3 class="sobre-mvv__title">Valores</h3>
             <p class="sobre-mvv__text">
@@ -496,28 +499,28 @@
         <div class="sobre-numeros__grid">
           <div class="sobre-numero">
             <div class="sobre-numero__icon">
-              <i class="ph ph-sailboat"></i>
+              <i class="ph ph-sailboat" aria-hidden="true"></i>
             </div>
             <span class="sobre-numero__valor">+1.000</span>
             <span class="sobre-numero__label">Passeios Realizados</span>
           </div>
           <div class="sobre-numero">
             <div class="sobre-numero__icon">
-              <i class="ph ph-anchor"></i>
+              <i class="ph ph-anchor" aria-hidden="true"></i>
             </div>
             <span class="sobre-numero__valor">4</span>
             <span class="sobre-numero__label">Lanchas Próprias</span>
           </div>
           <div class="sobre-numero">
             <div class="sobre-numero__icon">
-              <i class="ph ph-star"></i>
+              <i class="ph ph-star" aria-hidden="true"></i>
             </div>
             <span class="sobre-numero__valor">+1.000</span>
             <span class="sobre-numero__label">Avaliações 5 Estrelas</span>
           </div>
           <div class="sobre-numero">
             <div class="sobre-numero__icon">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </div>
             <span class="sobre-numero__valor">+19k</span>
             <span class="sobre-numero__label">Seguidores no Instagram</span>
@@ -538,7 +541,7 @@
         <div class="sobre-equipe__grid">
           <div class="sobre-membro">
             <div class="sobre-membro__image">
-              <img src="/assets/images/sobre/equipe-1.jpg" alt="Membro da equipe WeBoat servindo churrasco a bordo da lancha">
+              <img src="/assets/images/sobre/equipe-1.jpg" alt="Membro da equipe WeBoat servindo churrasco a bordo da lancha" width="400" height="300" loading="lazy" decoding="async">
             </div>
             <div class="sobre-membro__content">
               <h3 class="sobre-membro__nome">Equipe de Atendimento</h3>
@@ -547,7 +550,7 @@
           </div>
           <div class="sobre-membro">
             <div class="sobre-membro__image">
-              <img src="/assets/images/hero/equipe-weboat.jpg" alt="Marinheiro da WeBoat com camisa da empresa" class="focus-bottom">
+              <img src="/assets/images/hero/equipe-weboat.jpg" alt="Marinheiro da WeBoat com camisa da empresa" class="focus-bottom" width="400" height="300" loading="lazy" decoding="async">
             </div>
             <div class="sobre-membro__content">
               <h3 class="sobre-membro__nome">Marinheiros</h3>
@@ -556,7 +559,7 @@
           </div>
           <div class="sobre-membro">
             <div class="sobre-membro__image">
-              <img src="/assets/images/sobre/equipe-3.jpg" alt="Técnico WeBoat realizando manutenção nos motores MAN na sala de máquinas">
+              <img src="/assets/images/sobre/equipe-3.jpg" alt="Técnico WeBoat realizando manutenção nos motores MAN na sala de máquinas" width="400" height="300" loading="lazy" decoding="async">
             </div>
             <div class="sobre-membro__content">
               <h3 class="sobre-membro__nome">Manutenção</h3>
@@ -565,7 +568,7 @@
           </div>
           <div class="sobre-membro">
             <div class="sobre-membro__image">
-              <img src="/assets/images/sobre/equipe-4.jpg" alt="Membro da equipe WeBoat com camisa azul no comando da lancha">
+              <img src="/assets/images/sobre/equipe-4.jpg" alt="Membro da equipe WeBoat com camisa azul no comando da lancha" width="400" height="300" loading="lazy" decoding="async">
             </div>
             <div class="sobre-membro__content">
               <h3 class="sobre-membro__nome">Operações</h3>
@@ -588,7 +591,7 @@
             <div class="sobre-estrutura__features">
               <div class="sobre-estrutura__feature">
                 <div class="sobre-estrutura__feature-icon">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                 </div>
                 <div class="sobre-estrutura__feature-content">
                   <h4 class="sobre-estrutura__feature-title">Localização Privilegiada</h4>
@@ -597,7 +600,7 @@
               </div>
               <div class="sobre-estrutura__feature">
                 <div class="sobre-estrutura__feature-icon">
-                  <i class="ph ph-car"></i>
+                  <i class="ph ph-car" aria-hidden="true"></i>
                 </div>
                 <div class="sobre-estrutura__feature-content">
                   <h4 class="sobre-estrutura__feature-title">Fácil Acesso</h4>
@@ -606,7 +609,7 @@
               </div>
               <div class="sobre-estrutura__feature">
                 <div class="sobre-estrutura__feature-icon">
-                  <i class="ph ph-storefront"></i>
+                  <i class="ph ph-storefront" aria-hidden="true"></i>
                 </div>
                 <div class="sobre-estrutura__feature-content">
                   <h4 class="sobre-estrutura__feature-title">Loja WeBoat</h4>
@@ -615,7 +618,7 @@
               </div>
               <div class="sobre-estrutura__feature">
                 <div class="sobre-estrutura__feature-icon">
-                  <i class="ph ph-fork-knife"></i>
+                  <i class="ph ph-fork-knife" aria-hidden="true"></i>
                 </div>
                 <div class="sobre-estrutura__feature-content">
                   <h4 class="sobre-estrutura__feature-title">Estrutura Completa</h4>
@@ -625,7 +628,7 @@
             </div>
           </div>
           <div class="sobre-estrutura__image">
-            <img src="/assets/images/sobre/marina-gloria.jpg" alt="Vista aérea da Marina da Glória com embarcações atracadas e Baía de Guanabara ao fundo">
+            <img src="/assets/images/sobre/marina-gloria.jpg" alt="Vista aérea da Marina da Glória com embarcações atracadas e Baía de Guanabara ao fundo" width="600" height="400" loading="lazy" decoding="async">
           </div>
         </div>
       </div>
@@ -643,7 +646,7 @@
         <div class="sobre-compromisso__grid">
           <div class="sobre-compromisso__card">
             <div class="sobre-compromisso__icon">
-              <i class="ph ph-shield-check"></i>
+              <i class="ph ph-shield-check" aria-hidden="true"></i>
             </div>
             <h3 class="sobre-compromisso__title">Segurança</h3>
             <p class="sobre-compromisso__text">
@@ -652,7 +655,7 @@
           </div>
           <div class="sobre-compromisso__card">
             <div class="sobre-compromisso__icon">
-              <i class="ph ph-sparkle"></i>
+              <i class="ph ph-sparkle" aria-hidden="true"></i>
             </div>
             <h3 class="sobre-compromisso__title">Qualidade</h3>
             <p class="sobre-compromisso__text">
@@ -661,7 +664,7 @@
           </div>
           <div class="sobre-compromisso__card">
             <div class="sobre-compromisso__icon">
-              <i class="ph ph-handshake"></i>
+              <i class="ph ph-handshake" aria-hidden="true"></i>
             </div>
             <h3 class="sobre-compromisso__title">Transparência</h3>
             <p class="sobre-compromisso__text">
@@ -723,7 +726,7 @@
           <div class="accordion__item">
             <button class="accordion__header" aria-expanded="false">
               <h3 class="accordion__title">Quantas lanchas a WeBoat tem?</h3>
-              <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
             </button>
             <div class="accordion__content">
               <div class="accordion__body">
@@ -736,7 +739,7 @@
           <div class="accordion__item">
             <button class="accordion__header" aria-expanded="false">
               <h3 class="accordion__title">Onde fica a WeBoat Brasil?</h3>
-              <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
             </button>
             <div class="accordion__content">
               <div class="accordion__body">
@@ -749,7 +752,7 @@
           <div class="accordion__item">
             <button class="accordion__header" aria-expanded="false">
               <h3 class="accordion__title">Os marinheiros são habilitados?</h3>
-              <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
             </button>
             <div class="accordion__content">
               <div class="accordion__body">
@@ -762,7 +765,7 @@
           <div class="accordion__item">
             <button class="accordion__header" aria-expanded="false">
               <h3 class="accordion__title">Qual o horário de atendimento?</h3>
-              <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+              <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
             </button>
             <div class="accordion__content">
               <div class="accordion__body">
@@ -785,7 +788,7 @@
           <div class="section-cta__buttons">
             <a href="https://wa.me/5521977724114?text=Olá! Gostaria de agendar um passeio de lancha. [via site - sobre]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Falar com a Equipe
             </a>
             <a href="/lanchas/" class="btn btn-outline-white btn-lg">
@@ -816,10 +819,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -853,11 +856,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -866,11 +869,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

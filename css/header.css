@@ -147,6 +147,12 @@
   transform: translateY(0);
 }
 
+.header__dropdown:focus-within .header__dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
 .header__dropdown-menu li a {
   display: block;
   padding: var(--space-3) var(--space-4);

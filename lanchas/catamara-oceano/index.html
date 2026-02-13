@@ -47,9 +47,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/lancha-detalhe.css">
 
   <!-- Phosphor Icons -->
@@ -151,7 +153,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -172,7 +174,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -201,7 +203,7 @@
         </ul>
         <a href="https://wa.me/5521977724114?text=Olá! Tenho interesse no Catamarã Oceano. [via site - catamara-oceano]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -255,7 +257,7 @@
           <!-- Info Card -->
           <div class="lancha-info">
             <span class="lancha-info__badge lancha-info__badge--evento">
-              <i class="ph ph-confetti"></i>
+              <i class="ph ph-confetti" aria-hidden="true"></i>
               Maior Para Eventos
             </span>
 
@@ -263,7 +265,7 @@
             <p class="lancha-info__subtitle">O maior catamarã para eventos no Rio</p>
 
             <div class="lancha-info__capacity">
-              <i class="ph ph-users"></i>
+              <i class="ph ph-users" aria-hidden="true"></i>
               50 a 65 pessoas
             </div>
 
@@ -304,11 +306,11 @@
             <div class="lancha-info__ctas">
               <a href="https://wa.me/5521977724114?text=Olá! Tenho interesse no Catamarã Oceano para evento. Poderia me enviar mais informações? [via site - catamara-oceano]"
                  class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-                <i class="ph ph-whatsapp-logo"></i>
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                 Reservar pelo WhatsApp
               </a>
               <a href="#montar-proposta" class="btn btn-secondary btn-lg proposta__anchor-btn">
-                <i class="ph ph-calculator"></i>
+                <i class="ph ph-calculator" aria-hidden="true"></i>
                 Montar Proposta
               </a>
             </div>
@@ -326,7 +328,7 @@
             <!-- Descrição -->
             <div class="lancha-section">
               <h2 class="lancha-section__title">
-                <i class="ph ph-info"></i>
+                <i class="ph ph-info" aria-hidden="true"></i>
                 Sobre o Catamarã Oceano
               </h2>
               <div class="lancha-section__description">
@@ -338,40 +340,40 @@
             <!-- O que inclui -->
             <div class="lancha-section">
               <h2 class="lancha-section__title">
-                <i class="ph ph-check-circle"></i>
+                <i class="ph ph-check-circle" aria-hidden="true"></i>
                 O que está incluso
               </h2>
               <div class="lancha-features">
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Combustível para o roteiro</span>
                 </div>
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Tripulação completa</span>
                 </div>
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Dois andares</span>
                 </div>
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Som profissional</span>
                 </div>
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Alta estabilidade</span>
                 </div>
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Múltiplos banheiros</span>
                 </div>
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Coletes salva-vidas</span>
                 </div>
                 <div class="lancha-feature">
-                  <div class="lancha-feature__icon"><i class="ph ph-check"></i></div>
+                  <div class="lancha-feature__icon"><i class="ph ph-check" aria-hidden="true"></i></div>
                   <span class="lancha-feature__text">Estrutura para buffet</span>
                 </div>
               </div>
@@ -380,7 +382,7 @@
             <!-- Especificações -->
             <div class="lancha-section">
               <h2 class="lancha-section__title">
-                <i class="ph ph-list-bullets"></i>
+                <i class="ph ph-list-bullets" aria-hidden="true"></i>
                 Especificações Técnicas
               </h2>
               <div class="lancha-specs">
@@ -416,25 +418,25 @@
                 <h3 class="lancha-quick__title">Informações Rápidas</h3>
                 <ul class="lancha-quick__list">
                   <li class="lancha-quick__item">
-                    <i class="ph ph-crown"></i>
+                    <i class="ph ph-crown" aria-hidden="true"></i>
                     <span>Maior embarcação</span>
                   </li>
                   <li class="lancha-quick__item">
-                    <i class="ph ph-map-pin"></i>
+                    <i class="ph ph-map-pin" aria-hidden="true"></i>
                     <span>Saída: Marina da Glória</span>
                   </li>
                   <li class="lancha-quick__item">
-                    <i class="ph ph-users"></i>
+                    <i class="ph ph-users" aria-hidden="true"></i>
                     <span>Até 65 convidados</span>
                   </li>
                   <li class="lancha-quick__item">
-                    <i class="ph ph-credit-card"></i>
+                    <i class="ph ph-credit-card" aria-hidden="true"></i>
                     <span>PIX, cartão ou transferência</span>
                   </li>
                 </ul>
                 <a href="https://wa.me/5521977724114?text=Olá! Tenho interesse no Catamarã Oceano para evento. Poderia me enviar mais informações? [via site - catamara-oceano]"
                    class="btn btn-whatsapp" target="_blank" rel="noopener noreferrer">
-                  <i class="ph ph-whatsapp-logo"></i>
+                  <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                   Consultar Disponibilidade
                 </a>
               </div>
@@ -488,37 +490,37 @@
               <div class="proposta__detalhes-grid">
                 <div class="proposta__field">
                   <label class="proposta__label" for="proposta-pessoas">
-                    <i class="ph ph-users"></i> Número de Pessoas
+                    <i class="ph ph-users" aria-hidden="true"></i> Número de Pessoas
                   </label>
                   <div class="proposta__stepper">
                     <button type="button" class="proposta__stepper-btn" data-action="decrement" data-target="proposta-pessoas" aria-label="Diminuir">
-                      <i class="ph ph-minus"></i>
+                      <i class="ph ph-minus" aria-hidden="true"></i>
                     </button>
                     <input type="number" id="proposta-pessoas" class="proposta__stepper-input" value="10" min="1" aria-label="Número de pessoas">
                     <button type="button" class="proposta__stepper-btn" data-action="increment" data-target="proposta-pessoas" aria-label="Aumentar">
-                      <i class="ph ph-plus"></i>
+                      <i class="ph ph-plus" aria-hidden="true"></i>
                     </button>
                   </div>
                   <span class="proposta__field-hint" id="proposta-capacidade-hint"></span>
                 </div>
                 <div class="proposta__field">
                   <label class="proposta__label">
-                    <i class="ph ph-sun-horizon"></i> Turno
+                    <i class="ph ph-sun-horizon" aria-hidden="true"></i> Turno
                   </label>
                   <div class="proposta__turno-options" role="radiogroup" aria-label="Selecione o turno">
                   </div>
                 </div>
                 <div class="proposta__field">
                   <label class="proposta__label" for="proposta-horas-extras">
-                    <i class="ph ph-clock-countdown"></i> Horas Extras
+                    <i class="ph ph-clock-countdown" aria-hidden="true"></i> Horas Extras
                   </label>
                   <div class="proposta__stepper">
                     <button type="button" class="proposta__stepper-btn" data-action="decrement" data-target="proposta-horas-extras" aria-label="Diminuir">
-                      <i class="ph ph-minus"></i>
+                      <i class="ph ph-minus" aria-hidden="true"></i>
                     </button>
                     <input type="number" id="proposta-horas-extras" class="proposta__stepper-input" value="0" min="0" max="3" aria-label="Horas extras">
                     <button type="button" class="proposta__stepper-btn" data-action="increment" data-target="proposta-horas-extras" aria-label="Aumentar">
-                      <i class="ph ph-plus"></i>
+                      <i class="ph ph-plus" aria-hidden="true"></i>
                     </button>
                   </div>
                   <span class="proposta__field-hint" id="proposta-hora-extra-hint"></span>
@@ -527,7 +529,7 @@
                   <label class="proposta__label proposta__checkbox-label">
                     <input type="checkbox" id="proposta-churrasqueira" class="proposta__checkbox">
                     <span class="proposta__checkbox-custom"></span>
-                    <i class="ph ph-fire"></i> Churrasqueira
+                    <i class="ph ph-fire" aria-hidden="true"></i> Churrasqueira
                     <span class="proposta__field-price" id="proposta-churr-preco"></span>
                   </label>
                 </div>
@@ -548,14 +550,14 @@
           <aside class="proposta__resumo" id="proposta-resumo">
             <div class="proposta__resumo-inner">
               <h3 class="proposta__resumo-title">
-                <i class="ph ph-receipt"></i> Resumo da Proposta
+                <i class="ph ph-receipt" aria-hidden="true"></i> Resumo da Proposta
               </h3>
               <div class="proposta__resumo-body" id="proposta-resumo-body">
                 <p class="proposta__resumo-empty">Selecione um roteiro para começar</p>
               </div>
               <div class="proposta__resumo-total" id="proposta-resumo-total"></div>
               <a href="#" class="btn btn-whatsapp proposta__resumo-cta" id="proposta-whatsapp-btn" target="_blank" rel="noopener noreferrer">
-                <i class="ph ph-whatsapp-logo"></i>
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                 Enviar Proposta pelo WhatsApp
               </a>
             </div>
@@ -578,7 +580,7 @@
           <h3 class="card-route__title">Mureta da Urca</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">R$ 14.000</span>
         </div>
       </a>
@@ -588,7 +590,7 @@
           <h3 class="card-route__title">Praia Vermelha</h3>
         </div>
         <div class="card-route__footer">
-          <span class="card-route__duration"><i class="ph ph-clock"></i> 5h</span>
+          <span class="card-route__duration"><i class="ph ph-clock" aria-hidden="true"></i> 5h</span>
           <span class="card-route__price">R$ 14.000</span>
         </div>
       </a>
@@ -607,7 +609,7 @@
           <div class="section-cta__buttons">
             <a href="https://wa.me/5521977724114?text=Olá! Quero reservar o Catamarã Oceano para evento. [via site - catamara-oceano]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Reservar pelo WhatsApp
             </a>
             <a href="/lanchas/" class="btn btn-outline-white btn-lg">
@@ -636,10 +638,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -673,11 +675,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -686,11 +688,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

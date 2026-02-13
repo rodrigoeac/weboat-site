@@ -45,9 +45,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/ocasioes.css">
 
   <!-- Phosphor Icons -->
@@ -239,7 +241,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -260,7 +262,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -289,7 +291,7 @@
         </ul>
         <a href="https://wa.me/5521977724114?text=Olá! Quero informações sobre o Carnaval na lancha. [via site - carnaval]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -322,12 +324,12 @@
                     /assets/images/ocasioes/carnaval-hero.jpg 1600w"
             sizes="100vw"
             alt="Grupo de amigas com camisas do Brasil curtindo Carnaval na lancha com Pão de Açúcar ao fundo"
-            fetchpriority="high" decoding="async" width="1600" height="900">
+            loading="eager" fetchpriority="high" decoding="sync" width="1600" height="900">
         </picture>
       </div>
       <div class="ocasiao-hero__content">
         <span class="ocasiao-hero__badge">
-          <i class="ph ph-confetti"></i>
+          <i class="ph ph-confetti" aria-hidden="true"></i>
           Carnaval 2026
         </span>
         <h1 class="ocasiao-hero__title">Carnaval na Lancha</h1>
@@ -338,7 +340,7 @@
         <div class="ocasiao-hero__ctas">
           <a href="https://wa.me/5521977724114?text=Olá! Quero informações sobre o Carnaval na lancha no Rio de Janeiro. [via site - carnaval]"
              class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Reservar Minha Lancha
           </a>
           <a href="#pacotes" class="btn btn-outline-white btn-lg">
@@ -387,7 +389,7 @@
         <div class="ocasiao-beneficios__grid">
           <div class="ocasiao-beneficio">
             <div class="ocasiao-beneficio__icon">
-              <i class="ph ph-confetti"></i>
+              <i class="ph ph-confetti" aria-hidden="true"></i>
             </div>
             <h3 class="ocasiao-beneficio__title">Seu Bloco Privativo</h3>
             <p class="ocasiao-beneficio__text">
@@ -396,7 +398,7 @@
           </div>
           <div class="ocasiao-beneficio">
             <div class="ocasiao-beneficio__icon">
-              <i class="ph ph-music-notes"></i>
+              <i class="ph ph-music-notes" aria-hidden="true"></i>
             </div>
             <h3 class="ocasiao-beneficio__title">DJ a Bordo</h3>
             <p class="ocasiao-beneficio__text">
@@ -405,7 +407,7 @@
           </div>
           <div class="ocasiao-beneficio">
             <div class="ocasiao-beneficio__icon">
-              <i class="ph ph-champagne"></i>
+              <i class="ph ph-champagne" aria-hidden="true"></i>
             </div>
             <h3 class="ocasiao-beneficio__title">Open Bar Completo</h3>
             <p class="ocasiao-beneficio__text">
@@ -414,7 +416,7 @@
           </div>
           <div class="ocasiao-beneficio">
             <div class="ocasiao-beneficio__icon">
-              <i class="ph ph-sun"></i>
+              <i class="ph ph-sun" aria-hidden="true"></i>
             </div>
             <h3 class="ocasiao-beneficio__title">Vista Incrível</h3>
             <p class="ocasiao-beneficio__text">
@@ -522,27 +524,27 @@
                 <img src="/assets/images/lanchas/weboat-32.jpg" alt="WeBoat 32 - Lancha para 15 pessoas" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-boat__badge">
-                <i class="ph ph-star-fill"></i>
+                <i class="ph ph-star-fill" aria-hidden="true"></i>
                 Melhor custo-benefício
               </span>
             </div>
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat 32</h3>
               <p class="card-boat__capacity">
-                <i class="ph ph-users"></i>
+                <i class="ph ph-users" aria-hidden="true"></i>
                 Até 15 pessoas
               </p>
               <div class="card-boat__features">
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Combustível incluso
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Som Bluetooth
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Tapete flutuante
                 </span>
               </div>
@@ -564,27 +566,27 @@
                 <img src="/assets/images/lanchas/weboat-390.jpg" alt="WeBoat 390 - Lancha com churrasqueira para 16 pessoas" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-boat__badge">
-                <i class="ph ph-fire"></i>
+                <i class="ph ph-fire" aria-hidden="true"></i>
                 Churrasqueira
               </span>
             </div>
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat 390</h3>
               <p class="card-boat__capacity">
-                <i class="ph ph-users"></i>
+                <i class="ph ph-users" aria-hidden="true"></i>
                 Até 16 pessoas
               </p>
               <div class="card-boat__features">
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Combustível incluso
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Churrasqueira
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Som Bluetooth
                 </span>
               </div>
@@ -606,27 +608,27 @@
                 <img src="/assets/images/lanchas/weboat-oceanic-36.jpg" alt="WeBoat Oceanic 36 - Lancha premium para 14 pessoas" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-boat__badge">
-                <i class="ph ph-crown"></i>
+                <i class="ph ph-crown" aria-hidden="true"></i>
                 Premium
               </span>
             </div>
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat Oceanic 36</h3>
               <p class="card-boat__capacity">
-                <i class="ph ph-users"></i>
+                <i class="ph ph-users" aria-hidden="true"></i>
                 Até 14 pessoas
               </p>
               <div class="card-boat__features">
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Combustível incluso
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Conforto premium
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Som Bluetooth
                 </span>
               </div>
@@ -648,27 +650,27 @@
                 <img src="/assets/images/lanchas/weboat-ibiza-42.jpg" alt="WeBoat Ibiza 42 - Lancha com flybridge para 12 pessoas" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-boat__badge">
-                <i class="ph ph-star-fill"></i>
+                <i class="ph ph-star-fill" aria-hidden="true"></i>
                 Flybridge exclusivo
               </span>
             </div>
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat Ibiza 42</h3>
               <p class="card-boat__capacity">
-                <i class="ph ph-users"></i>
+                <i class="ph ph-users" aria-hidden="true"></i>
                 Até 12 pessoas
               </p>
               <div class="card-boat__features">
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Combustível incluso
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Flybridge exclusivo
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Churrasqueira
                 </span>
               </div>
@@ -690,27 +692,27 @@
                 <img src="/assets/images/lanchas/weboat-rio-star-50.jpg" alt="WeBoat Rio Star 50 - Nossa maior lancha para 20-22 pessoas" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-boat__badge">
-                <i class="ph ph-crown"></i>
+                <i class="ph ph-crown" aria-hidden="true"></i>
                 Maior capacidade
               </span>
             </div>
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat Rio Star 50</h3>
               <p class="card-boat__capacity">
-                <i class="ph ph-users"></i>
+                <i class="ph ph-users" aria-hidden="true"></i>
                 20-22 pessoas
               </p>
               <div class="card-boat__features">
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Combustível incluso
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Maior capacidade
                 </span>
                 <span class="card-boat__feature">
-                  <i class="ph ph-check-circle card-boat__feature-icon"></i>
+                  <i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>
                   Espaço amplo
                 </span>
               </div>
@@ -733,17 +735,17 @@
             <article class="card-boat card-boat--parceira">
               <div class="card-boat__image">
                 <img src="/assets/images/lanchas/parceiras/barco-gourmet-53.jpg" alt="Barco Gourmet 53 - Barco para eventos com 30-40 pessoas" loading="lazy">
-                <span class="card-boat__badge card-boat__badge--evento"><i class="ph ph-confetti"></i> Carnaval</span>
+                <span class="card-boat__badge card-boat__badge--evento"><i class="ph ph-confetti" aria-hidden="true"></i> Carnaval</span>
               </div>
               <div class="card-boat__content">
                 <h3 class="card-boat__title">Barco Gourmet 53</h3>
                 <p class="card-boat__capacity">
-                  <i class="ph ph-users"></i>
+                  <i class="ph ph-users" aria-hidden="true"></i>
                   30-40 pessoas
                 </p>
                 <div class="card-boat__features">
-                  <span class="card-boat__feature"><i class="ph ph-check-circle card-boat__feature-icon"></i>Ideal para eventos</span>
-                  <span class="card-boat__feature"><i class="ph ph-lightning card-boat__feature-icon"></i>Gerador incluso</span>
+                  <span class="card-boat__feature"><i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>Ideal para eventos</span>
+                  <span class="card-boat__feature"><i class="ph ph-lightning card-boat__feature-icon" aria-hidden="true"></i>Gerador incluso</span>
                 </div>
               </div>
               <div class="card-boat__footer">
@@ -759,17 +761,17 @@
             <article class="card-boat card-boat--parceira">
               <div class="card-boat__image">
                 <img src="/assets/images/lanchas/parceiras/weboat-malik.jpg" alt="WeBoat Malik - Barco para eventos com 35-50 pessoas" loading="lazy">
-                <span class="card-boat__badge card-boat__badge--evento"><i class="ph ph-confetti"></i> Carnaval</span>
+                <span class="card-boat__badge card-boat__badge--evento"><i class="ph ph-confetti" aria-hidden="true"></i> Carnaval</span>
               </div>
               <div class="card-boat__content">
                 <h3 class="card-boat__title">WeBoat Malik</h3>
                 <p class="card-boat__capacity">
-                  <i class="ph ph-users"></i>
+                  <i class="ph ph-users" aria-hidden="true"></i>
                   35-50 pessoas
                 </p>
                 <div class="card-boat__features">
-                  <span class="card-boat__feature"><i class="ph ph-speaker-high card-boat__feature-icon"></i>4 caixas PZ ativas</span>
-                  <span class="card-boat__feature"><i class="ph ph-lightning card-boat__feature-icon"></i>Gerador incluso</span>
+                  <span class="card-boat__feature"><i class="ph ph-speaker-high card-boat__feature-icon" aria-hidden="true"></i>4 caixas PZ ativas</span>
+                  <span class="card-boat__feature"><i class="ph ph-lightning card-boat__feature-icon" aria-hidden="true"></i>Gerador incluso</span>
                 </div>
               </div>
               <div class="card-boat__footer">
@@ -785,17 +787,17 @@
             <article class="card-boat card-boat--parceira">
               <div class="card-boat__image">
                 <img src="/assets/images/lanchas/parceiras/catamara-oceano.jpg" alt="Catamarã Oceano - Catamarã para 50-65 pessoas" loading="lazy">
-                <span class="card-boat__badge card-boat__badge--evento"><i class="ph ph-confetti"></i> Carnaval</span>
+                <span class="card-boat__badge card-boat__badge--evento"><i class="ph ph-confetti" aria-hidden="true"></i> Carnaval</span>
               </div>
               <div class="card-boat__content">
                 <h3 class="card-boat__title">Catamarã Oceano</h3>
                 <p class="card-boat__capacity">
-                  <i class="ph ph-users"></i>
+                  <i class="ph ph-users" aria-hidden="true"></i>
                   50-65 pessoas
                 </p>
                 <div class="card-boat__features">
-                  <span class="card-boat__feature"><i class="ph ph-boat card-boat__feature-icon"></i>Maior capacidade</span>
-                  <span class="card-boat__feature"><i class="ph ph-check-circle card-boat__feature-icon"></i>Ideal para grandes eventos</span>
+                  <span class="card-boat__feature"><i class="ph ph-boat card-boat__feature-icon" aria-hidden="true"></i>Maior capacidade</span>
+                  <span class="card-boat__feature"><i class="ph ph-check-circle card-boat__feature-icon" aria-hidden="true"></i>Ideal para grandes eventos</span>
                 </div>
               </div>
               <div class="card-boat__footer">
@@ -808,7 +810,7 @@
             </article>
           </div>
           <a href="/lanchas/" class="btn btn-outline-white" style="margin-top: var(--space-6);">
-            <i class="ph ph-boat"></i>
+            <i class="ph ph-boat" aria-hidden="true"></i>
             Ver Todas as Lanchas
           </a>
         </div>
@@ -842,7 +844,7 @@
             <div class="ocasiao-diferenciais__list">
               <div class="ocasiao-diferencial">
                 <div class="ocasiao-diferencial__icon">
-                  <i class="ph ph-music-notes"></i>
+                  <i class="ph ph-music-notes" aria-hidden="true"></i>
                 </div>
                 <div class="ocasiao-diferencial__content">
                   <h3 class="ocasiao-diferencial__title">DJ com Equipamento</h3>
@@ -851,7 +853,7 @@
               </div>
               <div class="ocasiao-diferencial">
                 <div class="ocasiao-diferencial__icon">
-                  <i class="ph ph-champagne"></i>
+                  <i class="ph ph-champagne" aria-hidden="true"></i>
                 </div>
                 <div class="ocasiao-diferencial__content">
                   <h3 class="ocasiao-diferencial__title">Open Bar</h3>
@@ -860,7 +862,7 @@
               </div>
               <div class="ocasiao-diferencial">
                 <div class="ocasiao-diferencial__icon">
-                  <i class="ph ph-confetti"></i>
+                  <i class="ph ph-confetti" aria-hidden="true"></i>
                 </div>
                 <div class="ocasiao-diferencial__content">
                   <h3 class="ocasiao-diferencial__title">Decoração de Carnaval</h3>
@@ -869,7 +871,7 @@
               </div>
               <div class="ocasiao-diferencial">
                 <div class="ocasiao-diferencial__icon">
-                  <i class="ph ph-fire"></i>
+                  <i class="ph ph-fire" aria-hidden="true"></i>
                 </div>
                 <div class="ocasiao-diferencial__content">
                   <h3 class="ocasiao-diferencial__title">Churrasco a Bordo</h3>
@@ -914,7 +916,7 @@
           <details class="ocasiao-faq-item">
             <summary class="ocasiao-faq-item__question">
               Como funciona o Carnaval na lancha?
-              <i class="ph ph-caret-down"></i>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
             </summary>
             <div class="ocasiao-faq-item__answer">
               O Carnaval na lancha é um passeio privativo de aproximadamente 5 horas com saída da Marina da Glória. Você navega pela Baía de Guanabara e orla do Rio com DJ, open bar e decoração temática. É a forma perfeita de curtir o Carnaval longe da multidão, com privacidade e conforto para seu grupo.
@@ -924,7 +926,7 @@
           <details class="ocasiao-faq-item">
             <summary class="ocasiao-faq-item__question">
               Quantas pessoas cabem na lancha de Carnaval?
-              <i class="ph ph-caret-down"></i>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
             </summary>
             <div class="ocasiao-faq-item__answer">
               A WeBoat oferece lanchas de 10 a 65 pessoas para o Carnaval. Lanchas próprias comportam de 12 a 22 pessoas. Para grupos maiores, temos catamarãs e embarcações parceiras para até 65 pessoas. Consulte-nos pelo WhatsApp para encontrar a melhor opção para seu grupo.
@@ -934,7 +936,7 @@
           <details class="ocasiao-faq-item">
             <summary class="ocasiao-faq-item__question">
               Posso levar fantasia e adereços?
-              <i class="ph ph-caret-down"></i>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
             </summary>
             <div class="ocasiao-faq-item__answer">
               Com certeza! Fantasias, adereços, confete e serpentina são mais que bem-vindos — é Carnaval! Recomendamos apenas cuidado com itens que possam cair no mar. Se preferir, contrate nosso kit de decoração de Carnaval que já inclui adereços para toda a turma.
@@ -944,7 +946,7 @@
           <details class="ocasiao-faq-item">
             <summary class="ocasiao-faq-item__question">
               Posso reservar para mais de um dia de Carnaval?
-              <i class="ph ph-caret-down"></i>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
             </summary>
             <div class="ocasiao-faq-item__answer">
               Sim! Muitos clientes reservam para mais de um dia do Carnaval. Oferecemos condições especiais para pacotes de múltiplos dias. Entre em contato pelo WhatsApp para montar seu pacote personalizado de Carnaval.
@@ -954,7 +956,7 @@
           <details class="ocasiao-faq-item">
             <summary class="ocasiao-faq-item__question">
               E se chover durante o Carnaval?
-              <i class="ph ph-caret-down"></i>
+              <i class="ph ph-caret-down" aria-hidden="true"></i>
             </summary>
             <div class="ocasiao-faq-item__answer">
               Nossas lanchas têm cobertura, então chuva leve não impede o passeio. Em caso de condições climáticas severas que impeçam a navegação segura, oferecemos remarcação para outra data do Carnaval (sujeito a disponibilidade) ou para data posterior, conforme nosso termo de contratação.
@@ -975,7 +977,7 @@
           <a href="/lanchas/weboat-390/" class="card-boat card-boat--compact">
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat 390</h3>
-              <p class="card-boat__capacity"><i class="ph ph-users"></i> Até 16 pessoas</p>
+              <p class="card-boat__capacity"><i class="ph ph-users" aria-hidden="true"></i> Até 16 pessoas</p>
               <div class="card-boat__footer">
                 <div class="card-boat__price-block">
                   <span class="card-boat__price-label">A partir de</span>
@@ -988,7 +990,7 @@
           <a href="/lanchas/weboat-rio-star-50/" class="card-boat card-boat--compact">
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat Rio Star 50</h3>
-              <p class="card-boat__capacity"><i class="ph ph-users"></i> Até 22 pessoas</p>
+              <p class="card-boat__capacity"><i class="ph ph-users" aria-hidden="true"></i> Até 22 pessoas</p>
               <div class="card-boat__footer">
                 <div class="card-boat__price-block">
                   <span class="card-boat__price-label">A partir de</span>
@@ -1001,7 +1003,7 @@
           <a href="/lanchas/weboat-32/" class="card-boat card-boat--compact">
             <div class="card-boat__content">
               <h3 class="card-boat__title">WeBoat 32</h3>
-              <p class="card-boat__capacity"><i class="ph ph-users"></i> Até 15 pessoas</p>
+              <p class="card-boat__capacity"><i class="ph ph-users" aria-hidden="true"></i> Até 15 pessoas</p>
               <div class="card-boat__footer">
                 <div class="card-boat__price-block">
                   <span class="card-boat__price-label">A partir de</span>
@@ -1026,7 +1028,7 @@
           <div class="section-cta__buttons">
             <a href="https://wa.me/5521977724114?text=Olá! Quero informações sobre o Carnaval na lancha no Rio de Janeiro. [via site - carnaval]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Reservar Minha Lancha
             </a>
             <a href="/lanchas/" class="btn btn-outline-white btn-lg">
@@ -1055,10 +1057,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -1092,11 +1094,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -1105,11 +1107,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

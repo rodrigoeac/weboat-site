@@ -48,9 +48,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/faq.css">
 
   <!-- Phosphor Icons -->
@@ -296,7 +298,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -318,7 +320,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -347,7 +349,7 @@
         </ul>
         <a href="https://wa.me/5521977724114?text=Olá! Tenho uma dúvida. [via site - faq]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -385,15 +387,15 @@
         <h2 class="faq-populares__title">Perguntas mais buscadas</h2>
         <div class="faq-populares__grid">
           <a href="#precos" class="faq-populares__item">
-            <i class="ph ph-currency-circle-dollar"></i>
+            <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
             Quanto custa alugar uma lancha?
           </a>
           <a href="#incluso" class="faq-populares__item">
-            <i class="ph ph-check-circle"></i>
+            <i class="ph ph-check-circle" aria-hidden="true"></i>
             O que está incluso no aluguel?
           </a>
           <a href="#reserva" class="faq-populares__item">
-            <i class="ph ph-calendar-check"></i>
+            <i class="ph ph-calendar-check" aria-hidden="true"></i>
             Como funciona a reserva?
           </a>
         </div>
@@ -409,31 +411,31 @@
             <h2 class="faq-nav__title">Categorias</h2>
             <nav class="faq-nav__list">
               <a href="#precos-reservas" class="faq-nav__item active">
-                <i class="ph ph-currency-circle-dollar"></i>
+                <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
                 Preços e Reservas
               </a>
               <a href="#passeio" class="faq-nav__item">
-                <i class="ph ph-sailboat"></i>
+                <i class="ph ph-sailboat" aria-hidden="true"></i>
                 Durante o Passeio
               </a>
               <a href="#lanchas" class="faq-nav__item">
-                <i class="ph ph-anchor"></i>
+                <i class="ph ph-anchor" aria-hidden="true"></i>
                 Sobre as Lanchas
               </a>
               <a href="#ocasioes" class="faq-nav__item">
-                <i class="ph ph-confetti"></i>
+                <i class="ph ph-confetti" aria-hidden="true"></i>
                 Ocasiões Especiais
               </a>
               <a href="#logistica" class="faq-nav__item">
-                <i class="ph ph-map-pin"></i>
+                <i class="ph ph-map-pin" aria-hidden="true"></i>
                 Logística
               </a>
               <a href="#passageiros" class="faq-nav__item">
-                <i class="ph ph-users"></i>
+                <i class="ph ph-users" aria-hidden="true"></i>
                 Crianças, Pets e Acessibilidade
               </a>
               <a href="#politicas" class="faq-nav__item">
-                <i class="ph ph-shield-check"></i>
+                <i class="ph ph-shield-check" aria-hidden="true"></i>
                 Políticas e Regras
               </a>
             </nav>
@@ -446,7 +448,7 @@
             <div class="faq-category" id="precos-reservas">
               <div class="faq-category__header">
                 <div class="faq-category__icon">
-                  <i class="ph ph-currency-circle-dollar"></i>
+                  <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
                 </div>
                 <h2 class="faq-category__title">Preços e Reservas</h2>
               </div>
@@ -454,7 +456,7 @@
                 <details class="faq-item" id="precos">
                   <summary class="faq-item__question">
                     Quanto custa alugar uma lancha no Rio de Janeiro?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>O aluguel de lancha no Rio de Janeiro na WeBoat começa em <strong>R$ 2.300</strong> para passeios de segunda a quinta, e <strong>R$ 2.700</strong> de sexta a domingo.</p>
@@ -471,7 +473,7 @@
                 <details class="faq-item" id="incluso">
                   <summary class="faq-item__question">
                     O que está incluso no aluguel de lancha?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Todo aluguel de lancha na WeBoat inclui:</p>
@@ -492,7 +494,7 @@
                 <details class="faq-item" id="reserva">
                   <summary class="faq-item__question">
                     Como funciona a reserva?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>A reserva é simples e rápida:</p>
@@ -509,7 +511,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Quais formas de pagamento são aceitas?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Aceitamos as seguintes formas de pagamento:</p>
@@ -526,7 +528,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Qual a política de cancelamento?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>O sinal de 50% garante sua reserva e <strong>não dá direito a arrependimento</strong>, seja por motivos pessoais, familiares ou de saúde. Ao reservar, deixamos de ofertar a lancha para outros interessados.</p>
@@ -538,7 +540,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Com quanto tempo de antecedência devo reservar?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Não há tempo mínimo ou máximo para fazer sua reserva. Porém, em <strong>períodos de alta procura</strong> (verão, feriados prolongados, réveillon), recomendamos reservar com pelo menos <strong>30 dias de antecedência</strong> para garantir as melhores opções de lanchas e datas.</p>
@@ -551,7 +553,7 @@
             <div class="faq-category" id="passeio">
               <div class="faq-category__header">
                 <div class="faq-category__icon">
-                  <i class="ph ph-sailboat"></i>
+                  <i class="ph ph-sailboat" aria-hidden="true"></i>
                 </div>
                 <h2 class="faq-category__title">Durante o Passeio</h2>
               </div>
@@ -559,7 +561,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso levar bebida e comida?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Sim! Você pode levar sua própria bebida e comida <strong>sem custo extra</strong>. Fornecemos coolers para armazenamento.</p>
@@ -576,7 +578,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     O que é proibido levar na lancha?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Para garantir a segurança e conservação da embarcação, <strong>não é permitido</strong>:</p>
@@ -594,7 +596,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     E se chover no dia do passeio?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>A <strong>remarcação só é possível em caso de chuva forte</strong> que inviabilize o passeio. Tempo nublado ou chuva leve não geram remarcação, pois as lanchas possuem toldo.</p>
@@ -605,7 +607,7 @@
                 <details class="faq-item" id="diferenca-roteiros">
                   <summary class="faq-item__question">
                     Qual a diferença entre os roteiros?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>A diferença entre os roteiros está no <strong>tempo de navegação</strong> versus <strong>tempo de lancha parada</strong>. A duração total do passeio é sempre a mesma para o turno escolhido (5 horas).</p>
@@ -625,7 +627,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Preciso chegar com antecedência?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Sim! Chegue com pelo menos <strong>30 minutos de antecedência</strong> do horário marcado.</p>
@@ -636,7 +638,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Preciso saber nadar para fazer o passeio?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Não é necessário saber nadar.</strong> Durante o passeio, fornecemos <strong>macarrões flutuantes e tapete</strong> para diversão na água. Coletes salva-vidas estão disponíveis para emergências.</p>
@@ -647,7 +649,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso escolher a música durante o passeio?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Sim! Todas as lanchas possuem <strong>som Bluetooth</strong>. Você pode conectar seu celular e tocar suas próprias playlists durante todo o passeio.</p>
@@ -658,7 +660,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso fumar a bordo?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>É permitido fumar <strong>apenas nas áreas externas</strong> da lancha, respeitando as regras da embarcação e com cuidado para não danificar o piso e assentos. Pedimos que as bitucas sejam descartadas adequadamente.</p>
@@ -669,7 +671,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Como funciona o uso do banheiro?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Todas as nossas lanchas próprias possuem <strong>banheiro a bordo</strong> para maior conforto.</p>
@@ -683,7 +685,7 @@
             <div class="faq-category" id="lanchas">
               <div class="faq-category__header">
                 <div class="faq-category__icon">
-                  <i class="ph ph-anchor"></i>
+                  <i class="ph ph-anchor" aria-hidden="true"></i>
                 </div>
                 <h2 class="faq-category__title">Sobre as Lanchas</h2>
               </div>
@@ -691,7 +693,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Quantas pessoas cabem em uma lancha?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>A WeBoat tem <strong>5 lanchas próprias</strong> para diferentes tamanhos de grupo:</p>
@@ -710,7 +712,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     As lanchas têm banheiro?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> Todas as lanchas (próprias e de parceiros) possuem banheiro a bordo para maior conforto dos passageiros.</p>
@@ -720,7 +722,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     As lanchas têm churrasqueira?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> Todas as nossas lanchas possuem churrasqueira. Porém, o uso requer a <strong>contratação de um serviço adicional</strong>.</p>
@@ -731,7 +733,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Qual a diferença entre as lanchas?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Cada lancha tem suas características:</p>
@@ -749,7 +751,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     E se houver problema com a lancha no dia?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Em caso de problemas com a embarcação contratada, disponibilizamos <strong>opções similares ou superiores</strong> para garantir seu passeio.</p>
@@ -763,7 +765,7 @@
             <div class="faq-category" id="ocasioes">
               <div class="faq-category__header">
                 <div class="faq-category__icon">
-                  <i class="ph ph-confetti"></i>
+                  <i class="ph ph-confetti" aria-hidden="true"></i>
                 </div>
                 <h2 class="faq-category__title">Ocasiões Especiais</h2>
               </div>
@@ -771,7 +773,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso fazer despedida de solteira na lancha?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> A despedida de solteira na lancha é uma das nossas experiências mais populares.</p>
@@ -789,7 +791,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Vocês fazem passeio de Réveillon?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> O Réveillon na lancha é uma experiência única para ver a queima de fogos de Copacabana do mar.</p>
@@ -801,7 +803,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso fazer festa de aniversário na lancha?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> Aniversário na lancha é uma forma única de comemorar.</p>
@@ -819,7 +821,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Vocês atendem eventos corporativos?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> Atendemos empresas para confraternizações, team building, premiações e reuniões executivas.</p>
@@ -837,7 +839,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso contratar DJ, fotógrafo ou barman?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> Oferecemos serviços de DJ (R$ 1.500) e fotógrafo (R$ 800). Também temos opções de open bar com barman incluso.</p>
@@ -851,7 +853,7 @@
             <div class="faq-category" id="logistica">
               <div class="faq-category__header">
                 <div class="faq-category__icon">
-                  <i class="ph ph-map-pin"></i>
+                  <i class="ph ph-map-pin" aria-hidden="true"></i>
                 </div>
                 <h2 class="faq-category__title">Logística</h2>
               </div>
@@ -859,7 +861,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Onde fica a Marina da Glória?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>A Marina da Glória fica na <strong>Av. Infante Dom Henrique, S/N</strong>, no bairro Glória, Rio de Janeiro.</p>
@@ -876,7 +878,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Tem estacionamento na marina?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> A Marina da Glória possui estacionamento rotativo controlado pela ESTAPAR. Para um passeio de aproximadamente 5h, o valor fica em torno de <strong>R$ 70</strong>.</p>
@@ -888,7 +890,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     O que devo levar para o passeio?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Sugerimos levar:</p>
@@ -909,7 +911,7 @@
             <div class="faq-category" id="passageiros">
               <div class="faq-category__header">
                 <div class="faq-category__icon">
-                  <i class="ph ph-users"></i>
+                  <i class="ph ph-users" aria-hidden="true"></i>
                 </div>
                 <h2 class="faq-category__title">Crianças, Pets e Acessibilidade</h2>
               </div>
@@ -917,7 +919,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso levar crianças no passeio?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> Não há restrição de idade para crianças.</p>
@@ -933,7 +935,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Posso levar cachorro na lancha?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Permitimos <strong>cachorros de pequeno porte</strong> sem necessidade de consulta prévia.</p>
@@ -944,7 +946,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Gestantes podem fazer o passeio?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Sim!</strong> Não há restrição para gestantes.</p>
@@ -959,7 +961,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     As lanchas são acessíveis para cadeirantes?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Nossas embarcações <strong>não possuem acessibilidade específica</strong> para cadeirantes e pessoas com mobilidade reduzida.</p>
@@ -974,7 +976,7 @@
             <div class="faq-category" id="politicas">
               <div class="faq-category__header">
                 <div class="faq-category__icon">
-                  <i class="ph ph-shield-check"></i>
+                  <i class="ph ph-shield-check" aria-hidden="true"></i>
                 </div>
                 <h2 class="faq-category__title">Políticas e Regras</h2>
               </div>
@@ -982,7 +984,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Quais são as regras de uso da embarcação?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Nossas embarcações são destinadas a <strong>atividades de turismo náutico e lazer familiar</strong>.</p>
@@ -993,7 +995,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Vocês usam fotos do passeio para divulgação?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p>Ao contratar nossos serviços, o cliente <strong>autoriza o uso de imagens</strong> do passeio para fins de divulgação em nossas redes sociais e materiais promocionais.</p>
@@ -1004,7 +1006,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     A lancha pode atracar em outros barcos?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Não.</strong> A embarcação contratada não pode atracar ao lado de outros barcos por questões de segurança e regulamentação.</p>
@@ -1014,7 +1016,7 @@
                 <details class="faq-item">
                   <summary class="faq-item__question">
                     Qual o horário de atendimento?
-                    <i class="ph ph-caret-down"></i>
+                    <i class="ph ph-caret-down" aria-hidden="true"></i>
                   </summary>
                   <div class="faq-item__answer">
                     <p><strong>Atendimento comercial:</strong> 8h às 20h (para reservas e informações)</p>
@@ -1040,21 +1042,21 @@
           <div class="faq-cta__buttons">
             <a href="https://wa.me/5521977724114?text=Olá! Tenho uma dúvida sobre o aluguel de lancha. [via site - faq]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Falar pelo WhatsApp
             </a>
             <a href="/contato/" class="btn btn-secondary btn-lg">
-              <i class="ph ph-envelope"></i>
+              <i class="ph ph-envelope" aria-hidden="true"></i>
               Ir para Contato
             </a>
           </div>
           <div class="faq-cta__info">
             <div class="faq-cta__info-item">
-              <i class="ph ph-phone"></i>
+              <i class="ph ph-phone" aria-hidden="true"></i>
               <span><a href="tel:+5521977724114">(21) 97772-4114</a></span>
             </div>
             <div class="faq-cta__info-item">
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h</span>
             </div>
           </div>
@@ -1082,10 +1084,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -1119,11 +1121,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -1132,11 +1134,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>

@@ -47,9 +47,11 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="/css/variables.css">
-  <link rel="stylesheet" href="/css/components.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/header.css">
-  <link rel="stylesheet" href="/css/footer.css">
+  <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
   <link rel="stylesheet" href="/css/pages/servicos.css">
 
   <!-- Phosphor Icons -->
@@ -320,7 +322,7 @@
             <li class="header__dropdown">
               <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
                 Ocasiões
-                <i class="ph ph-caret-down"></i>
+                <i class="ph ph-caret-down" aria-hidden="true"></i>
               </button>
               <ul class="header__dropdown-menu">
                 <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
@@ -341,7 +343,7 @@
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
 
@@ -370,7 +372,7 @@
         </ul>
         <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre os serviços extras. [via site - servicos]"
            class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
-          <i class="ph ph-whatsapp-logo"></i>
+          <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
       </nav>
@@ -420,7 +422,7 @@
       <div class="container">
         <div class="section-header">
           <span class="section-header__badge">
-            <i class="ph ph-percent"></i>
+            <i class="ph ph-percent" aria-hidden="true"></i>
             Economia
           </span>
           <h2 class="section-header__title">Combos com Desconto</h2>
@@ -451,11 +453,11 @@
         <div class="servicos-combo-cta">
           <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre os combos de churrasco + open bar. [via site - servicos]"
              class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Contratar Combo
           </a>
           <a href="#configurador" class="servicos-montar-btn">
-            <i class="ph ph-sliders-horizontal"></i>
+            <i class="ph ph-sliders-horizontal" aria-hidden="true"></i>
             Montar meu pacote
           </a>
         </div>
@@ -482,7 +484,7 @@
           </div>
           <div class="servico-destaque__content">
             <span class="servico-destaque__badge">
-              <i class="ph ph-fire"></i>
+              <i class="ph ph-fire" aria-hidden="true"></i>
               Mais Pedido
             </span>
             <h2 class="servico-destaque__title">Churrasco na Lancha</h2>
@@ -519,22 +521,22 @@
             <div class="servico-inclui">
               <h3 class="servico-inclui__title">O que inclui</h3>
               <ul class="servico-inclui__list">
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Churrasqueiro profissional</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Carnes selecionadas</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Acompanhamentos</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Pratos e talheres</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Carvão e churrasqueira</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Taxa de churrasqueira inclusa</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Churrasqueiro profissional</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Carnes selecionadas</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Acompanhamentos</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Pratos e talheres</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Carvão e churrasqueira</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Taxa de churrasqueira inclusa</li>
               </ul>
             </div>
 
             <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre o serviço de churrasco na lancha. [via site - servicos]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Contratar Churrasco
             </a>
             <a href="#configurador" class="servicos-montar-btn">
-              <i class="ph ph-sliders-horizontal"></i>
+              <i class="ph ph-sliders-horizontal" aria-hidden="true"></i>
               Montar meu pacote
             </a>
           </div>
@@ -562,7 +564,7 @@
           </div>
           <div class="servico-destaque__content">
             <span class="servico-destaque__badge">
-              <i class="ph ph-cocktail"></i>
+              <i class="ph ph-cocktail" aria-hidden="true"></i>
               Festa Completa
             </span>
             <h2 class="servico-destaque__title">Open Bar na Lancha</h2>
@@ -599,22 +601,22 @@
             <div class="servico-inclui">
               <h3 class="servico-inclui__title">O que inclui</h3>
               <ul class="servico-inclui__list">
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Barman profissional</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Todas as bebidas</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Gelo à vontade</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Copos e taças</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Frutas frescas</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Montagem de bar</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Barman profissional</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Todas as bebidas</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Gelo à vontade</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Copos e taças</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Frutas frescas</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Montagem de bar</li>
               </ul>
             </div>
 
             <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre o serviço de open bar na lancha. [via site - servicos]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Contratar Open Bar
             </a>
             <a href="#configurador" class="servicos-montar-btn">
-              <i class="ph ph-sliders-horizontal"></i>
+              <i class="ph ph-sliders-horizontal" aria-hidden="true"></i>
               Montar meu pacote
             </a>
           </div>
@@ -681,11 +683,11 @@
         <div class="servicos-combo-cta">
           <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre as mesas especiais (queijos e vinhos / snacks). [via site - servicos]"
              class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i>
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             Contratar Mesa Especial
           </a>
           <a href="#configurador" class="servicos-montar-btn">
-            <i class="ph ph-sliders-horizontal"></i>
+            <i class="ph ph-sliders-horizontal" aria-hidden="true"></i>
             Montar meu pacote
           </a>
         </div>
@@ -712,7 +714,7 @@
           </div>
           <div class="servico-destaque__content">
             <span class="servico-destaque__badge">
-              <i class="ph ph-gift"></i>
+              <i class="ph ph-gift" aria-hidden="true"></i>
               Personalizado
             </span>
             <h2 class="servico-destaque__title">Decoração para Festas</h2>
@@ -749,22 +751,22 @@
             <div class="servico-inclui">
               <h3 class="servico-inclui__title">O que inclui</h3>
               <ul class="servico-inclui__list">
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Balões e arranjos</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Faixas personalizadas</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Adereços temáticos</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Montagem antes do passeio</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Props para fotos</li>
-                <li class="servico-inclui__item"><i class="ph ph-check-circle"></i> Desmontagem inclusa</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Balões e arranjos</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Faixas personalizadas</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Adereços temáticos</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Montagem antes do passeio</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Props para fotos</li>
+                <li class="servico-inclui__item"><i class="ph ph-check-circle" aria-hidden="true"></i> Desmontagem inclusa</li>
               </ul>
             </div>
 
             <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre decoração para festa na lancha. [via site - servicos]"
                class="btn btn-whatsapp btn-lg" target="_blank" rel="noopener noreferrer">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               Contratar Decoração
             </a>
             <a href="#configurador" class="servicos-montar-btn">
-              <i class="ph ph-sliders-horizontal"></i>
+              <i class="ph ph-sliders-horizontal" aria-hidden="true"></i>
               Montar meu pacote
             </a>
           </div>
@@ -826,7 +828,7 @@
 
         <div class="servicos-combo-cta">
           <a href="#configurador" class="servicos-montar-btn">
-            <i class="ph ph-sliders-horizontal"></i>
+            <i class="ph ph-sliders-horizontal" aria-hidden="true"></i>
             Montar meu pacote com todos os serviços
           </a>
         </div>
@@ -876,17 +878,17 @@
             <!-- Input de pessoas -->
             <div class="configurador__pessoas">
               <label class="configurador__pessoas-label" for="configurador-num-pessoas">
-                <i class="ph ph-users-three"></i>
+                <i class="ph ph-users-three" aria-hidden="true"></i>
                 Número de pessoas
               </label>
               <div class="configurador__stepper">
                 <button type="button" class="configurador__stepper-btn" data-action="decrement" aria-label="Diminuir número de pessoas">
-                  <i class="ph ph-minus"></i>
+                  <i class="ph ph-minus" aria-hidden="true"></i>
                 </button>
                 <input type="number" id="configurador-num-pessoas" class="configurador__stepper-input"
                        min="5" max="65" value="10" aria-label="Número de pessoas">
                 <button type="button" class="configurador__stepper-btn" data-action="increment" aria-label="Aumentar número de pessoas">
-                  <i class="ph ph-plus"></i>
+                  <i class="ph ph-plus" aria-hidden="true"></i>
                 </button>
               </div>
             </div>
@@ -907,12 +909,12 @@
           <aside class="configurador__resumo" id="configurador-resumo">
             <div class="configurador__resumo-inner">
               <h3 class="configurador__resumo-title">
-                <i class="ph ph-receipt"></i>
+                <i class="ph ph-receipt" aria-hidden="true"></i>
                 Resumo do Pacote
               </h3>
 
               <div class="configurador__resumo-vazio" id="configurador-resumo-vazio">
-                <i class="ph ph-hand-pointing"></i>
+                <i class="ph ph-hand-pointing" aria-hidden="true"></i>
                 <p>Selecione serviços ao lado para ver o resumo aqui.</p>
               </div>
 
@@ -932,12 +934,12 @@
 
               <a href="#" class="btn btn-whatsapp btn-lg configurador__resumo-cta" id="configurador-whatsapp-btn"
                  target="_blank" rel="noopener noreferrer" style="display:none;">
-                <i class="ph ph-whatsapp-logo"></i>
+                <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
                 Enviar pelo WhatsApp
               </a>
               <a href="/lanchas/" class="btn btn-primary btn-lg configurador__resumo-cta configurador__escolher-lancha-btn" id="configurador-escolher-lancha-btn"
                  style="display:none;">
-                <i class="ph ph-sailboat"></i>
+                <i class="ph ph-sailboat" aria-hidden="true"></i>
                 Escolher Lancha e Montar Proposta
               </a>
             </div>
@@ -958,7 +960,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Posso contratar serviços no dia do passeio?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -969,7 +971,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Os preços variam conforme a quantidade de pessoas?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -980,7 +982,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Posso levar minhas próprias bebidas ou comidas?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -991,7 +993,7 @@
             <div class="accordion__item">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Como funciona a taxa de churrasqueira?</h3>
-                <span class="accordion__icon"><i class="ph ph-caret-down"></i></span>
+                <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
               </button>
               <div class="accordion__content">
                 <div class="accordion__body">
@@ -1023,10 +1025,10 @@
           </p>
           <div class="footer__social">
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
-              <i class="ph ph-instagram-logo"></i>
+              <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
             <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
         </div>
@@ -1060,11 +1062,11 @@
           <h4 class="footer__title">Contato</h4>
           <ul class="footer__contact">
             <li>
-              <i class="ph ph-whatsapp-logo"></i>
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
               <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
             </li>
             <li>
-              <i class="ph ph-map-pin"></i>
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
               <address>
                 Marina da Glória - Loja 06<br>
                 Av. Infante Dom Henrique, S/N<br>
@@ -1073,11 +1075,11 @@
               </address>
             </li>
             <li>
-              <i class="ph ph-clock"></i>
+              <i class="ph ph-clock" aria-hidden="true"></i>
               <span>Atendimento: 8h às 20h (todos os dias)</span>
             </li>
             <li>
-              <i class="ph ph-currency-circle-dollar"></i>
+              <i class="ph ph-currency-circle-dollar" aria-hidden="true"></i>
               <span>A partir de R$ 2.300 (5h de passeio)</span>
             </li>
           </ul>
