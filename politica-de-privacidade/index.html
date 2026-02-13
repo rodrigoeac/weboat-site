@@ -96,68 +96,79 @@
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <!-- Skip Link -->
-  <a href="#main-content" class="skip-link">Pular para o conteúdo</a>
+  <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
   <!-- Header -->
   <header class="header" id="header">
     <div class="container">
-      <nav class="header__nav">
-        <a href="/" class="header__logo" aria-label="WeBoat Brasil - Voltar para home">
+      <div class="header__inner">
+        <a href="/" class="header__logo" aria-label="WeBoat Brasil - Página inicial">
           <img src="/assets/images/logo/logo.svg" alt="WeBoat Brasil" width="150" height="40">
         </a>
 
-        <ul class="header__menu" id="mainMenu">
-          <li><a href="/">Home</a></li>
+        <nav class="header__nav" aria-label="Navegação principal">
+          <ul class="header__menu">
+            <li><a href="/lanchas/">Lanchas</a></li>
+            <li><a href="/roteiros/">Roteiros</a></li>
+            <li><a href="/servicos/">Serviços</a></li>
+            <li class="header__dropdown">
+              <button class="header__dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+                Ocasiões
+                <i class="ph ph-caret-down"></i>
+              </button>
+              <ul class="header__dropdown-menu">
+                <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
+                <li><a href="/aniversario/">Aniversário</a></li>
+                <li><a href="/corporativo/">Corporativo</a></li>
+                <li><a href="/reveillon/">Réveillon</a></li>
+                <li><a href="/carnaval/">Carnaval</a></li>
+              </ul>
+            </li>
+            <li><a href="/como-funciona/">Como Funciona</a></li>
+            <li><a href="/sobre/">Sobre</a></li>
+            <li><a href="/contato/">Contato</a></li>
+            <li><a href="/faq/">FAQ</a></li>
+            <li><a href="/blog/">Blog</a></li>
+          </ul>
+        </nav>
+
+        <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha no Rio de Janeiro. [via site - politica-de-privacidade]"
+           class="btn btn-whatsapp header__cta"
+           target="_blank"
+           rel="noopener noreferrer">
+          <i class="ph ph-whatsapp-logo"></i>
+          <span>WhatsApp</span>
+        </a>
+
+        <button class="header__mobile-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="header__hamburger"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="header__mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Navegação mobile">
+        <ul class="header__mobile-list">
           <li><a href="/lanchas/">Lanchas</a></li>
           <li><a href="/roteiros/">Roteiros</a></li>
           <li><a href="/servicos/">Serviços</a></li>
-          <li class="header__dropdown">
-            <button class="header__dropdown-toggle" aria-expanded="false">
-              Ocasiões <i class="ph ph-caret-down"></i>
-            </button>
-            <ul class="header__dropdown-menu">
-              <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
-              <li><a href="/aniversario/">Aniversário</a></li>
-              <li><a href="/corporativo/">Corporativo</a></li>
-              <li><a href="/reveillon/">Réveillon</a></li>
-                            <li><a href="/carnaval/">Carnaval</a></li>
-              </ul>
-          </li>
-          <li><a href="/como-funciona/">Como Funciona</a></li><li><a href="/sobre/">Sobre</a></li>
+          <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
+          <li><a href="/aniversario/">Aniversário</a></li>
+          <li><a href="/corporativo/">Corporativo</a></li>
+          <li><a href="/reveillon/">Réveillon</a></li>
+          <li><a href="/carnaval/">Carnaval</a></li>
+          <li><a href="/como-funciona/">Como Funciona</a></li>
+          <li><a href="/sobre/">Sobre</a></li>
           <li><a href="/contato/">Contato</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/blog/">Blog</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/blog/">Blog</a></li>
         </ul>
-
-        <div class="header__actions">
-          <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha no Rio de Janeiro. [via site - politica-de-privacidade]" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i> Reservar
-          </a>
-          <button class="header__menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false">
-            <i class="ph ph-list"></i>
-          </button>
-        </div>
+        <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha. [via site - politica-de-privacidade]"
+           class="btn btn-whatsapp btn--full" target="_blank" rel="noopener noreferrer">
+          <i class="ph ph-whatsapp-logo"></i>
+          Fale pelo WhatsApp
+        </a>
       </nav>
-    </div>
-
-    <!-- Mobile Menu -->
-    <div class="header__mobile-menu" id="mobileMenu">
-      <ul class="header__mobile-links">
-        <li><a href="/">Home</a></li>
-        <li><a href="/lanchas/">Lanchas</a></li>
-        <li><a href="/roteiros/">Roteiros</a></li>
-        <li><a href="/servicos/">Serviços</a></li>
-        <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
-        <li><a href="/aniversario/">Aniversário</a></li>
-        <li><a href="/corporativo/">Corporativo</a></li>
-        <li><a href="/reveillon/">Réveillon</a></li>
-                  <li><a href="/carnaval/">Carnaval</a></li>
-<li><a href="/como-funciona/">Como Funciona</a></li>
-        <li><a href="/sobre/">Sobre</a></li>
-        <li><a href="/contato/">Contato</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/blog/">Blog</a></li>
-      </ul>
     </div>
   </header>
 
@@ -177,34 +188,90 @@
     <section class="section">
       <div class="container container-narrow">
         <h1>Política de Privacidade</h1>
-        <p class="text-muted">Última atualização: Janeiro de 2026</p>
+        <p class="text-muted">Última atualização: Fevereiro de 2026</p>
 
         <div style="margin-top: var(--space-8);">
-          <h2>1. Informações que Coletamos</h2>
-          <p>A WeBoat Brasil coleta informações que você nos fornece diretamente, como nome, telefone, e-mail e preferências de passeio, quando você entra em contato conosco pelo formulário do site ou WhatsApp.</p>
+          <p>A WeBoat Brasil está comprometida com a proteção dos seus dados pessoais, em conformidade com a Lei Geral de Proteção de Dados (LGPD — Lei nº 13.709/2018).</p>
 
-          <h2>2. Como Usamos suas Informações</h2>
-          <p>Utilizamos suas informações para:</p>
+          <h2>1. Informações que Coletamos</h2>
+          <p>Coletamos dados pessoais que você nos fornece diretamente ao entrar em contato conosco:</p>
           <ul style="list-style: disc; margin-left: var(--space-6); margin-bottom: var(--space-4);">
-            <li>Processar suas reservas e solicitações</li>
-            <li>Entrar em contato sobre seu passeio</li>
-            <li>Enviar informações relevantes sobre nossos serviços</li>
-            <li>Melhorar nossos serviços e experiência do cliente</li>
+            <li><strong>Dados de identificação:</strong> nome, telefone e e-mail</li>
+            <li><strong>Dados da reserva:</strong> data desejada, lancha de interesse, número de convidados, serviços adicionais e preferências de passeio</li>
+            <li><strong>Dados de pagamento:</strong> comprovantes de PIX ou transferência (não armazenamos dados de cartão de crédito)</li>
+            <li><strong>Comunicações:</strong> mensagens trocadas via WhatsApp e formulário do site</li>
           </ul>
 
-          <h2>3. Compartilhamento de Informações</h2>
-          <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing. Podemos compartilhar informações com prestadores de serviço que nos ajudam a operar nosso negócio.</p>
+          <h3>1.1. Dados Coletados Automaticamente</h3>
+          <p>Ao navegar em nosso site, coletamos automaticamente:</p>
+          <ul style="list-style: disc; margin-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li><strong>Cookies e tecnologias similares:</strong> utilizamos o Google Tag Manager (GTM) para gerenciar ferramentas de análise e marketing</li>
+            <li><strong>Dados de navegação:</strong> páginas visitadas, tempo de permanência, dispositivo e navegador utilizados</li>
+            <li><strong>Dados de localização aproximada:</strong> com base no endereço IP</li>
+          </ul>
 
-          <h2>4. Segurança</h2>
-          <p>Implementamos medidas de segurança para proteger suas informações pessoais contra acesso não autorizado, alteração ou destruição.</p>
+          <h2>2. Como Usamos suas Informações</h2>
+          <p>Utilizamos suas informações para as seguintes finalidades:</p>
+          <ul style="list-style: disc; margin-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li>Processar suas reservas e solicitações de passeio</li>
+            <li>Entrar em contato para confirmar detalhes do passeio</li>
+            <li>Enviar follow-ups e informações relevantes sobre sua reserva</li>
+            <li>Melhorar nossos serviços e a experiência do cliente</li>
+            <li>Analisar o desempenho do site e campanhas de marketing</li>
+            <li>Cumprir obrigações legais e regulatórias</li>
+          </ul>
 
-          <h2>5. Seus Direitos</h2>
-          <p>Você tem direito a acessar, corrigir ou excluir suas informações pessoais. Para exercer esses direitos, entre em contato conosco pelo WhatsApp (21) 97772-4114.</p>
+          <h2>3. Base Legal para o Tratamento</h2>
+          <p>Tratamos seus dados pessoais com base nas seguintes hipóteses legais da LGPD:</p>
+          <ul style="list-style: disc; margin-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li><strong>Execução de contrato:</strong> para processar reservas e prestar os serviços contratados</li>
+            <li><strong>Consentimento:</strong> para envio de comunicações de marketing e uso de cookies não essenciais</li>
+            <li><strong>Legítimo interesse:</strong> para melhorar nossos serviços e prevenir fraudes</li>
+          </ul>
 
-          <h2>6. Contato</h2>
-          <p>Para dúvidas sobre esta política, entre em contato:</p>
+          <h2>4. Compartilhamento de Informações</h2>
+          <p>Não vendemos, alugamos ou compartilhamos suas informações pessoais com terceiros para fins de marketing. Podemos compartilhar dados com:</p>
+          <ul style="list-style: disc; margin-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li><strong>Prestadores de serviço:</strong> empresas que nos auxiliam na operação (processamento de pagamentos, hospedagem do site, ferramentas de comunicação)</li>
+            <li><strong>Parceiros de embarcação:</strong> quando a reserva envolve uma lancha parceira, compartilhamos apenas os dados necessários para a realização do passeio</li>
+            <li><strong>Autoridades competentes:</strong> quando exigido por lei ou determinação judicial</li>
+          </ul>
+
+          <h2>5. Cookies e Tecnologias de Rastreamento</h2>
+          <p>Nosso site utiliza cookies e tecnologias similares gerenciados pelo Google Tag Manager. Isso pode incluir:</p>
+          <ul style="list-style: disc; margin-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li><strong>Google Analytics 4:</strong> análise de tráfego e comportamento no site</li>
+            <li><strong>Meta Pixel:</strong> mensuração de campanhas no Facebook e Instagram</li>
+            <li><strong>Google Ads:</strong> mensuração de campanhas de pesquisa</li>
+          </ul>
+          <p>Você pode gerenciar suas preferências de cookies através das configurações do seu navegador.</p>
+
+          <h2>6. Retenção de Dados</h2>
+          <p>Seus dados pessoais são armazenados pelo tempo necessário para cumprir as finalidades descritas nesta política. Dados de reservas são mantidos por até 5 anos para fins fiscais e legais. Dados de marketing são mantidos até a revogação do consentimento.</p>
+
+          <h2>7. Segurança</h2>
+          <p>Implementamos medidas técnicas e organizacionais para proteger suas informações pessoais contra acesso não autorizado, perda, alteração ou destruição, incluindo criptografia de dados em trânsito (HTTPS) e controle de acesso restrito.</p>
+
+          <h2>8. Seus Direitos (LGPD)</h2>
+          <p>Conforme a LGPD, você tem direito a:</p>
+          <ul style="list-style: disc; margin-left: var(--space-6); margin-bottom: var(--space-4);">
+            <li>Confirmar a existência de tratamento dos seus dados</li>
+            <li>Acessar seus dados pessoais</li>
+            <li>Corrigir dados incompletos, inexatos ou desatualizados</li>
+            <li>Solicitar a eliminação dos dados tratados com consentimento</li>
+            <li>Revogar o consentimento a qualquer momento</li>
+            <li>Solicitar a portabilidade dos dados</li>
+          </ul>
+          <p>Para exercer qualquer desses direitos, entre em contato pelo WhatsApp <a href="https://wa.me/5521977724114">(21) 97772-4114</a>. Responderemos em até 15 dias úteis.</p>
+
+          <h2>9. Alterações nesta Política</h2>
+          <p>A WeBoat Brasil reserva-se o direito de alterar esta Política de Privacidade a qualquer momento. As alterações entram em vigor imediatamente após publicação no site. Recomendamos a leitura periódica desta página.</p>
+
+          <h2>10. Contato</h2>
+          <p>Para dúvidas sobre esta política ou sobre o tratamento dos seus dados pessoais, entre em contato:</p>
           <p><strong>WeBoat Brasil</strong><br>
-          WhatsApp: (21) 97772-4114<br>
+          WhatsApp: <a href="https://wa.me/5521977724114">(21) 97772-4114</a><br>
+          Horário de atendimento: 8h às 20h<br>
           Endereço: Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória - Glória, Rio de Janeiro - RJ, 20021-140</p>
         </div>
       </div>
@@ -215,56 +282,80 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__grid">
-        <div class="footer__brand">
-          <img src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
-          <p>Aluguel de lanchas no Rio de Janeiro. Passeios privativos com segurança e conforto.</p>
+        <div class="footer__col footer__col--brand">
+          <a href="/" class="footer__logo">
+            <img src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
+          </a>
+          <p class="footer__description">
+            <strong>WeBoat Brasil</strong> - Empresa de aluguel de lanchas no Rio de Janeiro.
+            Passeios privativos para festas, aniversários, despedidas de solteira e eventos corporativos.
+            Lanchas de 10 a 65 pessoas saindo da Marina da Glória.
+          </p>
           <div class="footer__social">
-            <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="Instagram WeBoat">
               <i class="ph ph-instagram-logo"></i>
             </a>
-            <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+            <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp WeBoat">
               <i class="ph ph-whatsapp-logo"></i>
             </a>
           </div>
         </div>
 
-        <div class="footer__links">
-          <h4>Navegação</h4>
-          <ul>
-            <li><a href="/lanchas/">Lanchas</a></li>
-            <li><a href="/roteiros/">Roteiros</a></li>
-            <li><a href="/servicos/">Serviços</a></li>
-            <li><a href="/sobre/">Sobre Nós</a></li>
-            <li><a href="/contato/">Contato</a></li>
-            <li><a href="/faq/">FAQ</a></li>
-            <li><a href="/blog/">Blog</a></li>
+        <div class="footer__col">
+          <h4 class="footer__title">Nossos Serviços</h4>
+          <ul class="footer__links">
+            <li><a href="/lanchas/">Aluguel de Lanchas</a></li>
+            <li><a href="/roteiros/">Roteiros de Passeio</a></li>
+            <li><a href="/servicos/">Churrasco na Lancha</a></li>
+            <li><a href="/servicos/">Decoração e Open Bar</a></li>
+            <li><a href="/faq/">Perguntas Frequentes</a></li>
           </ul>
         </div>
 
-        <div class="footer__links">
-          <h4>Ocasiões</h4>
-          <ul>
-            <li><a href="/despedida-solteira/">Despedida de Solteira</a></li>
-            <li><a href="/aniversario/">Aniversário</a></li>
-            <li><a href="/corporativo/">Corporativo</a></li>
-            <li><a href="/reveillon/">Réveillon</a></li>
-                      <li><a href="/carnaval/">Carnaval na Lancha</a></li>
+        <div class="footer__col">
+          <h4 class="footer__title">Ocasiões Especiais</h4>
+          <ul class="footer__links">
+            <li><a href="/despedida-solteira/">Despedida de Solteira na Lancha</a></li>
+            <li><a href="/aniversario/">Festa de Aniversário no Mar</a></li>
+            <li><a href="/corporativo/">Eventos Corporativos</a></li>
+            <li><a href="/reveillon/">Réveillon na Baía de Guanabara</a></li>
+            <li><a href="/carnaval/">Carnaval na Lancha</a></li>
           </ul>
         </div>
 
-        <div class="footer__contact">
-          <h4>Contato</h4>
-          <p><i class="ph ph-whatsapp-logo"></i> (21) 97772-4114</p>
-          <p><i class="ph ph-map-pin"></i> Marina da Glória - Loja 06<br>Glória, Rio de Janeiro - RJ</p>
-          <a href="https://wa.me/5521977724114?text=Olá! Gostaria de informações sobre aluguel de lancha. [via site - politica-de-privacidade]" class="btn btn-primary btn-sm" target="_blank" rel="noopener noreferrer">
-            <i class="ph ph-whatsapp-logo"></i> Fale Conosco
-          </a>
+        <div class="footer__col">
+          <h4 class="footer__title">Contato</h4>
+          <ul class="footer__contact">
+            <li>
+              <i class="ph ph-whatsapp-logo"></i>
+              <a href="https://wa.me/5521977724114">(21) 97772-4114</a>
+            </li>
+            <li>
+              <i class="ph ph-map-pin"></i>
+              <address>
+                Marina da Glória - Loja 06<br>
+                Av. Infante Dom Henrique, S/N<br>
+                Glória, Rio de Janeiro - RJ<br>
+                CEP 20021-140
+              </address>
+            </li>
+            <li>
+              <i class="ph ph-clock"></i>
+              <span>Atendimento: 8h às 20h (todos os dias)</span>
+            </li>
+          </ul>
         </div>
       </div>
 
+      <div class="footer__areas">
+        <p><strong>Áreas de passeio:</strong> Mureta da Urca • Praia Vermelha • Copacabana • Ilhas Cagarras • Itaipu e Camboinhas • Baía de Guanabara</p>
+      </div>
+
       <div class="footer__bottom">
-        <p>&copy; 2026 WeBoat Brasil. Todos os direitos reservados.</p>
+        <p>&copy; 2026 WeBoat Brasil. Todos os direitos reservados. CNPJ: 60.567.333/0001-29</p>
         <div class="footer__legal">
+          <a href="/sobre/">Sobre a Empresa</a>
+          <a href="/contato/">Fale Conosco</a>
           <a href="/politica-de-privacidade/">Política de Privacidade</a>
           <a href="/termos-de-uso/">Termos de Uso</a>
         </div>
