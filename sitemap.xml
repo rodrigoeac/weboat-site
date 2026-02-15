@@ -1,53 +1,968 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Homepage -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.weboatbrasil.com.br/</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/" />
   </url>
-
-  <!-- Frota (listagem) -->
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/" />
+  </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/lanchas/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/" />
   </url>
-
-  <!-- Lanchas Próprias -->
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/boats/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/lanchas/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/" />
+  </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/lanchas/weboat-32/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-32/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/boats/weboat-32/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-32/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/lanchas/weboat-32/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-32/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-32/" />
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/lanchas/weboat-390/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-390/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/boats/weboat-390/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-390/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/lanchas/weboat-390/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-390/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-390/" />
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/" />
   </url>
   <url>
-    <loc>https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/</loc>
-    <lastmod>2026-02-04</lastmod>
+    <loc>https://www.weboatbrasil.com.br/en/boats/weboat-oceanic-36/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/lanchas/weboat-oceanic-36/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-oceanic-36/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/" />
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/lanchas/weboat-ibiza-42/</loc>
+    <lastmod>2026-02-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-ibiza-42/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/boats/weboat-ibiza-42/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-ibiza-42/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/lanchas/weboat-ibiza-42/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-ibiza-42/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-ibiza-42/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/boats/weboat-rio-star-50/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/lanchas/weboat-rio-star-50/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/weboat-rio-star-50/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/lanchas/comparativo/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/comparativo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/compare/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/comparar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/comparativo/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/boats/compare/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/comparativo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/compare/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/comparar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/comparativo/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/lanchas/comparar/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/lanchas/comparativo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/boats/compare/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/lanchas/comparar/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/lanchas/comparativo/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/roteiros/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/routes/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/rutas/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/routes/mureta-da-urca/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/rutas/mureta-da-urca/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/mureta-da-urca/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/roteiros/praia-vermelha/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/praia-vermelha/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/routes/praia-vermelha/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/praia-vermelha/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/rutas/praia-vermelha/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/praia-vermelha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/praia-vermelha/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/roteiros/copacabana/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/copacabana/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/routes/copacabana/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/copacabana/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/rutas/copacabana/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/copacabana/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/copacabana/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/routes/ilhas-cagarras/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/rutas/ilhas-cagarras/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/ilhas-cagarras/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/routes/itaipu-camboinhas/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/rutas/itaipu-camboinhas/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/itaipu-camboinhas/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/roteiros/volta-completa/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/volta-completa/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/routes/volta-completa/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/volta-completa/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/rutas/volta-completa/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/volta-completa/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/volta-completa/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/despedida-solteira/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/despedida-solteira/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/bachelorette-party/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/despedida-de-soltera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/despedida-solteira/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/bachelorette-party/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/despedida-solteira/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/bachelorette-party/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/despedida-de-soltera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/despedida-solteira/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/despedida-de-soltera/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/despedida-solteira/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/bachelorette-party/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/despedida-de-soltera/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/despedida-solteira/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/aniversario/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/aniversario/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/birthday-party/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/cumpleanos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/aniversario/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/birthday-party/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/aniversario/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/birthday-party/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/cumpleanos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/aniversario/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/cumpleanos/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/aniversario/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/birthday-party/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/cumpleanos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/aniversario/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/corporativo/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/corporativo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/corporate-events/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/eventos-corporativos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/corporativo/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/corporate-events/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/corporativo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/corporate-events/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/eventos-corporativos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/corporativo/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/eventos-corporativos/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/corporativo/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/corporate-events/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/eventos-corporativos/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/corporativo/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/reveillon/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/reveillon/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/new-years-eve/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/ano-nuevo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/reveillon/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/new-years-eve/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/reveillon/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/new-years-eve/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/ano-nuevo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/reveillon/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/ano-nuevo/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/reveillon/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/new-years-eve/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/ano-nuevo/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/reveillon/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/carnaval/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/carnaval/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/carnival/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/carnaval/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/carnaval/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/carnival/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/carnaval/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/carnival/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/carnaval/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/carnaval/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/carnaval/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/carnaval/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/carnival/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/carnaval/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/carnaval/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/servicos/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/servicos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/services/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/servicios/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/servicos/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/services/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/servicos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/services/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/servicios/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/servicos/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/servicios/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/servicos/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/services/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/servicios/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/servicos/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/sobre/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/about/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/sobre-nosotros/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/sobre/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/about/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/about/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/sobre-nosotros/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/sobre/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/sobre-nosotros/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/sobre/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/about/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/sobre-nosotros/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/sobre/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/faq/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/faq/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/preguntas-frecuentes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/faq/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/faq/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/faq/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/preguntas-frecuentes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/faq/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/preguntas-frecuentes/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/faq/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/faq/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/preguntas-frecuentes/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/faq/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/contato/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/contato/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/contacto/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/contato/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/contact/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/contato/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/contacto/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/contato/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/contacto/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/contato/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/contact/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/contacto/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/contato/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/como-funciona/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/como-funciona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/how-it-works/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/como-funciona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/como-funciona/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/how-it-works/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/como-funciona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/how-it-works/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/como-funciona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/como-funciona/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/como-funciona/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/como-funciona/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/how-it-works/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/como-funciona/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/como-funciona/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/areas-atendidas/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/areas-atendidas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/service-areas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/areas-de-servicio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/areas-atendidas/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/service-areas/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/areas-atendidas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/service-areas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/areas-de-servicio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/areas-atendidas/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/areas-de-servicio/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/areas-atendidas/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/service-areas/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/areas-de-servicio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/areas-atendidas/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/blog/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/blog/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/blog/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/best-beaches-by-boat-rio/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/mejores-playas-en-lancha-rio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/blog/best-beaches-by-boat-rio/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/best-beaches-by-boat-rio/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/mejores-playas-en-lancha-rio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/blog/mejores-playas-en-lancha-rio/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/best-beaches-by-boat-rio/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/mejores-playas-en-lancha-rio/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/what-to-wear-boat-trip/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/que-vestir-paseo-en-lancha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/blog/what-to-wear-boat-trip/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/what-to-wear-boat-trip/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/que-vestir-paseo-en-lancha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/blog/que-vestir-paseo-en-lancha/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/what-to-wear-boat-trip/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/que-vestir-paseo-en-lancha/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/marina-da-gloria-guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/guia-marina-da-gloria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/blog/marina-da-gloria-guide/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/marina-da-gloria-guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/guia-marina-da-gloria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/blog/guia-marina-da-gloria/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/blog/marina-da-gloria-guide/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/blog/guia-marina-da-gloria/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/politica-de-privacidade/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/politica-de-privacidade/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/politica-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/politica-de-privacidade/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/privacy-policy/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/politica-de-privacidade/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/politica-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/politica-de-privacidade/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/politica-de-privacidad/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/politica-de-privacidade/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/privacy-policy/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/politica-de-privacidad/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/politica-de-privacidade/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/termos-de-uso/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/termos-de-uso/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/terms-of-use/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/terminos-de-uso/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/termos-de-uso/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/en/terms-of-use/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/termos-de-uso/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/terms-of-use/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/terminos-de-uso/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/termos-de-uso/" />
+  </url>
+  <url>
+    <loc>https://www.weboatbrasil.com.br/es/terminos-de-uso/</loc>
+    <lastmod>2026-02-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/termos-de-uso/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/terms-of-use/" />
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/terminos-de-uso/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/termos-de-uso/" />
   </url>
 
-  <!-- Lanchas Parceiras -->
+  <!-- Partner boats (PT only) -->
   <url>
     <loc>https://www.weboatbrasil.com.br/lanchas/magna-28/</loc>
     <lastmod>2026-02-04</lastmod>
@@ -128,7 +1043,7 @@
   </url>
   <url>
     <loc>https://www.weboatbrasil.com.br/lanchas/barco-gourmet-53/</loc>
-    <lastmod>2026-02-05</lastmod>
+    <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -173,169 +1088,5 @@
     <lastmod>2026-02-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Roteiros (listagem) -->
-  <url>
-    <loc>https://www.weboatbrasil.com.br/roteiros/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Roteiros (detalhe) -->
-  <url>
-    <loc>https://www.weboatbrasil.com.br/roteiros/mureta-da-urca/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/roteiros/praia-vermelha/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/roteiros/copacabana/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/roteiros/itaipu-camboinhas/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/roteiros/volta-completa/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Ocasiões Especiais (Landing Pages) -->
-  <url>
-    <loc>https://www.weboatbrasil.com.br/despedida-solteira/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/aniversario/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/corporativo/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/reveillon/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/carnaval/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Páginas GEO/SEO -->
-  <url>
-    <loc>https://www.weboatbrasil.com.br/como-funciona/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/areas-atendidas/</loc>
-    <lastmod>2026-02-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/lanchas/comparativo/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Páginas de Suporte -->
-  <url>
-    <loc>https://www.weboatbrasil.com.br/servicos/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/sobre/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/faq/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/contato/</loc>
-    <lastmod>2026-02-04</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <!-- Blog -->
-  <url>
-    <loc>https://www.weboatbrasil.com.br/blog/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/blog/melhores-praias-lancha-rj/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/blog/o-que-vestir-passeio-lancha/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/blog/guia-marina-da-gloria/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-  <!-- Páginas Legais -->
-  <url>
-    <loc>https://www.weboatbrasil.com.br/politica-de-privacidade/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://www.weboatbrasil.com.br/termos-de-uso/</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
   </url>
 </urlset>

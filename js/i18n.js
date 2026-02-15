@@ -657,6 +657,10 @@ var WeBoatI18n = (function() {
     return 'https://wa.me/5521977724114?text=' + encodeURIComponent(msg + source);
   }
 
+  // Push language to GTM dataLayer
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({ pageLanguage: lang });
+
   return {
     lang: lang,
     t: t,
