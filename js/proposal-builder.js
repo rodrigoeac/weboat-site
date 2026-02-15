@@ -8,6 +8,8 @@
 
   var Data = window.WeBoatData;
   var Servicos = window.WeBoatServicos;
+  var I = window.WeBoatI18n;
+  function t(key, fallback, params) { return I ? I.t(key, params) : fallback; }
 
   if (!Data || !Servicos) {
     return;
@@ -100,7 +102,7 @@
       return {
         ok: false,
         tipo: 'erro',
-        mensagem: 'Capacidade máxima excedida! Máximo: ' + limiteMaximo + ' pessoas.',
+        mensagem: t('proposalCapacityExceeded', 'Capacidade máxima excedida! Máximo: ' + limiteMaximo + ' pessoas.', { max: limiteMaximo }),
         pessoasComStaff: pessoasComStaff,
         limiteReal: limiteMaximo,
       };
@@ -110,9 +112,7 @@
       return {
         ok: false,
         tipo: 'aviso',
-        mensagem: 'Com staff dos serviços (' + staffNaoSubstituivel +
-          ' pessoas), total de ' + pessoasComStaff +
-          ' excede o limite de ' + limiteComStaff + '.',
+        mensagem: t('proposalCapacityStaff', 'Com staff dos serviços (' + staffNaoSubstituivel + ' pessoas), total de ' + pessoasComStaff + ' excede o limite de ' + limiteComStaff + '.', { staff: staffNaoSubstituivel, total: pessoasComStaff, limit: limiteComStaff }),
         pessoasComStaff: pessoasComStaff,
         limiteReal: limiteComStaff,
       };
@@ -122,8 +122,7 @@
       return {
         ok: true,
         tipo: 'info',
-        mensagem: 'Staff dos serviços usa ' + staffNaoSubstituivel +
-          ' vagas extras (total: ' + pessoasComStaff + '/' + limiteComStaff + ').',
+        mensagem: t('proposalCapacityInfo', 'Staff dos serviços usa ' + staffNaoSubstituivel + ' vagas extras (total: ' + pessoasComStaff + '/' + limiteComStaff + ').', { staff: staffNaoSubstituivel, total: pessoasComStaff, limit: limiteComStaff }),
         pessoasComStaff: pessoasComStaff,
         limiteReal: limiteComStaff,
       };
@@ -283,7 +282,7 @@
    */
   function getHorarioTurno(lancha, turno) {
     if (lancha.turnos.tipo === 'flexivel') {
-      return 'Horário flexível (' + lancha.turnos.duracao + 'h)';
+      return t('proposalFlexible', 'Horário flexível') + ' (' + lancha.turnos.duracao + 'h)';
     }
     var turnoConfig = lancha.turnos[turno];
     if (!turnoConfig) return '';
@@ -297,46 +296,47 @@
     var p = proposta;
     var b = p.breakdown;
     var linhas = [];
+    var langTag = I ? ' [' + I.lang + ']' : '';
 
-    linhas.push('Olá! Montei uma proposta pelo site e gostaria de confirmar:');
+    linhas.push(t('proposalWaIntro', 'Olá! Montei uma proposta pelo site e gostaria de confirmar:') + langTag);
     linhas.push('');
     linhas.push('*Lancha:* ' + p.lancha.nome);
-    linhas.push('*Roteiro:* ' + p.roteiro.nome);
-    linhas.push('*Turno:* ' + (p.turno === 'manha' ? 'Manhã' : 'Tarde') +
+    linhas.push('*' + t('proposalWaRoute', 'Roteiro') + ':* ' + p.roteiro.nome);
+    linhas.push('*' + t('proposalWaShift', 'Turno') + ':* ' + (p.turno === 'manha' ? t('proposalMorning', 'Manhã') : t('proposalAfternoon', 'Tarde')) +
       ' (' + getHorarioTurno(p.lancha, p.turno) + ')');
-    linhas.push('*Pessoas:* ' + p.numPessoas);
+    linhas.push('*' + t('proposalWaPeople', 'Pessoas') + ':* ' + p.numPessoas);
 
     if (b.horaExtra.total > 0 && p.lancha.horaExtra > 0) {
       var horas = Math.round(b.horaExtra.barco / p.lancha.horaExtra);
-      linhas.push('*Horas extras:* ' + horas);
+      linhas.push('*' + t('proposalWaExtraHours', 'Horas extras') + ':* ' + horas);
     }
 
     linhas.push('');
-    linhas.push('--- Valores (Sex-Dom) ---');
-    linhas.push('Roteiro: ' + formatarMoeda(b.precoRoteiro));
+    linhas.push(t('proposalWaValues', '--- Valores (Sex-Dom) ---'));
+    linhas.push(t('proposalWaRoute', 'Roteiro') + ': ' + formatarMoeda(b.precoRoteiro));
     if (p.lancha.isPropria) {
-      linhas.push('_Gostaria de saber sobre desconto Seg-Qui, se disponível._');
+      linhas.push('_' + t('proposalWaDiscountAsk', 'Gostaria de saber sobre desconto Seg-Qui, se disponível.') + '_');
     }
 
     if (b.adicionalTurno > 0) {
-      linhas.push('Adicional turno tarde: ' + formatarMoeda(b.adicionalTurno));
+      linhas.push(t('proposalSurcharge', 'Adicional turno tarde') + ': ' + formatarMoeda(b.adicionalTurno));
     }
 
     if (b.custoExtras > 0) {
-      linhas.push('Pessoas extras: ' + formatarMoeda(b.custoExtras));
+      linhas.push(t('proposalExtraPeople', 'Pessoas extras') + ': ' + formatarMoeda(b.custoExtras));
     }
 
     if (b.taxaChurrasqueira > 0) {
-      linhas.push('Churrasqueira: ' + formatarMoeda(b.taxaChurrasqueira));
+      linhas.push(t('proposalBBQ', 'Churrasqueira') + ': ' + formatarMoeda(b.taxaChurrasqueira));
     }
 
     if (b.adicionalAC > 0) {
-      linhas.push('Ar-condicionado: ' + formatarMoeda(b.adicionalAC));
+      linhas.push(t('proposalAC', 'Ar-condicionado') + ': ' + formatarMoeda(b.adicionalAC));
     }
 
     if (b.servicos.length > 0) {
       linhas.push('');
-      linhas.push('*Serviços:*');
+      linhas.push('*' + t('proposalWaServices', 'Serviços') + ':*');
       for (var i = 0; i < b.servicos.length; i++) {
         var svc = b.servicos[i];
         linhas.push('• ' + svc.servico.nome + ': ' + formatarMoeda(svc.precoBase));
@@ -345,22 +345,22 @@
 
     if (b.horaExtra.total > 0) {
       linhas.push('');
-      linhas.push('*Hora extra:*');
-      linhas.push('• Embarcação: ' + formatarMoeda(b.horaExtra.barco));
+      linhas.push('*' + t('proposalWaExtraHour', 'Hora extra') + ':*');
+      linhas.push('• ' + t('proposalWaExtraHourBoat', 'Embarcação') + ': ' + formatarMoeda(b.horaExtra.barco));
       if (b.horaExtra.servicos > 0) {
-        linhas.push('• Serviços (+20%): ' + formatarMoeda(b.horaExtra.servicos));
+        linhas.push('• ' + t('proposalWaExtraHourSvc', 'Serviços (+20%)') + ': ' + formatarMoeda(b.horaExtra.servicos));
       }
     }
 
     if (b.guardaVidas > 0) {
-      linhas.push('Guarda-vidas: ' + formatarMoeda(b.guardaVidas));
+      linhas.push(t('proposalLifeguard', 'Guarda-vidas') + ': ' + formatarMoeda(b.guardaVidas));
     }
 
     linhas.push('');
-    linhas.push('*TOTAL: ' + formatarMoeda(p.total) + '*');
-    linhas.push('(' + formatarMoeda(p.porPessoa) + ' por pessoa)');
+    linhas.push('*' + t('proposalWaTotal', 'TOTAL') + ': ' + formatarMoeda(p.total) + '*');
+    linhas.push('(' + formatarMoeda(p.porPessoa) + ' ' + t('proposalWaPerPerson', 'por pessoa') + ')');
     linhas.push('');
-    linhas.push('Aguardo confirmação de disponibilidade. Obrigado!');
+    linhas.push(t('proposalWaConfirm', 'Aguardo confirmação de disponibilidade. Obrigado!'));
 
     return linhas.join('\n');
   }
@@ -435,7 +435,7 @@
       if (disabled) {
         var indispSpan = document.createElement('span');
         indispSpan.className = 'proposta__roteiro-indisponivel';
-        indispSpan.textContent = 'Indisponível';
+        indispSpan.textContent = t('proposalUnavailable', 'Indisponível');
         precoEl.appendChild(indispSpan);
       } else if (precoData.normal !== undefined) {
         // Show standard price (sex-dom) as the main price
@@ -446,7 +446,7 @@
         // Show seg-qui discount hint
         var promoHint = document.createElement('span');
         promoHint.className = 'proposta__preco-promo-hint';
-        promoHint.textContent = 'Seg-Qui: consulte desconto';
+        promoHint.textContent = t('proposalDiscountHint', 'Seg-Qui: consulte desconto');
         precoEl.appendChild(promoHint);
       } else {
         var unicoSpan = document.createElement('span');
@@ -502,9 +502,9 @@
       var icon = document.createElement('i');
       icon.className = 'ph ph-sun';
       span.appendChild(icon);
-      span.appendChild(document.createTextNode(' Horário Flexível'));
+      span.appendChild(document.createTextNode(' ' + t('proposalFlexible', 'Horário Flexível')));
       var small = document.createElement('small');
-      small.textContent = lancha.turnos.duracao + 'h de duração';
+      small.textContent = lancha.turnos.duracao + 'h ' + t('proposalDuration', 'de duração');
       span.appendChild(small);
       lbl.appendChild(radio);
       lbl.appendChild(span);
@@ -514,8 +514,8 @@
     }
 
     var turnos = [
-      { key: 'manha', icon: 'ph-sun', label: 'Manhã', config: lancha.turnos.manha },
-      { key: 'tarde', icon: 'ph-moon', label: 'Tarde', config: lancha.turnos.tarde },
+      { key: 'manha', icon: 'ph-sun', label: t('proposalMorning', 'Manhã'), config: lancha.turnos.manha },
+      { key: 'tarde', icon: 'ph-moon', label: t('proposalAfternoon', 'Tarde'), config: lancha.turnos.tarde },
     ];
 
     for (var i = 0; i < turnos.length; i++) {
@@ -700,7 +700,7 @@
       body.textContent = '';
       var emptyP = document.createElement('p');
       emptyP.className = 'proposta__resumo-empty';
-      emptyP.textContent = proposta && proposta.erro ? proposta.erro : 'Selecione um roteiro para começar';
+      emptyP.textContent = proposta && proposta.erro ? proposta.erro : t('proposalSelectRoute', 'Selecione um roteiro para começar');
       body.appendChild(emptyP);
       totalEl.textContent = '';
       btn.style.display = 'none';
@@ -725,23 +725,23 @@
     if (proposta.isPromocional) roteiroLabel += ' (promo)';
     addLine(roteiroLabel, b.precoRoteiro);
 
-    if (b.adicionalTurno > 0) addLine('Adicional turno tarde', b.adicionalTurno);
-    if (b.custoExtras > 0) addLine('Pessoas extras', b.custoExtras);
-    if (b.taxaChurrasqueira > 0) addLine('Churrasqueira', b.taxaChurrasqueira);
-    if (b.adicionalAC > 0) addLine('Ar-condicionado', b.adicionalAC);
+    if (b.adicionalTurno > 0) addLine(t('proposalSurcharge', 'Adicional turno tarde'), b.adicionalTurno);
+    if (b.custoExtras > 0) addLine(t('proposalExtraPeople', 'Pessoas extras'), b.custoExtras);
+    if (b.taxaChurrasqueira > 0) addLine(t('proposalBBQ', 'Churrasqueira'), b.taxaChurrasqueira);
+    if (b.adicionalAC > 0) addLine(t('proposalAC', 'Ar-condicionado'), b.adicionalAC);
 
     for (var i = 0; i < b.servicos.length; i++) {
       addLine(b.servicos[i].servico.nome, b.servicos[i].precoBase);
     }
 
     if (b.horaExtra.total > 0) {
-      addLine('Hora extra (embarcação)', b.horaExtra.barco);
+      addLine(t('proposalExtraHourBoat', 'Hora extra (embarcação)'), b.horaExtra.barco);
       if (b.horaExtra.servicos > 0) {
-        addLine('Hora extra (serviços +20%)', b.horaExtra.servicos);
+        addLine(t('proposalExtraHourServices', 'Hora extra (serviços +20%)'), b.horaExtra.servicos);
       }
     }
 
-    if (b.guardaVidas > 0) addLine('Guarda-vidas', b.guardaVidas);
+    if (b.guardaVidas > 0) addLine(t('proposalLifeguard', 'Guarda-vidas'), b.guardaVidas);
 
     body.textContent = '';
     body.appendChild(dl);
@@ -752,7 +752,7 @@
     totalLine.className = 'proposta__total-line';
     var totalLabel = document.createElement('span');
     totalLabel.className = 'proposta__total-label';
-    totalLabel.textContent = 'Total';
+    totalLabel.textContent = t('proposalTotal', 'Total');
     var totalValor = document.createElement('span');
     totalValor.className = 'proposta__total-valor';
     totalValor.textContent = formatarMoeda(proposta.total);
@@ -762,7 +762,7 @@
 
     var ppDiv = document.createElement('div');
     ppDiv.className = 'proposta__total-pp';
-    ppDiv.textContent = formatarMoeda(proposta.porPessoa) + ' por pessoa (' + proposta.numPessoas + ' pessoas)';
+    ppDiv.textContent = formatarMoeda(proposta.porPessoa) + ' ' + t('proposalPerPerson', 'por pessoa') + ' (' + proposta.numPessoas + ' ' + t('checkoutPeople', 'pessoas') + ')';
     totalEl.appendChild(ppDiv);
 
     btn.href = gerarLinkWhatsApp(proposta);
@@ -795,7 +795,7 @@
       gvIcon.className = 'ph ph-lifebuoy';
       gvDiv.appendChild(gvIcon);
       gvDiv.appendChild(document.createTextNode(
-        ' Guarda-vidas obrigatório incluso automaticamente (' +
+        ' ' + t('proposalLifeguardIncluded', 'Guarda-vidas obrigatório incluso automaticamente') + ' (' +
         formatarMoeda(Servicos.PRECO_GUARDA_VIDAS) + ')'
       ));
       container.appendChild(gvDiv);
@@ -843,7 +843,7 @@
         if (svc && svc.excluiTaxaChurrasqueira) { excluida = true; break; }
       }
       churrHint.textContent = excluida
-        ? '(inclusa no serviço)'
+        ? t('proposalIncluded', '(inclusa no serviço)')
         : formatarMoeda(state.lancha.churrasqueira);
     }
 
@@ -851,7 +851,7 @@
     if (heHint) {
       heHint.textContent = state.lancha.horaExtra > 0
         ? formatarMoeda(state.lancha.horaExtra) + '/hora'
-        : 'Não disponível';
+        : t('proposalNotAvailable', 'Não disponível');
     }
   }
 
@@ -961,7 +961,7 @@
 
     var textSpan = document.createElement('span');
     textSpan.className = 'proposta__churrasqueira-label-text';
-    textSpan.textContent = 'Churrasqueira';
+    textSpan.textContent = t('proposalBBQ', 'Churrasqueira');
 
     var priceSpan = document.createElement('span');
     priceSpan.className = 'proposta__field-price';
@@ -982,7 +982,7 @@
 
       var incluiTitle = document.createElement('span');
       incluiTitle.className = 'proposta__churrasqueira-inclui-title';
-      incluiTitle.textContent = 'Inclui:';
+      incluiTitle.textContent = t('bbqIncludes', 'Inclui:');
       incluiDiv.appendChild(incluiTitle);
 
       var ul = document.createElement('ul');
@@ -1043,7 +1043,7 @@
     lbl.appendChild(chk);
     lbl.appendChild(customChk);
     lbl.appendChild(icon);
-    lbl.appendChild(document.createTextNode(' Ar-Condicionado'));
+    lbl.appendChild(document.createTextNode(' ' + t('proposalAC', 'Ar-Condicionado')));
     lbl.appendChild(priceSpan);
     field.appendChild(lbl);
     detalhesGrid.appendChild(field);
@@ -1083,8 +1083,8 @@
     }
 
     if (els.capacidadeHint) {
-      els.capacidadeHint.textContent = 'Capacidade: ' + lancha.capacidade.base +
-        (lancha.capacidade.maxima > lancha.capacidade.base ? '–' + lancha.capacidade.maxima : '') + ' pessoas';
+      els.capacidadeHint.textContent = t('proposalCapacity', 'Capacidade') + ': ' + lancha.capacidade.base +
+        (lancha.capacidade.maxima > lancha.capacidade.base ? '–' + lancha.capacidade.maxima : '') + ' ' + t('checkoutPeople', 'pessoas');
     }
 
     if (els.churrPreco) {
@@ -1094,7 +1094,7 @@
     if (els.horaExtraHint) {
       els.horaExtraHint.textContent = lancha.horaExtra > 0
         ? formatarMoeda(lancha.horaExtra) + '/hora'
-        : 'Não disponível';
+        : t('proposalNotAvailable', 'Não disponível');
     }
 
     if (lancha.horaExtra === 0) {
@@ -1153,7 +1153,7 @@
       icon.className = 'ph ph-shopping-cart';
       notice.appendChild(icon);
       notice.appendChild(document.createTextNode(
-        ' ' + state.servicosIds.length + ' serviço(s) pré-selecionado(s) do seu pacote.'
+        ' ' + t('proposalCartNotice', state.servicosIds.length + ' serviço(s) pré-selecionado(s) do seu pacote.', { count: state.servicosIds.length })
       ));
       var dismiss = document.createElement('button');
       dismiss.type = 'button';
@@ -1183,7 +1183,7 @@
     totalDiv.className = 'proposta__mobile-total';
     var label = document.createElement('span');
     label.className = 'proposta__mobile-total-label';
-    label.textContent = 'Total da proposta';
+    label.textContent = t('proposalTotalLabel', 'Total da proposta');
     var valor = document.createElement('span');
     valor.className = 'proposta__mobile-total-valor';
     valor.id = 'proposta-mobile-valor';
@@ -1200,7 +1200,7 @@
     var ctaIcon = document.createElement('i');
     ctaIcon.className = 'ph ph-whatsapp-logo';
     cta.appendChild(ctaIcon);
-    cta.appendChild(document.createTextNode(' Enviar'));
+    cta.appendChild(document.createTextNode(' ' + t('proposalSend', 'Enviar')));
 
     bar.appendChild(totalDiv);
     bar.appendChild(cta);

@@ -18,6 +18,8 @@
   function init() {
     var S = window.WeBoatServicos;
     if (!S) return;
+    var I = window.WeBoatI18n;
+    function t(key, fallback, params) { return I ? I.t(key, params) : fallback; }
 
     var state = {
       numPessoas: 10,
@@ -101,8 +103,16 @@
         icon.className = 'ph ' + cat.icone;
         btn.appendChild(icon);
 
+        var catNames = {
+          churrasco: t('catChurrasco', 'Churrasco'),
+          combo: t('catCombos', 'Combos'),
+          openbar: t('catOpenBar', 'Open Bar'),
+          mesa: t('catMesas', 'Mesas'),
+          decoracao: t('catDecoracao', 'Decoração'),
+          entretenimento: t('catEntretenimento', 'Entretenimento'),
+        };
         var span = document.createElement('span');
-        span.textContent = ' ' + cat.nome;
+        span.textContent = ' ' + (catNames[cat.id] || cat.nome);
         btn.appendChild(span);
 
         btn.addEventListener('click', function () {
@@ -214,25 +224,25 @@
         embDiv.className = 'configurador__card-embarcacao';
 
         var embLabel = document.createElement('label');
-        embLabel.textContent = 'Tamanho da embarcação:';
+        embLabel.textContent = t('configBoatSize', 'Tamanho da embarcação:');
 
         var select = document.createElement('select');
         select.setAttribute('data-embarcacao-select', '');
 
         var optDefault = document.createElement('option');
         optDefault.value = '';
-        optDefault.textContent = 'Selecione...';
+        optDefault.textContent = t('configSelect', 'Selecione...');
         select.appendChild(optDefault);
 
         var opt36 = document.createElement('option');
         opt36.value = 'ate36pes';
-        opt36.textContent = 'Até 36 pés — R$ ' + servico.precoPorEmbarcacao.ate36pes.toLocaleString('pt-BR');
+        opt36.textContent = t('configUpTo36', 'Até 36 pés') + ' — R$ ' + servico.precoPorEmbarcacao.ate36pes.toLocaleString('pt-BR');
         if (state.tamanhoEmbarcacao === 'ate36pes') opt36.selected = true;
         select.appendChild(opt36);
 
         var opt50 = document.createElement('option');
         opt50.value = 'ate50pes';
-        opt50.textContent = 'Até 50 pés — R$ ' + servico.precoPorEmbarcacao.ate50pes.toLocaleString('pt-BR');
+        opt50.textContent = t('configUpTo50', 'Até 50 pés') + ' — R$ ' + servico.precoPorEmbarcacao.ate50pes.toLocaleString('pt-BR');
         if (state.tamanhoEmbarcacao === 'ate50pes') opt50.selected = true;
         select.appendChild(opt50);
 
@@ -274,32 +284,32 @@
 
       if (servico.tipo === 'fixo') {
         valorSpan.textContent = 'R$ ' + servico.precoFixo.toLocaleString('pt-BR');
-        tipoSpan.textContent = '(valor fixo)';
+        tipoSpan.textContent = t('configPerTrip', '(valor fixo)');
       } else if (servico.tipo === 'por_embarcacao') {
         if (state.tamanhoEmbarcacao && servico.precoPorEmbarcacao) {
           var precoEmb = servico.precoPorEmbarcacao[state.tamanhoEmbarcacao];
           if (precoEmb) {
             valorSpan.textContent = 'R$ ' + precoEmb.toLocaleString('pt-BR');
-            tipoSpan.textContent = '(por embarcação)';
+            tipoSpan.textContent = t('configPerBoat', '(por embarcação)');
           }
         }
         if (!valorSpan.textContent) {
-          valorSpan.textContent = 'A partir de R$ ' + servico.precoPorEmbarcacao.ate36pes.toLocaleString('pt-BR');
-          tipoSpan.textContent = '(selecione o tamanho)';
+          valorSpan.textContent = t('configFromPrice', 'A partir de') + ' R$ ' + servico.precoPorEmbarcacao.ate36pes.toLocaleString('pt-BR');
+          tipoSpan.textContent = t('configSelectSize', '(selecione o tamanho)');
         }
       } else {
         var valorPP = S.getValorPorPessoa(servico, state.numPessoas);
         if (valorPP !== null) {
           var total = valorPP * state.numPessoas;
-          valorSpan.textContent = 'R$ ' + valorPP.toLocaleString('pt-BR') + '/pessoa';
-          tipoSpan.textContent = '(R$ ' + total.toLocaleString('pt-BR') + ' total)';
+          valorSpan.textContent = 'R$ ' + valorPP.toLocaleString('pt-BR') + t('configPerPerson', '/pessoa');
+          tipoSpan.textContent = '(R$ ' + total.toLocaleString('pt-BR') + ' ' + t('configTotal', 'total') + ')';
         } else {
           var resultado = S.calcularPrecoServico(servico, state.numPessoas, state.tamanhoEmbarcacao);
           if (resultado.cobrancaMinima) {
-            valorSpan.textContent = 'R$ ' + resultado.preco.toLocaleString('pt-BR') + ' total';
-            tipoSpan.textContent = '(mín. ' + resultado.cobrancaMinima + ' pessoas)';
+            valorSpan.textContent = 'R$ ' + resultado.preco.toLocaleString('pt-BR') + ' ' + t('configTotal', 'total');
+            tipoSpan.textContent = '(' + t('configMinPeople', 'mín. ' + resultado.cobrancaMinima + ' pessoas', { min: resultado.cobrancaMinima }) + ')';
           } else {
-            valorSpan.textContent = 'Consulte';
+            valorSpan.textContent = t('configConsult', 'Consulte');
           }
         }
       }
@@ -399,7 +409,7 @@
           total += resultado.preco;
           precoSpan.textContent = 'R$ ' + resultado.preco.toLocaleString('pt-BR');
         } else if (resultado.consultar) {
-          precoSpan.textContent = 'A consultar';
+          precoSpan.textContent = t('configWaConsult', 'A consultar');
         }
 
         li.appendChild(nomeSpan);
@@ -415,12 +425,12 @@
 
         var taxaNome = document.createElement('span');
         taxaNome.className = 'configurador__resumo-item-nome';
-        taxaNome.textContent = 'Taxa churrasqueira';
+        taxaNome.textContent = t('configChurrasqueira', 'Taxa churrasqueira');
 
         var taxaPreco = document.createElement('span');
         taxaPreco.className = 'configurador__resumo-item-preco';
         if (taxaChurrasqueira === 0) {
-          taxaPreco.textContent = 'INCLUSA';
+          taxaPreco.textContent = t('configChurrasqueiraInclusa', 'INCLUSA');
           taxaPreco.classList.add('configurador__resumo-item-preco--inclusa');
         } else {
           taxaPreco.textContent = 'R$ ' + taxaChurrasqueira;
@@ -434,7 +444,7 @@
       // Total
       elTotalValor.textContent = 'R$ ' + total.toLocaleString('pt-BR');
       var pp = state.numPessoas > 0 ? Math.round(total / state.numPessoas) : 0;
-      elTotalPP.textContent = '~ R$ ' + pp.toLocaleString('pt-BR') + '/pessoa';
+      elTotalPP.textContent = '~ R$ ' + pp.toLocaleString('pt-BR') + t('configPerPerson', '/pessoa');
 
       // Avisos de conflito
       elAvisos.textContent = '';
@@ -454,7 +464,7 @@
         var closeBtn = document.createElement('button');
         closeBtn.type = 'button';
         closeBtn.className = 'configurador__aviso-fechar';
-        closeBtn.setAttribute('aria-label', 'Fechar aviso');
+        closeBtn.setAttribute('aria-label', t('configCloseAlert', 'Fechar aviso'));
         closeBtn.textContent = '\u00D7';
         closeBtn.addEventListener('click', function () {
           avisoDiv.remove();
@@ -510,7 +520,7 @@
       elEscolherLanchaBtn.addEventListener('click', function (e) {
         e.preventDefault();
         saveToSession();
-        window.location.href = '/lanchas/';
+        window.location.href = I ? I.url('boats') : '/lanchas/';
       });
     }
 

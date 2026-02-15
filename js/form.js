@@ -6,6 +6,9 @@
 (function() {
   'use strict';
 
+  var I = window.WeBoatI18n;
+  function t(key, fallback) { return I ? I.t(key) : fallback; }
+
   // Aguarda o DOM carregar
   document.addEventListener('DOMContentLoaded', function() {
     initFormValidation();
@@ -59,7 +62,7 @@
     const emailField = form.querySelector('#email');
     if (emailField && emailField.value.trim() !== '') {
       if (!validateEmail(emailField.value)) {
-        showError(emailField, 'Por favor, insira um e-mail válido.');
+        showError(emailField, t('formInvalidEmail', 'Por favor, insira um e-mail válido.'));
         isValid = false;
       }
     }
@@ -67,7 +70,7 @@
     // Valida telefone
     const phoneField = form.querySelector('#telefone');
     if (phoneField && !validatePhone(phoneField.value)) {
-      showError(phoneField, 'Por favor, insira um telefone válido com DDD.');
+      showError(phoneField, t('formInvalidPhone', 'Por favor, insira um telefone válido com DDD.'));
       isValid = false;
     }
 
@@ -85,29 +88,30 @@
 
       const nome = nomeEl.value;
       const telefone = telefoneEl.value;
-      const email = emailEl ? emailEl.value || 'Não informado' : 'Não informado';
-      const assunto = assuntoEl ? assuntoEl.options[assuntoEl.selectedIndex].text : 'Geral';
-      const data = dataEl ? dataEl.value || 'Não informada' : 'Não informada';
-      const pessoas = pessoasEl ? pessoasEl.value || 'Não informado' : 'Não informado';
+      const email = emailEl ? emailEl.value || t('formNotProvided', 'Não informado') : t('formNotProvided', 'Não informado');
+      const assunto = assuntoEl ? assuntoEl.options[assuntoEl.selectedIndex].text : t('formGeneral', 'Geral');
+      const data = dataEl ? dataEl.value || t('formDateNotProvided', 'Não informada') : t('formDateNotProvided', 'Não informada');
+      const pessoas = pessoasEl ? pessoasEl.value || t('formNotProvided', 'Não informado') : t('formNotProvided', 'Não informado');
       const mensagem = mensagemEl.value;
 
       // Formata data para exibição
       let dataFormatada = data;
-      if (data && data !== 'Não informada') {
+      if (data && data !== t('formDateNotProvided', 'Não informada')) {
         const partes = data.split('-');
         dataFormatada = partes[2] + '/' + partes[1] + '/' + partes[0];
       }
 
       // Monta texto da mensagem
+      var langTag = I ? ' [' + I.lang + ']' : '';
       const textoWhatsApp = encodeURIComponent(
-        '*Nova mensagem do site WeBoat Brasil*\n\n' +
-        '*Nome:* ' + nome + '\n' +
-        '*Telefone:* ' + telefone + '\n' +
-        '*E-mail:* ' + email + '\n' +
-        '*Assunto:* ' + assunto + '\n' +
-        '*Data desejada:* ' + dataFormatada + '\n' +
-        '*Pessoas:* ' + pessoas + '\n\n' +
-        '*Mensagem:*\n' + mensagem
+        '*' + t('formNewMessage', 'Nova mensagem do site WeBoat Brasil') + '*' + langTag + '\n\n' +
+        '*' + t('formName', 'Nome') + ':* ' + nome + '\n' +
+        '*' + t('formPhone', 'Telefone') + ':* ' + telefone + '\n' +
+        '*' + t('formEmail', 'E-mail') + ':* ' + email + '\n' +
+        '*' + t('formSubject', 'Assunto') + ':* ' + assunto + '\n' +
+        '*' + t('formDateDesired', 'Data desejada') + ':* ' + dataFormatada + '\n' +
+        '*' + t('formPeople', 'Pessoas') + ':* ' + pessoas + '\n\n' +
+        '*' + t('formMessage', 'Mensagem') + ':*\n' + mensagem
       );
 
       // Redireciona para WhatsApp
@@ -138,21 +142,21 @@
 
     // Verifica se é obrigatório e está vazio
     if (field.hasAttribute('required') && value === '') {
-      showError(field, 'Este campo é obrigatório.');
+      showError(field, t('formRequired', 'Este campo é obrigatório.'));
       return false;
     }
 
     // Validações específicas por tipo
     if (field.type === 'email' && value !== '') {
       if (!validateEmail(value)) {
-        showError(field, 'Por favor, insira um e-mail válido.');
+        showError(field, t('formInvalidEmail', 'Por favor, insira um e-mail válido.'));
         return false;
       }
     }
 
     if (field.type === 'tel' && value !== '') {
       if (!validatePhone(value)) {
-        showError(field, 'Por favor, insira um telefone válido.');
+        showError(field, t('formInvalidPhoneShort', 'Por favor, insira um telefone válido.'));
         return false;
       }
     }
@@ -211,7 +215,10 @@
   function showSuccessMessage(form) {
     var successEl = document.createElement('div');
     successEl.className = 'form-success';
-    successEl.innerHTML = '<i class="ph ph-check-circle"></i> Mensagem enviada! Você será redirecionado para o WhatsApp.';
+    var icon = document.createElement('i');
+    icon.className = 'ph ph-check-circle';
+    successEl.appendChild(icon);
+    successEl.appendChild(document.createTextNode(' ' + t('formSuccessMessage', 'Mensagem enviada! Você será redirecionado para o WhatsApp.')));
 
     var actionsEl = form.querySelector('.contato-form__actions');
     if (actionsEl) {

@@ -29,7 +29,10 @@
     document.body.classList.toggle('menu-open', !isExpanded);
 
     // Atualizar label de acessibilidade
-    mobileToggle.setAttribute('aria-label', isExpanded ? 'Abrir menu' : 'Fechar menu');
+    var I = window.WeBoatI18n;
+    var openLabel = I ? I.t('menuOpen') : 'Abrir menu';
+    var closeLabel = I ? I.t('menuClose') : 'Fechar menu';
+    mobileToggle.setAttribute('aria-label', isExpanded ? openLabel : closeLabel);
   }
 
   // Adicionar evento de clique no toggle

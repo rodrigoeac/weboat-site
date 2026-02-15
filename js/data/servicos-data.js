@@ -296,6 +296,9 @@
 
   function verificarConflitos(servicosSelecionados) {
     var avisos = [];
+    var I = window.WeBoatI18n;
+    function t(key, fallback) { return I ? I.t(key) : fallback; }
+
     var temCombo = servicosSelecionados.some(function (s) { return s.categoria === 'combo'; });
     var temChurrascoIndividual = servicosSelecionados.some(function (s) {
       return s.categoria === 'churrasco' && s.id !== 'utilizacao-churrasqueira';
@@ -303,10 +306,10 @@
     var temOpenBarIndividual = servicosSelecionados.some(function (s) { return s.categoria === 'openbar'; });
 
     if (temCombo && temChurrascoIndividual) {
-      avisos.push('Você selecionou um Combo que já inclui churrasco junto com um serviço de churrasco avulso. Considere remover um deles para economizar.');
+      avisos.push(t('configConflictComboChurrasco', 'Você selecionou um Combo que já inclui churrasco junto com um serviço de churrasco avulso. Considere remover um deles para economizar.'));
     }
     if (temCombo && temOpenBarIndividual) {
-      avisos.push('Você selecionou um Combo que já inclui open bar junto com um open bar avulso. Considere remover um deles para economizar.');
+      avisos.push(t('configConflictComboOpenBar', 'Você selecionou um Combo que já inclui open bar junto com um open bar avulso. Considere remover um deles para economizar.'));
     }
 
     return avisos;
@@ -324,23 +327,27 @@
   }
 
   function gerarMensagemWhatsApp(servicosSelecionados, numPessoas, total, tamanhoEmbarcacao) {
+    var I = window.WeBoatI18n;
+    function t(key, fallback) { return I ? I.t(key) : fallback; }
+    var langTag = I ? ' [' + I.lang + ']' : '';
+
     var linhas = [
-      'Olá! Gostaria de montar um pacote de serviços:',
+      t('configWaIntro', 'Olá! Gostaria de montar um pacote de serviços:') + langTag,
       '',
-      '👥 Número de pessoas: ' + numPessoas,
+      '👥 ' + t('configWaPeople', 'Número de pessoas') + ': ' + numPessoas,
     ];
 
     if (tamanhoEmbarcacao) {
-      var tamanhoLabel = tamanhoEmbarcacao === 'ate36pes' ? 'Até 36 pés' : 'Até 50 pés';
-      linhas.push('🚤 Embarcação: ' + tamanhoLabel);
+      var tamanhoLabel = tamanhoEmbarcacao === 'ate36pes' ? t('configUpTo36', 'Até 36 pés') : t('configUpTo50', 'Até 50 pés');
+      linhas.push('🚤 ' + t('configWaBoat', 'Embarcação') + ': ' + tamanhoLabel);
     }
 
     linhas.push('');
-    linhas.push('📋 Serviços selecionados:');
+    linhas.push('📋 ' + t('configWaServices', 'Serviços selecionados') + ':');
 
     servicosSelecionados.forEach(function (servico) {
       var resultado = calcularPrecoServico(servico, numPessoas, tamanhoEmbarcacao);
-      var precoStr = resultado.preco != null ? 'R$ ' + resultado.preco.toLocaleString('pt-BR') : 'A consultar';
+      var precoStr = resultado.preco != null ? 'R$ ' + resultado.preco.toLocaleString('pt-BR') : t('configWaConsult', 'A consultar');
       linhas.push('• ' + servico.nome + ' — ' + precoStr);
     });
 
@@ -348,16 +355,16 @@
     if (temChurrasqueira) {
       var taxa = calcularTaxaChurrasqueira(servicosSelecionados);
       if (taxa === 0) {
-        linhas.push('• Taxa churrasqueira: INCLUSA no pacote');
+        linhas.push('• ' + t('configWaBBQIncluded', 'Taxa churrasqueira: INCLUSA no pacote'));
       } else {
-        linhas.push('• Taxa churrasqueira: R$ ' + taxa);
+        linhas.push('• ' + t('configWaBBQFee', 'Taxa churrasqueira') + ': R$ ' + taxa);
       }
     }
 
     linhas.push('');
-    linhas.push('💰 Total estimado: R$ ' + total.toLocaleString('pt-BR'));
+    linhas.push('💰 ' + t('configWaTotal', 'Total estimado') + ': R$ ' + total.toLocaleString('pt-BR'));
     linhas.push('');
-    linhas.push('Podem me enviar mais detalhes?');
+    linhas.push(t('configWaMore', 'Podem me enviar mais detalhes?'));
 
     return linhas.join('\n');
   }

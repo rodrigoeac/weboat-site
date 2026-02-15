@@ -1,6 +1,9 @@
 'use strict';
 
 (function() {
+    var I = window.WeBoatI18n;
+    function t(key, fallback) { return I ? I.t(key) : fallback; }
+
     var API_BASE = 'https://api.weboatbrasil.com.br';
     var POLL_INTERVAL = 5000; // 5 seconds
     var pollTimer = null;
@@ -34,7 +37,7 @@
     function init() {
         currentToken = getTokenFromURL();
         if (!currentToken) {
-            showError('Link inválido', 'Este link de checkout não é válido.');
+            showError(t('checkoutInvalidLink', 'Link inválido'), t('checkoutInvalidLinkMsg', 'Este link de checkout não é válido.'));
             return;
         }
 
@@ -61,9 +64,9 @@
                 if (res.status === 410) {
                     return res.json().then(function(data) {
                         if (data.expired) {
-                            showError('Link Expirado', 'Este link de pagamento expirou. Entre em contato pelo WhatsApp para solicitar um novo.');
+                            showError(t('checkoutExpired', 'Link Expirado'), t('checkoutExpiredMsg', 'Este link de pagamento expirou. Entre em contato pelo WhatsApp para solicitar um novo.'));
                         } else if (data.cancelled) {
-                            showError('Reserva Cancelada', 'Esta reserva foi cancelada. Entre em contato pelo WhatsApp para mais informações.');
+                            showError(t('checkoutCancelled', 'Reserva Cancelada'), t('checkoutCancelledMsg', 'Esta reserva foi cancelada. Entre em contato pelo WhatsApp para mais informações.'));
                         }
                         throw new Error('gone');
                     });
@@ -97,7 +100,7 @@
             .catch(function(err) {
                 if (err.message === 'gone') return;
                 showLoading(false);
-                showError('Checkout não encontrado', 'Verifique se o link está correto ou entre em contato pelo WhatsApp.');
+                showError(t('checkoutNotFound', 'Checkout não encontrado'), t('checkoutNotFoundMsg', 'Verifique se o link está correto ou entre em contato pelo WhatsApp.'));
             });
     }
 
@@ -109,27 +112,27 @@
         var p = data.passeio;
         var pr = data.preco;
 
-        var turnoLabel = p.turno === 'manha' ? 'Manhã' : 'Tarde';
-        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : 'A confirmar';
+        var turnoLabel = p.turno === 'manha' ? t('checkoutMorning', 'Manhã') : t('checkoutAfternoon', 'Tarde');
+        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : t('checkoutToConfirm', 'A confirmar');
 
         setText('ps-boat', data.lancha.nome);
         setText('ps-route', (p.roteiroNome || p.roteiro));
         setText('ps-date', dataLabel);
         setText('ps-time', turnoLabel + (p.horario ? ' (' + p.horario + ')' : ''));
         setText('ps-duration', p.duracaoHoras + 'h');
-        setText('ps-people', p.numPessoas + ' pessoas');
+        setText('ps-people', p.numPessoas + ' ' + t('checkoutPeople', 'pessoas'));
 
         // Price breakdown
         var breakdown = document.getElementById('ps-breakdown');
         while (breakdown.firstChild) breakdown.removeChild(breakdown.firstChild);
 
-        addBreakdownItem(breakdown, 'Passeio', pr.precoBase);
-        if (pr.adicionalTurno > 0) addBreakdownItem(breakdown, 'Adicional turno', pr.adicionalTurno);
-        if (pr.valorHoraExtra > 0) addBreakdownItem(breakdown, 'Hora extra (' + pr.horasExtras + 'h)', pr.valorHoraExtra);
-        if (pr.valorPessoaExtra > 0) addBreakdownItem(breakdown, 'Pessoa extra', pr.valorPessoaExtra);
-        if (pr.valorAC > 0) addBreakdownItem(breakdown, 'Ar condicionado', pr.valorAC);
-        if (pr.valorChurrasqueira > 0) addBreakdownItem(breakdown, 'Churrasqueira', pr.valorChurrasqueira);
-        if (pr.valorGuardaVidas > 0) addBreakdownItem(breakdown, 'Guarda-vidas', pr.valorGuardaVidas);
+        addBreakdownItem(breakdown, t('checkoutTrip', 'Passeio'), pr.precoBase);
+        if (pr.adicionalTurno > 0) addBreakdownItem(breakdown, t('checkoutSurcharge', 'Adicional turno'), pr.adicionalTurno);
+        if (pr.valorHoraExtra > 0) addBreakdownItem(breakdown, t('checkoutExtraHour', 'Hora extra') + ' (' + pr.horasExtras + 'h)', pr.valorHoraExtra);
+        if (pr.valorPessoaExtra > 0) addBreakdownItem(breakdown, t('checkoutExtraPerson', 'Pessoa extra'), pr.valorPessoaExtra);
+        if (pr.valorAC > 0) addBreakdownItem(breakdown, t('checkoutAC', 'Ar condicionado'), pr.valorAC);
+        if (pr.valorChurrasqueira > 0) addBreakdownItem(breakdown, t('checkoutBBQ', 'Churrasqueira'), pr.valorChurrasqueira);
+        if (pr.valorGuardaVidas > 0) addBreakdownItem(breakdown, t('checkoutLifeguard', 'Guarda-vidas'), pr.valorGuardaVidas);
 
         // Services
         if (pr.servicos && pr.servicos.length > 0) {
@@ -138,11 +141,11 @@
             });
         }
 
-        addBreakdownItem(breakdown, 'Total', pr.valorTotal, true);
-        addBreakdownItem(breakdown, 'Entrada (' + pr.percentualEntrada + '%)', pr.valorEntrada, false, true);
+        addBreakdownItem(breakdown, t('checkoutTotal', 'Total'), pr.valorTotal, true);
+        addBreakdownItem(breakdown, t('checkoutDeposit', 'Entrada') + ' (' + pr.percentualEntrada + '%)', pr.valorEntrada, false, true);
 
         if (pr.valorRestante > 0) {
-            addBreakdownItem(breakdown, 'Restante (no dia)', pr.valorRestante);
+            addBreakdownItem(breakdown, t('checkoutRemaining', 'Restante (no dia)'), pr.valorRestante);
         }
     }
 
@@ -234,31 +237,31 @@
         if (!isEstrangeiro) {
             cpf = cpfInput.value.trim();
             if (!validarCPF(cpf)) {
-                showFieldError('customer-cpf', 'CPF inválido');
+                showFieldError('customer-cpf', t('checkoutCpfInvalid', 'CPF inválido'));
                 return;
             }
         } else {
             passaporte = document.getElementById('customer-passaporte').value.trim();
             if (!passaporte) {
-                showFieldError('customer-passaporte', 'Passaporte obrigatório');
+                showFieldError('customer-passaporte', t('checkoutPassportRequired', 'Passaporte obrigatório'));
                 return;
             }
         }
 
         if (!nome || !email) {
-            if (!nome) showFieldError('customer-nome', 'Nome obrigatório');
-            if (!email) showFieldError('customer-email', 'Email obrigatório');
+            if (!nome) showFieldError('customer-nome', t('checkoutNameRequired', 'Nome obrigatório'));
+            if (!email) showFieldError('customer-email', t('checkoutEmailRequired', 'Email obrigatório'));
             return;
         }
 
         if (!termos) {
-            alert('Você precisa aceitar os termos para continuar.');
+            alert(t('checkoutAcceptTerms', 'Você precisa aceitar os termos para continuar.'));
             return;
         }
 
         var submitBtn = formEl.querySelector('button[type="submit"]');
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Salvando...';
+        submitBtn.textContent = t('checkoutSaving', 'Salvando...');
 
         fetch(API_BASE + '/checkout/' + encodeURIComponent(currentToken) + '/customer', {
             method: 'POST',
@@ -281,11 +284,11 @@
             updatePaymentMethods(isEstrangeiro);
         })
         .catch(function(err) {
-            alert(err.message || 'Erro ao salvar dados. Tente novamente.');
+            alert(err.message || t('checkoutSaveError', 'Erro ao salvar dados. Tente novamente.'));
         })
         .finally(function() {
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Continuar para Pagamento';
+            submitBtn.textContent = t('checkoutContinue', 'Continuar para Pagamento');
         });
     }
 
@@ -301,7 +304,7 @@
         if (!selectedMethod) return;
 
         payBtn.disabled = true;
-        payBtn.textContent = 'Processando...';
+        payBtn.textContent = t('checkoutProcessing', 'Processando...');
 
         var payBody = { metodo: selectedMethod };
         if (selectedMethod === 'credit_card' && parcelasSelect) {
@@ -327,9 +330,9 @@
             }
         })
         .catch(function(err) {
-            alert(err.message || 'Erro ao iniciar pagamento.');
+            alert(err.message || t('checkoutPayError', 'Erro ao iniciar pagamento.'));
             payBtn.disabled = false;
-            payBtn.textContent = 'Pagar Agora';
+            payBtn.textContent = t('checkoutPayNow', 'Pagar Agora');
         });
     }
 
@@ -353,8 +356,8 @@
         var copyBtn = document.getElementById('pix-copy-btn');
         copyBtn.addEventListener('click', function() {
             navigator.clipboard.writeText(pix.copiaCola).then(function() {
-                copyBtn.textContent = 'Copiado!';
-                setTimeout(function() { copyBtn.textContent = 'Copiar'; }, 2000);
+                copyBtn.textContent = t('checkoutCopied', 'Copiado!');
+                setTimeout(function() { copyBtn.textContent = t('checkoutCopy', 'Copiar'); }, 2000);
             });
         });
 
@@ -387,7 +390,7 @@
         processingDiv.appendChild(spinner);
 
         var text = document.createElement('span');
-        text.textContent = 'Verificando pagamento...';
+        text.textContent = t('checkoutVerifying', 'Verificando pagamento...');
         processingDiv.appendChild(text);
 
         card.appendChild(processingDiv);
@@ -403,7 +406,7 @@
         function updateCountdown() {
             var remaining = expiry - new Date();
             if (remaining <= 0) {
-                countdownEl.textContent = 'Expirado';
+                countdownEl.textContent = t('checkoutExpiredCountdown', 'Expirado');
                 return;
             }
             var minutes = Math.floor(remaining / 60000);
