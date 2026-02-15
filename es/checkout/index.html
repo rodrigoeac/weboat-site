@@ -1,0 +1,324 @@
+<!-- i18n: translated from PT version 2026-02-15 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K9LG4M2');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- SEO -->
+  <title>Checkout | WeBoat Brasil</title>
+  <meta name="description" content="Complete su reserva de paseo en lancha con WeBoat Brasil. Pago seguro vía PIX o tarjeta.">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/logo/favicon.svg">
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=DM+Sans:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=DM+Sans:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"></noscript>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
+  <link rel="stylesheet" href="/css/pages/checkout.css">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous" defer></script>
+</head>
+<body class="checkout">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K9LG4M2" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <!-- Header simplificado -->
+  <header class="checkout-header">
+    <a href="/es/" aria-label="WeBoat Brasil">
+      <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
+    </a>
+  </header>
+
+  <div class="checkout__container">
+
+    <!-- Stepper -->
+    <div class="checkout-stepper">
+      <div class="checkout-step checkout-step--active" data-step="1">
+        <span class="checkout-step__number">1</span>
+        <span class="checkout-step__label">Datos</span>
+      </div>
+      <div class="checkout-stepper__divider"></div>
+      <div class="checkout-step" data-step="2">
+        <span class="checkout-step__number">2</span>
+        <span class="checkout-step__label">Pago</span>
+      </div>
+      <div class="checkout-stepper__divider"></div>
+      <div class="checkout-step" data-step="3">
+        <span class="checkout-step__number">3</span>
+        <span class="checkout-step__label">Confirmación</span>
+      </div>
+    </div>
+
+    <!-- Loading state -->
+    <div id="checkout-loading" class="checkout-loading" role="status" aria-live="polite">
+      <div class="checkout-loading__spinner"></div>
+      <p>Cargando su propuesta...</p>
+    </div>
+
+    <!-- Error state -->
+    <div id="checkout-error" class="checkout-error" role="alert" aria-live="assertive" style="display:none">
+      <div class="checkout-error__icon">
+        <i class="ph ph-warning-circle" aria-hidden="true"></i>
+      </div>
+      <h2 class="checkout-error__title">Erro</h2>
+      <p class="checkout-error__message">Algo salió mal.</p>
+      <a href="https://wa.me/5521977724114?text=Olá! Tive um problema com o link de pagamento." class="btn btn-whatsapp" target="_blank" rel="noopener">
+        <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chatear por WhatsApp
+      </a>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         STEP 1: Resumo + Formulário
+         ═══════════════════════════════════════ -->
+    <div class="checkout-panel" data-step="1" style="display:none">
+
+      <!-- Proposal Summary -->
+      <div class="checkout-card" id="proposal-summary">
+        <h2 class="checkout-card__title">Resumen del Paseo</h2>
+
+        <div class="proposal-summary">
+          <div class="proposal-summary__boat" id="ps-boat"></div>
+          <div class="proposal-summary__details">
+            <div class="proposal-detail">
+              <i class="ph ph-map-pin" aria-hidden="true"></i>
+              <span id="ps-route"></span>
+            </div>
+            <div class="proposal-detail">
+              <i class="ph ph-calendar" aria-hidden="true"></i>
+              <span id="ps-date"></span>
+            </div>
+            <div class="proposal-detail">
+              <i class="ph ph-clock" aria-hidden="true"></i>
+              <span id="ps-time"></span>
+            </div>
+            <div class="proposal-detail">
+              <i class="ph ph-timer" aria-hidden="true"></i>
+              <span id="ps-duration"></span>
+            </div>
+            <div class="proposal-detail">
+              <i class="ph ph-users" aria-hidden="true"></i>
+              <span id="ps-people"></span>
+            </div>
+          </div>
+
+          <hr class="proposal-summary__divider">
+
+          <div class="proposal-breakdown" id="ps-breakdown">
+            <!-- Populated by JS -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Customer Form -->
+      <div class="checkout-card">
+        <h2 class="checkout-card__title">Sus Datos</h2>
+
+        <form id="checkout-form" class="checkout-form" novalidate>
+          <div class="form-group">
+            <label class="form-label" for="customer-nome">Nombre completo</label>
+            <input class="form-input" type="text" id="customer-nome" name="nome" required aria-required="true" autocomplete="name" aria-describedby="customer-nome-error">
+            <span class="form-error" id="customer-nome-error"></span>
+          </div>
+
+          <label class="checkout-form__toggle">
+            <input type="checkbox" id="is-estrangeiro">
+            Soy extranjero (I'm a foreigner)
+          </label>
+
+          <div class="form-group" id="cpf-group">
+            <label class="form-label" for="customer-cpf">CPF</label>
+            <input class="form-input" type="text" id="customer-cpf" name="cpf" placeholder="000.000.000-00" inputmode="numeric" autocomplete="off" aria-describedby="customer-cpf-error">
+            <span class="form-error" id="customer-cpf-error"></span>
+          </div>
+
+          <div class="form-group" id="passport-group" style="display:none">
+            <label class="form-label" for="customer-passaporte">Passport number</label>
+            <input class="form-input" type="text" id="customer-passaporte" name="passaporte" autocomplete="off" aria-describedby="customer-passaporte-error">
+            <span class="form-error" id="customer-passaporte-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="customer-phone">Teléfono / Phone</label>
+            <input class="form-input" type="tel" id="customer-phone" name="phone" placeholder="(21) 99999-9999" inputmode="tel" autocomplete="tel" aria-describedby="customer-phone-error">
+            <span class="form-error" id="customer-phone-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="customer-email">Email</label>
+            <input class="form-input" type="email" id="customer-email" name="email" required aria-required="true" autocomplete="email" aria-describedby="customer-email-error">
+            <span class="form-error" id="customer-email-error"></span>
+          </div>
+
+          <div class="checkout-terms">
+            <input type="checkbox" id="termos-aceite" required aria-required="true">
+            <label for="termos-aceite">
+              He leído y acepto los <a href="/es/terminos-de-uso/" target="_blank">Términos de Uso</a> e a <a href="/es/politica-de-privacidad/" target="_blank">Política de Privacidad</a> da WeBoat Brasil.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
+            Continuar al Pago
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         STEP 2: Pagamento
+         ═══════════════════════════════════════ -->
+    <div class="checkout-panel" data-step="2" style="display:none">
+      <div class="checkout-card">
+        <h2 class="checkout-card__title">Pago</h2>
+
+        <!-- Method selection -->
+        <div id="method-selection">
+          <p style="color:var(--driftwood); margin-bottom:var(--space-4); font-size:var(--text-body-sm);">
+            Seleccione el método de pago:
+          </p>
+
+          <div class="payment-methods">
+            <div class="payment-method" data-method="pix" role="button" tabindex="0" aria-label="Selecionar PIX como método de pagamento">
+              <div class="payment-method__radio"></div>
+              <div class="payment-method__info">
+                <div class="payment-method__name">PIX</div>
+                <div class="payment-method__desc">Pago instantáneo vía código QR</div>
+              </div>
+            </div>
+
+            <div class="payment-method" data-method="credit_card" role="button" tabindex="0" aria-label="Selecionar cartão de crédito como método de pagamento">
+              <div class="payment-method__radio"></div>
+              <div class="payment-method__info">
+                <div class="payment-method__name">Tarjeta de Crédito</div>
+                <div class="payment-method__desc">Pague en hasta 12 cuotas</div>
+              </div>
+            </div>
+
+            <div class="payment-method" data-method="paypal" role="button" tabindex="0" aria-label="Selecionar PayPal como método de pagamento" style="display:none;">
+              <div class="payment-method__radio"></div>
+              <div class="payment-method__info">
+                <div class="payment-method__name">PayPal</div>
+                <div class="payment-method__desc">International payment</div>
+              </div>
+            </div>
+
+            <div class="payment-method" data-method="zelle" role="button" tabindex="0" aria-label="Selecionar Zelle como método de pagamento" style="display:none;">
+              <div class="payment-method__radio"></div>
+              <div class="payment-method__info">
+                <div class="payment-method__name">Zelle</div>
+                <div class="payment-method__desc">US bank transfer — confirmation within 24h</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Parcelas (cartão) -->
+          <div id="parcelas-section" class="parcelas-section" style="display:none">
+            <label class="form-label" style="margin-bottom:var(--space-2);">Cuotas:</label>
+            <select id="parcelas-select" class="form-select">
+              <option value="1">1x sin intereses</option>
+              <option value="2">2x sin intereses</option>
+              <option value="3">3x sin intereses</option>
+              <option value="4">4x</option>
+              <option value="5">5x</option>
+              <option value="6">6x</option>
+              <option value="7">7x</option>
+              <option value="8">8x</option>
+              <option value="9">9x</option>
+              <option value="10">10x</option>
+              <option value="11">11x</option>
+              <option value="12">12x</option>
+            </select>
+          </div>
+
+          <button id="pay-btn" class="btn btn-primary btn-lg" style="width:100%;" disabled>
+            Pagar Ahora
+          </button>
+        </div>
+
+        <!-- PIX payment -->
+        <div id="pix-section" class="pix-section" style="display:none">
+          <h3 style="font-family:var(--font-heading); color:var(--ocean-deep); margin-bottom:var(--space-4);">Pague con PIX</h3>
+
+          <div class="pix-qrcode">
+            <img id="pix-qrcode-img" src="" alt="QR Code PIX">
+          </div>
+
+          <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin-bottom:var(--space-3);">
+            O copie el código abajo:
+          </p>
+
+          <div class="pix-copiacola">
+            <span class="pix-copiacola__code" id="pix-code"></span>
+            <button class="pix-copiacola__btn" id="pix-copy-btn" type="button">Copiar</button>
+          </div>
+
+          <div class="pix-countdown">
+            Expira en <strong id="pix-countdown-time">15:00</strong>
+          </div>
+
+          <div class="pix-status">
+            <div class="pix-status__spinner"></div>
+            Esperando pago...
+          </div>
+        </div>
+
+        <!-- Zelle instructions -->
+        <div id="zelle-section" class="zelle-instructions" style="display:none">
+          <div class="zelle-instructions__title">Zelle Transfer</div>
+          <p>Send payment to:</p>
+          <p><strong>pagamentos@weboatbrasil.com.br</strong></p>
+          <p style="margin-top:var(--space-3); color:var(--driftwood);">
+            Your reservation will be confirmed within 24 business hours after payment is received.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         STEP 3: Confirmação
+         ═══════════════════════════════════════ -->
+    <div class="checkout-panel" data-step="3" style="display:none">
+      <div class="checkout-card">
+        <div class="confirmation" role="status" aria-live="polite">
+          <div class="confirmation__check">
+            <i class="ph ph-check-circle" aria-hidden="true"></i>
+          </div>
+          <h2 class="confirmation__title">¡Reserva Confirmada!</h2>
+          <p class="confirmation__subtitle">
+            Enviamos la confirmación a <strong id="confirmation-email"></strong>
+          </p>
+
+          <div class="confirmation__actions">
+            <a href="https://wa.me/5521977724114?text=Olá! Minha reserva foi confirmada e gostaria de mais informações sobre o embarque." class="btn btn-whatsapp" target="_blank" rel="noopener">
+              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chatear por WhatsApp
+            </a>
+            <a href="/es/" class="btn btn-secondary">
+              Volver al Sitio
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Scripts -->
+  <script src="/js/cpf-validator.js" defer></script>
+  <script src="/js/checkout.js" defer></script>
+</body>
+</html>
