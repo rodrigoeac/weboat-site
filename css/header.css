@@ -432,10 +432,17 @@ body.menu-open {
 }
 
 .lang-switcher__flag {
+  display: inline-block;
   width: 20px;
   height: 14px;
-  border-radius: 2px;
-  object-fit: cover;
+  min-width: 20px;
+  max-width: 20px;
+  min-height: 14px;
+  max-height: 14px;
+  border-radius: 3px;
+  overflow: hidden;
+  flex-shrink: 0;
+  vertical-align: middle;
 }
 
 .lang-switcher__caret {
