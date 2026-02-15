@@ -1,0 +1,210 @@
+{
+  "version": "1.0",
+  "updated": "2026-02-15",
+  "baseUrl": "https://www.weboatbrasil.com.br",
+  "languages": {
+    "pt": { "code": "pt-BR", "label": "Portugues", "flag": "BR", "dir": "" },
+    "en": { "code": "en", "label": "English", "flag": "US", "dir": "en" },
+    "es": { "code": "es", "label": "Espanol", "flag": "ES", "dir": "es" }
+  },
+  "pages": [
+    {
+      "id": "home",
+      "pt": "/",
+      "en": "/en/",
+      "es": "/es/"
+    },
+    {
+      "id": "fleet",
+      "pt": "/lanchas/",
+      "en": "/en/boats/",
+      "es": "/es/lanchas/"
+    },
+    {
+      "id": "boat-weboat-32",
+      "pt": "/lanchas/weboat-32/",
+      "en": "/en/boats/weboat-32/",
+      "es": "/es/lanchas/weboat-32/"
+    },
+    {
+      "id": "boat-weboat-390",
+      "pt": "/lanchas/weboat-390/",
+      "en": "/en/boats/weboat-390/",
+      "es": "/es/lanchas/weboat-390/"
+    },
+    {
+      "id": "boat-weboat-oceanic-36",
+      "pt": "/lanchas/weboat-oceanic-36/",
+      "en": "/en/boats/weboat-oceanic-36/",
+      "es": "/es/lanchas/weboat-oceanic-36/"
+    },
+    {
+      "id": "boat-weboat-ibiza-42",
+      "pt": "/lanchas/weboat-ibiza-42/",
+      "en": "/en/boats/weboat-ibiza-42/",
+      "es": "/es/lanchas/weboat-ibiza-42/"
+    },
+    {
+      "id": "boat-weboat-rio-star-50",
+      "pt": "/lanchas/weboat-rio-star-50/",
+      "en": "/en/boats/weboat-rio-star-50/",
+      "es": "/es/lanchas/weboat-rio-star-50/"
+    },
+    {
+      "id": "fleet-compare",
+      "pt": "/lanchas/comparativo/",
+      "en": "/en/boats/compare/",
+      "es": "/es/lanchas/comparar/"
+    },
+    {
+      "id": "routes",
+      "pt": "/roteiros/",
+      "en": "/en/routes/",
+      "es": "/es/rutas/"
+    },
+    {
+      "id": "route-mureta-da-urca",
+      "pt": "/roteiros/mureta-da-urca/",
+      "en": "/en/routes/mureta-da-urca/",
+      "es": "/es/rutas/mureta-da-urca/"
+    },
+    {
+      "id": "route-praia-vermelha",
+      "pt": "/roteiros/praia-vermelha/",
+      "en": "/en/routes/praia-vermelha/",
+      "es": "/es/rutas/praia-vermelha/"
+    },
+    {
+      "id": "route-copacabana",
+      "pt": "/roteiros/copacabana/",
+      "en": "/en/routes/copacabana/",
+      "es": "/es/rutas/copacabana/"
+    },
+    {
+      "id": "route-ilhas-cagarras",
+      "pt": "/roteiros/ilhas-cagarras/",
+      "en": "/en/routes/ilhas-cagarras/",
+      "es": "/es/rutas/ilhas-cagarras/"
+    },
+    {
+      "id": "route-itaipu-camboinhas",
+      "pt": "/roteiros/itaipu-camboinhas/",
+      "en": "/en/routes/itaipu-camboinhas/",
+      "es": "/es/rutas/itaipu-camboinhas/"
+    },
+    {
+      "id": "route-volta-completa",
+      "pt": "/roteiros/volta-completa/",
+      "en": "/en/routes/volta-completa/",
+      "es": "/es/rutas/volta-completa/"
+    },
+    {
+      "id": "bachelorette",
+      "pt": "/despedida-solteira/",
+      "en": "/en/bachelorette-party/",
+      "es": "/es/despedida-de-soltera/"
+    },
+    {
+      "id": "birthday",
+      "pt": "/aniversario/",
+      "en": "/en/birthday-party/",
+      "es": "/es/cumpleanos/"
+    },
+    {
+      "id": "corporate",
+      "pt": "/corporativo/",
+      "en": "/en/corporate-events/",
+      "es": "/es/eventos-corporativos/"
+    },
+    {
+      "id": "new-years",
+      "pt": "/reveillon/",
+      "en": "/en/new-years-eve/",
+      "es": "/es/ano-nuevo/"
+    },
+    {
+      "id": "carnival",
+      "pt": "/carnaval/",
+      "en": "/en/carnival/",
+      "es": "/es/carnaval/"
+    },
+    {
+      "id": "services",
+      "pt": "/servicos/",
+      "en": "/en/services/",
+      "es": "/es/servicios/"
+    },
+    {
+      "id": "about",
+      "pt": "/sobre/",
+      "en": "/en/about/",
+      "es": "/es/sobre-nosotros/"
+    },
+    {
+      "id": "faq",
+      "pt": "/faq/",
+      "en": "/en/faq/",
+      "es": "/es/preguntas-frecuentes/"
+    },
+    {
+      "id": "contact",
+      "pt": "/contato/",
+      "en": "/en/contact/",
+      "es": "/es/contacto/"
+    },
+    {
+      "id": "how-it-works",
+      "pt": "/como-funciona/",
+      "en": "/en/how-it-works/",
+      "es": "/es/como-funciona/"
+    },
+    {
+      "id": "service-areas",
+      "pt": "/areas-atendidas/",
+      "en": "/en/service-areas/",
+      "es": "/es/areas-de-servicio/"
+    },
+    {
+      "id": "blog",
+      "pt": "/blog/",
+      "en": "/en/blog/",
+      "es": "/es/blog/"
+    },
+    {
+      "id": "blog-best-beaches",
+      "pt": "/blog/melhores-praias-lancha-rj/",
+      "en": "/en/blog/best-beaches-by-boat-rio/",
+      "es": "/es/blog/mejores-playas-en-lancha-rio/"
+    },
+    {
+      "id": "blog-what-to-wear",
+      "pt": "/blog/o-que-vestir-passeio-lancha/",
+      "en": "/en/blog/what-to-wear-boat-trip/",
+      "es": "/es/blog/que-vestir-paseo-en-lancha/"
+    },
+    {
+      "id": "blog-marina-guide",
+      "pt": "/blog/guia-marina-da-gloria/",
+      "en": "/en/blog/marina-da-gloria-guide/",
+      "es": "/es/blog/guia-marina-da-gloria/"
+    },
+    {
+      "id": "privacy",
+      "pt": "/politica-de-privacidade/",
+      "en": "/en/privacy-policy/",
+      "es": "/es/politica-de-privacidad/"
+    },
+    {
+      "id": "terms",
+      "pt": "/termos-de-uso/",
+      "en": "/en/terms-of-use/",
+      "es": "/es/terminos-de-uso/"
+    },
+    {
+      "id": "checkout",
+      "pt": "/checkout/",
+      "en": "/en/checkout/",
+      "es": "/es/checkout/"
+    }
+  ]
+}

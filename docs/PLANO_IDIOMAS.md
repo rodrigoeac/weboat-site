@@ -1,38 +1,43 @@
-# Plano de Internacionalização — WeBoat Site
+# Plano de Internacionalizacao - WeBoat Site
 
-> **Status:** PENDENTE — será planejado em sessão separada
+> **Versao:** 1.0 | **Data:** 2026-02-15
 
-## Escopo Previsto
+## Resumo
 
-### Landing Page em Inglês
-- `en/index.html` — Landing page única em inglês
-- Title: "Boat Rental in Rio de Janeiro | Private Boat Tours | WeBoat"
-- Conteúdo: hero + 4 boats + 6 routes + services + testimonials + FAQ + CTA
-- Schema: LocalBusiness com `availableLanguage: ["pt-BR", "en"]`
-- hreflang tags bidireccionais (PT ↔ EN)
-- WhatsApp: "Hi! I'd like info about boat rental in Rio de Janeiro."
+Site traduzido para EN e ES usando subdiretorios (`/en/`, `/es/`). Slugs traduzidos por idioma. R$ (BRL) em todos os idiomas. Lanchas parceiras apenas em PT.
 
-### Infraestrutura de hreflang
-- Homepage PT: `<link rel="alternate" hreflang="pt-BR" href=".../">`
-- Homepage EN: `<link rel="alternate" hreflang="en" href=".../en/">`
+## Estrutura
 
-### CSS
-- Reusar home.css (layout idêntico, só texto muda)
+- **PT (raiz):** 55 paginas (existentes)
+- **EN (`/en/`):** 38 paginas (5 lanchas proprias + compare, sem parceiras)
+- **ES (`/es/`):** 38 paginas (idem)
 
-### SEO
-- Atualizar robots.txt, sitemap.xml, llms.txt
+## URL Registry
 
-### GEO Avançado (opcional)
-- Landing pages por bairro (Copacabana, Botafogo)
-- Schema TouristDestination por bairro
+Fonte canonica: `docs/i18n-registry.json`
 
-## Considerações para o Plano
-- Definir escopo: apenas 1 landing page EN ou multi-page?
-- Tradução: manter tom "Coastal Premium" em inglês
-- SEO: keyword research para "boat rental rio de janeiro"
-- Manutenção: como manter sync PT/EN no site estático?
-- Possibilidade de espanhol (turismo argentino/latino)
+## Language Detection
 
-## Referência
-- Originalmente planejado como Fase 8 do plano de melhorias
-- Removido para ser tratado como projeto independente
+- Baseada na URL (`/en/` -> en, `/es/` -> es, raiz -> pt)
+- Module: `js/i18n.js`
+- Sem redirect automatico (sem deteccao de browser language)
+
+## hreflang Tags
+
+Todas as paginas incluem 4 tags hreflang no head.
+
+## Language Switcher
+
+Dropdown com bandeiras no header. Navega direto para a versao equivalente da pagina atual.
+
+## Convencoes
+
+1. Cada pagina traduzida inclui: `<!-- i18n: translated from PT version 2026-02-15 -->`
+2. Nomes de lanchas e lugares permanecem em PT em todos os idiomas
+3. Moeda sempre R$ (BRL)
+4. WhatsApp messages no idioma da pagina
+5. Caminhos CSS/JS absolutos (funcionam de qualquer subdiretorio)
+
+## Manutencao
+
+Ao modificar conteudo de qualquer pagina PT, atualizar as versoes EN e ES equivalentes.
