@@ -98,81 +98,68 @@ Site: https://www.weboatbrasil.com.br
 weboat-site/
 ├── CLAUDE.md                    ← VOCÊ ESTÁ AQUI
 ├── _redirects                   ← Cloudflare Pages redirects (Wix + old URLs)
-├── index.html                   ← Homepage
-├── lanchas/
-│   ├── index.html               ← Listagem de lanchas
-│   ├── weboat-32/index.html     ← Lanchas próprias (pasta/index.html)
-│   ├── weboat-390/index.html
-│   ├── weboat-oceanic-36/index.html
-│   ├── weboat-rio-star-50/index.html
-│   ├── weboat-ibiza-42/index.html
-│   ├── comparativo/index.html
-│   ├── magna-28/index.html      ← Parceiras (achatadas, sem /parceiras/)
-│   ├── malaga-32/index.html
-│   └── ... (21 parceiras total)
-├── roteiros/
-│   ├── index.html               ← Listagem de roteiros
-│   ├── mureta-da-urca/index.html
-│   ├── praia-vermelha/index.html
-│   ├── copacabana/index.html
-│   ├── ilhas-cagarras/index.html
-│   ├── itaipu-camboinhas/index.html
-│   └── volta-completa/index.html
-├── despedida-solteira/index.html ← Ocasiões (raiz, sem /ocasioes/)
-├── aniversario/index.html
-├── corporativo/index.html
-├── reveillon/index.html
-├── carnaval/index.html
-├── servicos/index.html
-├── sobre/index.html
-├── faq/index.html
-├── contato/index.html
-├── como-funciona/index.html
-├── areas-atendidas/index.html
-├── blog/
-│   ├── index.html
-│   ├── melhores-praias-lancha-rj/index.html
-│   ├── o-que-vestir-passeio-lancha/index.html
-│   └── guia-marina-da-gloria/index.html
+├── index.html                   ← Homepage (PT)
+├── lanchas/                     ← 5 próprias + 21 parceiras + comparativo
+├── roteiros/                    ← 6 roteiros + listagem
+├── despedida-solteira/          ← Ocasiões na raiz
+├── aniversario/
+├── corporativo/
+├── reveillon/
+├── carnaval/
+├── servicos/ sobre/ faq/ contato/ como-funciona/ areas-atendidas/
+├── blog/                        ← 3 artigos + index
+├── politica-de-privacidade/ termos-de-uso/ checkout/
+│
+├── en/                          ← 🌐 INGLÊS (38 páginas)
+│   ├── index.html               ← EN Homepage
+│   ├── boats/                   ← 5 own boats + compare (no partners)
+│   ├── routes/                  ← 6 routes + listing
+│   ├── bachelorette-party/ birthday-party/ corporate-events/
+│   ├── new-years-eve/ carnival/
+│   ├── services/ about/ faq/ contact/ how-it-works/ service-areas/
+│   ├── blog/                    ← 3 articles + index
+│   ├── privacy-policy/ terms-of-use/ checkout/
+│
+├── es/                          ← 🌐 ESPANHOL (38 páginas)
+│   ├── index.html               ← ES Homepage
+│   ├── lanchas/                 ← 5 lanchas + comparar (sin socias)
+│   ├── rutas/                   ← 6 rutas + listado
+│   ├── despedida-de-soltera/ cumpleanos/ eventos-corporativos/
+│   ├── ano-nuevo/ carnaval/
+│   ├── servicios/ sobre-nosotros/ preguntas-frecuentes/ contacto/
+│   ├── como-funciona/ areas-de-servicio/
+│   ├── blog/ politica-de-privacidad/ terminos-de-uso/ checkout/
+│
 ├── css/
 │   ├── variables.css            ← Design System (NÃO ALTERAR)
-│   ├── components.css           ← Componentes (NÃO ALTERAR)
-│   ├── header.css               ← Estilos do header
-│   ├── footer.css               ← Estilos do footer
-│   └── pages/
-│       ├── home.css
-│       ├── frota.css
-│       ├── lancha-detalhe.css
-│       ├── roteiros.css
-│       ├── ocasioes.css
-│       ├── sobre.css
-│       ├── faq.css
-│       └── contato.css
+│   ├── components.css           ← Componentes + language switcher
+│   ├── header.css / footer.css
+│   └── pages/ (home, frota, lancha-detalhe, roteiros, ocasioes, sobre, faq, contato)
 ├── js/
-│   ├── main.js                  ← Scripts gerais
-│   ├── menu.js                  ← Toggle menu mobile
-│   └── form.js                  ← Validação de formulários
-├── assets/
-│   └── images/
-│       ├── logo/
-│       ├── lanchas/
-│       ├── roteiros/
-│       └── hero/
-├── templates/
-│   └── template-page.html       ← Template base
-├── docs/                        ← Documentação de referência
-│   ├── weboat_schema_org.md     ← SCHEMAS JSON-LD COMPLETOS
+│   ├── i18n.js                  ← 🌐 i18n: lang detection, t(), url(), formatNumber()
+│   ├── main.js                  ← Scripts gerais (i18n-aware)
+│   ├── menu.js                  ← Toggle menu mobile (i18n-aware)
+│   ├── form.js                  ← Validação de formulários (i18n-aware)
+│   ├── checkout.js              ← Checkout flow (i18n-aware)
+│   ├── proposal-builder.js      ← Proposta builder (i18n-aware)
+│   ├── servicos-configurator.js ← Configurador serviços (i18n-aware)
+│   └── data/servicos-data.js    ← Dados de serviços (i18n-aware)
+├── scripts/
+│   ├── generate-en-pages.js     ← Node.js: gera EN pages a partir de PT
+│   ├── generate-es-pages.js     ← Node.js: gera ES pages a partir de PT
+│   └── generate-sitemap.js      ← Node.js: gera sitemap com alternates
+├── assets/images/ (logo, lanchas, roteiros, hero)
+├── templates/ template-page.html
+├── docs/
+│   ├── i18n-registry.json       ← 🌐 Mapeamento PT↔EN↔ES de URLs
+│   ├── weboat_schema_org.md
 │   ├── weboat_copywriting_seo.md
-│   ├── weboat_ui_design_system_CORRIGIDO.md
-│   ├── weboat_wireframes.md
-│   ├── weboat_site_documentation.md
-│   ├── weboat_integracoes.md
-│   └── RULES_CORRIGIDO.md
-├── sitemap.xml
+│   └── ... (mais docs)
+├── sitemap.xml                  ← 117 URLs com xhtml:link alternates
 └── robots.txt
 ```
 
-> **NOTA:** URLs são limpas (sem .html). Cloudflare Pages serve `folder/index.html` automaticamente.
+> **NOTA:** URLs limpas (sem .html). Cloudflare Pages serve `folder/index.html` automaticamente.
 > Exemplo: `/lanchas/weboat-32/` serve `lanchas/weboat-32/index.html`
 
 ---
@@ -219,6 +206,66 @@ weboat-site/
 | Ilhas Cagarras | 5h | R$ 3.600 | Mar aberto |
 | Itaipu e Camboinhas | 5h | R$ 3.600 | Praias desertas |
 | Volta Completa | 5h | R$ 4.500 | Experiência completa |
+
+---
+
+## 🌐 INTERNACIONALIZAÇÃO (i18n)
+
+### Idiomas: PT (raiz), EN (`/en/`), ES (`/es/`)
+
+**Contagem de páginas:** 53 PT + 38 EN + 38 ES = 129 páginas total
+- PT tem 21 parceiras extras (lanchas parceiras não traduzidas)
+- EN/ES mostram seção "partner boats" com CTA WhatsApp em vez de páginas individuais
+
+### Arquitetura i18n
+
+1. **`js/i18n.js`** — Módulo central (IIFE → `window.WeBoatI18n`)
+   - `WeBoatI18n.lang` — idioma detectado pela URL (`pt`, `en`, `es`)
+   - `WeBoatI18n.t(key, fallback)` — traduz string
+   - `WeBoatI18n.url(pageKey)` — resolve URL no idioma correto
+   - `WeBoatI18n.formatNumber(n)` — formata número com locale
+   - `WeBoatI18n.waUrl(text)` — gera link WhatsApp
+   - Contém ~120 chaves por idioma (forms, checkout, proposal, configurator, menu)
+   - GTM: faz `dataLayer.push({pageLanguage: lang})` automaticamente
+
+2. **`docs/i18n-registry.json`** — Single source of truth para URLs
+   - Mapeia cada página PT → EN → ES (slug traduzido)
+   - Usado por scripts de geração e sitemap
+
+3. **Language Switcher** — Dropdown com bandeiras no header de todas as páginas
+   - CSS em `css/components.css` (`.language-switcher`)
+   - Links diretos para a mesma página no outro idioma
+
+4. **hreflang** — Todas as páginas PT/EN/ES têm:
+   ```html
+   <link rel="alternate" hreflang="pt-BR" href="...">
+   <link rel="alternate" hreflang="en" href="...">
+   <link rel="alternate" hreflang="es" href="...">
+   <link rel="alternate" hreflang="x-default" href="...">
+   ```
+
+5. **Sitemap** — 117 URLs com `xhtml:link` alternates trilíngues
+
+### Regras para Manutenção
+
+- **Ao modificar conteúdo de qualquer página PT, atualizar EN/ES equivalentes**
+- Cada página traduzida tem: `<!-- i18n: translated from PT version YYYY-MM-DD -->`
+- Nomes de lanchas e lugares (Mureta da Urca, Praia Vermelha) ficam em PT em todos os idiomas
+- Moeda: sempre R$ (BRL) em todos os idiomas
+- Todos os JS usam pattern `var I = window.WeBoatI18n; function t(key, fb) { ... }` com fallback PT
+
+### Scripts de Geração (em `scripts/`)
+
+```bash
+# Regenerar páginas EN (a partir das PT atuais)
+node scripts/generate-en-pages.js
+
+# Regenerar páginas ES
+node scripts/generate-es-pages.js
+
+# Regenerar sitemap.xml
+node scripts/generate-sitemap.js
+```
 
 ---
 
@@ -602,7 +649,8 @@ COMMIT: "chore: SEO e finalização"
 
 ### Google Tag Manager
 - **Container ID:** GTM-K9LG4M2
-- Instalado em todas as 53 páginas HTML (head script + body noscript)
+- Instalado em todas as 129 páginas HTML (53 PT + 38 EN + 38 ES)
+- `dataLayer.push({pageLanguage: 'en'})` via i18n.js para segmentação por idioma
 - GA4, Ads, Meta Pixel e demais tags gerenciados via GTM
 
 ### TODO — Pós-Migração
@@ -676,5 +724,5 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 
 ---
 
-**Última atualização:** Fevereiro 2026
-**Versão:** 3.0 - Clean URLs + Cloudflare Pages
+**Última atualização:** 15 Fevereiro 2026
+**Versão:** 4.0 - i18n completo (PT + EN + ES)
