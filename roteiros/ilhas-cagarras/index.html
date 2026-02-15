@@ -17,6 +17,11 @@
   <meta name="description" content="Passeio de lancha nas Ilhas Cagarras - aventura em mar aberto! 5h de navegacao, mergulho em aguas cristalinas. Reserve agora!">
   <meta name="keywords" content="passeio de lancha ilhas cagarras, lancha ilhas cagarras, mergulho ilhas cagarras, tour lancha mar aberto, passeio barco rio">
   <link rel="canonical" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/">
+  <!-- hreflang -->
+  <link rel="alternate" hreflang="pt-BR" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/">
+  <link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/routes/ilhas-cagarras/">
+  <link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/rutas/ilhas-cagarras/">
+  <link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/">
   <link rel="icon" type="image/svg+xml" href="/assets/images/logo/favicon.svg">
   <meta name="robots" content="index, follow">
 
@@ -29,6 +34,8 @@
   <meta property="og:url" content="https://www.weboatbrasil.com.br/roteiros/ilhas-cagarras/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:locale:alternate" content="es_ES">
   <meta property="og:site_name" content="WeBoat Brasil">
 
   <!-- Twitter -->
@@ -252,6 +259,28 @@
           <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           <span>WhatsApp</span>
         </a>
+        <!-- Language Switcher -->
+        <div class="lang-switcher" id="lang-switcher">
+          <button class="lang-switcher__current" aria-expanded="false" aria-haspopup="true" aria-label="Idioma: Portugues">
+            <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#229e45" d="M0 0h640v480H0z"/><path fill="#f8e509" d="m321.4 20 301.5 220.1L321.4 460 19.9 240.1z"/><circle fill="#2b49a3" cx="321.4" cy="240" r="110"/></svg>
+            PT
+            <i class="ph ph-caret-down lang-switcher__caret" aria-hidden="true"></i>
+          </button>
+          <div class="lang-switcher__menu" role="menu">
+            <a href="/roteiros/ilhas-cagarras/" class="lang-switcher__option lang-switcher__option--active" role="menuitem">
+              <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#229e45" d="M0 0h640v480H0z"/><path fill="#f8e509" d="m321.4 20 301.5 220.1L321.4 460 19.9 240.1z"/><circle fill="#2b49a3" cx="321.4" cy="240" r="110"/></svg>
+              Portugues
+            </a>
+            <a href="/en/routes/ilhas-cagarras/" class="lang-switcher__option" role="menuitem">
+              <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#bd3d44" d="M0 0h640v480H0z"/><path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/><path fill="#192f5d" d="M0 0h364.8v258.5H0z"/></svg>
+              English
+            </a>
+            <a href="/es/rutas/ilhas-cagarras/" class="lang-switcher__option" role="menuitem">
+              <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#c60b1e" d="M0 0h640v480H0z"/><path fill="#ffc400" d="M0 120h640v240H0z"/></svg>
+              Espanol
+            </a>
+          </div>
+        </div>
 
         <button class="header__mobile-toggle"
                 aria-label="Abrir menu"
@@ -286,6 +315,21 @@
           <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
           Fale pelo WhatsApp
         </a>
+      
+        <div class="lang-switcher--mobile">
+          <a href="/roteiros/ilhas-cagarras/" class="active">
+            <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#229e45" d="M0 0h640v480H0z"/><path fill="#f8e509" d="m321.4 20 301.5 220.1L321.4 460 19.9 240.1z"/><circle fill="#2b49a3" cx="321.4" cy="240" r="110"/></svg>
+            PT
+          </a>
+          <a href="/en/routes/ilhas-cagarras/">
+            <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#bd3d44" d="M0 0h640v480H0z"/><path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/><path fill="#192f5d" d="M0 0h364.8v258.5H0z"/></svg>
+            EN
+          </a>
+          <a href="/es/rutas/ilhas-cagarras/">
+            <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#c60b1e" d="M0 0h640v480H0z"/><path fill="#ffc400" d="M0 120h640v240H0z"/></svg>
+            ES
+          </a>
+        </div>
       </nav>
     </div>
   </header>
@@ -800,6 +844,7 @@
   </a>
 
   <!-- Scripts -->
+  <script src="/js/i18n.js" defer></script>
   <script src="/js/menu.js" defer></script>
   <script src="/js/main.js" defer></script>
 </body>

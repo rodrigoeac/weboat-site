@@ -173,4 +173,26 @@
 
   highlightActiveLink();
 
+  // ============================================
+  // LANGUAGE SWITCHER
+  // ============================================
+  var langSwitcher = document.getElementById('lang-switcher');
+  if (langSwitcher) {
+    var langBtn = langSwitcher.querySelector('.lang-switcher__current');
+
+    langBtn.addEventListener('click', function(event) {
+      event.stopPropagation();
+      var isOpen = langSwitcher.classList.contains('active');
+      langSwitcher.classList.toggle('active', !isOpen);
+      langBtn.setAttribute('aria-expanded', !isOpen);
+    });
+
+    document.addEventListener('click', function(event) {
+      if (!langSwitcher.contains(event.target)) {
+        langSwitcher.classList.remove('active');
+        langBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+
 })();
