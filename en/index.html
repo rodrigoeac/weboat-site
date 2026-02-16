@@ -23,13 +23,14 @@
   <link rel="alternate" hreflang="en" href="https://www.weboatbrasil.com.br/en/">
   <link rel="alternate" hreflang="es" href="https://www.weboatbrasil.com.br/es/">
   <link rel="alternate" hreflang="x-default" href="https://www.weboatbrasil.com.br/">
+  
   <link rel="icon" type="image/svg+xml" href="/assets/images/logo/favicon.svg">
   <meta name="robots" content="index, follow">
   <meta name="author" content="WeBoat Brasil">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Boat Rental in Rio de Janeiro | WeBoat Brasil">
-  <meta property="og:description" content="Private boat trips in Rio de Janeiro. From Sugarloaf Mountain to Cagarras Islands, live unforgettable experiences at sea.">
+  <meta property="og:description" content="Boat rental in Rio de Janeiro with 5 own boats. Private boat trips for parties, birthdays, and bachelorette parties. 1,000+ 5-star reviews. Book now!">
   <meta property="og:image" content="https://www.weboatbrasil.com.br/assets/images/og/home.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -43,8 +44,10 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Boat Rental in Rio de Janeiro | WeBoat Brasil">
-  <meta name="twitter:description" content="Private boat trips in Rio de Janeiro. 1,000+ 5-star reviews.">
+  <meta name="twitter:description" content="Boat rental in Rio de Janeiro with 5 own boats. Private boat trips for parties, birthdays, and bachelorette parties. 1,000+ 5-star reviews. Book now!">
   <meta name="twitter:image" content="https://www.weboatbrasil.com.br/assets/images/og/home.jpg">
+
+  <!-- Favicon -->
 
   <!-- Preconnect & DNS Prefetch -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,16 +56,16 @@
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&amp;family=DM+Sans:wght@500;600&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"></noscript>
   <link rel="dns-prefetch" href="https://cdn.trustindex.io">
 
-  <!-- Preload Hero Images (LCP) -->
+  <!-- Preload Hero Images (LCP) - AVIF preferred, WebP fallback -->
   <link rel="preload" as="image" href="/assets/images/hero/hero-home-desktop-1600w.avif" media="(min-width: 769px)" fetchpriority="high" type="image/avif">
   <link rel="preload" as="image" href="/assets/images/hero/hero-home-mobile-800w.avif" media="(max-width: 768px)" fetchpriority="high" type="image/avif">
 
-  <!-- CSS -->
+  <!-- CSS Crítico (above-fold: variáveis, header, hero, skeleton) -->
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/header.css">
   <link rel="stylesheet" href="/css/pages/home.css">
 
-  <!-- Inline performance.css -->
+  <!-- Inline performance.css + TrustIndex CLS fix (avoids extra request) -->
   <style>
     @keyframes skeleton-shimmer{0%{background-position:-400px 0}100%{background-position:400px 0}}
     img[loading="lazy"]{background:linear-gradient(90deg,var(--pearl-gray) 0%,#e8e8e4 40%,var(--pearl-gray) 80%);background-size:800px 100%;animation:skeleton-shimmer 1.5s infinite linear;opacity:0;transition:opacity .3s ease}
@@ -75,7 +78,7 @@
   <link rel="stylesheet" href="/css/pages/home-below.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/pages/home-below.css"></noscript>
 
-  <!-- Critical component styles -->
+  <!-- Critical component styles (inline to avoid FOUC while components.css loads async) -->
   <style>
     .btn{display:inline-flex;align-items:center;justify-content:center;gap:var(--space-2);padding:var(--space-3) var(--space-6);font-family:var(--font-heading);font-size:var(--text-button);font-weight:var(--weight-button);letter-spacing:var(--tracking-button);text-decoration:none;border-radius:var(--radius-md);border:2px solid transparent;cursor:pointer;transition:all var(--transition-base);min-height:48px;white-space:nowrap}
     .btn:focus-visible{outline:2px solid var(--wave-blue);outline-offset:2px}
@@ -98,25 +101,25 @@
     @media(max-width:768px){.back-to-top{bottom:var(--space-4);left:var(--space-4);width:44px;height:44px;font-size:1.1rem}}
   </style>
 
-  <!-- CSS (async) -->
+  <!-- CSS Não-Crítico (below-fold: components, footer) - carrega async -->
   <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
   <link rel="stylesheet" href="/css/footer.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/footer.css"></noscript>
 
-  <!-- Schema.org - FAQPage EN -->
+  <!-- Schema.org - FAQPage (GEO/SEO para IA) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "dateModified": "2026-02-15",
+    "dateModified": "2026-02-12",
     "mainEntity": [
       {
         "@type": "Question",
         "name": "How much does it cost to rent a boat in Rio de Janeiro?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Boat rental in Rio de Janeiro starts at R$ 2,300 (approx. USD 400) for a 5-hour trip. Prices vary by boat size (10-65 people), day of the week (Mon-Thu is cheaper than Fri-Sun), and chosen route. Fuel, captain, and equipment are included."
+          "text": "Boat rental in Rio de Janeiro starts at R$ 2,300 for a 5-hour trip. Prices vary by boat size (10 to 65 people), day of the week (Mon-Thu is cheaper than Fri-Sun) and chosen route. Fuel, captain and equipment are included."
         }
       },
       {
@@ -124,7 +127,7 @@
         "name": "What is included in the boat rental?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "All trips include fuel, experienced captain, coolers, Bluetooth sound system, floating mat, pool noodles, and life jackets. You only pay extra for optional add-ons like BBQ (R$ 250-600), decoration, and open bar."
+          "text": "All trips include fuel, experienced captain, coolers, Bluetooth speakers, floating mat, pool noodles and life jackets. You only pay extra for optional add-ons like BBQ (R$ 250-600), decoration and open bar."
         }
       },
       {
@@ -140,7 +143,7 @@
         "name": "How does a bachelorette party on a boat work?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "A bachelorette party on a boat is one of our most popular trips. We offer packages with themed decoration, drinks, and party games. Ideal for groups of 8-20 friends. Most popular route: Mureta da Urca with a photo stop at Sugarloaf Mountain."
+          "text": "A bachelorette party on a boat is one of our most popular trips. We offer packages with themed decoration, drinks and party games. Ideal for groups of 8-20 friends. Most popular route: Mureta da Urca with a photo stop at Sugarloaf Mountain."
         }
       },
       {
@@ -170,8 +173,7 @@
     "@type": "WebSite",
     "name": "WeBoat Brasil",
     "url": "https://www.weboatbrasil.com.br",
-    "description": "Boat rental in Rio de Janeiro for private trips",
-    "inLanguage": "en",
+    "description": "Boat rentals in Rio de Janeiro para private trips",
     "publisher": {
       "@type": "Organization",
       "name": "WeBoat Brasil",
@@ -179,11 +181,16 @@
         "@type": "ImageObject",
         "url": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png"
       }
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://wa.me/5521977724114?text={search_term_string} [via site - home]",
+      "query-input": "required name=search_term_string"
     }
   }
   </script>
 
-  <!-- Schema.org - LocalBusiness -->
+  <!-- Schema.org - LocalBusiness (GEO/SEO para IA) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -192,9 +199,25 @@
     "name": "WeBoat Brasil",
     "alternateName": "WeBoat",
     "image": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png",
-    "description": "Boat rental company in Rio de Janeiro specializing in private trips. Offering boats for 10-65 people for parties, bachelorette parties, birthdays, and corporate events, departing from Marina da Gloria.",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://www.weboatbrasil.com.br/assets/images/logo/logo.png"
+    },
+    "description": "Boat rental company in Rio de Janeiro specializing in private trips. Offering boats for 10-65 people for parties, bachelorette parties, birthdays and corporate events, departing from Marina da Gloria.",
     "slogan": "Your moment at sea in Rio",
     "foundingDate": "2018",
+    "knowsAbout": [
+      "boat rental",
+      "boat trip Rio de Janeiro",
+      "party on a boat",
+      "bachelorette party at sea",
+      "birthday on a boat",
+      "corporate nautical event",
+      "New Year's Eve in Copacabana",
+      "Cagarras Islands route",
+      "Mureta da Urca route",
+      "Copacabana boat trip"
+    ],
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Gloria",
@@ -208,10 +231,23 @@
       "latitude": "-22.9219",
       "longitude": "-43.1679"
     },
+    "areaServed": {
+      "@type": "City",
+      "name": "Rio de Janeiro",
+      "sameAs": "https://www.wikidata.org/wiki/Q8678"
+    },
     "telephone": "+5521977724114",
+    "email": "contato@weboatbrasil.com.br",
     "url": "https://www.weboatbrasil.com.br",
     "priceRange": "$$",
     "currenciesAccepted": "BRL",
+    "paymentAccepted": "Dinheiro, PIX, Credit Card, Cartão de Débito",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "08:00",
+      "closes": "20:00"
+    },
     "aggregateRating": {
       "@type": "AggregateRating",
       "ratingValue": "5",
@@ -219,11 +255,44 @@
       "bestRating": "5",
       "worstRating": "1"
     },
+    "sameAs": [
+      "https://www.instagram.com/weboatbrasil",
+      "https://www.facebook.com/weboatbrasil",
+      "https://www.google.com/maps/place/WeBoat+Brasil"
+    ],
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+5521977724114",
       "contactType": "customer service",
-      "availableLanguage": ["Portuguese", "English", "Spanish"]
+      "availableLanguage": ["Portuguese", "English", "Spanish"],
+      "areaServed": "BR"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Boats for Rent",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Boat for up to 15 people"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Boat para up to 22 people"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Product",
+            "name": "Boat para up to 65 people"
+          }
+        }
+      ]
     }
   }
   </script>
@@ -370,7 +439,7 @@
           <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile-800w.avif 800w" sizes="100vw" type="image/avif">
           <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile-800w.webp 800w, /assets/images/hero/hero-home-mobile-1600w.webp 1600w" sizes="100vw" type="image/webp">
           <source media="(max-width: 768px)" srcset="/assets/images/hero/hero-home-mobile.jpg">
-          <img src="/assets/images/hero/hero-home-desktop.jpg" alt="Boat cruising in Guanabara Bay with Christ the Redeemer in the background at sunset" loading="eager" decoding="sync" fetchpriority="high" width="1920" height="1280">
+          <img src="/assets/images/hero/hero-home-desktop.jpg" alt="Boat cruising in Guanabara Bay with view of Christ the Redeemer at sunset" loading="eager" decoding="sync" fetchpriority="high" width="1920" height="1280">
         </picture>
       </div>
       <div class="hero__overlay"></div>
@@ -384,7 +453,7 @@
           experiences at sea with comfort and safety.
         </p>
         <div class="hero__ctas">
-          <a href="https://wa.me/5521977724114?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]"
+          <a href="https://wa.me/5521977724114?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - home]"
              class="btn btn-primary btn-lg"
              target="_blank"
              rel="noopener noreferrer">
@@ -403,11 +472,11 @@
     </section>
 
     <!-- Social Proof Section -->
-    <section class="social-proof" aria-label="WeBoat numbers">
+    <section class="social-proof" aria-label="Números da WeBoat">
       <div class="container">
         <div class="social-proof__grid">
           <div class="social-proof__item">
-            <span class="social-proof__number" data-counter data-target="1000">+1,000</span>
+            <span class="social-proof__number" data-counter data-target="1000">+1.000</span>
             <span class="social-proof__label">trips completed</span>
           </div>
           <div class="social-proof__item">
@@ -415,7 +484,7 @@
             <span class="social-proof__label">own boats</span>
           </div>
           <div class="social-proof__item">
-            <span class="social-proof__number" data-counter data-target="1000">+1,000</span>
+            <span class="social-proof__number" data-counter data-target="1000">+1.000</span>
             <span class="social-proof__label">5-star reviews</span>
           </div>
           <div class="social-proof__item">
@@ -426,7 +495,7 @@
       </div>
     </section>
 
-    <!-- Boats Section -->
+    <!-- Lanchas Section -->
     <section class="lanchas section" id="lanchas">
       <div class="container">
         <header class="section-header">
@@ -476,11 +545,11 @@
             <div class="card-boat__footer">
               <div class="card-boat__prices">
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 2,300</span>
+                  <span class="card-boat__price">R$ 2.300</span>
                   <span class="card-boat__price-note">Mon-Thu</span>
                 </div>
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 2,700</span>
+                  <span class="card-boat__price">R$ 2.700</span>
                   <span class="card-boat__price-note">Fri-Sun</span>
                 </div>
               </div>
@@ -493,7 +562,7 @@
             <div class="card-boat__image">
               <picture>
                 <source srcset="/assets/images/lanchas/weboat-390-400w.webp 400w, /assets/images/lanchas/weboat-390-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
-                <img src="/assets/images/lanchas/weboat-390.jpg" alt="WeBoat 390 - Boat for 16 people with BBQ grill" loading="lazy" decoding="async" width="400" height="300">
+                <img src="/assets/images/lanchas/weboat-390.jpg" alt="WeBoat 390 - Boat for 16 people com BBQ grill" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-boat__badge">
                 <i class="ph ph-star-fill" aria-hidden="true"></i>
@@ -524,11 +593,11 @@
             <div class="card-boat__footer">
               <div class="card-boat__prices">
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 2,600</span>
+                  <span class="card-boat__price">R$ 2.600</span>
                   <span class="card-boat__price-note">Mon-Thu</span>
                 </div>
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 3,100</span>
+                  <span class="card-boat__price">R$ 3.100</span>
                   <span class="card-boat__price-note">Fri-Sun</span>
                 </div>
               </div>
@@ -572,11 +641,11 @@
             <div class="card-boat__footer">
               <div class="card-boat__prices">
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 2,400</span>
+                  <span class="card-boat__price">R$ 2.400</span>
                   <span class="card-boat__price-note">Mon-Thu</span>
                 </div>
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 2,800</span>
+                  <span class="card-boat__price">R$ 2.800</span>
                   <span class="card-boat__price-note">Fri-Sun</span>
                 </div>
               </div>
@@ -620,11 +689,11 @@
             <div class="card-boat__footer">
               <div class="card-boat__prices">
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 2,700</span>
+                  <span class="card-boat__price">R$ 2.700</span>
                   <span class="card-boat__price-note">Mon-Thu</span>
                 </div>
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 3,200</span>
+                  <span class="card-boat__price">R$ 3.200</span>
                   <span class="card-boat__price-note">Fri-Sun</span>
                 </div>
               </div>
@@ -668,11 +737,11 @@
             <div class="card-boat__footer">
               <div class="card-boat__prices">
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 4,000</span>
+                  <span class="card-boat__price">R$ 4.000</span>
                   <span class="card-boat__price-note">Mon-Thu</span>
                 </div>
                 <div class="card-boat__price-block">
-                  <span class="card-boat__price">R$ 4,500</span>
+                  <span class="card-boat__price">R$ 4.500</span>
                   <span class="card-boat__price-note">Fri-Sun</span>
                 </div>
               </div>
@@ -681,8 +750,8 @@
           </article>
         </div>
 
-        <p class="lanchas__note">*Prices shown for Route 1 - Mureta da Urca. Ask about other routes.</p>
-        <p class="lanchas__note">*Mon-Thu promotional prices are not valid during holidays and festive periods.</p>
+        <p class="lanchas__note">*Prices for Route 1 - Mureta da Urca. Contact us for other route prices.</p>
+        <p class="lanchas__note">*Promotional Mon-Thu prices are not valid during festive periods and holidays.</p>
 
         <div class="lanchas__cta">
           <a href="/en/boats/" class="btn btn-primary">
@@ -693,15 +762,15 @@
       </div>
     </section>
 
-    <!-- Partner Boats for Events Section -->
+    <!-- Eventos 30+ Section -->
     <section class="eventos section" id="eventos">
       <div class="container">
         <header class="section-header">
           <span class="section-header__overline">Large Groups</span>
-          <h2 class="section-header__title">Partner Boats for Events &amp; Parties (30+ people)</h2>
+          <h2 class="section-header__title">Boats for Events and Parties (30+ people)</h2>
           <p class="section-header__description">
-            Planning a corporate event, party, or large gathering?
-            We have partner boats for groups of 30 to 65 people with all the infrastructure you need.
+            Organizing a corporate event, party or large celebration?
+            We have vessels for groups of 30 to 65 people with all the necessary facilities.
           </p>
         </header>
 
@@ -711,7 +780,7 @@
             <div class="card-evento__image">
               <picture>
                 <source srcset="/assets/images/lanchas/parceiras/barco-gourmet-53-400w.webp 400w, /assets/images/lanchas/parceiras/barco-gourmet-53-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
-                <img src="/assets/images/lanchas/parceiras/barco-gourmet-53.jpg" alt="Barco Gourmet 53 - Events for 30-40 people" loading="lazy" decoding="async" width="400" height="300">
+                <img src="/assets/images/lanchas/parceiras/barco-gourmet-53.jpg" alt="Barco Gourmet 53 - Events para 30-40 people" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-evento__badge"><i class="ph ph-champagne" aria-hidden="true"></i> Events</span>
             </div>
@@ -719,8 +788,8 @@
               <h3 class="card-evento__title">Barco Gourmet 53</h3>
               <p class="card-evento__capacity"><i class="ph ph-users" aria-hidden="true"></i> 30-40 people</p>
               <p class="card-evento__features">Ideal for corporate events and parties</p>
-              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 7,000</p>
-              <a href="https://wa.me/5521977724114?text=Hello! I would like information about the Barco Gourmet 53 for my event. [via site - en]" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Request Quote</a>
+              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 7.000</p>
+              <a href="/lanchas/barco-gourmet-53/" class="btn btn-secondary btn-sm">View Details</a>
             </div>
           </article>
 
@@ -729,7 +798,7 @@
             <div class="card-evento__image">
               <picture>
                 <source srcset="/assets/images/lanchas/parceiras/weboat-malik-400w.webp 400w, /assets/images/lanchas/parceiras/weboat-malik-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
-                <img src="/assets/images/lanchas/parceiras/weboat-malik.jpg" alt="WeBoat Malik - Events for 35-50 people" loading="lazy" decoding="async" width="400" height="300">
+                <img src="/assets/images/lanchas/parceiras/weboat-malik.jpg" alt="WeBoat Malik - Events para 35-50 people" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-evento__badge"><i class="ph ph-speaker-high" aria-hidden="true"></i> Pro Sound</span>
             </div>
@@ -737,8 +806,8 @@
               <h3 class="card-evento__title">WeBoat Malik</h3>
               <p class="card-evento__capacity"><i class="ph ph-users" aria-hidden="true"></i> 35-50 people</p>
               <p class="card-evento__features">4 active PZ speakers + generator included</p>
-              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 8,500</p>
-              <a href="https://wa.me/5521977724114?text=Hello! I would like information about the WeBoat Malik for my event. [via site - en]" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Request Quote</a>
+              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 8.500</p>
+              <a href="/lanchas/weboat-malik/" class="btn btn-secondary btn-sm">View Details</a>
             </div>
           </article>
 
@@ -747,7 +816,7 @@
             <div class="card-evento__image">
               <picture>
                 <source srcset="/assets/images/lanchas/parceiras/catamara-oceano-400w.webp 400w, /assets/images/lanchas/parceiras/catamara-oceano-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
-                <img src="/assets/images/lanchas/parceiras/catamara-oceano.jpg" alt="Catamaran Oceano - Largest vessel for 50-65 people" loading="lazy" decoding="async" width="400" height="300">
+                <img src="/assets/images/lanchas/parceiras/catamara-oceano.jpg" alt="Catamarã Oceano - Largest vessel for 50-65 people" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-evento__badge"><i class="ph ph-crown" aria-hidden="true"></i> Largest Capacity</span>
             </div>
@@ -755,25 +824,25 @@
               <h3 class="card-evento__title">Catamarã Oceano</h3>
               <p class="card-evento__capacity"><i class="ph ph-users" aria-hidden="true"></i> 50-65 people</p>
               <p class="card-evento__features">Our largest vessel with generator</p>
-              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 14,000</p>
-              <a href="https://wa.me/5521977724114?text=Hello! I would like information about the Catamaran Oceano for my event. [via site - en]" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Request Quote</a>
+              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 14.000</p>
+              <a href="/lanchas/catamara-oceano/" class="btn btn-secondary btn-sm">View Details</a>
             </div>
           </article>
         </div>
 
         <div class="eventos__cta">
-          <a href="https://wa.me/5521977724114?text=Hello! I would like information about boats for events and large groups. [via site - en]"
+          <a href="https://wa.me/5521977724114?text=Hello! I would like information about lanchas para eventos e grupos grandes. [via site - home]"
              class="btn btn-whatsapp"
              target="_blank"
              rel="noopener noreferrer">
             <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
-            Request an Event Quote
+            Request Quote for Event
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Luxury Yachts Section -->
+    <!-- Luxury Yachts -->
     <section class="eventos eventos--light section" id="iates-luxo">
       <div class="container">
         <header class="section-header">
@@ -781,7 +850,7 @@
           <h2 class="section-header__title">Luxury Yachts</h2>
           <p class="section-header__description">
             Sophistication and comfort for those seeking an exclusive experience.
-            Yachts over 60 feet with air conditioning, generator, and premium finishes.
+            Yachts over 60 feet with air conditioning, generator and premium finish.
           </p>
         </header>
 
@@ -798,9 +867,9 @@
             <div class="card-evento__content">
               <h3 class="card-evento__title">Prestige 60</h3>
               <p class="card-evento__capacity"><i class="ph ph-users" aria-hidden="true"></i> up to 12 people</p>
-              <p class="card-evento__features">60 ft, air conditioning, generator, premium finishes</p>
-              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 15,000</p>
-              <a href="https://wa.me/5521977724114?text=Hello! I would like information about the Prestige 60 luxury yacht. [via site - en]" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Request Quote</a>
+              <p class="card-evento__features">60 feet, ar-condicionado, gerador, acabamento premium</p>
+              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 15.000</p>
+              <a href="/lanchas/prestige-60/" class="btn btn-secondary btn-sm">View Details</a>
             </div>
           </article>
 
@@ -809,16 +878,16 @@
             <div class="card-evento__image">
               <picture>
                 <source srcset="/assets/images/lanchas/parceiras/schaefer-62-fly-400w.webp 400w, /assets/images/lanchas/parceiras/schaefer-62-fly-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
-                <img src="/assets/images/lanchas/parceiras/schaefer-62-fly-400w.jpg" alt="Schaefer 62 Fly at Marina da Gloria with Sugarloaf Mountain in the background" loading="lazy" decoding="async" width="400" height="300">
+                <img src="/assets/images/lanchas/parceiras/schaefer-62-fly-400w.jpg" alt="Schaefer 62 Fly na Marina da Gloria with Sugarloaf Mountain in the background" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-evento__badge"><i class="ph ph-diamond" aria-hidden="true"></i> Luxury</span>
             </div>
             <div class="card-evento__content">
               <h3 class="card-evento__title">Schaefer 62 Fly</h3>
               <p class="card-evento__capacity"><i class="ph ph-users" aria-hidden="true"></i> up to 16 people</p>
-              <p class="card-evento__features">62 ft, flybridge, air conditioning, generator</p>
-              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 15,000</p>
-              <a href="https://wa.me/5521977724114?text=Hello! I would like information about the Schaefer 62 Fly luxury yacht. [via site - en]" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Request Quote</a>
+              <p class="card-evento__features">62 feet, flybridge, ar-condicionado, gerador</p>
+              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 15.000</p>
+              <a href="/lanchas/schaefer-62-fly/" class="btn btn-secondary btn-sm">View Details</a>
             </div>
           </article>
 
@@ -827,41 +896,42 @@
             <div class="card-evento__image">
               <picture>
                 <source srcset="/assets/images/lanchas/parceiras/intermarine-60-fly-400w.webp 400w, /assets/images/lanchas/parceiras/intermarine-60-fly-800w.webp 800w" sizes="(max-width: 768px) 100vw, 300px" type="image/webp">
-                <img src="/assets/images/lanchas/parceiras/intermarine-60-fly-400w.jpg" alt="Intermarine 60 Fly yacht at sea with blue sky" loading="lazy" decoding="async" width="400" height="300">
+                <img src="/assets/images/lanchas/parceiras/intermarine-60-fly-400w.jpg" alt="Iate Intermarine 60 Fly at sea with blue sky" loading="lazy" decoding="async" width="400" height="300">
               </picture>
               <span class="card-evento__badge"><i class="ph ph-diamond" aria-hidden="true"></i> Luxury</span>
             </div>
             <div class="card-evento__content">
               <h3 class="card-evento__title">Intermarine 60 Fly</h3>
               <p class="card-evento__capacity"><i class="ph ph-users" aria-hidden="true"></i> up to 17 people</p>
-              <p class="card-evento__features">60 ft, flybridge, air conditioning, generator</p>
-              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 15,000</p>
-              <a href="https://wa.me/5521977724114?text=Hello! I would like information about the Intermarine 60 Fly luxury yacht. [via site - en]" class="btn btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Request Quote</a>
+              <p class="card-evento__features">60 feet, flybridge, ar-condicionado, gerador</p>
+              <p class="card-evento__price"><span class="card-evento__price-label">from</span> R$ 15.000</p>
+              <a href="/lanchas/intermarine-60-fly/" class="btn btn-secondary btn-sm">View Details</a>
             </div>
           </article>
         </div>
 
         <div class="eventos__cta">
-          <a href="https://wa.me/5521977724114?text=Hello! I would like information about luxury yachts in Rio de Janeiro. [via site - en]"
+          <a href="https://wa.me/5521977724114?text=Hello! I would like information about iates de luxo para passeio no Rio de Janeiro. [via site - home]"
              class="btn btn-whatsapp"
              target="_blank"
              rel="noopener noreferrer">
             <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
-            Request a Yacht Quote
+            Request Quote for Yacht
           </a>
         </div>
       </div>
     </section>
 
-    <!-- Routes Section -->
+    <!-- Roteiros Section -->
     <section class="roteiros section" id="roteiros">
       <div class="container">
         <header class="section-header">
           <span class="section-header__overline">Routes</span>
           <h2 class="section-header__title">Boat Trip Routes in Rio de Janeiro</h2>
           <p class="section-header__description">
-            Choose the perfect route for your private boat trip in Rio de Janeiro.
-            From Urca to Cagarras Islands, we have options for all tastes and budgets.
+            Choose the ideal route for your private boat trip in Rio de Janeiro.
+            From a boat trip in Urca to the Cagarras Islands, we have options for
+            all tastes and budgets.
           </p>
         </header>
 
@@ -876,7 +946,7 @@
             </div>
             <h3 class="card-roteiro__title">Route 1 - Mureta da Urca</h3>
             <p class="card-roteiro__description">
-              Marina da Gloria, Flamengo, Botafogo, and Urca. Swimming stop at Mureta da Urca.
+              Marina da Gloria, Flamengo, Botafogo and Urca. Stop for swimming at Mureta da Urca.
             </p>
             <div class="card-roteiro__meta">
               <span><i class="ph ph-clock" aria-hidden="true"></i> 5 hours</span>
@@ -897,7 +967,7 @@
             </div>
             <h3 class="card-roteiro__title">Route 2 - Praia Vermelha</h3>
             <p class="card-roteiro__description">
-              Everything in Route 1 + Praia Vermelha. View of Sugarloaf Mountain and swimming in calm waters.
+              Everything from Route 1 + Praia Vermelha. View of Sugarloaf Mountain and swimming in calm waters.
             </p>
             <div class="card-roteiro__meta">
               <span><i class="ph ph-clock" aria-hidden="true"></i> 5 hours</span>
@@ -918,7 +988,7 @@
             </div>
             <h3 class="card-roteiro__title">Route 3 - Copacabana</h3>
             <p class="card-roteiro__description">
-              Everything in Route 2 + Copacabana coast. Amazing photos of Brazil's most famous beach.
+              Everything from Route 2 + Copacabana coastline. Amazing photos of Brazil's most famous beach.
             </p>
             <div class="card-roteiro__meta">
               <span><i class="ph ph-clock" aria-hidden="true"></i> 5 hours</span>
@@ -929,7 +999,7 @@
             </div>
           </article>
 
-          <!-- Route 4 - Ilhas Cagarras -->
+          <!-- Route 4 - Cagarras Islands -->
           <article class="card-roteiro">
             <div class="card-roteiro__header">
               <div class="card-roteiro__icon">
@@ -937,9 +1007,9 @@
               </div>
               <span class="card-roteiro__badge card-roteiro__badge--view">Open sea</span>
             </div>
-            <h3 class="card-roteiro__title">Route 4 - Ilhas Cagarras</h3>
+            <h3 class="card-roteiro__title">Route 4 - Cagarras Islands</h3>
             <p class="card-roteiro__description">
-              Everything in Route 3 + Cagarras Islands. Ocean navigation and snorkeling in crystal-clear waters.
+              Everything from Route 3 + Cagarras Islands. Ocean navigation and swimming in crystal clear waters.
             </p>
             <div class="card-roteiro__meta">
               <span><i class="ph ph-clock" aria-hidden="true"></i> 5 hours</span>
@@ -950,7 +1020,7 @@
             </div>
           </article>
 
-          <!-- Route 5 - Itaipu e Camboinhas -->
+          <!-- Route 5 - Itaipu and Camboinhas -->
           <article class="card-roteiro">
             <div class="card-roteiro__header">
               <div class="card-roteiro__icon">
@@ -958,9 +1028,9 @@
               </div>
               <span class="card-roteiro__badge card-roteiro__badge--view">Secluded beaches</span>
             </div>
-            <h3 class="card-roteiro__title">Route 5 - Itaipu &amp; Camboinhas</h3>
+            <h3 class="card-roteiro__title">Route 5 - Itaipu and Camboinhas</h3>
             <p class="card-roteiro__description">
-              Marina, Piratininga, Camboinhas, and Itaipu. Semi-secluded beaches in Niteroi.
+              Marina, Piratininga, Camboinhas and Itaipu. Semi-secluded beaches in Niteroi.
             </p>
             <div class="card-roteiro__meta">
               <span><i class="ph ph-clock" aria-hidden="true"></i> 5 hours</span>
@@ -971,7 +1041,7 @@
             </div>
           </article>
 
-          <!-- Route 6 - Volta Completa -->
+          <!-- Route 6 - Full Tour -->
           <article class="card-roteiro">
             <div class="card-roteiro__header">
               <div class="card-roteiro__icon">
@@ -979,9 +1049,9 @@
               </div>
               <span class="card-roteiro__badge card-roteiro__badge--popular">Complete experience</span>
             </div>
-            <h3 class="card-roteiro__title">Route 6 - Volta Completa</h3>
+            <h3 class="card-roteiro__title">Route 6 - Full Tour</h3>
             <p class="card-roteiro__description">
-              The best of Rio de Janeiro in a single trip. All major landmarks seen from the sea.
+              The best of Rio de Janeiro in a single trip. All the landmarks from the sea.
             </p>
             <div class="card-roteiro__meta">
               <span><i class="ph ph-clock" aria-hidden="true"></i> 5 hours</span>
@@ -1002,7 +1072,7 @@
       </div>
     </section>
 
-    <!-- Why WeBoat Section -->
+    <!-- Diferenciais Section -->
     <section class="diferenciais section" id="diferenciais">
       <div class="container">
         <header class="section-header">
@@ -1018,7 +1088,7 @@
           <div class="diferenciais__image">
             <picture>
               <source srcset="/assets/images/hero/equipe-weboat-home-800w.webp 800w, /assets/images/hero/equipe-weboat-home-1600w.webp 1600w" sizes="(max-width: 768px) 100vw, 50vw" type="image/webp">
-              <img src="/assets/images/hero/equipe-weboat-home.jpg" alt="WeBoat captain wearing company uniform with Christ the Redeemer in the background" loading="lazy" decoding="async" width="600" height="400">
+              <img src="/assets/images/hero/equipe-weboat-home.jpg" alt="Marinheiro WeBoat com camisa da empresa e Christ the Redeemer ao fundo" loading="lazy" decoding="async" width="600" height="400">
             </picture>
           </div>
 
@@ -1028,7 +1098,7 @@
                 <i class="ph ph-sailboat" aria-hidden="true"></i>
               </div>
               <div class="diferencial-item__content">
-                <h3 class="diferencial-item__title">Own Fleet of Boats</h3>
+                <h3 class="diferencial-item__title">Own Boat Fleet</h3>
                 <p class="diferencial-item__text">
                   5 own boats for rent in Rio de Janeiro.
                   We don't depend on third parties for your private trip.
@@ -1054,9 +1124,9 @@
                 <i class="ph ph-users-three" aria-hidden="true"></i>
               </div>
               <div class="diferencial-item__content">
-                <h3 class="diferencial-item__title">Dedicated Team</h3>
+                <h3 class="diferencial-item__title">Specialized Team</h3>
                 <p class="diferencial-item__text">
-                  9 team members dedicated to your boat trip.
+                  9 dedicated staff for your boat trip.
                   Licensed captains and full support.
                 </p>
               </div>
@@ -1067,10 +1137,10 @@
                 <i class="ph ph-wrench" aria-hidden="true"></i>
               </div>
               <div class="diferencial-item__content">
-                <h3 class="diferencial-item__title">In-house Mechanic</h3>
+                <h3 class="diferencial-item__title">In-House Mechanic</h3>
                 <p class="diferencial-item__text">
                   Preventive maintenance for all boats.
-                  Your private boat trip with complete safety.
+                  Your private boat trip with safety.
                 </p>
               </div>
             </div>
@@ -1080,10 +1150,10 @@
                 <i class="ph ph-star" aria-hidden="true"></i>
               </div>
               <div class="diferencial-item__content">
-                <h3 class="diferencial-item__title">1,000+ Five-Star Reviews</h3>
+                <h3 class="diferencial-item__title">+1,000 5-Star Reviews</h3>
                 <p class="diferencial-item__text">
-                  The highest number of positive reviews among boat rental
-                  companies in Rio de Janeiro.
+                  Highest number of positive reviews among boat
+                  rental companies in Rio de Janeiro.
                 </p>
               </div>
             </div>
@@ -1092,20 +1162,20 @@
       </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- Serviços Section -->
     <section class="servicos section" id="servicos">
       <div class="container">
         <header class="section-header">
           <span class="section-header__overline">Services</span>
-          <h2 class="section-header__title">Add-on Services for Your Boat Trip</h2>
+          <h2 class="section-header__title">Services for your Boat Trip</h2>
           <p class="section-header__description">
-            Customize your boat rental in Rio with our exclusive add-on services.
-            BBQ, open bar, decoration, and more.
+            Customize your boat rental in Rio with our exclusive services.
+            BBQ, open bar, decoration and much more.
           </p>
         </header>
 
         <div class="servicos__grid">
-          <!-- BBQ -->
+          <!-- Churrasco -->
           <article class="card-servico">
             <div class="card-servico__image">
               <picture>
@@ -1117,19 +1187,19 @@
                   srcset="/assets/images/servicos/churrasco-bordo-400.jpg 400w,
                           /assets/images/servicos/churrasco-bordo-800.jpg 800w"
                   sizes="(max-width: 768px) 100vw, 400px"
-                  alt="BBQ being prepared on board the boat"
+                  alt="BBQ sendo preparado a bordo da boat"
                   loading="lazy" decoding="async" width="400" height="300">
               </picture>
             </div>
             <div class="card-servico__content">
               <h3 class="card-servico__title">BBQ on Board</h3>
               <p class="card-servico__description">
-                Premium cuts prepared on board during your trip. Dedicated BBQ chef included.
+                Premium meats prepared on board during your trip. Dedicated BBQ chef included.
               </p>
               <p class="card-servico__price">
                 <span class="card-servico__price-prefix">from</span> R$ 100 <span>/ person</span>
               </p>
-              <a href="/en/services/#bbq" class="btn btn-secondary btn-sm">Learn More</a>
+              <a href="/servicos/#churrasco" class="btn btn-secondary btn-sm">Learn More</a>
             </div>
           </article>
 
@@ -1145,7 +1215,7 @@
                   srcset="/assets/images/servicos/open-bar-lancha-400.jpg 400w,
                           /assets/images/servicos/open-bar-lancha-800.jpg 800w"
                   sizes="(max-width: 768px) 100vw, 400px"
-                  alt="Friends toasting with drinks at the boat open bar"
+                  alt="Amigas brindando com drinks no open bar da boat"
                   loading="lazy" decoding="async" width="400" height="300">
               </picture>
             </div>
@@ -1157,7 +1227,7 @@
               <p class="card-servico__price">
                 <span class="card-servico__price-prefix">from</span> R$ 135 <span>/ person</span>
               </p>
-              <a href="/en/services/#open-bar" class="btn btn-secondary btn-sm">Learn More</a>
+              <a href="/servicos/#open-bar" class="btn btn-secondary btn-sm">Learn More</a>
             </div>
           </article>
 
@@ -1173,7 +1243,7 @@
                   srcset="/assets/images/servicos/churrasco-lancha-400.jpg 400w,
                           /assets/images/servicos/churrasco-lancha-800.jpg 800w"
                   sizes="(max-width: 768px) 100vw, 400px"
-                  alt="BBQ and open bar combo on the boat"
+                  alt="Combo BBQ e open bar na boat"
                   loading="lazy" decoding="async" width="400" height="500">
               </picture>
               <span class="card-servico__badge">Most Popular</span>
@@ -1181,16 +1251,16 @@
             <div class="card-servico__content">
               <h3 class="card-servico__title">BBQ + Open Bar Combo</h3>
               <p class="card-servico__description">
-                The perfect combination: full BBQ with open bar throughout the trip.
+                The perfect combination: complete BBQ with open bar throughout the trip.
               </p>
               <p class="card-servico__price">
                 <span class="card-servico__price-prefix">from</span> R$ 205 <span>/ person</span>
               </p>
-              <a href="/en/services/#combo" class="btn btn-secondary btn-sm">Learn More</a>
+              <a href="/servicos/#combo" class="btn btn-secondary btn-sm">Learn More</a>
             </div>
           </article>
 
-          <!-- Decoration -->
+          <!-- Decoração -->
           <article class="card-servico">
             <div class="card-servico__image">
               <picture>
@@ -1202,24 +1272,24 @@
                   srcset="/assets/images/servicos/decoracao-lancha-400.jpg 400w,
                           /assets/images/servicos/decoracao-lancha-800.jpg 800w"
                   sizes="(max-width: 768px) 100vw, 400px"
-                  alt="Birthday decoration on a boat with green balloons and Happy Birthday sign"
+                  alt="Decoration de birthday na boat com balões verdes e letreiro Happy Birthday"
                   loading="lazy" decoding="async" width="400" height="300">
               </picture>
             </div>
             <div class="card-servico__content">
-              <h3 class="card-servico__title">Decoration &amp; Parties</h3>
+              <h3 class="card-servico__title">Decoration and Parties</h3>
               <p class="card-servico__description">
-                Themed decoration for birthdays, bachelorette parties, and marriage proposals.
+                Themed decoration for birthdays, bachelorette parties and wedding proposals.
               </p>
               <p class="card-servico__price">
-                <span class="card-servico__price-prefix">from</span> R$ 1,850 <span>/ package</span>
+                <span class="card-servico__price-prefix">from</span> R$ 1.850 <span>/ package</span>
               </p>
-              <a href="/en/services/#decoration" class="btn btn-secondary btn-sm">Learn More</a>
+              <a href="/servicos/#decoracao" class="btn btn-secondary btn-sm">Learn More</a>
             </div>
           </article>
         </div>
 
-        <p class="servicos__note">*Prices vary according to group size and boat.</p>
+        <p class="servicos__note">*Prices vary according to the number of people and boat size.</p>
 
         <div class="servicos__cta">
           <a href="/en/services/" class="btn btn-primary">
@@ -1230,38 +1300,44 @@
       </div>
     </section>
 
-    <!-- Google Reviews Section -->
+    <!-- Clientes Famosos Section — desativada até ter fotos autorizadas
+    <section class="clientes section" id="clientes">
+      ...
+    </section>
+    -->
+
+    <!-- Avaliações Google Section - TrustIndex Widget -->
     <section class="avaliacoes section" id="avaliacoes">
       <div class="container">
         <header class="section-header">
           <span class="section-header__overline">Real Experiences</span>
-          <h2 class="section-header__title">1,000+ Five-Star Google Reviews</h2>
+          <h2 class="section-header__title">+1,000 5-Star Reviews no Google</h2>
           <p class="section-header__description">
-            Stories from people who lived unforgettable moments with WeBoat Brasil.
+            Stories from those who have lived unforgettable moments with WeBoat Brasil.
           </p>
         </header>
 
         <!-- TrustIndex Widget (Lazy Loaded) -->
         <div class="trustindex-widget" data-widget-id="e2ac56563d5b9804fc5653631d1">
           <noscript>
-            <a href="https://www.trustindex.io" target="_blank">Google Reviews</a>
+            <a href="https://www.trustindex.io" target="_blank">Avaliações Google</a>
           </noscript>
         </div>
       </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section - Answer Capsules para IA -->
     <section class="faq section" id="faq">
       <div class="container">
         <div class="faq__container">
           <header class="section-header">
-            <span class="section-header__overline">FAQ</span>
-            <h2 class="section-header__title">Frequently Asked Questions About Boat Rental in Rio</h2>
+            <span class="section-header__overline">Questions</span>
+            <h2 class="section-header__title">Questions sobre Boat Rental in Rio de Janeiro</h2>
           </header>
 
           <div class="faq__list">
-            <!-- FAQ 1: Price -->
-            <div class="accordion__item" id="how-much">
+            <!-- Answer Capsule 1: Preço -->
+            <div class="accordion__item" id="quanto-custa">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">How much does it cost to rent a boat in Rio de Janeiro?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
@@ -1269,20 +1345,20 @@
               <div class="accordion__content">
                 <div class="accordion__body">
                   <p class="answer-capsule">
-                    <strong>Boat rental in Rio de Janeiro starts at R$ 2,300 (approx. USD 400) for a 5-hour trip.</strong>
-                    Prices vary by boat size (10-65 people), day of the week (Mon-Thu is cheaper than Fri-Sun), and chosen route. Fuel, captain, and equipment are included.
+                    <strong>O boat rental in Rio de Janeiro custa from R$ 2.300 para 5 hours de trip.</strong>
+                    Prices vary by boat size (10 to 65 people), day of the week (Mon-Thu is cheaper than Fri-Sun) and chosen route. Fuel, captain and equipment are included.
                   </p>
                   <ul>
-                    <li><strong>Small boats (up to 15 people):</strong> R$ 2,300 - R$ 2,700</li>
-                    <li><strong>Medium boats (16-22 people):</strong> R$ 2,600 - R$ 4,500</li>
+                    <li><strong>Small boats (up to 15 people):</strong> R$ 2,300 to R$ 2,700</li>
+                    <li><strong>Medium boats (16-22 people):</strong> R$ 2,600 to R$ 4,500</li>
                     <li><strong>Large boats (up to 65 people):</strong> upon request</li>
                   </ul>
                 </div>
               </div>
             </div>
 
-            <!-- FAQ 2: What's included -->
-            <div class="accordion__item" id="whats-included">
+            <!-- Answer Capsule 2: O que inclui -->
+            <div class="accordion__item" id="o-que-inclui">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">What is included in the boat rental?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
@@ -1290,14 +1366,14 @@
               <div class="accordion__content">
                 <div class="accordion__body">
                   <p class="answer-capsule">
-                    <strong>All trips include fuel, experienced captain, coolers, Bluetooth sound system, floating mat, pool noodles, and life jackets.</strong>
-                    You only pay extra for optional add-ons like BBQ (R$ 250-600), decoration, and open bar.
+                    <strong>All trips include fuel, experienced captain, coolers, Bluetooth speakers, floating mat, pool noodles and life jackets.</strong>
+                    You only pay extra for optional add-ons like BBQ (R$ 250-600), decoration and open bar.
                   </p>
                   <ul>
-                    <li>Fuel for the complete route</li>
-                    <li>Licensed captain</li>
+                    <li>Fuel for the entire route</li>
+                    <li>Captain licensed by the Brazilian Navy</li>
                     <li>Coolers (ice not included)</li>
-                    <li>Bluetooth speakers</li>
+                    <li>Bluetooth speakers connected</li>
                     <li>Floating mat and pool noodles</li>
                     <li>Mandatory insurance</li>
                   </ul>
@@ -1305,8 +1381,8 @@
               </div>
             </div>
 
-            <!-- FAQ 3: How it works -->
-            <div class="accordion__item" id="how-it-works">
+            <!-- Answer Capsule 3: Como funciona -->
+            <div class="accordion__item" id="como-funciona">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">How does boat rental work at WeBoat?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
@@ -1318,18 +1394,18 @@
                     Trips last 3-7 hours depending on the route. You can bring your own food and drinks on board.
                   </p>
                   <ol>
-                    <li>Choose the right boat for your group size</li>
-                    <li>Pick a date and route (Urca, Copacabana, Cagarras Islands...)</li>
+                    <li>Choose the ideal boat for your group size</li>
+                    <li>Set the date and route (Urca, Copacabana, Cagarras Islands...)</li>
                     <li>Pay a 50% deposit via PIX or credit card</li>
-                    <li>Meet the captain at Marina da Gloria at 8am or 2pm</li>
-                    <li>Enjoy the trip and pay the balance at the end</li>
+                    <li>On the day, meet the captain at Marina da Gloria at 8am or 2pm</li>
+                    <li>Enjoy the trip and pay the remainder at the end</li>
                   </ol>
                 </div>
               </div>
             </div>
 
-            <!-- FAQ 4: Bachelorette -->
-            <div class="accordion__item" id="bachelorette">
+            <!-- Answer Capsule 4: Despedida de Solteira -->
+            <div class="accordion__item" id="despedida-solteira">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">How does a bachelorette party on a boat work?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
@@ -1337,22 +1413,22 @@
               <div class="accordion__content">
                 <div class="accordion__body">
                   <p class="answer-capsule">
-                    <strong>A bachelorette party on a boat is one of our most popular trips. We offer packages with themed decoration, drinks, and party games.</strong>
+                    <strong>A bachelorette party on a boat is one of our most popular trips. We offer packages with themed decoration, drinks and party games.</strong>
                     Ideal for groups of 8-20 friends. Most popular route: Mureta da Urca with a photo stop at Sugarloaf Mountain.
                   </p>
                   <ul>
                     <li>Pink and white decoration (optional)</li>
-                    <li>Drinks and champagne (open bar optional)</li>
+                    <li>Drinks and sparkling wine (open bar optional)</li>
                     <li>Sound system with custom playlist</li>
                     <li>Photo stop with iconic scenery</li>
                   </ul>
-                  <p><a href="/en/bachelorette-party/">View bachelorette party packages &rarr;</a></p>
+                  <p><a href="/en/bachelorette-party/">View bachelorette party packages →</a></p>
                 </div>
               </div>
             </div>
 
-            <!-- FAQ 5: Rain -->
-            <div class="accordion__item" id="rain-policy">
+            <!-- Answer Capsule 5: Chuva -->
+            <div class="accordion__item" id="politica-chuva">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">What happens if it rains on the day of the trip?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
@@ -1367,8 +1443,8 @@
               </div>
             </div>
 
-            <!-- FAQ 6: Location -->
-            <div class="accordion__item" id="location">
+            <!-- Answer Capsule 6: Localização -->
+            <div class="accordion__item" id="onde-fica">
               <button class="accordion__header" aria-expanded="false">
                 <h3 class="accordion__title">Where is Marina da Gloria located?</h3>
                 <span class="accordion__icon"><i class="ph ph-caret-down" aria-hidden="true"></i></span>
@@ -1377,9 +1453,9 @@
                 <div class="accordion__body">
                   <p class="answer-capsule">
                     <strong>Marina da Gloria is located at Av. Infante Dom Henrique, S/N, in Aterro do Flamengo, Rio de Janeiro.</strong>
-                    It is the departure point for all our trips. There is paid parking on site. Easy access by metro (Gloria station) or Uber/taxi.
+                    It is the departure point for all our trips. There is paid parking on site. Easy access by metro (Gloria station) or Uber.
                   </p>
-                  <p><a href="/en/contact/">View map and directions &rarr;</a></p>
+                  <p><a href="/en/contact/">View map and directions →</a></p>
                 </div>
               </div>
             </div>
@@ -1387,7 +1463,7 @@
 
           <div class="faq__cta">
             <a href="/en/faq/" class="btn btn-secondary">
-              View All FAQ
+              View All Questions
               <i class="ph ph-arrow-right" aria-hidden="true"></i>
             </a>
           </div>
@@ -1399,13 +1475,13 @@
     <section class="cta-final" id="cta-final">
       <div class="container">
         <div class="cta-final__content">
-          <h2 class="cta-final__title">Ready for Your Boat Trip in Rio de Janeiro?</h2>
+          <h2 class="cta-final__title">Ready for your Boat Trip in Rio de Janeiro?</h2>
           <p class="cta-final__text">
             Request a quote for boat rental in Rio in minutes.
             Our team will suggest the best boat for your group and occasion.
           </p>
           <div class="cta-final__buttons">
-            <a href="https://wa.me/5521977724114?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]"
+            <a href="https://wa.me/5521977724114?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - home]"
                class="btn btn-whatsapp btn-lg"
                target="_blank"
                rel="noopener noreferrer">
@@ -1413,7 +1489,7 @@
               Chat on WhatsApp
             </a>
             <a href="/en/contact/" class="btn btn-outline-white btn-lg">
-              Contact Form
+              View Form
             </a>
           </div>
         </div>
@@ -1521,16 +1597,14 @@
   <button class="back-to-top" aria-label="Back to top" hidden>
     <i class="ph ph-caret-up" aria-hidden="true"></i>
   </button>
-
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5521977724114?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]"
+  <a href="https://wa.me/5521977724114?text=Hello!%20I%20would%20like%20information%20about%20boat%20rental%20in%20Rio%20de%20Janeiro.%20%5Bvia%20site%20-%20en%5D"
      class="whatsapp-float"
      target="_blank"
      rel="noopener noreferrer"
      aria-label="Chat with us on WhatsApp">
     <i class="ph-fill ph-whatsapp-logo"></i>
   </a>
-
   <!-- Scripts -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous" defer></script>
   <script src="/js/i18n.js" defer></script>

@@ -71,12 +71,12 @@
       <p>Loading your proposal...</p>
     </div>
 
-    <!-- Error state -->
+    <!-- Errorr state -->
     <div id="checkout-error" class="checkout-error" role="alert" aria-live="assertive" style="display:none">
       <div class="checkout-error__icon">
         <i class="ph ph-warning-circle" aria-hidden="true"></i>
       </div>
-      <h2 class="checkout-error__title">Erro</h2>
+      <h2 class="checkout-error__title">Error</h2>
       <p class="checkout-error__message">Soundething went wrong.</p>
       <a href="https://wa.me/5521977724114?text=Hello! I had a problem with the payment link." class="btn btn-whatsapp" target="_blank" rel="noopener">
         <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chat on WhatsApp
@@ -127,7 +127,7 @@
 
       <!-- Customer Form -->
       <div class="checkout-card">
-        <h2 class="checkout-card__title">Your Details</h2>
+        <h2 class="checkout-card__title">Seus Details</h2>
 
         <form id="checkout-form" class="checkout-form" novalidate>
           <div class="form-group">
@@ -138,7 +138,7 @@
 
           <label class="checkout-form__toggle">
             <input type="checkbox" id="is-estrangeiro">
-            I'm a foreigner (I'm a foreigner)
+            I'm a foreigner
           </label>
 
           <div class="form-group" id="cpf-group">
@@ -180,7 +180,7 @@
     </div>
 
     <!-- ═══════════════════════════════════════
-         STEP 2: Pagamento
+         STEP 2: Payment
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="2" style="display:none">
       <div class="checkout-card">
@@ -193,7 +193,7 @@
           </p>
 
           <div class="payment-methods">
-            <div class="payment-method" data-method="pix" role="button" tabindex="0" aria-label="Selecionar PIX como método de pagamento">
+            <div class="payment-method" data-method="pix" role="button" tabindex="0" aria-label="Select PIX as payment method">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PIX</div>
@@ -201,15 +201,15 @@
               </div>
             </div>
 
-            <div class="payment-method" data-method="credit_card" role="button" tabindex="0" aria-label="Selecionar card de crédito como método de pagamento">
+            <div class="payment-method" data-method="credit_card" role="button" tabindex="0" aria-label="Select credit card as payment method">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Credit Card</div>
-                <div class="payment-method__desc">Pay in up to 12 installments</div>
+                <div class="payment-method__desc">Up to 12 installments</div>
               </div>
             </div>
 
-            <div class="payment-method" data-method="paypal" role="button" tabindex="0" aria-label="Selecionar PayPal como método de pagamento" style="display:none;">
+            <div class="payment-method" data-method="paypal" role="button" tabindex="0" aria-label="Select PayPal as payment method" style="display:none;">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PayPal</div>
@@ -217,7 +217,7 @@
               </div>
             </div>
 
-            <div class="payment-method" data-method="zelle" role="button" tabindex="0" aria-label="Selecionar Zelle como método de pagamento" style="display:none;">
+            <div class="payment-method" data-method="zelle" role="button" tabindex="0" aria-label="Select Zelle as payment method" style="display:none;">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Zelle</div>
@@ -230,9 +230,9 @@
           <div id="parcelas-section" class="parcelas-section" style="display:none">
             <label class="form-label" style="margin-bottom:var(--space-2);">Installments:</label>
             <select id="parcelas-select" class="form-select">
-              <option value="1">1x interest-free</option>
-              <option value="2">2x interest-free</option>
-              <option value="3">3x interest-free</option>
+              <option value="1">1x no interest</option>
+              <option value="2">2x no interest</option>
+              <option value="3">3x no interest</option>
               <option value="4">4x</option>
               <option value="5">5x</option>
               <option value="6">6x</option>
@@ -290,7 +290,7 @@
     </div>
 
     <!-- ═══════════════════════════════════════
-         STEP 3: Confirmação
+         STEP 3: Confirmation
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="3" style="display:none">
       <div class="checkout-card">

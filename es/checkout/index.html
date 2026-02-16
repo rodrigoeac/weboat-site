@@ -68,15 +68,15 @@
     <!-- Loading state -->
     <div id="checkout-loading" class="checkout-loading" role="status" aria-live="polite">
       <div class="checkout-loading__spinner"></div>
-      <p>Cargando su propuesta...</p>
+      <p>Cargando tu propuesta...</p>
     </div>
 
-    <!-- Error state -->
+    <!-- Errorr state -->
     <div id="checkout-error" class="checkout-error" role="alert" aria-live="assertive" style="display:none">
       <div class="checkout-error__icon">
         <i class="ph ph-warning-circle" aria-hidden="true"></i>
       </div>
-      <h2 class="checkout-error__title">Erro</h2>
+      <h2 class="checkout-error__title">Error</h2>
       <p class="checkout-error__message">Algo salió mal.</p>
       <a href="https://wa.me/5521977724114?text=¡Hola! Tuve un problema con el enlace de pago." class="btn btn-whatsapp" target="_blank" rel="noopener">
         <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chatear por WhatsApp
@@ -168,19 +168,19 @@
           <div class="checkout-terms">
             <input type="checkbox" id="termos-aceite" required aria-required="true">
             <label for="termos-aceite">
-              He leído y acepto los <a href="/es/terminos-de-uso/" target="_blank">Términos de Uso</a> e a <a href="/es/politica-de-privacidad/" target="_blank">Política de Privacidad</a> da WeBoat Brasil.
+              He leído y acepto los <a href="/es/terminos-de-uso/" target="_blank">Términos de Uso</a> y la <a href="/es/politica-de-privacidad/" target="_blank">Política de Privacidad</a> de WeBoat Brasil.
             </label>
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
-            Continuar al Pago
+            Continuar para Pago
           </button>
         </form>
       </div>
     </div>
 
     <!-- ═══════════════════════════════════════
-         STEP 2: Pagamento
+         STEP 2: Pago
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="2" style="display:none">
       <div class="checkout-card">
@@ -189,27 +189,27 @@
         <!-- Method selection -->
         <div id="method-selection">
           <p style="color:var(--driftwood); margin-bottom:var(--space-4); font-size:var(--text-body-sm);">
-            Seleccione el método de pago:
+            Selecciona el método de pago:
           </p>
 
           <div class="payment-methods">
-            <div class="payment-method" data-method="pix" role="button" tabindex="0" aria-label="Selecionar PIX como método de pagamento">
+            <div class="payment-method" data-method="pix" role="button" tabindex="0" aria-label="Seleccionar PIX como método de pago">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PIX</div>
-                <div class="payment-method__desc">Pago instantáneo vía código QR</div>
+                <div class="payment-method__desc">Pago instantâneo via QR code</div>
               </div>
             </div>
 
-            <div class="payment-method" data-method="credit_card" role="button" tabindex="0" aria-label="Selecionar tarjeta de crédito como método de pagamento">
+            <div class="payment-method" data-method="credit_card" role="button" tabindex="0" aria-label="Seleccionar tarjeta de crédito como método de pago">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Tarjeta de Crédito</div>
-                <div class="payment-method__desc">Pague en hasta 12 cuotas</div>
+                <div class="payment-method__desc">Hasta 12 cuotas</div>
               </div>
             </div>
 
-            <div class="payment-method" data-method="paypal" role="button" tabindex="0" aria-label="Selecionar PayPal como método de pagamento" style="display:none;">
+            <div class="payment-method" data-method="paypal" role="button" tabindex="0" aria-label="Seleccionar PayPal como método de pago" style="display:none;">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PayPal</div>
@@ -217,7 +217,7 @@
               </div>
             </div>
 
-            <div class="payment-method" data-method="zelle" role="button" tabindex="0" aria-label="Selecionar Zelle como método de pagamento" style="display:none;">
+            <div class="payment-method" data-method="zelle" role="button" tabindex="0" aria-label="Seleccionar Zelle como método de pago" style="display:none;">
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Zelle</div>
@@ -252,14 +252,14 @@
 
         <!-- PIX payment -->
         <div id="pix-section" class="pix-section" style="display:none">
-          <h3 style="font-family:var(--font-heading); color:var(--ocean-deep); margin-bottom:var(--space-4);">Pague con PIX</h3>
+          <h3 style="font-family:var(--font-heading); color:var(--ocean-deep); margin-bottom:var(--space-4);">Paga con PIX</h3>
 
           <div class="pix-qrcode">
             <img id="pix-qrcode-img" src="" alt="QR Code PIX">
           </div>
 
           <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin-bottom:var(--space-3);">
-            O copie el código abajo:
+            O copia el código a continuación:
           </p>
 
           <div class="pix-copiacola">
@@ -273,7 +273,7 @@
 
           <div class="pix-status">
             <div class="pix-status__spinner"></div>
-            Esperando pago...
+            Esperando el pago...
           </div>
         </div>
 
@@ -290,7 +290,7 @@
     </div>
 
     <!-- ═══════════════════════════════════════
-         STEP 3: Confirmação
+         STEP 3: Confirmación
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="3" style="display:none">
       <div class="checkout-card">
