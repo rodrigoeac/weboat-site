@@ -33,6 +33,8 @@ const pages = [
       // ── LONG BLOCKS FIRST (must run before short fragments to avoid substring corruption) ──
       // Visible FAQ <strong> block (contains "a partir de" — MUST come before ['a partir de', 'desde'] short block)
       ['O aluguel de lancha no Rio de Janeiro custa a partir de R$ 2.300 para 5 horas de passeio.', 'El alquiler de lancha en Río de Janeiro cuesta desde R$ 2.300 por 5 horas de paseo.'],
+      // Yacht section custom WhatsApp text (href not protected from contentBlocks)
+      ['iates de luxo para passeio no Rio de Janeiro', 'yates de lujo para paseo en Río de Janeiro'],
       // Alt text (NOT protected by translateContent - alt is not in protection regex)
       ['Nossa maior lancha para 22 pessoas', 'Nuestra mayor lancha para 22 personas'],
       // Visible FAQ continuation (non-bold text after <strong> block)
@@ -242,6 +244,10 @@ const pages = [
     css: 'frota',
     contentBlocks: [
       // ── LONG BLOCKS FIRST (must run before short fragments to avoid substring corruption) ──
+      // Schema FAQ "diferença" answer (JSON-LD not protected)
+      ['As 5 lanchas próprias WeBoat têm prioridade no agendamento e atendimento direto da nossa equipe. As 21 lanchas parceiras ampliam as opções para grupos maiores e ocasiões especiais. Todas passam pela mesma vistoria de segurança e oferecem o padrão WeBoat de qualidade.', 'Las 5 lanchas propias WeBoat tienen prioridad en la programación y atención directa de nuestro equipo. Las 21 lanchas asociadas amplían las opciones para grupos más grandes y ocasiones especiales. Todas pasan por la misma inspección de seguridad y ofrecen el estándar WeBoat de calidad.'],
+      // Visible <strong> block + continuation (multiline with newline + 20-space indent)
+      ['<strong>As 5 lanchas próprias WeBoat têm prioridade no agendamento e atendimento direto da nossa equipe. As 21 lanchas parceiras ampliam as opções para grupos maiores e ocasiões especiais.</strong>\n                    Todas passam pela mesma vistoria de segurança e oferecem o padrão WeBoat de qualidade.', '<strong>Las 5 lanchas propias WeBoat tienen prioridad en la programación y atención directa de nuestro equipo. Las 21 lanchas asociadas amplían las opciones para grupos más grandes y ocasiones especiales.</strong>\n                    Todas pasan por la misma inspección de seguridad y ofrecen el estándar WeBoat de calidad.'],
       // Schema FAQ answers (JSON-LD not protected) — MUST come before ['pessoas', 'personas'] etc.
       ['A escolha depende do tamanho do grupo: até 15 pessoas, WeBoat 32 ou Oceanic 36. Até 22 pessoas, Rio Star 50. Para grupos de 30 a 65 pessoas, temos catamarãs e barcos para eventos. Se quiser churrasco a bordo, todas as lanchas possuem churrasqueira (taxa adicional de R$ 250 a R$ 600).', 'La elección depende del tamaño del grupo: hasta 15 personas, WeBoat 32 u Oceanic 36. Hasta 22 personas, Rio Star 50. Para grupos de 30 a 65 personas, tenemos catamaranes y barcos para eventos. Si quiere asado a bordo, todas las lanchas tienen parrilla (tarifa adicional de R$ 250 a R$ 600).'],
       ['Todas as lanchas incluem combustível para o roteiro, marinheiro habilitado pela Marinha, coolers, som Bluetooth, tapete flutuante, macarrões e coletes salva-vidas. Você só paga extra por opcionais como churrasco, decoração e open bar.', 'Todas las lanchas incluyen combustible para la ruta, marinero habilitado por la Marina, hieleras, sonido Bluetooth, alfombra flotante, fideos flotantes y chalecos salvavidas. Solo paga extra por opcionales como asado, decoración y open bar.'],
@@ -293,6 +299,7 @@ const pages = [
       ['Até 14 pessoas', 'Hasta 14 personas'],
       ['Até 12 pessoas', 'Hasta 12 personas'],
       ['20-22 pessoas', '20-22 personas'],
+      ['Prioridade no aluguel e melhor atendimento', 'Prioridad en el alquiler y mejor atención'],
       ['Combustível incluso', 'Combustible incluido'],
       ['Som Bluetooth', 'Sonido Bluetooth'],
       ['Tapete flutuante', 'Alfombra flotante'],
@@ -300,6 +307,9 @@ const pages = [
       ['Conforto premium', 'Confort premium'],
       ['Maior capacidade', 'Mayor capacidad'],
       ['Flybridge exclusivo', 'Flybridge exclusivo'],
+      // IMPORTANT: full-sentence blocks with seg-qui MUST come BEFORE the short replacements
+      ['*Valores para o Roteiro 1 - Mureta da Urca. Consulte valores para outros roteiros.', '*Precios para la Ruta 1 - Mureta da Urca. Consulte precios para otras rutas.'],
+      ['*Valores promocionais de seg-qui não são válidos para períodos festivos e feriados.', '*Precios promocionales de lun-jue no son válidos para períodos festivos y feriados.'],
       ['seg-qui', 'lun-jue'],
       ['sex-dom', 'vie-dom'],
       ['Ver Detalhes', 'Ver Detalles'],
@@ -425,6 +435,8 @@ const pages = [
     waMessage: '¡Hola! Me interesa la lancha WeBoat 390. ¿Podrían enviarme más información? [via site - es]',
     css: 'lancha-detalhe',
     contentBlocks: [
+      // Schema.org Product description (JSON-LD, not protected)
+      ['Lancha de 39 pés com churrasqueira para até 16 pessoas. Ideal para festas, despedidas e confraternizações no Rio de Janeiro.', 'Lancha de 39 pies con parrilla para hasta 16 personas. Ideal para fiestas, despedidas y celebraciones en Río de Janeiro.'],
       // Schema FAQ question+answer (JSON-LD "da" → "de la")
       ['O que está incluso no aluguel da WeBoat 390?', '¿Qué está incluido en el alquiler de la WeBoat 390?'],
       ['O aluguel da WeBoat 390 inclui: combustível para o roteiro contratado, tripulação habilitada (marinheiro), tapete flutuante, macarrões flutuantes, som com Bluetooth, coolers e coletes salva-vidas. A churrasqueira tem adicional de R$ 250.', 'El alquiler de la WeBoat 390 incluye: combustible para la ruta contratada, tripulación habilitada (marinero), alfombra flotante, fideos flotantes, sonido Bluetooth, hieleras y chalecos salvavidas. La parrilla tiene un adicional de R$ 250.'],
@@ -505,6 +517,8 @@ const pages = [
     waMessage: '¡Hola! Me interesa la lancha WeBoat Oceanic 36. ¿Podrían enviarme más información? [via site - es]',
     css: 'lancha-detalhe',
     contentBlocks: [
+      // Schema Product description (JSON-LD not protected)
+      ['Lancha de 36 pés com conforto premium para até 14 pessoas. Acabamento superior e espaço diferenciado.', 'Lancha de 36 pies con confort premium para hasta 14 personas. Acabado superior y espacio diferenciado.'],
       // Schema FAQ question+answer (JSON-LD "da" → "de la")
       ['O que está incluso no aluguel da WeBoat Oceanic 36?', '¿Qué está incluido en el alquiler de la WeBoat Oceanic 36?'],
       ['O aluguel da WeBoat Oceanic 36 inclui: combustível para o roteiro contratado, tripulação habilitada (marinheiro), tapete flutuante, macarrões flutuantes, som com Bluetooth, coolers e coletes salva-vidas.', 'El alquiler de la WeBoat Oceanic 36 incluye: combustible para la ruta contratada, tripulación habilitada (marinero), alfombra flotante, fideos flotantes, sonido Bluetooth, hieleras y chalecos salvavidas.'],
@@ -587,7 +601,12 @@ const pages = [
     waMessage: '¡Hola! Me interesa la lancha WeBoat Ibiza 42. ¿Podrían enviarme más información? [via site - es]',
     css: 'lancha-detalhe',
     contentBlocks: [
-      // Schema FAQ questions+answers (JSON-LD "da" → "de la")
+      // Organization description (Schema JSON-LD not protected)
+      ['Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e seguranca.', 'Alquiler de lanchas en Río de Janeiro. Paseos privados con confort y seguridad.'],
+      // Visible FAQ answer (has <strong> around "12 pessoas")
+      ['A WeBoat Ibiza 42 tem capacidade para ate <strong>12 pessoas</strong>, incluindo criancas. Essa capacidade e definida pela Marinha do Brasil para garantir conforto e seguranca de todos a bordo.', 'La WeBoat Ibiza 42 tiene capacidad para hasta <strong>12 personas</strong>, incluyendo niños. Esta capacidad está definida por la Marina de Brasil para garantizar confort y seguridad de todos a bordo.'],
+      // Schema FAQ answer (JSON-LD not protected)
+      ['A WeBoat Ibiza 42 tem capacidade para ate 12 pessoas, incluindo criancas. Essa capacidade e definida pela Marinha do Brasil para garantir conforto e seguranca de todos a bordo.', 'La WeBoat Ibiza 42 tiene capacidad para hasta 12 personas, incluyendo niños. Esta capacidad está definida por la Marina de Brasil para garantizar confort y seguridad de todos a bordo.'],
       ['O que esta incluso no aluguel da WeBoat Ibiza 42?', '¿Qué está incluido en el alquiler de la WeBoat Ibiza 42?'],
       ['O aluguel da WeBoat Ibiza 42 inclui: combustivel para o roteiro contratado, tripulacao habilitada (marinheiro), tapete flutuante, macarroes flutuantes, som com Bluetooth, coolers e coletes salva-vidas.', 'El alquiler de la WeBoat Ibiza 42 incluye: combustible para la ruta contratada, tripulación habilitada (marinero), alfombra flotante, fideos flotantes, sonido Bluetooth, hieleras y chalecos salvavidas.'],
       ['O que e o flybridge da WeBoat Ibiza 42?', '¿Qué es el flybridge de la WeBoat Ibiza 42?'],
@@ -728,6 +747,8 @@ const pages = [
       ['Perguntas Frequentes sobre a WeBoat Rio Star 50', 'Preguntas Frecuentes sobre la WeBoat Rio Star 50'],
       ['Quantas pessoas cabem na WeBoat Rio Star 50?', '¿Cuántas personas caben en la WeBoat Rio Star 50?'],
       ['A WeBoat Rio Star 50 tem capacidade para até <strong>22 pessoas</strong>, incluindo crianças. Essa capacidade é definida pela Marinha do Brasil para garantir conforto e segurança de todos a bordo.', 'La WeBoat Rio Star 50 tiene capacidad para hasta <strong>22 personas</strong>, incluyendo niños. Esta capacidad es definida por la Marina de Brasil para garantizar el confort y la seguridad de todos a bordo.'],
+      // Schema FAQ name — full text with "na WeBoat Rio Star 50" (MUST come before short visible FAQ title)
+      ['Quanto custa levar mais de 20 pessoas na WeBoat Rio Star 50?', '¿Cuánto cuesta llevar más de 20 personas en la WeBoat Rio Star 50?'],
       ['Quanto custa levar mais de 20 pessoas?', '¿Cuánto cuesta llevar más de 20 personas?'],
       ['A partir de 21 pessoas, há um adicional de <strong>R$ 250 por pessoa</strong>. Por exemplo, para 22 pessoas, o adicional é de R$ 500 (2 pessoas extras x R$ 250).', 'A partir de 21 personas, hay un adicional de <strong>R$ 250 por persona</strong>. Por ejemplo, para 22 personas, el adicional es de R$ 500 (2 personas extras x R$ 250).'],
       ['Qual o valor da hora extra?', '¿Cuál es el valor de la hora extra?'],
@@ -757,8 +778,20 @@ const pages = [
     waMessage: '¡Hola! Me gustaría ayuda para elegir la lancha correcta. [via site - es]',
     css: 'lancha-detalhe',
     contentBlocks: [
+      // Schema Organization description (JSON-LD not protected)
+      ['Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.', 'Alquiler de lanchas en Río de Janeiro. Paseos privados con confort y seguridad.'],
+      // Schema FAQ question names (JSON-LD not protected)
+      ['Qual a melhor lancha para um passeio premium e confortavel?', '¿Cuál es la mejor lancha para un paseo premium y confortable?'],
+      ['Qual a diferenca de preco entre dias de semana e fim de semana?', '¿Cuál es la diferencia de precio entre días de semana y fin de semana?'],
+      ['O que esta incluido em todas as lanchas WeBoat?', '¿Qué está incluido en todas las lanchas WeBoat?'],
+      // Schema CollectionPage description (JSON-LD)
+      ['Tabela comparativa das 5 lanchas proprias da WeBoat Brasil para aluguel no Rio de Janeiro', 'Tabla comparativa de las 5 lanchas propias de WeBoat Brasil para alquiler en Río de Janeiro'],
       // Schema Product descriptions (JSON-LD)
+      ['Lancha para ate 15 pessoas. Melhor custo-benefício da frota WeBoat.', 'Lancha para hasta 15 personas. Mejor relación calidad-precio de la flota WeBoat.'],
+      ['Lancha versátil para ate 16 pessoas. Otima para festas e celebracoes.', 'Lancha versátil para hasta 16 personas. Excelente para fiestas y celebraciones.'],
+      ['Lancha premium para ate 14 pessoas. Maior conforto e acabamento.', 'Lancha premium para hasta 14 personas. Mayor confort y acabado.'],
       ['Nossa maior lancha propria para ate 22 pessoas. Ideal para grupos grandes.', 'Nuestra mayor lancha propia para hasta 22 personas. Ideal para grupos grandes.'],
+      ['Lancha com flybridge exclusivo para ate 12 pessoas. Solario, churrasqueira e vista panoramica.', 'Lancha con flybridge exclusivo para hasta 12 personas. Solárium, parrilla y vista panorámica.'],
       // Comparison table cell
       ['Mesmo modelo da WeBoat 32, muito parecida', 'Mismo modelo de la WeBoat 32, muy parecida'],
       // Schema.org FAQ answers (JSON-LD plain text - must come FIRST)
@@ -836,6 +869,7 @@ const pages = [
       ['Reunioes de familia e amigos de várias cidades', 'Reuniones de familia y amigos de varias ciudades'],
       ['Formaturas e celebracoes de turma', 'Graduaciones y celebraciones de clase'],
       ['Casais e grupos pequenos exclusivos', 'Parejas y grupos pequeños exclusivos'],
+      ['Iate 55 pés com ar condicionado e gerador', 'Yate 55 pies con aire acondicionado y generador'],
       ['Quem busca espaco ao ar livre com flybridge', 'Quienes buscan espacio al aire libre con flybridge'],
       ['Churrascos intimos com vista panoramica', 'Asados íntimos con vista panorámica'],
       ['Experiencia diferenciada com dois andares', 'Experiencia diferenciada con dos pisos'],
@@ -893,6 +927,20 @@ const pages = [
     css: 'roteiros',
     contentBlocks: [
       // ── LONG BLOCKS FIRST (must run before short fragments) ──
+      // Schema TouristAttraction descriptions (JSON-LD not protected)
+      ['Passeio de lancha pela Mureta da Urca com vista para o Pão de Açúcar. Melhor custo-benefício.', 'Paseo en lancha por Mureta da Urca con vista al Pan de Azúcar. Mejor costo-beneficio.'],
+      ['Nosso roteiro mais vendido! Inclui Urca + Praia Vermelha com parada para banho.', '¡Nuestra ruta más vendida! Incluye Urca + Praia Vermelha con parada para baño.'],
+      ['Vista icônica da orla de Copacabana do mar. Perfeito para fotos.', 'Vista icónica del litoral de Copacabana desde el mar. Perfecto para fotos.'],
+      ['Aventura em mar aberto até as Ilhas Cagarras. Águas cristalinas e vida marinha.', 'Aventura en mar abierto hasta Ilhas Cagarras. Aguas cristalinas y vida marina.'],
+      ['Praias semi-desertas de Itaipu e Camboinhas em Niterói. O mais exclusivo.', 'Playas semidesertas de Itaipu y Camboinhas en Niterói. El más exclusivo.'],
+      // Schema FAQ "best route" answer (JSON-LD not protected)
+      ['Para primeira vez, recomendamos o Roteiro Mureta da Urca (5h) ou Praia Vermelha (5h). Ambos são em águas calmas dentro da Baía de Guanabara. A Urca oferece vista para o Pão de Açúcar e é ideal para famílias.', 'Para la primera vez, recomendamos la Ruta Mureta da Urca (5h) o Praia Vermelha (5h). Ambas son en aguas calmas dentro de la Bahía de Guanabara. Urca ofrece vista al Pan de Azúcar y es ideal para familias.'],
+      // Visible FAQ "best route" — <strong> + continuation (multiline, newline + 20-space indent)
+      ['<strong>Para primeira vez, recomendamos o Roteiro Mureta da Urca (5h) ou Praia Vermelha (5h). Ambos são em águas calmas dentro da Baía de Guanabara.</strong>\n                    A Urca oferece vista para o Pão de Açúcar e é ideal para famílias. Veja nossas <a href="/es/lanchas/">lanchas disponíveis</a> para escolher a melhor opção para seu grupo.', '<strong>Para la primera vez, recomendamos la Ruta Mureta da Urca (5h) o Praia Vermelha (5h). Ambas son en aguas calmas dentro de la Bahía de Guanabara.</strong>\n                    Urca ofrece vista al Pan de Azúcar y es ideal para familias. Vea nuestras <a href="/es/lanchas/">lanchas disponibles</a> para elegir la mejor opción para su grupo.'],
+      // Schema FAQ "personalize" answer (JSON-LD not protected)
+      ['Sim, todos os roteiros podem ser personalizados. Trabalhamos com sugestões mas adaptamos conforme sua preferência. Quer combinar Urca + Copacabana? Ou estender o tempo? Fale com nossa equipe pelo WhatsApp.', 'Sí, todas las rutas se pueden personalizar. Trabajamos con sugerencias pero nos adaptamos según su preferencia. ¿Quiere combinar Urca + Copacabana? ¿O extender el tiempo? Hable con nuestro equipo por WhatsApp.'],
+      // Visible FAQ "personalize" — <strong> + continuation (multiline)
+      ['<strong>Sim, todos os roteiros podem ser personalizados. Trabalhamos com sugestões mas adaptamos conforme sua preferência.</strong>\n                    Quer combinar Urca + Copacabana? Ou estender o tempo? Fale com nossa equipe pelo WhatsApp para criar o passeio ideal.', '<strong>Sí, todas las rutas se pueden personalizar. Trabajamos con sugerencias pero nos adaptamos según su preferencia.</strong>\n                    ¿Quiere combinar Urca + Copacabana? ¿O extender el tiempo? Hable con nuestro equipo por WhatsApp para crear el paseo ideal.'],
       // Schema FAQ answer - cost (full single-line text in JSON-LD, not protected)
       ['Os passeios de lancha no Rio custam a partir de R$ 2.300 para grupos de até 15 pessoas (5 horas). O valor é por lancha, não por pessoa. Roteiros mais longos como Ilhas Cagarras custam a partir de R$ 3.600.', 'Los paseos en lancha en Río cuestan desde R$ 2.300 para grupos de hasta 15 personas (5 horas). El precio es por lancha, no por persona. Rutas más largas como Ilhas Cagarras cuestan desde R$ 3.600.'],
       // Visible FAQ cost answer — multiline <strong> + continuation (newline + 20-space indent between them)
@@ -1166,6 +1214,9 @@ const pages = [
     waMessage: '¡Hola! Me gustaría hacer la ruta Copacabana. ¿Cuál es la disponibilidad? [via site - es]',
     css: 'roteiros',
     contentBlocks: [
+      // Schema TouristAttraction descriptions (JSON-LD not protected)
+      ['Fortaleza histórica vista pelo mar com café e museu', 'Fortaleza histórica vista desde el mar con café y museo'],
+      ['Parada para banho ao pé do Pão de Açúcar', 'Parada para baño al pie del Pan de Azúcar'],
       // Schema.org Offer description (JSON-LD — not protected by translateContent)
       ['A partir de R$ 3.000 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro.', 'Desde R$ 3.000 (lun-jue, WeBoat 32). Incluye combustible, marinero y seguro.'],
       // Hero
@@ -1411,6 +1462,9 @@ const pages = [
     waMessage: '¡Hola! Me gustaría hacer la ruta del Tour Completo. ¿Cuál es la disponibilidad? [via site - es]',
     css: 'roteiros',
     contentBlocks: [
+      // Schema.org FAQ questions (JSON-LD — "Qual" → "¿Cuál")
+      ['Qual o trajeto da Volta Completa?', '¿Cuál es el trayecto del Tour Completo?'],
+      ['Qual a duração da Volta Completa?', '¿Cuál es la duración del Tour Completo?'],
       // Schema.org Offer description (JSON-LD — not protected by translateContent)
       ['A partir de R$ 4.500 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro.', 'Desde R$ 4.500 (lun-jue, WeBoat 32). Incluye combustible, marinero y seguro.'],
       // Schema.org FAQ answers (plain text, no HTML) - MUST come FIRST before 'Praias de Adão e Eva' short block
@@ -1431,6 +1485,8 @@ const pages = [
       ['Volta Completa de Lancha pela Baía de Guanabara', 'Tour Completo en Lancha por la Bahía de Guanabara'],
       ['A experiência definitiva de passeio de lancha no Rio de Janeiro. Todos os pontos turísticos em um único passeio de 5 horas pela Baía de Guanabara com saída da Marina da Glória.', 'La experiencia definitiva de paseo en lancha en Río de Janeiro. Todos los puntos turísticos en un único paseo de 5 horas por la Bahía de Guanabara con salida de la Marina da Glória.'],
       ['Navegação completa pela baía com vista para Niterói e centro do Rio', 'Navegación completa por la bahía con vista a Niterói y centro de Río'],
+      // "Por que escolher" MUST come BEFORE 'Volta Completa' short block
+      ['Por que escolher a Volta Completa?', '¿Por qué elegir el Tour Completo?'],
       // Hero (short blocks after long multiline descriptions)
       ['Experiência Completa', 'Experiencia Completa'],
       ['Volta Completa', 'Tour Completo'],
@@ -1463,8 +1519,7 @@ const pages = [
       ['Patrimônio histórico', 'Patrimonio histórico'],
       ['3ª parada para mergulho - vista do Pão de Açúcar', '3.a parada para nadar - vista del Pão de Açúcar'],
       ['Retorno e desembarque - Fim da tarde', 'Regreso y desembarque - Final de la tarde'],
-      // Highlights
-      ['Por que escolher a Volta Completa?', '¿Por qué elegir el Tour Completo?'],
+      // Highlights (the "Por que escolher" block was moved BEFORE 'Volta Completa' short block above)
       ['5 horas de navegação', '5 horas de navegación'],
       ['3 paradas para mergulho', '3 paradas para nadar'],
       ['Ponte Rio-Niterói por baixo', 'Puente Rio-Niterói desde abajo'],
@@ -1672,6 +1727,7 @@ const pages = [
       ['Sim! Temos lanchas com churrasqueira disponível, como a WeBoat 390. O serviço completo de churrasco com churrasqueiro e carnes começa a partir de R$ 100 por pessoa.', '¡Sí! Tenemos lanchas con parrilla disponible, como la WeBoat 390. El servicio completo de asado con parrillero y carnes comienza desde R$ 100 por persona.'],
       ['Claro! Você pode trazer seu próprio bolo. Temos espaço refrigerado para armazená-lo durante o passeio e a tripulação pode ajudar na hora de cantar parabéns.', '¡Claro! Puedes traer tu propio pastel. Tenemos espacio refrigerado para almacenarlo durante el paseo y la tripulación puede ayudar a la hora de cantar cumpleaños feliz.'],
       // Alt text (NOT protected by translateContent)
+      ['Equipe preparando churrasco e petiscos na churrasqueira da marina com vista para o mar', 'Equipo preparando asado y bocadillos en la parrilla de la marina con vista al mar'],
       ['Nossa maior lancha para 20-22 pessoas', 'Nuestra mayor lancha para 20-22 personas'],
       // Longer strings first (must precede 'Aniversário na Lancha' to avoid substring corruption)
       ['Dúvidas sobre Aniversário na Lancha', 'Preguntas sobre Cumpleaños en Lancha'],
@@ -2146,14 +2202,27 @@ const pages = [
     waMessage: '¡Hola! Me gustaría información sobre servicios adicionales para mi paseo en lancha. [via site - es]',
     css: 'ocasioes',
     contentBlocks: [
-      // Schema.org descriptions (JSON-LD, not protected)
+      // Schema.org Service descriptions (JSON-LD, not protected — must come BEFORE short fragments)
+      ['Serviço completo de churrasco durante seu passeio de lancha no Rio de Janeiro. Kit Simples (R$ 100-150/pessoa) ou Kit com Acompanhamentos (R$ 145-160/pessoa).', 'Servicio completo de asado durante su paseo en lancha en Río de Janeiro. Kit Sencillo (R$ 100-150/persona) o Kit con Acompañamientos (R$ 145-160/persona).'],
+      ['Serviço de open bar com barman profissional. Básico (R$ 135-150/pessoa) ou Premium (R$ 160-180/pessoa).', 'Servicio de open bar con barman profesional. Básico (R$ 135-150/persona) o Premium (R$ 160-180/persona).'],
+      ['Decoração personalizada para aniversários e despedidas. Kit Despedida (R$ 135-150/pessoa) ou Kit Festa Premium (R$ 1.850-2.500).', 'Decoración personalizada para cumpleaños y despedidas. Kit Despedida (R$ 135-150/persona) o Kit Fiesta Premium (R$ 1.850-2.500).'],
+      ['Pacote completo com churrasco e open bar. Básico (R$ 205-230/pessoa) ou Premium (R$ 220-250/pessoa).', 'Paquete completo con asado y open bar. Básico (R$ 205-230/persona) o Premium (R$ 220-250/persona).'],
       ['DJ profissional com equipamento completo para animar sua festa na lancha.', 'DJ profesional con equipo completo para animar su fiesta en la lancha.'],
       ['Fotógrafo profissional para registrar todos os momentos do seu passeio.', 'Fotógrafo profesional para capturar todos los momentos de su paseo.'],
+      // Schema.org FAQ question (must match EXACT PT source with "ou" not "e")
+      ['Posso levar minhas próprias bebidas ou comidas?', '¿Puedo llevar mis propias bebidas o comidas?'],
+      // Visible decoration Kit Festa Premium description (must come BEFORE short "faixa personalizada" blocks)
+      ['Decoração completa para aniversário ou evento especial: balões, faixa personalizada, mesa decorada, iluminação e velas.', 'Decoración completa para cumpleaños o evento especial: globos, banda personalizada, mesa decorada, iluminación y velas.'],
       // Schema.org FAQ answers (plain text versions - must come before short fragments)
       ['Recomendamos contratar os serviços com pelo menos 48h de antecedência para garantir disponibilidade e preparação adequada. Em casos urgentes, entre em contato pelo WhatsApp para verificar possibilidades.', 'Recomendamos contratar los servicios con al menos 48h de anticipación para garantizar disponibilidad y preparación adecuada. En casos urgentes, contáctenos por WhatsApp para verificar posibilidades.'],
       ['Sim! Quanto maior o grupo, melhor o preço por pessoa. As faixas de preço mostradas consideram grupos de diferentes tamanhos. Fale conosco para um orçamento personalizado.', '¡Sí! Cuanto mayor sea el grupo, mejor el precio por persona. Los rangos de precios mostrados consideran grupos de diferentes tamaños. Contáctenos para un presupuesto personalizado.'],
       ['Sim, você pode levar suas próprias bebidas e petiscos! Apenas não oferecemos o serviço de churrasco se você levar comida própria. Contamos com coolers à disposição.', '¡Sí, puede llevar sus propias bebidas y bocadillos! Solo no ofrecemos el servicio de asado si lleva comida propia. Contamos con coolers a su disposición.'],
       ['A taxa de churrasqueira (R$ 250) é cobrada apenas quando você contrata nosso serviço de churrasco completo. Ela cobre o equipamento, carvão e utensílios necessários.', 'La tarifa de parrilla (R$ 250) se cobra solo cuando contrata nuestro servicio de asado completo. Cubre el equipamiento, carbón y utensilios necesarios.'],
+      // Alt text: combo image
+      ['Buffet completo com churrasco e bar a bordo da lancha WeBoat', 'Buffet completo con asado y bar a bordo de la lancha WeBoat'],
+      // Combo option descriptions (visible text)
+      ['Kit churrasco completo + open bar com cerveja, caipirinha, refrigerante e água. Preço varia conforme quantidade de pessoas.', 'Kit asado completo + open bar con cerveza, caipirinha, refresco y agua. El precio varía según la cantidad de personas.'],
+      ['Kit churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas.', 'Kit asado completo + open bar premium con drinks especiales, espumante y frutas frescas.'],
       // BBQ description (long string must come before shorter substrings)
       ['Nada combina mais com um dia no mar do que um churrasco! Nosso serviço inclui churrasqueiro profissional, carnes selecionadas, acompanhamentos e todo o equipamento necessário. Você só precisa relaxar e aproveitar.', '¡Nada combina más con un día en el mar que un asado! Nuestro servicio incluye asador profesional, carnes seleccionadas, acompañamientos y todo el equipamiento necesario. Solo necesita relajarse y disfrutar.'],
       ['Churrasco na Lancha', 'Asado en la Lancha'],
@@ -2166,12 +2235,14 @@ const pages = [
       ['Churrasco, open bar, decoração e mais', 'Asado, open bar, decoración y más'],
       ['Transforme seu passeio em uma experiência completa com nossos serviços adicionais.', 'Transforme su paseo en una experiencia completa con nuestros servicios adicionales.'],
       ['Valores variam de acordo com a quantidade de pessoas e embarcação.', 'Los precios varían según la cantidad de personas y la embarcación.'],
+      ['*Valores variam de acordo com a quantidade de pessoas e tamanho da lancha. Entre em contato para um orçamento personalizado.', '*Los precios varían según la cantidad de personas y tamaño de la lancha. Contáctenos para un presupuesto personalizado.'],
       // Combos
       ['Combos com Desconto', 'Combos con Descuento'],
       ['Combine churrasco e open bar e economize! Pacotes completos para você não se preocupar com nada.', '¡Combine asado y open bar y ahorre! Paquetes completos para que no se preocupe por nada.'],
       ['Combine churrasco e open bar e economize!', '¡Combine asado y open bar y ahorre!'],
       ['Preço varia conforme quantidade de pessoas', 'El precio varía según la cantidad de personas'],
       ['Contratar Combo', 'Contratar Combo'],
+      ['Montar meu pacote com todos os serviços', 'Armar mi paquete con todos los servicios'],
       ['Montar meu pacote', 'Armar mi paquete'],
       // BBQ Kits
       ['Escolha seu Kit', 'Elija su Kit'],
@@ -2225,7 +2296,6 @@ const pages = [
       ['Música ao vivo', 'Música en vivo'],
       ['Fotógrafo Profissional', 'Fotógrafo Profesional'],
       ['Registre cada momento com fotos profissionais a bordo', 'Capture cada momento con fotos profesionales a bordo'],
-      ['Montar meu pacote com todos os serviços', 'Armar mi paquete con todos los servicios'],
       // How to Book
       ['Como Contratar', 'Cómo Contratar'],
       ['Escolha os Serviços', 'Elija los Servicios'],
@@ -2237,6 +2307,7 @@ const pages = [
       ['Aproveite!', '¡Disfrute!'],
       ['No dia do passeio, tudo estará pronto para você aproveitar', 'El día del paseo, todo estará listo para que usted disfrute'],
       // Configurator
+      ['Selecione os serviços desejados e veja o orçamento estimado em tempo real.', 'Seleccione los servicios deseados y vea el presupuesto estimado en tiempo real.'],
       ['Selecione os serviços desejados', 'Seleccione los servicios deseados'],
       ['Resumo do Pacote', 'Resumen del Paquete'],
       ['Selecione serviços ao lado para ver o resumo', 'Seleccione servicios para ver el resumen'],
@@ -2247,7 +2318,7 @@ const pages = [
       ['Respostas rápidas para as perguntas mais comuns sobre nossos serviços.', 'Respuestas rápidas a las preguntas más frecuentes sobre nuestros servicios.'],
       ['Posso contratar serviços no dia do passeio?', '¿Puedo contratar servicios el día del paseo?'],
       ['Os preços variam conforme a quantidade de pessoas?', '¿Los precios varían según la cantidad de personas?'],
-      ['Posso levar minhas próprias bebidas e comidas?', '¿Puedo llevar mis propias bebidas y comidas?'],
+      ['Posso levar minhas próprias bebidas ou comidas?', '¿Puedo llevar mis propias bebidas o comidas?'],
       ['Como funciona a taxa de churrasqueira?', '¿Cómo funciona la tarifa de la parrilla?'],
       // Freshness
       ['Última atualização: Fevereiro 2026', 'Última actualización: Febrero 2026'],
@@ -2267,6 +2338,8 @@ const pages = [
       ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Oferece passeios privativos para festas, despedidas de solteira, aniversários e eventos corporativos. Fundada em 2021, realizou mais de 1.000 passeios.', 'WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Ofrece paseos privados para fiestas, despedidas de soltera, cumpleaños y eventos corporativos. Fundada en 2021, ha realizado más de 1.000 paseos.'],
       // Visible answer-capsule paragraph (line 728 of PT source)
       ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Fundada em 2021, opera 5 lanchas próprias e trabalha com parceiros para atender grupos de 10 a 65 pessoas. Já realizou mais de 1.000 passeios e acumula mais de 1000 avaliações 5 estrelas no Google.', 'WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Fundada en 2021, opera 5 lanchas propias y trabaja con socios para atender grupos de 10 a 65 personas. Ha realizado más de 1.000 paseos y acumula más de 1.000 reseñas de 5 estrellas en Google.'],
+      // Vision card (MVV section)
+      ['Ser a maior empresa de aluguel de lanchas do Brasil, mesmo atuando somente no Rio de Janeiro. Quando alguém pensar em lancha no Rio, pensar WeBoat.', 'Ser la mayor empresa de alquiler de lanchas de Brasil, aun operando solo en Río de Janeiro. Cuando alguien piense en lancha en Río, piense WeBoat.'],
       // Full quoted slogan block (MUST come before the short slogan block to avoid substring corruption)
       ["\"Dia inesquecível e sorriso no rosto de todos os nossos clientes\" - essa é a nossa missão e buscamos entregar isso para todos que escolhem nossos serviços. Toda nossa equipe compartilha desse mesmo objetivo.", "\"Un día inolvidable y una sonrisa en el rostro de todos nuestros clientes\" — esa es nuestra misión y buscamos cumplirla para todos los que eligen nuestros servicios. Todo nuestro equipo comparte ese mismo objetivo."],
       // Schema.org slogan (plain text in JSON-LD)
@@ -2819,6 +2892,10 @@ const pages = [
     waMessage: '¡Hola! Me gustaría ponerme en contacto con WeBoat Brasil. [via site - es]',
     css: 'contato',
       contentBlocks: [
+      // Schema.org ContactPage description (JSON-LD, not protected)
+      ['Entre em contato com a WeBoat Brasil para alugar uma lancha no Rio de Janeiro.', 'Contacte con WeBoat Brasil para alquilar una lancha en Río de Janeiro.'],
+      // Schema.org OfferCatalog description (JSON-LD)
+      ['Lanchas de 10 a 65 pessoas, próprias e parceiras, com combustível, marinheiro e seguro inclusos', 'Lanchas de 10 a 65 personas, propias y asociadas, con combustible, marinero y seguro incluidos'],
       // title attribute (NOT protected by translateContent)
       ['Localização da WeBoat Brasil na Marina da Glória', 'Ubicación de WeBoat Brasil en la Marina da Glória'],
       ['Fale Conosco', 'Contáctenos'],
@@ -2913,6 +2990,14 @@ const pages = [
       ['Como Funciona o Aluguel de Lancha', 'Cómo Funciona el Alquiler de Lancha'],
       ['Processo simples e transparente em 5 passos. Do primeiro contato até o dia do seu passeio, nossa equipe cuida de tudo para você só se preocupar em aproveitar.', 'Proceso simple y transparente en 5 pasos. Desde el primer contacto hasta el día de su paseo, nuestro equipo se encarga de todo para que usted solo se preocupe por disfrutar.'],
       ['Processo simples e transparente em 5 passos. Do primeiro contato até o dia do seu passeio,\n          nossa equipe cuida de tudo para você só se preocupar em aproveitar.', 'Proceso simple y transparente en 5 pasos. Desde el primer contacto hasta el día de su paseo,\n          nuestro equipo se encarga de todo para que usted solo se preocupe por disfrutar.'],
+      // Schema.org HowTo name and description (JSON-LD, not protected — FULL text)
+      ['Como Alugar uma Lancha no Rio de Janeiro', 'Cómo Alquilar una Lancha en Río de Janeiro'],
+      ['Guia completo em 5 passos para alugar uma lancha na WeBoat Brasil, com saída da Marina da Glória no Rio de Janeiro. Do primeiro contato pelo WhatsApp até o dia do passeio. Lanchas de 10 a 65 pessoas, a partir de R$ 2.300.', 'Guía completa en 5 pasos para alquilar una lancha en WeBoat Brasil, con salida de la Marina da Glória en Río de Janeiro. Desde el primer contacto por WhatsApp hasta el día del paseo. Lanchas de 10 a 65 personas, desde R$ 2.300.'],
+      // Schema.org HowTo supply/tool entries (JSON-LD, not protected)
+      ['Documento de identidade (RG ou CNH)', 'Documento de identidad (RG o DNI)'],
+      ['Bebidas e petiscos (opcional)', 'Bebidas y bocadillos (opcional)'],
+      ['WhatsApp para contato', 'WhatsApp para contacto'],
+      ['Escolha a lancha e roteiro', 'Elija la lancha y ruta'],
       // Schema.org HowTo steps (JSON-LD versions without <strong> tags)
       ['Envie uma mensagem pelo WhatsApp (21) 97772-4114 informando a data desejada, número de pessoas e ocasião. Nossa equipe responde em minutos.', 'Envíe un mensaje por WhatsApp al (21) 97772-4114 informando la fecha deseada, número de personas y ocasión. Nuestro equipo responde en minutos.'],
       ['Com base no seu grupo e preferências, recomendamos a melhor lancha e roteiro. Temos 5 lanchas próprias e 21 parceiras para grupos de 10 a 65 pessoas.', 'Con base en su grupo y preferencias, recomendamos la mejor lancha y ruta. Tenemos 5 lanchas propias y 21 asociadas para grupos de 10 a 65 personas.'],
@@ -3035,14 +3120,22 @@ const pages = [
       // Schema.org FAQ answers (JSON-LD versions without <strong>)
       ['A WeBoat Brasil realiza passeios de lancha em diversas áreas do Rio de Janeiro: Mureta da Urca, Praia Vermelha, Copacabana (incluindo Arpoador e Ipanema), Ilhas Cagarras, Itaipu e Camboinhas (Niteroi), e toda a Baia de Guanabara.', 'WeBoat Brasil realiza paseos en lancha en diversas áreas de Río de Janeiro: Mureta da Urca, Praia Vermelha, Copacabana (incluyendo Arpoador e Ipanema), Ilhas Cagarras, Itaipu y Camboinhas (Niterói), y toda la Bahía de Guanabara.'],
       ['Para primeira vez, recomendamos a Mureta da Urca ou Praia Vermelha. Sao áreas com aguas calmas dentro da Baia de Guanabara, ideais para familias e iniciantes.', 'Para la primera vez, recomendamos Mureta da Urca o Praia Vermelha. Son áreas con aguas calmas dentro de la Bahía de Guanabara, ideales para familias y principiantes.'],
+      // <strong> + continuation MUST come BEFORE Schema short version to avoid substring corruption
+      ['<strong>Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas.</strong>\n                    Converse com nossa equipe pelo <a href="https://wa.me/5521977724114">WhatsApp</a> para montar o roteiro ideal.', '<strong>¡Sí! Nuestras rutas pueden personalizarse. El Tour Completo, por ejemplo, combina Urca, Copacabana e Ilhas Cagarras en un único paseo de 5 horas.</strong>\n                    Converse con nuestro equipo por <a href="https://wa.me/5521977724114">WhatsApp</a> para armar la ruta ideal.'],
+      ['<strong>Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas.</strong> Converse com nossa equipe pelo <a href="https://wa.me/5521977724114">WhatsApp</a> para montar o roteiro ideal.', '<strong>¡Sí! Nuestras rutas pueden personalizarse. El Tour Completo, por ejemplo, combina Urca, Copacabana e Ilhas Cagarras en un único paseo de 5 horas.</strong> Converse con nuestro equipo por <a href="https://wa.me/5521977724114">WhatsApp</a> para armar la ruta ideal.'],
+      // Schema FAQ answer (JSON-LD)
       ['Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas.', '¡Sí! Nuestras rutas pueden personalizarse. El Tour Completo, por ejemplo, combina Urca, Copacabana e Ilhas Cagarras en un único paseo de 5 horas.'],
       ['Areas Atendidas', 'Áreas de Servicio'],
       // Alt text (NOT protected by translateContent - alt is not in protection regex)
       ['Passeio de lancha na Praia Vermelha com bondinho do Pao de Acucar', 'Paseo en lancha en Praia Vermelha con teleférico del Pan de Azúcar'],
       ['Passeio de lancha na Mureta da Urca', 'Paseo en lancha en Mureta da Urca'],
+      ['Navegação pela Baia de Guanabara com vista para o Cristo Redentor', 'Navegación por la Bahía de Guanabara con vista al Cristo Redentor'],
       // Multiline card descriptions (must match PT source whitespace exactly)
       ['Conhecida como a praia secreta do Rio, a Praia Vermelha e acessivel principalmente por barco.\n              Aos pes do Pao de Acucar, oferece aguas cristalinas e uma experiência única de banho com vista\n              para o bondinho passando acima.', 'Conocida como la playa secreta de Río, Praia Vermelha es accesible principalmente por barco.\n              A los pies del Pan de Azúcar, ofrece aguas cristalinas y una experiencia única de baño con vista\n              al teleférico pasando por arriba.'],
       ['Mais Popular', 'Más Popular'],
+      // Multiline version to match PT source whitespace (newline + 14-space indent)
+      ['A Mureta da Urca e um dos pontos mais tradicionais do Rio de Janeiro para encontros e passeios de lancha.\n              Com aguas calmas e protegidas pela Baia de Guanabara, e o local perfeito para quem busca tranquilidade\n              e uma vista privilegiada do Pao de Acucar.', 'Mureta da Urca es uno de los puntos más tradicionales de Río de Janeiro para encuentros y paseos en lancha.\n              Con aguas calmas y protegidas por la Bahía de Guanabara, es el lugar perfecto para quienes buscan tranquilidad\n              y una vista privilegiada del Pan de Azúcar.'],
+      // Single-line fallback (for Schema JSON-LD version)
       ['A Mureta da Urca e um dos pontos mais tradicionais do Rio de Janeiro para encontros e passeios de lancha. Com aguas calmas e protegidas pela Baia de Guanabara, e o local perfeito para quem busca tranquilidade e uma vista privilegiada do Pao de Acucar.', 'Mureta da Urca es uno de los puntos más tradicionales de Río de Janeiro para encuentros y paseos en lancha. Con aguas calmas y protegidas por la Bahía de Guanabara, es el lugar perfecto para quienes buscan tranquilidad y una vista privilegiada del Pan de Azúcar.'],
       ['Aguas calmas', 'Aguas calmas'],
       ['Vista Pao de Acucar', 'Vista Pan de Azúcar'],
@@ -3069,6 +3162,9 @@ const pages = [
       ['Ideal para turistas', 'Ideal para turistas'],
       ['Fim de tarde (por do sol)', 'Fin de tarde (puesta de sol)'],
       ['Mar Aberto', 'Mar Abierto'],
+      // Multiline version (to match PT source whitespace — newline + 14-space indent)
+      ['Para os mais aventureiros! O arquipelago das Ilhas Cagarras oferece uma experiência única em mar aberto.\n              Com aguas cristalinas e natureza preservada, e o destino ideal para mergulho, snorkeling e contato\n              direto com a vida marinha.', '¡Para los más aventureros! El archipiélago de las Ilhas Cagarras ofrece una experiencia única en mar abierto.\n              Con aguas cristalinas y naturaleza preservada, es el destino ideal para buceo, snorkeling y contacto\n              directo con la vida marina.'],
+      // Single-line fallback
       ['Para os mais aventureiros! O arquipelago das Ilhas Cagarras oferece uma experiência única em mar aberto. Com aguas cristalinas e natureza preservada, e o destino ideal para mergulho, snorkeling e contato direto com a vida marinha.', '¡Para los más aventureros! El archipiélago de las Ilhas Cagarras ofrece una experiencia única en mar abierto. Con aguas cristalinas y naturaleza preservada, es el destino ideal para buceo, snorkeling y contacto directo con la vida marina.'],
       ['Vida marinha', 'Vida marina'],
       ['Mergulho e snorkeling', 'Buceo y snorkeling'],
@@ -3083,6 +3179,9 @@ const pages = [
       ['Travessia da baia', 'Travesía de la bahía'],
       ['Manha (mar mais tranquilo)', 'Mañana (mar más tranquilo)'],
       ['Experiência Completa', 'Experiencia Completa'],
+      // Multiline version (to match PT source whitespace — newline + 14-space indent)
+      ['A navegação pela Baia de Guanabara e uma das experiencias mais completas do Rio de Janeiro.\n              Com vista para o Cristo Redentor, Ponte Rio-Niteroi, Ilha Fiscal e os principais pontos turisticos,\n              e o passeio ideal para quem quer conhecer a cidade de um angulo único.', 'La navegación por la Bahía de Guanabara es una de las experiencias más completas de Río de Janeiro.\n              Con vista al Cristo Redentor, Puente Río-Niterói, Ilha Fiscal y los principales puntos turísticos,\n              es el paseo ideal para quienes quieren conocer la ciudad desde un ángulo único.'],
+      // Single-line fallback
       ['A navegação pela Baia de Guanabara e uma das experiencias mais completas do Rio de Janeiro. Com vista para o Cristo Redentor, Ponte Rio-Niteroi, Ilha Fiscal e os principais pontos turisticos, e o passeio ideal para quem quer conhecer a cidade de um angulo único.', 'La navegación por la Bahía de Guanabara es una de las experiencias más completas de Río de Janeiro. Con vista al Cristo Redentor, Puente Río-Niterói, Ilha Fiscal y los principales puntos turísticos, es el paseo ideal para quienes quieren conocer la ciudad desde un ángulo único.'],
       ['Vista Cristo Redentor', 'Vista Cristo Redentor'],
       ['Qualquer periodo', 'Cualquier período'],
@@ -3096,7 +3195,6 @@ const pages = [
       ['<strong>Para primeira vez, recomendamos a Mureta da Urca ou Praia Vermelha. Sao áreas com aguas calmas dentro da Baia de Guanabara, ideais para familias e iniciantes.</strong>\n                    Veja nossos <a href="/es/rutas/">roteiros disponíveis</a> para escolher o melhor para você.', '<strong>Para la primera vez, recomendamos Mureta da Urca o Praia Vermelha. Son áreas con aguas calmas dentro de la Bahía de Guanabara, ideales para familias y principiantes.</strong>\n                    Vea nuestras <a href="/es/rutas/">rutas disponibles</a> para elegir la mejor para usted.'],
       ['<strong>Para primeira vez, recomendamos a Mureta da Urca ou Praia Vermelha. Sao áreas com aguas calmas dentro da Baia de Guanabara, ideais para familias e iniciantes.</strong> Veja nossos <a href="/es/rutas/">roteiros disponíveis</a> para escolher o melhor para você.', '<strong>Para la primera vez, recomendamos Mureta da Urca o Praia Vermelha. Son áreas con aguas calmas dentro de la Bahía de Guanabara, ideales para familias y principiantes.</strong> Vea nuestras <a href="/es/rutas/">rutas disponibles</a> para elegir la mejor para usted.'],
       ['E possível combinar diferentes áreas em um único passeio?', '¿Es posible combinar diferentes áreas en un único paseo?'],
-      ['<strong>Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas.</strong> Converse com nossa equipe pelo <a href="https://wa.me/5521977724114">WhatsApp</a> para montar o roteiro ideal.', '<strong>¡Sí! Nuestras rutas pueden personalizarse. El Tour Completo, por ejemplo, combina Urca, Copacabana e Ilhas Cagarras en un único paseo de 5 horas.</strong> Converse con nuestro equipo por <a href="https://wa.me/5521977724114">WhatsApp</a> para armar la ruta ideal.'],
       ['Qual area e melhor para mergulho e snorkeling?', '¿Cuál área es mejor para buceo y snorkeling?'],
       ['<strong>Para mergulho e snorkeling, as Ilhas Cagarras sao a melhor opção. O arquipelago tem aguas cristalinas e vida marinha abundante.</strong>\n                    Itaipu e Camboinhas também oferecem excelente visibilidade para atividades aquaticas.', '<strong>Para buceo y snorkeling, Ilhas Cagarras es la mejor opción. El archipiélago tiene aguas cristalinas y vida marina abundante.</strong>\n                    Itaipu y Camboinhas también ofrecen excelente visibilidad para actividades acuáticas.'],
       ['Qual a melhor area para ver o por do sol?', '¿Cuál es la mejor área para ver la puesta de sol?'],
@@ -4399,6 +4497,7 @@ const translations = [
 
   // ar-condicionado (appears on lanchas/index, lanchas/comparar, index.html partner boats)
   ['ar-condicionado', 'aire acondicionado'],
+  ['ar condicionado', 'aire acondicionado'],
   ['Ar condicionado', 'Aire acondicionado'],
 
   // Schema FAQ answers that stay partially in PT after contentBlocks partial match
@@ -4456,7 +4555,7 @@ const translations = [
   ['Consulte a nuestro equipo para más detalles', 'Consulte a nuestro equipo para más detalles'],
 
   // servicios page
-  ['Opções sofisticadas para quem prefere algo mais leve ou quer complementar o paseo', 'Opciones sofisticadas para quienes prefieren algo más ligero o quieren complementar el paseo'],
+  ['Opções sofisticadas para quem prefere algo mais leve ou quer complementar o passeio', 'Opciones sofisticadas para quienes prefieren algo más ligero o quieren complementar el paseo'],
   ['Respostas rápidas para as perguntas mais comuns', 'Respuestas rápidas a las preguntas más comunes'],
   ['Picanha premium, costela, coração, queijo coalho, saladas completas e sobremesa', 'Picanha premium, costilla, corazón, queso coalho, ensaladas completas y postre'],
 
@@ -4476,7 +4575,7 @@ const translations = [
   ['diversão no mar mais bonito do Brasil', 'diversión en el mar más bonito de Brasil'],
 
   // ano-nuevo
-  ['Não deixe para última hora', 'No lo dejes para última hora'],
+  ['Não deixe para última hora', '¡No lo dejes para última hora'],
   ['As lanchas para o réveillon esgotam rápido', 'Las lanchas para el Año Nuevo se agotan rápido'],
 
   // rutas/copacabana Schema description
@@ -4494,6 +4593,60 @@ const translations = [
   // seg-qui / sex-dom in boat cards (occasion pages) — use HTML context to avoid false matches
   ['>seg-qui<', '>Lun-Jue<'],
   ['>sex-dom<', '>Vie-Dom<'],
+
+  // Homepage + boat pages - feature descriptions
+  ['acabamento premium', 'acabado premium'],
+  ['acabamento superior', 'acabado superior'],
+  ['acabamento diferenciado', 'acabado diferenciado'],
+  ['gerador', 'generador'],
+
+  // lanchas/index FAQ questions (still in PT)
+  ['Como faço para reservar uma lancha?', '¿Cómo hago para reservar una lancha?'],
+  ['Qual lancha é melhor para meu grupo?', '¿Cuál lancha es mejor para mi grupo?'],
+  ['melhor atendimento', 'mejor atención'],
+  ['Prioridade', 'Prioridad'],
+
+  // Alt text translations (shared across many pages)
+  ['Lancha com churrasqueira para 16 pessoas', 'Lancha con parrilla para 16 personas'],
+  ['Lancha com flybridge para 12 pessoas', 'Lancha con flybridge para 12 personas'],
+  ['Lancha com churrasqueira para festas', 'Lancha con parrilla para fiestas'],
+  ['Lancha com flybridge', 'Lancha con flybridge'],
+  ['Lancha para 16 personas com parrilla', 'Lancha para 16 personas con parrilla'],
+  ['com camisa da empresa', 'con camisa de la empresa'],
+  ['com camisa azul no comando', 'con camisa azul al mando'],
+  ['com logo al atardecer', 'con logo al atardecer'],
+  ['com embarcações atracadas', 'con embarcaciones atracadas'],
+  ['com vista panorâmica do', 'con vista panorámica del'],
+  ['com vista do Pão de Açúcar', 'con vista del Pan de Azúcar'],
+  ['com lancha ancorada em águas cristalinas', 'con lancha ancorada en aguas cristalinas'],
+  ['com mar cristalino', 'con mar cristalino'],
+  ['com o Cristo Redentor ao fundo', 'con el Cristo Redentor al fondo'],
+  ['com Cristo Redentor ao fundo', 'con Cristo Redentor al fondo'],
+  ['com Cristo Redentor', 'con Cristo Redentor'],
+  ['com bolo personalizado', 'con pastel personalizado'],
+  ['com globos verdes e letreiro', 'con globos verdes y letrero'],
+  ['com globos rosa', 'con globos rosa'],
+  ['com drinks em confraternização', 'con drinks en confraternización'],
+  ['com vista do Rio', 'con vista de Río'],
+  ['com óculos Team Bride', 'con lentes Team Bride'],
+  ['com véu e óculos Team Bride', 'con velo y lentes Team Bride'],
+  ['com faixas Team Bride', 'con bandas Team Bride'],
+  ['com drink al atardecer', 'con drink al atardecer'],
+  ['com drink rosa', 'con drink rosa'],
+  ['com drinks no open bar', 'con drinks en el open bar'],
+  ['com Pão de Açúcar e Botafogo', 'con Pan de Azúcar y Botafogo'],
+  ['com pratos, flores e taças', 'con platos, flores y copas'],
+  ['com luzes da cidade', 'con luces de la ciudad'],
+  ['com taças de champanhe', 'con copas de champán'],
+  ['com bartenders preparando drinks', 'con bartenders preparando drinks'],
+  ['com headphones e controladora', 'con auriculares y controladora'],
+  ['com tapete flotante', 'con alfombra flotante'],
+  ['com camisas do Brasil', 'con camisas de Brasil'],
+
+  // "Qual" FAQ question patterns (common across many pages)
+  ['Qual a duração do passeio', '¿Cuál es la duración del paseo'],
+  ['Qual o trajeto da', '¿Cuál es el trayecto de la'],
+  ['Qual a diferença entre lanchas próprias e parceiras?', '¿Cuál es la diferencia entre lanchas propias y asociadas?'],
 
   // Generic PT words that stay behind (SHORTEST ENTRIES — keep at end)
   ['cenário mais bonito', 'escenario más hermoso'],
@@ -4895,6 +5048,24 @@ pages.forEach(page => {
     ['Olá! Gostaria de fazer o roteiro', '¡Hola! Me gustaría hacer la ruta'],
     ['Qual a disponibilidade?', '¿Cuál es la disponibilidad?'],
     ['Olá! Gostaria de informações sobre aluguel de lancha no Rio de Janeiro.', '¡Hola! Me gustaría información sobre alquiler de lanchas en Río de Janeiro.'],
+    // WeBoat 390 specific WA link
+    ['Olá! Tenho interesse na lancha WeBoat 390 com churrasqueira. [via site - weboat-390]', '¡Hola! Me interesa la lancha WeBoat 390 con parrilla. [via site - es]'],
+    // Como-funciona page WA links
+    ['Olá! Gostaria de saber como funciona o aluguel de lancha. [via site - como-funciona]', '¡Hola! Me gustaría saber cómo funciona el alquiler de lanchas. [via site - es]'],
+    ['Olá! Gostaria de informações sobre aluguel de lancha. [via site - como-funciona]', '¡Hola! Me gustaría información sobre alquiler de lanchas. [via site - es]'],
+    ['Olá! Quero reservar um passeio de lancha. [via site - como-funciona]', '¡Hola! Quiero reservar un paseo en lancha. [via site - es]'],
+    // Contacto page WA links (must come BEFORE the generic short "sobre" entry)
+    ['Olá! Gostaria de informações sobre aluguel de lancha no Rio de Janeiro. [via site - contato]', '¡Hola! Me gustaría información sobre alquiler de lanchas en Río de Janeiro. [via site - es]'],
+    ['Olá! Gostaria de informações sobre aluguel de lancha. [via site - contato]', '¡Hola! Me gustaría información sobre alquiler de lanchas. [via site - es]'],
+    ['Olá! Gostaria de informações. [via site - contato]', '¡Hola! Me gustaría información. [via site - es]'],
+    // Servicios page WA links (must come BEFORE the generic short "sobre" entry)
+    ['Olá! Gostaria de informações sobre o serviço de churrasco na lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre el servicio de asado en la lancha. [via site - es]'],
+    ['Olá! Gostaria de informações sobre o serviço de open bar na lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre el servicio de open bar en la lancha. [via site - es]'],
+    ['Olá! Gostaria de informações sobre os combos de churrasco + open bar. [via site - servicos]', '¡Hola! Me gustaría información sobre los combos de asado + open bar. [via site - es]'],
+    ['Olá! Gostaria de informações sobre as mesas especiais (queijos e vinhos / snacks). [via site - servicos]', '¡Hola! Me gustaría información sobre las mesas especiales (quesos y vinos / snacks). [via site - es]'],
+    ['Olá! Gostaria de informações sobre decoração para festa na lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre decoración para fiesta en la lancha. [via site - es]'],
+    ['Olá! Gostaria de informações sobre os serviços extras para o passeio de lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre los servicios extras para el paseo en lancha. [via site - es]'],
+    ['Olá! Gostaria de informações sobre os serviços extras. [via site - servicos]', '¡Hola! Me gustaría información sobre los servicios extras. [via site - es]'],
     ['Olá! Gostaria de informações sobre', '¡Hola! Me gustaría información sobre'],
     ['Olá! Quero reservar a lancha', '¡Hola! Quiero reservar la lancha'],
     ['Olá! Quero reservar um passeio', '¡Hola! Quiero reservar un paseo'],
@@ -4919,6 +5090,28 @@ pages.forEach(page => {
     ['e gostaria de agendar um passeio de lancha.', 'y me gustaría agendar un paseo en lancha.'],
     ['e gostaria de reservar um passeio de lancha.', 'y me gustaría reservar un paseo en lancha.'],
     ['Olá! Li o artigo sobre', '¡Hola! Leí el artículo sobre'],
+    // Carnaval + Reveillon boat-specific WA links
+    ['sobre o Catamarã Oceano para o Carnaval', 'sobre el Catamarán Oceano para el Carnaval'],
+    ['sobre o Barco Gourmet 53 para o Carnaval', 'sobre el Barco Gourmet 53 para el Carnaval'],
+    ['sobre a WeBoat Malik para o Carnaval', 'sobre la WeBoat Malik para el Carnaval'],
+    ['sobre a WeBoat Rio Star 50 para o Carnaval', 'sobre la WeBoat Rio Star 50 para el Carnaval'],
+    ['sobre a WeBoat Oceanic 36 para o Carnaval', 'sobre la WeBoat Oceanic 36 para el Carnaval'],
+    ['sobre a WeBoat Ibiza 42 para o Carnaval', 'sobre la WeBoat Ibiza 42 para el Carnaval'],
+    ['sobre a WeBoat 390 para o Carnaval', 'sobre la WeBoat 390 para el Carnaval'],
+    ['sobre a WeBoat 32 para o Carnaval', 'sobre la WeBoat 32 para el Carnaval'],
+    ['sobre o Catamarã Oceano para o réveillon', 'sobre el Catamarán Oceano para el Año Nuevo'],
+    ['sobre o Barco Gourmet 53 para o réveillon', 'sobre el Barco Gourmet 53 para el Año Nuevo'],
+    ['sobre a WeBoat Malik para o réveillon', 'sobre la WeBoat Malik para el Año Nuevo'],
+    ['sobre a WeBoat Rio Star 50 para o réveillon', 'sobre la WeBoat Rio Star 50 para el Año Nuevo'],
+    ['sobre a WeBoat Oceanic 36 para o réveillon', 'sobre la WeBoat Oceanic 36 para el Año Nuevo'],
+    ['sobre a WeBoat Ibiza 42 para o réveillon', 'sobre la WeBoat Ibiza 42 para el Año Nuevo'],
+    ['sobre a WeBoat 390 para o réveillon', 'sobre la WeBoat 390 para el Año Nuevo'],
+    ['sobre a WeBoat 32 para o réveillon', 'sobre la WeBoat 32 para el Año Nuevo'],
+    // Comparativo page WA links
+    ['Ola! Gostaria de reservar uma lancha. Podem me ajudar a escolher a melhor opção?', '¡Hola! Me gustaría reservar una lancha. ¿Pueden ayudarme a elegir la mejor opción?'],
+    ['Ola! Estou em duvida sobre qual lancha escolher. Podem me ajudar?', '¡Hola! Tengo dudas sobre cuál lancha elegir. ¿Pueden ayudarme?'],
+    ['Ola! Estou comparando as lanchas e gostaria de ajuda para escolher.', '¡Hola! Estoy comparando las lanchas y me gustaría ayuda para elegir.'],
+    ['Ola! Gostaria de ajuda para escolher a melhor lancha para meu grupo.', '¡Hola! Me gustaría ayuda para elegir la mejor lancha para mi grupo.'],
   ];
   for (const [pt, es] of waTextReplacements) {
     html = html.split(pt).join(es);

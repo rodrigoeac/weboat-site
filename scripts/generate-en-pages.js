@@ -40,7 +40,27 @@ const pages = [
     isHomepage: true,
     contentBlocks: [
       // ── LONG BLOCKS FIRST (must run before short fragments to avoid substring corruption) ──
+      // FAQ section title (must come BEFORE ['Aluguel de Lancha no Rio de Janeiro', '...'] which corrupts it)
+      ['Dúvidas sobre Aluguel de Lancha no Rio de Janeiro', 'Frequently Asked Questions about Boat Rental in Rio de Janeiro'],
+      // Schema.org WebSite description (mixed PT/EN after dictionary)
+      ['"description": "Aluguel de lanchas no Rio de Janeiro para passeios privativos"', '"description": "Boat rentals in Rio de Janeiro for private trips"'],
+      // Schema.org Product names (mixed PT/EN after dictionary)
+      ['"name": "Lancha para até 22 pessoas"', '"name": "Boat for up to 22 people"'],
+      ['"name": "Lancha para até 65 pessoas"', '"name": "Boat for up to 65 people"'],
       // Alt text (NOT protected by translateContent - alt is not in protection regex)
+      ['Marinheiro WeBoat com camisa da empresa e Cristo Redentor ao fundo', 'WeBoat captain in company shirt with Christ the Redeemer in the background'],
+      ['Amigas brindando com drinks no open bar da lancha', 'Friends toasting with drinks at the open bar on the boat'],
+      ['Decoração de aniversário na lancha com balões verdes e letreiro Happy Birthday', 'Birthday decoration on the boat with green balloons and Happy Birthday sign'],
+      ['WeBoat 390 - Lancha para 16 pessoas com churrasqueira', 'WeBoat 390 - Boat for 16 people with BBQ grill'],
+      ['Barco Gourmet 53 - Eventos para 30-40 pessoas', 'Barco Gourmet 53 - Event boat for 30-40 people'],
+      ['WeBoat Malik - Eventos para 35-50 pessoas', 'WeBoat Malik - Event boat for 35-50 people'],
+      ['Schaefer 62 Fly na Marina da Glória com Pão de Açúcar ao fundo', 'Schaefer 62 Fly at Marina da Gloria with Sugarloaf Mountain in the background'],
+      ['Churrasco sendo preparado a bordo da lancha', 'BBQ being prepared on board the boat'],
+      ['Combo churrasco e open bar na lancha', 'BBQ and open bar combo on the boat'],
+      // Partner yacht features (not protected)
+      ['60 pés, ar-condicionado, gerador, acabamento premium', '60 feet, air conditioning, generator, premium finish'],
+      ['62 pés, flybridge, ar-condicionado, gerador', '62 feet, flybridge, air conditioning, generator'],
+      ['60 pés, flybridge, ar-condicionado, gerador', '60 feet, flybridge, air conditioning, generator'],
       ['Nossa maior lancha para 22 pessoas', 'Our largest boat for 22 people'],
       // Visible FAQ continuation (non-bold text after <strong> block)
       ['Você só paga extra pelos opcionais como churrasco (R$ 250-600), decoração e open bar.', 'You only pay extra for optional add-ons like BBQ (R$ 250-600), decoration and open bar.'],
@@ -106,6 +126,8 @@ const pages = [
       ['<strong>Lanchas médias (16-22 pessoas):</strong> R$ 2.600 a R$ 4.500', '<strong>Medium boats (16-22 people):</strong> R$ 2,600 to R$ 4,500'],
       ['<strong>Lanchas grandes (até 65 pessoas):</strong> sob consulta', '<strong>Large boats (up to 65 people):</strong> upon request'],
       // ── SHORT BLOCKS (run after long ones) ──
+      // FAQ answer (must precede '5 horas' → '5 hours' to avoid substring corruption)
+      ['O aluguel de lancha no Rio de Janeiro custa a partir de R$ 2.300 para 5 horas de passeio.', 'Boat rental in Rio de Janeiro starts at R$ 2,300 for a 5-hour trip.'],
       // Hero
       ['Marina da Glória, Rio de Janeiro', 'Marina da Gloria, Rio de Janeiro'],
       ['Aluguel de Lancha no Rio de Janeiro', 'Boat Rental in Rio de Janeiro'],
@@ -212,8 +234,7 @@ const pages = [
       ['Experiências Reais', 'Real Experiences'],
       ['+1.000 Avaliações 5 Estrelas no Google', '+1,000 5-Star Reviews on Google'],
       ['Histórias de quem já viveu momentos inesquecíveis com a WeBoat Brasil.', 'Stories from those who have lived unforgettable moments with WeBoat Brasil.'],
-      // FAQ section
-      ['Dúvidas sobre Aluguel de Lancha no Rio de Janeiro', 'Frequently Asked Questions about Boat Rental in Rio de Janeiro'],
+      // FAQ section (title moved to top of contentBlocks — ordering fix)
       ['Quanto custa alugar uma lancha no Rio de Janeiro?', 'How much does it cost to rent a boat in Rio de Janeiro?'],
       ['O aluguel de lancha no Rio de Janeiro custa a partir de R$ 2.300 para 5 horas de passeio.', 'Boat rental in Rio de Janeiro starts at R$ 2,300 for a 5-hour trip.'],
       ['O que está incluso no aluguel de lancha no RJ?', 'What is included in the boat rental?'],
@@ -265,6 +286,7 @@ const pages = [
       ['Qual lancha é melhor para meu grupo?', 'Which boat is best for my group?'],
       ['Se quiser churrasco a bordo, todas as lanchas possuem churrasqueira (taxa adicional de R$ 250 a R$ 600).', 'If you want BBQ on board, all boats have a BBQ grill (additional fee from R$ 250 to R$ 600).'],
       ['<strong>Todas as lanchas incluem combustível para o roteiro, marinheiro habilitado pela Marinha, coolers, som Bluetooth, tapete flutuante, macarrões e coletes salva-vidas.</strong>', '<strong>All boats include fuel for the route, captain licensed by the Brazilian Navy, coolers, Bluetooth speakers, floating mat, pool noodles and life jackets.</strong>'],
+      ['Você só paga extra por opcionais como churrasco, decoração e open bar.', 'You only pay extra for optional add-ons like BBQ, decoration and open bar.'],
       ['Por que os preços são diferentes de segunda a quinta?', 'Why are prices different Monday to Thursday?'],
       ['<strong>Os valores de segunda a quinta são promocionais porque a demanda é menor. Sexta, sábado e domingo têm alta procura.</strong>', '<strong>Monday to Thursday prices are promotional because demand is lower. Friday, Saturday and Sunday have high demand.</strong>'],
       ['Por exemplo, a WeBoat 32 custa R$ 2.300 seg-qui e R$ 2.700 sex-dom - economia de R$ 400.', 'For example, the WeBoat 32 costs R$ 2,300 Mon-Thu and R$ 2,700 Fri-Sun - savings of R$ 400.'],
@@ -279,6 +301,9 @@ const pages = [
       ['Veja a opinião de quem já alugou nossas lanchas e viveu essa experiência.', 'See what our clients who have rented our boats and lived this experience have to say.'],
       // Visible HTML — partner section
       ['Todas passam pela mesma vistoria de segurança e oferecem o padrão WeBoat de qualidade.', 'All undergo the same safety inspection and offer the WeBoat quality standard.'],
+      // Visible FAQ answer — "Como reservar" (MUST come BEFORE ['pessoas','people'] to avoid corruption)
+      ['<strong>Entre em contato pelo WhatsApp (21) 97772-4114, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão.</strong>', '<strong>Contact us via WhatsApp (21) 97772-4114, let us know the date, number of people and desired route. We book with a 50% deposit via PIX or credit card.</strong>'],
+      ['O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes.', 'The remainder is paid on the day of the trip. Cancellation with refund up to 48 hours in advance.'],
       // alt text (boat cards — full strings BEFORE short entries like 'pessoas' -> 'people')
       ['Nossa maior lancha para 20-22 pessoas', 'Our largest boat for 20-22 people'],
       ['Lancha para 15 pessoas', 'Boat for 15 people'],
@@ -298,6 +323,8 @@ const pages = [
       ['Lancha com ar-condicionado para 22 pessoas', 'Boat with air conditioning for 22 people'],
       ['Lancha com ar-condicionado para 18-22 pessoas', 'Boat with air conditioning for 18-22 people'],
       ['Catamarã para 50-65 pessoas', 'Catamaran for 50-65 people'],
+      // Partner boat alt text with location
+      ['Schaefer 62 Fly na Marina da Glória com Pão de Açúcar ao fundo', 'Schaefer 62 Fly at Marina da Gloria with Sugarloaf Mountain in the background'],
       // Header
       ['Nossa Frota', 'Our Fleet'],
       ['Lanchas para Aluguel no Rio de Janeiro', 'Boats for Rent in Rio de Janeiro'],
@@ -323,6 +350,11 @@ const pages = [
       ['seg-qui', 'Mon-Thu'],
       ['sex-dom', 'Fri-Sun'],
       ['Ver Detalhes', 'View Details'],
+      // Filter button text
+      ['>Todas<', '>All<'],
+      // Partner boat features (not in dictionary — need contentBlocks)
+      ['Ideal para eventos', 'Ideal for events'],
+      ['Gerador incluso', 'Generator included'],
       // Partner boats section
       ['Lanchas Parceiras — Para Grupos Maiores', 'Partner Boats — For Larger Groups'],
       ['Para grupos acima de 22 pessoas, oferecemos lanchas de parceiros selecionados, com o mesmo padrão de qualidade e serviço.', 'For groups over 22 people, we offer boats from selected partners, with the same quality and service standards.'],
@@ -342,9 +374,6 @@ const pages = [
       ['Posso levar bebidas e comidas?', 'Can I bring drinks and food?'],
       ['O que está incluso no aluguel?', 'What is included in the rental?'],
       ['Como faço para reservar uma lancha?', 'How do I book a boat?'],
-      // Visible FAQ answer — "Como reservar" (long string BEFORE short entries to avoid corruption)
-      ['<strong>Entre em contato pelo WhatsApp (21) 97772-4114, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão.</strong>', '<strong>Contact us via WhatsApp (21) 97772-4114, let us know the date, number of people and desired route. We book with a 50% deposit via PIX or credit card.</strong>'],
-      ['O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes.', 'The remainder is paid on the day of the trip. Cancellation with refund up to 48 hours in advance.'],
       // Info bar items
       ['Marinheiro habilitado', 'Licensed skipper'],
       // Includes section
@@ -532,6 +561,8 @@ const pages = [
       ['Selecione um roteiro para começar', 'Select a route to start'],
       ['Enviar Proposta pelo WhatsApp', 'Send Proposal via WhatsApp'],
       ['Até 16 pessoas', 'Up to 16 people'],
+      // CTA section
+      ['Faça seu churrasco no mar com vista para o Rio de Janeiro.', 'Have your BBQ at sea with a view of Rio de Janeiro.'],
     ],
   },
   {
@@ -631,6 +662,10 @@ const pages = [
     waMessage: 'Hello! I am interested in the WeBoat Ibiza 42 boat. Could you send me more information? [via site - en]',
     css: 'lancha-detalhe',
     contentBlocks: [
+      // Alt text (full PT source strings — prevent mixed PT/EN)
+      ['WeBoat Ibiza 42 - Vista principal com Pao de Acucar', 'WeBoat Ibiza 42 - Main view with Sugarloaf Mountain'],
+      ['WeBoat Ibiza 42 - Cockpit com cozinha', 'WeBoat Ibiza 42 - Cockpit with kitchen'],
+      ['WeBoat Ibiza 42 - Mesa de jantar', 'WeBoat Ibiza 42 - Dining table'],
       // Schema.org entries (must be first, long strings)
       ['"name": "WeBoat Ibiza 42 - Lancha com Flybridge"', '"name": "WeBoat Ibiza 42 - Boat with Flybridge"'],
       ['"description": "Lancha de 42 pes com flybridge exclusivo para ate 12 pessoas. Solario, churrasqueira e vista panoramica."', '"description": "42-foot boat with exclusive flybridge for up to 12 people. Solarium, BBQ grill and panoramic views."'],
@@ -817,6 +852,10 @@ const pages = [
     waMessage: 'Hello! I would like help choosing the right boat. [via site - en]',
     css: 'lancha-detalhe',
     contentBlocks: [
+      // *** Partner table descriptions + notes (must come BEFORE ['Lancha','Boat'] which corrupts 'Lanchas') ***
+      ['Maior embarcação: 70 pés, rooftop ampliado, salão para eventos', 'Largest vessel: 70 feet, expanded rooftop, event hall'],
+      ['*Valores variam conforme roteiro e dia da semana. Consulte via WhatsApp para orçamento personalizado.', '*Prices vary according to route and day of the week. Contact us via WhatsApp for a customized quote.'],
+      ['*Lanchas premium (Prestige, Schaefer, Intermarine) operam apenas roteiros R1 e R2 com turno flexível de 6h.', '*Premium boats (Prestige, Schaefer, Intermarine) operate only routes R1 and R2 with flexible 6-hour shifts.'],
       // *** FAQ TITLE must come before short ['Comparativo', 'Comparison'] ***
       ['Perguntas Frequentes sobre Comparativo', 'Frequently Asked Questions about Comparison'],
       // Schema.org FAQ answer for small groups (was missing — hybrid PT/EN)
@@ -947,6 +986,17 @@ const pages = [
       // FAQ answer with EN link (after step 16 link replacement)
       ['Veja todas as lanchas', 'View all boats'],
       // Partner boat table descriptions (long strings first)
+      ['Mesmo modelo da WeBoat 32, muito parecida', 'Same model as WeBoat 32, very similar'],
+      ['Mesmo modelo da Oceanic 36, mais bem equipada', 'Same model as Oceanic 36, better equipped'],
+      ['Mesmo modelo da Oceanic 36, fly bridge estendido', 'Same model as Oceanic 36, extended fly bridge'],
+      ['Ar condicionado disponível, mais larga que as demais de 50 pés', 'Air conditioning available, wider than other 50-foot boats'],
+      ['Saveiro gourmet com rooftop, desenhado para eventos', 'Gourmet saveiro with rooftop, designed for events'],
+      ['Iate 55 pés com ar condicionado e gerador', 'Yacht 55 feet with air conditioning and generator'],
+      ['Iate de luxo Prestige, ar condicionado, SUP incluso, turno 6h', 'Luxury Prestige yacht, air conditioning, SUP included, 6-hour shift'],
+      ['Iate Schaefer com flybridge, 2 andares, ar condicionado, turno 6h', 'Schaefer yacht with flybridge, 2 decks, air conditioning, 6-hour shift'],
+      ['Iate Intermarine com flybridge, ar condicionado, maior capacidade luxo', 'Intermarine yacht with flybridge, air conditioning, largest luxury capacity'],
+      // FAQ answer (booking info)
+      ['Reservamos com 50% de sinal via PIX ou cartao, e o restante e pago no dia do passeio.', 'We book with a 50% deposit via PIX or card, and the remainder is paid on the day of the trip.'],
       ['Similar à Magna 28, um pouco maior e mais confortável', 'Similar to Magna 28, slightly larger and more comfortable'],
       ['Excelente espaço para 36 pés, preço acessível', 'Excellent space for 36 feet, affordable price'],
       ['Bem larga com integração interna/externa', 'Very wide with indoor/outdoor integration'],
@@ -956,9 +1006,7 @@ const pages = [
       ['Integração interna/externa, maior capacidade na faixa de 50 pés', 'Indoor/outdoor integration, largest capacity in the 50-foot range'],
       ['Premium custo-benefício: conforto de luxo, totalmente reformada', 'Premium value: luxury comfort, fully refurbished'],
       ['60 pés redesenhada para eventos, melhor custo-benefício nesse porte', '60 feet redesigned for events, best value at this size'],
-      ['Largest vessel: 70 pés, rooftop ampliado, salão para eventos', 'Largest vessel: 70 feet, expanded rooftop, event hall'],
-      ['*Valores variam conforme roteiro e dia da semana. Entre em contato pelo WhatsApp para orçamento personalizado.', '*Prices vary according to route and day of the week. Contact us via WhatsApp for a customized quote.'],
-      ['*Lanchas premium (Prestige, Schaefer, Intermarine) operam apenas roteiros R1 e R2 com turno flexível de 6h.', '*Premium boats (Prestige, Schaefer, Intermarine) operate only routes R1 and R2 with flexible 6-hour shifts.'],
+      // REMOVED: these entries were wrong (PT side didn't match source) — fixed versions moved before ['Lancha','Boat']
     ],
   },
 
@@ -972,6 +1020,8 @@ const pages = [
     waMessage: 'Hello! I would like information about your boat trip routes. [via site - en]',
     css: 'roteiros',
     contentBlocks: [
+      // Schema.org ItemList name (full string to prevent mixed PT/EN from dictionary)
+      ['"name": "Roteiros de Passeio de Lancha no Rio de Janeiro"', '"name": "Boat Trip Routes in Rio de Janeiro"'],
       // Schema.org main description and route descriptions (must come first — longest strings)
       ['"description": "Os melhores roteiros para seu passeio de lancha no Rio de Janeiro"', '"description": "The best routes for your boat trip in Rio de Janeiro"'],
       ['"description": "Passeio de lancha pela Mureta da Urca com vista para o Pão de Açúcar. Melhor custo-benefício."', '"description": "Boat trip along Mureta da Urca with a view of Sugarloaf Mountain. Best value."'],
@@ -986,6 +1036,9 @@ const pages = [
       ['"text": "Todos os passeios incluem combustível, marinheiro habilitado pela Marinha, tapete flutuante, macarrões, som Bluetooth e coolers. Você pode levar bebidas e petiscos sem custo adicional. Opcionais como churrasco, decoração e open bar têm taxa extra."', '"text": "All trips include fuel, a Navy-licensed captain, floating mat, pool noodles, Bluetooth speakers and coolers. You can bring your own drinks and snacks at no extra charge. Extras like BBQ, decoration and open bar have an additional fee."'],
       ['"text": "Sim, todos os roteiros podem ser personalizados. Trabalhamos com sugestões mas adaptamos conforme sua preferência. Quer combinar Urca + Copacabana? Ou estender o tempo? Fale com nossa equipe pelo WhatsApp."', '"text": "Yes, all routes can be customized. We work with suggestions but adapt according to your preferences. Want to combine Urca + Copacabana? Or extend the time? Talk to our team via WhatsApp."'],
       ['"text": "O Rio de Janeiro tem clima favorável o ano todo. Verão (dezembro a março) é alta temporada com mar mais calmo. Inverno tem preços menores. Para roteiros em mar aberto como Ilhas Cagarras, preferimos dias com pouco vento."', '"text": "Rio de Janeiro has favorable weather year-round. Summer (December to March) is peak season with calmer seas. Winter has lower prices. For open sea routes like Ilhas Cagarras, we prefer days with little wind."'],
+      // Alt text (routes/index page-specific — full PT source strings)
+      ['Vista panorâmica da orla de Copacabana com Pão de Açúcar ao fundo', 'Panoramic view of the Copacabana coastline with Sugarloaf Mountain in the background'],
+      ['MAC Niterói visto do mar com Cristo Redentor - Roteiro Volta Completa', 'MAC Niteroi seen from the sea with Christ the Redeemer - Full Tour Route'],
       // Long strings containing 'Roteiro' — must run BEFORE short 'Roteiro N' entries
       ['Recomendamos o <strong>Roteiro 2 (Praia Vermelha)</strong>! É o favorito de 60% dos nossos\n            clientes. Oferece duas paradas para mergulho, vistas incríveis e o melhor custo-benefício.', 'We recommend <strong>Route 2 (Praia Vermelha)</strong>! It is the favorite of 60% of our\n            clients. It offers two swimming stops, incredible views and the best value for money.'],
       ['Ver Roteiro Praia Vermelha', 'View Praia Vermelha Route'],
@@ -1168,6 +1221,8 @@ const pages = [
       ['"name": "Por que o roteiro Praia Vermelha é o mais vendido?"', '"name": "Why is the Praia Vermelha route the best seller?"'],
       ['"name": "Qual a duração do passeio até a Praia Vermelha?"', '"name": "How long is the trip to Praia Vermelha?"'],
       ['"name": "Como saber o valor do passeio de lancha ate a Praia Vermelha?"', '"name": "How do I find out the price of the boat trip to Praia Vermelha?"'],
+      // Schema.org TouristAttraction names
+      ['"name": "Teleférico do Pão de Açúcar"', '"name": "Sugarloaf Mountain Cable Car"'],
       // Praia Vermelha TouristAttraction description
       ['"description": "Praia ao pé do Pão de Açúcar com águas calmas, ideal para parada e banho"', '"description": "Beach at the foot of Sugarloaf Mountain with calm waters, ideal for a swimming stop"'],
       // Schema.org FAQ answers (plain text — must come first before shorter substrings)
@@ -1252,8 +1307,12 @@ const pages = [
     contentBlocks: [
       // Schema.org main description
       ['"description": "Vista icônica da orla de Copacabana do mar. Perfeito para fotos inesquecíveis. Duração de 5 horas com saída da Marina da Glória, passando por Urca e Praia Vermelha."', '"description": "Iconic view of the Copacabana coastline from the sea. Perfect for unforgettable photos. 5-hour trip departing from Marina da Gloria, passing through Urca and Praia Vermelha."'],
-      // Schema.org point description
+      // Schema.org point descriptions
       ['"description": "Fortaleza histórica vista pelo mar com café e museu"', '"description": "Historic fortress seen from the sea with cafe and museum"'],
+      ['"description": "Vista panorâmica da orla mais famosa do mundo a partir do mar"', '"description": "Panoramic view of the most famous coastline in the world from the sea"'],
+      ['"description": "Parada para banho ao pé do Pão de Açúcar"', '"description": "Swimming stop at the foot of Sugarloaf Mountain"'],
+      // Alt text (full strings)
+      ['Vista panorâmica da orla de Copacabana com Pão de Açúcar ao fundo', 'Panoramic view of the Copacabana coastline with Sugarloaf Mountain in the background'],
       // Schema.org FAQ answers (plain text — must come before shorter substrings)
       ['"text": "O turno total e de 5 horas (manha: 09h-14h ou tarde: 14h30-19h30). E tempo suficiente para passar pela Urca, Praia Vermelha (com paradas para mergulho) e fazer a passagem panoramica pela orla de Copacabana."', '"text": "The total shift is 5 hours (morning: 09h-14h or afternoon: 14h30-19h30). It is enough time to pass through Urca, Praia Vermelha (with swimming stops) and make the panoramic passage along the Copacabana coastline."'],
       ['"text": "A passagem por Copacabana é panorâmica, perfeita para fotos. As paradas para mergulho são feitas na Mureta da Urca e Praia Vermelha, onde as águas são mais calmas e ideais para banho."', '"text": "The pass through Copacabana is panoramic, perfect for photos. Swimming stops are made at Mureta da Urca and Praia Vermelha, where the waters are calmer and ideal for bathing."'],
@@ -1341,6 +1400,9 @@ const pages = [
       ['"description": "Aventura em mar aberto até as Ilhas Cagarras. Águas cristalinas, vida marinha única e oportunidade de mergulho e snorkeling. Duração de 5 horas com saída da Marina da Glória."', '"description": "Open sea adventure to Ilhas Cagarras. Crystal-clear waters, unique marine life and swimming and snorkeling opportunities. 5 hours departing from Marina da Gloria."'],
       // Schema.org Offer description
       ['"description": "A partir de R$ 3.600 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro."', '"description": "From R$ 3,600 (Mon-Thu, WeBoat 32). Includes fuel, captain and insurance."'],
+      // Schema.org TouristAttraction descriptions (JSON-LD)
+      ['"description": "Monumento natural com águas cristalinas, tartarugas e vida marinha abundante"', '"description": "Natural monument with crystal-clear waters, turtles and abundant marine life"'],
+      ['"description": "Ponto de mergulho e snorkeling com visibilidade excepcional"', '"description": "Swimming and snorkeling spot with exceptional visibility"'],
       // Schema.org FAQ names
       ['"name": "O mar é agitado no roteiro das Ilhas Cagarras?"', '"name": "Is the sea rough on the Ilhas Cagarras route?"'],
       ['"name": "Qual a duração do passeio às Ilhas Cagarras?"', '"name": "How long is the trip to Ilhas Cagarras?"'],
@@ -1531,6 +1593,11 @@ const pages = [
       ['"description": "Passagem sob a ponte com vista panorâmica"', '"description": "Sailing under the bridge with panoramic views"'],
       ['"description": "Castelo neogótico na baía, palco do último baile do Império"', '"description": "Neo-Gothic castle in the bay, venue of the last ball of the Empire"'],
       ['"description": "Vista do cartão-postal do Rio de Janeiro a partir do mar"', '"description": "View of Rio de Janeiro\'s postcard from the sea"'],
+      // Schema.org FAQ question names (must come BEFORE ['Volta Completa','Full Tour'] short entry)
+      ['"name": "Quantas paradas para mergulho tem a Volta Completa?"', '"name": "How many swimming stops are there on the Full Tour?"'],
+      ['"name": "Qual o trajeto da Volta Completa?"', '"name": "What is the Full Tour route?"'],
+      ['"name": "Qual a duração da Volta Completa?"', '"name": "How long is the Full Tour?"'],
+      ['"name": "Como saber o valor da Volta Completa?"', '"name": "How do I find out the price of the Full Tour?"'],
       // Schema.org FAQ answers (plain text — must come first before shorter substrings)
       ['"text": "O roteiro sai da Marina da Glória, passa pelo Museu do Amanhã, navega sob a Ponte Rio-Niterói, contorna o MAC em Niterói, passa por Icaraí, faz paradas para mergulho no Morcego, Adão e Eva e Mureta da Urca, e retorna passando pelos Fortes históricos de Santa Cruz, Laje e São João."', '"text": "The route departs from Marina da Gloria, passes by the Museum of Tomorrow, sails under the Rio-Niteroi Bridge, goes around the MAC in Niteroi, passes Icarai, makes swimming stops at Morcego, Adão e Eva and Mureta da Urca, and returns passing by the historic Forts of Santa Cruz, Laje and São João."'],
       ['"text": "A Volta Completa tem duração de 5 horas, sendo nosso passeio mais longo. É ideal para quem quer aproveitar um dia inteiro no mar conhecendo os principais pontos do Rio e Niterói."', '"text": "The Full Tour lasts 5 hours, being our longest trip. It is ideal for those who want to spend a whole day at sea exploring the main landmarks of Rio and Niteroi."'],
@@ -1540,14 +1607,23 @@ const pages = [
       // PT side must match source BEFORE the short ['Volta Completa','Full Tour'] entry runs
       ['O roteiro sai da <strong>Marina da Glória</strong>, passa pelo Museu do Amanhã, navega sob a <strong>Ponte Rio-Niterói</strong>, contorna o MAC em Niterói, passa por Icaraí, faz paradas para mergulho no Morcego, Adão e Eva e Mureta da Urca, e retorna passando pelos <strong>Fortes históricos</strong>.', 'The route departs from <strong>Marina da Gloria</strong>, passes by the Museum of Tomorrow, sails under the <strong>Rio-Niteroi Bridge</strong>, goes around the MAC in Niteroi, passes Icarai, makes swimming stops at Morcego, Adão e Eva and Mureta da Urca, and returns passing by the <strong>historic Forts</strong>.'],
       ['A Volta Completa tem duração de <strong>5 horas</strong>, sendo nosso passeio mais longo. É ideal para quem quer aproveitar um dia inteiro no mar conhecendo os principais pontos do Rio e Niterói.', 'The Full Tour lasts <strong>5 hours</strong>, being our longest trip. It is ideal for those who want to spend a whole day at sea exploring the main landmarks of Rio and Niteroi.'],
+      // *** MULTILINE PARAGRAPHS MUST come BEFORE single-sentence entries to prevent substring corruption ***
+      ['A Volta Completa é o nosso roteiro mais completo de passeio de lancha no Rio de Janeiro!\n                  São 5 horas de navegação combinando os melhores pontos da Baía de Guanabara\n                  com as praias de Niterói em um único passeio inesquecível.', 'The Full Tour is our most complete boat trip route in Rio de Janeiro!\n                  It is 5 hours of sailing combining the best spots of Baía de Guanabara\n                  with the beaches of Niteroi in one unforgettable trip.'],
+      ['Saindo da Marina da Glória, o passeio segue pela Baía de Guanabara passando pelo\n                  Museu do Amanhã, navegando sob a Ponte Rio-Niterói e contornando o MAC de Niterói.\n                  Na sequência, você faz paradas para mergulho nas praias do Morcego, Adão e Eva, e\n                  retorna passando pelos Fortes históricos de Santa Cruz, Laje e São João até a\n                  Mureta da Urca, com vista privilegiada do Pão de Açúcar.', 'Departing from Marina da Glória, the trip goes through Baía de Guanabara passing by the\n                  Museum of Tomorrow, sailing under the Rio-Niteroi Bridge and around the MAC in Niteroi.\n                  Then, you make swimming stops at Morcego, Adão e Eva beaches, and\n                  return passing by the historic Forts of Santa Cruz, Laje and São João to\n                  Mureta da Urca, with a privileged view of Pão de Açúcar.'],
+      ['Perfeito para aniversários especiais, comemorações importantes ou simplesmente\n                  para quem quer viver um dia inteiro de pura diversão e beleza no mar do Rio.\n                  Recomendamos combinar com churrasco e open bar para a experiência completa!', 'Perfect for special birthdays, important celebrations or simply\n                  for those who want to spend an entire day of pure fun and beauty on the Rio sea.\n                  We recommend combining it with BBQ and open bar for the complete experience!'],
+      // *** Single-sentence entries (shorter substrings of the multiline paragraphs) ***
       ['A Volta Completa é o nosso roteiro mais completo de passeio de lancha no Rio de Janeiro!', 'The Full Tour is our most complete boat trip route in Rio de Janeiro!'],
       ['São 3 paradas para mergulho: Praia do Morcego, Praias de Adão e Eva, e Mureta da Urca. Todas em locais com águas calmas e cristalinas, perfeitas para banho.', 'There are 3 swimming stops: Morcego Beach, Adão e Eva Beaches, and Mureta da Urca. All in locations with calm, crystal-clear waters, perfect for swimming.'],
       // Long strings containing "Volta Completa" — must run BEFORE short entry
+      ['Reserve agora a Volta Completa e tenha um dia inteiro de pura\n            diversão no mar mais bonito do Brasil.', 'Book the Full Tour now and have an entire day of pure\n            fun on the most beautiful sea in Brazil.'],
       ['Por que escolher a Volta Completa?', 'Why choose the Full Tour?'],
       ['Perguntas Frequentes sobre a Volta Completa', 'Frequently Asked Questions about the Full Tour'],
       ['Qual o trajeto da Volta Completa?', 'What is the Full Tour route?'],
       ['Qual a duração da Volta Completa?', 'How long is the Full Tour?'],
       ['Como saber o valor da Volta Completa?', 'How do I find out the price of the Full Tour?'],
+      // Hero alt text (must come BEFORE ['Volta Completa','Full Tour'] which corrupts 'Roteiro Volta Completa')
+      ['MAC Niterói visto do mar com Cristo Redentor ao fundo - Roteiro Volta Completa', 'MAC Niteroi seen from the sea with Christ the Redeemer in the background - Full Tour Route'],
+      ['MAC Niterói visto do mar com Cristo Redentor', 'MAC Niteroi seen from the sea with Christ the Redeemer'],
       // Hero
       ['Experiência Completa', 'Complete Experience'],
       ['Volta Completa', 'Full Tour'],
@@ -1555,11 +1631,10 @@ const pages = [
       ['Mar variado', 'Varied sea conditions'],
       // Special badge
       ['Roteiro Especial', 'Special Route'],
-      // Description
+      // Description (multiline paragraphs moved before single-sentence entries above)
       ['A Experiência Definitiva', 'The Ultimate Experience'],
-      ['A Volta Completa é o nosso roteiro mais completo de passeio de lancha no Rio de Janeiro!\n                  São 5 horas de navegação combinando os melhores pontos da Baía de Guanabara\n                  com as praias de Niterói em um único passeio inesquecível.', 'The Full Tour is our most complete boat trip route in Rio de Janeiro!\n                  It is 5 hours of sailing combining the best spots of Baía de Guanabara\n                  with the beaches of Niteroi in one unforgettable trip.'],
-      ['Saindo da Marina da Glória, o passeio segue pela Baía de Guanabara passando pelo\n                  Museu do Amanhã, navegando sob a Ponte Rio-Niterói e contornando o MAC de Niterói.\n                  Na sequência, você faz paradas para mergulho nas praias do Morcego, Adão e Eva, e\n                  retorna passando pelos Fortes históricos de Santa Cruz, Laje e São João até a\n                  Mureta da Urca, com vista privilegiada do Pão de Açúcar.', 'Departing from Marina da Glória, the trip goes through Baía de Guanabara passing by the\n                  Museum of Tomorrow, sailing under the Rio-Niteroi Bridge and around the MAC in Niteroi.\n                  Then, you make swimming stops at Morcego, Adão e Eva beaches, and\n                  return passing by the historic Forts of Santa Cruz, Laje and São João to\n                  Mureta da Urca, with a privileged view of Pão de Açúcar.'],
-      ['Perfeito para aniversários especiais, comemorações importantes ou simplesmente\n                  para quem quer viver um dia inteiro de pura diversão e beleza no mar do Rio.\n                  Recomendamos combinar com churrasco e open bar para a experiência completa!', 'Perfect for special birthdays, important celebrations or simply\n                  for those who want to spend an entire day of pure fun and beauty on the Rio sea.\n                  We recommend combining it with BBQ and open bar for the complete experience!'],
+      // FAQ visible answer (moved here — MUST run BEFORE 'Praia do Morcego' and 'Praias de Adão e Eva' route stop entries corrupt the substring)
+      ['São <strong>3 paradas para mergulho</strong>: Praia do Morcego, Praias de Adão e Eva, e Mureta da Urca. Todas em locais com águas calmas e cristalinas.', 'There are <strong>3 swimming stops</strong>: Morcego Beach, Adão e Eva Beaches, and Mureta da Urca. All in locations with calm, crystal-clear waters.'],
       // Route stops
       ['Trajeto do Passeio', 'Trip Route'],
       ['Ponto de embarque - Manhã', 'Boarding point - Morning'],
@@ -1583,6 +1658,7 @@ const pages = [
       ['Patrimônio histórico', 'Historic heritage'],
       ['3ª parada para mergulho - vista do Pão de Açúcar', '3rd swimming stop - view of Pão de Açúcar'],
       ['Retorno e desembarque - Fim da tarde', 'Return and disembarkation - Late afternoon'],
+      // (FAQ visible answer moved before route stops — ordering fix)
       // Highlights
       ['5 horas de navegação', '5 hours of sailing'],
       ['3 paradas para mergulho', '3 swimming stops'],
@@ -1606,7 +1682,7 @@ const pages = [
       ['O roteiro sai da <strong>Marina da Glória</strong>, passa pelo Museu do Amanhã, navega sob a <strong>Ponte Rio-Niterói</strong>, contorna o MAC em Niterói, passa por Icaraí, faz paradas para mergulho no Morcego, Adão e Eva e Mureta da Urca, e retorna passando pelos <strong>Fortes históricos</strong>.', 'The route departs from <strong>Marina da Glória</strong>, passes by the Museum of Tomorrow, sails under the <strong>Rio-Niteroi Bridge</strong>, goes around the MAC in Niteroi, passes through Icaraí, makes swimming stops at Morcego, Adão e Eva and Mureta da Urca, and returns passing by the <strong>historic Forts</strong>.'],
       ['A Volta Completa tem duração de <strong>5 horas</strong>, sendo nosso passeio mais longo. É ideal para quem quer aproveitar um dia inteiro no mar conhecendo os principais pontos do Rio e Niterói.', 'The Full Tour lasts <strong>5 hours</strong>, being our longest trip. It is ideal for those who want to spend an entire day at sea seeing the main sights of Rio and Niteroi.'],
       ['Quantas paradas para mergulho?', 'How many swimming stops?'],
-      ['São <strong>3 paradas para mergulho</strong>: Praia do Morcego, Praias de Adão e Eva, e Mureta da Urca. Todas em locais com águas calmas e cristalinas.', 'There are <strong>3 swimming stops</strong>: Morcego Beach, Adão e Eva Beaches, and Mureta da Urca. All in locations with calm, crystal-clear waters.'],
+      // (FAQ visible answer duplicate removed — already at top of route stops section)
       ['O valor varia conforme a lancha escolhida e o dia da semana. Entre em contato pelo <strong>WhatsApp</strong> para receber um orcamento personalizado. Recomendamos combinar com churrasco e open bar para a experiencia completa!', 'The price varies depending on the boat chosen and the day of the week. Contact us via <strong>WhatsApp</strong> for a personalized quote. We recommend combining it with BBQ and open bar for the complete experience!'],
       // Other routes section
       ['Explore Outros Roteiros', 'Explore Other Routes'],
@@ -1648,8 +1724,7 @@ const pages = [
       ['5 horas de navegação', '5 hours of sailing'],
       ['Vista panorâmica do centro e Praça Mauá', 'Panoramic view of downtown and Praça Mauá'],
       ['Orla de Niterói com vista do Rio', 'Niteroi coastline with views of Rio'],
-      // Alt text
-      ['MAC Niterói visto do mar com Cristo Redentor ao fundo - Roteiro Volta Completa', 'MAC Niteroi seen from the sea with Christ the Redeemer in the background - Full Tour Route'],
+      // (Alt text entries moved before ['Volta Completa','Full Tour'] — ordering fix)
     ],
   },
 
@@ -1672,6 +1747,16 @@ const pages = [
       ['"text": "A decoração temática de despedida de solteira é um adicional a partir de R$ 135/pessoa, incluindo faixa de noiva, balões, adereços temáticos e props para fotos. Você também pode trazer sua própria decoração."', '"text": "Bachelorette party themed decoration is an add-on starting at R$ 135/person, including bride-to-be sash, balloons, themed props and photo accessories. You can also bring your own decoration."'],
       ['"text": "Sim! Você pode levar suas próprias bebidas sem custo extra. Também oferecemos serviço de open bar (a partir de R$ 135/pessoa) com drinks especiais para despedida de solteira."', '"text": "Yes! You can bring your own drinks at no extra cost. We also offer an open bar service (starting at R$ 135/person) with special bachelorette party drinks."'],
       ['"text": "Totalmente seguro! Todas as lanchas possuem coletes salva-vidas, equipamentos de segurança e marinheiro experiente. O mar da Baía de Guanabara é calmo e navegamos em águas protegidas."', '"text": "Completely safe! All boats have life jackets, safety equipment and an experienced skipper. The Guanabara Bay waters are calm and we navigate in protected waters."'],
+      // Hero alt text (full string — mixed PT/EN after dictionary)
+      ['Grupo de amigas em despedida de solteira na lancha com Pão de Açúcar ao fundo', 'Group of friends at a bachelorette party on the boat with Sugarloaf Mountain in the background'],
+      // Gallery alt text (full strings — MUST precede short substrings)
+      ['Grupo de amigas na despedida de solteira na lancha', 'Group of friends at the bachelorette party on the boat'],
+      ['Buffet e drinks servidos a bordo na despedida de solteira na lancha', 'Buffet and drinks served on board at the bachelorette party on the boat'],
+      ['Amiga com óculos Team Bride e drink rosa na despedida de solteira na lancha', 'Friend with Team Bride glasses and pink drink at the bachelorette party on the boat'],
+      ['Noiva com véu e óculos Team Bride na despedida de solteira na lancha', 'Bride with veil and Team Bride glasses at the bachelorette party on the boat'],
+      ['Amigas com faixas Team Bride e drinks rosa na despedida de solteira na lancha', 'Friends with Team Bride sashes and pink drinks at the bachelorette party on the boat'],
+      ['Silhueta com drink ao pôr do sol na lancha durante despedida de solteira', 'Silhouette with drink at sunset on the boat during a bachelorette party'],
+      ['Personalize sua festa', 'Customize your party'],
       // Hero
       ['Bride to Be', 'Bride to Be'],
       ['Despedida de Solteira na Lancha', 'Bachelorette Party on a Boat'],
@@ -1820,6 +1905,15 @@ const pages = [
       ['"text": "Sim! Temos lanchas com churrasqueira disponível, como a WeBoat 390. O serviço completo de churrasco com churrasqueiro e carnes começa a partir de R$ 100 por pessoa."', '"text": "Yes! We have boats with BBQ grills available, such as the WeBoat 390. The full BBQ service with grill master and meats starts from R$ 100 per person."'],
       ['"text": "Oferecemos o Kit Festa Premium a partir de R$ 1.850, incluindo balões, faixa personalizada, mesa decorada, iluminação e velas. Você também pode trazer sua própria decoração."', '"text": "We offer the Premium Party Kit starting at R$ 1,850, including balloons, custom banner, decorated table, lighting and candles. You can also bring your own decoration."'],
       ['"text": "Claro! Você pode trazer seu próprio bolo. Temos espaço refrigerado para armazená-lo durante o passeio e a tripulação pode ajudar na hora de cantar parabéns."', '"text": "Of course! You can bring your own cake. We have refrigerated space to store it during the trip and the crew can help when it\'s time to sing happy birthday."'],
+      // Hero alt text (full string — mixed PT/EN after dictionary)
+      ['Festa de aniversário na lancha no Rio de Janeiro', 'Birthday party on a boat in Rio de Janeiro'],
+      // Gallery alt text (full strings — MUST precede short substrings)
+      ['Buffet de frutas tropicais com arranjo de flores na lancha na Marina da Glória', 'Tropical fruit buffet with flower arrangement on the boat at Marina da Gloria'],
+      ['Aniversariante com bolo personalizado na lancha', 'Birthday person with custom cake on the boat'],
+      ['Mesa de buffet com mini hambúrgueres, quiche e salgados decorada com balões rosa em festa de aniversário na lancha', 'Buffet table with mini hamburgers, quiche and appetizers decorated with pink balloons at a birthday party on the boat'],
+      ['Decoração de aniversário na lancha com balões verdes e letreiro Happy Birthday neon', 'Birthday decoration on the boat with green balloons and neon Happy Birthday sign'],
+      ['Churrasqueiro preparando espetinhos e carnes na churrasqueira a bordo da lancha', 'Grill chef preparing skewers and meats on the BBQ grill on board the boat'],
+      ['Equipe preparando churrasco e petiscos na churrasqueira da marina com vista para o mar', 'Team preparing BBQ and snacks on the grill at the marina with a sea view'],
       // Longer strings first (must precede 'Aniversário na Lancha' to avoid substring corruption)
       ['Dúvidas sobre Aniversário na Lancha', 'Birthday Party FAQ'],
       // Hero
@@ -1955,6 +2049,20 @@ const pages = [
       ['"text": "Sim! Nossas lanchas maiores oferecem ambiente confortável para reuniões executivas em ambiente diferenciado. Navegamos em águas calmas que permitem conversas e apresentações."', '"text": "Yes! Our larger boats offer a comfortable setting for executive meetings in a distinctive environment. We navigate in calm waters that allow for conversations and presentations."'],
       // Other Schema.org
       ['Lancha privativa para até 65 pessoas', 'Private boat for up to 65 people'],
+      // Hero alt text (full string — mixed PT/EN after dictionary)
+      ['Evento corporativo na lancha no Rio de Janeiro', 'Corporate event on a boat in Rio de Janeiro'],
+      // Differentials alt text
+      ['Equipe em evento corporativo na lancha', 'Team at a corporate event on the boat'],
+      // Gallery alt text (full strings — MUST precede short substrings)
+      ['Convidados com drinks em confraternização corporativa na lancha', 'Guests with drinks at a corporate celebration on the boat'],
+      ['Grupo brindando em evento corporativo no mar', 'Group toasting at a corporate event at sea'],
+      ['Happy hour corporativo no mar com vista do Rio', 'Corporate happy hour at sea with a view of Rio'],
+      ['Colaboradores relaxando no deck da lancha', 'Colleagues relaxing on the deck of the boat'],
+      ['Relaxamento no solário da lancha em evento corporativo', 'Relaxation on the sun deck of the boat at a corporate event'],
+      // Visible text (long first)
+      ['Decoração personalizada com a identidade visual da sua empresa', 'Custom decoration with your company branding'],
+      ['Confira a avaliação de empresas que realizaram confraternizações e eventos conosco.', 'Check out reviews from companies that have hosted celebrations and events with us.'],
+      ['Selecionamos as melhores opções para sua confraternização corporativa', 'We selected the best options for your corporate celebration'],
       // Longer strings first (must precede 'Eventos Corporativos' to avoid substring corruption)
       ['Lanchas Recomendadas para Eventos Corporativos', 'Recommended Boats for Corporate Events'],
       ['Eventos Corporativos de Sucesso', 'Successful Corporate Events'],
@@ -2071,6 +2179,10 @@ const pages = [
     waMessage: "Hello! I want information about New Year's Eve on a boat to watch the fireworks. [via site - en]",
     css: 'ocasioes',
     contentBlocks: [
+      // Schema.org Event description (full PT → EN, must come first — longest string)
+      ['"description": "Celebre a virada do ano no mar! Assista à queima de fogos de Copacabana de um ângulo exclusivo, a bordo de uma lancha privativa. Pacote completo com open bar, ceia e aproximadamente 5 horas no mar."', '"description": "Celebrate New Year\'s Eve at sea! Watch the Copacabana fireworks from an exclusive angle, aboard a private boat. Complete package with open bar, dinner and approximately 5 hours at sea."'],
+      // Hero alt text (mixed PT/EN after dictionary)
+      ['Queima de fogos do réveillon vista do mar no Rio de Janeiro', "Fireworks on New Year's Eve seen from the sea in Rio de Janeiro"],
       // Schema.org FAQ answers (plain text — must come first)
       ['"text": "Navegamos até a orla de Copacabana e posicionamos a lancha em local estratégico para vista privilegiada da queima de fogos. Você verá os fogos explodindo a poucos metros, uma experiência incomparável."', '"text": "We sail to the Copacabana coast and position the boat at a strategic location for a privileged view of the fireworks. You will see the fireworks exploding just meters away, an incomparable experience."'],
       ['"text": "Sim! O réveillon na lancha é muito procurado e as vagas costumam esgotar com meses de antecedência. Recomendamos reservar o quanto antes para garantir sua lancha."', '"text": "Yes! New Year\'s Eve on a boat is very popular and spots tend to sell out months in advance. We recommend booking as soon as possible to secure your boat."'],
@@ -2181,7 +2293,11 @@ const pages = [
       ['Lanchas Recomendadas para Réveillon', "Recommended Boats for New Year\'s Eve"],
       ['Lanchas Recomendadas', 'Recommended Boats'],
       ['Para o Réveillon', "For New Year\'s Eve"],
-      ['Selecionamos as melhores opções para sua virada no mar', 'We selected the best options for your New Year at sea'],
+      ['Selecionamos as melhores opções para sua virada de ano no mar', 'We selected the best options for your New Year at sea'],
+      // Gallery alt text (full strings)
+      ['Brinde com taças de champanhe e luzes coloridas na festa de réveillon na lancha', "Toast with champagne glasses and colorful lights at the New Year's Eve party on the boat"],
+      ['Convidada celebrando o réveillon na lancha com luzes da cidade ao fundo', "Guest celebrating New Year's Eve on the boat with city lights in the background"],
+      ['Vista noturna da Baía de Guanabara com Pão de Açúcar e Botafogo iluminados', 'Night view of Guanabara Bay with Sugarloaf Mountain and Botafogo lit up'],
       // CTA
       ['Garanta Sua Vaga no Réveillon', "Secure Your Spot for New Year\'s Eve"],
       ['Reserve com antecedência — as vagas são limitadas!', 'Book in advance — spots are limited!'],
@@ -2197,6 +2313,8 @@ const pages = [
     waMessage: 'Hello! I want information about Carnival on a boat in Rio de Janeiro. [via site - en]',
     css: 'ocasioes',
     contentBlocks: [
+      // Schema.org Event description (full PT → EN, must come first — longest string)
+      ['"description": "Curta o Carnaval do Rio de Janeiro no mar! Festa privativa em lancha com DJ, open bar, decoração temática e vista privilegiada da orla carioca. Lanchas de 10 a 65 pessoas saindo da Marina da Glória."', '"description": "Enjoy the Carnival of Rio de Janeiro at sea! Private party on a boat with DJ, open bar, themed decoration and a privileged view of the Rio coastline. Boats for 10 to 65 people departing from Marina da Gloria."'],
       // Schema.org FAQ answer
       ['"text": "A WeBoat oferece lanchas de 10 a 65 pessoas para o Carnaval. Lanchas próprias comportam de 12 a 22 pessoas. Para grupos maiores, temos catamarãs e embarcações parceiras para até 65 pessoas."', '"text": "WeBoat offers boats for 10 to 65 people for Carnival. Our own boats accommodate 12 to 22 people. For larger groups, we have catamarans and partner vessels for up to 65 people."'],
       // Visible HTML FAQ answer (longer version)
@@ -2253,6 +2371,16 @@ const pages = [
       ['5h de passeio', '5h boat trip'],
       ['valores Carnaval', 'Carnival prices'],
       ['Solicitar Orçamento', 'Request a Quote'],
+      // Gallery alt text (full strings — MUST precede short substrings)
+      ['Grupo de amigas com camisas do Brasil curtindo Carnaval na lancha com Pão de Açúcar ao fundo', 'Group of friends with Brazil shirts enjoying Carnival on the boat with Sugarloaf Mountain in the background'],
+      ['Três amigas tomando sol na proa da lancha durante Carnaval no Rio', 'Three friends sunbathing on the bow of the boat during Carnival in Rio'],
+      ['Amigas pulando da lancha no mar durante o Carnaval no Rio', 'Friends jumping from the boat into the sea during Carnival in Rio'],
+      ['Grupo de amigas se divertindo na água com tapete flutuante durante passeio de Carnaval', 'Group of friends having fun in the water with a floating mat during a Carnival trip'],
+      ['Grande grupo curtindo Carnaval na lancha com vista panorâmica do Rio', 'Large group enjoying Carnival on the boat with a panoramic view of Rio'],
+      ['DJ profissional com headphones e controladora na lancha', 'Professional DJ with headphones and controller on the boat'],
+      // Extras descriptions (LONG paragraphs MUST come before short substrings)
+      ['DJ profissional com caixas de som de alta potência. Repertório personalizado com marchinhas, axé, funk e hits. A partir de R$ 1.500', 'Professional DJ with high-power speakers. Customized repertoire with marchinhas, axé, funk and hits. From R$ 1,500'],
+      ['Personalize sua festa de Carnaval com nossos serviços extras', 'Customize your Carnival party with our extra services'],
       // Extras
       ['Serviços Extras', 'Extra Services'],
       ['Monte sua Folia', 'Build Your Party'],
@@ -2264,9 +2392,6 @@ const pages = [
       ['Confete, serpentina, adereços e decoração temática', 'Confetti, streamers, props and themed decoration'],
       ['Churrasco a Bordo', 'BBQ on Board'],
       ['Churrasco completo para manter a energia da festa', 'Full BBQ to keep the party energy going'],
-      // Extras descriptions (long first)
-      ['Personalize sua festa de Carnaval com nossos serviços extras', 'Customize your Carnival party with our extra services'],
-      ['DJ profissional com caixas de som de alta potência. Repertório personalizado com marchinhas, axé, funk e hits. A partir de R$ 1.500', 'Professional DJ with high-power speakers. Customized repertoire with marchinhas, axé, funk and hits. From R$ 1,500'],
       ['Cerveja, caipirinha, drinks, refrigerante e água. Pacotes a partir de R$ 135/pessoa', 'Beer, caipirinha, drinks, soda and water. Packages from R$ 135/person'],
       ['Confete, serpentina, balões coloridos, máscaras e adereços temáticos para toda a turma', 'Confetti, streamers, colorful balloons, masks and themed accessories for the whole group'],
       ['Churrasco completo com picanha, linguiça e acompanhamentos. Kits a partir de R$ 100/pessoa', 'Full BBQ with picanha, sausage and side dishes. Kits from R$ 100/person'],
@@ -2625,6 +2750,7 @@ const pages = [
       ['"text": "Atendimento comercial: 8h às 20h (reservas e informações). Suporte para clientes em passeio: 24 horas."', '"text": "Business hours: 8am to 8pm (reservations and information). Support for customers on trips: 24 hours."'],
       // Alt text
       ['alt="Marinheiro da WeBoat com camisa da empresa"', 'alt="WeBoat captain wearing company shirt"'],
+      ['Técnico WeBoat realizando manutenção nos motores MAN na sala de máquinas', 'WeBoat technician performing maintenance on MAN engines in the engine room'],
       // CTA
       ['Venha Conhecer a WeBoat Brasil', 'Come Meet WeBoat Brasil'],
       ['Agende seu passeio e descubra por que somos a escolha de mais de 1.000 clientes satisfeitos.', 'Schedule your trip and discover why we are the choice of over 1,000 satisfied clients.'],
@@ -2997,6 +3123,10 @@ const pages = [
     waMessage: 'Hello! I would like to understand how the boat rental works. [via site - en]',
     css: 'ocasioes',
     contentBlocks: [
+      // Schema.org HowTo description (full PT → EN, must come first — longest string)
+      ['"description": "Guia completo em 5 passos para alugar uma lancha na WeBoat Brasil, com saída da Marina da Glória no Rio de Janeiro. Do primeiro contato pelo WhatsApp até o dia do passeio. Lanchas de 10 a 65 pessoas, a partir de R$ 2.300."', '"description": "Complete 5-step guide to renting a boat at WeBoat Brasil, departing from Marina da Gloria in Rio de Janeiro. From the first WhatsApp contact to the day of the trip. Boats for 10 to 65 people, from R$ 2,300."'],
+      // Schema.org OfferCatalog name (mixed PT/EN from dictionary)
+      ['"name": "Roteiros de Passeio"', '"name": "Boat Trip Routes"'],
       // Schema.org shared service descriptions
       ['"description": "Lanchas de 10 a 65 pessoas, próprias e parceiras, com combustível, marinheiro e seguro inclusos"', '"description": "Boats for 10 to 65 people, own and partner, with fuel, captain and insurance included"'],
       ['"description": "Churrasco, open bar, decoração, DJ e fotógrafo para passeios de lancha"', '"description": "BBQ, open bar, decoration, DJ and photographer for boat trips"'],
@@ -3215,6 +3345,9 @@ const pages = [
     waMessage: 'Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]',
     css: null,
     contentBlocks: [
+      // Blog cross-reference alt texts (full PT source strings — prevent mixed PT/EN)
+      ['Lanchas ancoradas na Praia Vermelha com Morro da Urca ao fundo', 'Boats anchored at Praia Vermelha with Morro da Urca in the background'],
+      ['Amigas de biquíni relaxando no solário da lancha', 'Friends in bikinis relaxing on the sun deck of the boat'],
       // Page header
       ['Blog WeBoat', 'WeBoat Blog'],
       ['Dicas, guias e tudo sobre passeios de lancha no Rio de Janeiro', 'Tips, guides, and everything about boat trips in Rio de Janeiro'],
@@ -3247,6 +3380,9 @@ const pages = [
     waMessage: 'Hello! I would like information about boat trips to beaches. [via site - en]',
     css: null,
     contentBlocks: [
+      // Blog cross-reference alt texts (full PT source strings — prevent mixed PT/EN)
+      ['Lanchas ancoradas na Praia Vermelha com vista do Morro da Urca e Cristo Redentor ao fundo, Rio de Janeiro', 'Boats anchored at Praia Vermelha with a view of Morro da Urca and Christ the Redeemer in the background, Rio de Janeiro'],
+      ['Amigas de biquíni relaxando no solário da lancha', 'Friends in bikinis relaxing on the sun deck of the boat'],
       // *** CROSS-REFERENCE EXCERPTS FIRST (contain "O que levar" which gets corrupted by short entry below) ***
       ['Guia prático de como se vestir para um passeio de lancha no Rio. O que levar, o que evitar e dicas de proteção solar.', 'Practical guide on how to dress for a boat trip in Rio. What to bring, what to avoid, and sun protection tips.'],
       // Schema.org headline
@@ -3340,6 +3476,11 @@ const pages = [
     waMessage: 'Hello! I would like information about what to bring on the boat trip. [via site - en]',
     css: null,
     contentBlocks: [
+      // Hero alt text (full string to prevent mixed PT/EN)
+      ['Grupo de amigas de biquíni e acessórios relaxando no solário da lancha durante passeio no Rio de Janeiro', 'Group of friends in bikinis and accessories relaxing on the sun deck of the boat during a trip in Rio de Janeiro'],
+      // Cross-reference alt texts (shared across blog pages)
+      ['Lanchas ancoradas na Praia Vermelha com Morro da Urca ao fundo', 'Boats anchored at Praia Vermelha with Morro da Urca in the background'],
+      ['Amigas de biquíni relaxando no solário da lancha', 'Friends in bikinis relaxing on the sun deck of the boat'],
       // Schema.org (long strings FIRST to prevent shorter substrings from corrupting them)
       ['"headline": "O Que Vestir num Passeio de Lancha: Guia Completo"', '"headline": "What to Wear on a Boat Trip: Complete Guide"'],
       ['"description": "Descubra o que vestir num passeio de lancha no Rio de Janeiro. Roupas, calçados, proteção solar e o que evitar."', '"description": "Complete guide on what to wear for a boat trip in Rio de Janeiro. Clothing tips, sunscreen, shoes, and essential items."'],
@@ -3382,7 +3523,8 @@ const pages = [
       ['<strong>Roupas escuras e pesadas:</strong> absorvem mais calor e demoram para secar. Prefira cores claras e tecidos leves.', '<strong>Dark and heavy clothing:</strong> absorbs more heat and takes longer to dry. Prefer light colors and lightweight fabrics.'],
       // Section 5
       ['Para Festas e Eventos: Dress Code Temático', 'For Parties and Events: Themed Dress Code'],
-      ['Se o seu passeio é uma <a href="/despedida-solteira/">despedida de solteira</a>, <a href="/aniversario/">aniversário</a> ou evento especial, o dress code pode ser diferente, mas a regra de ouro permanece: <strong>conforto no mar vem primeiro</strong>.', 'If your trip is a <a href="/en/bachelorette-party/">bachelorette party</a>, <a href="/en/birthday-party/">birthday</a>, or special event, the dress code may be different, but the golden rule remains: <strong>comfort at sea comes first</strong>.'],
+      // NOTE: PT side uses EN URLs because step 16 (link replacement) runs BEFORE contentBlocks
+      ['Se o seu passeio é uma <a href="/en/bachelorette-party/">despedida de solteira</a>, <a href="/en/birthday-party/">aniversário</a> ou evento especial, o dress code pode ser diferente, mas a regra de ouro permanece: <strong>conforto no mar vem primeiro</strong>.', 'If your trip is a <a href="/en/bachelorette-party/">bachelorette party</a>, <a href="/en/birthday-party/">birthday</a>, or special event, the dress code may be different, but the golden rule remains: <strong>comfort at sea comes first</strong>.'],
       ['<strong>Despedida de solteira:</strong> combinar cor do biquíni, tiara, camisetas personalizadas. Funciona e fica lindo nas fotos.', '<strong>Bachelorette party:</strong> matching bikini colors, tiaras, custom t-shirts. It works and looks great in photos.'],
       ['<strong>Aniversários:</strong> looks combinando, acessórios temáticos, chapéus estilizados. Tudo leve e prático.', '<strong>Birthdays:</strong> matching outfits, themed accessories, stylish hats. Everything lightweight and practical.'],
       ['<strong>Eventos corporativos:</strong> bermuda/short e camisa polo ou camiseta da empresa. Nada formal demais.', '<strong>Corporate events:</strong> shorts and polo shirt or company t-shirt. Nothing too formal.'],
@@ -3427,6 +3569,9 @@ const pages = [
     waMessage: 'Hello! I would like directions to Marina da Gloria. [via site - en]',
     css: null,
     contentBlocks: [
+      // Cross-reference alt texts (shared across blog pages)
+      ['Lanchas ancoradas na Praia Vermelha com Morro da Urca ao fundo', 'Boats anchored at Praia Vermelha with Morro da Urca in the background'],
+      ['Amigas de biquíni relaxando no solário da lancha', 'Friends in bikinis relaxing on the sun deck of the boat'],
       // *** LONG STRINGS FIRST — Schema.org description + cross-reference excerpt ***
       // (must come before ['Guia', 'Guide'] which would corrupt them)
       ['Guia completo da Marina da Glória no Rio de Janeiro: como chegar, estacionamento, infraestrutura e dicas para o dia do seu passeio de lancha com a WeBoat.', 'Complete guide to Marina da Gloria in Rio de Janeiro: how to get there, parking, infrastructure and tips for the day of your boat trip with WeBoat.'],
@@ -3694,6 +3839,8 @@ const pages = [
       // *** LONG entries MUST come BEFORE short entries like ['Pagamento', 'Payment'] ***
       ['Pagamento instantâneo via QR code', 'Instant payment via QR code'],
       ['Continuar para Pagamento', 'Continue to Payment'],
+      // Card title
+      ['Seus Dados', 'Your Details'],
       // Stepper
       ['Dados', 'Details'],
       ['Pagamento', 'Payment'],
@@ -4125,6 +4272,13 @@ const translations = [
   // --- Breadcrumbs in Schema ---
   ['Início', 'Home'],
 
+  // --- Event/occasion shared phrases ---
+  ['Ideal para grandes eventos', 'Ideal for large events'],
+  ['Salva-vidas para todos', 'Life jackets for everyone'],
+  ['Personalize sua festa', 'Customize your party'],
+  ['Questions sobre Boat Rental in Rio de Janeiro', 'Questions About Boat Rental in Rio de Janeiro'],
+  ['6 hours de trip', '6-hour trip'],
+
   // --- Event boat cards (homepage) ---
   ['Grandes Grupos', 'Large Groups'],
   ['Lanchas para Eventos e Festas', 'Boats for Events &amp; Parties'],
@@ -4199,6 +4353,7 @@ const translations = [
   ['passeio', 'trip'],
   ['embarcação', 'vessel'],
   ['Selecione um roteiro para começar', 'Select a route to start'],
+  ['Selecione um roteiro para comecar', 'Select a route to start'],
   ['Selecione roteiro, serviços e veja o valor em tempo real', 'Select a route, services and see the price in real time'],
   ['Selecione um roteiro', 'Select a route'],
   ['Escolha o destino ideal para seu passeio na', 'Choose the ideal destination for your trip on the'],
@@ -5488,9 +5643,12 @@ pages.forEach(page => {
   // === STEP 17b: Translate WhatsApp inline link text (inside protected href attributes) ===
   const waTextReplacements = [
     // *** Full-message entries MUST come before shorter substrings ***
+    ['Olá! Gostaria de informações sobre lanchas para eventos e grupos grandes. [via site - home]', 'Hello! I would like information about boats for events and large groups. [via site - home]'],
+    ['Olá! Gostaria de informações sobre iates de luxo para passeio no Rio de Janeiro. [via site - home]', 'Hello! I would like information about luxury yachts for trips in Rio de Janeiro. [via site - home]'],
     ['Olá! Quero reservar um passeio de lancha. Qual a disponibilidade? [via site - roteiros]', 'Hello! I want to book a boat trip. What is the availability? [via site - roteiros]'],
     ['Olá! Quero reservar um passeio de lancha. [via site - como-funciona]', 'Hello! I want to book a boat trip. [via site - como-funciona]'],
     ['Olá! Gostaria de informações sobre os combos de churrasco + open bar. [via site - servicos]', 'Hello! I would like information about the BBQ + open bar combos. [via site - servicos]'],
+    ['Olá! Gostaria de informações sobre as mesas especiais (queijos e vinhos / snacks). [via site - servicos]', 'Hello! I would like information about the special tables (cheese & wine / snacks). [via site - servicos]'],
     ['Olá! Tenho interesse na lancha', 'Hello! I am interested in the boat'],
     ['Poderia me enviar mais informações?', 'Could you send me more information?'],
     ['Olá! Gostaria de fazer o roteiro', 'Hello! I would like to do the route'],
@@ -5537,6 +5695,8 @@ pages.forEach(page => {
     // Ibiza 42 WhatsApp links
     ['Ola! Tenho interesse na lancha WeBoat Ibiza 42.', 'Hello! I am interested in the WeBoat Ibiza 42 boat.'],
     ['Ola! Quero reservar a lancha WeBoat Ibiza 42.', 'Hello! I want to book the WeBoat Ibiza 42 boat.'],
+    // Rio Star 50 WhatsApp fragment
+    ['para grupo grande', 'for a large group'],
     // Carnival page WhatsApp fragments (after dictionary changes Carnaval->Carnival)
     ['para o Carnival 2026', 'for Carnival 2026'],
     ['o Carnaval na lancha no Rio de Janeiro', 'Carnival on a boat in Rio de Janeiro'],
