@@ -31,6 +31,8 @@ const pages = [
     isHomepage: true,
     contentBlocks: [
       // ── LONG BLOCKS FIRST (must run before short fragments to avoid substring corruption) ──
+      // Visible FAQ <strong> block (contains "a partir de" — MUST come before ['a partir de', 'desde'] short block)
+      ['O aluguel de lancha no Rio de Janeiro custa a partir de R$ 2.300 para 5 horas de passeio.', 'El alquiler de lancha en Río de Janeiro cuesta desde R$ 2.300 por 5 horas de paseo.'],
       // Alt text (NOT protected by translateContent - alt is not in protection regex)
       ['Nossa maior lancha para 22 pessoas', 'Nuestra mayor lancha para 22 personas'],
       // Visible FAQ continuation (non-bold text after <strong> block)
@@ -207,7 +209,7 @@ const pages = [
       // FAQ section
       ['Dúvidas sobre Aluguel de Lancha no Rio de Janeiro', 'Dudas sobre Alquiler de Lancha en Río de Janeiro'],
       ['Quanto custa alugar uma lancha no Rio de Janeiro?', '¿Cuánto cuesta alquilar una lancha en Río de Janeiro?'],
-      ['O aluguel de lancha no Rio de Janeiro custa a partir de R$ 2.300 para 5 horas de passeio.', 'El alquiler de lancha en Río de Janeiro cuesta desde R$ 2.300 por 5 horas de paseo.'],
+      // (moved to top of contentBlocks — before 'a partir de' short block)
       ['O que está incluso no aluguel de lancha no RJ?', '¿Qué está incluido en el alquiler de lancha en RJ?'],
       ['Todos os passeios incluem combustível, marinheiro experiente, coolers, som Bluetooth, tapete flutuante, macarrões e coletes salva-vidas.', 'Todos los paseos incluyen combustible, marinero experimentado, hieleras, sonido Bluetooth, alfombra flotante, fideos flotantes y chalecos salvavidas.'],
       ['Como funciona o aluguel de lancha na WeBoat?', '¿Cómo funciona el alquiler de lancha en WeBoat?'],

@@ -335,10 +335,16 @@ const pages = [
       ['Comparar Lanchas', 'Compare Boats'],
       // FAQ
       ['Dúvidas Frequentes sobre Lanchas para Alugar', 'Frequently Asked Questions about Boats for Rent'],
-      ['Qual a diferença entre lancha própria e parceira?', 'What is the difference between own and partner boats?'],
+      // Visible FAQ — "lanchas próprias" (plural) must match source; long answer BEFORE shorter substrings
+      ['Qual a diferença entre lanchas próprias e parceiras?', 'What is the difference between own and partner boats?'],
+      ['<strong>As 5 lanchas próprias WeBoat têm prioridade no agendamento e atendimento direto da nossa equipe. As 21 lanchas parceiras ampliam as opções para grupos maiores e ocasiões especiais.</strong>', '<strong>The 5 own WeBoat boats have priority in scheduling and direct service from our team. The 21 partner boats expand options for larger groups and special occasions.</strong>'],
       ['Todas as lanchas possuem churrasqueira?', 'Do all boats have a BBQ grill?'],
       ['Posso levar bebidas e comidas?', 'Can I bring drinks and food?'],
       ['O que está incluso no aluguel?', 'What is included in the rental?'],
+      ['Como faço para reservar uma lancha?', 'How do I book a boat?'],
+      // Visible FAQ answer — "Como reservar" (long string BEFORE short entries to avoid corruption)
+      ['<strong>Entre em contato pelo WhatsApp (21) 97772-4114, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão.</strong>', '<strong>Contact us via WhatsApp (21) 97772-4114, let us know the date, number of people and desired route. We book with a 50% deposit via PIX or credit card.</strong>'],
+      ['O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes.', 'The remainder is paid on the day of the trip. Cancellation with refund up to 48 hours in advance.'],
       // Info bar items
       ['Marinheiro habilitado', 'Licensed skipper'],
       // Includes section
