@@ -267,6 +267,20 @@ node scripts/generate-es-pages.js
 node scripts/generate-sitemap.js
 ```
 
+### Pipeline de Tradução (3 camadas)
+
+Os scripts usam um pipeline de 3 camadas aplicado sequencialmente:
+
+1. **Layer 1 (steps 1-16):** Substituições estruturais — header, footer, meta tags, `replaceInternalLinks()`
+2. **Layer 2 (step 16b):** `replaceContentBlocks()` — pares `[ptText, translatedText]` por página
+3. **Layer 3 (step 17):** `translateContent()` — dicionário global `[pt, translated]` ordenado por comprimento
+
+**Regras críticas:**
+- Strings longas DEVEM vir antes de substrings curtas (tanto em contentBlocks quanto no dicionário)
+- O texto PT nos contentBlocks deve corresponder ao estado do HTML **APÓS step 16** (links já substituídos)
+- O dicionário (`translateContent`) protege atributos HTML (href, src, alt) — para traduzir Schema.org JSON-LD, use contentBlocks
+- Language switcher usa placeholders `__LANGSW_PT_HREF__` para evitar corrupção por `replaceInternalLinks()`
+
 ---
 
 ## 💬 MENSAGENS WHATSAPP PRÉ-DEFINIDAS
@@ -724,5 +738,5 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 
 ---
 
-**Última atualização:** 15 Fevereiro 2026
-**Versão:** 4.0 - i18n completo (PT + EN + ES)
+**Última atualização:** 16 Fevereiro 2026
+**Versão:** 4.1 - i18n audit completo (lang switcher fix, dictionary gaps, Schema.org, seg-qui/sex-dom)
