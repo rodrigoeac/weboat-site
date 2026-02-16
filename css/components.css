@@ -27,6 +27,12 @@
   white-space: nowrap;
 }
 
+@media (max-width: 768px) {
+  .btn {
+    white-space: normal;
+  }
+}
+
 .btn:focus-visible {
   outline: 2px solid var(--wave-blue);
   outline-offset: 2px;

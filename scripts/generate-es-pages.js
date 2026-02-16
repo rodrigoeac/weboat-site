@@ -190,8 +190,8 @@ const pages = [
     ptPath: 'reveillon/index.html',
     esPath: 'es/ano-nuevo/index.html',
     title: 'Año Nuevo en Lancha en Río de Janeiro | WeBoat Brasil',
-    description: '¡Vea los fuegos artificiales desde una lancha privada en Año Nuevo en Río! La mejor vista de la Bahía de Guanabara.',
-    keywords: 'año nuevo lancha rio, reveillon barco rio de janeiro, fuegos artificiales lancha guanabara',
+    description: '¡Vea los fuegos artificiales desde una lancha privada en Año Nuevo en Río! La mejor vista de Copacabana.',
+    keywords: 'año nuevo lancha rio, reveillon barco rio de janeiro, fuegos artificiales lancha copacabana',
     waMessage: '¡Hola! Quiero información sobre Año Nuevo en lancha para ver los fuegos artificiales. [via site - es]',
     css: 'ocasioes',
   },
@@ -475,7 +475,8 @@ const translations = [
   ['Eventos Corporativos', 'Eventos Corporativos'],
   ['Corporativo', 'Corporativo'],
   ['corporativo', 'corporativo'],
-  ['Réveillon na Baía de Guanabara', 'Año Nuevo en la Bahía de Guanabara'],
+  ['Réveillon na Baía de Guanabara', 'Año Nuevo en Copacabana'],
+  ['Réveillon em Copacabana', 'Año Nuevo en Copacabana'],
   ['Réveillon na Lancha', 'Año Nuevo en la Lancha'],
   ['Réveillon', 'Año Nuevo'],
   ['réveillon', 'año nuevo'],
@@ -533,6 +534,205 @@ const translations = [
   ['Selecionamos as melhores opções', 'Seleccionamos las mejores opciones'],
   ['Depoimentos', 'Testimonios'],
 
+  // --- Pricing sections (boat detail pages) ---
+  ['Valores do Aluguel', 'Precios de Alquiler'],
+  ['Valores por Roteiro (Sex-Dom)', 'Precios por Ruta (Vie-Dom)'],
+  ['Valores por Roteiro', 'Precios por Ruta'],
+  ['Seg-Qui from', 'Lun-Jue desde'],
+  ['Seg-Qui desde', 'Lun-Jue desde'],
+  ['Seg-Qui', 'Lun-Jue'],
+  ['Sex-Dom', 'Vie-Dom'],
+  ['seg a qui', 'lun a jue'],
+  ['sex a dom', 'vie a dom'],
+  ['Adicionais', 'Adicionales'],
+  ['Hora Extra', 'Hora Extra'],
+  ['Turno: Manhã 09h-14h ou Tarde 14h30-19h30', 'Turno: Mañana 09h-14h o Tarde 14h30-19h30'],
+  ['*Turno:', '*Turno:'],
+  ['Manhã', 'Mañana'],
+  ['Tarde', 'Tarde'],
+  ['Reservar pelo WhatsApp', 'Reservar por WhatsApp'],
+  ['Montar Proposta', 'Armar Propuesta'],
+  ['Escolher Lancha e Montar Proposta', 'Elegir Lancha y Armar Propuesta'],
+  ['Preco Seg-Qui', 'Precio Lun-Jue'],
+  ['Preco Sex-Dom', 'Precio Vie-Dom'],
+  ['Propria', 'Propia'],
+  ['Própria', 'Propia'],
+
+  // --- BBQ/Grill pricing notes ---
+  ['Tripulação, Gelo escama 2x20kg, Gelo filtrado 1x10kg, Carvão', 'Tripulación, Hielo escama 2x20kg, Hielo filtrado 1x10kg, Carbón'],
+  ['Tripulação', 'Tripulación'],
+  ['Gelo escama', 'Hielo escama'],
+  ['Gelo filtrado', 'Hielo filtrado'],
+  ['Carvão', 'Carbón'],
+
+  // --- Boat description section ---
+  ['Sobre a WeBoat', 'Sobre la WeBoat'],
+  ['O que está incluído', 'Qué Está Incluido'],
+  ['O que está incluido', 'Qué Está Incluido'],
+  ['Combustível para o roteiro', 'Combustible para la ruta'],
+  ['Combustível para o roteiro completo', 'Combustible para la ruta completa'],
+
+  // --- Image alt text (boat galleries) ---
+  ['Área de sol', 'Área de sol'],
+  ['Em navegação', 'Navegando'],
+  ['Proa', 'Proa'],
+  ['Detalhe interior', 'Detalle interior'],
+  ['Área de descanso', 'Área de descanso'],
+  ['Passeio', 'Paseo'],
+  ['Vista noturna da', 'Vista nocturna de la'],
+  ['com Pão de Açúcar ao fundo', 'con el Pan de Azúcar al fondo'],
+  ['Pão de Açúcar', 'Pan de Azúcar'],
+  ['no mar com céu azul', 'en el mar con cielo azul'],
+  ['ao pôr do sol', 'al atardecer'],
+  ['navegando na', 'navegando en la'],
+  ['com vista para o Cristo Redentor', 'con vista al Cristo Redentor'],
+  ['Cristo Redentor', 'Cristo Redentor'],
+  ['Foto da', 'Foto de la'],
+  ['foto da', 'foto de la'],
+  ['Iate de luxo para', 'Yate de lujo para'],
+
+  // --- Schema.org ---
+  ['Lancha para Aluguel', 'Lancha para Alquiler'],
+  ['Lanchas para Aluguel', 'Lanchas para Alquiler'],
+  ['Lancha de 32 pés para até 15 pessoas. Ideal para passeios privativos e festas no Rio de Janeiro. Melhor custo-benefício da frota.', 'Lancha de 32 pies para hasta 15 personas. Ideal para paseos privativos y fiestas en Río de Janeiro. Mejor costo-beneficio de la flota.'],
+  ['Lancha de 39 pés para até 16 pessoas. Versátil e espaçosa, ideal para festas e celebrações.', 'Lancha de 39 pies para hasta 16 personas. Versátil y espaciosa, ideal para fiestas y celebraciones.'],
+  ['Lancha premium de 36 pés para até 14 pessoas. Acabamento premium e conforto superior.', 'Lancha premium de 36 pies para hasta 14 personas. Acabados premium y confort superior.'],
+  ['Lancha de 42 pés com flybridge exclusivo para até 12 pessoas. Experiência única no mar.', 'Lancha de 42 pies con flybridge exclusivo para hasta 12 personas. Experiencia única en el mar.'],
+  ['Lancha de 50 pés para até 22 pessoas. Nossa maior embarcação com espaço para grandes grupos.', 'Lancha de 50 pies para hasta 22 personas. Nuestra mayor embarcación con espacio para grandes grupos.'],
+  ['Quantas pessoas cabem na', 'Cuántas personas caben en la'],
+  ['Qual o valor da hora extra na', 'Cuál es el precio de la hora extra en la'],
+  ['tem banheiro', 'tiene baño'],
+  ['O que está incluso no aluguel da', 'Qué está incluido en el alquiler de la'],
+  ['Comparativo de Lanchas WeBoat Brasil', 'Comparativo de Lanchas WeBoat Brasil'],
+  ['Tabela comparativa das 5 lanchas proprias da WeBoat Brasil para aluguel no Rio de Janeiro', 'Tabla comparativa de las 5 lanchas propias de WeBoat Brasil para alquiler en Río de Janeiro'],
+  ['Lancha para ate', 'Lancha para hasta'],
+  ['Otima para festas e celebracoes', 'Ideal para fiestas y celebraciones'],
+  ['Lancha premium para ate', 'Lancha premium para hasta'],
+  ['Lancha com flybridge exclusivo', 'Lancha con flybridge exclusivo'],
+  ['para quem busca sofisticação', 'para quienes buscan sofisticación'],
+  ['a única opção propria', 'la única opción propia'],
+  ['Serviços WeBoat Brasil', 'Servicios WeBoat Brasil'],
+  ['Serviços adicionais para seu passeio de lancha no Rio de Janeiro', 'Servicios adicionales para su paseo en lancha en Río de Janeiro'],
+  ['Serviço completo de churrasco durante seu passeio de lancha', 'Servicio completo de asado durante su paseo en lancha'],
+
+  // --- FAQ answer sentence fragments (boat detail pages) ---
+  ['incluindo crianças', 'incluyendo niños'],
+  ['Essa capacidade é definida pela Marinha do Brasil para garantir conforto e segurança de todos a bordo', 'Esta capacidad es definida por la Marina de Brasil para garantizar confort y seguridad de todos a bordo'],
+  ['tem capacidade para', 'tiene capacidad para'],
+  ['A solicitação deve ser feita durante o passeio diretamente com o marinheiro, sujeita à disponibilidade da embarcação', 'La solicitud debe hacerse durante el paseo directamente con el marinero, sujeta a disponibilidad de la embarcación'],
+  ['para maior conforto dos passageiros durante todo o passeio', 'para mayor confort de los pasajeros durante todo el paseo'],
+  ['tripulação habilitada (marinheiro)', 'tripulación habilitada (marinero)'],
+  ['tripulação habilitada', 'tripulación habilitada'],
+  ['macarrões flutuantes', 'flotadores tubulares'],
+  ['A churrasqueira na', 'La parrilla en la'],
+  ['A churrasqueira está disponível mediante adicional de', 'La parrilla está disponible por un adicional de'],
+  ['A churrasqueira tem adicional de', 'La parrilla tiene un adicional de'],
+  ['tem um adicional de', 'tiene un adicional de'],
+  ['A taxa inclui comandante preparando o churrasco, 02 sacos de gelo escama e 01 saco de gelo filtrado', 'La tarifa incluye un parrillero, 2 bolsas de hielo escama y 1 bolsa de hielo filtrado'],
+  ['A taxa inclui', 'La tarifa incluye'],
+  ['comandante preparando o churrasco', 'parrillero'],
+  ['sacos de gelo escama', 'bolsas de hielo escama'],
+  ['saco de gelo filtrado', 'bolsa de hielo filtrado'],
+  ['roteiro contratado', 'ruta contratada'],
+  ['para o roteiro contratado', 'para la ruta contratada'],
+  ['O aluguel da', 'El alquiler de la'],
+  ['O aluguel inclui', 'El alquiler incluye'],
+  ['som com Bluetooth', 'sonido con Bluetooth'],
+  ['na WeBoat', 'en la WeBoat'],
+
+  // --- FAQ Schema.org answers ---
+  ['Sim!', '¡Sí!'],
+  ['possui banheiro a bordo', 'tiene baño a bordo'],
+  ['O valor da hora extra', 'El precio de la hora extra'],
+  ['é de R$', 'es de R$'],
+  ['Cabem até', 'Caben hasta'],
+  ['O aluguel inclui', 'El alquiler incluye'],
+  ['inclui:', 'incluye:'],
+  ['combustível', 'combustible'],
+  ['marinheiro', 'marinero'],
+  ['som Bluetooth', 'sonido Bluetooth'],
+  ['tapete flutuante', 'tapete flotante'],
+  ['coletes salva-vidas', 'chalecos salvavidas'],
+  ['coolers', 'coolers'],
+  ['seguro obrigatório', 'seguro obligatorio'],
+
+  // --- Occasion pages body content ---
+  ['é um passeio privativo de aproximadamente', 'es un paseo privado de aproximadamente'],
+  ['com saída da Marina da Glória', 'con salida de la Marina da Glória'],
+  ['com saída da', 'con salida de la'],
+  ['Você navega pela', 'Navegas por la'],
+  ['e orla do Rio com', 'y la costa de Río con'],
+  ['e orla do Rio', 'y la costa de Río'],
+  ['decoração temática', 'decoración temática'],
+  ['É a forma perfeita de curtir o', 'Es la forma perfecta de disfrutar el'],
+  ['É a forma perfeita de curtir', 'Es la forma perfecta de disfrutar'],
+  ['longe da multidão', 'lejos de la multitud'],
+  ['com privacidade e conforto', 'con privacidad y confort'],
+  ['para seu grupo', 'para su grupo'],
+  ['passeio privativo', 'paseo privado'],
+
+  // --- Common body content fragments ---
+  ['é a escolha perfeita para quem busca o melhor custo-benefício em', 'es la elección perfecta para quienes buscan el mejor costo-beneficio en'],
+  ['é a escolha perfeita para quem busca', 'es la elección perfecta para quienes buscan'],
+  ['oferece conforto e espaço ideal para', 'ofrece confort y espacio ideal para'],
+  ['passeios em família', 'paseos en familia'],
+  ['confraternizações', 'confraternizaciones'],
+  ['garante diversão completa durante todo o passeio', 'garantiza diversión completa durante todo el paseo'],
+  ['Navegue pelas águas da', 'Navega por las aguas de la'],
+  ['e as praias mais bonitas do Rio', 'y las playas más bonitas de Río'],
+  ['Equipada com', 'Equipada con'],
+  ['essa lancha oferece', 'esta lancha ofrece'],
+  ['essa embarcação oferece', 'esta embarcación ofrece'],
+  ['essa lancha', 'esta lancha'],
+  ['com vista para o', 'con vista al'],
+  ['com vista para a', 'con vista a la'],
+  ['com vista para', 'con vista a'],
+  ['aniversários e', 'cumpleaños y'],
+  ['espaço ideal para', 'espacio ideal para'],
+  ['Com capacidade para', 'Con capacidad para'],
+  ['com capacidade para', 'con capacidad para'],
+  ['no Rio de Janeiro', 'en Río de Janeiro'],
+  ['no aluguel', 'en el alquiler'],
+  ['do aluguel', 'del alquiler'],
+  ['da embarcação', 'de la embarcación'],
+  ['na embarcação', 'en la embarcación'],
+  ['disponibilidade da embarcação', 'disponibilidad de la embarcación'],
+  ['diretamente com o', 'directamente con el'],
+  ['sujeita à', 'sujeta a'],
+  ['durante o passeio', 'durante el paseo'],
+  ['durante todo o', 'durante todo el'],
+  ['passeio', 'paseo'],
+  ['embarcação', 'embarcación'],
+  ['Selecione um roteiro para começar', 'Seleccione una ruta para comenzar'],
+  ['Selecione roteiro, serviços e veja o valor em tempo real', 'Seleccione ruta, servicios y vea el precio en tiempo real'],
+  ['Selecione um roteiro', 'Seleccione una ruta'],
+  ['Escolha o destino ideal para seu passeio na', 'Elija el destino ideal para su paseo en la'],
+  ['Roteiros Disponíveis', 'Rutas Disponibles'],
+  ['roteiros disponíveis', 'rutas disponibles'],
+  ['Roteiros disponíveis', 'Rutas disponibles'],
+
+  // --- Misc content ---
+  ['Mais Pedido', 'Más Popular'],
+  ['mais pedido', 'más popular'],
+  ['Experiências Reais', 'Experiencias Reales'],
+  ['horas', 'horas'],
+  ['hora', 'hora'],
+  ['parada', 'parada'],
+  ['paradas', 'paradas'],
+  ['Não sabe qual escolher? Compare as lanchas', '¿No sabe cuál elegir? Compare las lanchas'],
+  ['Não sabe qual escolher?', '¿No sabe cuál elegir?'],
+  ['Compare as lanchas', 'Compare las lanchas'],
+
+  // --- FAQ Common ---
+  ['Como funciona', 'Cómo funciona'],
+  ['Qual o preço', 'Cuál es el precio'],
+  ['Quantas pessoas', 'Cuántas personas'],
+  ['E se chover', 'Y si llueve'],
+  ['Posso levar', 'Puedo llevar'],
+  ['Posso cancelar', 'Puedo cancelar'],
+  ['O que está incluso', 'Qué está incluido'],
+  ['Preciso reservar com antecedência', 'Necesito reservar con anticipación'],
+
   // --- Forms ---
   ['Nome completo', 'Nombre completo'],
   ['Telefone', 'Teléfono'],
@@ -559,6 +759,11 @@ const translations = [
   ['Algo deu errado.', 'Algo salió mal.'],
   ['Li e aceito os', 'He leído y acepto los'],
   ['Enviamos a confirmação para', 'Enviamos la confirmación a'],
+  ['Tive um problema com o link de pagamento', 'Tuve un problema con el enlace de pago'],
+  ['Minha reserva foi confirmada e gostaria de mais informações sobre o embarque', 'Mi reserva fue confirmada y me gustaría más información sobre el embarque'],
+
+  // --- Checkout ---
+  ['Continuar para Pagamento', 'Continuar al Pago'],
 
   // --- Breadcrumbs ---
   ['Início', 'Inicio'],
@@ -568,6 +773,8 @@ const translations = [
   ['Empresa de aluguel de lanchas no Rio de Janeiro', 'Empresa de alquiler de lanchas en Río de Janeiro'],
   ['Passeios privativos para festas, aniversários, despedidas de solteira e eventos corporativos', 'Paseos privativos para fiestas, cumpleaños, despedidas de soltera y eventos corporativos'],
   ['Lanchas de 10 a 65 pessoas saindo da Marina da Glória', 'Lanchas de 10 a 65 personas saliendo de la Marina da Glória'],
+  ['Churrasco na Lancha', 'Asado a Bordo'],
+  ['Decoração e Open Bar', 'Decoración y Open Bar'],
   ['Instagram WeBoat', 'Instagram WeBoat'],
   ['WhatsApp WeBoat', 'WhatsApp WeBoat'],
 ];
@@ -738,7 +945,7 @@ function getEsFooter() {
             <li><a href="/es/despedida-de-soltera/">Despedida de Soltera en Lancha</a></li>
             <li><a href="/es/cumpleanos/">Fiesta de Cumpleaños en el Mar</a></li>
             <li><a href="/es/eventos-corporativos/">Eventos Corporativos</a></li>
-            <li><a href="/es/ano-nuevo/">Año Nuevo en la Bahía de Guanabara</a></li>
+            <li><a href="/es/ano-nuevo/">Año Nuevo en Copacabana</a></li>
             <li><a href="/es/carnaval/">Carnaval en la Lancha</a></li>
           </ul>
         </div>
@@ -810,7 +1017,8 @@ function translateContent(html) {
     return placeholder;
   }
 
-  html = html.replace(/<script[\s\S]*?<\/script>/gi, protect);
+  // Protect non-JSON-LD scripts (GTM, inline JS) — JSON-LD has translatable text
+  html = html.replace(/<script(?![^>]*type\s*=\s*["']application\/ld\+json["'])[\s\S]*?<\/script>/gi, protect);
   html = html.replace(/(\s(?:href|src|srcset|action|data-\w+|class|id|for|name|value|style|type|role|rel|integrity|crossorigin|media|onload|sizes|width|height|loading|decoding|autocomplete|inputmode|tabindex)=")([^"]*")/gi, (match, prefix, rest) => {
     return prefix + protect(rest);
   });
