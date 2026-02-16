@@ -656,6 +656,29 @@ const translations = [
   ['coolers', 'coolers'],
   ['seguro obrigatório', 'seguro obligatorio'],
 
+  // --- Event boat cards (homepage) ---
+  ['Grandes Grupos', 'Grupos Grandes'],
+  ['Lanchas para Eventos e Festas', 'Lanchas para Eventos y Fiestas'],
+  ['Organizando um evento corporativo, festa ou confraternização grande?', '¿Organizando un evento corporativo, fiesta o gran confraternización?'],
+  ['Temos embarcações para grupos de 30 a 65 pessoas com toda estrutura necessária', 'Tenemos embarcaciones para grupos de 30 a 65 personas con toda la infraestructura necesaria'],
+  ['Eventos para 30-40 pessoas', 'Eventos para 30-40 personas'],
+  ['Eventos para 35-50 pessoas', 'Eventos para 35-50 personas'],
+  ['Maior embarcação para 50-65 pessoas', 'Mayor embarcación para 50-65 personas'],
+  ['Ideal para eventos corporativos e festas', 'Ideal para eventos corporativos y fiestas'],
+  ['4 caixas PZ ativas + gerador incluso', '4 parlantes PZ activos + generador incluido'],
+  ['Nossa maior embarcação com gerador', 'Nuestra mayor embarcación con generador'],
+  ['Solicitar Orçamento para Evento', 'Solicitar Presupuesto para Evento'],
+  ['Eventos', 'Eventos'],
+  ['Som Profissional', 'Sonido Profesional'],
+  ['Maior Capacidade', 'Mayor Capacidad'],
+  ['Experiência Premium', 'Experiencia Premium'],
+  ['Iates de Luxo', 'Yates de Lujo'],
+  ['Sofisticação e conforto para quem busca uma experiência exclusiva', 'Sofisticación y confort para quienes buscan una experiencia exclusiva'],
+  ['Iates acima de 60 pés com ar-condicionado, gerador e acabamento premium', 'Yates de más de 60 pies con aire acondicionado, generador y acabados premium'],
+  ['Luxo', 'Lujo'],
+  ['corporativos e festas', 'corporativos y fiestas'],
+  ['e festas', 'y fiestas'],
+
   // --- Occasion pages body content ---
   ['é um passeio privativo de aproximadamente', 'es un paseo privado de aproximadamente'],
   ['com saída da Marina da Glória', 'con salida de la Marina da Glória'],
@@ -722,6 +745,90 @@ const translations = [
   ['Não sabe qual escolher? Compare as lanchas', '¿No sabe cuál elegir? Compare las lanchas'],
   ['Não sabe qual escolher?', '¿No sabe cuál elegir?'],
   ['Compare as lanchas', 'Compare las lanchas'],
+
+  // --- Specs table (boat detail pages) ---
+  ['Especificações Técnicas', 'Especificaciones Técnicas'],
+  ['Especificações', 'Especificaciones'],
+  ['Tamanho', 'Tamaño'],
+  ['Tipo', 'Tipo'],
+  ['Capacidade', 'Capacidad'],
+  ['Som', 'Sonido'],
+  ['Banheiro', 'Baño'],
+  ['Toldo', 'Toldo'],
+  ['Disponível', 'Disponible'],
+  ['disponível', 'disponible'],
+  ['Pés', 'Pies'],
+  ['pés', 'pies'],
+
+  // --- Sidebar (boat detail pages) ---
+  ['Informações Rápidas', 'Información Rápida'],
+  ['Consultar Disponibilidade', 'Consultar Disponibilidad'],
+  ['Disponível todos os dias', 'Disponible todos los días'],
+  ['PIX, cartão ou transferência', 'PIX, tarjeta o transferencia'],
+  ['cartão', 'tarjeta'],
+  ['transferência', 'transferencia'],
+  ['Outras Lanchas', 'Otras Lanchas'],
+
+  // --- FAQ sections ---
+  ['Frequently Asked Questions sobre a', 'Preguntas Frecuentes sobre la'],
+  ['Perguntas Frequentes sobre a', 'Preguntas Frecuentes sobre la'],
+  ['Ver Todas as Perguntas', 'Ver Todas las Preguntas'],
+  ['Qual o valor da hora extra', 'Cuál es el valor de la hora extra'],
+  ['sobre a WeBoat', 'sobre la WeBoat'],
+
+  // --- FAQ answer fragments ---
+  ['começa em', 'comienza en'],
+  ['O preço varia conforme a capacidade da', 'El precio varía según la capacidad de la'],
+  ['roteiro escolhido e duração do', 'ruta elegida y duración del'],
+  ['captain habilitado pela Marinha', 'capitán habilitado por la Marina'],
+  ['habilitado pela Marinha do Brasil', 'habilitado por la Marina de Brasil'],
+  ['São opcionais', 'Son opcionales'],
+  ['são opcionais', 'son opcionales'],
+  ['Para grupos maiores, temos', 'Para grupos más grandes, tenemos'],
+  ['A reserva é confirmada com 50% de sinal via PIX ou transferência', 'La reserva se confirma con 50% de seña vía PIX o transferencia'],
+  ['O restante deve ser pago', 'El resto debe pagarse'],
+  ['momento do embarque', 'momento del embarque'],
+  ['Não há restrição de idade', 'No hay restricción de edad'],
+  ['Pedimos que os responsáveis sigam as orientações', 'Pedimos que los responsables sigan las orientaciones'],
+  ['Não há tempo mínimo ou máximo para reserva', 'No hay tiempo mínimo o máximo para reserva'],
+  ['em períodos de alta procura', 'en períodos de alta demanda'],
+  ['recomendamos reservar com pelo menos 30 dias de antecedência', 'recomendamos reservar con al menos 30 días de anticipación'],
+
+  // --- Proposal builder ---
+  ['Monte sua proposta', 'Arme su propuesta'],
+  ['Personalize seu', 'Personalice su'],
+  ['Escolha o Roteiro', 'Elija la Ruta'],
+  ['Detalhes do', 'Detalles del'],
+  ['Número de Pessoas', 'Número de Personas'],
+  ['Horas Extras', 'Horas Extras'],
+  ['Serviços Extras (opcional)', 'Servicios Extras (opcional)'],
+  ['Resumo da Proposta', 'Resumen de la Propuesta'],
+  ['Enviar Proposta pelo WhatsApp', 'Enviar Propuesta por WhatsApp'],
+
+  // --- CTA sections ---
+  ['Garanta sua data e viva uma experiência inesquecível no mar do Rio de Janeiro', 'Asegure su fecha y viva una experiencia inolvidable en el mar de Río de Janeiro'],
+  ['Ver Outras Lanchas', 'Ver Otras Lanchas'],
+  ['da frota', 'de la flota'],
+
+  // --- Compare page ---
+  ['Comparativo', 'Comparativo'],
+  ['Diferencial', 'Diferencial'],
+  ['Versátil para festas', 'Versátil para fiestas'],
+  ['Indicada para:', 'Recomendada para:'],
+  ['Tabela Comparativa', 'Tabla Comparativa'],
+  ['Falar com Especialista', 'Hablar con un Especialista'],
+  ['Atualizado em', 'Actualizado en'],
+  ['fevereiro', 'febrero'],
+
+  // --- Specs/features ---
+  ['Equipamentos de segurança', 'Equipamiento de seguridad'],
+  ['Vista aérea', 'Vista aérea'],
+  ['Navegação', 'Navegación'],
+  ['Em movimento', 'En movimiento'],
+  ['Cabine', 'Cabina'],
+  ['Espaço interno', 'Espacio interno'],
+  ['Vista geral', 'Vista general'],
+  ['Roteiro', 'Ruta'],
 
   // --- FAQ Common ---
   ['Como funciona', 'Cómo funciona'],
