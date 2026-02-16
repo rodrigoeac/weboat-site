@@ -37,6 +37,15 @@ const pages = [
       ['iates de luxo para passeio no Rio de Janeiro', 'yates de lujo para paseo en Río de Janeiro'],
       // Alt text (NOT protected by translateContent - alt is not in protection regex)
       ['Nossa maior lancha para 22 pessoas', 'Nuestra mayor lancha para 22 personas'],
+      ['WeBoat 390 - Lancha para 16 pessoas com churrasqueira', 'WeBoat 390 - Lancha para 16 personas con parrilla'],
+      ['Schaefer 62 Fly na Marina da Glória com Pão de Açúcar ao fundo', 'Schaefer 62 Fly en la Marina da Glória con el Pan de Azúcar al fondo'],
+      ['Iate Intermarine 60 Fly no mar com céu azul', 'Yate Intermarine 60 Fly en el mar con cielo azul'],
+      ['Marinheiro WeBoat com camisa da empresa e Cristo Redentor ao fundo', 'Marinero WeBoat con camisa de la empresa y Cristo Redentor al fondo'],
+      ['Churrasco sendo preparado a bordo da lancha', 'Asado siendo preparado a bordo de la lancha'],
+      ['Amigas brindando com drinks no open bar da lancha', 'Amigas brindando con drinks en el open bar de la lancha'],
+      ['Combo churrasco e open bar na lancha', 'Combo asado y open bar en la lancha'],
+      ['Decoração de aniversário na lancha com balões verdes e letreiro Happy Birthday', 'Decoración de cumpleaños en la lancha con globos verdes y letrero Happy Birthday'],
+      ['Catamarã Oceano - Maior embarcação para 50-65 pessoas', 'Catamarán Oceano - Mayor embarcación para 50-65 personas'],
       // Visible FAQ continuation (non-bold text after <strong> block)
       ['Você só paga extra pelos opcionais como churrasco (R$ 250-600), decoração e open bar.', 'Solo paga extra por los opcionales como asado (R$ 250-600), decoración y open bar.'],
       // Schema.org FAQ full answers (JSON-LD is NOT protected by translateContent)
@@ -283,6 +292,12 @@ const pages = [
       ['Veja a opinião de quem já alugou nossas lanchas e viveu essa experiência.', 'Vea la opinión de quienes ya alquilaron nuestras lanchas y vivieron esa experiencia.'],
       // Alt text
       ['Nossa maior lancha para 20-22 pessoas', 'Nuestra mayor lancha para 20-22 personas'],
+      ['Lancha com churrasqueira para 16 pessoas', 'Lancha con parrilla para 16 personas'],
+      ['Lancha com ar-condicionado para 20 pessoas', 'Lancha con aire acondicionado para 20 personas'],
+      ['Lancha com ar-condicionado para 22 pessoas', 'Lancha con aire acondicionado para 22 personas'],
+      ['Lancha com ar-condicionado para 18-22 pessoas', 'Lancha con aire acondicionado para 18-22 personas'],
+      ['Schaefer 62 Fly na Marina da Glória com Pão de Açúcar ao fundo', 'Schaefer 62 Fly en la Marina da Glória con el Pan de Azúcar al fondo'],
+      ['Iate Intermarine 60 Fly no mar com céu azul', 'Yate Intermarine 60 Fly en el mar con cielo azul'],
       // Visible FAQ continuation
       ['Você só paga extra por opcionais como churrasco, decoração e open bar.', 'Solo paga extra por opcionales como asado, decoración y open bar.'],
       // Header
@@ -681,6 +696,14 @@ const pages = [
       ['Selecione um roteiro para começar', 'Seleccione una ruta para comenzar'],
       ['Enviar Proposta pelo WhatsApp', 'Enviar Propuesta por WhatsApp'],
       ['Ate 12 pessoas', 'Hasta 12 personas'],
+      // Alt text
+      ['Vista principal com Pao de Acucar', 'Vista principal con Pan de Azúcar'],
+      ['Cockpit com cozinha', 'Cockpit con cocina'],
+      ['Cabine interior', 'Cabina interior'],
+      ['Mesa de jantar', 'Mesa de comedor'],
+      ['Vista exterior', 'Vista exterior'],
+      ['Proa solario', 'Proa solárium'],
+      ['Flybridge solario', 'Flybridge solárium'],
       // CTA
       ['Reserve a WeBoat Ibiza 42 Agora', 'Reserve la WeBoat Ibiza 42 Ahora'],
       ['Navegue com flybridge exclusivo e vista panoramica no Rio de Janeiro.', 'Navegue con flybridge exclusivo y vista panorámica en Río de Janeiro.'],
@@ -696,6 +719,8 @@ const pages = [
     waMessage: '¡Hola! Me interesa la lancha WeBoat Rio Star 50. ¿Podrían enviarme más información? [via site - es]',
     css: 'lancha-detalhe',
     contentBlocks: [
+      // Alt text
+      ['WeBoat Rio Star 50 - Detalhes', 'WeBoat Rio Star 50 - Detalles'],
       ['Maior Capacidade', 'Mayor Capacidad'],
       ['Nossa maior lancha própria', 'Nuestra mayor lancha propia'],
       ['Valores do Aluguel', 'Precios de Alquiler'],
@@ -952,8 +977,13 @@ const pages = [
       // Schema ItemList - Volta Completa description (contains 'roteiros')
       ['Experiência completa com todos os roteiros em um único passeio.', 'Experiencia completa con todas las rutas en un único paseo.'],
       // Alt texts (not protected by translateContent)
+      ['Mapa dos roteiros de passeio de lancha no Rio de Janeiro - Marina da Glória, Urca, Praia Vermelha, Copacabana, Ilhas Cagarras e Niterói', 'Mapa de las rutas de paseo en lancha en Río de Janeiro - Marina da Glória, Urca, Praia Vermelha, Copacabana, Ilhas Cagarras y Niterói'],
       ['Passeio de lancha na Mureta da Urca com vista para o Pão de Açúcar', 'Paseo en lancha en Mureta da Urca con vista al Pan de Azúcar'],
       ['Passeio de lancha na Praia Vermelha com bondinho do Pão de Açúcar', 'Paseo en lancha en Praia Vermelha con teleférico del Pan de Azúcar'],
+      ['Vista panorâmica da orla de Copacabana com Pão de Açúcar ao fundo', 'Vista panorámica del litoral de Copacabana con el Pan de Azúcar al fondo'],
+      ['Vista aérea das Ilhas Cagarras com lancha ancorada em águas cristalinas', 'Vista aérea de las Ilhas Cagarras con lancha anclada en aguas cristalinas'],
+      ['Vista aérea da Praia de Itaipu em Niterói com mar cristalino', 'Vista aérea de la Praia de Itaipu en Niterói con mar cristalino'],
+      ['MAC Niterói visto do mar com Cristo Redentor - Roteiro Volta Completa', 'MAC Niterói visto desde el mar con Cristo Redentor - Ruta Vuelta Completa'],
       // Map section (longer string must come before 'Nossos Roteiros' to avoid substring corruption)
       ['Conheça Nossos Roteiros', 'Conozca Nuestras Rutas'],
       // Page header
@@ -1051,6 +1081,8 @@ const pages = [
     waMessage: '¡Hola! Me gustaría hacer la ruta Mureta da Urca. ¿Cuál es la disponibilidad? [via site - es]',
     css: 'roteiros',
     contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Passeio de lancha na Mureta da Urca com vista panorâmica do Pão de Açúcar', 'Paseo en lancha en Mureta da Urca con vista panorámica del Pan de Azúcar'],
       // Schema.org Offer description (JSON-LD — not protected by translateContent)
       ['A partir de R$ 2.300 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro.', 'Desde R$ 2.300 (lun-jue, WeBoat 32). Incluye combustible, marinero y seguro.'],
       // Hero
@@ -1129,6 +1161,8 @@ const pages = [
     waMessage: '¡Hola! Me gustaría hacer la ruta Praia Vermelha. ¿Cuál es la disponibilidad? [via site - es]',
     css: 'roteiros',
     contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Passeio de lancha na Praia Vermelha com vista do Pão de Açúcar e Cristo Redentor', 'Paseo en lancha en Praia Vermelha con vista del Pan de Azúcar y Cristo Redentor'],
       // Schema.org Offer description (JSON-LD — not protected by translateContent)
       ['A partir de R$ 2.500 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro.', 'Desde R$ 2.500 (lun-jue, WeBoat 32). Incluye combustible, marinero y seguro.'],
       // Schema.org FAQ answers (plain text, no HTML tags) - MUST come FIRST before short fragments like 'bondinho'
@@ -1214,6 +1248,8 @@ const pages = [
     waMessage: '¡Hola! Me gustaría hacer la ruta Copacabana. ¿Cuál es la disponibilidad? [via site - es]',
     css: 'roteiros',
     contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Vista panorâmica da orla de Copacabana com Pão de Açúcar ao fundo', 'Vista panorámica del litoral de Copacabana con el Pan de Azúcar al fondo'],
       // Schema TouristAttraction descriptions (JSON-LD not protected)
       ['Fortaleza histórica vista pelo mar com café e museu', 'Fortaleza histórica vista desde el mar con café y museo'],
       ['Parada para banho ao pé do Pão de Açúcar', 'Parada para baño al pie del Pan de Azúcar'],
@@ -1297,6 +1333,8 @@ const pages = [
     waMessage: '¡Hola! Me gustaría hacer la ruta Ilhas Cagarras. ¿Cuál es la disponibilidad? [via site - es]',
     css: 'roteiros',
     contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Vista aérea das Ilhas Cagarras com lancha ancorada em águas cristalinas', 'Vista aérea de las Ilhas Cagarras con lancha anclada en aguas cristalinas'],
       // Schema.org Offer description (JSON-LD — not protected by translateContent)
       ['A partir de R$ 3.600 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro.', 'Desde R$ 3.600 (lun-jue, WeBoat 32). Incluye combustible, marinero y seguro.'],
       // Hero
@@ -1381,6 +1419,8 @@ const pages = [
     waMessage: '¡Hola! Me gustaría hacer la ruta Itaipu y Camboinhas. ¿Cuál es la disponibilidad? [via site - es]',
     css: 'roteiros',
     contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Vista aérea da Praia de Itaipu em Niterói com mar cristalino e montanhas', 'Vista aérea de la Praia de Itaipu en Niterói con mar cristalino y montañas'],
       // Schema.org Offer description (JSON-LD — not protected by translateContent)
       ['A partir de R$ 3.600 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro.', 'Desde R$ 3.600 (lun-jue, WeBoat 32). Incluye combustible, marinero y seguro.'],
       // Hero
@@ -1465,6 +1505,8 @@ const pages = [
       // Schema.org FAQ questions (JSON-LD — "Qual" → "¿Cuál")
       ['Qual o trajeto da Volta Completa?', '¿Cuál es el trayecto del Tour Completo?'],
       ['Qual a duração da Volta Completa?', '¿Cuál es la duración del Tour Completo?'],
+      // Alt text (NOT protected by translateContent)
+      ['MAC Niterói visto do mar com Cristo Redentor ao fundo - Roteiro Volta Completa', 'MAC Niterói visto desde el mar con Cristo Redentor al fondo - Ruta Vuelta Completa'],
       // Schema.org Offer description (JSON-LD — not protected by translateContent)
       ['A partir de R$ 4.500 (seg-qui, WeBoat 32). Inclui combustível, marinheiro e seguro.', 'Desde R$ 4.500 (lun-jue, WeBoat 32). Incluye combustible, marinero y seguro.'],
       // Schema.org FAQ answers (plain text, no HTML) - MUST come FIRST before 'Praias de Adão e Eva' short block
@@ -1576,6 +1618,14 @@ const pages = [
     contentBlocks: [
       // Alt text (NOT protected by translateContent)
       ['Nossa maior lancha para 20-22 pessoas', 'Nuestra mayor lancha para 20-22 personas'],
+      ['Grupo de amigas em despedida de solteira na lancha com Pão de Açúcar ao fundo', 'Grupo de amigas en despedida de soltera en la lancha con el Pan de Azúcar al fondo'],
+      ['Grupo de amigas na despedida de solteira na lancha', 'Grupo de amigas en la despedida de soltera en la lancha'],
+      ['Buffet e drinks servidos a bordo na despedida de solteira na lancha', 'Buffet y drinks servidos a bordo en la despedida de soltera en la lancha'],
+      ['Amiga com óculos Team Bride e drink rosa na despedida de solteira na lancha', 'Amiga con lentes Team Bride y drink rosa en la despedida de soltera en la lancha'],
+      ['Noiva com véu e óculos Team Bride na despedida de solteira na lancha', 'Novia con velo y lentes Team Bride en la despedida de soltera en la lancha'],
+      ['Amigas com faixas Team Bride e drinks rosa na despedida de solteira na lancha', 'Amigas con bandas Team Bride y drinks rosa en la despedida de soltera en la lancha'],
+      ['Silhueta com drink ao pôr do sol na lancha durante despedida de solteira', 'Silueta con drink al atardecer en la lancha durante despedida de soltera'],
+      ['Catamarã Oceano - Maior embarcação para 50-65 pessoas', 'Catamarán Oceano - Mayor embarcación para 50-65 personas'],
       // Schema.org FAQ answers (JSON-LD plain text - MUST come first)
       ['Temos opções de lanchas para grupos de 10 a 65 pessoas. Nossas lanchas próprias comportam de 12 a 22 pessoas, e com parceiros temos opções maiores para grupos grandes. Entre em contato para encontrar a lancha ideal para seu grupo.', 'Tenemos opciones de lanchas para grupos de 10 a 65 personas. Nuestras lanchas propias tienen capacidad de 12 a 22 personas, y con socios tenemos opciones mayores para grupos grandes. Contáctenos para encontrar la lancha ideal para su grupo.'],
       ['A decoração temática de despedida de solteira é um adicional a partir de R$ 135/pessoa, incluindo faixa de noiva, balões, adereços temáticos e props para fotos. Você também pode trazer sua própria decoração.', 'La decoración temática de despedida de soltera es un adicional desde R$ 135/persona, incluyendo banda de novia, globos, accesorios temáticos y props para fotos. También puede traer su propia decoración.'],
@@ -1729,6 +1779,13 @@ const pages = [
       // Alt text (NOT protected by translateContent)
       ['Equipe preparando churrasco e petiscos na churrasqueira da marina com vista para o mar', 'Equipo preparando asado y bocadillos en la parrilla de la marina con vista al mar'],
       ['Nossa maior lancha para 20-22 pessoas', 'Nuestra mayor lancha para 20-22 personas'],
+      ['Festa de aniversário na lancha no Rio de Janeiro', 'Fiesta de cumpleaños en la lancha en Río de Janeiro'],
+      ['Buffet de frutas tropicais com arranjo de flores na lancha na Marina da Glória', 'Buffet de frutas tropicales con arreglo de flores en la lancha en la Marina da Glória'],
+      ['Aniversariante com bolo personalizado na lancha', 'Cumpleañero/a con pastel personalizado en la lancha'],
+      ['Mesa de buffet com mini hambúrgueres, quiche e salgados decorada com balões rosa em festa de aniversário na lancha', 'Mesa de buffet con mini hamburguesas, quiche y bocadillos decorada con globos rosa en fiesta de cumpleaños en la lancha'],
+      ['Decoração de aniversário na lancha com balões verdes e letreiro Happy Birthday neon', 'Decoración de cumpleaños en la lancha con globos verdes y letrero Happy Birthday neon'],
+      ['Churrasqueiro preparando espetinhos e carnes na churrasqueira a bordo da lancha', 'Parrillero preparando brochetas y carnes en la parrilla a bordo de la lancha'],
+      ['Catamarã Oceano - Catamarã para 50-65 pessoas', 'Catamarán Oceano - Catamarán para 50-65 personas'],
       // Longer strings first (must precede 'Aniversário na Lancha' to avoid substring corruption)
       ['Dúvidas sobre Aniversário na Lancha', 'Preguntas sobre Cumpleaños en Lancha'],
       // Hero
@@ -1843,6 +1900,14 @@ const pages = [
       ['Sim! Nossas lanchas maiores oferecem ambiente confortável para reuniões executivas em ambiente diferenciado. Navegamos em águas calmas que permitem conversas e apresentações.', '¡Sí! Nuestras lanchas más grandes ofrecen un ambiente confortable para reuniones ejecutivas en un entorno diferenciado. Navegamos en aguas tranquilas que permiten conversaciones y presentaciones.'],
       // Alt text (NOT protected by translateContent)
       ['Nossa maior lancha para 20-22 pessoas', 'Nuestra mayor lancha para 20-22 personas'],
+      ['Evento corporativo na lancha no Rio de Janeiro', 'Evento corporativo en la lancha en Río de Janeiro'],
+      ['Equipe em evento corporativo na lancha', 'Equipo en evento corporativo en la lancha'],
+      ['Convidados com drinks em confraternização corporativa na lancha', 'Invitados con drinks en confraternización corporativa en la lancha'],
+      ['Grupo brindando em evento corporativo no mar', 'Grupo brindando en evento corporativo en el mar'],
+      ['Colaboradores relaxando no deck da lancha', 'Colaboradores relajándose en el deck de la lancha'],
+      ['Relaxamento no solário da lancha em evento corporativo', 'Relax en el solárium de la lancha en evento corporativo'],
+      ['Happy hour corporativo no mar com vista do Rio', 'Happy hour corporativo en el mar con vista de Río'],
+      ['Catamarã Oceano - Catamarã para 50-65 pessoas', 'Catamarán Oceano - Catamarán para 50-65 personas'],
       // Schema.org descriptions
       ['Serviço de eventos corporativos exclusivos a bordo de lanchas no Rio de Janeiro. Confraternizações, team building, reuniões executivas e premiações.', 'Servicio de eventos corporativos exclusivos a bordo de lanchas en Río de Janeiro. Confraternizaciones, team building, reuniones ejecutivas y premiaciones.'],
       ['Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.', 'Alquiler de lanchas en Río de Janeiro. Paseos privativos con confort y seguridad.'],
@@ -1968,6 +2033,12 @@ const pages = [
       ['Sim! O réveillon na lancha é muito procurado e as vagas costumam esgotar com meses de antecedência. Recomendamos reservar o quanto antes para garantir sua lancha.', '¡Sí! El Año Nuevo en la lancha es muy solicitado y los cupos suelen agotarse con meses de anticipación. Recomendamos reservar lo antes posible para asegurar su lancha.'],
       // Alt text (NOT protected by translateContent)
       ['Nossa maior lancha para 20-22 pessoas', 'Nuestra mayor lancha para 20-22 personas'],
+      ['Queima de fogos do réveillon vista do mar no Rio de Janeiro', 'Fuegos artificiales de Año Nuevo vistos desde el mar en Río de Janeiro'],
+      ['Brinde com taças de champanhe e luzes coloridas na festa de réveillon na lancha', 'Brindis con copas de champán y luces coloridas en la fiesta de Año Nuevo en la lancha'],
+      ['Convidada celebrando o réveillon na lancha com luzes da cidade ao fundo', 'Invitada celebrando el Año Nuevo en la lancha con luces de la ciudad al fondo'],
+      ['Mesa decorada com pratos, flores e taças para ceia de réveillon na lancha', 'Mesa decorada con platos, flores y copas para cena de Año Nuevo en la lancha'],
+      ['Bar Oceano a bordo com bartenders preparando drinks durante passeio de lancha', 'Bar Oceano a bordo con bartenders preparando drinks durante paseo en lancha'],
+      ['Catamarã Oceano - Catamarã para 50-65 pessoas', 'Catamarán Oceano - Catamarán para 50-65 personas'],
       // Longer strings first (must precede 'Réveillon na Lancha' to avoid substring corruption)
       ['Por Que Réveillon na Lancha?', '¿Por Qué Año Nuevo en Lancha?'],
       ['Dúvidas sobre Réveillon na Lancha', 'Preguntas sobre Año Nuevo en Lancha'],
@@ -2089,6 +2160,14 @@ const pages = [
       ['Com certeza! Fantasias, adereços, confete e serpentina são bem-vindos. Recomendamos cuidado com itens que possam cair no mar. A decoração temática de Carnaval pode ser contratada como serviço extra.', '¡Por supuesto! Disfraces, accesorios, confeti y serpentinas son bienvenidos. Recomendamos cuidado con artículos que puedan caer al mar. La decoración temática de Carnaval puede contratarse como servicio extra.'],
       // Alt text (NOT protected by translateContent)
       ['Nossa maior lancha para 20-22 pessoas', 'Nuestra mayor lancha para 20-22 personas'],
+      ['Grupo de amigas com camisas do Brasil curtindo Carnaval na lancha com Pão de Açúcar ao fundo', 'Grupo de amigas con camisas de Brasil disfrutando Carnaval en la lancha con el Pan de Azúcar al fondo'],
+      ['Três amigas tomando sol na proa da lancha durante Carnaval no Rio', 'Tres amigas tomando sol en la proa de la lancha durante Carnaval en Río'],
+      ['Duas amigas brindando com cerveja na lancha com Pão de Açúcar ao fundo', 'Dos amigas brindando con cerveza en la lancha con el Pan de Azúcar al fondo'],
+      ['Amigas pulando da lancha no mar durante o Carnaval no Rio', 'Amigas saltando de la lancha al mar durante el Carnaval en Río'],
+      ['Grupo de amigas se divertindo na água com tapete flutuante durante passeio de Carnaval', 'Grupo de amigas divirtiéndose en el agua con alfombra flotante durante paseo de Carnaval'],
+      ['Grande grupo curtindo Carnaval na lancha com vista panorâmica do Rio', 'Gran grupo disfrutando Carnaval en la lancha con vista panorámica de Río'],
+      ['DJ profissional com headphones e controladora na lancha', 'DJ profesional con auriculares y controladora en la lancha'],
+      ['Catamarã Oceano - Catamarã para 50-65 pessoas', 'Catamarán Oceano - Catamarán para 50-65 personas'],
       // Longer strings first (must precede 'Carnaval na Lancha' to avoid substring corruption)
       ['Por Que Carnaval na Lancha?', '¿Por Qué Carnaval en Lancha?'],
       ['Dúvidas sobre Carnaval na Lancha', 'Preguntas sobre Carnaval en Lancha'],
@@ -2218,8 +2297,15 @@ const pages = [
       ['Sim! Quanto maior o grupo, melhor o preço por pessoa. As faixas de preço mostradas consideram grupos de diferentes tamanhos. Fale conosco para um orçamento personalizado.', '¡Sí! Cuanto mayor sea el grupo, mejor el precio por persona. Los rangos de precios mostrados consideran grupos de diferentes tamaños. Contáctenos para un presupuesto personalizado.'],
       ['Sim, você pode levar suas próprias bebidas e petiscos! Apenas não oferecemos o serviço de churrasco se você levar comida própria. Contamos com coolers à disposição.', '¡Sí, puede llevar sus propias bebidas y bocadillos! Solo no ofrecemos el servicio de asado si lleva comida propia. Contamos con coolers a su disposición.'],
       ['A taxa de churrasqueira (R$ 250) é cobrada apenas quando você contrata nosso serviço de churrasco completo. Ela cobre o equipamento, carvão e utensílios necessários.', 'La tarifa de parrilla (R$ 250) se cobra solo cuando contrata nuestro servicio de asado completo. Cubre el equipamiento, carbón y utensilios necesarios.'],
-      // Alt text: combo image
+      // Alt text (NOT protected by translateContent)
       ['Buffet completo com churrasco e bar a bordo da lancha WeBoat', 'Buffet completo con asado y bar a bordo de la lancha WeBoat'],
+      ['Churrasco sendo preparado na lancha com vista para o mar', 'Asado siendo preparado en la lancha con vista al mar'],
+      ['Amigas brindando com drinks no open bar da lancha', 'Amigas brindando con drinks en el open bar de la lancha'],
+      ['Mesa de queijos e vinhos na lancha', 'Mesa de quesos y vinos en la lancha'],
+      ['Mesa de snacks premium na lancha com mini sanduíches, canapés e finger foods', 'Mesa de snacks premium en la lancha con mini sándwiches, canapés y finger foods'],
+      ['Decoração de aniversário na lancha com balões verdes e letreiro Happy Birthday neon', 'Decoración de cumpleaños en la lancha con globos verdes y letrero Happy Birthday neon'],
+      ['DJ profissional tocando na lancha com headphones e controladora', 'DJ profesional tocando en la lancha con auriculares y controladora'],
+      ['Casal em silhueta ao pôr do sol com Cristo Redentor ao fundo na lancha', 'Pareja en silueta al atardecer con Cristo Redentor al fondo en la lancha'],
       // Combo option descriptions (visible text)
       ['Kit churrasco completo + open bar com cerveja, caipirinha, refrigerante e água. Preço varia conforme quantidade de pessoas.', 'Kit asado completo + open bar con cerveza, caipirinha, refresco y agua. El precio varía según la cantidad de personas.'],
       ['Kit churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas.', 'Kit asado completo + open bar premium con drinks especiales, espumante y frutas frescas.'],
@@ -2448,8 +2534,13 @@ const pages = [
             "Seguidores en Instagram"
       ],
       // Alt texts (NOT protected by translateContent - must come before short fragments)
-      ['Vista aérea da Marina da Glória con el Pan de Azúcar al fondo - sede da WeBoat Brasil', 'Vista aérea de la Marina da Glória con el Pan de Azúcar al fondo - sede de WeBoat Brasil'],
+      ['Vista aérea da Marina da Glória com Pão de Açúcar ao fundo - sede da WeBoat Brasil', 'Vista aérea de la Marina da Glória con el Pan de Azúcar al fondo - sede de WeBoat Brasil'],
+      ['Lancha WeBoat com logo ao pôr do sol na Baía de Guanabara', 'Lancha WeBoat con logo al atardecer en la Bahía de Guanabara'],
+      ['Membro da equipe WeBoat servindo churrasco a bordo da lancha', 'Miembro del equipo WeBoat sirviendo asado a bordo de la lancha'],
       ['Marinheiro da WeBoat com camisa da empresa', 'Marinero de WeBoat con camisa de la empresa'],
+      ['Técnico WeBoat realizando manutenção nos motores MAN na sala de máquinas', 'Técnico WeBoat realizando mantenimiento en los motores MAN en la sala de máquinas'],
+      ['Membro da equipe WeBoat com camisa azul no comando da lancha', 'Miembro del equipo WeBoat con camisa azul al mando de la lancha'],
+      ['Vista aérea da Marina da Glória com embarcações atracadas e Baía de Guanabara ao fundo', 'Vista aérea de la Marina da Glória con embarcaciones atracadas y Bahía de Guanabara al fondo'],
       // Safety text (MUST come before 'Marinheiros' short block to avoid substring corruption)
       [
             "Todas as embarcações possuem equipamentos de segurança e seguros obrigatórios. Marinheiros habilitados pela Marinha do Brasil.",
@@ -3127,7 +3218,11 @@ const pages = [
       ['Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas.', '¡Sí! Nuestras rutas pueden personalizarse. El Tour Completo, por ejemplo, combina Urca, Copacabana e Ilhas Cagarras en un único paseo de 5 horas.'],
       ['Areas Atendidas', 'Áreas de Servicio'],
       // Alt text (NOT protected by translateContent - alt is not in protection regex)
+      ['Passeio de lancha na Mureta da Urca com vista para o Pao de Acucar', 'Paseo en lancha en Mureta da Urca con vista al Pan de Azúcar'],
       ['Passeio de lancha na Praia Vermelha com bondinho do Pao de Acucar', 'Paseo en lancha en Praia Vermelha con teleférico del Pan de Azúcar'],
+      ['Passeio de lancha com vista panoramica de Copacabana', 'Paseo en lancha con vista panorámica de Copacabana'],
+      ['Passeio de lancha nas Ilhas Cagarras - mergulho em aguas cristalinas', 'Paseo en lancha en Ilhas Cagarras - buceo en aguas cristalinas'],
+      ['Passeio de lancha em Itaipu e Camboinhas - praias desertas em Niteroi', 'Paseo en lancha en Itaipu y Camboinhas - playas desiertas en Niterói'],
       ['Passeio de lancha na Mureta da Urca', 'Paseo en lancha en Mureta da Urca'],
       ['Navegação pela Baia de Guanabara com vista para o Cristo Redentor', 'Navegación por la Bahía de Guanabara con vista al Cristo Redentor'],
       // Multiline card descriptions (must match PT source whitespace exactly)
@@ -3218,6 +3313,10 @@ const pages = [
     waMessage: '¡Hola! Me gustaría información sobre alquiler de lanchas en Río de Janeiro. [via site - es]',
     css: null,
       contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Lanchas ancoradas na Praia Vermelha com Morro da Urca ao fundo', 'Lanchas ancladas en Praia Vermelha con Morro da Urca al fondo'],
+      ['Amigas de biquíni relaxando no solário da lancha', 'Amigas en bikini relajándose en el solárium de la lancha'],
+      ['Vista aérea da Marina da Glória no Rio de Janeiro', 'Vista aérea de la Marina da Glória en Río de Janeiro'],
       ['Blog WeBoat', 'Blog WeBoat'],
       ['Dicas, guias e tudo sobre passeios de lancha no Rio de Janeiro', 'Tips, guías y todo sobre paseos en lancha en Río de Janeiro'],
       ['Roteiros', 'Rutas'],
@@ -3246,6 +3345,10 @@ const pages = [
     waMessage: '¡Hola! Me gustaría información sobre paseos en lancha a las playas. [via site - es]',
     css: null,
       contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Lanchas ancoradas na Praia Vermelha com vista do Morro da Urca e Cristo Redentor ao fundo, Rio de Janeiro', 'Lanchas ancladas en Praia Vermelha con vista del Morro da Urca y Cristo Redentor al fondo, Río de Janeiro'],
+      ['Amigas de biquíni relaxando no solário da lancha', 'Amigas en bikini relajándose en el solárium de la lancha'],
+      ['Vista aérea da Marina da Glória no Rio de Janeiro', 'Vista aérea de la Marina da Glória en Río de Janeiro'],
       // Schema.org Article description (JSON-LD not protected)
       ['Conheça as melhores praias do Rio de Janeiro para visitar de lancha: Praia Vermelha, Ilhas Cagarras, Itaipu e mais. Guia completo com dicas práticas.', 'Descubra las mejores playas de Río de Janeiro para visitar en lancha: Praia Vermelha, Ilhas Cagarras, Itaipu y más. Guía completa con consejos prácticos.'],
       ['Melhores Praias', 'Mejores Playas'],
@@ -3322,6 +3425,10 @@ const pages = [
     waMessage: '¡Hola! Me gustaría información sobre qué llevar al paseo en lancha. [via site - es]',
     css: null,
       contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Grupo de amigas de biquíni e acessórios relaxando no solário da lancha durante passeio no Rio de Janeiro', 'Grupo de amigas en bikini y accesorios relajándose en el solárium de la lancha durante paseo en Río de Janeiro'],
+      ['Lanchas ancoradas na Praia Vermelha com Morro da Urca ao fundo', 'Lanchas ancladas en Praia Vermelha con Morro da Urca al fondo'],
+      ['Vista aérea da Marina da Glória no Rio de Janeiro', 'Vista aérea de la Marina da Glória en Río de Janeiro'],
       ['O Que Vestir', 'Qué Ponerse'],
       ['Dicas', 'Consejos'],
       ['Fevereiro 2026', 'Febrero 2026'],
@@ -3391,6 +3498,10 @@ const pages = [
     waMessage: '¡Hola! Me gustaría indicaciones para llegar a la Marina da Glória. [via site - es]',
     css: null,
       contentBlocks: [
+      // Alt text (NOT protected by translateContent)
+      ['Vista aérea da Marina da Glória com lanchas e veleiros atracados e o Pão de Açúcar ao fundo', 'Vista aérea de la Marina da Glória con lanchas y veleros atracados y el Pan de Azúcar al fondo'],
+      ['Lanchas ancoradas na Praia Vermelha com Morro da Urca ao fundo', 'Lanchas ancladas en Praia Vermelha con Morro da Urca al fondo'],
+      ['Amigas de biquíni relaxando no solário da lancha', 'Amigas en bikini relajándose en el solárium de la lancha'],
       // Schema.org Article description (JSON-LD not protected — MUST come before 'Guia' short block)
       ['Guia completo da Marina da Glória no Rio de Janeiro: como chegar, estacionamento, infraestrutura e dicas para o dia do seu passeio de lancha com a WeBoat.', 'Guía completa de la Marina da Glória en Río de Janeiro: cómo llegar, estacionamiento, infraestructura y consejos para el día de tu paseo en lancha con WeBoat.'],
       // IMPORTANT: Full title must come BEFORE short 'Guia' → 'Guía' blocks to avoid substring corruption
@@ -3904,6 +4015,9 @@ const translations = [
   ['Foto da', 'Foto de la'],
   ['foto da', 'foto de la'],
   ['Iate de luxo para', 'Yate de lujo para'],
+  ['Vista exterior', 'Vista exterior'],
+  ['Vista mar', 'Vista al mar'],
+  ['Detalhes', 'Detalles'],
 
   // --- Schema.org ---
   ['Lancha para Aluguel', 'Lancha para Alquiler'],

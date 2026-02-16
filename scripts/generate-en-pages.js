@@ -4195,6 +4195,15 @@ const translations = [
   ['com vista para o Cristo Redentor', 'with view of Christ the Redeemer'],
   ['Cristo Redentor', 'Christ the Redeemer'],
   ['Iate de luxo para', 'Luxury yacht for'],
+  ['Vista exterior', 'Exterior view'],
+  ['Vista mar', 'Sea view'],
+  ['Detalhes', 'Details'],
+  ['Flybridge solario', 'Flybridge sundeck'],
+  ['Proa solario', 'Bow sundeck'],
+  ['Deck popa', 'Stern deck'],
+  ['Interior', 'Interior'],
+  ['Lateral', 'Side'],
+  ['popa', 'stern'],
 
   // --- Schema.org (shared description across multiple pages) ---
   ['Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.', 'Boat rentals in Rio de Janeiro. Private trips with comfort and safety.'],
