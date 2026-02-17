@@ -739,4 +739,4 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 ---
 
 **Última atualização:** 16 Fevereiro 2026
-**Versão:** 4.1 - i18n audit completo (lang switcher fix, dictionary gaps, Schema.org, seg-qui/sex-dom)
+**Versão:** 4.2 - checkout UX (phone country code, back button, Zelle/PayPal, i18n sync)
