@@ -1,4 +1,4 @@
-<!-- i18n: translated from PT version 2026-02-15 -->
+<!-- i18n: translated from PT version 2026-02-16 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -71,20 +71,20 @@
       <p>Loading your proposal...</p>
     </div>
 
-    <!-- Errorr state -->
+    <!-- Error state -->
     <div id="checkout-error" class="checkout-error" role="alert" aria-live="assertive" style="display:none">
       <div class="checkout-error__icon">
         <i class="ph ph-warning-circle" aria-hidden="true"></i>
       </div>
       <h2 class="checkout-error__title">Error</h2>
-      <p class="checkout-error__message">Soundething went wrong.</p>
+      <p class="checkout-error__message">Something went wrong.</p>
       <a href="https://wa.me/5521977724114?text=Hello! I had a problem with the payment link." class="btn btn-whatsapp" target="_blank" rel="noopener">
         <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chat on WhatsApp
       </a>
     </div>
 
     <!-- ═══════════════════════════════════════
-         STEP 1: Resumo + Formulário
+         STEP 1: Summary + Form
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="1" style="display:none">
 
@@ -154,8 +154,26 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="customer-phone">Phone / Phone</label>
-            <input class="form-input" type="tel" id="customer-phone" name="phone" placeholder="(21) 99999-9999" inputmode="tel" autocomplete="tel" aria-describedby="customer-phone-error">
+            <label class="form-label" for="customer-phone">Phone</label>
+            <div class="phone-input-group">
+              <select id="phone-country" class="phone-country-select" aria-label="Country code">
+                <option value="+55" selected>+55</option>
+                <option value="+1">+1</option>
+                <option value="+44">+44</option>
+                <option value="+34">+34</option>
+                <option value="+351">+351</option>
+                <option value="+33">+33</option>
+                <option value="+49">+49</option>
+                <option value="+39">+39</option>
+                <option value="+54">+54</option>
+                <option value="+56">+56</option>
+                <option value="+57">+57</option>
+                <option value="+52">+52</option>
+                <option value="+598">+598</option>
+                <option value="+595">+595</option>
+              </select>
+              <input class="form-input phone-input" type="tel" id="customer-phone" name="phone" placeholder="(21) 99999-9999" inputmode="tel" autocomplete="tel" aria-describedby="customer-phone-error">
+            </div>
             <span class="form-error" id="customer-phone-error"></span>
           </div>
 
@@ -168,7 +186,7 @@
           <div class="checkout-terms">
             <input type="checkbox" id="termos-aceite" required aria-required="true">
             <label for="termos-aceite">
-              I have read and accept the <a href="/en/terms-of-use/" target="_blank">Terms of Use</a> e a <a href="/en/privacy-policy/" target="_blank">Privacy Policy</a> da WeBoat Brasil.
+              I have read and accept the <a href="/en/terms-of-use/" target="_blank">Terms of Use</a> and the <a href="/en/privacy-policy/" target="_blank">Privacy Policy</a> of WeBoat Brasil.
             </label>
           </div>
 
@@ -213,7 +231,7 @@
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PayPal</div>
-                <div class="payment-method__desc">International payment</div>
+                <div class="payment-method__desc">Pay with card or PayPal — no account needed</div>
               </div>
             </div>
 
@@ -226,7 +244,7 @@
             </div>
           </div>
 
-          <!-- Parcelas (cartão) -->
+          <!-- Parcelas (card) -->
           <div id="parcelas-section" class="parcelas-section" style="display:none">
             <label class="form-label" style="margin-bottom:var(--space-2);">Installments:</label>
             <select id="parcelas-select" class="form-select">
@@ -247,6 +265,10 @@
 
           <button id="pay-btn" class="btn btn-primary btn-lg" style="width:100%;" disabled>
             Pay Now
+          </button>
+
+          <button type="button" id="back-to-step1" class="checkout-back-btn">
+            <i class="ph ph-arrow-left" aria-hidden="true"></i> Back to Details
           </button>
         </div>
 
@@ -281,8 +303,13 @@
         <div id="zelle-section" class="zelle-instructions" style="display:none">
           <div class="zelle-instructions__title">Zelle Transfer</div>
           <p>Send payment to:</p>
-          <p><strong>pagamentos@weboatbrasil.com.br</strong></p>
-          <p style="margin-top:var(--space-3); color:var(--driftwood);">
+          <p class="zelle-info"><strong>+1 689 280 6006</strong></p>
+          <p class="zelle-info"><strong>Biz Trust LLC</strong></p>
+          <div class="zelle-amount" id="zelle-amount">
+            <!-- Populated by JS: shows USD amount + BRL equivalent -->
+          </div>
+          <p style="margin-top:var(--space-3); color:var(--driftwood); font-size:var(--text-caption);">
+            Send the amount in USD. We will credit the equivalent in BRL at the exchange rate of the day.
             Your reservation will be confirmed within 24 business hours after payment is received.
           </p>
         </div>

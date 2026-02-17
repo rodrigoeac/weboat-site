@@ -5,11 +5,12 @@
     function t(key, fallback) { return I ? I.t(key) : fallback; }
 
     var API_BASE = 'https://api.weboatbrasil.com.br';
-    var POLL_INTERVAL = 5000; // 5 seconds
+    var POLL_INTERVAL = 5000;
     var pollTimer = null;
     var currentToken = null;
     var checkoutData = null;
     var selectedMethod = null;
+    var usdRate = null;
 
     // ── DOM Elements ──
     var steps = document.querySelectorAll('.checkout-step');
@@ -24,6 +25,7 @@
     var passportGroup = document.getElementById('passport-group');
     var cpfInput = document.getElementById('customer-cpf');
     var phoneInput = document.getElementById('customer-phone');
+    var phoneCountrySelect = document.getElementById('phone-country');
 
     // Step 2
     var methodButtons = document.querySelectorAll('.payment-method');
@@ -32,6 +34,7 @@
     var zelleSection = document.getElementById('zelle-section');
     var parcelasSection = document.getElementById('parcelas-section');
     var parcelasSelect = document.getElementById('parcelas-select');
+    var backToStep1 = document.getElementById('back-to-step1');
 
     // ── Init ──
     function init() {
@@ -43,6 +46,7 @@
 
         loadCheckout();
         bindEvents();
+        fetchUsdRate();
     }
 
     function getTokenFromURL() {
@@ -53,6 +57,20 @@
     function getStatusFromURL() {
         var params = new URLSearchParams(window.location.search);
         return params.get('status');
+    }
+
+    // ── Fetch USD/BRL rate ──
+    function fetchUsdRate() {
+        fetch('https://api.exchangerate-api.com/v4/latest/USD')
+            .then(function(res) { return res.json(); })
+            .then(function(data) {
+                if (data && data.rates && data.rates.BRL) {
+                    usdRate = data.rates.BRL;
+                }
+            })
+            .catch(function() {
+                usdRate = null;
+            });
     }
 
     // ── Load checkout data ──
@@ -84,7 +102,6 @@
                     goToStep(3);
                     renderConfirmation(data);
                 } else if (urlStatus === 'success') {
-                    // Redirect return from InfinitePay — show polling
                     renderProposalSummary(data);
                     goToStep(2);
                     showCardProcessing();
@@ -134,7 +151,6 @@
         if (pr.valorChurrasqueira > 0) addBreakdownItem(breakdown, t('checkoutBBQ', 'Churrasqueira'), pr.valorChurrasqueira);
         if (pr.valorGuardaVidas > 0) addBreakdownItem(breakdown, t('checkoutLifeguard', 'Guarda-vidas'), pr.valorGuardaVidas);
 
-        // Services
         if (pr.servicos && pr.servicos.length > 0) {
             pr.servicos.forEach(function(s) {
                 addBreakdownItem(breakdown, s.nome, s.subtotal);
@@ -167,7 +183,23 @@
 
     function prefillCustomerData(data) {
         if (data.customer.phone) {
-            phoneInput.value = data.customer.phone;
+            var ph = data.customer.phone;
+            // Detect country code and set selector
+            if (ph.startsWith('+')) {
+                // Try to match a known code
+                var codes = ['+598', '+595', '+351', '+55', '+54', '+56', '+57', '+52', '+49', '+44', '+39', '+34', '+33', '+1'];
+                for (var i = 0; i < codes.length; i++) {
+                    if (ph.startsWith(codes[i])) {
+                        if (phoneCountrySelect) phoneCountrySelect.value = codes[i];
+                        ph = ph.substring(codes[i].length);
+                        break;
+                    }
+                }
+            } else if (/^55\d{10,11}$/.test(ph)) {
+                if (phoneCountrySelect) phoneCountrySelect.value = '+55';
+                ph = ph.substring(2);
+            }
+            phoneInput.value = ph;
         }
         if (data.customer.nome) {
             document.getElementById('customer-nome').value = data.customer.nome;
@@ -185,6 +217,12 @@
                 var isForeign = this.checked;
                 cpfGroup.style.display = isForeign ? 'none' : 'flex';
                 passportGroup.style.display = isForeign ? 'flex' : 'none';
+                // Switch country code for foreigners
+                if (isForeign && phoneCountrySelect && phoneCountrySelect.value === '+55') {
+                    phoneCountrySelect.value = '+1';
+                } else if (!isForeign && phoneCountrySelect) {
+                    phoneCountrySelect.value = '+55';
+                }
             });
         }
 
@@ -193,9 +231,13 @@
             cpfInput.addEventListener('input', function() { mascaraCPF(this); });
         }
 
-        // Phone mask
+        // Phone mask (only for +55)
         if (phoneInput) {
-            phoneInput.addEventListener('input', function() { mascaraTelefone(this); });
+            phoneInput.addEventListener('input', function() {
+                if (phoneCountrySelect && phoneCountrySelect.value === '+55') {
+                    mascaraTelefone(this);
+                }
+            });
         }
 
         // Form submit (Step 1 → Step 2)
@@ -210,7 +252,6 @@
                 this.classList.add('payment-method--selected');
                 selectedMethod = this.dataset.method;
                 if (payBtn) payBtn.disabled = false;
-                // Show/hide parcelas for credit card
                 if (parcelasSection) {
                     parcelasSection.style.display = selectedMethod === 'credit_card' ? 'block' : 'none';
                 }
@@ -221,6 +262,13 @@
         if (payBtn) {
             payBtn.addEventListener('click', handlePayment);
         }
+
+        // Back button Step 2 → Step 1
+        if (backToStep1) {
+            backToStep1.addEventListener('click', function() {
+                goToStep(1);
+            });
+        }
     }
 
     // ── Step 1: Submit customer data ──
@@ -229,7 +277,9 @@
 
         var nome = document.getElementById('customer-nome').value.trim();
         var email = document.getElementById('customer-email').value.trim();
-        var phone = phoneInput.value.trim();
+        var rawPhone = phoneInput.value.trim();
+        var countryCode = phoneCountrySelect ? phoneCountrySelect.value : '+55';
+        var phone = countryCode + rawPhone.replace(/\D/g, '');
         var termos = document.getElementById('termos-aceite').checked;
         var isEstrangeiro = foreignToggle.checked;
 
@@ -342,14 +392,12 @@
         document.getElementById('method-selection').style.display = 'none';
         pixSection.style.display = 'block';
 
-        // QR code
         var qrImg = document.getElementById('pix-qrcode-img');
         if (pix.qrCodeBase64) {
             qrImg.src = 'data:image/png;base64,' + pix.qrCodeBase64;
             qrImg.alt = 'QR Code PIX';
         }
 
-        // Copia e cola
         var codeEl = document.getElementById('pix-code');
         codeEl.textContent = pix.copiaCola;
 
@@ -361,18 +409,32 @@
             });
         });
 
-        // Countdown
         if (pix.expiraEm) {
             startPixCountdown(new Date(pix.expiraEm));
         }
 
-        // Start polling
         startPolling();
     }
 
     function showZelleInstructions() {
         document.getElementById('method-selection').style.display = 'none';
-        if (zelleSection) zelleSection.style.display = 'block';
+        if (zelleSection) {
+            zelleSection.style.display = 'block';
+
+            // Show USD amount conversion
+            var zelleAmountEl = document.getElementById('zelle-amount');
+            if (zelleAmountEl && checkoutData && checkoutData.preco) {
+                var brlAmount = checkoutData.preco.valorEntrada;
+                var html = '<p style="margin-top:var(--space-3);"><strong>Amount due: R$ ' + formatCurrency(brlAmount) + '</strong></p>';
+                if (usdRate && usdRate > 0) {
+                    var usdAmount = Math.ceil((brlAmount / usdRate) * 100) / 100;
+                    html += '<p style="font-size:var(--text-body-sm); color:var(--driftwood);">Approximately <strong>US$ ' + usdAmount.toFixed(2) + '</strong> at today\'s rate (1 USD = R$ ' + usdRate.toFixed(2) + ')</p>';
+                }
+                zelleAmountEl.innerHTML = html;
+            }
+        }
+
+        startPolling();
     }
 
     function showCardProcessing() {
@@ -395,7 +457,6 @@
 
         card.appendChild(processingDiv);
 
-        // Poll for confirmation
         startPolling();
     }
 
@@ -483,6 +544,7 @@
         if (!field) return;
         field.classList.add('form-input--error');
         var errorSpan = field.parentElement.querySelector('.form-error');
+        if (!errorSpan) errorSpan = field.parentElement.parentElement.querySelector('.form-error');
         if (errorSpan) errorSpan.textContent = message;
         field.addEventListener('input', function handler() {
             field.classList.remove('form-input--error');
@@ -498,6 +560,22 @@
     function formatDate(dateStr) {
         var parts = dateStr.split('-');
         return parts[2] + '/' + parts[1] + '/' + parts[0];
+    }
+
+    // ── Masks ──
+    function mascaraCPF(el) {
+        var v = el.value.replace(/\D/g, '').substring(0, 11);
+        if (v.length > 9) v = v.replace(/(\d{3})(\d{3})(\d{3})(\d{1,2})/, '$1.$2.$3-$4');
+        else if (v.length > 6) v = v.replace(/(\d{3})(\d{3})(\d{1,3})/, '$1.$2.$3');
+        else if (v.length > 3) v = v.replace(/(\d{3})(\d{1,3})/, '$1.$2');
+        el.value = v;
+    }
+
+    function mascaraTelefone(el) {
+        var v = el.value.replace(/\D/g, '').substring(0, 11);
+        if (v.length > 6) v = v.replace(/(\d{2})(\d{5})(\d{1,4})/, '($1) $2-$3');
+        else if (v.length > 2) v = v.replace(/(\d{2})(\d{1,5})/, '($1) $2');
+        el.value = v;
     }
 
     // ── Start ──
