@@ -460,10 +460,6 @@
   color: var(--driftwood);
 }
 
-/* Parcelas selector */
-.parcelas-section {
-  margin-bottom: var(--space-4);
-}
 
 .parcelas-section .form-label {
   font-family: var(--font-heading);

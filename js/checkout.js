@@ -14,40 +14,42 @@
     var currentStep = 1;
     var completedSteps = {};
     var paymentStarted = false;
+    var isEstrangeiro = false;
 
     // ── DOM Elements ──
-    var steps = document.querySelectorAll('.checkout-step');
-    var panels = document.querySelectorAll('.checkout-panel');
-    var loadingEl = document.getElementById('checkout-loading');
-    var errorEl = document.getElementById('checkout-error');
-
-    // Step 1
-    var formEl = document.getElementById('checkout-form');
-    var foreignToggle = document.getElementById('is-estrangeiro');
-    var cpfGroup = document.getElementById('cpf-group');
-    var passportGroup = document.getElementById('passport-group');
-    var cpfInput = document.getElementById('customer-cpf');
-    var phoneInput = document.getElementById('customer-phone');
-    var phoneCountrySelect = document.getElementById('phone-country');
-
-    // Step 2
-    var methodButtons = document.querySelectorAll('.payment-method');
-    var payBtn = document.getElementById('pay-btn');
-    var pixSection = document.getElementById('pix-section');
-    var zelleSection = document.getElementById('zelle-section');
-    var parcelasSection = document.getElementById('parcelas-section');
-    var parcelasSelect = document.getElementById('parcelas-select');
+    var steps, panels, loadingEl, errorEl;
+    var formEl, foreignToggle, cpfGroup, passportGroup, cpfInput, phoneInput, phoneCountrySelect;
+    var methodButtons, payBtn, pixSection, zelleSection;
 
     // ── Init ──
     function init() {
+        // Grab DOM elements after DOM is ready
+        steps = document.querySelectorAll('.checkout-step');
+        panels = document.querySelectorAll('.checkout-panel');
+        loadingEl = document.getElementById('checkout-loading');
+        errorEl = document.getElementById('checkout-error');
+
+        formEl = document.getElementById('checkout-form');
+        foreignToggle = document.getElementById('is-estrangeiro');
+        cpfGroup = document.getElementById('cpf-group');
+        passportGroup = document.getElementById('passport-group');
+        cpfInput = document.getElementById('customer-cpf');
+        phoneInput = document.getElementById('customer-phone');
+        phoneCountrySelect = document.getElementById('phone-country');
+
+        methodButtons = document.querySelectorAll('.payment-method');
+        payBtn = document.getElementById('pay-btn');
+        pixSection = document.getElementById('pix-section');
+        zelleSection = document.getElementById('zelle-section');
+
         currentToken = getTokenFromURL();
         if (!currentToken) {
             showError(t('checkoutInvalidLink', 'Link inválido'), t('checkoutInvalidLinkMsg', 'Este link de checkout não é válido.'));
             return;
         }
 
-        loadCheckout();
         bindEvents();
+        loadCheckout();
         fetchUsdRate();
     }
 
@@ -70,9 +72,7 @@
                     usdRate = data.rates.BRL;
                 }
             })
-            .catch(function() {
-                usdRate = null;
-            });
+            .catch(function() { usdRate = null; });
     }
 
     // ── Load checkout data ──
@@ -145,7 +145,6 @@
         setText('ps-duration', p.duracaoHoras + 'h');
         setText('ps-people', p.numPessoas + ' ' + t('checkoutPeople', 'pessoas'));
 
-        // Price breakdown
         var breakdown = document.getElementById('ps-breakdown');
         while (breakdown.firstChild) breakdown.removeChild(breakdown.firstChild);
 
@@ -188,7 +187,7 @@
     }
 
     function prefillCustomerData(data) {
-        if (data.customer.phone) {
+        if (data.customer && data.customer.phone) {
             var ph = data.customer.phone;
             if (ph.startsWith('+')) {
                 var codes = ['+598', '+595', '+351', '+55', '+54', '+56', '+57', '+52', '+49', '+44', '+39', '+34', '+33', '+1'];
@@ -203,13 +202,15 @@
                 if (phoneCountrySelect) phoneCountrySelect.value = '+55';
                 ph = ph.substring(2);
             }
-            phoneInput.value = ph;
+            if (phoneInput) phoneInput.value = ph;
         }
-        if (data.customer.nome) {
-            document.getElementById('customer-nome').value = data.customer.nome;
+        if (data.customer && data.customer.nome) {
+            var nomeEl = document.getElementById('customer-nome');
+            if (nomeEl) nomeEl.value = data.customer.nome;
         }
-        if (data.customer.email) {
-            document.getElementById('customer-email').value = data.customer.email;
+        if (data.customer && data.customer.email) {
+            var emailEl = document.getElementById('customer-email');
+            if (emailEl) emailEl.value = data.customer.email;
         }
     }
 
@@ -218,12 +219,12 @@
         // Foreign toggle
         if (foreignToggle) {
             foreignToggle.addEventListener('change', function() {
-                var isForeign = this.checked;
-                cpfGroup.style.display = isForeign ? 'none' : 'flex';
-                passportGroup.style.display = isForeign ? 'flex' : 'none';
-                if (isForeign && phoneCountrySelect && phoneCountrySelect.value === '+55') {
+                isEstrangeiro = this.checked;
+                if (cpfGroup) cpfGroup.style.display = isEstrangeiro ? 'none' : 'flex';
+                if (passportGroup) passportGroup.style.display = isEstrangeiro ? 'flex' : 'none';
+                if (isEstrangeiro && phoneCountrySelect && phoneCountrySelect.value === '+55') {
                     phoneCountrySelect.value = '+1';
-                } else if (!isForeign && phoneCountrySelect) {
+                } else if (!isEstrangeiro && phoneCountrySelect) {
                     phoneCountrySelect.value = '+55';
                 }
             });
@@ -243,7 +244,7 @@
             });
         }
 
-        // Form submit (Step 1 → Step 2)
+        // Form submit (Step 1 -> Step 2)
         if (formEl) {
             formEl.addEventListener('submit', handleCustomerSubmit);
         }
@@ -255,9 +256,6 @@
                 this.classList.add('payment-method--selected');
                 selectedMethod = this.dataset.method;
                 if (payBtn) payBtn.disabled = false;
-                if (parcelasSection) {
-                    parcelasSection.style.display = selectedMethod === 'credit_card' ? 'block' : 'none';
-                }
             });
         });
 
@@ -266,33 +264,37 @@
             payBtn.addEventListener('click', handlePayment);
         }
 
-        // Back buttons
-        document.querySelectorAll('.checkout-back-btn').forEach(function(btn) {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                var target = parseInt(this.getAttribute('data-back-to'), 10);
-                if (target >= 1 && !paymentStarted) {
-                    goToStep(target);
-                }
-            });
+        // Back buttons — use event delegation on the container
+        document.addEventListener('click', function(e) {
+            var btn = e.target.closest('.checkout-back-btn');
+            if (!btn) return;
+            e.preventDefault();
+            e.stopPropagation();
+            if (paymentStarted) return;
+            var target = parseInt(btn.getAttribute('data-back-to'), 10);
+            if (target >= 1) {
+                goToStep(target);
+            }
         });
 
-        // Stepper clicks
-        steps.forEach(function(stepEl) {
-            stepEl.addEventListener('click', function() {
-                var targetStep = parseInt(this.getAttribute('data-step'), 10);
-                if (!targetStep || targetStep === currentStep) return;
-                if (paymentStarted) return;
+        // Stepper clicks — use event delegation
+        document.addEventListener('click', function(e) {
+            var stepEl = e.target.closest('.checkout-step');
+            if (!stepEl) return;
+            var targetStep = parseInt(stepEl.getAttribute('data-step'), 10);
+            if (!targetStep || targetStep === currentStep) return;
+            if (paymentStarted) return;
 
-                if (targetStep < currentStep) {
-                    goToStep(targetStep);
-                    return;
-                }
+            // Going back: always allowed
+            if (targetStep < currentStep) {
+                goToStep(targetStep);
+                return;
+            }
 
-                if (completedSteps[targetStep] || completedSteps[targetStep - 1]) {
-                    goToStep(targetStep);
-                }
-            });
+            // Going forward: only if previous step completed
+            if (completedSteps[targetStep - 1]) {
+                goToStep(targetStep);
+            }
         });
     }
 
@@ -308,9 +310,8 @@
         var phoneDigits = rawPhone.replace(/\D/g, '');
         var phone = phoneDigits ? (countryCode + phoneDigits) : '';
         var termos = document.getElementById('termos-aceite').checked;
-        var isEstrangeiro = foreignToggle ? foreignToggle.checked : false;
+        isEstrangeiro = foreignToggle ? foreignToggle.checked : false;
 
-        // Validation
         var hasError = false;
 
         if (!nome) {
@@ -382,7 +383,7 @@
         .then(function() {
             completedSteps[1] = true;
             goToStep(2);
-            updatePaymentMethods(isEstrangeiro);
+            updatePaymentMethods();
         })
         .catch(function(err) {
             alert(err.message || t('checkoutSaveError', 'Erro ao salvar dados. Tente novamente.'));
@@ -393,11 +394,14 @@
         });
     }
 
-    function updatePaymentMethods(isEstrangeiro) {
+    function updatePaymentMethods() {
         var zelleMethod = document.querySelector('[data-method="zelle"]');
         var paypalMethod = document.querySelector('[data-method="paypal"]');
+        var cardMethod = document.querySelector('[data-method="credit_card"]');
+
         if (zelleMethod) zelleMethod.style.display = isEstrangeiro ? 'flex' : 'none';
         if (paypalMethod) paypalMethod.style.display = isEstrangeiro ? 'flex' : 'none';
+        if (cardMethod) cardMethod.style.display = isEstrangeiro ? 'none' : 'flex';
     }
 
     // ── Step 2: Payment ──
@@ -409,9 +413,6 @@
         payBtn.textContent = t('checkoutProcessing', 'Processando...');
 
         var payBody = { metodo: selectedMethod };
-        if (selectedMethod === 'credit_card' && parcelasSelect) {
-            payBody.parcelas = parseInt(parcelasSelect.value, 10);
-        }
 
         fetch(API_BASE + '/checkout/' + encodeURIComponent(currentToken) + '/pay', {
             method: 'POST',
@@ -562,9 +563,10 @@
         currentStep = stepNum;
 
         steps.forEach(function(step, i) {
+            var sn = i + 1;
             step.classList.remove('checkout-step--active', 'checkout-step--done');
-            if (i + 1 < stepNum) step.classList.add('checkout-step--done');
-            if (i + 1 === stepNum) step.classList.add('checkout-step--active');
+            if (sn < stepNum) step.classList.add('checkout-step--done');
+            if (sn === stepNum) step.classList.add('checkout-step--active');
         });
 
         panels.forEach(function(panel) {
@@ -577,6 +579,14 @@
             if (methodSelection) methodSelection.style.display = 'block';
             if (pixSection) pixSection.style.display = 'none';
             if (zelleSection) zelleSection.style.display = 'none';
+            // Reset payment state
+            selectedMethod = null;
+            if (payBtn) {
+                payBtn.disabled = true;
+                payBtn.textContent = t('checkoutPayNow', 'Pagar Agora');
+            }
+            methodButtons.forEach(function(b) { b.classList.remove('payment-method--selected'); });
+            updatePaymentMethods();
         }
 
         window.scrollTo(0, 0);
@@ -608,8 +618,8 @@
         var field = document.getElementById(fieldId);
         if (!field) return;
         field.classList.add('form-input--error');
-        var errorSpan = field.closest('.form-group');
-        if (errorSpan) errorSpan = errorSpan.querySelector('.form-error');
+        var group = field.closest('.form-group');
+        var errorSpan = group ? group.querySelector('.form-error') : null;
         if (errorSpan) errorSpan.textContent = message;
         field.addEventListener('input', function handler() {
             field.classList.remove('form-input--error');
@@ -619,10 +629,12 @@
     }
 
     function clearAllFieldErrors() {
-        var errors = document.querySelectorAll('.form-input--error');
-        errors.forEach(function(el) { el.classList.remove('form-input--error'); });
-        var msgs = document.querySelectorAll('.form-error');
-        msgs.forEach(function(el) { el.textContent = ''; });
+        document.querySelectorAll('.form-input--error').forEach(function(el) {
+            el.classList.remove('form-input--error');
+        });
+        document.querySelectorAll('.form-error').forEach(function(el) {
+            el.textContent = '';
+        });
     }
 
     function formatCurrency(value) {
