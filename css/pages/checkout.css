@@ -11,13 +11,50 @@
 /* ── Header simplificado ── */
 .checkout-header {
   background: var(--ocean-deep);
-  padding: var(--space-4) 0;
-  text-align: center;
+  padding: var(--space-3) var(--space-4);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .checkout-header__logo {
   height: 40px;
   width: auto;
+}
+
+/* ── Language switcher ── */
+.checkout-lang {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.checkout-lang__option {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  border-radius: var(--radius-md);
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.checkout-lang__option:hover {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.checkout-lang__option--active {
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.checkout-lang__flag {
+  font-size: 1rem;
+  line-height: 1;
 }
 
 /* ── Container ── */

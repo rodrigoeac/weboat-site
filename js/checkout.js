@@ -12,8 +12,8 @@
     var selectedMethod = null;
     var usdRate = null;
     var currentStep = 1;
-    var completedSteps = {}; // tracks which steps have been completed
-    var paymentStarted = false; // true after clicking "Pagar Agora"
+    var completedSteps = {};
+    var paymentStarted = false;
 
     // ── DOM Elements ──
     var steps = document.querySelectorAll('.checkout-step');
@@ -190,7 +190,6 @@
     function prefillCustomerData(data) {
         if (data.customer.phone) {
             var ph = data.customer.phone;
-            // Detect country code and set selector
             if (ph.startsWith('+')) {
                 var codes = ['+598', '+595', '+351', '+55', '+54', '+56', '+57', '+52', '+49', '+44', '+39', '+34', '+33', '+1'];
                 for (var i = 0; i < codes.length; i++) {
@@ -267,35 +266,29 @@
             payBtn.addEventListener('click', handlePayment);
         }
 
-        // Back buttons (all of them)
-        var backButtons = document.querySelectorAll('.checkout-back-btn');
-        backButtons.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                var targetStep = parseInt(this.dataset.backTo, 10);
-                if (targetStep && targetStep >= 1) {
-                    goToStep(targetStep);
+        // Back buttons
+        document.querySelectorAll('.checkout-back-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = parseInt(this.getAttribute('data-back-to'), 10);
+                if (target >= 1 && !paymentStarted) {
+                    goToStep(target);
                 }
             });
         });
 
-        // Stepper clicks — navigate between steps
+        // Stepper clicks
         steps.forEach(function(stepEl) {
-            stepEl.style.cursor = 'pointer';
             stepEl.addEventListener('click', function() {
-                var targetStep = parseInt(this.dataset.step, 10);
+                var targetStep = parseInt(this.getAttribute('data-step'), 10);
                 if (!targetStep || targetStep === currentStep) return;
-
-                // Don't allow navigation during payment processing
                 if (paymentStarted) return;
 
-                // Going back: always allowed (to any previous step)
                 if (targetStep < currentStep) {
                     goToStep(targetStep);
                     return;
                 }
 
-                // Going forward: only if the target step was completed before
-                // (or the step before it was completed, meaning you can advance to the next)
                 if (completedSteps[targetStep] || completedSteps[targetStep - 1]) {
                     goToStep(targetStep);
                 }
@@ -306,40 +299,65 @@
     // ── Step 1: Submit customer data ──
     function handleCustomerSubmit(e) {
         e.preventDefault();
+        clearAllFieldErrors();
 
         var nome = document.getElementById('customer-nome').value.trim();
         var email = document.getElementById('customer-email').value.trim();
-        var rawPhone = phoneInput.value.trim();
+        var rawPhone = phoneInput ? phoneInput.value.trim() : '';
         var countryCode = phoneCountrySelect ? phoneCountrySelect.value : '+55';
-        var phone = countryCode + rawPhone.replace(/\D/g, '');
+        var phoneDigits = rawPhone.replace(/\D/g, '');
+        var phone = phoneDigits ? (countryCode + phoneDigits) : '';
         var termos = document.getElementById('termos-aceite').checked;
-        var isEstrangeiro = foreignToggle.checked;
+        var isEstrangeiro = foreignToggle ? foreignToggle.checked : false;
+
+        // Validation
+        var hasError = false;
+
+        if (!nome) {
+            showFieldError('customer-nome', t('checkoutNameRequired', 'Nome obrigatório'));
+            hasError = true;
+        }
+
+        if (!email) {
+            showFieldError('customer-email', t('checkoutEmailRequired', 'Email obrigatório'));
+            hasError = true;
+        } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            showFieldError('customer-email', t('checkoutEmailInvalid', 'Email inválido'));
+            hasError = true;
+        }
+
+        if (!phoneDigits) {
+            showFieldError('customer-phone', t('checkoutPhoneRequired', 'Telefone obrigatório'));
+            hasError = true;
+        } else if (countryCode === '+55' && phoneDigits.length < 10) {
+            showFieldError('customer-phone', t('checkoutPhoneInvalid', 'Telefone inválido'));
+            hasError = true;
+        } else if (phoneDigits.length < 6) {
+            showFieldError('customer-phone', t('checkoutPhoneInvalid', 'Telefone inválido'));
+            hasError = true;
+        }
 
         var cpf = '', passaporte = '';
         if (!isEstrangeiro) {
-            cpf = cpfInput.value.trim();
+            cpf = cpfInput ? cpfInput.value.trim() : '';
             if (!validarCPF(cpf)) {
                 showFieldError('customer-cpf', t('checkoutCpfInvalid', 'CPF inválido'));
-                return;
+                hasError = true;
             }
         } else {
             passaporte = document.getElementById('customer-passaporte').value.trim();
             if (!passaporte) {
                 showFieldError('customer-passaporte', t('checkoutPassportRequired', 'Passaporte obrigatório'));
-                return;
+                hasError = true;
             }
-        }
-
-        if (!nome || !email) {
-            if (!nome) showFieldError('customer-nome', t('checkoutNameRequired', 'Nome obrigatório'));
-            if (!email) showFieldError('customer-email', t('checkoutEmailRequired', 'Email obrigatório'));
-            return;
         }
 
         if (!termos) {
             alert(t('checkoutAcceptTerms', 'Você precisa aceitar os termos para continuar.'));
-            return;
+            hasError = true;
         }
+
+        if (hasError) return;
 
         var submitBtn = formEl.querySelector('button[type="submit"]');
         submitBtn.disabled = true;
@@ -550,7 +568,7 @@
         });
 
         panels.forEach(function(panel) {
-            panel.style.display = panel.dataset.step == stepNum ? 'block' : 'none';
+            panel.style.display = panel.getAttribute('data-step') == stepNum ? 'block' : 'none';
         });
 
         // When going back to step 2, restore method-selection if payment hasn't started
@@ -590,14 +608,21 @@
         var field = document.getElementById(fieldId);
         if (!field) return;
         field.classList.add('form-input--error');
-        var errorSpan = field.parentElement.querySelector('.form-error');
-        if (!errorSpan) errorSpan = field.parentElement.parentElement.querySelector('.form-error');
+        var errorSpan = field.closest('.form-group');
+        if (errorSpan) errorSpan = errorSpan.querySelector('.form-error');
         if (errorSpan) errorSpan.textContent = message;
         field.addEventListener('input', function handler() {
             field.classList.remove('form-input--error');
             if (errorSpan) errorSpan.textContent = '';
             field.removeEventListener('input', handler);
         });
+    }
+
+    function clearAllFieldErrors() {
+        var errors = document.querySelectorAll('.form-input--error');
+        errors.forEach(function(el) { el.classList.remove('form-input--error'); });
+        var msgs = document.querySelectorAll('.form-error');
+        msgs.forEach(function(el) { el.textContent = ''; });
     }
 
     function formatCurrency(value) {

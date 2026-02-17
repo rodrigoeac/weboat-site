@@ -42,6 +42,20 @@
     <a href="/" aria-label="WeBoat Brasil">
       <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
     </a>
+    <div class="checkout-lang" id="checkout-lang">
+      <a href="/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
+        <span class="checkout-lang__flag" aria-hidden="true">&#x1F1E7;&#x1F1F7;</span>
+        <span>PT</span>
+      </a>
+      <a href="/en/checkout/" class="checkout-lang__option">
+        <span class="checkout-lang__flag" aria-hidden="true">&#x1F1FA;&#x1F1F8;</span>
+        <span>EN</span>
+      </a>
+      <a href="/es/checkout/" class="checkout-lang__option">
+        <span class="checkout-lang__flag" aria-hidden="true">&#x1F1EA;&#x1F1F8;</span>
+        <span>ES</span>
+      </a>
+    </div>
   </header>
 
   <div class="checkout__container">
@@ -171,7 +185,7 @@
                 <option value="+598">+598</option>
                 <option value="+595">+595</option>
               </select>
-              <input class="form-input phone-input" type="tel" id="customer-phone" name="phone" placeholder="(21) 99999-9999" inputmode="tel" autocomplete="tel" aria-describedby="customer-phone-error">
+              <input class="form-input phone-input" type="tel" id="customer-phone" name="phone" placeholder="(21) 99999-9999" inputmode="tel" autocomplete="tel" required aria-required="true" aria-describedby="customer-phone-error">
             </div>
             <span class="form-error" id="customer-phone-error"></span>
           </div>
@@ -346,5 +360,8 @@
   <!-- Scripts -->
   <script src="/js/cpf-validator.js" defer></script>
   <script src="/js/checkout.js" defer></script>
+  <script>
+  (function(){var q=location.search;if(q){var links=document.querySelectorAll('#checkout-lang a');links.forEach(function(a){a.href+=q;});}})();
+  </script>
 </body>
 </html>
