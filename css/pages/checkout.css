@@ -40,6 +40,12 @@
   display: flex;
   align-items: center;
   gap: var(--space-2);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.checkout-step:hover .checkout-step__number {
+  transform: scale(1.1);
 }
 
 .checkout-step__number {
@@ -76,6 +82,11 @@
 
 .checkout-step--active .checkout-step__label {
   color: var(--ocean-deep);
+  font-weight: 600;
+}
+
+.checkout-step--done .checkout-step__label {
+  color: var(--success);
   font-weight: 600;
 }
 

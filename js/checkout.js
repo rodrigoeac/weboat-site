@@ -11,6 +11,9 @@
     var checkoutData = null;
     var selectedMethod = null;
     var usdRate = null;
+    var currentStep = 1;
+    var completedSteps = {}; // tracks which steps have been completed
+    var paymentStarted = false; // true after clicking "Pagar Agora"
 
     // ── DOM Elements ──
     var steps = document.querySelectorAll('.checkout-step');
@@ -34,7 +37,6 @@
     var zelleSection = document.getElementById('zelle-section');
     var parcelasSection = document.getElementById('parcelas-section');
     var parcelasSelect = document.getElementById('parcelas-select');
-    var backToStep1 = document.getElementById('back-to-step1');
 
     // ── Init ──
     function init() {
@@ -99,13 +101,17 @@
                 var urlStatus = getStatusFromURL();
 
                 if (data.alreadyPaid) {
+                    completedSteps[1] = true;
+                    completedSteps[2] = true;
                     goToStep(3);
                     renderConfirmation(data);
                 } else if (urlStatus === 'success') {
+                    completedSteps[1] = true;
                     renderProposalSummary(data);
                     goToStep(2);
                     showCardProcessing();
                 } else if (data.status === 'aguardando_pagamento') {
+                    completedSteps[1] = true;
                     renderProposalSummary(data);
                     goToStep(2);
                 } else {
@@ -186,7 +192,6 @@
             var ph = data.customer.phone;
             // Detect country code and set selector
             if (ph.startsWith('+')) {
-                // Try to match a known code
                 var codes = ['+598', '+595', '+351', '+55', '+54', '+56', '+57', '+52', '+49', '+44', '+39', '+34', '+33', '+1'];
                 for (var i = 0; i < codes.length; i++) {
                     if (ph.startsWith(codes[i])) {
@@ -217,7 +222,6 @@
                 var isForeign = this.checked;
                 cpfGroup.style.display = isForeign ? 'none' : 'flex';
                 passportGroup.style.display = isForeign ? 'flex' : 'none';
-                // Switch country code for foreigners
                 if (isForeign && phoneCountrySelect && phoneCountrySelect.value === '+55') {
                     phoneCountrySelect.value = '+1';
                 } else if (!isForeign && phoneCountrySelect) {
@@ -263,12 +267,40 @@
             payBtn.addEventListener('click', handlePayment);
         }
 
-        // Back button Step 2 → Step 1
-        if (backToStep1) {
-            backToStep1.addEventListener('click', function() {
-                goToStep(1);
+        // Back buttons (all of them)
+        var backButtons = document.querySelectorAll('.checkout-back-btn');
+        backButtons.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var targetStep = parseInt(this.dataset.backTo, 10);
+                if (targetStep && targetStep >= 1) {
+                    goToStep(targetStep);
+                }
             });
-        }
+        });
+
+        // Stepper clicks — navigate between steps
+        steps.forEach(function(stepEl) {
+            stepEl.style.cursor = 'pointer';
+            stepEl.addEventListener('click', function() {
+                var targetStep = parseInt(this.dataset.step, 10);
+                if (!targetStep || targetStep === currentStep) return;
+
+                // Don't allow navigation during payment processing
+                if (paymentStarted) return;
+
+                // Going back: always allowed (to any previous step)
+                if (targetStep < currentStep) {
+                    goToStep(targetStep);
+                    return;
+                }
+
+                // Going forward: only if the target step was completed before
+                // (or the step before it was completed, meaning you can advance to the next)
+                if (completedSteps[targetStep] || completedSteps[targetStep - 1]) {
+                    goToStep(targetStep);
+                }
+            });
+        });
     }
 
     // ── Step 1: Submit customer data ──
@@ -330,6 +362,7 @@
             return res.json();
         })
         .then(function() {
+            completedSteps[1] = true;
             goToStep(2);
             updatePaymentMethods(isEstrangeiro);
         })
@@ -353,6 +386,7 @@
     function handlePayment() {
         if (!selectedMethod) return;
 
+        paymentStarted = true;
         payBtn.disabled = true;
         payBtn.textContent = t('checkoutProcessing', 'Processando...');
 
@@ -380,6 +414,7 @@
             }
         })
         .catch(function(err) {
+            paymentStarted = false;
             alert(err.message || t('checkoutPayError', 'Erro ao iniciar pagamento.'));
             payBtn.disabled = false;
             payBtn.textContent = t('checkoutPayNow', 'Pagar Agora');
@@ -421,7 +456,6 @@
         if (zelleSection) {
             zelleSection.style.display = 'block';
 
-            // Show USD amount conversion
             var zelleAmountEl = document.getElementById('zelle-amount');
             if (zelleAmountEl && checkoutData && checkoutData.preco) {
                 var brlAmount = checkoutData.preco.valorEntrada;
@@ -438,6 +472,7 @@
     }
 
     function showCardProcessing() {
+        paymentStarted = true;
         document.getElementById('method-selection').style.display = 'none';
 
         var card = document.querySelector('[data-step="2"] .checkout-card');
@@ -487,6 +522,8 @@
                     var paidStatuses = ['entrada_paga', 'totalmente_paga', 'confirmada', 'concluida'];
                     if (paidStatuses.indexOf(data.reservaStatus) !== -1) {
                         clearInterval(pollTimer);
+                        completedSteps[2] = true;
+                        paymentStarted = false;
                         goToStep(3);
                         renderConfirmation(checkoutData);
                     }
@@ -504,6 +541,8 @@
 
     // ── Navigation ──
     function goToStep(stepNum) {
+        currentStep = stepNum;
+
         steps.forEach(function(step, i) {
             step.classList.remove('checkout-step--active', 'checkout-step--done');
             if (i + 1 < stepNum) step.classList.add('checkout-step--done');
@@ -513,6 +552,14 @@
         panels.forEach(function(panel) {
             panel.style.display = panel.dataset.step == stepNum ? 'block' : 'none';
         });
+
+        // When going back to step 2, restore method-selection if payment hasn't started
+        if (stepNum === 2 && !paymentStarted) {
+            var methodSelection = document.getElementById('method-selection');
+            if (methodSelection) methodSelection.style.display = 'block';
+            if (pixSection) pixSection.style.display = 'none';
+            if (zelleSection) zelleSection.style.display = 'none';
+        }
 
         window.scrollTo(0, 0);
     }
