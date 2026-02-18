@@ -738,5 +738,5 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 
 ---
 
-**Última atualização:** 16 Fevereiro 2026
-**Versão:** 4.2 - checkout UX (phone country code, back button, Zelle/PayPal, i18n sync)
+**Última atualização:** 18 Fevereiro 2026
+**Versão:** 4.3 - checkout cache-busting, back button delegation, card hide for foreigners
