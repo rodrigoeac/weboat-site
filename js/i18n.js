@@ -129,7 +129,9 @@ var WeBoatI18n = (function() {
       checkoutDeposit: 'Entrada',
       checkoutRemaining: 'Restante (no dia)',
       checkoutPeople: 'pessoas',
+      checkoutPollTimeout: 'Tempo esgotado. Atualize a página para verificar o status.',
       // Proposal builder
+      proposalLoadError: 'Erro ao carregar dados da proposta. Tente recarregar a página.',
       proposalMorning: 'Manhã',
       proposalAfternoon: 'Tarde',
       proposalFlexible: 'Horário Flexível',
@@ -312,6 +314,8 @@ var WeBoatI18n = (function() {
       checkoutDeposit: 'Deposit',
       checkoutRemaining: 'Remaining (on the day)',
       checkoutPeople: 'people',
+      checkoutPollTimeout: 'Timed out. Refresh the page to check payment status.',
+      proposalLoadError: 'Error loading proposal data. Please reload the page.',
       proposalMorning: 'Morning',
       proposalAfternoon: 'Afternoon',
       proposalFlexible: 'Flexible Schedule',
@@ -490,6 +494,8 @@ var WeBoatI18n = (function() {
       checkoutDeposit: 'Anticipo',
       checkoutRemaining: 'Restante (el día)',
       checkoutPeople: 'personas',
+      checkoutPollTimeout: 'Tiempo agotado. Actualice la página para verificar el estado del pago.',
+      proposalLoadError: 'Error al cargar datos de la propuesta. Intente recargar la página.',
       proposalMorning: 'Mañana',
       proposalAfternoon: 'Tarde',
       proposalFlexible: 'Horario Flexible',
@@ -625,6 +631,9 @@ var WeBoatI18n = (function() {
    */
   function t(key, params) {
     var str = (strings[lang] && strings[lang][key]) || (strings.pt && strings.pt[key]) || key;
+    if (str === key && key.indexOf(' ') === -1) {
+      console.warn('[i18n] Missing key:', key, 'lang:', lang);
+    }
     if (params) {
       Object.keys(params).forEach(function(k) {
         str = str.replace('{' + k + '}', params[k]);

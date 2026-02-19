@@ -6,6 +6,8 @@
 
     var API_BASE = 'https://api.weboatbrasil.com.br';
     var POLL_INTERVAL = 5000;
+    var MAX_POLLS = 120; // 10 min max
+    var pollCount = 0;
     var pollTimer = null;
     var currentToken = null;
     var checkoutData = null;
@@ -63,9 +65,17 @@
         return params.get('status');
     }
 
+    // ── Fetch with timeout helper ──
+    function fetchWithTimeout(url, options, timeoutMs) {
+        var controller = new AbortController();
+        var timer = setTimeout(function() { controller.abort(); }, timeoutMs || 8000);
+        var opts = Object.assign({}, options, { signal: controller.signal });
+        return fetch(url, opts).finally(function() { clearTimeout(timer); });
+    }
+
     // ── Fetch USD/BRL rate ──
     function fetchUsdRate() {
-        fetch('https://api.exchangerate-api.com/v4/latest/USD')
+        fetchWithTimeout('https://api.exchangerate-api.com/v4/latest/USD', { cache: 'force-cache' }, 5000)
             .then(function(res) { return res.json(); })
             .then(function(data) {
                 if (data && data.rates && data.rates.BRL) {
@@ -79,7 +89,7 @@
     function loadCheckout() {
         showLoading(true);
 
-        fetch(API_BASE + '/checkout/' + encodeURIComponent(currentToken))
+        fetchWithTimeout(API_BASE + '/checkout/' + encodeURIComponent(currentToken), {}, 8000)
             .then(function(res) {
                 if (res.status === 410) {
                     return res.json().then(function(data) {
@@ -534,20 +544,44 @@
     }
 
     function startPolling() {
+        pollCount = 0;
         pollTimer = setInterval(function() {
+            pollCount++;
+            if (pollCount >= MAX_POLLS) {
+                clearInterval(pollTimer);
+                pollTimer = null;
+                var statusEl = document.querySelector('.pix-status span');
+                if (statusEl) statusEl.textContent = t('checkoutPollTimeout', 'Tempo esgotado. Atualize a página para verificar o status.');
+                return;
+            }
             fetch(API_BASE + '/checkout/' + encodeURIComponent(currentToken) + '/status')
                 .then(function(res) { return res.json(); })
                 .then(function(data) {
                     var paidStatuses = ['entrada_paga', 'totalmente_paga', 'confirmada', 'concluida'];
                     if (paidStatuses.indexOf(data.reservaStatus) !== -1) {
                         clearInterval(pollTimer);
+                        pollTimer = null;
                         completedSteps[2] = true;
                         paymentStarted = false;
                         goToStep(3);
                         renderConfirmation(checkoutData);
                     }
+                })
+                .catch(function() {
+                    if (pollCount > 30) {
+                        clearInterval(pollTimer);
+                        pollTimer = null;
+                    }
                 });
         }, POLL_INTERVAL);
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            if (pollTimer) {
+                clearInterval(pollTimer);
+                pollTimer = null;
+            }
+        });
     }
 
     // ── Step 3: Confirmation ──
@@ -618,11 +652,19 @@
         var field = document.getElementById(fieldId);
         if (!field) return;
         field.classList.add('form-input--error');
+        field.setAttribute('aria-invalid', 'true');
         var group = field.closest('.form-group');
         var errorSpan = group ? group.querySelector('.form-error') : null;
-        if (errorSpan) errorSpan.textContent = message;
+        if (errorSpan) {
+            var errorId = 'error-' + fieldId;
+            errorSpan.id = errorId;
+            errorSpan.textContent = message;
+            field.setAttribute('aria-describedby', errorId);
+        }
         field.addEventListener('input', function handler() {
             field.classList.remove('form-input--error');
+            field.removeAttribute('aria-invalid');
+            field.removeAttribute('aria-describedby');
             if (errorSpan) errorSpan.textContent = '';
             field.removeEventListener('input', handler);
         });
@@ -631,6 +673,8 @@
     function clearAllFieldErrors() {
         document.querySelectorAll('.form-input--error').forEach(function(el) {
             el.classList.remove('form-input--error');
+            el.removeAttribute('aria-invalid');
+            el.removeAttribute('aria-describedby');
         });
         document.querySelectorAll('.form-error').forEach(function(el) {
             el.textContent = '';

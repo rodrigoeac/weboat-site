@@ -12,6 +12,14 @@
   function t(key, fallback, params) { return I ? I.t(key, params) : fallback; }
 
   if (!Data || !Servicos) {
+    console.error('ProposalBuilder: Missing WeBoatData or WeBoatServicos');
+    var errDiv = document.querySelector('.proposta') || document.querySelector('[data-lancha-id]');
+    if (errDiv) {
+      var alert = document.createElement('div');
+      alert.className = 'proposta__aviso proposta__aviso--erro';
+      alert.textContent = I ? I.t('proposalLoadError', 'Erro ao carregar dados da proposta. Tente recarregar a página.') : 'Erro ao carregar dados da proposta. Tente recarregar a página.';
+      errDiv.insertBefore(alert, errDiv.firstChild);
+    }
     return;
   }
 
@@ -855,6 +863,19 @@
     }
   }
 
+  function updateStepperButtons(targetId) {
+    var input = document.getElementById(targetId);
+    if (!input) return;
+    var val = parseInt(input.value, 10) || 0;
+    var min = parseInt(input.min, 10) || 0;
+    var max = parseInt(input.max, 10) || 999;
+    var btns = $$('.proposta__stepper-btn[data-target="' + targetId + '"]');
+    for (var i = 0; i < btns.length; i++) {
+      var action = btns[i].getAttribute('data-action');
+      btns[i].disabled = (action === 'increment' && val >= max) || (action === 'decrement' && val <= min);
+    }
+  }
+
   function setupSteppers() {
     var btns = $$('.proposta__stepper-btn');
     for (var i = 0; i < btns.length; i++) {
@@ -879,15 +900,21 @@
         if (targetId === 'proposta-horas-extras') {
           state.horasExtras = val;
         }
+        updateStepperButtons(targetId);
         recalcular();
       });
     }
+
+    // Initialize button states
+    updateStepperButtons('proposta-pessoas');
+    updateStepperButtons('proposta-horas-extras');
 
     var pessoasInput = document.getElementById('proposta-pessoas');
     if (pessoasInput) {
       pessoasInput.addEventListener('input', function () {
         state.numPessoas = parseInt(this.value, 10) || 1;
         updateServicosPrecos();
+        updateStepperButtons('proposta-pessoas');
         recalcular();
       });
     }
@@ -895,6 +922,7 @@
     if (heInput) {
       heInput.addEventListener('input', function () {
         state.horasExtras = parseInt(this.value, 10) || 0;
+        updateStepperButtons('proposta-horas-extras');
         recalcular();
       });
     }
@@ -1114,14 +1142,24 @@
   }
 
   function restoreFromCart() {
-    var raw = sessionStorage.getItem('weboat_servicos_cart');
-    if (!raw) return;
-
+    var raw;
     try {
-      var cart = JSON.parse(raw);
+      raw = sessionStorage.getItem('weboat_servicos_cart');
     } catch (e) {
       return;
     }
+    if (!raw) return;
+
+    var cart;
+    try {
+      cart = JSON.parse(raw);
+    } catch (e) {
+      sessionStorage.removeItem('weboat_servicos_cart');
+      return;
+    }
+
+    // Validate cart structure
+    if (!cart || typeof cart !== 'object') return;
 
     // Restore number of people
     if (cart.numPessoas) {

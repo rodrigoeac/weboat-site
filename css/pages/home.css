@@ -78,10 +78,18 @@
   font-size: var(--text-body-lg);
   color: rgba(255, 255, 255, 0.9);
   line-height: 1.7;
-  margin-bottom: var(--space-8);
+  margin-bottom: var(--space-4);
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hero__highlights {
+  font-size: var(--text-body-sm);
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-bottom: var(--space-8);
 }
 
 .hero__ctas {

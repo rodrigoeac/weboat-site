@@ -40,6 +40,8 @@ const pages = [
     isHomepage: true,
     contentBlocks: [
       // ── LONG BLOCKS FIRST (must run before short fragments to avoid substring corruption) ──
+      // Hero highlights
+      ['A partir de R$ 2.300 · 10 a 65 pessoas · Combustível e marinheiro inclusos', 'From R$ 2,300 · 10 to 65 guests · Fuel and captain included'],
       // FAQ section title (must come BEFORE ['Aluguel de Lancha no Rio de Janeiro', '...'] which corrupts it)
       ['Dúvidas sobre Aluguel de Lancha no Rio de Janeiro', 'Frequently Asked Questions about Boat Rental in Rio de Janeiro'],
       // Schema.org WebSite description (mixed PT/EN after dictionary)
@@ -5235,16 +5237,16 @@ function getEnHeader(ptPath, enPath, esPath, isTransparent) {
             EN
             <i class="ph ph-caret-down lang-switcher__caret" aria-hidden="true"></i>
           </button>
-          <div class="lang-switcher__menu" role="menu">
-            <a href="__LANGSW_PT_HREF__" class="lang-switcher__option" role="menuitem">
+          <div class="lang-switcher__menu" role="listbox">
+            <a href="__LANGSW_PT_HREF__" class="lang-switcher__option" role="option">
               <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#229e45" d="M0 0h640v480H0z"/><path fill="#f8e509" d="m321.4 20 301.5 220.1L321.4 460 19.9 240.1z"/><circle fill="#2b49a3" cx="321.4" cy="240" r="110"/></svg>
               Portugues
             </a>
-            <a href="__LANGSW_EN_HREF__" class="lang-switcher__option lang-switcher__option--active" role="menuitem">
+            <a href="__LANGSW_EN_HREF__" class="lang-switcher__option lang-switcher__option--active" role="option">
               <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#bd3d44" d="M0 0h640v480H0z"/><path stroke="#fff" stroke-width="37" d="M0 55.3h640M0 129h640M0 203h640M0 277h640M0 351h640M0 425h640"/><path fill="#192f5d" d="M0 0h364.8v258.5H0z"/></svg>
               English
             </a>
-            <a href="__LANGSW_ES_HREF__" class="lang-switcher__option" role="menuitem">
+            <a href="__LANGSW_ES_HREF__" class="lang-switcher__option" role="option">
               <svg class="lang-switcher__flag" viewBox="0 0 640 480" aria-hidden="true"><path fill="#c60b1e" d="M0 0h640v480H0z"/><path fill="#ffc400" d="M0 120h640v240H0z"/></svg>
               Espanol
             </a>

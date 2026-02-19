@@ -25,7 +25,8 @@
 
     form.addEventListener('submit', handleFormSubmit);
 
-    // Validação em tempo real
+    // Validação em tempo real (debounced)
+    var validationTimeouts = {};
     const inputs = form.querySelectorAll('.contato-form__input, .contato-form__select, .contato-form__textarea');
     inputs.forEach(function(input) {
       input.addEventListener('blur', function() {
@@ -33,10 +34,14 @@
       });
 
       input.addEventListener('input', function() {
-        // Remove erro ao digitar
-        if (input.classList.contains('form-input--error')) {
-          removeError(input);
-        }
+        // Remove erro ao digitar (debounced to avoid jank on fast typing)
+        var fieldId = input.id || input.name;
+        if (validationTimeouts[fieldId]) clearTimeout(validationTimeouts[fieldId]);
+        validationTimeouts[fieldId] = setTimeout(function() {
+          if (input.classList.contains('form-input--error')) {
+            removeError(input);
+          }
+        }, 300);
       });
     });
   }
@@ -187,15 +192,21 @@
    */
   function showError(field, message) {
     field.classList.add('form-input--error');
+    field.setAttribute('aria-invalid', 'true');
 
     // Cria elemento de erro se não existir
+    var errorId = 'error-' + (field.id || field.name);
     var errorEl = field.parentNode.querySelector('.form-error');
     if (!errorEl) {
       errorEl = document.createElement('span');
       errorEl.className = 'form-error';
+      errorEl.id = errorId;
       field.parentNode.appendChild(errorEl);
+    } else {
+      errorEl.id = errorId;
     }
     errorEl.textContent = message;
+    field.setAttribute('aria-describedby', errorId);
   }
 
   /**
@@ -203,6 +214,8 @@
    */
   function removeError(field) {
     field.classList.remove('form-input--error');
+    field.removeAttribute('aria-invalid');
+    field.removeAttribute('aria-describedby');
     var errorEl = field.parentNode.querySelector('.form-error');
     if (errorEl) {
       errorEl.remove();
@@ -238,8 +251,8 @@
     var phoneField = document.getElementById('telefone');
     if (!phoneField) return;
 
-    phoneField.addEventListener('input', function(e) {
-      var value = e.target.value.replace(/\D/g, '');
+    function formatPhone() {
+      var value = phoneField.value.replace(/\D/g, '');
       var formattedValue = '';
 
       if (value.length > 0) {
@@ -252,7 +265,12 @@
         formattedValue += '-' + value.substring(7, 11);
       }
 
-      e.target.value = formattedValue;
+      phoneField.value = formattedValue;
+    }
+
+    phoneField.addEventListener('input', formatPhone);
+    phoneField.addEventListener('paste', function() {
+      setTimeout(formatPhone, 10);
     });
   }
 

@@ -130,6 +130,9 @@
         if (counter) {
           counter.textContent = (currentIndex + 1) + ' / ' + galleryImages.length;
         }
+        if (prevBtn) prevBtn.setAttribute('aria-label', 'Anterior (' + ((currentIndex - 1 + galleryImages.length) % galleryImages.length + 1) + ' de ' + galleryImages.length + ')');
+        if (nextBtn) nextBtn.setAttribute('aria-label', 'Próxima (' + ((currentIndex + 1) % galleryImages.length + 1) + ' de ' + galleryImages.length + ')');
+        overlay.setAttribute('aria-label', 'Imagem ' + (currentIndex + 1) + ' de ' + galleryImages.length);
       }
 
       // Event listeners para navegação

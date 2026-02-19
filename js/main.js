@@ -7,6 +7,17 @@
 (function() {
   'use strict';
 
+  // Global error handlers
+  window.addEventListener('error', function(e) {
+    console.error('[WeBoat]', e.message, e.filename, e.lineno);
+  });
+  window.addEventListener('unhandledrejection', function(e) {
+    console.error('[WeBoat] Unhandled promise:', e.reason);
+  });
+
+  // Track observers for cleanup
+  var _observers = [];
+
   // ============================================
   // LAZY LOADING IMAGES
   // ============================================
@@ -15,6 +26,7 @@
     const lazyImages = document.querySelectorAll('img[data-src]');
 
     if ('IntersectionObserver' in window) {
+      var lazyMargin = window.innerWidth <= 768 ? '50px 0px' : '200px 0px';
       const imageObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(function(entry) {
           if (entry.isIntersecting) {
@@ -28,13 +40,14 @@
           }
         });
       }, {
-        rootMargin: '200px 0px',
+        rootMargin: lazyMargin,
         threshold: 0.01
       });
 
       lazyImages.forEach(function(img) {
         imageObserver.observe(img);
       });
+      _observers.push(imageObserver);
     } else {
       // Fallback para navegadores sem suporte
       lazyImages.forEach(function(img) {
@@ -110,6 +123,7 @@
       animatedElements.forEach(function(el) {
         animationObserver.observe(el);
       });
+      _observers.push(animationObserver);
     } else {
       // Fallback
       animatedElements.forEach(function(el) {
@@ -215,6 +229,7 @@
       counters.forEach(function(counter) {
         counterObserver.observe(counter);
       });
+      _observers.push(counterObserver);
     } else {
       counters.forEach(function(counter) {
         animateCounter(counter);
@@ -276,6 +291,19 @@
       const tabs = container.querySelectorAll('[data-tab]');
       const panels = container.querySelectorAll('[data-tab-panel]');
 
+      // Set ARIA roles on init
+      container.setAttribute('role', 'tablist');
+      tabs.forEach(function(tab, i) {
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('tabindex', tab.classList.contains('active') ? '0' : '-1');
+        if (!tab.getAttribute('aria-selected')) {
+          tab.setAttribute('aria-selected', tab.classList.contains('active') ? 'true' : 'false');
+        }
+      });
+      panels.forEach(function(panel) {
+        panel.setAttribute('role', 'tabpanel');
+      });
+
       tabs.forEach(function(tab) {
         tab.addEventListener('click', function() {
           const targetId = this.dataset.tab;
@@ -284,9 +312,11 @@
           tabs.forEach(function(t) {
             t.classList.remove('active');
             t.setAttribute('aria-selected', 'false');
+            t.setAttribute('tabindex', '-1');
           });
           this.classList.add('active');
           this.setAttribute('aria-selected', 'true');
+          this.setAttribute('tabindex', '0');
 
           // Atualizar painéis
           panels.forEach(function(panel) {
@@ -341,6 +371,7 @@
         }
       }, { rootMargin: '200px' });
       observer.observe(trustContainer);
+      _observers.push(observer);
     }
 
     // Fallback: carregar após idle ou 5s
@@ -387,6 +418,13 @@
     initBoatFilter();
     initTrustIndexLazy();
     initBackToTop();
+
+    // Cleanup observers on page unload
+    window.addEventListener('beforeunload', function() {
+      for (var i = 0; i < _observers.length; i++) {
+        _observers[i].disconnect();
+      }
+    });
   }
 
   // Executar quando DOM estiver pronto

@@ -7,6 +7,9 @@
 (function() {
   'use strict';
 
+  // Cleanup stale scroll lock from previous navigation
+  document.body.classList.remove('menu-open');
+
   // Elementos do DOM
   const header = document.getElementById('header');
   const mobileToggle = document.querySelector('.header__mobile-toggle');
@@ -64,38 +67,42 @@
   });
 
   // ============================================
-  // DROPDOWN DESKTOP
+  // DROPDOWN DESKTOP (event delegation)
   // ============================================
-  dropdownToggles.forEach(function(toggle) {
-    const dropdown = toggle.parentElement;
+  document.addEventListener('click', function(event) {
+    var clickedToggle = event.target.closest('.header__dropdown-toggle');
 
-    // Toggle ao clicar
-    toggle.addEventListener('click', function(event) {
+    if (clickedToggle) {
       event.preventDefault();
-      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      var dropdown = clickedToggle.parentElement;
+      var isExpanded = clickedToggle.getAttribute('aria-expanded') === 'true';
 
       // Fechar outros dropdowns
       dropdownToggles.forEach(function(otherToggle) {
-        if (otherToggle !== toggle) {
+        if (otherToggle !== clickedToggle) {
           otherToggle.setAttribute('aria-expanded', 'false');
           otherToggle.parentElement.classList.remove('active');
         }
       });
 
       // Toggle estado atual
-      toggle.setAttribute('aria-expanded', !isExpanded);
+      clickedToggle.setAttribute('aria-expanded', !isExpanded);
       dropdown.classList.toggle('active', !isExpanded);
-    });
+      return;
+    }
 
-    // Fechar ao clicar fora
-    document.addEventListener('click', function(event) {
+    // Fechar todos os dropdowns ao clicar fora
+    dropdownToggles.forEach(function(toggle) {
+      var dropdown = toggle.parentElement;
       if (!dropdown.contains(event.target)) {
         toggle.setAttribute('aria-expanded', 'false');
         dropdown.classList.remove('active');
       }
     });
+  });
 
-    // Suporte a teclado
+  // Suporte a teclado nos toggles
+  dropdownToggles.forEach(function(toggle) {
     toggle.addEventListener('keydown', function(event) {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault();
@@ -183,11 +190,19 @@
   if (langSwitcher) {
     var langBtn = langSwitcher.querySelector('.lang-switcher__current');
 
-    langBtn.addEventListener('click', function(event) {
+    function toggleLangSwitcher(event) {
       event.stopPropagation();
       var isOpen = langSwitcher.classList.contains('active');
       langSwitcher.classList.toggle('active', !isOpen);
       langBtn.setAttribute('aria-expanded', !isOpen);
+    }
+
+    langBtn.addEventListener('click', toggleLangSwitcher);
+    langBtn.addEventListener('keydown', function(event) {
+      if (event.key === 'Enter' || event.key === ' ') {
+        event.preventDefault();
+        toggleLangSwitcher(event);
+      }
     });
 
     document.addEventListener('click', function(event) {

@@ -536,8 +536,9 @@
 }
 
 .form-check-input {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
+  min-width: 24px;
   margin: 0;
   cursor: pointer;
   accent-color: var(--wave-blue);
@@ -860,4 +861,19 @@
    ============================================ */
 .trustindex-widget {
   min-height: 300px;
+  background: linear-gradient(90deg, var(--pearl-gray) 25%, var(--sand-white) 50%, var(--pearl-gray) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: var(--radius-md, 8px);
+}
+
+.trustindex-widget:has(> iframe),
+.trustindex-widget[data-loaded="true"] {
+  background: none;
+  animation: none;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
 }
