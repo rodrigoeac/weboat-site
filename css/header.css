@@ -23,8 +23,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: 72px;
   gap: var(--space-4);
+  transition: height var(--transition-base);
+}
+
+.header--scrolled .header__inner {
+  height: 60px;
 }
 
 /* ============================================
@@ -44,6 +49,10 @@
 
 @media (max-width: 1023px) {
   .header__inner {
+    height: 62px;
+  }
+
+  .header--scrolled .header__inner {
     height: 54px;
   }
 
@@ -180,6 +189,12 @@
   display: none;
 }
 
+.header__cta.btn {
+  padding: 8px 16px;
+  min-height: 36px;
+  font-size: 13px;
+}
+
 @media (min-width: 1024px) {
   .header__cta {
     display: inline-flex;
@@ -275,7 +290,7 @@
   bottom: 0;
   z-index: var(--z-fixed);
   background: var(--white);
-  padding: calc(54px + var(--space-6)) var(--space-6) var(--space-6);
+  padding: calc(62px + var(--space-6)) var(--space-6) var(--space-6);
   overflow-y: auto;
   opacity: 0;
   visibility: hidden;
