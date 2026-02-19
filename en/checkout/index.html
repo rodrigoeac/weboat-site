@@ -1,4 +1,4 @@
-<!-- i18n: translated from PT version 2026-02-16 -->
+<!-- i18n: translated from PT version 2026-02-15 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,11 +44,11 @@
       <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
     </a>
     <div class="checkout-lang" id="checkout-lang">
-      <a href="/checkout/" class="checkout-lang__option">
+      <a href="/en/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1E7;&#x1F1F7;</span>
         <span>PT</span>
       </a>
-      <a href="/en/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
+      <a href="/en/checkout/" class="checkout-lang__option">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1FA;&#x1F1F8;</span>
         <span>EN</span>
       </a>
@@ -85,20 +85,20 @@
       <p>Loading your proposal...</p>
     </div>
 
-    <!-- Error state -->
+    <!-- Errorr state -->
     <div id="checkout-error" class="checkout-error" role="alert" aria-live="assertive" style="display:none">
       <div class="checkout-error__icon">
         <i class="ph ph-warning-circle" aria-hidden="true"></i>
       </div>
       <h2 class="checkout-error__title">Error</h2>
-      <p class="checkout-error__message">Something went wrong.</p>
+      <p class="checkout-error__message">Soundething went wrong.</p>
       <a href="https://wa.me/5521977724114?text=Hello! I had a problem with the payment link." class="btn btn-whatsapp" target="_blank" rel="noopener">
         <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chat on WhatsApp
       </a>
     </div>
 
     <!-- ═══════════════════════════════════════
-         STEP 1: Summary + Form
+         STEP 1: Resumo + Formulário
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="1" style="display:none">
 
@@ -168,9 +168,9 @@
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="customer-phone">Phone</label>
+            <label class="form-label" for="customer-phone">Phone / Phone</label>
             <div class="phone-input-group">
-              <select id="phone-country" class="phone-country-select" aria-label="Country code">
+              <select id="phone-country" class="phone-country-select" aria-label="Código do país">
                 <option value="+55" selected>+55</option>
                 <option value="+1">+1</option>
                 <option value="+44">+44</option>
@@ -200,7 +200,7 @@
           <div class="checkout-terms">
             <input type="checkbox" id="termos-aceite" required aria-required="true">
             <label for="termos-aceite">
-              I have read and accept the <a href="/en/terms-of-use/" target="_blank">Terms of Use</a> and the <a href="/en/privacy-policy/" target="_blank">Privacy Policy</a> of WeBoat Brasil.
+              I have read and accept the <a href="/en/terms-of-use/" target="_blank">Terms of Use</a> e a <a href="/en/privacy-policy/" target="_blank">Privacy Policy</a> da WeBoat Brasil.
             </label>
           </div>
 
@@ -237,7 +237,7 @@
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Credit Card</div>
-                <div class="payment-method__desc">Secure payment via InfinitePay</div>
+                <div class="payment-method__desc">Payment seguro via InfinitePay</div>
               </div>
             </div>
 
@@ -305,7 +305,7 @@
         </div>
 
         <button type="button" class="checkout-back-btn" data-back-to="1">
-          <i class="ph ph-arrow-left" aria-hidden="true"></i> Back to Details
+          <i class="ph ph-arrow-left" aria-hidden="true"></i> Voltar para Details
         </button>
       </div>
     </div>

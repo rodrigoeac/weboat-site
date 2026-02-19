@@ -98,15 +98,13 @@
       "eventos náuticos",
       "turismo náutico Rio de Janeiro"
     ],
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": -22.9068,
-        "longitude": -43.1729
-      },
-      "geoRadius": "50000"
-    },
+    "areaServed": [
+      {"@type": "City", "name": "Rio de Janeiro", "sameAs": "https://www.wikidata.org/wiki/Q8678"},
+      {"@type": "City", "name": "Niterói"},
+      {"@type": "AdministrativeArea", "name": "Glória"},
+      {"@type": "AdministrativeArea", "name": "Copacabana"},
+      {"@type": "AdministrativeArea", "name": "Urca"}
+    ],
     "hasOfferCatalog": [
       {
         "@type": "OfferCatalog",
@@ -295,6 +293,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quais áreas são atendidas pela WeBoat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A WeBoat atende toda a região metropolitana do Rio de Janeiro, com embarque na Marina da Glória. Os bairros mais próximos incluem Glória (3 min), Flamengo (5 min), Botafogo (8 min), Urca (10 min), Centro (10 min), Copacabana (15 min), Ipanema (20 min), Leblon (25 min) e Niterói (30 min via ponte)."
         }
       }
     ]
@@ -491,6 +497,7 @@
     <!-- Areas Grid -->
     <section class="áreas-grid">
       <div class="container">
+        <h2 id="areas-atendidas">Quais áreas são atendidas pela WeBoat?</h2>
 
         <!-- Area 1: Mureta da Urca -->
         <article class="area-card" id="mureta-da-urca">
@@ -906,6 +913,27 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <!-- Bairros de Embarque -->
+    <section class="lancha-section" id="bairros-embarque">
+      <div class="container">
+        <h3 class="lancha-section__title">Bairros de Embarque e Proximidade</h3>
+        <div class="answer-capsule">
+          <p><strong>A Marina da Glória está estrategicamente localizada no coração do Rio de Janeiro.</strong> Confira o tempo estimado de carro até o ponto de embarque:</p>
+        </div>
+        <ul class="areas-bairros-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; margin-top: 16px;">
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Glória</strong> — 3 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Flamengo</strong> — 5 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Botafogo</strong> — 8 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Urca</strong> — 10 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Centro</strong> — 10 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Copacabana</strong> — 15 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Ipanema</strong> — 20 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Leblon</strong> — 25 min de carro</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Niterói</strong> — 30 min de carro (via ponte)</li>
+        </ul>
       </div>
     </section>
 

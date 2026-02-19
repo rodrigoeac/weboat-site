@@ -221,7 +221,7 @@
 }
 
 .card-boat__price-label {
-  font-size: var(--text-caption);
+  font-size: 13px;
   color: var(--driftwood);
 }
 
@@ -254,7 +254,7 @@
 }
 
 .card-boat__prices .card-boat__price-note {
-  font-size: 11px;
+  font-size: 13px;
 }
 
 @media (max-width: 768px) {

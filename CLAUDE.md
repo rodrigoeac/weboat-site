@@ -738,5 +738,14 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 
 ---
 
-**Última atualização:** 18 Fevereiro 2026
-**Versão:** 4.3 - checkout cache-busting, back button delegation, card hide for foreigners
+**Última atualização:** 19 Fevereiro 2026
+**Versão:** 5.0 - GEO/SEO audit (22 fixes: answer capsules, mobile UX, internal linking, schema, visual)
+
+### Changelog v5.0 (Audit v5.0)
+- **Mobile UX:** font sizes min 13-14px, sticky sidebar static on mobile, footer 768px breakpoint, header 54px on mobile
+- **GEO Answer Capsules:** H2s reformatted as questions on roteiros/serviços/áreas, `.answer-capsule` class on 45 files
+- **Page Freshness:** `.page-freshness` dates on 57 files, `dateModified` updated in schemas
+- **Internal Linking:** blog related articles (3 pages), serviços↔ocasiões cross-links (10 pages), recommended services on occasions
+- **Schema GEO:** ContactPoint email, areaServed City/AdministrativeArea array, FAQ Q&As on occasions, blog author Organization
+- **Visual:** carousel overflow fix, sidebar 320px tablet, price labels 13px
+- **i18n:** 30+ new translation entries in generate-en/es scripts, contentBlock fix for partial translation bug

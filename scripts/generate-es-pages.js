@@ -2332,6 +2332,8 @@ const pages = [
       ['Contratar Combo', 'Contratar Combo'],
       ['Montar meu pacote com todos os serviços', 'Armar mi paquete con todos los servicios'],
       ['Montar meu pacote', 'Armar mi paquete'],
+      // v5.0: H2s as questions (must come BEFORE shorter substrings like 'O que inclui')
+      ['O que inclui o open bar?', '¿Qué incluye el open bar?'],
       // BBQ Kits
       ['Escolha seu Kit', 'Elija su Kit'],
       ['Kit Simples', 'Kit Sencillo'],
@@ -4767,6 +4769,56 @@ const translations = [
   // Generic PT words that stay behind (SHORTEST ENTRIES — keep at end)
   ['cenário mais bonito', 'escenario más hermoso'],
   ['Agende paseos', 'Agende paseos'],
+
+  // ─── v5.0 AUDIT TRANSLATIONS (2026-02-19) ───
+  // Longer strings MUST come before shorter substrings (auto-sorted by translateContent)
+
+  // Boat recommendation cards (roteiro pages)
+  ['Lanchas Recomendadas para este Roteiro', 'Lanchas Recomendadas para esta Ruta'],
+  ['Confira as lanchas mais populares para este passeio. Todas incluem combustível, marinheiro, coolers e som Bluetooth.', 'Conozca las lanchas más populares para este paseo. Todas incluyen combustible, marinero, hieleras y sonido Bluetooth.'],
+  ['Ótima para festas', 'Ideal para fiestas'],
+
+  // Service cross-links (roteiro + occasion pages)
+  ['Complemente sua experiência com nossos serviços adicionais.', 'Complemente su experiencia con nuestros servicios adicionales.'],
+  ['Churrasco preparado a bordo com toda a praticidade.', 'Asado preparado a bordo con toda la practicidad.'],
+  ['Drinks ilimitados com barman profissional a bordo.', 'Drinks ilimitados con barman profesional a bordo.'],
+  ['Balões, faixas e decoração personalizada para sua festa.', 'Globos, banderas y decoración personalizada para su fiesta.'],
+  ['Serviços Recomendados', 'Servicios Recomendados'],
+  ['Serviços Extras', 'Servicios Extras'],
+  ['Popular para:', 'Popular para:'],
+
+  // Serviços page — H2s as questions
+  ['Quanto custa o churrasco na lancha?', '¿Cuánto cuesta el asado en la lancha?'],
+  ['O que inclui o open bar?', '¿Qué incluye el open bar?'],
+  ['Quais opções de decoração estão disponíveis?', '¿Qué opciones de decoración están disponibles?'],
+  ['Quais combos com desconto posso escolher?', '¿Qué combos con descuento puedo elegir?'],
+
+  // Roteiro pages — H2s as questions
+  ['O que esperar deste passeio?', '¿Qué esperar de este paseo?'],
+  ['Qual é o trajeto do passeio?', '¿Cuál es la ruta del paseo?'],
+  ['Quais lanchas estão disponíveis?', '¿Qué lanchas están disponibles?'],
+
+  // Áreas atendidas — new bairros section
+  ['Quais áreas são atendidas pela WeBoat?', '¿Qué áreas atiende WeBoat?'],
+  ['Como chegar à Marina da Glória?', '¿Cómo llegar a la Marina da Glória?'],
+  ['Bairros de Embarque e Proximidade', 'Barrios de Embarque y Proximidad'],
+  ['A Marina da Glória está estrategicamente localizada no coração do Rio de Janeiro.', 'La Marina da Glória está estratégicamente ubicada en el corazón de Río de Janeiro.'],
+  ['Confira o tempo estimado de carro até o ponto de embarque:', 'Vea el tiempo estimado en auto hasta el punto de embarque:'],
+  ['min de carro (via ponte)', 'min en auto (vía puente)'],
+  ['min de carro', 'min en auto'],
+
+  // Freshness dates
+  ['Última atualização: Fevereiro 2026', 'Última actualización: Febrero 2026'],
+
+  // Blog related articles
+  ['Artigos Relacionados', 'Artículos Relacionados'],
+  ['Ler artigo', 'Leer artículo'],
+
+  // FAQ new questions (áreas atendidas)
+  ['A Marina da Glória está estrategicamente localizada', 'La Marina da Glória está estratégicamente ubicada'],
+  ['no coração do Rio de Janeiro', 'en el corazón de Río de Janeiro'],
+  ['tempo estimado de carro', 'tiempo estimado en auto'],
+  ['ponto de embarque', 'punto de embarque'],
 ];
 
 // ═══════════════════════════════════════════════════════════

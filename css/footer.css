@@ -34,6 +34,17 @@
   }
 }
 
+@media (max-width: 768px) {
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-6);
+  }
+
+  .footer__col--brand {
+    grid-column: span 2;
+  }
+}
+
 @media (max-width: 640px) {
   .footer__grid {
     grid-template-columns: 1fr;

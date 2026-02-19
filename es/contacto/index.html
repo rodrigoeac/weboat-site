@@ -92,9 +92,11 @@
     "about": {
       "@type": "ContactPoint",
       "telephone": "+55-21-97772-4114",
+      "email": "contato@weboatbrasil.com.br",
       "contactType": "sales",
       "areaServed": "BR",
       "availableLanguage": "Portuguese",
+      "description": "Atendimento comercial das 8h a 20h. Suporte 24 horas disponible para clientes durante eventos e paseos.",
       "hoursAvailable": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
@@ -161,15 +163,13 @@
       "eventos náuticos",
       "turismo náutico Rio de Janeiro"
     ],
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": -22.9068,
-        "longitude": -43.1729
-      },
-      "geoRadius": "50000"
-    },
+    "areaServed": [
+      {"@type": "City", "name": "Rio de Janeiro", "sameAs": "https://www.wikidata.org/wiki/Q8678"},
+      {"@type": "City", "name": "Niterói"},
+      {"@type": "AdministrativeArea", "name": "Glória"},
+      {"@type": "AdministrativeArea", "name": "Copacabana"},
+      {"@type": "AdministrativeArea", "name": "Urca"}
+    ],
     "hasOfferCatalog": [
       {
         "@type": "OfferCatalog",

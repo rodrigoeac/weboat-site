@@ -441,6 +441,12 @@
   top: calc(72px + var(--space-6));
 }
 
+@media (max-width: 768px) {
+  .lancha-sticky {
+    position: static;
+  }
+}
+
 /* Quick Info Card */
 .lancha-quick {
   background: var(--white);
@@ -1463,7 +1469,7 @@
    ============================================ */
 @media (max-width: 1024px) {
   .proposta__layout {
-    grid-template-columns: 1fr 340px;
+    grid-template-columns: 1fr 320px;
   }
 }
 

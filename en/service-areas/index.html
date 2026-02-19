@@ -100,15 +100,13 @@
       "nautical events",
       "nautical tourism Rio de Janeiro"
     ],
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": -22.9068,
-        "longitude": -43.1729
-      },
-      "geoRadius": "50000"
-    },
+    "areaServed": [
+      {"@type": "City", "name": "Rio de Janeiro", "sameAs": "https://www.wikidata.org/wiki/Q8678"},
+      {"@type": "City", "name": "Niterói"},
+      {"@type": "AdministrativeArea", "name": "Glória"},
+      {"@type": "AdministrativeArea", "name": "Copacabana"},
+      {"@type": "AdministrativeArea", "name": "Urca"}
+    ],
     "hasOfferCatalog": [
       {
         "@type": "OfferCatalog",
@@ -132,7 +130,7 @@
       },
       {
         "@type": "OfferCatalog",
-        "name": "Services Extras",
+        "name": "Extra Services",
         "url": "https://www.weboatbrasil.com.br/servicos/",
         "numberOfItems": 13,
         "itemListElement": {
@@ -297,6 +295,14 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "Yes! Our routes can be customized. The Full Tour, for example, combines Urca, Copacabana and Ilhas Cagarras in a single 5-hour trip."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What areas does WeBoat cover?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A WeBoat atende toda a região metropolitana of Rio de Janeiro, com boarding na Marina da Gloria. Os bairros mais próximos incluem Glória (3 min), Flamengo (5 min), Botafogo (8 min), Urca (10 min), Centro (10 min), Copacabana (15 min), Ipanema (20 min), Leblon (25 min) e Niterói (30 min via ponte)."
         }
       }
     ]
@@ -498,6 +504,7 @@
     <!-- Areas Grid -->
     <section class="áreas-grid">
       <div class="container">
+        <h2 id="areas-atendidas">What areas does WeBoat cover?</h2>
 
         <!-- Area 1: Mureta da Urca -->
         <article class="area-card" id="mureta-da-urca">
@@ -913,6 +920,27 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <!-- Bairros de Embarque -->
+    <section class="lancha-section" id="bairros-embarque">
+      <div class="container">
+        <h3 class="lancha-section__title">Boarding Neighborhoods and Proximity</h3>
+        <div class="answer-capsule">
+          <p><strong>Marina da Gloria is strategically located in the heart of Rio de Janeiro.</strong> Check the estimated driving time to the boarding point:</p>
+        </div>
+        <ul class="areas-bairros-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; margin-top: 16px;">
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Glória</strong> — 3 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Flamengo</strong> — 5 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Botafogo</strong> — 8 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Urca</strong> — 10 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Centro</strong> — 10 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Copacabana</strong> — 15 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Ipanema</strong> — 20 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Leblon</strong> — 25 min by car</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Niterói</strong> — 30 min by car (via bridge)</li>
+        </ul>
       </div>
     </section>
 

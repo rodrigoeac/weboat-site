@@ -100,15 +100,13 @@
       "eventos náuticos",
       "turismo náutico Rio de Janeiro"
     ],
-    "areaServed": {
-      "@type": "GeoCircle",
-      "geoMidpoint": {
-        "@type": "GeoCoordinates",
-        "latitude": -22.9068,
-        "longitude": -43.1729
-      },
-      "geoRadius": "50000"
-    },
+    "areaServed": [
+      {"@type": "City", "name": "Rio de Janeiro", "sameAs": "https://www.wikidata.org/wiki/Q8678"},
+      {"@type": "City", "name": "Niterói"},
+      {"@type": "AdministrativeArea", "name": "Glória"},
+      {"@type": "AdministrativeArea", "name": "Copacabana"},
+      {"@type": "AdministrativeArea", "name": "Urca"}
+    ],
     "hasOfferCatalog": [
       {
         "@type": "OfferCatalog",
@@ -298,6 +296,14 @@
           "@type": "Answer",
           "text": "¡Sí! Nuestras rutas pueden personalizarse. El Tour Completo, por ejemplo, combina Urca, Copacabana e Ilhas Cagarras en un único paseo de 5 horas."
         }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué áreas atiende WeBoat?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A WeBoat atende toda a região metropolitana de Río de Janeiro, com embarque na Marina da Glória. Os bairros mais próximos incluem Glória (3 min), Flamengo (5 min), Botafogo (8 min), Urca (10 min), Centro (10 min), Copacabana (15 min), Ipanema (20 min), Leblon (25 min) e Niterói (30 min via ponte)."
+        }
       }
     ]
   }
@@ -481,6 +487,7 @@
     <!-- Areas Grid -->
     <section class="áreas-grid">
       <div class="container">
+        <h2 id="areas-atendidas">¿Qué áreas atiende WeBoat?</h2>
 
         <!-- Area 1: Mureta da Urca -->
         <article class="area-card" id="mureta-da-urca">
@@ -896,6 +903,27 @@
           </div>
         </article>
 
+      </div>
+    </section>
+
+    <!-- Bairros de Embarque -->
+    <section class="lancha-section" id="bairros-embarque">
+      <div class="container">
+        <h3 class="lancha-section__title">Barrios de Embarque y Proximidad</h3>
+        <div class="answer-capsule">
+          <p><strong>La Marina da Glória está estrhastagicamente ubicada en el corazón de Río de Janeiro.</strong> Vea el tiempo estimado en auto hasta el punto de embarque:</p>
+        </div>
+        <ul class="areas-bairros-list" style="list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 12px; margin-top: 16px;">
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Glória</strong> — 3 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Flamengo</strong> — 5 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Botafogo</strong> — 8 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Urca</strong> — 10 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Centro</strong> — 10 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Copacabana</strong> — 15 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Ipanema</strong> — 20 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Leblon</strong> — 25 min en auto</li>
+          <li style="display: flex; align-items: center; gap: 8px; padding: 12px; background: var(--pearl-gray); border-radius: 8px;"><strong>Niterói</strong> — 30 min en auto (vía puente)</li>
+        </ul>
       </div>
     </section>
 

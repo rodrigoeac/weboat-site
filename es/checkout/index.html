@@ -1,4 +1,4 @@
-<!-- i18n: translated from PT version 2026-02-16 -->
+<!-- i18n: translated from PT version 2026-02-15 -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -44,7 +44,7 @@
       <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
     </a>
     <div class="checkout-lang" id="checkout-lang">
-      <a href="/checkout/" class="checkout-lang__option">
+      <a href="/es/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1E7;&#x1F1F7;</span>
         <span>PT</span>
       </a>
@@ -52,7 +52,7 @@
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1FA;&#x1F1F8;</span>
         <span>EN</span>
       </a>
-      <a href="/es/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
+      <a href="/es/checkout/" class="checkout-lang__option">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1EA;&#x1F1F8;</span>
         <span>ES</span>
       </a>
@@ -85,7 +85,7 @@
       <p>Cargando tu propuesta...</p>
     </div>
 
-    <!-- Error state -->
+    <!-- Errorr state -->
     <div id="checkout-error" class="checkout-error" role="alert" aria-live="assertive" style="display:none">
       <div class="checkout-error__icon">
         <i class="ph ph-warning-circle" aria-hidden="true"></i>
@@ -98,7 +98,7 @@
     </div>
 
     <!-- ═══════════════════════════════════════
-         STEP 1: Resumen + Formulario
+         STEP 1: Resumo + Formulário
          ═══════════════════════════════════════ -->
     <div class="checkout-panel" data-step="1" style="display:none">
 
@@ -162,15 +162,15 @@
           </div>
 
           <div class="form-group" id="passport-group" style="display:none">
-            <label class="form-label" for="customer-passaporte">Número de pasaporte</label>
+            <label class="form-label" for="customer-passaporte">Passport number</label>
             <input class="form-input" type="text" id="customer-passaporte" name="passaporte" autocomplete="off" aria-describedby="customer-passaporte-error">
             <span class="form-error" id="customer-passaporte-error"></span>
           </div>
 
           <div class="form-group">
-            <label class="form-label" for="customer-phone">Teléfono</label>
+            <label class="form-label" for="customer-phone">Teléfono / Phone</label>
             <div class="phone-input-group">
-              <select id="phone-country" class="phone-country-select" aria-label="Código de país">
+              <select id="phone-country" class="phone-country-select" aria-label="Código do país">
                 <option value="+55" selected>+55</option>
                 <option value="+1">+1</option>
                 <option value="+44">+44</option>
@@ -205,7 +205,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg" style="width:100%">
-            Continuar al Pago
+            Continuar para Pago
           </button>
         </form>
       </div>
@@ -229,7 +229,7 @@
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PIX</div>
-                <div class="payment-method__desc">Pago instantáneo vía QR code</div>
+                <div class="payment-method__desc">Pago instantâneo via QR code</div>
               </div>
             </div>
 
@@ -237,7 +237,7 @@
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Tarjeta de Crédito</div>
-                <div class="payment-method__desc">Pago seguro vía InfinitePay</div>
+                <div class="payment-method__desc">Pago seguro via InfinitePay</div>
               </div>
             </div>
 
@@ -245,7 +245,7 @@
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">PayPal</div>
-                <div class="payment-method__desc">Paga con tarjeta o PayPal — sin cuenta necesaria</div>
+                <div class="payment-method__desc">Pay with card or PayPal — no account needed</div>
               </div>
             </div>
 
@@ -253,7 +253,7 @@
               <div class="payment-method__radio"></div>
               <div class="payment-method__info">
                 <div class="payment-method__name">Zelle</div>
-                <div class="payment-method__desc">Transferencia bancaria US — confirmación en 24h</div>
+                <div class="payment-method__desc">US bank transfer — confirmation within 24h</div>
               </div>
             </div>
           </div>
@@ -305,7 +305,7 @@
         </div>
 
         <button type="button" class="checkout-back-btn" data-back-to="1">
-          <i class="ph ph-arrow-left" aria-hidden="true"></i> Volver a Datos
+          <i class="ph ph-arrow-left" aria-hidden="true"></i> Voltar para Datos
         </button>
       </div>
     </div>

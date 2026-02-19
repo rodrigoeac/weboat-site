@@ -613,6 +613,7 @@
 .clientes__carousel {
   overflow: hidden;
   margin-bottom: var(--space-6);
+  max-width: 100%;
 }
 
 .clientes__track {
