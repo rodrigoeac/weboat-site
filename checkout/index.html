@@ -320,17 +320,59 @@
           </div>
           <h2 class="confirmation__title">Reserva Confirmada!</h2>
           <p class="confirmation__subtitle">
-            Enviamos a confirmação para <strong id="confirmation-email"></strong>
+            Enviamos a confirmacao para <strong id="confirmation-email"></strong>
           </p>
+        </div>
 
-          <div class="confirmation__actions">
-            <a href="https://wa.me/5521977724114?text=Olá! Minha reserva foi confirmada e gostaria de mais informações sobre o embarque." class="btn btn-whatsapp" target="_blank" rel="noopener">
-              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Falar no WhatsApp
-            </a>
-            <a href="/" class="btn btn-secondary">
-              Voltar ao Site
-            </a>
+        <!-- Resumo da reserva -->
+        <div id="confirmation-summary" style="text-align:left; margin-top:var(--space-4);">
+          <div class="proposal-summary" style="margin-bottom:var(--space-4);">
+            <div class="proposal-summary__row"><span>Lancha</span><strong id="conf-boat"></strong></div>
+            <div class="proposal-summary__row"><span>Roteiro</span><strong id="conf-route"></strong></div>
+            <div class="proposal-summary__row"><span>Data</span><strong id="conf-date"></strong></div>
+            <div class="proposal-summary__row"><span>Turno</span><strong id="conf-time"></strong></div>
+            <div class="proposal-summary__row"><span>Pessoas</span><strong id="conf-people"></strong></div>
           </div>
+          <div class="proposal-breakdown" id="conf-breakdown"></div>
+        </div>
+
+        <!-- Ponto de Encontro -->
+        <div id="conf-meeting-point" style="text-align:left; background:var(--sand); border-radius:var(--radius-lg); padding:var(--space-4); margin-top:var(--space-4);">
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Local de Embarque</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin:0 0 var(--space-3); line-height:1.5;">Marina da Gloria — Av. Infante Dom Henrique, S/N, Loja 06, Gloria, Rio de Janeiro - RJ</p>
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Ponto de Encontro</h3>
+          <ol style="font-size:var(--text-body-sm); color:var(--charcoal); margin:0; padding-left:var(--space-4); line-height:1.8;">
+            <li>Ao chegar no estacionamento, desca as escadas de acesso.</li>
+            <li>A esquerda das escadas, localize a <strong>cabine de seguranca</strong> na entrada do Pier.</li>
+            <li>Aguarde o comandante — ele estara com <strong>uniforme da empresa</strong>.</li>
+            <li>O comandante auxiliara no seu embarque.</li>
+          </ol>
+          <a href="https://weboatbrasil.com.br/ponto-de-encontro" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; margin-top:var(--space-3); text-align:center;">
+            Assista ao video de como chegar
+          </a>
+          <p style="font-size:var(--text-body-sm); color:var(--ocean-deep); font-weight:600; margin:var(--space-3) 0 0; text-align:center;">Chegue 15 minutos antes do horario do passeio.</p>
+        </div>
+
+        <!-- O que trazer -->
+        <div style="text-align:left; margin-top:var(--space-4);">
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">O que trazer</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--charcoal); line-height:1.8; margin:0;">
+            Protetor solar (de preferencia biodegradavel)<br>
+            Roupa de banho + troca de roupa<br>
+            Toalha<br>
+            Documento com foto<br>
+            Remedio para enjoo (se necessario)
+          </p>
+        </div>
+
+        <!-- Acoes -->
+        <div class="confirmation__actions" style="margin-top:var(--space-6);">
+          <button id="conf-save-btn" class="btn btn-primary" style="width:100%;">
+            <i class="ph ph-download-simple" aria-hidden="true"></i> Salvar Reserva
+          </button>
+          <a href="https://wa.me/5521977724114?text=Ola! Minha reserva foi confirmada e gostaria de mais informacoes." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Falar no WhatsApp
+          </a>
         </div>
       </div>
     </div>

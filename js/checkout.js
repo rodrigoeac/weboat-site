@@ -585,11 +585,131 @@
     }
 
     // ── Step 3: Confirmation ──
+    var ROTEIRO_NOMES = {
+        R1: 'Roteiro 1 — Mureta da Urca',
+        R2: 'Roteiro 2 — Mureta da Urca + Praia Vermelha',
+        R3: 'Roteiro 3 — Mureta + Praia Vermelha + Copacabana',
+        R4: 'Roteiro 4 — Mureta + Praia Vermelha + Copa + Ilhas Cagarras',
+        R5: 'Roteiro 5 — Camboinhas + Praia da Itaipu'
+    };
+
     function renderConfirmation(data) {
         var emailEl = document.getElementById('confirmation-email');
         if (emailEl && data.customer && data.customer.email) {
             emailEl.textContent = data.customer.email;
         }
+
+        if (!data.passeio || !data.preco) return;
+
+        var p = data.passeio;
+        var pr = data.preco;
+        var turnoLabel = p.turno === 'manha' ? 'Manha' : 'Tarde';
+        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : 'A confirmar';
+
+        setText('conf-boat', data.lancha.nome);
+        setText('conf-route', ROTEIRO_NOMES[p.roteiro] || p.roteiroNome || p.roteiro);
+        setText('conf-date', dataLabel + (p.horario ? ' | ' + p.horario : ''));
+        setText('conf-time', turnoLabel + ' (' + (p.duracaoHoras || 5) + 'h)');
+        setText('conf-people', p.numPessoas);
+
+        // Valores
+        var breakdown = document.getElementById('conf-breakdown');
+        if (breakdown) {
+            while (breakdown.firstChild) breakdown.removeChild(breakdown.firstChild);
+
+            addBreakdownItem(breakdown, 'Passeio (' + (p.duracaoHoras || 5) + 'h)', pr.precoBase);
+            if (pr.adicionalTurno > 0) addBreakdownItem(breakdown, 'Adicional turno', pr.adicionalTurno);
+            if (pr.valorHoraExtra > 0) addBreakdownItem(breakdown, 'Hora extra (' + pr.horasExtras + 'h)', pr.valorHoraExtra);
+            if (pr.valorPessoaExtra > 0) addBreakdownItem(breakdown, 'Pessoa extra', pr.valorPessoaExtra);
+            if (pr.valorAC > 0) addBreakdownItem(breakdown, 'Ar condicionado', pr.valorAC);
+            if (pr.valorChurrasqueira > 0) addBreakdownItem(breakdown, 'Churrasqueira', pr.valorChurrasqueira);
+            if (pr.valorGuardaVidas > 0) addBreakdownItem(breakdown, 'Guarda-vidas', pr.valorGuardaVidas);
+
+            if (pr.servicos && pr.servicos.length > 0) {
+                pr.servicos.forEach(function(s) {
+                    addBreakdownItem(breakdown, s.nome, s.subtotal);
+                });
+            }
+
+            // Desconto
+            var subtotalSemDesconto = pr.precoBase + (pr.totalServicos || 0) + (pr.adicionalTurno || 0) + (pr.valorHoraExtra || 0) + (pr.valorPessoaExtra || 0) + (pr.valorAC || 0) + (pr.valorChurrasqueira || 0) + (pr.valorGuardaVidas || 0);
+            var desconto = subtotalSemDesconto - pr.valorTotal;
+            if (desconto > 0) {
+                var descontoDiv = document.createElement('div');
+                descontoDiv.className = 'proposal-breakdown__item';
+                descontoDiv.style.color = 'var(--success)';
+                var dl = document.createElement('span'); dl.textContent = 'Desconto';
+                var dv = document.createElement('span'); dv.textContent = '- R$ ' + formatCurrency(desconto);
+                descontoDiv.appendChild(dl); descontoDiv.appendChild(dv);
+                breakdown.appendChild(descontoDiv);
+            }
+
+            addBreakdownItem(breakdown, 'Total', pr.valorTotal, true);
+            addBreakdownItem(breakdown, 'Valor pago', pr.valorEntrada, false, true);
+            if (pr.valorRestante > 0) {
+                addBreakdownItem(breakdown, 'Restante (no dia)', pr.valorRestante);
+            }
+        }
+
+        // Salvar reserva
+        var saveBtn = document.getElementById('conf-save-btn');
+        if (saveBtn) {
+            saveBtn.addEventListener('click', function() {
+                saveReservation(data);
+            });
+        }
+    }
+
+    function saveReservation(data) {
+        var p = data.passeio;
+        var pr = data.preco;
+        var turnoLabel = p.turno === 'manha' ? 'Manha' : 'Tarde';
+        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : 'A confirmar';
+        var roteiro = ROTEIRO_NOMES[p.roteiro] || p.roteiroNome || p.roteiro;
+
+        var text = 'RESERVA CONFIRMADA — WeBoat Brasil\n';
+        text += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n';
+        text += 'Lancha: ' + data.lancha.nome + '\n';
+        text += 'Roteiro: ' + roteiro + '\n';
+        text += 'Data: ' + dataLabel + '\n';
+        text += 'Turno: ' + turnoLabel + (p.horario ? ' (' + p.horario + ')' : '') + '\n';
+        text += 'Duracao: ' + (p.duracaoHoras || 5) + 'h\n';
+        text += 'Pessoas: ' + p.numPessoas + '\n\n';
+        text += 'VALORES\n';
+        text += 'Passeio: R$ ' + formatCurrency(pr.precoBase) + '\n';
+        if (pr.servicos && pr.servicos.length > 0) {
+            pr.servicos.forEach(function(s) {
+                text += s.nome + ': R$ ' + formatCurrency(s.subtotal) + '\n';
+            });
+        }
+        text += 'Total: R$ ' + formatCurrency(pr.valorTotal) + '\n';
+        text += 'Valor pago: R$ ' + formatCurrency(pr.valorEntrada) + '\n';
+        if (pr.valorRestante > 0) {
+            text += 'Restante (no dia): R$ ' + formatCurrency(pr.valorRestante) + '\n';
+        }
+        text += '\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
+        text += 'LOCAL DE EMBARQUE\n';
+        text += 'Marina da Gloria\n';
+        text += 'Av. Infante Dom Henrique, S/N, Loja 06\n';
+        text += 'Gloria, Rio de Janeiro - RJ\n\n';
+        text += 'PONTO DE ENCONTRO\n';
+        text += '1. Desca as escadas de acesso do estacionamento.\n';
+        text += '2. Localize a cabine de seguranca a esquerda das escadas.\n';
+        text += '3. Aguarde o comandante com uniforme da empresa.\n';
+        text += '4. O comandante auxiliara no embarque.\n\n';
+        text += 'Chegue 15 minutos antes do horario.\n\n';
+        text += 'WeBoat Brasil — (21) 97772-4114\n';
+        text += 'weboatbrasil.com.br\n';
+
+        var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+        var url = URL.createObjectURL(blob);
+        var a = document.createElement('a');
+        a.href = url;
+        a.download = 'reserva-weboat-' + (p.dataPasseio || 'confirmada') + '.txt';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
     }
 
     // ── Navigation ──

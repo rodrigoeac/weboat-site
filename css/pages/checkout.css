@@ -669,6 +669,24 @@
   margin: 0 auto;
 }
 
+.proposal-summary__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--border-light);
+  font-size: var(--text-body-sm);
+}
+
+.proposal-summary__row span {
+  color: var(--driftwood);
+}
+
+.proposal-summary__row strong {
+  color: var(--ocean-deep);
+  text-align: right;
+}
+
 /* ── Estados: loading, erro, expirado ── */
 .checkout-loading {
   text-align: center;
