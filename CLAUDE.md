@@ -672,7 +672,7 @@ COMMIT: "chore: SEO e finalização"
 - [ ] **Google Analytics 4 (GA4)** — configurar via GTM
 - [ ] **Meta Pixel (Facebook/Instagram)** — configurar via GTM
 - [ ] **Microsoft Clarity** — opcional, heatmaps e session recordings
-- [ ] **Google Search Console** — verificar novo domínio no Cloudflare (TXT já migrado)
+- [x] **Google Search Console** — API configurada via gcloud (projeto `fresh-iridium-437618-c0`)
 - [ ] **DKIM** — configurar no Google Workspace para melhorar entregabilidade de email
 - [ ] **DMARC** — adicionar TXT record `_dmarc` com política de rejeição
 
@@ -688,6 +688,23 @@ rsync -a --no-owner --no-group --chmod=u+rw \
 # Deploy para Cloudflare Pages
 cd /tmp/weboat-deploy
 npx wrangler pages deploy . --project-name weboat-site --branch main --commit-dirty=true
+```
+
+### Pós-Deploy: Notificar Search Engines
+```bash
+# IndexNow (Bing, Yandex) — aceita múltiplas URLs
+node scripts/indexnow.js https://www.weboatbrasil.com.br/sitemap.xml
+node scripts/indexnow.js https://www.weboatbrasil.com.br/ https://www.weboatbrasil.com.br/lanchas/ ...
+
+# Google Search Console — submeter sitemap via API
+ACCESS_TOKEN=$(gcloud auth application-default print-access-token) && curl -s -X PUT \
+  "https://searchconsole.googleapis.com/webmasters/v3/sites/https%3A%2F%2Fwww.weboatbrasil.com.br%2F/sitemaps/https%3A%2F%2Fwww.weboatbrasil.com.br%2Fsitemap.xml" \
+  -H "Authorization: Bearer $ACCESS_TOKEN" \
+  -H "x-goog-user-project: fresh-iridium-437618-c0"
+# Sucesso = HTTP 204 (sem body)
+
+# Se token expirado, re-autenticar:
+gcloud auth application-default login --scopes="https://www.googleapis.com/auth/cloud-platform,https://www.googleapis.com/auth/webmasters"
 ```
 
 ---
