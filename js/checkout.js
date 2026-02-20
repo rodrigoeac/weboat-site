@@ -50,6 +50,9 @@
             return;
         }
 
+        // Preserve token in language selector links
+        updateLangLinks();
+
         bindEvents();
         loadCheckout();
         fetchUsdRate();
@@ -603,8 +606,8 @@
 
         var p = data.passeio;
         var pr = data.preco;
-        var turnoLabel = p.turno === 'manha' ? 'Manha' : 'Tarde';
-        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : 'A confirmar';
+        var turnoLabel = p.turno === 'manha' ? t('checkoutMorning', 'Manha') : t('checkoutAfternoon', 'Tarde');
+        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : t('checkoutToConfirm', 'A confirmar');
 
         setText('conf-boat', data.lancha.nome);
         setText('conf-route', ROTEIRO_NOMES[p.roteiro] || p.roteiroNome || p.roteiro);
@@ -617,13 +620,13 @@
         if (breakdown) {
             while (breakdown.firstChild) breakdown.removeChild(breakdown.firstChild);
 
-            addBreakdownItem(breakdown, 'Passeio (' + (p.duracaoHoras || 5) + 'h)', pr.precoBase);
-            if (pr.adicionalTurno > 0) addBreakdownItem(breakdown, 'Adicional turno', pr.adicionalTurno);
-            if (pr.valorHoraExtra > 0) addBreakdownItem(breakdown, 'Hora extra (' + pr.horasExtras + 'h)', pr.valorHoraExtra);
-            if (pr.valorPessoaExtra > 0) addBreakdownItem(breakdown, 'Pessoa extra', pr.valorPessoaExtra);
-            if (pr.valorAC > 0) addBreakdownItem(breakdown, 'Ar condicionado', pr.valorAC);
-            if (pr.valorChurrasqueira > 0) addBreakdownItem(breakdown, 'Churrasqueira', pr.valorChurrasqueira);
-            if (pr.valorGuardaVidas > 0) addBreakdownItem(breakdown, 'Guarda-vidas', pr.valorGuardaVidas);
+            addBreakdownItem(breakdown, t('checkoutTrip', 'Passeio') + ' (' + (p.duracaoHoras || 5) + 'h)', pr.precoBase);
+            if (pr.adicionalTurno > 0) addBreakdownItem(breakdown, t('checkoutSurcharge', 'Adicional turno'), pr.adicionalTurno);
+            if (pr.valorHoraExtra > 0) addBreakdownItem(breakdown, t('checkoutExtraHour', 'Hora extra') + ' (' + pr.horasExtras + 'h)', pr.valorHoraExtra);
+            if (pr.valorPessoaExtra > 0) addBreakdownItem(breakdown, t('checkoutExtraPerson', 'Pessoa extra'), pr.valorPessoaExtra);
+            if (pr.valorAC > 0) addBreakdownItem(breakdown, t('checkoutAC', 'Ar condicionado'), pr.valorAC);
+            if (pr.valorChurrasqueira > 0) addBreakdownItem(breakdown, t('checkoutBBQ', 'Churrasqueira'), pr.valorChurrasqueira);
+            if (pr.valorGuardaVidas > 0) addBreakdownItem(breakdown, t('checkoutLifeguard', 'Guarda-vidas'), pr.valorGuardaVidas);
 
             if (pr.servicos && pr.servicos.length > 0) {
                 pr.servicos.forEach(function(s) {
@@ -638,74 +641,304 @@
                 var descontoDiv = document.createElement('div');
                 descontoDiv.className = 'proposal-breakdown__item';
                 descontoDiv.style.color = 'var(--success)';
-                var dl = document.createElement('span'); dl.textContent = 'Desconto';
+                var dl = document.createElement('span'); dl.textContent = t('checkoutDiscount', 'Desconto');
                 var dv = document.createElement('span'); dv.textContent = '- R$ ' + formatCurrency(desconto);
                 descontoDiv.appendChild(dl); descontoDiv.appendChild(dv);
                 breakdown.appendChild(descontoDiv);
             }
 
-            addBreakdownItem(breakdown, 'Total', pr.valorTotal, true);
-            addBreakdownItem(breakdown, 'Valor pago', pr.valorEntrada, false, true);
+            addBreakdownItem(breakdown, t('checkoutTotal', 'Total'), pr.valorTotal, true);
+            addBreakdownItem(breakdown, t('checkoutPaid', 'Valor pago'), pr.valorEntrada, false, true);
             if (pr.valorRestante > 0) {
-                addBreakdownItem(breakdown, 'Restante (no dia)', pr.valorRestante);
+                addBreakdownItem(breakdown, t('checkoutRemaining', 'Restante (no dia)'), pr.valorRestante);
             }
         }
 
-        // Salvar reserva
+        // Save PDF button
         var saveBtn = document.getElementById('conf-save-btn');
         if (saveBtn) {
             saveBtn.addEventListener('click', function() {
-                saveReservation(data);
+                savePDF(data);
+            });
+        }
+
+        // Calendar button
+        var calBtn = document.getElementById('conf-calendar-btn');
+        if (calBtn) {
+            calBtn.addEventListener('click', function() {
+                downloadICS(data);
             });
         }
     }
 
-    function saveReservation(data) {
+    // ── PDF generation (jsPDF loaded dynamically) ──
+    function savePDF(data) {
         var p = data.passeio;
         var pr = data.preco;
-        var turnoLabel = p.turno === 'manha' ? 'Manha' : 'Tarde';
-        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : 'A confirmar';
+        var turnoLabel = p.turno === 'manha' ? t('checkoutMorning', 'Manha') : t('checkoutAfternoon', 'Tarde');
+        var dataLabel = p.dataPasseio ? formatDate(p.dataPasseio) : t('checkoutToConfirm', 'A confirmar');
         var roteiro = ROTEIRO_NOMES[p.roteiro] || p.roteiroNome || p.roteiro;
 
-        var text = 'RESERVA CONFIRMADA — WeBoat Brasil\n';
-        text += '━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n\n';
+        // Load jsPDF dynamically
+        if (window.jspdf) {
+            generatePDF(data, p, pr, turnoLabel, dataLabel, roteiro);
+        } else {
+            var script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+            script.onload = function() {
+                generatePDF(data, p, pr, turnoLabel, dataLabel, roteiro);
+            };
+            script.onerror = function() {
+                // Fallback: share or copy text
+                fallbackSaveText(data, p, pr, turnoLabel, dataLabel, roteiro);
+            };
+            document.head.appendChild(script);
+        }
+    }
+
+    function generatePDF(data, p, pr, turnoLabel, dataLabel, roteiro) {
+        var jsPDF = window.jspdf.jsPDF;
+        var doc = new jsPDF({ unit: 'mm', format: 'a4' });
+        var w = doc.internal.pageSize.getWidth();
+        var margin = 20;
+        var y = 20;
+        var col2 = w - margin;
+
+        // Header bar
+        doc.setFillColor(30, 58, 95); // ocean-deep
+        doc.rect(0, 0, w, 35, 'F');
+        doc.setTextColor(255, 255, 255);
+        doc.setFontSize(20);
+        doc.setFont('helvetica', 'bold');
+        doc.text('WeBoat Brasil', margin, 18);
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.text(t('checkoutTrip', 'Passeio') + ' — ' + roteiro, margin, 28);
+
+        // Reset colors
+        y = 48;
+        doc.setTextColor(55, 65, 81); // charcoal
+
+        // Reservation details
+        doc.setFontSize(13);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(30, 58, 95);
+        doc.text(t('checkoutTotal', 'Reserva').toUpperCase(), margin, y);
+        y += 8;
+
+        doc.setFontSize(10);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(55, 65, 81);
+
+        var details = [
+            ['Lancha', data.lancha.nome],
+            [t('checkoutTrip', 'Roteiro'), roteiro],
+            ['Data', dataLabel],
+            ['Turno', turnoLabel + ' (' + (p.duracaoHoras || 5) + 'h)'],
+            [t('checkoutPeople', 'Pessoas'), String(p.numPessoas)]
+        ];
+
+        details.forEach(function(row) {
+            doc.setFont('helvetica', 'bold');
+            doc.text(row[0] + ':', margin, y);
+            doc.setFont('helvetica', 'normal');
+            doc.text(row[1], margin + 35, y);
+            y += 6;
+        });
+
+        // Separator
+        y += 4;
+        doc.setDrawColor(212, 168, 83); // sunset-gold
+        doc.setLineWidth(0.5);
+        doc.line(margin, y, col2, y);
+        y += 8;
+
+        // Values
+        doc.setFontSize(13);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(30, 58, 95);
+        doc.text('VALORES', margin, y);
+        y += 8;
+
+        doc.setFontSize(10);
+        doc.setTextColor(55, 65, 81);
+
+        function addLine(label, value, bold) {
+            doc.setFont('helvetica', bold ? 'bold' : 'normal');
+            doc.text(label, margin, y);
+            doc.text('R$ ' + formatCurrency(value), col2, y, { align: 'right' });
+            y += 6;
+        }
+
+        addLine(t('checkoutTrip', 'Passeio'), pr.precoBase);
+        if (pr.adicionalTurno > 0) addLine(t('checkoutSurcharge', 'Adicional turno'), pr.adicionalTurno);
+        if (pr.valorHoraExtra > 0) addLine(t('checkoutExtraHour', 'Hora extra') + ' (' + pr.horasExtras + 'h)', pr.valorHoraExtra);
+        if (pr.valorPessoaExtra > 0) addLine(t('checkoutExtraPerson', 'Pessoa extra'), pr.valorPessoaExtra);
+        if (pr.valorAC > 0) addLine(t('checkoutAC', 'Ar condicionado'), pr.valorAC);
+        if (pr.valorChurrasqueira > 0) addLine(t('checkoutBBQ', 'Churrasqueira'), pr.valorChurrasqueira);
+        if (pr.valorGuardaVidas > 0) addLine(t('checkoutLifeguard', 'Guarda-vidas'), pr.valorGuardaVidas);
+        if (pr.servicos && pr.servicos.length > 0) {
+            pr.servicos.forEach(function(s) { addLine(s.nome, s.subtotal); });
+        }
+
+        var subtotalSemDesconto = pr.precoBase + (pr.totalServicos || 0) + (pr.adicionalTurno || 0) + (pr.valorHoraExtra || 0) + (pr.valorPessoaExtra || 0) + (pr.valorAC || 0) + (pr.valorChurrasqueira || 0) + (pr.valorGuardaVidas || 0);
+        var desconto = subtotalSemDesconto - pr.valorTotal;
+        if (desconto > 0) {
+            doc.setTextColor(5, 150, 105); // success
+            addLine(t('checkoutDiscount', 'Desconto'), desconto);
+            doc.setTextColor(55, 65, 81);
+        }
+
+        y += 2;
+        doc.setDrawColor(200, 200, 200);
+        doc.line(margin, y, col2, y);
+        y += 6;
+
+        doc.setFont('helvetica', 'bold');
+        doc.setFontSize(12);
+        doc.text(t('checkoutTotal', 'Total'), margin, y);
+        doc.text('R$ ' + formatCurrency(pr.valorTotal), col2, y, { align: 'right' });
+        y += 7;
+
+        doc.setFontSize(10);
+        doc.setTextColor(30, 58, 95);
+        addLine(t('checkoutPaid', 'Valor pago'), pr.valorEntrada, true);
+        doc.setTextColor(55, 65, 81);
+        if (pr.valorRestante > 0) {
+            addLine(t('checkoutRemaining', 'Restante (no dia)'), pr.valorRestante);
+        }
+
+        // Separator
+        y += 4;
+        doc.setDrawColor(212, 168, 83);
+        doc.line(margin, y, col2, y);
+        y += 8;
+
+        // Meeting point
+        doc.setFontSize(11);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(30, 58, 95);
+        doc.text('LOCAL DE EMBARQUE', margin, y);
+        y += 6;
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(107, 114, 128); // driftwood
+        doc.text('Marina da Gloria — Av. Infante Dom Henrique, S/N, Loja 06', margin, y);
+        y += 5;
+        doc.text('Gloria, Rio de Janeiro - RJ', margin, y);
+        y += 8;
+
+        doc.setFontSize(11);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(30, 58, 95);
+        doc.text('PONTO DE ENCONTRO', margin, y);
+        y += 6;
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(55, 65, 81);
+        var steps = [
+            '1. Desca as escadas de acesso do estacionamento.',
+            '2. Localize a cabine de seguranca a esquerda das escadas.',
+            '3. Aguarde o comandante com uniforme da empresa.',
+            '4. O comandante auxiliara no embarque.'
+        ];
+        steps.forEach(function(s) { doc.text(s, margin, y); y += 5; });
+        y += 3;
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(30, 58, 95);
+        doc.text('Chegue 15 minutos antes do horario do passeio.', margin, y);
+
+        // Footer
+        y = doc.internal.pageSize.getHeight() - 15;
+        doc.setDrawColor(200, 200, 200);
+        doc.line(margin, y - 5, col2, y - 5);
+        doc.setFontSize(8);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(107, 114, 128);
+        doc.text('WeBoat Brasil — (21) 97772-4114 — weboatbrasil.com.br', w / 2, y, { align: 'center' });
+
+        doc.save('reserva-weboat-' + (p.dataPasseio || 'confirmada') + '.pdf');
+    }
+
+    function fallbackSaveText(data, p, pr, turnoLabel, dataLabel, roteiro) {
+        var text = 'RESERVA CONFIRMADA — WeBoat Brasil\n\n';
         text += 'Lancha: ' + data.lancha.nome + '\n';
         text += 'Roteiro: ' + roteiro + '\n';
         text += 'Data: ' + dataLabel + '\n';
-        text += 'Turno: ' + turnoLabel + (p.horario ? ' (' + p.horario + ')' : '') + '\n';
-        text += 'Duracao: ' + (p.duracaoHoras || 5) + 'h\n';
-        text += 'Pessoas: ' + p.numPessoas + '\n\n';
-        text += 'VALORES\n';
-        text += 'Passeio: R$ ' + formatCurrency(pr.precoBase) + '\n';
-        if (pr.servicos && pr.servicos.length > 0) {
-            pr.servicos.forEach(function(s) {
-                text += s.nome + ': R$ ' + formatCurrency(s.subtotal) + '\n';
+        text += 'Turno: ' + turnoLabel + '\n';
+        text += 'Pessoas: ' + p.numPessoas + '\n';
+        text += 'Total: R$ ' + formatCurrency(pr.valorTotal) + '\n';
+        text += 'Pago: R$ ' + formatCurrency(pr.valorEntrada) + '\n\n';
+        text += 'Marina da Gloria — (21) 97772-4114\n';
+
+        if (navigator.share) {
+            navigator.share({ title: 'Reserva WeBoat', text: text }).catch(function() {});
+        } else {
+            navigator.clipboard.writeText(text).then(function() {
+                alert(t('checkoutCopied', 'Copiado!'));
             });
         }
-        text += 'Total: R$ ' + formatCurrency(pr.valorTotal) + '\n';
-        text += 'Valor pago: R$ ' + formatCurrency(pr.valorEntrada) + '\n';
-        if (pr.valorRestante > 0) {
-            text += 'Restante (no dia): R$ ' + formatCurrency(pr.valorRestante) + '\n';
-        }
-        text += '\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n';
-        text += 'LOCAL DE EMBARQUE\n';
-        text += 'Marina da Gloria\n';
-        text += 'Av. Infante Dom Henrique, S/N, Loja 06\n';
-        text += 'Gloria, Rio de Janeiro - RJ\n\n';
-        text += 'PONTO DE ENCONTRO\n';
-        text += '1. Desca as escadas de acesso do estacionamento.\n';
-        text += '2. Localize a cabine de seguranca a esquerda das escadas.\n';
-        text += '3. Aguarde o comandante com uniforme da empresa.\n';
-        text += '4. O comandante auxiliara no embarque.\n\n';
-        text += 'Chegue 15 minutos antes do horario.\n\n';
-        text += 'WeBoat Brasil — (21) 97772-4114\n';
-        text += 'weboatbrasil.com.br\n';
+    }
 
-        var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    // ── Calendar (.ics) generation ──
+    function downloadICS(data) {
+        var p = data.passeio;
+        if (!p.dataPasseio) return;
+
+        var roteiro = ROTEIRO_NOMES[p.roteiro] || p.roteiroNome || p.roteiro;
+        var turnoLabel = p.turno === 'manha' ? t('checkoutMorning', 'Manha') : t('checkoutAfternoon', 'Tarde');
+
+        // Parse date + time
+        var parts = p.dataPasseio.split('-');
+        var year = parts[0], month = parts[1], day = parts[2];
+        var startHour = '09', startMin = '00';
+        if (p.horario) {
+            var hm = p.horario.match(/(\d{1,2}):(\d{2})/);
+            if (hm) { startHour = hm[1].padStart(2, '0'); startMin = hm[2]; }
+        } else if (p.turno === 'tarde') {
+            startHour = '14'; startMin = '30';
+        }
+
+        var dur = p.duracaoHoras || 5;
+        var endHour = String(parseInt(startHour, 10) + dur).padStart(2, '0');
+
+        var dtStart = year + month + day + 'T' + startHour + startMin + '00';
+        var dtEnd = year + month + day + 'T' + endHour + startMin + '00';
+        var now = new Date();
+        var stamp = now.getFullYear() +
+            String(now.getMonth() + 1).padStart(2, '0') +
+            String(now.getDate()).padStart(2, '0') + 'T' +
+            String(now.getHours()).padStart(2, '0') +
+            String(now.getMinutes()).padStart(2, '0') +
+            String(now.getSeconds()).padStart(2, '0');
+
+        var desc = data.lancha.nome + ' | ' + roteiro + ' | ' + p.numPessoas + ' ' + t('checkoutPeople', 'pessoas') + '\\nR$ ' + formatCurrency(data.preco.valorTotal) + '\\n\\nChegue 15 min antes.\\nWeBoat Brasil (21) 97772-4114';
+
+        var ics = 'BEGIN:VCALENDAR\r\n' +
+            'VERSION:2.0\r\n' +
+            'PRODID:-//WeBoat Brasil//Checkout//PT\r\n' +
+            'BEGIN:VEVENT\r\n' +
+            'UID:weboat-' + (currentToken || Date.now()) + '@weboatbrasil.com.br\r\n' +
+            'DTSTAMP:' + stamp + '\r\n' +
+            'DTSTART;TZID=America/Sao_Paulo:' + dtStart + '\r\n' +
+            'DTEND;TZID=America/Sao_Paulo:' + dtEnd + '\r\n' +
+            'SUMMARY:Passeio de Lancha — WeBoat Brasil\r\n' +
+            'DESCRIPTION:' + desc + '\r\n' +
+            'LOCATION:Marina da Gloria\\, Av. Infante Dom Henrique\\, S/N\\, Loja 06\\, Gloria\\, Rio de Janeiro - RJ\r\n' +
+            'GEO:-22.9211;-43.1689\r\n' +
+            'BEGIN:VALARM\r\n' +
+            'TRIGGER:-PT1H\r\n' +
+            'ACTION:DISPLAY\r\n' +
+            'DESCRIPTION:Passeio de lancha em 1 hora!\r\n' +
+            'END:VALARM\r\n' +
+            'END:VEVENT\r\n' +
+            'END:VCALENDAR\r\n';
+
+        var blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
         var url = URL.createObjectURL(blob);
         var a = document.createElement('a');
         a.href = url;
-        a.download = 'reserva-weboat-' + (p.dataPasseio || 'confirmada') + '.txt';
+        a.download = 'weboat-passeio-' + p.dataPasseio + '.ics';
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
@@ -744,6 +977,19 @@
         }
 
         window.scrollTo(0, 0);
+    }
+
+    // ── Language selector: preserve token ──
+    function updateLangLinks() {
+        var langLinks = document.querySelectorAll('.checkout-lang__option');
+        langLinks.forEach(function(link) {
+            var href = link.getAttribute('href');
+            if (href && currentToken) {
+                // Remove existing query params and add token
+                var base = href.split('?')[0];
+                link.setAttribute('href', base + '?token=' + encodeURIComponent(currentToken));
+            }
+        });
     }
 
     // ── Helpers ──
