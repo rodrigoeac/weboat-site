@@ -755,8 +755,14 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 
 ---
 
-**Última atualização:** 19 Fevereiro 2026
-**Versão:** 5.2 - Header mobile WhatsApp + visual fixes
+**Última atualização:** 20 Fevereiro 2026
+**Versão:** 5.3 - Checkout PDF, calendar, i18n, language selector
+
+### Changelog v5.3 (Checkout PDF + i18n)
+- **Save as PDF**: Replaced .txt download with jsPDF PDF generation (loaded dynamically from CDN v3.0.3). PDF includes: WeBoat logo (embedded base64 PNG), ocean-deep header with gold accent, full reservation details, value breakdown with discount, ponto de encontro instructions, clickable video link, footer with contact. Fallback: navigator.share or clipboard copy if jsPDF fails to load.
+- **Add to Calendar (.ics)**: New button generates .ics file with date/time (TZID=America/Sao_Paulo), location (Marina da Gloria with GEO coords), description (boat + route + people + price), 1-hour alarm reminder.
+- **i18n fix**: `renderConfirmation()` now uses `t()` for all breakdown labels (was hardcoded PT). New i18n keys: `checkoutDiscount`, `checkoutPaid`, `checkoutSavePDF`, `checkoutAddCalendar`, `checkoutPhoneRequired`, `checkoutPhoneInvalid`, `checkoutEmailInvalid` — added to PT/EN/ES.
+- **Language selector token**: `updateLangLinks()` appends `?token=xxx` to all language selector hrefs on init, so switching language preserves the checkout session.
 
 ### Changelog v5.2 (Header + Visual)
 - **Mobile Header**: WhatsApp button now visible on all pages (icon-only, 40px circular green button). Order: logo (left) | lang-switcher, hamburger, WhatsApp (right). CSS-only, applies to all 118 pages.
@@ -768,7 +774,7 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 - **Cache Headers**: CSS/JS cache reduced from 300s to 60s to prevent stale deployments.
 
 ### Changelog v5.1 (Checkout + Language Fix)
-- **Checkout Step 3**: Complete redesign with full reservation summary (boat, route with full name, date, time, guests), value breakdown (base price, services, discount, total, paid, remaining), ponto de encontro card with 4-step instructions + video link button, "O que trazer" list, "Salvar Reserva" button (.txt download). Applied to PT/EN/ES.
+- **Checkout Step 3**: Complete redesign with full reservation summary (boat, route with full name, date, time, guests), value breakdown (base price, services, discount, total, paid, remaining), ponto de encontro card with 4-step instructions + video link button, "O que trazer" list, "Salvar Reserva (PDF)" + "Adicionar ao Calendario (.ics)" buttons. Applied to PT/EN/ES.
 - **Language Selector Fix**: EN checkout had PT link pointing to `/en/checkout/` (loop), ES had PT pointing to `/es/checkout/` (loop). Fixed all links and `--active` states in EN and ES checkout pages.
 - **Checkout Header**: Logo reduced from 150x40 to 105x28 + inline `style="height:28px;width:auto;"` to override cached HTML attributes. Header padding reduced.
 - **checkout.js**: Added `ROTEIRO_NOMES` mapping, `renderConfirmation(data)` for step 3 population, `saveReservation(data)` for .txt file download.
