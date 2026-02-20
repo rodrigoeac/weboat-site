@@ -684,7 +684,7 @@
             generatePDF(data, p, pr, turnoLabel, dataLabel, roteiro);
         } else {
             var script = document.createElement('script');
-            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js';
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/3.0.3/jspdf.umd.min.js';
             script.onload = function() {
                 generatePDF(data, p, pr, turnoLabel, dataLabel, roteiro);
             };
