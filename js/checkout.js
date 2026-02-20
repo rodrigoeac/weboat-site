@@ -873,13 +873,33 @@
         doc.text('Chegue 15 minutos antes do horario do passeio.', margin, y);
         y += 8;
 
-        // Video link
-        doc.setFontSize(9);
+        // Video link — prominent button style
+        y += 2;
+        var btnX = margin;
+        var btnW = col2 - margin;
+        var btnH = 12;
+        var btnR = 3; // corner radius
+
+        // Rounded rectangle background (wave-blue)
+        doc.setFillColor(74, 144, 184); // wave-blue
+        doc.roundedRect(btnX, y - 1, btnW, btnH, btnR, btnR, 'F');
+
+        // Play icon triangle
+        doc.setFillColor(255, 255, 255);
+        var triX = btnX + 8;
+        var triY = y + btnH / 2 - 1;
+        doc.triangle(triX, triY - 2.5, triX, triY + 2.5, triX + 3.5, triY, 'F');
+
+        // Button text
+        doc.setFontSize(11);
         doc.setFont('helvetica', 'bold');
-        doc.setTextColor(74, 144, 184); // wave-blue
-        doc.textWithLink('Video: como chegar ao ponto de encontro', margin, y, { url: VIDEO_URL });
-        y += 5;
-        doc.setFontSize(8);
+        doc.setTextColor(255, 255, 255);
+        doc.textWithLink('Assista ao video: como chegar ao ponto de encontro', btnX + 15, y + btnH / 2 + 1.2, { url: VIDEO_URL });
+
+        y += btnH + 4;
+
+        // URL below button for reference
+        doc.setFontSize(7);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor(107, 114, 128);
         doc.text(VIDEO_URL, margin, y);
