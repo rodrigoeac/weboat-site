@@ -213,7 +213,7 @@ weboat-site/
 
 ### Idiomas: PT (raiz), EN (`/en/`), ES (`/es/`)
 
-**Contagem de páginas:** 53 PT + 38 EN + 38 ES = 129 páginas total
+**Contagem de páginas:** 94 PT + 73 EN + 73 ES = 240 páginas total
 - PT tem 21 parceiras extras (lanchas parceiras não traduzidas)
 - EN/ES mostram seção "partner boats" com CTA WhatsApp em vez de páginas individuais
 
@@ -663,7 +663,7 @@ COMMIT: "chore: SEO e finalização"
 
 ### Google Tag Manager
 - **Container ID:** GTM-K9LG4M2
-- Instalado em todas as 129 páginas HTML (53 PT + 38 EN + 38 ES)
+- Instalado em todas as 240 páginas HTML (94 PT + 73 EN + 73 ES)
 - `dataLayer.push({pageLanguage: 'en'})` via i18n.js para segmentação por idioma
 - GA4, Ads, Meta Pixel e demais tags gerenciados via GTM
 
@@ -756,7 +756,15 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 ---
 
 **Última atualização:** 20 Fevereiro 2026
-**Versão:** 5.4 - Dúvidas dropdown, centered nav, mobile refinements
+**Versão:** 5.5 - Blog expansion (43 articles × 3 langs), social proof update, mobile logo
+
+### Changelog v5.5 (Blog Expansion + Social Proof + Mobile Logo)
+- **Blog Expansion**: 43 articles × 3 languages = 129 new blog pages. Topics: tourism guides, occasions, safety, food/drink, photography, etiquette, seasonal events. Blog index pages updated with full article listings.
+- **Social Proof Updated**: Passeios realizados +1.000 → +2.500 across all pages (home, about, blog, meta descriptions, Schema.org, generate scripts). Avaliações stays +1.000. Instagram +19k → +20k.
+- **Counter Animation Fix**: Added `data-prefix` support to `animateCounter()` in main.js. Social proof counters now show "+" prefix during and after animation via `data-prefix="+"` attribute.
+- **Mobile Logo**: Reduced from 32px to 24px. Scrolled state now matches normal (24px, no shrink on scroll).
+- **Sitemap**: Expanded from 117 to 222 URLs with trilingual `xhtml:link` alternates.
+- **Page count**: 94 PT + 73 EN + 73 ES = 240 pages (was 129).
 
 ### Changelog v5.4 (Navigation + Mobile Refinements)
 - **Dúvidas Dropdown**: "Como Funciona" + "FAQ" grouped into a dropdown labeled "Dúvidas" (PT), "Help" (EN), "Dudas" (ES) in desktop nav across all 118 pages. Mobile nav keeps flat links.
