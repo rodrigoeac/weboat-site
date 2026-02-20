@@ -186,19 +186,13 @@
    CTA WHATSAPP (Header)
    ============================================ */
 .header__cta {
-  display: none;
+  display: inline-flex;
 }
 
 .header__cta.btn {
   padding: 8px 16px;
   min-height: 36px;
   font-size: 13px;
-}
-
-@media (min-width: 1024px) {
-  .header__cta {
-    display: inline-flex;
-  }
 }
 
 .header__cta span {
@@ -208,6 +202,34 @@
 @media (min-width: 1200px) {
   .header__cta span {
     display: inline;
+  }
+}
+
+/* Mobile: icon-only WhatsApp, reorder right-side elements */
+@media (max-width: 1023px) {
+  .header__cta.btn {
+    padding: 0;
+    min-height: 40px;
+    width: 40px;
+    border-radius: var(--radius-full);
+    font-size: 1.25rem;
+  }
+
+  .header__inner {
+    gap: var(--space-2);
+  }
+
+  .lang-switcher {
+    order: 1;
+    margin-left: auto;
+  }
+
+  .header__mobile-toggle {
+    order: 2;
+  }
+
+  .header__cta {
+    order: 3;
   }
 }
 
