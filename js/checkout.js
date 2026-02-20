@@ -696,6 +696,10 @@
         }
     }
 
+    // Logo base64 (white on transparent, 250x40px PNG)
+    var LOGO_BASE64 = 'data:image/png;base64,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';
+    var VIDEO_URL = 'https://weboatbrasil.com.br/ponto-de-encontro';
+
     function generatePDF(data, p, pr, turnoLabel, dataLabel, roteiro) {
         var jsPDF = window.jspdf.jsPDF;
         var doc = new jsPDF({ unit: 'mm', format: 'a4' });
@@ -704,26 +708,46 @@
         var y = 20;
         var col2 = w - margin;
 
-        // Header bar
+        // Header bar with logo
         doc.setFillColor(30, 58, 95); // ocean-deep
-        doc.rect(0, 0, w, 35, 'F');
+        doc.rect(0, 0, w, 38, 'F');
+
+        // Logo (250x40px = 6.25:1 aspect ratio, 10mm height = 62.5mm width)
+        try {
+            doc.addImage(LOGO_BASE64, 'PNG', margin, 6, 50, 8);
+        } catch(e) {
+            // Fallback: text logo
+            doc.setTextColor(255, 255, 255);
+            doc.setFontSize(20);
+            doc.setFont('helvetica', 'bold');
+            doc.text('WeBoat Brasil', margin, 18);
+        }
+
+        // Route subtitle under logo
         doc.setTextColor(255, 255, 255);
-        doc.setFontSize(20);
-        doc.setFont('helvetica', 'bold');
-        doc.text('WeBoat Brasil', margin, 18);
         doc.setFontSize(10);
         doc.setFont('helvetica', 'normal');
-        doc.text(t('checkoutTrip', 'Passeio') + ' — ' + roteiro, margin, 28);
+        doc.text(t('checkoutTrip', 'Passeio') + ' — ' + roteiro, margin, 24);
+
+        // Gold accent line
+        doc.setDrawColor(212, 168, 83); // sunset-gold
+        doc.setLineWidth(0.8);
+        doc.line(margin, 30, col2, 30);
+
+        // Confirmation text
+        doc.setFontSize(12);
+        doc.setFont('helvetica', 'bold');
+        doc.text('RESERVA CONFIRMADA', margin, 36);
 
         // Reset colors
-        y = 48;
+        y = 50;
         doc.setTextColor(55, 65, 81); // charcoal
 
         // Reservation details
-        doc.setFontSize(13);
+        doc.setFontSize(11);
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(30, 58, 95);
-        doc.text(t('checkoutTotal', 'Reserva').toUpperCase(), margin, y);
+        doc.text('DETALHES DA RESERVA', margin, y);
         y += 8;
 
         doc.setFontSize(10);
@@ -847,6 +871,18 @@
         doc.setFont('helvetica', 'bold');
         doc.setTextColor(30, 58, 95);
         doc.text('Chegue 15 minutos antes do horario do passeio.', margin, y);
+        y += 8;
+
+        // Video link
+        doc.setFontSize(9);
+        doc.setFont('helvetica', 'bold');
+        doc.setTextColor(74, 144, 184); // wave-blue
+        doc.textWithLink('Video: como chegar ao ponto de encontro', margin, y, { url: VIDEO_URL });
+        y += 5;
+        doc.setFontSize(8);
+        doc.setFont('helvetica', 'normal');
+        doc.setTextColor(107, 114, 128);
+        doc.text(VIDEO_URL, margin, y);
 
         // Footer
         y = doc.internal.pageSize.getHeight() - 15;
