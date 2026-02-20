@@ -756,7 +756,14 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 ---
 
 **Última atualização:** 20 Fevereiro 2026
-**Versão:** 5.3 - Checkout PDF, calendar, i18n, language selector
+**Versão:** 5.4 - Dúvidas dropdown, centered nav, mobile refinements
+
+### Changelog v5.4 (Navigation + Mobile Refinements)
+- **Dúvidas Dropdown**: "Como Funciona" + "FAQ" grouped into a dropdown labeled "Dúvidas" (PT), "Help" (EN), "Dudas" (ES) in desktop nav across all 118 pages. Mobile nav keeps flat links.
+- **Desktop Nav Centered**: `flex: 1` + `justify-content: center` on nav, font 14→15px, padding increased. Logo left, WhatsApp+lang-switcher pinned right with `flex-shrink: 0`.
+- **Mobile Logo Larger**: 26→30px (scrolled 24px), header scrolled height 54→58px.
+- **Mobile WhatsApp Icon**: Reduced from 1.15rem to 0.95rem, rectangular shape (6px 12px padding).
+- **Checkout Logo**: Added left margin for breathing room.
 
 ### Changelog v5.3 (Checkout PDF + i18n)
 - **Save as PDF**: Replaced .txt download with jsPDF PDF generation (loaded dynamically from CDN v3.0.3). PDF includes: WeBoat logo (embedded base64 PNG), ocean-deep header with gold accent, full reservation details, value breakdown with discount, ponto de encontro instructions, clickable video link, footer with contact. Fallback: navigator.share or clipboard copy if jsPDF fails to load.
