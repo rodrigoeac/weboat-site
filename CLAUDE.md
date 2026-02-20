@@ -761,8 +761,8 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 ### Changelog v5.4 (Navigation + Mobile Refinements)
 - **Dúvidas Dropdown**: "Como Funciona" + "FAQ" grouped into a dropdown labeled "Dúvidas" (PT), "Help" (EN), "Dudas" (ES) in desktop nav across all 118 pages. Mobile nav keeps flat links.
 - **Desktop Nav Centered**: `flex: 1` + `justify-content: center` on nav, font 14→15px, padding increased. Logo left, WhatsApp+lang-switcher pinned right with `flex-shrink: 0`.
-- **Mobile Logo Larger**: 26→30px (scrolled 24px), header scrolled height 54→58px.
-- **Mobile WhatsApp Icon**: Reduced from 1.15rem to 0.95rem, rectangular shape (6px 12px padding).
+- **Mobile Logo Larger**: 32px (scrolled 24px), header scrolled height 58px.
+- **WhatsApp Icon Sizes**: Mobile 0.8rem, tablet/desktop icon 0.9rem. Rectangular shape (6px 12px padding on mobile).
 - **Checkout Logo**: Added left margin for breathing room.
 
 ### Changelog v5.3 (Checkout PDF + i18n)
