@@ -196,6 +196,7 @@
   function animateCounter(element) {
     const target = parseInt(element.dataset.target, 10);
     const duration = parseInt(element.dataset.duration, 10) || 2000;
+    const prefix = element.dataset.prefix || '';
     const increment = target / (duration / 16);
     let current = 0;
     var fmt = window.WeBoatI18n ? window.WeBoatI18n.formatNumber : function(n) { return n.toLocaleString('pt-BR'); };
@@ -203,10 +204,10 @@
     const timer = setInterval(function() {
       current += increment;
       if (current >= target) {
-        element.textContent = fmt(target);
+        element.textContent = prefix + fmt(target);
         clearInterval(timer);
       } else {
-        element.textContent = fmt(Math.floor(current));
+        element.textContent = prefix + fmt(Math.floor(current));
       }
     }, 16);
   }
