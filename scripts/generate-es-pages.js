@@ -2418,16 +2418,16 @@ const pages = [
     ptPath: 'sobre/index.html',
     esPath: 'es/sobre-nosotros/index.html',
     title: 'Sobre WeBoat Brasil | Alquiler de Lanchas en Río de Janeiro',
-    description: 'Conozca WeBoat Brasil, empresa líder en alquiler de lanchas en Río de Janeiro. +1.000 paseos, 5 lanchas propias, Marina da Glória.',
+    description: 'Conozca WeBoat Brasil, empresa líder en alquiler de lanchas en Río de Janeiro. +2.500 paseos, 5 lanchas propias, Marina da Glória.',
     keywords: 'sobre weboat, empresa alquiler lanchas rio, marina da gloria lanchas',
     waMessage: '¡Hola! Me gustaría saber más sobre WeBoat Brasil. [via site - es]',
     css: 'sobre',
       contentBlocks: [
       // ── LONG BLOCKS FIRST (must run before short fragments) ──
       // Schema.org AboutPage description (JSON-LD, not protected — FULL text)
-      ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Oferece passeios privativos para festas, despedidas de solteira, aniversários e eventos corporativos. Fundada em 2021, realizou mais de 1.000 passeios.', 'WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Ofrece paseos privados para fiestas, despedidas de soltera, cumpleaños y eventos corporativos. Fundada en 2021, ha realizado más de 1.000 paseos.'],
+      ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Oferece passeios privativos para festas, despedidas de solteira, aniversários e eventos corporativos. Fundada em 2021, realizou mais de 2.500 passeios.', 'WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Ofrece paseos privados para fiestas, despedidas de soltera, cumpleaños y eventos corporativos. Fundada en 2021, ha realizado más de 2.500 paseos.'],
       // Visible answer-capsule paragraph (line 728 of PT source)
-      ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Fundada em 2021, opera 5 lanchas próprias e trabalha com parceiros para atender grupos de 10 a 65 pessoas. Já realizou mais de 1.000 passeios e acumula mais de 1000 avaliações 5 estrelas no Google.', 'WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Fundada en 2021, opera 5 lanchas propias y trabaja con socios para atender grupos de 10 a 65 personas. Ha realizado más de 1.000 paseos y acumula más de 1.000 reseñas de 5 estrellas en Google.'],
+      ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Fundada em 2021, opera 5 lanchas próprias e trabalha com parceiros para atender grupos de 10 a 65 pessoas. Já realizou mais de 2.500 passeios e acumula mais de 1000 avaliações 5 estrelas no Google.', 'WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Fundada en 2021, opera 5 lanchas propias y trabaja con socios para atender grupos de 10 a 65 personas. Ha realizado más de 2.500 paseos y acumula más de 1.000 reseñas de 5 estrellas en Google.'],
       // Vision card (MVV section)
       ['Ser a maior empresa de aluguel de lanchas do Brasil, mesmo atuando somente no Rio de Janeiro. Quando alguém pensar em lancha no Rio, pensar WeBoat.', 'Ser la mayor empresa de alquiler de lanchas de Brasil, aun operando solo en Río de Janeiro. Cuando alguien piense en lancha en Río, piense WeBoat.'],
       // Full quoted slogan block (MUST come before the short slogan block to avoid substring corruption)
@@ -2465,8 +2465,8 @@ const pages = [
             "Opera <a href=\"/es/lanchas/\">5 lanchas propias</a> y trabaja con socios para atender grupos de 10 a 65 personas."
       ],
       [
-            "Fundada em 2021, realizou mais de 1.000 passeios com <a href=\"/es/rutas/\">6 roteiros diferentes</a> e acumula mais de 1000 avaliações 5 estrelas no Google.",
-            "Fundada en 2021, ha realizado más de 1.000 paseos con <a href=\"/es/rutas/\">6 rutas diferentes</a> y acumula más de 1.000 reseñas de 5 estrellas en Google."
+            "Fundada em 2021, realizou mais de 2.500 passeios com <a href=\"/es/rutas/\">6 roteiros diferentes</a> e acumula mais de 1000 avaliações 5 estrelas no Google.",
+            "Fundada en 2021, ha realizado más de 2.500 paseos con <a href=\"/es/rutas/\">6 rutas diferentes</a> y acumula más de 1.000 reseñas de 5 estrellas en Google."
       ],
       [
             "<strong>Localização:</strong> Marina da Glória, Loja 06 - Rio de Janeiro, RJ",
@@ -2668,8 +2668,8 @@ const pages = [
             "¿Qué es WeBoat Brasil?"
       ],
       [
-            "A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Fundada em 2021, opera 5 lanchas próprias e trabalha com parceiros para atender grupos de 10 a 65 pessoas. Já realizou mais de 1.000 passeios e acumula mais de 1000 avaliações 5 estrelas no Google.",
-            "WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Fundada en 2021, opera 5 lanchas propias y trabaja con socios para atender grupos de 10 a 65 personas. Ha realizado más de 1.000 paseos y acumula más de 1.000 reseñas de 5 estrellas en Google."
+            "A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Fundada em 2021, opera 5 lanchas próprias e trabalha com parceiros para atender grupos de 10 a 65 pessoas. Já realizou mais de 2.500 passeios e acumula mais de 1000 avaliações 5 estrelas no Google.",
+            "WeBoat Brasil es una empresa de alquiler de lanchas en Río de Janeiro, con sede en la Marina da Glória. Fundada en 2021, opera 5 lanchas propias y trabaja con socios para atender grupos de 10 a 65 personas. Ha realizado más de 2.500 paseos y acumula más de 1.000 reseñas de 5 estrellas en Google."
       ],
       [
             "Quais serviços a WeBoat oferece?",
@@ -3936,7 +3936,7 @@ const translations = [
   ['não incluso', 'no incluido'],
 
   // --- Social proof ---
-  ['+1.000 passeios realizados', '+1.000 paseos realizados'],
+  ['+2.500 passeios realizados', '+2.500 paseos realizados'],
   ['+1000 avaliações 5 estrelas', '+1.000 reseñas 5 estrellas'],
   ['avaliações 5 estrelas', 'reseñas 5 estrellas'],
   ['passeios realizados', 'paseos realizados'],

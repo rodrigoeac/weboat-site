@@ -262,19 +262,154 @@
       </div>
     </section>
 
-    <!-- Blog Listing -->
+    <!-- Featured Article -->
+    <section class="blog-featured">
+      <div class="container">
+        <a href="/blog/quanto-custa-passeio-lancha-rj/" class="blog-card" data-category="planejamento">
+          <div class="blog-card__image">
+            <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Lancha privativa navegando na Baía de Guanabara com o Pão de Açúcar ao fundo" loading="lazy">
+          </div>
+          <div class="blog-card__content">
+            <div class="blog-card__meta">
+              <span class="blog-card__category blog-card__category--planejamento">Planejamento</span>
+              <span class="blog-card__date">Fevereiro 2026</span>
+            </div>
+            <h2 class="blog-card__title">Quanto Custa um Passeio de Lancha no Rio de Janeiro em 2026?</h2>
+            <p class="blog-card__excerpt">
+              Tabela completa de preços por lancha, dia da semana vs fim de semana, serviços extras e cálculo por pessoa. Passeios a partir de R$ 153/pessoa.
+            </p>
+            <span class="blog-card__link">
+              Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+            </span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Category Filters -->
     <section class="blog-listing">
       <div class="container">
+        <div class="blog-filters" role="group" aria-label="Filtrar por categoria">
+          <button class="blog-filters__btn blog-filters__btn--active" data-filter="all">Todos</button>
+          <button class="blog-filters__btn" data-filter="planejamento">Planejamento</button>
+          <button class="blog-filters__btn" data-filter="dicas">Dicas</button>
+          <button class="blog-filters__btn" data-filter="destinos">Destinos</button>
+          <button class="blog-filters__btn" data-filter="celebracoes">Celebrações</button>
+          <button class="blog-filters__btn" data-filter="gastronomia">Gastronomia</button>
+          <button class="blog-filters__btn" data-filter="guias-locais">Guias Locais</button>
+          <button class="blog-filters__btn" data-filter="para-turistas">Para Turistas</button>
+        </div>
+
         <div class="blog-listing__grid">
 
-          <!-- Article 1 -->
-          <a href="/blog/melhores-praias-lancha-rj/" class="blog-card">
+          <!-- T3: Guia Turistas Estrangeiros (PILLAR) -->
+          <a href="/blog/guia-passeio-lancha-turistas-estrangeiros/" class="blog-card" data-category="para-turistas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Turistas estrangeiros em passeio de lancha no Rio de Janeiro" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--para-turistas">Para Turistas</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Guia Definitivo de Passeio de Lancha para Turistas Estrangeiros</h2>
+              <p class="blog-card__excerpt">
+                Tudo que turistas internacionais precisam saber: reserva em qualquer idioma, formas de pagamento, segurança, o que inclui e roteiros recomendados.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- T1: Guia Turistas Americanos (PILLAR) -->
+          <a href="/blog/guia-passeio-lancha-turistas-americanos/" class="blog-card" data-category="para-turistas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Turistas americanos em lancha privativa no Rio de Janeiro" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--para-turistas">Para Turistas</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Guia Completo de Passeio de Lancha para Turistas Americanos no Rio</h2>
+              <p class="blog-card__excerpt">
+                Guia exclusivo para americanos: pagamento em USD, comparação com boat charters nos EUA, dicas culturais e roteiro de 1 dia no Rio.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- P4: Privativa vs Compartilhado -->
+          <a href="/blog/lancha-privativa-vs-compartilhado/" class="blog-card" data-category="planejamento">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Lancha privativa WeBoat navegando com grupo de amigos" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--planejamento">Planejamento</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Lancha Privativa vs Passeio Compartilhado: Qual Escolher?</h2>
+              <p class="blog-card__excerpt">
+                Comparação honesta entre privativo e compartilhado: preço por pessoa, flexibilidade, privacidade e quando cada opção vale mais a pena.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- C1: Despedida de Solteira -->
+          <a href="/blog/despedida-solteira-lancha-guia-completo/" class="blog-card" data-category="celebracoes">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Grupo de amigas celebrando despedida de solteira na lancha" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--celebracoes">Celebrações</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Despedida de Solteira na Lancha: Guia Completo para Organizar</h2>
+              <p class="blog-card__excerpt">
+                Timeline de planejamento, lanchas recomendadas, roteiros, decoração, open bar e orçamento real para a melhor despedida no mar.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- G1: Churrasco na Lancha -->
+          <a href="/blog/churrasco-na-lancha-guia-completo/" class="blog-card" data-category="gastronomia">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Churrasco sendo preparado na churrasqueira a bordo da lancha" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--gastronomia">Gastronomia</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Churrasco na Lancha: Guia Completo de Preços e Opções</h2>
+              <p class="blog-card__excerpt">
+                Tudo sobre o serviço de churrasco a bordo: preços, cardápios, opção BYO, combos com open bar e dicas para economizar.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Original: Melhores Praias -->
+          <a href="/blog/melhores-praias-lancha-rj/" class="blog-card" data-category="destinos">
             <div class="blog-card__image">
               <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Lanchas ancoradas na Praia Vermelha com Morro da Urca ao fundo" loading="lazy">
             </div>
             <div class="blog-card__content">
               <div class="blog-card__meta">
-                <span class="blog-card__category">Roteiros</span>
+                <span class="blog-card__category blog-card__category--destinos">Destinos</span>
                 <span class="blog-card__date">Fevereiro 2026</span>
               </div>
               <h2 class="blog-card__title">Melhores Praias para Visitar de Lancha no RJ</h2>
@@ -287,14 +422,14 @@
             </div>
           </a>
 
-          <!-- Article 2 -->
-          <a href="/blog/o-que-vestir-passeio-lancha/" class="blog-card">
+          <!-- Original: O Que Vestir -->
+          <a href="/blog/o-que-vestir-passeio-lancha/" class="blog-card" data-category="dicas">
             <div class="blog-card__image">
               <img src="/assets/images/blog/o-que-vestir-lancha.jpg" alt="Amigas de biquíni relaxando no solário da lancha" loading="lazy">
             </div>
             <div class="blog-card__content">
               <div class="blog-card__meta">
-                <span class="blog-card__category">Dicas</span>
+                <span class="blog-card__category blog-card__category--dicas">Dicas</span>
                 <span class="blog-card__date">Fevereiro 2026</span>
               </div>
               <h2 class="blog-card__title">O Que Vestir num Passeio de Lancha: Guia Completo</h2>
@@ -307,14 +442,14 @@
             </div>
           </a>
 
-          <!-- Article 3 -->
-          <a href="/blog/guia-marina-da-gloria/" class="blog-card">
+          <!-- Original: Guia Marina da Glória -->
+          <a href="/blog/guia-marina-da-gloria/" class="blog-card" data-category="guias-locais">
             <div class="blog-card__image">
               <img src="/assets/images/blog/marina-da-gloria.jpg" alt="Vista aérea da Marina da Glória no Rio de Janeiro" loading="lazy">
             </div>
             <div class="blog-card__content">
               <div class="blog-card__meta">
-                <span class="blog-card__category">Guia</span>
+                <span class="blog-card__category blog-card__category--guias-locais">Guias Locais</span>
                 <span class="blog-card__date">Fevereiro 2026</span>
               </div>
               <h2 class="blog-card__title">Guia da Marina da Glória: Tudo que Você Precisa Saber</h2>
@@ -327,9 +462,557 @@
             </div>
           </a>
 
+          <!-- Batch 2 Articles -->
+          <a href="/blog/guia-passeio-lancha-turistas-latinos/" class="blog-card" data-category="para-turistas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Turistas latinoamericanos em passeio de lancha no Rio de Janeiro" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--para-turistas">Para Turistas</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Guia Completo de Passeio de Lancha para Turistas Latinoamericanos</h2>
+              <p class="blog-card__excerpt">
+                Guia especial para turistas da Argentina, Chile, Colômbia e México: câmbio, documentos, pagamento e como reservar seu passeio de lancha no Rio.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/seguranca-passeio-lancha/" class="blog-card" data-category="dicas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Equipamentos de segurança em lancha no Rio de Janeiro" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--dicas">Dicas</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Segurança em Passeio de Lancha: Tudo que Você Precisa Saber</h2>
+              <p class="blog-card__excerpt">
+                Tripulação habilitada, coletes para todos, seguro obrigatório, monitoramento climático em tempo real. Conheça os protocolos de segurança da WeBoat.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/seguranca-rio-turistas-dicas/" class="blog-card" data-category="para-turistas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Segurança no Rio de Janeiro para turistas" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--para-turistas">Para Turistas</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Segurança no Rio de Janeiro para Turistas: Dicas Essenciais</h2>
+              <p class="blog-card__excerpt">
+                Guia completo de segurança para turistas no Rio: bairros seguros, como se locomover, o que levar e dicas práticas para aproveitar a cidade com tranquilidade.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/passeio-lancha-por-do-sol-rio/" class="blog-card" data-category="destinos">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Pôr do sol visto de lancha no Rio de Janeiro" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--destinos">Destinos</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Passeio de Lancha ao Pôr do Sol no Rio: A Experiência Mais Instagramável</h2>
+              <p class="blog-card__excerpt">
+                Descubra o passeio de lancha ao pôr do sol no Rio de Janeiro. Horários por estação, melhores rotas para o golden hour e dicas de fotos incríveis.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/primeiro-passeio-lancha-checklist/" class="blog-card" data-category="planejamento">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Checklist para primeiro passeio de lancha" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--planejamento">Planejamento</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Primeiro Passeio de Lancha: Checklist Completo para Iniciantes</h2>
+              <p class="blog-card__excerpt">
+                Checklist completo para seu primeiro passeio de lancha: o que levar, o que vestir, como se preparar e dicas para aproveitar ao máximo.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/enjoo-no-mar-prevencao-dicas/" class="blog-card" data-category="dicas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/melhores-praias-lancha.jpg" alt="Dicas para prevenir enjoo no mar em passeio de lancha" loading="lazy">
+            </div>
+            <div class="blog-card__content">
+              <div class="blog-card__meta">
+                <span class="blog-card__category blog-card__category--dicas">Dicas</span>
+                <span class="blog-card__date">Fevereiro 2026</span>
+              </div>
+              <h2 class="blog-card__title">Enjoo no Mar: Como Prevenir e Aproveitar Seu Passeio de Lancha</h2>
+              <p class="blog-card__excerpt">
+                Dicas comprovadas para prevenir enjoo no mar: medicamentos, remédios naturais, técnicas de acupressão e quais rotas são mais tranquilas.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Batch 3 -->
+          <a href="/blog/como-escolher-lancha-ideal/" class="blog-card" data-category="planejamento">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Como escolher a lancha ideal para seu grupo" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--planejamento">Planejamento</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Como Escolher a Lancha Ideal para Seu Grupo</h2>
+              <p class="blog-card__excerpt">
+                Matriz de decisão completa: tamanho do grupo × orçamento × ocasião × funcionalidades. Descubra qual lancha combina com seu passeio.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/melhor-epoca-passeio-lancha-rio/" class="blog-card" data-category="planejamento">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Melhor época para passeio de lancha no Rio" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--planejamento">Planejamento</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Melhor Época para Passeio de Lancha no Rio de Janeiro</h2>
+              <p class="blog-card__excerpt">
+                Guia mês a mês: condições do mar, temperatura, lotação, preços e eventos sazonais. Descubra quando é o momento perfeito.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/ilhas-cagarras-mergulho-vida-marinha/" class="blog-card" data-category="destinos">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Ilhas Cagarras mergulho e vida marinha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--destinos">Destinos</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Ilhas Cagarras: Mergulho, Snorkel e Vida Marinha no Rio</h2>
+              <p class="blog-card__excerpt">
+                Tartarugas, golfinhos e recifes de coral a 5 km de Ipanema. Guia completo do Monumento Natural das Ilhas Cagarras.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/festa-aniversario-lancha-ideias-precos/" class="blog-card" data-category="celebracoes">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Festa de aniversário na lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--celebracoes">Celebrações</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Festa de Aniversário na Lancha: Ideias, Preços e Como Organizar</h2>
+              <p class="blog-card__excerpt">
+                Ideias por idade (30, 40, 50 anos), logística de bolo e decoração, DJ a bordo e 3 faixas de orçamento para sua festa.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/open-bar-lancha-opcoes-precos/" class="blog-card" data-category="gastronomia">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Open bar na lancha opções e preços" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--gastronomia">Gastronomia</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Open Bar na Lancha: Opções, Preços e Como Funciona</h2>
+              <p class="blog-card__excerpt">
+                Pacote Básico (R$135-150/pessoa) vs Premium (R$160-180/pessoa): cardápio completo, barman, opção BYO e combos com churrasco.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/roteiro-1-dia-rio-passeio-lancha/" class="blog-card" data-category="para-turistas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Roteiro de 1 dia no Rio com passeio de lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--para-turistas">Para Turistas</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Roteiro de 1 Dia no Rio com Passeio de Lancha</h2>
+              <p class="blog-card__excerpt">
+                Manhã: Cristo ou Pão de Açúcar. Almoço perto da Marina. Tarde: passeio de lancha. Noite: jantar em Botafogo. Plano completo com horários.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Batch 4: P6, P7, P8, D2, D4, D6 -->
+          <a href="/blog/passeio-lancha-com-criancas/" class="blog-card" data-category="planejamento">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Passeio de lancha com crianças no Rio de Janeiro" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--planejamento">Planejamento</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Passeio de Lancha com Crianças: Guia Completo para Famílias</h2>
+              <p class="blog-card__excerpt">
+                Segurança, rotas de águas calmas, atividades por idade e o que levar. Tudo para um passeio perfeito em família.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/passeio-lancha-romantico-casais/" class="blog-card" data-category="planejamento">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Passeio de lancha romântico para casais no Rio" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--planejamento">Planejamento</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Passeio de Lancha Romântico para Casais no Rio</h2>
+              <p class="blog-card__excerpt">
+                Horários do pôr do sol, lanchas intimistas, decoração, mesa de queijos e vinhos. O guia completo para um passeio inesquecível a dois.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/evento-corporativo-lancha-guia/" class="blog-card" data-category="planejamento">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Evento corporativo em lancha no Rio de Janeiro" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--planejamento">Planejamento</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Como Organizar um Evento Corporativo na Lancha</h2>
+              <p class="blog-card__excerpt">
+                Passo a passo para RH e event planners: capacidade, catering, NF, A/V e team building. Do briefing ao embarque.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/dicas-fotografia-lancha/" class="blog-card" data-category="dicas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Dicas de fotografia em passeio de lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--dicas">Dicas</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Dicas de Fotografia na Lancha: Melhores Ângulos e Momentos</h2>
+              <p class="blog-card__excerpt">
+                Golden hour, capinhas à prova d'água, regras de drone e spots instagramáveis por rota. Monte seu álbum perfeito no mar.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/musica-a-bordo-playlists/" class="blog-card" data-category="dicas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Música a bordo: playlists e dicas de som para lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--dicas">Dicas</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Música a Bordo: Playlists e Dicas de Som</h2>
+              <p class="blog-card__excerpt">
+                Playlists curadas por ocasião, conexão Bluetooth, serviço de DJ e cuidados com volume. A trilha sonora perfeita no mar.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/etiqueta-passeio-lancha/" class="blog-card" data-category="dicas">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Etiqueta em passeio de lancha: regras e boas maneiras" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--dicas">Dicas</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Etiqueta em Passeio de Lancha: Regras e Boas Maneiras</h2>
+              <p class="blog-card__excerpt">
+                Sapatos, gorjeta, lixo, volume de som, crianças e mais. Dicas para aproveitar ao máximo sem perrengue a bordo.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <!-- Batch 5: DE3, DE5, DE6, C3, C4, C5 -->
+          <a href="/blog/baia-guanabara-pontos-turisticos-lancha/" class="blog-card" data-category="destinos">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Baía de Guanabara pelo mar: pontos turísticos de lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--destinos">Destinos</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Baía de Guanabara pelo Mar: Pontos Turísticos de Lancha</h2>
+              <p class="blog-card__excerpt">
+                Fortaleza de São João, Ilha Fiscal, MAC Niterói e Ponte Rio-Niterói vistos do mar. Narrativas históricas em cada ponto.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/niteroi-de-lancha-itaipu-camboinhas/" class="blog-card" data-category="destinos">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Niterói de lancha: Itaipu, Camboinhas e praias secretas" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--destinos">Destinos</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Niterói de Lancha: Itaipu, Camboinhas e Praias Secretas</h2>
+              <p class="blog-card__excerpt">
+                Cruzar a baía vale a pena: praias desertas, frutos do mar em Itaipu e a vista de volta para o Rio.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/mureta-urca-praia-vermelha-lancha/" class="blog-card" data-category="destinos">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Mureta da Urca e Praia Vermelha de lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--destinos">Destinos</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Mureta da Urca e Praia Vermelha de Lancha: Guia Completo</h2>
+              <p class="blog-card__excerpt">
+                As 2 rotas mais populares comparadas: história, cultura, preços e dicas de fotografia para cada uma.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/reveillon-lancha-queima-fogos-copacabana/" class="blog-card" data-category="celebracoes">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Réveillon na lancha: queima de fogos de Copacabana pelo mar" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--celebracoes">Celebrações</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Réveillon na Lancha: Queima de Fogos de Copacabana pelo Mar</h2>
+              <p class="blog-card__excerpt">
+                Logística, roupa branca, melhores posições para os fogos, preços e antecedência de reserva.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/carnaval-na-lancha-rio/" class="blog-card" data-category="celebracoes">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Carnaval na lancha no Rio de Janeiro" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--celebracoes">Celebrações</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Carnaval na Lancha no Rio de Janeiro: Guia Completo</h2>
+              <p class="blog-card__excerpt">
+                Fantasias, open bar, blocos vistos do mar, DJ a bordo e segurança. Matinê ou noturno.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/pedido-casamento-lancha/" class="blog-card" data-category="celebracoes">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Pedido de casamento na lancha no Rio" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--celebracoes">Celebrações</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Pedido de Casamento na Lancha: Como Planejar o Momento Perfeito</h2>
+              <p class="blog-card__excerpt">
+                Coordenação com a tripulação, decoração, champagne, fotógrafo e orçamento. Tudo para o sim perfeito.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/cha-revelacao-cha-bebe-lancha/" class="blog-card" data-category="celebracoes">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Chá revelação e chá de bebê na lancha no Rio" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--celebracoes">Celebrações</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Chá Revelação e Chá de Bebê na Lancha: Guia Completo</h2>
+              <p class="blog-card__excerpt">
+                Celebre o momento mais especial com decoração a bordo, cardápio sem álcool, segurança para grávidas e lancha ideal a partir de R$2.600.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/confraternizacao-fim-de-ano-lancha/" class="blog-card" data-category="celebracoes">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Confraternização de fim de ano na lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--celebracoes">Celebrações</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Confraternização de Fim de Ano na Lancha: Guia para RH e Event Planners</h2>
+              <p class="blog-card__excerpt">
+                Planejamento completo para a festa mais memorável do ano: capacidade, catering, NF, amigo secreto e orçamento para grupos corporativos.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/o-que-levar-comer-beber-lancha/" class="blog-card" data-category="gastronomia">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="O que levar para comer e beber na lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--gastronomia">Gastronomia</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">O Que Levar para Comer e Beber na Lancha (Guia BYO Completo)</h2>
+              <p class="blog-card__excerpt">
+                Dicas práticas para levar sua própria comida: cooler, snacks, bebidas que não derramam, gelo, o que evitar e regras da embarcação.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/mesa-queijos-vinhos-lancha/" class="blog-card" data-category="gastronomia">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Mesa de queijos e vinhos na lancha no Rio" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--gastronomia">Gastronomia</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Mesa de Queijos e Vinhos na Lancha: O Serviço Premium</h2>
+              <p class="blog-card__excerpt">
+                A partir de R$115/pessoa: tábua completa com queijos importados, embutidos, frutas e harmonização de vinhos a bordo da sua lancha.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/combo-churrasco-open-bar-lancha/" class="blog-card" data-category="gastronomia">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Combo churrasco e open bar na lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--gastronomia">Gastronomia</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Combo Churrasco + Open Bar na Lancha: O Pacote Completo</h2>
+              <p class="blog-card__excerpt">
+                Básico (R$205-230/pessoa) ou Premium (R$220-250/pessoa): compare os pacotes e calcule o orçamento para seu grupo.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
+          <a href="/blog/bairro-gloria-arredores-passeio-lancha/" class="blog-card" data-category="guias-locais">
+            <div class="blog-card__image">
+              <img src="/assets/images/blog/blog-default.jpg" alt="Bairro da Glória e arredores para passeio de lancha" loading="lazy" width="600" height="400">
+              <span class="blog-card__badge blog-card__badge--guias-locais">Guias Locais</span>
+            </div>
+            <div class="blog-card__content">
+              <time class="blog-card__date" datetime="2026-02-20">20 de fevereiro de 2026</time>
+              <h2 class="blog-card__title">Bairro da Glória e Arredores: Guia Completo para o Dia do Passeio</h2>
+              <p class="blog-card__excerpt">
+                Restaurantes, transporte, estacionamento, hotéis e o que fazer antes e depois do embarque na Marina da Glória.
+              </p>
+              <span class="blog-card__link">
+                Ler artigo <i class="ph ph-arrow-right" aria-hidden="true"></i>
+              </span>
+            </div>
+          </a>
+
         </div>
       </div>
     </section>
+
+    <!-- Blog Filter Script -->
+    <script>
+    (function() {
+      var btns = document.querySelectorAll('.blog-filters__btn');
+      var cards = document.querySelectorAll('.blog-listing__grid .blog-card');
+      btns.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var filter = btn.getAttribute('data-filter');
+          btns.forEach(function(b) { b.classList.remove('blog-filters__btn--active'); });
+          btn.classList.add('blog-filters__btn--active');
+          cards.forEach(function(card) {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.classList.remove('blog-card--hidden');
+            } else {
+              card.classList.add('blog-card--hidden');
+            }
+          });
+        });
+      });
+    })();
+    </script>
 
     <!-- CTA Final -->
     <section class="section-cta">

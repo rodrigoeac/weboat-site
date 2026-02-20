@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "updated": "2026-02-15",
+  "updated": "2026-02-20",
   "baseUrl": "https://www.weboatbrasil.com.br",
   "languages": {
     "pt": { "code": "pt-BR", "label": "Portugues", "flag": "BR", "dir": "" },
@@ -187,6 +187,222 @@
       "pt": "/blog/guia-marina-da-gloria/",
       "en": "/en/blog/marina-da-gloria-guide/",
       "es": "/es/blog/guia-marina-da-gloria/"
+    },
+    {
+      "id": "blog-how-much-cost",
+      "pt": "/blog/quanto-custa-passeio-lancha-rj/",
+      "en": "/en/blog/how-much-boat-trip-cost-rio/",
+      "es": "/es/blog/cuanto-cuesta-paseo-lancha-rio/"
+    },
+    {
+      "id": "blog-private-vs-shared",
+      "pt": "/blog/lancha-privativa-vs-compartilhado/",
+      "en": "/en/blog/private-boat-vs-shared-tour/",
+      "es": "/es/blog/lancha-privada-vs-compartido/"
+    },
+    {
+      "id": "blog-bachelorette",
+      "pt": "/blog/despedida-solteira-lancha-guia-completo/",
+      "en": "/en/blog/bachelorette-party-boat-rio-guide/",
+      "es": "/es/blog/despedida-soltera-lancha-guia-completa/"
+    },
+    {
+      "id": "blog-bbq-guide",
+      "pt": "/blog/churrasco-na-lancha-guia-completo/",
+      "en": "/en/blog/bbq-on-boat-rio-guide/",
+      "es": "/es/blog/asado-en-lancha-rio-guia/"
+    },
+    {
+      "id": "blog-tourist-guide-foreign",
+      "pt": "/blog/guia-passeio-lancha-turistas-estrangeiros/",
+      "en": "/en/blog/ultimate-guide-boat-trips-rio-tourists/",
+      "es": "/es/blog/guia-definitiva-paseo-lancha-turistas-extranjeros/"
+    },
+    {
+      "id": "blog-tourist-guide-american",
+      "pt": "/blog/guia-passeio-lancha-turistas-americanos/",
+      "en": "/en/blog/complete-guide-boat-trips-rio-americans/",
+      "es": "/es/blog/guia-paseo-lancha-turistas-americanos/"
+    },
+    {
+      "id": "blog-tourist-guide-latin",
+      "pt": "/blog/guia-passeio-lancha-turistas-latinos/",
+      "en": "/en/blog/boat-trip-guide-rio-latin-american-tourists/",
+      "es": "/es/blog/guia-completa-paseo-lancha-turistas-latinoamericanos/"
+    },
+    {
+      "id": "blog-boat-safety",
+      "pt": "/blog/seguranca-passeio-lancha/",
+      "en": "/en/blog/boat-trip-safety-rio/",
+      "es": "/es/blog/seguridad-paseo-lancha/"
+    },
+    {
+      "id": "blog-safety-rio-tourists",
+      "pt": "/blog/seguranca-rio-turistas-dicas/",
+      "en": "/en/blog/safety-rio-de-janeiro-tourists-tips/",
+      "es": "/es/blog/seguridad-rio-turistas-consejos/"
+    },
+    {
+      "id": "blog-sunset-boat-trip",
+      "pt": "/blog/passeio-lancha-por-do-sol-rio/",
+      "en": "/en/blog/sunset-boat-trip-rio/",
+      "es": "/es/blog/paseo-lancha-atardecer-rio/"
+    },
+    {
+      "id": "blog-first-trip-checklist",
+      "pt": "/blog/primeiro-passeio-lancha-checklist/",
+      "en": "/en/blog/first-boat-trip-checklist/",
+      "es": "/es/blog/primer-paseo-lancha-checklist/"
+    },
+    {
+      "id": "blog-seasickness",
+      "pt": "/blog/enjoo-no-mar-prevencao-dicas/",
+      "en": "/en/blog/seasickness-prevention-tips/",
+      "es": "/es/blog/mareo-en-el-mar-prevencion/"
+    },
+    {
+      "id": "blog-choose-boat",
+      "pt": "/blog/como-escolher-lancha-ideal/",
+      "en": "/en/blog/how-to-choose-right-boat/",
+      "es": "/es/blog/como-elegir-lancha-ideal/"
+    },
+    {
+      "id": "blog-best-time",
+      "pt": "/blog/melhor-epoca-passeio-lancha-rio/",
+      "en": "/en/blog/best-time-boat-trip-rio/",
+      "es": "/es/blog/mejor-epoca-paseo-lancha-rio/"
+    },
+    {
+      "id": "blog-cagarras-islands",
+      "pt": "/blog/ilhas-cagarras-mergulho-vida-marinha/",
+      "en": "/en/blog/cagarras-islands-snorkeling-diving/",
+      "es": "/es/blog/islas-cagarras-buceo-snorkeling/"
+    },
+    {
+      "id": "blog-birthday-party",
+      "pt": "/blog/festa-aniversario-lancha-ideias-precos/",
+      "en": "/en/blog/birthday-party-boat-rio-ideas/",
+      "es": "/es/blog/fiesta-cumpleanos-lancha-ideas-precios/"
+    },
+    {
+      "id": "blog-open-bar",
+      "pt": "/blog/open-bar-lancha-opcoes-precos/",
+      "en": "/en/blog/open-bar-boat-trip-options/",
+      "es": "/es/blog/barra-libre-lancha-opciones-precios/"
+    },
+    {
+      "id": "blog-1-day-itinerary",
+      "pt": "/blog/roteiro-1-dia-rio-passeio-lancha/",
+      "en": "/en/blog/1-day-itinerary-rio-boat-trip/",
+      "es": "/es/blog/itinerario-1-dia-rio-paseo-lancha/"
+    },
+    {
+      "id": "blog-kids-boat",
+      "pt": "/blog/passeio-lancha-com-criancas/",
+      "en": "/en/blog/boat-trip-with-kids-rio/",
+      "es": "/es/blog/paseo-lancha-con-ninos-rio/"
+    },
+    {
+      "id": "blog-romantic-boat",
+      "pt": "/blog/passeio-lancha-romantico-casais/",
+      "en": "/en/blog/romantic-boat-trip-rio-couples/",
+      "es": "/es/blog/paseo-romantico-lancha-parejas/"
+    },
+    {
+      "id": "blog-corporate-event",
+      "pt": "/blog/evento-corporativo-lancha-guia/",
+      "en": "/en/blog/corporate-event-boat-rio-guide/",
+      "es": "/es/blog/evento-corporativo-lancha-guia/"
+    },
+    {
+      "id": "blog-photography",
+      "pt": "/blog/dicas-fotografia-lancha/",
+      "en": "/en/blog/boat-photography-tips/",
+      "es": "/es/blog/consejos-fotografia-lancha/"
+    },
+    {
+      "id": "blog-music-aboard",
+      "pt": "/blog/musica-a-bordo-playlists/",
+      "en": "/en/blog/music-on-board-best-playlists/",
+      "es": "/es/blog/musica-a-bordo-playlists/"
+    },
+    {
+      "id": "blog-etiquette",
+      "pt": "/blog/etiqueta-passeio-lancha/",
+      "en": "/en/blog/boat-etiquette-rules/",
+      "es": "/es/blog/etiqueta-paseo-lancha/"
+    },
+    {
+      "id": "blog-guanabara-bay",
+      "pt": "/blog/baia-guanabara-pontos-turisticos-lancha/",
+      "en": "/en/blog/guanabara-bay-by-boat-landmarks/",
+      "es": "/es/blog/bahia-guanabara-puntos-turisticos-lancha/"
+    },
+    {
+      "id": "blog-niteroi-boat",
+      "pt": "/blog/niteroi-de-lancha-itaipu-camboinhas/",
+      "en": "/en/blog/niteroi-by-boat-itaipu-camboinhas/",
+      "es": "/es/blog/niteroi-en-lancha-itaipu-camboinhas/"
+    },
+    {
+      "id": "blog-mureta-urca",
+      "pt": "/blog/mureta-urca-praia-vermelha-lancha/",
+      "en": "/en/blog/mureta-urca-praia-vermelha-boat-route/",
+      "es": "/es/blog/mureta-urca-praia-vermelha-lancha/"
+    },
+    {
+      "id": "blog-new-years-eve",
+      "pt": "/blog/reveillon-lancha-queima-fogos-copacabana/",
+      "en": "/en/blog/new-years-eve-boat-rio-fireworks/",
+      "es": "/es/blog/ano-nuevo-lancha-fuegos-artificiales/"
+    },
+    {
+      "id": "blog-carnival",
+      "pt": "/blog/carnaval-na-lancha-rio/",
+      "en": "/en/blog/carnival-boat-rio-de-janeiro/",
+      "es": "/es/blog/carnaval-en-lancha-rio/"
+    },
+    {
+      "id": "blog-marriage-proposal",
+      "pt": "/blog/pedido-casamento-lancha/",
+      "en": "/en/blog/marriage-proposal-boat-rio/",
+      "es": "/es/blog/propuesta-matrimonio-lancha/"
+    },
+    {
+      "id": "blog-gender-reveal",
+      "pt": "/blog/cha-revelacao-cha-bebe-lancha/",
+      "en": "/en/blog/gender-reveal-baby-shower-boat/",
+      "es": "/es/blog/revelacion-genero-baby-shower-lancha/"
+    },
+    {
+      "id": "blog-year-end-party",
+      "pt": "/blog/confraternizacao-fim-de-ano-lancha/",
+      "en": "/en/blog/end-of-year-company-party-boat/",
+      "es": "/es/blog/fiesta-fin-de-ano-empresa-lancha/"
+    },
+    {
+      "id": "blog-byo-food",
+      "pt": "/blog/o-que-levar-comer-beber-lancha/",
+      "en": "/en/blog/what-food-drinks-bring-boat-trip/",
+      "es": "/es/blog/que-llevar-comer-beber-lancha/"
+    },
+    {
+      "id": "blog-wine-cheese",
+      "pt": "/blog/mesa-queijos-vinhos-lancha/",
+      "en": "/en/blog/wine-cheese-board-boat/",
+      "es": "/es/blog/mesa-quesos-vinos-lancha/"
+    },
+    {
+      "id": "blog-bbq-open-bar-combo",
+      "pt": "/blog/combo-churrasco-open-bar-lancha/",
+      "en": "/en/blog/bbq-open-bar-combo-boat/",
+      "es": "/es/blog/combo-asado-barra-libre-lancha/"
+    },
+    {
+      "id": "blog-gloria-guide",
+      "pt": "/blog/bairro-gloria-arredores-passeio-lancha/",
+      "en": "/en/blog/gloria-neighborhood-guide-boat-trip/",
+      "es": "/es/blog/barrio-gloria-alrededores-paseo-lancha/"
     },
     {
       "id": "privacy",

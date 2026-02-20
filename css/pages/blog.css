@@ -428,3 +428,218 @@
     align-items: center;
   }
 }
+
+/* ============================================
+   CATEGORY FILTERS
+   ============================================ */
+.blog-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  justify-content: center;
+  margin-bottom: var(--space-8);
+}
+
+.blog-filters__btn {
+  font-family: var(--font-heading);
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: var(--space-2) var(--space-4);
+  border: 1.5px solid var(--border-light);
+  border-radius: var(--radius-full);
+  background: var(--white);
+  color: var(--driftwood);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.blog-filters__btn:hover {
+  border-color: var(--wave-blue);
+  color: var(--wave-blue);
+}
+
+.blog-filters__btn--active {
+  background: var(--ocean-deep);
+  border-color: var(--ocean-deep);
+  color: var(--white);
+}
+
+@media (max-width: 640px) {
+  .blog-filters {
+    gap: var(--space-1);
+    margin-bottom: var(--space-6);
+  }
+
+  .blog-filters__btn {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}
+
+/* ============================================
+   FEATURED CARD (full-width top card)
+   ============================================ */
+.blog-featured {
+  margin-bottom: var(--space-8);
+}
+
+.blog-featured .blog-card {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+}
+
+.blog-featured .blog-card__image {
+  aspect-ratio: 3 / 2;
+}
+
+.blog-featured .blog-card__content {
+  padding: var(--space-8);
+  justify-content: center;
+}
+
+.blog-featured .blog-card__title {
+  font-size: var(--text-h3);
+}
+
+.blog-featured .blog-card__excerpt {
+  font-size: var(--text-body);
+}
+
+@media (max-width: 768px) {
+  .blog-featured .blog-card {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-featured .blog-card__image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .blog-featured .blog-card__content {
+    padding: var(--space-6);
+  }
+}
+
+/* ============================================
+   CATEGORY BADGES (color variants)
+   ============================================ */
+.blog-card__category--planejamento,
+.blog-article__category--planejamento { color: #2563EB; }
+.blog-card__category--dicas,
+.blog-article__category--dicas { color: #059669; }
+.blog-card__category--destinos,
+.blog-article__category--destinos { color: #7C3AED; }
+.blog-card__category--celebracoes,
+.blog-article__category--celebracoes { color: #DB2777; }
+.blog-card__category--gastronomia,
+.blog-article__category--gastronomia { color: #D97706; }
+.blog-card__category--guias-locais,
+.blog-article__category--guias-locais { color: #0891B2; }
+.blog-card__category--para-turistas,
+.blog-article__category--para-turistas { color: #DC2626; }
+
+.blog-article__category--planejamento { background: #2563EB; color: var(--white); }
+.blog-article__category--dicas { background: #059669; color: var(--white); }
+.blog-article__category--destinos { background: #7C3AED; color: var(--white); }
+.blog-article__category--celebracoes { background: #DB2777; color: var(--white); }
+.blog-article__category--gastronomia { background: #D97706; color: var(--white); }
+.blog-article__category--guias-locais { background: #0891B2; color: var(--white); }
+.blog-article__category--para-turistas { background: #DC2626; color: var(--white); }
+
+/* ============================================
+   CATEGORY FILTER JS (show/hide)
+   ============================================ */
+.blog-card[data-category].blog-card--hidden {
+  display: none;
+}
+
+/* ============================================
+   BLOG TABLE (pricing articles)
+   ============================================ */
+.blog-article__body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--space-6) 0;
+  font-size: var(--text-body-sm);
+}
+
+.blog-article__body th {
+  background: var(--ocean-deep);
+  color: var(--white);
+  padding: var(--space-3) var(--space-4);
+  text-align: left;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: var(--text-caption);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.blog-article__body td {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.blog-article__body tr:hover td {
+  background: rgba(74, 144, 184, 0.05);
+}
+
+@media (max-width: 640px) {
+  .blog-article__body table {
+    font-size: 13px;
+  }
+
+  .blog-article__body th,
+  .blog-article__body td {
+    padding: var(--space-2) var(--space-3);
+  }
+}
+
+/* ============================================
+   TABLE OF CONTENTS (pillar pages)
+   ============================================ */
+.blog-toc {
+  background: var(--pearl-gray);
+  border-radius: var(--radius-lg);
+  padding: var(--space-6);
+  margin: var(--space-6) 0;
+}
+
+.blog-toc__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-body);
+  font-weight: 600;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-3);
+}
+
+.blog-toc__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.blog-toc__list li {
+  margin-bottom: var(--space-2);
+}
+
+.blog-toc__list a {
+  font-size: var(--text-body-sm);
+  color: var(--wave-blue);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.blog-toc__list a:hover {
+  color: var(--ocean-deep);
+  text-decoration: underline;
+}
+
+.blog-toc__list a::before {
+  content: "→";
+  color: var(--sunset-gold);
+  font-weight: 600;
+}

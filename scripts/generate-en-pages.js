@@ -33,7 +33,7 @@ const pages = [
     ptPath: 'index.html',
     enPath: 'en/index.html',
     title: 'Boat Rental in Rio de Janeiro | WeBoat Brasil',
-    description: 'Boat rental in Rio de Janeiro with 5 own boats. Private boat trips for parties, birthdays, and bachelorette parties. 1,000+ 5-star reviews. Book now!',
+    description: 'Boat rental in Rio de Janeiro with 5 own boats. 2,500+ trips completed and 1,000+ 5-star reviews. Book now!',
     keywords: 'boat rental rio de janeiro, boat trip rio, rent a boat rio, marina da gloria boat, private boat charter rio, birthday party boat, bachelorette party boat rio',
     waMessage: 'Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]',
     css: 'home',
@@ -2642,7 +2642,7 @@ const pages = [
     css: 'sobre',
     contentBlocks: [
       // Schema.org main description (must come first — longest strings)
-      ['"description": "A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Oferece passeios privativos para festas, despedidas de solteira, aniversários e eventos corporativos. Fundada em 2021, realizou mais de 1.000 passeios."', '"description": "WeBoat Brasil is a boat rental company in Rio de Janeiro, based at Marina da Gloria. We offer private trips for parties, bachelorette parties, birthdays and corporate events. Founded in 2021, we have completed over 1,000 trips."'],
+      ['"description": "A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Oferece passeios privativos para festas, despedidas de solteira, aniversários e eventos corporativos. Fundada em 2021, realizou mais de 2.500 passeios."', '"description": "WeBoat Brasil is a boat rental company in Rio de Janeiro, based at Marina da Gloria. We offer private trips for parties, bachelorette parties, birthdays and corporate events. Founded in 2021, we have completed over 2,500 trips."'],
       // Schema.org service descriptions (shared across about, faq, contact, how-it-works)
       ['"description": "Lanchas de 10 a 65 pessoas, próprias e parceiras, com combustível, marinheiro e seguro inclusos"', '"description": "Boats for 10 to 65 people, own and partner, with fuel, captain and insurance included"'],
       ['"description": "Churrasco, open bar, decoração, DJ e fotógrafo para passeios de lancha"', '"description": "BBQ, open bar, decoration, DJ and photographer for boat trips"'],
@@ -2675,7 +2675,7 @@ const pages = [
       ['<strong>A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória.</strong>', '<strong>WeBoat Brasil is a boat rental company in Rio de Janeiro, based at Marina da Gloria.</strong>'],
       ['Oferece passeios privativos para festas, despedidas de solteira, aniversários e eventos corporativos.', 'We offer private trips for parties, bachelorette parties, birthdays and corporate events.'],
       ['Opera <a href="/en/boats/">5 lanchas próprias</a> e trabalha com parceiros para atender grupos de 10 a 65 pessoas.', 'We operate <a href="/en/boats/">5 own boats</a> and work with partners to serve groups of 10 to 65 people.'],
-      ['Fundada em 2021, realizou mais de 1.000 passeios com <a href="/en/routes/">6 roteiros diferentes</a> e acumula mais de 1000 avaliações 5 estrelas no Google.', 'Founded in 2021, we have completed over 1,000 trips across <a href="/en/routes/">6 different routes</a> with over 1,000 five-star Google reviews.'],
+      ['Fundada em 2021, realizou mais de 2.500 passeios com <a href="/en/routes/">6 roteiros diferentes</a> e acumula mais de 1000 avaliações 5 estrelas no Google.', 'Founded in 2021, we have completed over 2,500 trips across <a href="/en/routes/">6 different routes</a> with over 1,000 five-star Google reviews.'],
       ['<strong>Localização:</strong> Marina da Glória, Loja 06 - Rio de Janeiro, RJ', '<strong>Location:</strong> Marina da Gloria, Store 06 - Rio de Janeiro, RJ'],
       ['<strong>Capacidade:</strong> Lanchas de 10 a 65 pessoas', '<strong>Capacity:</strong> Boats for 10 to 65 people'],
       ['<strong>Preços:</strong> A partir de R$ 2.300 (5 horas)', '<strong>Prices:</strong> From R$ 2,300 (5 hours)'],
@@ -2731,7 +2731,7 @@ const pages = [
       ['Preços claros, sem surpresas. Tudo que está incluso é informado antes da reserva. Política de cancelamento justa.', 'Clear prices, no surprises. Everything included is disclosed before booking. Fair cancellation policy.'],
       // Answer Capsules
       ['O que é a WeBoat Brasil?', 'What is WeBoat Brasil?'],
-      ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Fundada em 2021, opera 5 lanchas próprias e trabalha com parceiros para atender grupos de 10 a 65 pessoas. Já realizou mais de 1.000 passeios e acumula mais de 1000 avaliações 5 estrelas no Google.', 'WeBoat Brasil is a boat rental company in Rio de Janeiro, based at Marina da Gloria. Founded in 2021, it operates 5 own boats and works with partners to serve groups of 10 to 65 people. It has completed over 1,000 trips and has over 1,000 five-star Google reviews.'],
+      ['A WeBoat Brasil é uma empresa de aluguel de lanchas no Rio de Janeiro, com sede na Marina da Glória. Fundada em 2021, opera 5 lanchas próprias e trabalha com parceiros para atender grupos de 10 a 65 pessoas. Já realizou mais de 2.500 passeios e acumula mais de 1000 avaliações 5 estrelas no Google.', 'WeBoat Brasil is a boat rental company in Rio de Janeiro, based at Marina da Gloria. Founded in 2021, it operates 5 own boats and works with partners to serve groups of 10 to 65 people. It has completed over 2,500 trips and has over 1,000 five-star Google reviews.'],
       ['Quais serviços a WeBoat oferece?', 'What services does WeBoat offer?'],
       ['A WeBoat oferece passeios de lancha privativos com 6 roteiros diferentes pela Baía de Guanabara, Copacabana, Ilhas Cagarras e Niterói. Todos os passeios incluem combustível, marinheiro habilitado, som Bluetooth, coletes e seguro. Serviços extras incluem churrasco, open bar, decoração, DJ e fotógrafo profissional.', 'WeBoat offers private boat trips with 6 different routes through Guanabara Bay, Copacabana, Cagarras Islands and Niteroi. All trips include fuel, licensed captain, Bluetooth speakers, life jackets and insurance. Extra services include BBQ, open bar, decoration, DJ and professional photographer.'],
       ['Quanto custa alugar uma lancha na WeBoat?', 'How much does it cost to rent a boat at WeBoat?'],
@@ -4117,7 +4117,7 @@ const translations = [
   ['não incluso', 'not included'],
 
   // --- Social proof ---
-  ['+1.000 passeios realizados', '1,000+ trips completed'],
+  ['+2.500 passeios realizados', '2,500+ trips completed'],
   ['+1000 avaliações 5 estrelas', '1,000+ 5-star reviews'],
   ['avaliações 5 estrelas', '5-star reviews'],
   ['passeios realizados', 'trips completed'],
