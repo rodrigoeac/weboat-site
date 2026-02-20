@@ -29,7 +29,7 @@ Site: https://www.weboatbrasil.com.br
 +2.500 passeios realizados
 5 lanchas próprias (+ parceiros de 10 a 65 pessoas)
 +1000 avaliações 5 estrelas
-+18.000 seguidores no Instagram
++20.000 seguidores no Instagram
 ```
 
 ### Documentação de Referência
