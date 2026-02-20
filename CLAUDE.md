@@ -756,7 +756,16 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 ---
 
 **Última atualização:** 19 Fevereiro 2026
-**Versão:** 5.1 - Checkout step 3 redesign + language selector fix
+**Versão:** 5.2 - Header mobile WhatsApp + visual fixes
+
+### Changelog v5.2 (Header + Visual)
+- **Mobile Header**: WhatsApp button now visible on all pages (icon-only, 40px circular green button). Order: logo (left) | lang-switcher, hamburger, WhatsApp (right). CSS-only, applies to all 118 pages.
+- **Header Breathing Room**: Taller header when not scrolled (72px desktop, 62px mobile), compact on scroll (60px/54px) with smooth transition.
+- **Header WhatsApp Button**: Reduced padding/height (36px min-height, 8px 16px padding) for better fit in header.
+- **Checkout Header**: Matches site header dimensions (72px/62px, logo 34px/28px). Removed inline style overrides.
+- **Hero Highlights**: Removed "A partir de R$ 2.300" text from homepage banner (PT/EN/ES).
+- **Economia Badge**: Restored on combos section with proper CSS styling (id moved to section for correct selector match).
+- **Cache Headers**: CSS/JS cache reduced from 300s to 60s to prevent stale deployments.
 
 ### Changelog v5.1 (Checkout + Language Fix)
 - **Checkout Step 3**: Complete redesign with full reservation summary (boat, route with full name, date, time, guests), value breakdown (base price, services, discount, total, paid, remaining), ponto de encontro card with 4-step instructions + video link button, "O que trazer" list, "Salvar Reserva" button (.txt download). Applied to PT/EN/ES.
