@@ -405,6 +405,30 @@
       "es": "/es/blog/barrio-gloria-alrededores-paseo-lancha/"
     },
     {
+      "id": "blog-payment-tourists",
+      "pt": "/blog/pagamento-moeda-turistas-lancha/",
+      "en": "/en/blog/payment-guide-tourists-boat-trip-brazil/",
+      "es": "/es/blog/pago-moneda-turistas-lancha/"
+    },
+    {
+      "id": "blog-getting-to-rio",
+      "pt": "/blog/como-chegar-rio-de-janeiro-turistas/",
+      "en": "/en/blog/getting-to-rio-de-janeiro-guide/",
+      "es": "/es/blog/como-llegar-rio-de-janeiro-guia/"
+    },
+    {
+      "id": "blog-hotels-marina",
+      "pt": "/blog/hoteis-perto-marina-da-gloria/",
+      "en": "/en/blog/hotels-near-marina-da-gloria/",
+      "es": "/es/blog/hoteles-cerca-marina-gloria/"
+    },
+    {
+      "id": "blog-weather-guide",
+      "pt": "/blog/clima-previsao-tempo-passeio-lancha/",
+      "en": "/en/blog/weather-guide-boat-trips-rio/",
+      "es": "/es/blog/clima-prevision-tiempo-paseo-lancha/"
+    },
+    {
       "id": "privacy",
       "pt": "/politica-de-privacidade/",
       "en": "/en/privacy-policy/",
