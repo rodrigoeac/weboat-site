@@ -756,7 +756,14 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 ---
 
 **Última atualização:** 19 Fevereiro 2026
-**Versão:** 5.0 - GEO/SEO audit (22 fixes: answer capsules, mobile UX, internal linking, schema, visual)
+**Versão:** 5.1 - Checkout step 3 redesign + language selector fix
+
+### Changelog v5.1 (Checkout + Language Fix)
+- **Checkout Step 3**: Complete redesign with full reservation summary (boat, route with full name, date, time, guests), value breakdown (base price, services, discount, total, paid, remaining), ponto de encontro card with 4-step instructions + video link button, "O que trazer" list, "Salvar Reserva" button (.txt download). Applied to PT/EN/ES.
+- **Language Selector Fix**: EN checkout had PT link pointing to `/en/checkout/` (loop), ES had PT pointing to `/es/checkout/` (loop). Fixed all links and `--active` states in EN and ES checkout pages.
+- **Checkout Header**: Logo reduced from 150x40 to 105x28 + inline `style="height:28px;width:auto;"` to override cached HTML attributes. Header padding reduced.
+- **checkout.js**: Added `ROTEIRO_NOMES` mapping, `renderConfirmation(data)` for step 3 population, `saveReservation(data)` for .txt file download.
+- **checkout.css**: Added `.proposal-summary__row` styles for value breakdown display.
 
 ### Changelog v5.0 (Audit v5.0)
 - **Mobile UX:** font sizes min 13-14px, sticky sidebar static on mobile, footer 768px breakpoint, header 54px on mobile
