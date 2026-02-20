@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
-  <link rel="stylesheet" href="/css/pages/checkout.css?v=1771304076">
+  <link rel="stylesheet" href="/css/pages/checkout.css?v=1771304077">
 
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous" defer></script>
@@ -41,10 +41,10 @@
   <!-- Header simplificado -->
   <header class="checkout-header">
     <a href="/es/" aria-label="WeBoat Brasil">
-      <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
+      <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="105" height="28" style="height:28px;width:auto;">
     </a>
     <div class="checkout-lang" id="checkout-lang">
-      <a href="/es/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
+      <a href="/checkout/" class="checkout-lang__option">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1E7;&#x1F1F7;</span>
         <span>PT</span>
       </a>
@@ -52,7 +52,7 @@
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1FA;&#x1F1F8;</span>
         <span>EN</span>
       </a>
-      <a href="/es/checkout/" class="checkout-lang__option">
+      <a href="/es/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1EA;&#x1F1F8;</span>
         <span>ES</span>
       </a>
@@ -319,19 +319,61 @@
           <div class="confirmation__check">
             <i class="ph ph-check-circle" aria-hidden="true"></i>
           </div>
-          <h2 class="confirmation__title">¡Reserva Confirmada!</h2>
+          <h2 class="confirmation__title">Reserva Confirmada!</h2>
           <p class="confirmation__subtitle">
-            Enviamos la confirmación a <strong id="confirmation-email"></strong>
+            Enviamos la confirmacion a <strong id="confirmation-email"></strong>
           </p>
+        </div>
 
-          <div class="confirmation__actions">
-            <a href="https://wa.me/5521977724114?text=¡Hola! Mi reserva fue confirmada y me gustaría más información sobre el embarque." class="btn btn-whatsapp" target="_blank" rel="noopener">
-              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chatear por WhatsApp
-            </a>
-            <a href="/es/" class="btn btn-secondary">
-              Volver al Sitio
-            </a>
+        <!-- Resumen de la reserva -->
+        <div id="confirmation-summary" style="text-align:left; margin-top:var(--space-4);">
+          <div class="proposal-summary" style="margin-bottom:var(--space-4);">
+            <div class="proposal-summary__row"><span>Lancha</span><strong id="conf-boat"></strong></div>
+            <div class="proposal-summary__row"><span>Ruta</span><strong id="conf-route"></strong></div>
+            <div class="proposal-summary__row"><span>Fecha</span><strong id="conf-date"></strong></div>
+            <div class="proposal-summary__row"><span>Turno</span><strong id="conf-time"></strong></div>
+            <div class="proposal-summary__row"><span>Personas</span><strong id="conf-people"></strong></div>
           </div>
+          <div class="proposal-breakdown" id="conf-breakdown"></div>
+        </div>
+
+        <!-- Punto de Encuentro -->
+        <div id="conf-meeting-point" style="text-align:left; background:var(--sand); border-radius:var(--radius-lg); padding:var(--space-4); margin-top:var(--space-4);">
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Lugar de Embarque</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin:0 0 var(--space-3); line-height:1.5;">Marina da Gloria — Av. Infante Dom Henrique, S/N, Local 06, Gloria, Rio de Janeiro - RJ</p>
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Punto de Encuentro</h3>
+          <ol style="font-size:var(--text-body-sm); color:var(--charcoal); margin:0; padding-left:var(--space-4); line-height:1.8;">
+            <li>Al llegar al estacionamiento, baje las escaleras de acceso.</li>
+            <li>A la izquierda de las escaleras, ubique la <strong>cabina de seguridad</strong> en la entrada del Pier.</li>
+            <li>Espere al capitan de su embarcacion en el punto de encuentro — estara con <strong>uniforme de la empresa</strong>.</li>
+            <li>El capitan lo asistira en el embarque.</li>
+          </ol>
+          <a href="https://weboatbrasil.com.br/ponto-de-encontro" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; margin-top:var(--space-3); text-align:center;">
+            Vea el video: Como llegar
+          </a>
+          <p style="font-size:var(--text-body-sm); color:var(--ocean-deep); font-weight:600; margin:var(--space-3) 0 0; text-align:center;">Llegue 15 minutos antes del horario del paseo.</p>
+        </div>
+
+        <!-- Que traer -->
+        <div style="text-align:left; margin-top:var(--space-4);">
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Que traer</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--charcoal); line-height:1.8; margin:0;">
+            Protector solar (preferiblemente biodegradable)<br>
+            Ropa de bano + cambio de ropa<br>
+            Toalla<br>
+            Documento con foto<br>
+            Medicamento para mareo (si es necesario)
+          </p>
+        </div>
+
+        <!-- Acciones -->
+        <div class="confirmation__actions" style="margin-top:var(--space-6);">
+          <button id="conf-save-btn" class="btn btn-primary" style="width:100%;">
+            <i class="ph ph-download-simple" aria-hidden="true"></i> Guardar Reserva
+          </button>
+          <a href="https://wa.me/5521977724114?text=Hola! Mi reserva fue confirmada y me gustaria mas informacion." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chatear por WhatsApp
+          </a>
         </div>
       </div>
     </div>
@@ -339,8 +381,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/js/cpf-validator.js?v=1771304076" defer></script>
-  <script src="/js/checkout.js?v=1771304076" defer></script>
+  <script src="/js/cpf-validator.js?v=1771304077" defer></script>
+  <script src="/js/checkout.js?v=1771304077" defer></script>
   <script>
   (function(){var q=location.search;if(q){var links=document.querySelectorAll('#checkout-lang a');links.forEach(function(a){a.href+=q;});}})();
   </script>

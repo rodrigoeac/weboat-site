@@ -29,7 +29,7 @@
   <link rel="stylesheet" href="/css/variables.css">
   <link rel="stylesheet" href="/css/components.css" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="/css/components.css"></noscript>
-  <link rel="stylesheet" href="/css/pages/checkout.css?v=1771304076">
+  <link rel="stylesheet" href="/css/pages/checkout.css?v=1771304077">
 
   <!-- Phosphor Icons -->
   <script src="https://unpkg.com/@phosphor-icons/web@2.1.2/src/index.js" integrity="sha384-J7cw2fbG1T4C5MirTVUxsZGaMfw2m0XsCgOQEqUvB1OF9VIsHWuZF1GmyVRzs7eu" crossorigin="anonymous" defer></script>
@@ -41,14 +41,14 @@
   <!-- Header simplificado -->
   <header class="checkout-header">
     <a href="/en/" aria-label="WeBoat Brasil">
-      <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="150" height="40">
+      <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil" width="105" height="28" style="height:28px;width:auto;">
     </a>
     <div class="checkout-lang" id="checkout-lang">
-      <a href="/en/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
+      <a href="/checkout/" class="checkout-lang__option">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1E7;&#x1F1F7;</span>
         <span>PT</span>
       </a>
-      <a href="/en/checkout/" class="checkout-lang__option">
+      <a href="/en/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1FA;&#x1F1F8;</span>
         <span>EN</span>
       </a>
@@ -323,15 +323,57 @@
           <p class="confirmation__subtitle">
             We sent the confirmation to <strong id="confirmation-email"></strong>
           </p>
+        </div>
 
-          <div class="confirmation__actions">
-            <a href="https://wa.me/5521977724114?text=Hello! My reservation was confirmed and I would like more information about boarding." class="btn btn-whatsapp" target="_blank" rel="noopener">
-              <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chat on WhatsApp
-            </a>
-            <a href="/en/" class="btn btn-secondary">
-              Back to Website
-            </a>
+        <!-- Reservation summary -->
+        <div id="confirmation-summary" style="text-align:left; margin-top:var(--space-4);">
+          <div class="proposal-summary" style="margin-bottom:var(--space-4);">
+            <div class="proposal-summary__row"><span>Boat</span><strong id="conf-boat"></strong></div>
+            <div class="proposal-summary__row"><span>Route</span><strong id="conf-route"></strong></div>
+            <div class="proposal-summary__row"><span>Date</span><strong id="conf-date"></strong></div>
+            <div class="proposal-summary__row"><span>Schedule</span><strong id="conf-time"></strong></div>
+            <div class="proposal-summary__row"><span>Guests</span><strong id="conf-people"></strong></div>
           </div>
+          <div class="proposal-breakdown" id="conf-breakdown"></div>
+        </div>
+
+        <!-- Meeting Point -->
+        <div id="conf-meeting-point" style="text-align:left; background:var(--sand); border-radius:var(--radius-lg); padding:var(--space-4); margin-top:var(--space-4);">
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Boarding Location</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin:0 0 var(--space-3); line-height:1.5;">Marina da Gloria — Av. Infante Dom Henrique, S/N, Store 06, Gloria, Rio de Janeiro - RJ</p>
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Meeting Point</h3>
+          <ol style="font-size:var(--text-body-sm); color:var(--charcoal); margin:0; padding-left:var(--space-4); line-height:1.8;">
+            <li>Upon arrival at the parking area, take the stairs down.</li>
+            <li>To the left of the stairs, find the <strong>security booth</strong> at the Pier entrance.</li>
+            <li>Wait for your boat captain at the meeting point — he will be wearing a <strong>company uniform</strong>.</li>
+            <li>The captain will assist you with boarding.</li>
+          </ol>
+          <a href="https://weboatbrasil.com.br/ponto-de-encontro" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; margin-top:var(--space-3); text-align:center;">
+            Watch the video: How to get there
+          </a>
+          <p style="font-size:var(--text-body-sm); color:var(--ocean-deep); font-weight:600; margin:var(--space-3) 0 0; text-align:center;">Please arrive 15 minutes before departure.</p>
+        </div>
+
+        <!-- What to bring -->
+        <div style="text-align:left; margin-top:var(--space-4);">
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">What to bring</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--charcoal); line-height:1.8; margin:0;">
+            Sunscreen (biodegradable preferred)<br>
+            Swimwear + change of clothes<br>
+            Towel<br>
+            Photo ID<br>
+            Motion sickness medication (if needed)
+          </p>
+        </div>
+
+        <!-- Actions -->
+        <div class="confirmation__actions" style="margin-top:var(--space-6);">
+          <button id="conf-save-btn" class="btn btn-primary" style="width:100%;">
+            <i class="ph ph-download-simple" aria-hidden="true"></i> Save Reservation
+          </button>
+          <a href="https://wa.me/5521977724114?text=Hello! My reservation was confirmed and I would like more information." class="btn btn-whatsapp" target="_blank" rel="noopener">
+            <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chat on WhatsApp
+          </a>
         </div>
       </div>
     </div>
@@ -339,8 +381,8 @@
   </div>
 
   <!-- Scripts -->
-  <script src="/js/cpf-validator.js?v=1771304076" defer></script>
-  <script src="/js/checkout.js?v=1771304076" defer></script>
+  <script src="/js/cpf-validator.js?v=1771304077" defer></script>
+  <script src="/js/checkout.js?v=1771304077" defer></script>
   <script>
   (function(){var q=location.search;if(q){var links=document.querySelectorAll('#checkout-lang a');links.forEach(function(a){a.href+=q;});}})();
   </script>
