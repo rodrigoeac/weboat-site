@@ -27,6 +27,7 @@
 .checkout-header__logo {
   height: 34px;
   width: auto;
+  margin-left: var(--space-2);
 }
 
 @media (max-width: 1023px) {
