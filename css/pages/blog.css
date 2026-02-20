@@ -483,11 +483,24 @@
    ============================================ */
 .blog-featured {
   margin-bottom: var(--space-8);
+  background: var(--pearl-gray);
+  padding: var(--space-8) 0;
+}
+
+.blog-featured__label {
+  font-size: var(--text-caption);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--sunset-gold);
+  margin-bottom: var(--space-4);
 }
 
 .blog-featured .blog-card {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
+  box-shadow: var(--shadow-lg);
+  border: none;
 }
 
 .blog-featured .blog-card__image {
