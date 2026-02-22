@@ -45,7 +45,7 @@ const pages = [
       ['Marinheiro WeBoat com camisa da empresa e Cristo Redentor ao fundo', 'Marinero WeBoat con camisa de la empresa y Cristo Redentor al fondo'],
       ['Churrasco sendo preparado a bordo da lancha', 'Asado siendo preparado a bordo de la lancha'],
       ['Amigas brindando com drinks no open bar da lancha', 'Amigas brindando con drinks en el open bar de la lancha'],
-      ['Combo churrasco e open bar na lancha', 'Combo asado y open bar en la lancha'],
+      ['All inclusive na lancha', 'All inclusive en la lancha'],
       ['Decoração de aniversário na lancha com balões verdes e letreiro Happy Birthday', 'Decoración de cumpleaños en la lancha con globos verdes y letrero Happy Birthday'],
       ['Catamarã Oceano - Maior embarcação para 50-65 pessoas', 'Catamarán Oceano - Mayor embarcación para 50-65 personas'],
       // Visible FAQ continuation (non-bold text after <strong> block)
@@ -201,7 +201,7 @@ const pages = [
       ['Carnes premium preparadas a bordo durante seu passeio. Churrasqueiro dedicado incluso.', 'Carnes premium preparadas a bordo durante su paseo. Asador dedicado incluido.'],
       ['Drinks clássicos e cerveja gelada durante todo o passeio. Barman incluso.', 'Tragos clásicos y cerveza helada durante todo el paseo. Barman incluido.'],
       ['Mais Pedido', 'Más Solicitado'],
-      ['Combo Churrasco + Open Bar', 'Combo Asado + Open Bar'],
+      ['All Inclusive', 'All Inclusive'],
       ['A combinação perfeita: churrasco completo com open bar durante todo o passeio.', 'La combinación perfecta: asado completo con open bar durante todo el paseo.'],
       ['Decoração e Festas', 'Decoración y Fiestas'],
       ['Decoração temática para aniversários, despedidas e pedidos de casamento.', 'Decoración temática para cumpleaños, despedidas y propuestas de matrimonio.'],
@@ -2287,7 +2287,7 @@ const pages = [
       ['Serviço completo de churrasco durante seu passeio de lancha no Rio de Janeiro. Kit Simples (R$ 100-150/pessoa) ou Kit com Acompanhamentos (R$ 145-160/pessoa).', 'Servicio completo de asado durante su paseo en lancha en Río de Janeiro. Kit Sencillo (R$ 100-150/persona) o Kit con Acompañamientos (R$ 145-160/persona).'],
       ['Serviço de open bar com barman profissional. Básico (R$ 135-150/pessoa) ou Premium (R$ 160-180/pessoa).', 'Servicio de open bar con barman profesional. Básico (R$ 135-150/persona) o Premium (R$ 160-180/persona).'],
       ['Decoração personalizada para aniversários e despedidas. Kit Despedida (R$ 135-150/pessoa) ou Kit Festa Premium (R$ 1.850-2.500).', 'Decoración personalizada para cumpleaños y despedidas. Kit Despedida (R$ 135-150/persona) o Kit Fiesta Premium (R$ 1.850-2.500).'],
-      ['Pacote completo com churrasco e open bar. Básico (R$ 205-230/pessoa) ou Premium (R$ 220-250/pessoa).', 'Paquete completo con asado y open bar. Básico (R$ 205-230/persona) o Premium (R$ 220-250/persona).'],
+      ['Pacote completo com churrasco e open bar. Básico (R$ 205-230/pessoa) ou Premium (R$ 220-250/pessoa).', 'Paquete All Inclusive con asado y open bar. All Inclusive Básico (R$ 205-230/persona) o All Inclusive Premium (R$ 220-250/persona).'],
       ['DJ profissional com equipamento completo para animar sua festa na lancha.', 'DJ profesional con equipo completo para animar su fiesta en la lancha.'],
       ['Fotógrafo profissional para registrar todos os momentos do seu passeio.', 'Fotógrafo profesional para capturar todos los momentos de su paseo.'],
       // Schema.org FAQ question (must match EXACT PT source with "ou" not "e")
@@ -2324,12 +2324,12 @@ const pages = [
       ['Transforme seu passeio em uma experiência completa com nossos serviços adicionais.', 'Transforme su paseo en una experiencia completa con nuestros servicios adicionales.'],
       ['Valores variam de acordo com a quantidade de pessoas e embarcação.', 'Los precios varían según la cantidad de personas y la embarcación.'],
       ['*Valores variam de acordo com a quantidade de pessoas e tamanho da lancha. Entre em contato para um orçamento personalizado.', '*Los precios varían según la cantidad de personas y tamaño de la lancha. Contáctenos para un presupuesto personalizado.'],
-      // Combos
-      ['Combos com Desconto', 'Combos con Descuento'],
-      ['Combine churrasco e open bar e economize! Pacotes completos para você não se preocupar com nada.', '¡Combine asado y open bar y ahorre! Paquetes completos para que no se preocupe por nada.'],
-      ['Combine churrasco e open bar e economize!', '¡Combine asado y open bar y ahorre!'],
+      // All Inclusive (renamed from Combos)
+      ['Combos com Desconto', 'All Inclusive'],
+      ['Combine churrasco e open bar e economize! Pacotes completos para você não se preocupar com nada.', 'La combinación perfecta: asado completo con open bar durante todo el paseo.'],
+      ['Combine churrasco e open bar e economize!', 'La combinación perfecta: asado completo con open bar.'],
       ['Preço varia conforme quantidade de pessoas', 'El precio varía según la cantidad de personas'],
-      ['Contratar Combo', 'Contratar Combo'],
+      ['Contratar Combo', 'Contratar All Inclusive'],
       ['Montar meu pacote com todos os serviços', 'Armar mi paquete con todos los servicios'],
       ['Montar meu pacote', 'Armar mi paquete'],
       // v5.0: H2s as questions (must come BEFORE shorter substrings like 'O que inclui')
@@ -4791,7 +4791,7 @@ const translations = [
   ['Quanto custa o churrasco na lancha?', '¿Cuánto cuesta el asado en la lancha?'],
   ['O que inclui o open bar?', '¿Qué incluye el open bar?'],
   ['Quais opções de decoração estão disponíveis?', '¿Qué opciones de decoración están disponibles?'],
-  ['Quais combos com desconto posso escolher?', '¿Qué combos con descuento puedo elegir?'],
+  ['Quais combos com desconto posso escolher?', '¿Qué paquetes All Inclusive puedo elegir?'],
 
   // Roteiro pages — H2s as questions
   ['O que esperar deste passeio?', '¿Qué esperar de este paseo?'],
@@ -5229,7 +5229,7 @@ pages.forEach(page => {
     // Servicios page WA links (must come BEFORE the generic short "sobre" entry)
     ['Olá! Gostaria de informações sobre o serviço de churrasco na lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre el servicio de asado en la lancha. [via site - es]'],
     ['Olá! Gostaria de informações sobre o serviço de open bar na lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre el servicio de open bar en la lancha. [via site - es]'],
-    ['Olá! Gostaria de informações sobre os combos de churrasco + open bar. [via site - servicos]', '¡Hola! Me gustaría información sobre los combos de asado + open bar. [via site - es]'],
+    ['Olá! Gostaria de informações sobre os pacotes all inclusive. [via site - servicos]', '¡Hola! Me gustaría información sobre los paquetes all inclusive. [via site - es]'],
     ['Olá! Gostaria de informações sobre as mesas especiais (queijos e vinhos / snacks). [via site - servicos]', '¡Hola! Me gustaría información sobre las mesas especiales (quesos y vinos / snacks). [via site - es]'],
     ['Olá! Gostaria de informações sobre decoração para festa na lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre decoración para fiesta en la lancha. [via site - es]'],
     ['Olá! Gostaria de informações sobre os serviços extras para o passeio de lancha. [via site - servicos]', '¡Hola! Me gustaría información sobre los servicios extras para el paseo en lancha. [via site - es]'],

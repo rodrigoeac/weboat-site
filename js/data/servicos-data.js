@@ -10,7 +10,7 @@
 
   var CATEGORIAS = [
     { id: 'churrasco', nome: 'Churrasco', icone: 'ph-fire' },
-    { id: 'combo', nome: 'Combos', icone: 'ph-package' },
+    { id: 'combo', nome: 'All Inclusive', icone: 'ph-package' },
     { id: 'openbar', nome: 'Open Bar', icone: 'ph-wine' },
     { id: 'mesa', nome: 'Mesas', icone: 'ph-fork-knife' },
     { id: 'decoracao', nome: 'Decoração', icone: 'ph-confetti' },
@@ -65,10 +65,10 @@
       ],
     },
 
-    // 4. Combo Churrasco + Open Bar Básico
+    // 4. All Inclusive Básico
     {
       id: 'combo-churrasco-openbar-basico',
-      nome: 'Combo Churrasco + Open Bar Básico',
+      nome: 'All Inclusive Básico',
       categoria: 'combo',
       tipo: 'por_pessoa',
       premium: false,
@@ -82,15 +82,15 @@
       ],
     },
 
-    // 5. Combo Churrasco + Open Bar Premium
+    // 5. All Inclusive Premium
     {
       id: 'combo-churrasco-openbar-premium',
-      nome: 'Combo Churrasco + Open Bar Premium',
+      nome: 'All Inclusive Premium',
       categoria: 'combo',
       tipo: 'por_pessoa',
       premium: true,
       excluiTaxaChurrasqueira: true,
-      descricao: 'Churrasco completo + open bar premium com drinks especiais e cervejas importadas',
+      descricao: 'All Inclusive Premium: churrasco completo + open bar com drinks especiais e cervejas importadas',
       faixasPreco: [
         { min: 7, max: 10, valorPorPessoa: 250 },
         { min: 11, max: 15, valorPorPessoa: 240 },
@@ -306,10 +306,10 @@
     var temOpenBarIndividual = servicosSelecionados.some(function (s) { return s.categoria === 'openbar'; });
 
     if (temCombo && temChurrascoIndividual) {
-      avisos.push(t('configConflictComboChurrasco', 'Você selecionou um Combo que já inclui churrasco junto com um serviço de churrasco avulso. Considere remover um deles para economizar.'));
+      avisos.push(t('configConflictComboChurrasco', 'Você selecionou um All Inclusive que já inclui churrasco junto com um serviço de churrasco avulso. Considere remover um deles para economizar.'));
     }
     if (temCombo && temOpenBarIndividual) {
-      avisos.push(t('configConflictComboOpenBar', 'Você selecionou um Combo que já inclui open bar junto com um open bar avulso. Considere remover um deles para economizar.'));
+      avisos.push(t('configConflictComboOpenBar', 'Você selecionou um All Inclusive que já inclui open bar junto com um open bar avulso. Considere remover um deles para economizar.'));
     }
 
     return avisos;

@@ -58,7 +58,7 @@ const pages = [
       ['WeBoat Malik - Eventos para 35-50 pessoas', 'WeBoat Malik - Event boat for 35-50 people'],
       ['Schaefer 62 Fly na Marina da Glória com Pão de Açúcar ao fundo', 'Schaefer 62 Fly at Marina da Gloria with Sugarloaf Mountain in the background'],
       ['Churrasco sendo preparado a bordo da lancha', 'BBQ being prepared on board the boat'],
-      ['Combo churrasco e open bar na lancha', 'BBQ and open bar combo on the boat'],
+      ['All inclusive na lancha', 'All inclusive on the boat'],
       // Partner yacht features (not protected)
       ['60 pés, ar-condicionado, gerador, acabamento premium', '60 feet, air conditioning, generator, premium finish'],
       ['62 pés, flybridge, ar-condicionado, gerador', '62 feet, flybridge, air conditioning, generator'],
@@ -223,7 +223,7 @@ const pages = [
       ['Carnes premium preparadas a bordo durante seu passeio. Churrasqueiro dedicado incluso.', 'Premium meats prepared on board during your trip. Dedicated BBQ chef included.'],
       ['Drinks clássicos e cerveja gelada durante todo o passeio. Barman incluso.', 'Classic cocktails and cold beer throughout the trip. Bartender included.'],
       ['Mais Pedido', 'Most Popular'],
-      ['Combo Churrasco + Open Bar', 'BBQ + Open Bar Combo'],
+      ['All Inclusive', 'All Inclusive'],
       ['A combinação perfeita: churrasco completo com open bar durante todo o passeio.', 'The perfect combination: complete BBQ with open bar throughout the trip.'],
       ['Decoração e Festas', 'Decoration and Parties'],
       ['Decoração temática para aniversários, despedidas e pedidos de casamento.', 'Themed decoration for birthdays, bachelorette parties and wedding proposals.'],
@@ -2459,7 +2459,7 @@ const pages = [
       ['"description": "Serviço completo de churrasco durante seu passeio de lancha no Rio de Janeiro. Kit Simples (R$ 100-150/pessoa) ou Kit com Acompanhamentos (R$ 145-160/pessoa)."', '"description": "Complete BBQ service during your boat trip in Rio de Janeiro. Simple Kit (R$ 100-150/person) or Kit with Sides (R$ 145-160/person)."'],
       ['"description": "Serviço de open bar com barman profissional. Básico (R$ 135-150/pessoa) ou Premium (R$ 160-180/pessoa)."', '"description": "Professional open bar service with bartender. Basic (R$ 135-150/person) or Premium (R$ 160-180/person)."'],
       ['"description": "Decoração personalizada para aniversários e despedidas. Kit Despedida (R$ 135-150/pessoa) ou Kit Festa Premium (R$ 1.850-2.500)."', '"description": "Custom decoration for birthdays and bachelorette parties. Bachelorette Kit (R$ 135-150/person) or Premium Party Kit (R$ 1,850-2,500)."'],
-      ['"description": "Pacote completo com churrasco e open bar. Básico (R$ 205-230/pessoa) ou Premium (R$ 220-250/pessoa)."', '"description": "Complete package with BBQ and open bar. Basic (R$ 205-230/person) or Premium (R$ 220-250/person)."'],
+      ['"description": "Pacote completo com churrasco e open bar. Básico (R$ 205-230/pessoa) ou Premium (R$ 220-250/pessoa)."', '"description": "All Inclusive package with BBQ and open bar. All Inclusive Basic (R$ 205-230/person) or All Inclusive Premium (R$ 220-250/person)."'],
       ['"description": "DJ profissional com equipamento completo para animar sua festa na lancha."', '"description": "Professional DJ with full equipment to liven up your party on the boat."'],
       ['"description": "Fotógrafo profissional para registrar todos os momentos do seu passeio."', '"description": "Professional photographer to capture every moment of your trip."'],
       // *** LONG entries MUST come BEFORE shorter substrings to avoid partial corruption ***
@@ -2473,11 +2473,11 @@ const pages = [
       ['Churrasco, open bar, decoração e mais', 'BBQ, open bar, decoration and more'],
       ['Transforme seu passeio em uma experiência completa com nossos serviços adicionais.', 'Transform your trip into a complete experience with our additional services.'],
       ['Valores variam de acordo com a quantidade de pessoas e embarcação.', 'Prices vary according to the number of people and vessel.'],
-      // Combos
-      ['Combos com Desconto', 'Discounted Combos'],
-      ['Combine churrasco e open bar e economize!', 'Combine BBQ and open bar and save!'],
+      // Combos (renamed to All Inclusive)
+      ['Combos com Desconto', 'All Inclusive'],
+      ['Combine churrasco e open bar e economize!', 'The perfect combination: complete BBQ with open bar throughout the trip.'],
       ['Preço varia conforme quantidade de pessoas', 'Price varies by number of people'],
-      ['Contratar Combo', 'Book Combo'],
+      ['Contratar Combo', 'Book All Inclusive'],
       ['Montar meu pacote com todos os serviços', 'Build my package with all services'],
       ['Montar meu pacote', 'Build My Package'],
       // v5.0: H2s as questions (must come BEFORE shorter substrings like 'O que inclui')
@@ -2557,7 +2557,7 @@ const pages = [
       ['DJ profissional com equipamento completo para animar sua festa na lancha.', 'Professional DJ with full equipment to liven up your party on the boat.'],
       ['Fotógrafo profissional para registrar todos os momentos do seu passeio.', 'Professional photographer to capture every moment of your trip.'],
       ['Serviço de open bar com barman profissional. Básico (R$ 135-150/pessoa) ou Premium (R$ 160-180/pessoa).', 'Professional open bar service with bartender. Basic (R$ 135-150/person) or Premium (R$ 160-180/person).'],
-      ['Pacote completo com churrasco e open bar. Básico (R$ 205-230/pessoa) ou Premium (R$ 220-250/pessoa).', 'Complete package with BBQ and open bar. Basic (R$ 205-230/person) or Premium (R$ 220-250/person).'],
+      ['Pacote completo com churrasco e open bar. Básico (R$ 205-230/pessoa) ou Premium (R$ 220-250/pessoa).', 'All Inclusive package with BBQ and open bar. All Inclusive Basic (R$ 205-230/person) or All Inclusive Premium (R$ 220-250/person).'],
       ['Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e segurança.', 'Boat rentals in Rio de Janeiro. Private trips with comfort and safety.'],
       // FAQ Schema answers (long strings first)
       ['Recomendamos contratar os serviços com pelo menos 48h de antecedência para garantir disponibilidade e preparação adequada. Em casos urgentes, entre em contato pelo WhatsApp para verificar possibilidades.', 'We recommend booking services at least 48 hours in advance to ensure availability and proper preparation. In urgent cases, contact us via WhatsApp to check options.'],
@@ -2568,7 +2568,7 @@ const pages = [
       // Hero & intro (long strings first)
       ['Serviços para seu Passeio', 'Services for Your Boat Trip'],
       ['*Valores variam de acordo com a quantidade de pessoas e tamanho da lancha. Entre em contato para um orçamento personalizado.', '*Prices vary according to the number of people and boat size. Contact us for a customized quote.'],
-      // Combos section (long strings first)
+      // All Inclusive section (long strings first)
       ['Pacotes completos para você não se preocupar com nada.', 'Complete packages so you don\'t have to worry about a thing.'],
       ['Kit churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas.', 'Full BBQ kit + premium open bar with special drinks, sparkling wine and fresh fruits.'],
       // BBQ section (long strings first)
@@ -5186,7 +5186,7 @@ const translations = [
   ['Quanto custa o churrasco na lancha?', 'How much does the BBQ on board cost?'],
   ['O que inclui o open bar?', 'What does the open bar include?'],
   ['Quais opções de decoração estão disponíveis?', 'What decoration options are available?'],
-  ['Quais combos com desconto posso escolher?', 'What discount combos can I choose?'],
+  ['Quais combos com desconto posso escolher?', 'What All Inclusive packages can I choose?'],
 
   // Roteiro pages — H2s as questions
   ['O que esperar deste passeio?', 'What to expect from this trip?'],
@@ -5710,7 +5710,7 @@ pages.forEach(page => {
     ['Olá! Gostaria de informações sobre iates de luxo para passeio no Rio de Janeiro. [via site - home]', 'Hello! I would like information about luxury yachts for trips in Rio de Janeiro. [via site - home]'],
     ['Olá! Quero reservar um passeio de lancha. Qual a disponibilidade? [via site - roteiros]', 'Hello! I want to book a boat trip. What is the availability? [via site - roteiros]'],
     ['Olá! Quero reservar um passeio de lancha. [via site - como-funciona]', 'Hello! I want to book a boat trip. [via site - como-funciona]'],
-    ['Olá! Gostaria de informações sobre os combos de churrasco + open bar. [via site - servicos]', 'Hello! I would like information about the BBQ + open bar combos. [via site - servicos]'],
+    ['Olá! Gostaria de informações sobre os pacotes all inclusive. [via site - servicos]', 'Hello! I would like information about the all inclusive packages. [via site - servicos]'],
     ['Olá! Gostaria de informações sobre as mesas especiais (queijos e vinhos / snacks). [via site - servicos]', 'Hello! I would like information about the special tables (cheese & wine / snacks). [via site - servicos]'],
     ['Olá! Tenho interesse na lancha', 'Hello! I am interested in the boat'],
     ['Poderia me enviar mais informações?', 'Could you send me more information?'],

@@ -13,7 +13,7 @@
   var CATEGORIAS = {
     churrasco: { nome: 'Churrasco', icone: 'ph-fire' },
     openbar: { nome: 'Open Bar', icone: 'ph-beer-bottle' },
-    combo: { nome: 'Combos', icone: 'ph-package' },
+    combo: { nome: 'All Inclusive', icone: 'ph-package' },
     mesa: { nome: 'Mesas & Petiscos', icone: 'ph-wine' },
     decoracao: { nome: 'Decoração', icone: 'ph-balloon' },
     entretenimento: { nome: 'Entretenimento', icone: 'ph-music-notes' },
@@ -113,10 +113,10 @@
       ],
     },
 
-    // ==================== COMBOS ====================
+    // ==================== ALL INCLUSIVE ====================
     {
       id: 'combo-churrasco-openbar-basico',
-      nome: 'Combo Churrasco + Open Bar Básico',
+      nome: 'All Inclusive Básico',
       categoria: 'combo',
       tipo: 'por_pessoa',
       cobraHoraExtra: true,
@@ -139,7 +139,7 @@
     },
     {
       id: 'combo-churrasco-openbar-premium',
-      nome: 'Combo Churrasco + Open Bar Premium',
+      nome: 'All Inclusive Premium',
       categoria: 'combo',
       tipo: 'por_pessoa',
       cobraHoraExtra: true,

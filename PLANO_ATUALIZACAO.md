@@ -31,8 +31,8 @@
 | Churrasco | Com Acompanhamentos | R$ 145-160/pessoa |
 | Open Bar | Básico | R$ 135-150/pessoa |
 | Open Bar | Premium | R$ 160-180/pessoa |
-| Combo | Churrasco + Open Bar Básico | R$ 205-230/pessoa |
-| Combo | Churrasco + Open Bar Premium | R$ 220-250/pessoa |
+| All Inclusive | All Inclusive Básico | R$ 205-230/pessoa |
+| All Inclusive | All Inclusive Premium | R$ 220-250/pessoa |
 | Mesa | Queijos & Vinhos | R$ 115-140/pessoa |
 | Mesa | Snacks Premium | R$ 120-150/pessoa |
 | Decoração | Kit Festa Premium | R$ 1.850-2.500 |
@@ -236,7 +236,7 @@
 - [x] Kit com Acompanhamentos: R$ 145-160/pessoa
 - [x] Open Bar Básico: R$ 135-150/pessoa
 - [x] Open Bar Premium: R$ 160-180/pessoa
-- [x] Combos: R$ 205-250/pessoa
+- [x] All Inclusive: R$ 205-250/pessoa
 - [x] Mesas: Queijos & Vinhos (R$ 115-140), Snacks Premium (R$ 120-150)
 - [x] Decoração: Kit Despedida (R$ 135-150), Kit Festa Premium (R$ 1.850-2.500)
 - [x] DJ com Equipamento: R$ 1.500
@@ -694,7 +694,7 @@
 | B | B7 | `chore(roteiros): verificar e ajustar SEO e schemas` |
 | C | C1 | `feat(servicos): atualizar seção de churrasco` |
 | C | C2 | `feat(servicos): atualizar seção de open bar` |
-| C | C3 | `feat(servicos): atualizar combos, mesas e decoração` |
+| C | C3 | `feat(servicos): atualizar all inclusive, mesas e decoração` |
 | C | C4 | `feat(servicos): atualizar entretenimento e adicionar mini FAQ` |
 | C | C5 | `chore(servicos): verificar e ajustar SEO e schemas` |
 | D | D1 | `feat(home): atualizar cards com preços reais` |
@@ -1013,12 +1013,12 @@
 
 ---
 
-### K10: Popular Seção Serviços com Combo
+### K10: Popular Seção Serviços com All Inclusive
 **Arquivo:** `index.html`
-- [ ] Adicionar card de Combo (Churrasco + Open Bar) na seção de serviços
-- [ ] Incluir preços de combo
+- [ ] Adicionar card de All Inclusive (All Inclusive) na seção de serviços
+- [ ] Incluir preços de All Inclusive
 
-**COMMIT:** `feat(home): adicionar combo na seção de serviços`
+**COMMIT:** `feat(home): adicionar all inclusive na seção de serviços`
 
 ---
 
@@ -1066,7 +1066,7 @@
 - [x] K7 - Remover valores roteiros ✅
 - [x] K8 - Dois valores home ✅
 - [x] K9 - Destaque eventos ✅
-- [x] K10 - Combo serviços ✅
+- [x] K10 - All Inclusive serviços ✅
 - [x] K11 - Seção clientes ✅
 - [x] K12 - Google Reviews ✅
 - [x] K13 - Doc gerenciamento ✅
@@ -1152,12 +1152,12 @@
 
 ---
 
-### L9: Reordenar Seção Serviços - Combo Primeiro
+### L9: Reordenar Seção Serviços - All Inclusive Primeiro
 **Arquivo:** `pages/servicos.html`
-- [ ] Mover opção de Combo para antes de "Churrasco na Lancha"
-- [ ] Combo deve ser a primeira opção mostrada
+- [ ] Mover opção de All Inclusive para antes de "Churrasco na Lancha"
+- [ ] All Inclusive deve ser a primeira opção mostrada
 
-**COMMIT:** `feat(servicos): reordenar combo como primeira opção`
+**COMMIT:** `feat(servicos): reordenar all inclusive como primeira opção`
 
 ---
 
@@ -1255,7 +1255,7 @@
 - [x] L6 - CTA extra roteiros
 - [x] L7 - Horários réveillon
 - [x] L8 - Padding timeline réveillon
-- [x] L9 - Reordenar serviços (combo primeiro)
+- [x] L9 - Reordenar serviços (all inclusive primeiro)
 - [x] L10 - "A partir de" serviços home
 - [x] L11 - Obs valores página serviços
 - [x] L12 - Ajustar despedida solteira

@@ -755,8 +755,15 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 
 ---
 
-**Última atualização:** 20 Fevereiro 2026
-**Versão:** 5.5 - Blog expansion (43 articles × 3 langs), social proof update, mobile logo
+**Última atualização:** 21 Fevereiro 2026
+**Versão:** 5.6 - All Inclusive rename (60 files), generation scripts updated
+
+### Changelog v5.6 (All Inclusive Rename)
+- **Service Rename**: "Combo Churrasco + Open Bar" → "All Inclusive" across entire site (60 files, 390+ line changes)
+- **Scope**: Services pages (PT/EN/ES), blog articles (43×3 langs), blog indexes, homepages, generation scripts, i18n strings, Schema.org JSON-LD
+- **Preserved**: URL slugs unchanged for SEO continuity; standalone "Churrasco"/"Open Bar"/"BBQ"/"Asado"/"Barra Libre" services NOT renamed
+- **Scripts updated**: `generate-en-pages.js` and `generate-es-pages.js` translation blocks updated for All Inclusive naming
+- **Variants**: "All Inclusive Básico" (PT/ES), "All Inclusive Basic" (EN), "All Inclusive Premium" (all langs)
 
 ### Changelog v5.5 (Blog Expansion + Social Proof + Mobile Logo)
 - **Blog Expansion**: 43 articles × 3 languages = 129 new blog pages. Topics: tourism guides, occasions, safety, food/drink, photography, etiquette, seasonal events. Blog index pages updated with full article listings.

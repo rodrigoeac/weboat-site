@@ -105,7 +105,7 @@
 
         var catNames = {
           churrasco: t('catChurrasco', 'Churrasco'),
-          combo: t('catCombos', 'Combos'),
+          combo: t('catCombos', 'All Inclusive'),
           openbar: t('catOpenBar', 'Open Bar'),
           mesa: t('catMesas', 'Mesas'),
           decoracao: t('catDecoracao', 'Decoração'),
