@@ -2464,7 +2464,7 @@ const pages = [
       ['"description": "Fotógrafo profissional para registrar todos os momentos do seu passeio."', '"description": "Professional photographer to capture every moment of your trip."'],
       // *** LONG entries MUST come BEFORE shorter substrings to avoid partial corruption ***
       ['Churrasco, open bar, decoração e mais. Transforme seu passeio em uma experiência completa e inesquecível.', 'BBQ, open bar, decoration and more. Transform your trip into a complete and unforgettable experience.'],
-      ['Kit churrasco completo + open bar com cerveja, caipirinha, refrigerante e água. Preço varia conforme quantidade de pessoas.', 'Full BBQ kit + open bar with beer, caipirinha, soda and water. Price varies by number of people.'],
+      ['Kit churrasco completo + open bar com cerveja, caipirinha, refrigerante e água. Preço varia conforme quantidade de pessoas.', 'Full BBQ + open bar with beer, caipirinha, soda and water. Price varies by number of people.'],
       ['Cerveja, caipirinha, refrigerante, água e gelo. Preço varia conforme quantidade de pessoas.', 'Beer, caipirinha, soda, water and ice. Price varies by number of people.'],
       ['Música ao vivo com DJ profissional e equipamento completo para animar sua festa.', 'Live music with a professional DJ and full equipment to liven up your party.'],
       ['Selecione serviços ao lado para ver o resumo aqui.', 'Select services to see the summary here.'],
@@ -2483,9 +2483,9 @@ const pages = [
       // v5.0: H2s as questions (must come BEFORE shorter substrings like 'O que inclui')
       ['O que inclui o open bar?', 'What does the open bar include?'],
       // BBQ Kits
-      ['Escolha seu Kit', 'Choose Your Kit'],
-      ['Kit Simples', 'Simple Kit'],
-      ['Kit com Acompanhamentos', 'Kit with Sides'],
+      ['Escolha seu Kit', 'Choose Your BBQ Type'],
+      ['Kit Simples', 'Simple BBQ Kit'],
+      ['Kit com Acompanhamentos', 'BBQ with Sides'],
       ['O que inclui', 'What is included'],
       ['Churrasqueiro profissional', 'Professional grill master'],
       ['Carnes selecionadas', 'Selected meats'],
@@ -2570,11 +2570,11 @@ const pages = [
       ['*Valores variam de acordo com a quantidade de pessoas e tamanho da lancha. Entre em contato para um orçamento personalizado.', '*Prices vary according to the number of people and boat size. Contact us for a customized quote.'],
       // All Inclusive section (long strings first)
       ['Pacotes completos para você não se preocupar com nada.', 'Complete packages so you don\'t have to worry about a thing.'],
-      ['Kit churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas.', 'Full BBQ kit + premium open bar with special drinks, sparkling wine and fresh fruits.'],
+      ['Kit churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas.', 'Full BBQ + premium open bar with special drinks, sparkling wine and fresh fruit.'],
       // BBQ section (long strings first)
       ['Nada combina mais com um dia no mar do que um churrasco! Nosso serviço inclui churrasqueiro profissional, carnes selecionadas, acompanhamentos e todo o equipamento necessário. Você só precisa relaxar e aproveitar.', 'Nothing goes better with a day at sea than a BBQ! Our service includes a professional grill master, selected meats, side dishes and all the necessary equipment. You just need to relax and enjoy.'],
-      ['Picanha, linguiça, frango e pão de alho. Preço varia conforme quantidade de pessoas.', 'Picanha, sausage, chicken and garlic bread. Price varies by number of people.'],
-      ['Picanha premium, costela, coração, queijo coalho, saladas completas e sobremesa.', 'Premium picanha, ribs, chicken hearts, grilled cheese, full salads and dessert.'],
+      ['Picanha, linguiça, frango e pão de alho. Preço varia conforme quantidade de pessoas.', 'Picanha, chorizo, chicken, and garlic bread. Price varies by number of people.'],
+      ['Picanha premium, costela, coração, queijo coalho, saladas completas e sobremesa.', 'Premium picanha, chorizo, chicken hearts, grilled cheese, full salads and dessert.'],
       ['Mais Pedido', 'Most Popular'],
       ['Churrasco na Lancha', 'BBQ on Board'],
       // Open bar section (long strings first)
@@ -4831,7 +4831,7 @@ const translations = [
   ['Recomendamos', 'We recommend'],
 
   // --- Services page sections ---
-  ['Escolha seu Kit', 'Choose Your Kit'],
+  ['Escolha seu Kit', 'Choose Your BBQ Type'],
   ['Escolha seu Pacote', 'Choose Your Package'],
   ['Escolha seu pacote', 'Choose your package'],
   ['Confira mais opções', 'Check out more options'],

@@ -38,7 +38,7 @@
         { min: 21, max: 25, valorPorPessoa: 100 },
       ],
       inclui: [
-        'Picanha', 'Contra filé', 'Linguiça', 'Drumete',
+        'Picanha', 'Chorizo', 'Linguiça', 'Drumete',
         'Pão de alho', 'Farofa', 'Refrigerantes', 'Água',
       ],
     },
@@ -61,7 +61,7 @@
         { min: 21, max: 25, valorPorPessoa: 145 },
       ],
       inclui: [
-        'Picanha', 'Chorizo', 'Linguiça Toscana', 'Drumete',
+        'Picanha', 'Chorizo', 'Linguiça Toscana', 'Drumete', 'Coração', 'Queijo coalho',
         'Arroz', 'Farofa', 'Vinagrete', 'Salada batata',
         'Refrigerantes', 'Sucos',
       ],

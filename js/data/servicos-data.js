@@ -37,7 +37,7 @@
       tipo: 'por_pessoa',
       premium: false,
       excluiTaxaChurrasqueira: true,
-      descricao: 'Picanha, contra filé, linguiça, drumete, pão de alho e bebidas',
+      descricao: 'Picanha, chorizo, linguiça, drumete, pão de alho e bebidas',
       faixasPreco: [
         { min: 5, max: 5, valorPorPessoa: 150 },
         { min: 6, max: 7, valorPorPessoa: 140 },
@@ -56,7 +56,7 @@
       tipo: 'por_pessoa',
       premium: false,
       excluiTaxaChurrasqueira: true,
-      descricao: 'Carnes premium, aperitivos, acompanhamentos e bebidas',
+      descricao: 'Picanha premium, chorizo, coração, queijo coalho, saladas e bebidas',
       faixasPreco: [
         { min: 7, max: 10, valorPorPessoa: 160 },
         { min: 11, max: 15, valorPorPessoa: 155 },
@@ -73,7 +73,7 @@
       tipo: 'por_pessoa',
       premium: false,
       excluiTaxaChurrasqueira: true,
-      descricao: 'Churrasco completo + open bar com drinks e cervejas nacionais',
+      descricao: 'Churrasco completo + open bar com cerveja, caipirinha, refrigerante e água',
       faixasPreco: [
         { min: 7, max: 10, valorPorPessoa: 230 },
         { min: 11, max: 15, valorPorPessoa: 220 },
@@ -90,7 +90,7 @@
       tipo: 'por_pessoa',
       premium: true,
       excluiTaxaChurrasqueira: true,
-      descricao: 'All Inclusive Premium: churrasco completo + open bar com drinks especiais e cervejas importadas',
+      descricao: 'Churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas',
       faixasPreco: [
         { min: 7, max: 10, valorPorPessoa: 250 },
         { min: 11, max: 15, valorPorPessoa: 240 },

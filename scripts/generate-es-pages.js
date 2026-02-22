@@ -2309,8 +2309,8 @@ const pages = [
       ['DJ profissional tocando na lancha com headphones e controladora', 'DJ profesional tocando en la lancha con auriculares y controladora'],
       ['Casal em silhueta ao pôr do sol com Cristo Redentor ao fundo na lancha', 'Pareja en silueta al atardecer con Cristo Redentor al fondo en la lancha'],
       // Combo option descriptions (visible text)
-      ['Kit churrasco completo + open bar com cerveja, caipirinha, refrigerante e água. Preço varia conforme quantidade de pessoas.', 'Kit asado completo + open bar con cerveza, caipirinha, refresco y agua. El precio varía según la cantidad de personas.'],
-      ['Kit churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas.', 'Kit asado completo + open bar premium con drinks especiales, espumante y frutas frescas.'],
+      ['Kit churrasco completo + open bar com cerveja, caipirinha, refrigerante e água. Preço varia conforme quantidade de pessoas.', 'Asado completo + open bar con cerveza, caipirinha, refresco y agua. El precio varía según la cantidad de personas.'],
+      ['Kit churrasco completo + open bar premium com drinks especiais, espumante e frutas frescas.', 'Asado completo + open bar premium con drinks especiales, espumante y frutas frescas.'],
       // BBQ description (long string must come before shorter substrings)
       ['Nada combina mais com um dia no mar do que um churrasco! Nosso serviço inclui churrasqueiro profissional, carnes selecionadas, acompanhamentos e todo o equipamento necessário. Você só precisa relaxar e aproveitar.', '¡Nada combina más con un día en el mar que un asado! Nuestro servicio incluye asador profesional, carnes seleccionadas, acompañamientos y todo el equipamiento necesario. Solo necesita relajarse y disfrutar.'],
       ['Churrasco na Lancha', 'Asado en la Lancha'],
@@ -2335,9 +2335,9 @@ const pages = [
       // v5.0: H2s as questions (must come BEFORE shorter substrings like 'O que inclui')
       ['O que inclui o open bar?', '¿Qué incluye el open bar?'],
       // BBQ Kits
-      ['Escolha seu Kit', 'Elija su Kit'],
-      ['Kit Simples', 'Kit Sencillo'],
-      ['Kit com Acompanhamentos', 'Kit con Acompañamientos'],
+      ['Escolha seu Kit', 'Elija su tipo de asado'],
+      ['Kit Simples', 'Kit Asado Simple'],
+      ['Kit com Acompanhamentos', 'Asado con Acompañamientos'],
       ['O que inclui', 'Qué incluye'],
       ['Churrasqueiro profissional', 'Asador profesional'],
       ['Carnes selecionadas', 'Carnes seleccionadas'],
@@ -4406,7 +4406,7 @@ const translations = [
   ['Recomendamos', 'Recomendamos'],
 
   // --- Services page sections ---
-  ['Escolha seu Kit', 'Elija su Kit'],
+  ['Escolha seu Kit', 'Elija su tipo de asado'],
   ['Escolha seu Pacote', 'Elija su Paquete'],
   ['Escolha seu pacote', 'Elija su paquete'],
   ['Confira mais opções', 'Descubra más opciones'],
@@ -4576,7 +4576,7 @@ const translations = [
   // Longer strings MUST come before shorter substrings
 
   // Service item descriptions (services page)
-  ['Picanha, linguiça, frango e pão de alho', 'Picanha, chorizo, pollo y pan de ajo'],
+  ['Picanha, linguiça, frango e pão de alho', 'Picanha, chorizo, longaniza, pollo y pan de ajo'],
   ['Cerveja, caipirinha, refrigerante, água e gelo', 'Cerveza, caipirinha, refresco, agua y hielo'],
   ['Todas as bebidas', 'Todas las bebidas'],
   ['Gelo à vontade', 'Hielo a voluntad'],
@@ -4675,7 +4675,7 @@ const translations = [
   // servicios page
   ['Opções sofisticadas para quem prefere algo mais leve ou quer complementar o passeio', 'Opciones sofisticadas para quienes prefieren algo más ligero o quieren complementar el paseo'],
   ['Respostas rápidas para as perguntas mais comuns', 'Respuestas rápidas a las preguntas más comunes'],
-  ['Picanha premium, costela, coração, queijo coalho, saladas completas e sobremesa', 'Picanha premium, costilla, corazón, queso coalho, ensaladas completas y postre'],
+  ['Picanha premium, costela, coração, queijo coalho, saladas completas e sobremesa', 'Picanha premium, chorizo, corazón, queso coalho, ensaladas completas y postre'],
 
   // carnaval FAQ
   ['Consulte-nos por WhatsApp para encontrar a melhor opção para su grupo', 'Consúltenos por WhatsApp para encontrar la mejor opción para su grupo'],
