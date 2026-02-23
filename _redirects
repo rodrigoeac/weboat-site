@@ -80,3 +80,8 @@
 /pages/blog/guia-marina-da-gloria.html        /blog/guia-marina-da-gloria/        301
 /pages/blog/                                  /blog/                              301
 /pages/blog/index.html                        /blog/                              301
+
+# WeBoat 420 — old Ibiza 42 slug redirects
+/lanchas/weboat-ibiza-42/           /lanchas/weboat-420/         301
+/en/boats/weboat-ibiza-42/          /en/boats/weboat-420/        301
+/es/lanchas/weboat-ibiza-42/        /es/lanchas/weboat-420/      301

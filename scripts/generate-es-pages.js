@@ -611,7 +611,7 @@ const pages = [
   },
   {
     ptPath: 'lanchas/weboat-ibiza-42/index.html',
-    esPath: 'es/lanchas/weboat-ibiza-42/index.html',
+    esPath: 'es/lanchas/weboat-420/index.html',
     title: 'WeBoat 420 - Lancha con Flybridge para 12 Personas | WeBoat Brasil',
     description: 'Alquile la WeBoat 420 con flybridge exclusivo para hasta 12 personas. Desde R$ 2.700.',
     keywords: 'weboat ibiza 42, lancha flybridge rio, lancha 12 personas',
