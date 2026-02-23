@@ -153,6 +153,11 @@ Todos os passeios saem da Marina da Glória, no bairro da Glória, Rio de Janeir
 - [Home](https://www.weboatbrasil.com.br/): Visão geral da WeBoat
 - [Nossa Frota](https://www.weboatbrasil.com.br/lanchas/): Todas as 26 lanchas disponíveis
 - [Comparativo de Lanchas](https://www.weboatbrasil.com.br/lanchas/comparativo/): Compare lanchas lado a lado
+- [WeBoat 32](https://www.weboatbrasil.com.br/lanchas/weboat-32/): Lancha própria, 15 pessoas, a partir de R$ 2.300
+- [WeBoat 390](https://www.weboatbrasil.com.br/lanchas/weboat-390/): Lancha própria, 16 pessoas, a partir de R$ 2.600
+- [WeBoat Oceanic 36](https://www.weboatbrasil.com.br/lanchas/weboat-oceanic-36/): Lancha própria, 14 pessoas, a partir de R$ 2.900
+- [WeBoat 420](https://www.weboatbrasil.com.br/lanchas/weboat-420/): Lancha própria com flybridge exclusivo, 12 pessoas, a partir de R$ 2.700
+- [WeBoat Rio Star 50](https://www.weboatbrasil.com.br/lanchas/weboat-rio-star-50/): Lancha própria maior, 22 pessoas, a partir de R$ 4.000
 - [Roteiros](https://www.weboatbrasil.com.br/roteiros/): 6 roteiros com trajeto e preços
 - [Serviços Extras](https://www.weboatbrasil.com.br/servicos/): Churrasco, open bar, decoração
 - [Como Funciona](https://www.weboatbrasil.com.br/como-funciona/): Passo a passo para reservar
