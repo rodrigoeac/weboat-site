@@ -151,7 +151,7 @@
 
     {
       id: 'weboat-ibiza-42',
-      nome: 'WeBoat Ibiza 42',
+      nome: 'WeBoat 420',
       isPropria: true,
       capacidade: { base: 12, maxima: 12 },
       churrasqueira: 250,

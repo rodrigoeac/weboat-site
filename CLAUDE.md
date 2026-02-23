@@ -173,7 +173,7 @@ weboat-site/
 | WeBoat 32 | 15 pessoas | R$ 2.300 | R$ 2.700 | Melhor custo-benefício |
 | WeBoat 390 | 16 pessoas | R$ 2.600 | R$ 3.100 | Versátil, ótima para festas |
 | WeBoat Oceanic 36 | 14 pessoas | R$ 2.900 | R$ 3.400 | Conforto premium |
-| WeBoat Ibiza 42 | 12 pessoas | R$ 2.700 | R$ 3.200 | Flybridge exclusivo |
+| WeBoat 420 | 12 pessoas | R$ 2.700 | R$ 3.200 | Flybridge exclusivo |
 | WeBoat Rio Star 50 | 22 pessoas | R$ 4.000 | R$ 4.500 | Maior capacidade |
 
 ### Lanchas Parceiras

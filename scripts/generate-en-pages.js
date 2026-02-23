@@ -658,25 +658,25 @@ const pages = [
   {
     ptPath: 'lanchas/weboat-ibiza-42/index.html',
     enPath: 'en/boats/weboat-ibiza-42/index.html',
-    title: 'WeBoat Ibiza 42 - Boat with Flybridge for 12 People | WeBoat Brasil',
-    description: 'Rent the WeBoat Ibiza 42 with exclusive flybridge for up to 12 people. From R$ 2,700. Fuel and captain included.',
+    title: 'WeBoat 420 - Boat with Flybridge for 12 People | WeBoat Brasil',
+    description: 'Rent the WeBoat 420 with exclusive flybridge for up to 12 people. From R$ 2,700. Fuel and captain included.',
     keywords: 'weboat ibiza 42, flybridge boat rio, boat 12 people, exclusive boat rental',
-    waMessage: 'Hello! I am interested in the WeBoat Ibiza 42 boat. Could you send me more information? [via site - en]',
+    waMessage: 'Hello! I am interested in the WeBoat 420 boat. Could you send me more information? [via site - en]',
     css: 'lancha-detalhe',
     contentBlocks: [
       // Alt text (full PT source strings — prevent mixed PT/EN)
-      ['WeBoat Ibiza 42 - Vista principal com Pao de Acucar', 'WeBoat Ibiza 42 - Main view with Sugarloaf Mountain'],
-      ['WeBoat Ibiza 42 - Cockpit com cozinha', 'WeBoat Ibiza 42 - Cockpit with kitchen'],
-      ['WeBoat Ibiza 42 - Mesa de jantar', 'WeBoat Ibiza 42 - Dining table'],
+      ['WeBoat 420 - Vista principal com Pao de Acucar', 'WeBoat 420 - Main view with Sugarloaf Mountain'],
+      ['WeBoat 420 - Cockpit com cozinha', 'WeBoat 420 - Cockpit with kitchen'],
+      ['WeBoat 420 - Mesa de jantar', 'WeBoat 420 - Dining table'],
       // Schema.org entries (must be first, long strings)
-      ['"name": "WeBoat Ibiza 42 - Lancha com Flybridge"', '"name": "WeBoat Ibiza 42 - Boat with Flybridge"'],
+      ['"name": "WeBoat 420 - Lancha com Flybridge"', '"name": "WeBoat 420 - Boat with Flybridge"'],
       ['"description": "Lancha de 42 pes com flybridge exclusivo para ate 12 pessoas. Solario, churrasqueira e vista panoramica."', '"description": "42-foot boat with exclusive flybridge for up to 12 people. Solarium, BBQ grill and panoramic views."'],
       // Schema.org FAQ names + answers
-      ['"name": "O que esta incluso no aluguel da WeBoat Ibiza 42?"', '"name": "What is included in the WeBoat Ibiza 42 rental?"'],
-      ['"text": "O aluguel da WeBoat Ibiza 42 inclui: combustivel para o roteiro contratado, tripulacao habilitada (marinheiro), tapete flutuante, macarroes flutuantes, som com Bluetooth, coolers e coletes salva-vidas."', '"text": "The WeBoat Ibiza 42 rental includes: fuel for the booked route, licensed crew (captain), floating mat, pool noodles, Bluetooth speakers, coolers and life jackets."'],
-      ['"name": "O que e o flybridge da WeBoat Ibiza 42?"', '"name": "What is the flybridge on the WeBoat Ibiza 42?"'],
-      ['"text": "O flybridge e um segundo andar ao ar livre na parte superior da lancha, com solario, churrasqueira e vista panoramica 360 graus. E o diferencial exclusivo da Ibiza 42 entre as lanchas proprias WeBoat."', '"text": "The flybridge is an outdoor second deck on top of the boat, with a solarium, BBQ grill and 360-degree panoramic view. It is the exclusive feature of the Ibiza 42 among WeBoat own boats."'],
-      ['"text": "A WeBoat Ibiza 42 tem capacidade para ate 12 pessoas, incluindo criancas. Essa capacidade e definida pela Marinha do Brasil para garantir conforto e seguranca de todos a bordo."', '"text": "The WeBoat Ibiza 42 has capacity for up to 12 people, including children. This capacity is defined by the Brazilian Navy to ensure comfort and safety for everyone on board."'],
+      ['"name": "O que esta incluso no aluguel da WeBoat 420?"', '"name": "What is included in the WeBoat 420 rental?"'],
+      ['"text": "O aluguel da WeBoat 420 inclui: combustivel para o roteiro contratado, tripulacao habilitada (marinheiro), tapete flutuante, macarroes flutuantes, som com Bluetooth, coolers e coletes salva-vidas."', '"text": "The WeBoat 420 rental includes: fuel for the booked route, licensed crew (captain), floating mat, pool noodles, Bluetooth speakers, coolers and life jackets."'],
+      ['"name": "O que e o flybridge da WeBoat 420?"', '"name": "What is the flybridge on the WeBoat 420?"'],
+      ['"text": "O flybridge e um segundo andar ao ar livre na parte superior da lancha, com solario, churrasqueira e vista panoramica 360 graus. E o diferencial exclusivo da WeBoat 420 entre as lanchas proprias WeBoat."', '"text": "The flybridge is an outdoor second deck on top of the boat, with a solarium, BBQ grill and 360-degree panoramic view. It is the exclusive feature of the WeBoat 420 among WeBoat own boats."'],
+      ['"text": "A WeBoat 420 tem capacidade para ate 12 pessoas, incluindo criancas. Essa capacidade e definida pela Marinha do Brasil para garantir conforto e seguranca de todos a bordo."', '"text": "The WeBoat 420 has capacity for up to 12 people, including children. This capacity is defined by the Brazilian Navy to ensure comfort and safety for everyone on board."'],
       ['Aluguel de lanchas no Rio de Janeiro. Passeios privativos com conforto e seguranca.', 'Boat rentals in Rio de Janeiro. Private trips with comfort and safety.'],
       ['Flybridge Exclusivo', 'Exclusive Flybridge'],
       ['Lancha com flybridge, solario e churrasqueira', 'Boat with flybridge, sun deck and BBQ grill'],
@@ -694,8 +694,8 @@ const pages = [
       ['*Churrasqueira inclui: Tripulacao, Gelo escama 2x20kg, Gelo filtrado 1x10kg, Carvao', '*BBQ grill includes: Crew, Flake ice 2x20kg, Filtered ice 1x10kg, Charcoal'],
       ['Reservar pelo WhatsApp', 'Book via WhatsApp'],
       ['Montar Proposta', 'Build Proposal'],
-      ['Sobre a WeBoat Ibiza 42', 'About the WeBoat Ibiza 42'],
-      ['A WeBoat Ibiza 42 e a unica lancha propria da frota com flybridge — um segundo andar ao ar livre com solario, churrasqueira e vista panoramica 360 graus. Com 42 pes e capacidade para 12 pessoas, oferece uma experiencia diferenciada para quem busca espaco ao ar livre e conforto.', 'The WeBoat Ibiza 42 is the only own boat in the fleet with a flybridge — an open-air second deck with sun deck, BBQ grill and 360-degree panoramic views. At 42 feet with capacity for 12 people, it offers a unique experience for those seeking outdoor space and comfort.'],
+      ['Sobre a WeBoat 420', 'About the WeBoat 420'],
+      ['A WeBoat 420 e a unica lancha propria da frota com flybridge — um segundo andar ao ar livre com solario, churrasqueira e vista panoramica 360 graus. Com 42 pes e capacidade para 12 pessoas, oferece uma experiencia diferenciada para quem busca espaco ao ar livre e conforto.', 'The WeBoat 420 is the only own boat in the fleet with a flybridge — an open-air second deck with sun deck, BBQ grill and 360-degree panoramic views. At 42 feet with capacity for 12 people, it offers a unique experience for those seeking outdoor space and comfort.'],
       ['Ideal para casais, grupos pequenos exclusivos, churrascos intimos e quem valoriza a experiencia de navegar com vista panoramica do Rio de Janeiro.', 'Ideal for couples, exclusive small groups, intimate BBQs and those who value the experience of sailing with panoramic views of Rio de Janeiro.'],
       ['O que esta incluso', 'What is Included'],
       ['Combustivel para o roteiro', 'Fuel for the route'],
@@ -725,18 +725,18 @@ const pages = [
       ['Outras Lanchas', 'Other Boats'],
       ['A partir de', 'From'],
       ['Duvidas', 'Questions'],
-      ['Perguntas Frequentes sobre a WeBoat Ibiza 42', 'Frequently Asked Questions about the WeBoat Ibiza 42'],
-      ['Quantas pessoas cabem na WeBoat Ibiza 42?', 'How many people fit in the WeBoat Ibiza 42?'],
-      ['A WeBoat Ibiza 42 tem capacidade para ate <strong>12 pessoas</strong>, incluindo criancas. Essa capacidade e definida pela Marinha do Brasil para garantir conforto e seguranca de todos a bordo.', 'The WeBoat Ibiza 42 has capacity for up to <strong>12 people</strong>, including children. This capacity is defined by the Brazilian Navy to ensure comfort and safety for all on board.'],
-      ['A WeBoat Ibiza 42 tem churrasqueira?', 'Does the WeBoat Ibiza 42 have a BBQ grill?'],
+      ['Perguntas Frequentes sobre a WeBoat 420', 'Frequently Asked Questions about the WeBoat 420'],
+      ['Quantas pessoas cabem na WeBoat 420?', 'How many people fit in the WeBoat 420?'],
+      ['A WeBoat 420 tem capacidade para ate <strong>12 pessoas</strong>, incluindo criancas. Essa capacidade e definida pela Marinha do Brasil para garantir conforto e seguranca de todos a bordo.', 'The WeBoat 420 has capacity for up to <strong>12 people</strong>, including children. This capacity is defined by the Brazilian Navy to ensure comfort and safety for all on board.'],
+      ['A WeBoat 420 tem churrasqueira?', 'Does the WeBoat 420 have a BBQ grill?'],
       ['<strong>Sim!</strong> A churrasqueira esta disponivel mediante adicional de <strong>R$ 250</strong>. A taxa inclui comandante preparando o churrasco, 02 sacos de gelo escama e 01 saco de gelo filtrado.', '<strong>Yes!</strong> The BBQ grill is available for an additional fee of <strong>R$ 250</strong>. The fee includes the captain preparing the BBQ, 02 bags of flake ice and 01 bag of filtered ice.'],
       ['O que e o flybridge?', 'What is the flybridge?'],
-      ['O flybridge e um <strong>segundo andar ao ar livre</strong> na parte superior da lancha. Na Ibiza 42, ele conta com solario, churrasqueira e vista panoramica 360 graus. E o diferencial exclusivo desta lancha entre as proprias WeBoat.', 'The flybridge is an <strong>open-air second deck</strong> on top of the boat. On the Ibiza 42, it features a sun deck, BBQ grill and 360-degree panoramic views. It is the exclusive highlight of this boat among WeBoat own boats.'],
+      ['O flybridge e um <strong>segundo andar ao ar livre</strong> na parte superior da lancha. Na WeBoat 420, ele conta com solario, churrasqueira e vista panoramica 360 graus. E o diferencial exclusivo desta lancha entre as proprias WeBoat.', 'The flybridge is an <strong>open-air second deck</strong> on top of the boat. On the WeBoat 420, it features a sun deck, BBQ grill and 360-degree panoramic views. It is the exclusive highlight of this boat among WeBoat own boats.'],
       ['O que esta incluso no aluguel?', 'What is included in the rental?'],
-      ['O aluguel da WeBoat Ibiza 42 inclui: combustivel para o roteiro contratado, tripulacao habilitada, tapete flutuante, macarroes flutuantes, som com Bluetooth, coolers e coletes salva-vidas.', 'The WeBoat Ibiza 42 rental includes: fuel for the booked route, licensed crew, floating mat, pool noodles, Bluetooth speakers, coolers and life jackets.'],
+      ['O aluguel da WeBoat 420 inclui: combustivel para o roteiro contratado, tripulacao habilitada, tapete flutuante, macarroes flutuantes, som com Bluetooth, coolers e coletes salva-vidas.', 'The WeBoat 420 rental includes: fuel for the booked route, licensed crew, floating mat, pool noodles, Bluetooth speakers, coolers and life jackets.'],
       ['Ver Todas as Duvidas', 'View All Questions'],
       ['Monte sua proposta', 'Build your proposal'],
-      ['Personalize seu Passeio na WeBoat Ibiza 42', 'Customize your Trip on the WeBoat Ibiza 42'],
+      ['Personalize seu Passeio na WeBoat 420', 'Customize your Trip on the WeBoat 420'],
       ['Selecione roteiro, servicos e veja o valor em tempo real', 'Select route, services and see the price in real time'],
       ['Escolha o Roteiro', 'Choose the Route'],
       ['Detalhes do Passeio', 'Trip Details'],
@@ -750,7 +750,7 @@ const pages = [
       ['Enviar Proposta pelo WhatsApp', 'Send Proposal via WhatsApp'],
       ['Ate 12 pessoas', 'Up to 12 people'],
       // CTA
-      ['Reserve a WeBoat Ibiza 42 Agora', 'Reserve the WeBoat Ibiza 42 Now'],
+      ['Reserve a WeBoat 420 Agora', 'Reserve the WeBoat 420 Now'],
       ['Navegue com flybridge exclusivo e vista panoramica no Rio de Janeiro.', 'Sail with an exclusive flybridge and panoramic views in Rio de Janeiro.'],
       ['Ver Outras Lanchas', 'View Other Boats'],
     ],
@@ -2647,7 +2647,7 @@ const pages = [
       ['"description": "Lanchas de 10 a 65 pessoas, próprias e parceiras, com combustível, marinheiro e seguro inclusos"', '"description": "Boats for 10 to 65 people, own and partner, with fuel, captain and insurance included"'],
       ['"description": "Churrasco, open bar, decoração, DJ e fotógrafo para passeios de lancha"', '"description": "BBQ, open bar, decoration, DJ and photographer for boat trips"'],
       // Schema.org FAQ answers (plain text — must come first before shorter substrings)
-      ['"text": "A WeBoat possui 5 lanchas próprias (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50 e WeBoat Ibiza 42), com capacidade de 12 a 22 pessoas. Também trabalhamos com lanchas parceiras para grupos de 10 a 65 pessoas."', '"text": "WeBoat has 5 own boats (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50 and WeBoat Ibiza 42), with capacity from 12 to 22 people. We also work with partner boats for groups of 10 to 65 people."'],
+      ['"text": "A WeBoat possui 5 lanchas próprias (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50 e WeBoat 420), com capacidade de 12 a 22 pessoas. Também trabalhamos com lanchas parceiras para grupos de 10 a 65 pessoas."', '"text": "WeBoat has 5 own boats (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50 and WeBoat 420), with capacity from 12 to 22 people. We also work with partner boats for groups of 10 to 65 people."'],
       ['"text": "Estamos na Marina da Glória - Loja 06, no Rio de Janeiro. A localização é privilegiada: ao lado do Aeroporto Santos Dumont, com fácil acesso e estacionamento disponível no local."', '"text": "We are located at Marina da Gloria - Store 06, in Rio de Janeiro. The location is privileged: next to Santos Dumont Airport, with easy access and parking available on site."'],
       ['"text": "Sim! Todos os nossos marinheiros são habilitados pela Marinha do Brasil e passam por treinamentos regulares. A segurança dos passageiros é nossa prioridade."', '"text": "Yes! All our captains are licensed by the Brazilian Navy and undergo regular training. Passenger safety is our priority."'],
       // Schema.org slogan
@@ -2743,7 +2743,7 @@ const pages = [
       // FAQ
       ['Perguntas sobre a WeBoat', 'Questions about WeBoat'],
       ['Quantas lanchas a WeBoat tem?', 'How many boats does WeBoat have?'],
-      ['A WeBoat possui <strong>5 lanchas próprias</strong> (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50 e WeBoat Ibiza 42), com capacidade de 12 a 22 pessoas. Também trabalhamos com <strong>lanchas parceiras</strong> para grupos de 10 a 65 pessoas.', 'WeBoat has <strong>5 own boats</strong> (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50, and WeBoat Ibiza 42), with capacity from 12 to 22 people. We also work with <strong>partner boats</strong> for groups of 10 to 65 people.'],
+      ['A WeBoat possui <strong>5 lanchas próprias</strong> (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50 e WeBoat 420), com capacidade de 12 a 22 pessoas. Também trabalhamos com <strong>lanchas parceiras</strong> para grupos de 10 a 65 pessoas.', 'WeBoat has <strong>5 own boats</strong> (WeBoat 32, WeBoat 390, WeBoat Oceanic 36, WeBoat Rio Star 50, and WeBoat 420), with capacity from 12 to 22 people. We also work with <strong>partner boats</strong> for groups of 10 to 65 people.'],
       ['Onde fica a WeBoat Brasil?', 'Where is WeBoat Brasil located?'],
       ['Estamos na <strong>Marina da Glória - Loja 06</strong>, no Rio de Janeiro. A localização é privilegiada: ao lado do Aeroporto Santos Dumont, com fácil acesso e estacionamento disponível no local.', 'We are at <strong>Marina da Gloria - Store 06</strong> in Rio de Janeiro. The location is prime: next to Santos Dumont Airport, with easy access and parking available on site.'],
       ['Os marinheiros são habilitados?', 'Are the captains licensed?'],
@@ -2777,7 +2777,7 @@ const pages = [
       // Schema.org FAQ answers (plain text — must come first before shorter substrings)
       ['"text": "O aluguel de lancha no Rio de Janeiro na WeBoat começa em R$ 2.300 para passeios de segunda a quinta, e R$ 2.700 de sexta a domingo. O preço varia conforme a capacidade da lancha, roteiro escolhido e duração do passeio. Todas as lanchas incluem combustível, marinheiro, som Bluetooth e coolers."', '"text": "Boat rental in Rio de Janeiro at WeBoat starts at R$ 2,300 for trips Monday to Thursday, and R$ 2,700 Friday to Sunday. The price varies according to the capacity of the boat, chosen route and trip duration. All boats include fuel, captain, Bluetooth speakers and coolers."'],
       ['"text": "Todo aluguel de lancha na WeBoat inclui: combustível para o roteiro escolhido, marinheiro habilitado pela Marinha, tapete flutuante, macarrões flutuantes, som Bluetooth, coolers e seguro obrigatório. Serviços como churrasco, open bar e decoração são opcionais."', '"text": "Every WeBoat boat rental includes: fuel for the chosen route, captain licensed by the Brazilian Navy, floating mat, pool noodles, Bluetooth speakers, coolers and mandatory insurance. Services such as BBQ, open bar and decoration are optional."'],
-      ['"text": "A WeBoat tem 5 lanchas próprias: WeBoat 32 (15 pessoas), WeBoat 390 (16 pessoas), WeBoat Oceanic 36 (14 pessoas), WeBoat Rio Star 50 (22 pessoas) e WeBoat Ibiza 42 (12 pessoas). Para grupos maiores, temos lanchas parceiras de 10 a 65 pessoas."', '"text": "WeBoat has 5 own boats: WeBoat 32 (15 people), WeBoat 390 (16 people), WeBoat Oceanic 36 (14 people), WeBoat Rio Star 50 (22 people) and WeBoat Ibiza 42 (12 people). For larger groups, we have partner boats from 10 to 65 people."'],
+      ['"text": "A WeBoat tem 5 lanchas próprias: WeBoat 32 (15 pessoas), WeBoat 390 (16 pessoas), WeBoat Oceanic 36 (14 pessoas), WeBoat Rio Star 50 (22 pessoas) e WeBoat 420 (12 pessoas). Para grupos maiores, temos lanchas parceiras de 10 a 65 pessoas."', '"text": "WeBoat has 5 own boats: WeBoat 32 (15 people), WeBoat 390 (16 people), WeBoat Oceanic 36 (14 people), WeBoat Rio Star 50 (22 people) and WeBoat 420 (12 people). For larger groups, we have partner boats from 10 to 65 people."'],
       ['"text": "A reserva é confirmada com 50% de sinal via PIX ou transferência. O restante deve ser pago até o momento do embarque. Para cartões de crédito/débito, as taxas são repassadas, com parcelamento em até 12x com juros da operadora."', '"text": "The reservation is confirmed with a 50% deposit via PIX or bank transfer. The remainder must be paid by the time of boarding. For credit/debit cards, card processing fees apply, with installments up to 12x with card operator interest."'],
       ['"text": "A remarcação só é possível em caso de chuva forte que inviabilize o passeio. Tempo nublado ou chuva leve não geram remarcação. Em caso de más condições de navegabilidade, o roteiro pode ser alterado para a Baía de Guanabara."', '"text": "Rescheduling is only possible in case of heavy rain that makes the trip impossible. Cloudy weather or light rain does not qualify for rescheduling. In case of poor sailing conditions, the route may be changed to Guanabara Bay."'],
       ['"text": "A diferença entre os roteiros está no tempo de navegação versus tempo de lancha parada. A duração total do passeio é sempre a mesma (5 horas). Roteiros mais curtos (R1-R2) têm menos tempo navegando e mais tempo de lancha parada para banho. Roteiros mais longos (R4-R5) têm mais tempo navegando e conhecendo mais lugares. Turnos disponíveis: Manhã 09:00-14:00 e Tarde 14:30-19:30."', '"text": "The difference between routes is in sailing time versus time anchored. The total trip duration is always the same (5 hours). Shorter routes (R1-R2) have less sailing time and more time anchored for swimming. Longer routes (R4-R5) have more sailing time, visiting more places. Available shifts: Morning 09:00-14:00 and Afternoon 14:30-19:30."'],
@@ -2894,7 +2894,7 @@ const pages = [
       ['Sobre as Lanchas', 'About the Boats'],
       ['Quantas pessoas cabem em uma lancha?', 'How many people fit in a boat?'],
       ['A WeBoat tem <strong>5 lanchas próprias</strong> para diferentes tamanhos de grupo:', 'WeBoat has <strong>5 own boats</strong> for different group sizes:'],
-      ['<strong>WeBoat Ibiza 42:</strong> Até 12 pessoas (flybridge exclusivo)', '<strong>WeBoat Ibiza 42:</strong> Up to 12 people (exclusive flybridge)'],
+      ['<strong>WeBoat 420:</strong> Até 12 pessoas (flybridge exclusivo)', '<strong>WeBoat 420:</strong> Up to 12 people (exclusive flybridge)'],
       ['Para grupos maiores, temos <strong>lanchas parceiras de 10 a 65 pessoas</strong>. Entre em contato para conhecer as opções!', 'For larger groups, we have <strong>partner boats from 10 to 65 people</strong>. Contact us to learn about the options!'],
       ['<strong>Importante:</strong> Todos contam como passageiros no limite da embarcação, independentemente de idade, peso ou tamanho.', '<strong>Important:</strong> Everyone counts as a passenger toward the vessel limit, regardless of age, weight or size.'],
       // Bathroom
@@ -2911,7 +2911,7 @@ const pages = [
       ['<strong>WeBoat 390:</strong> Mais versátil, até 16 pessoas, ótima para despedidas e festas', '<strong>WeBoat 390:</strong> Most versatile, up to 16 people, great for parties and celebrations'],
       ['<strong>WeBoat Oceanic 36:</strong> Conforto premium, acabamento superior, até 14 pessoas', '<strong>WeBoat Oceanic 36:</strong> Premium comfort, superior finishes, up to 14 people'],
       ['<strong>WeBoat Rio Star 50:</strong> Maior capacidade (22 pessoas), perfeita para grupos grandes', '<strong>WeBoat Rio Star 50:</strong> Largest capacity (22 people), perfect for large groups'],
-      ['<strong>WeBoat Ibiza 42:</strong> Flybridge exclusivo, até 12 pessoas, ideal para casais e grupos pequenos', '<strong>WeBoat Ibiza 42:</strong> Exclusive flybridge, up to 12 people, ideal for couples and small groups'],
+      ['<strong>WeBoat 420:</strong> Flybridge exclusivo, até 12 pessoas, ideal para casais e grupos pequenos', '<strong>WeBoat 420:</strong> Exclusive flybridge, up to 12 people, ideal for couples and small groups'],
       ['Converse com nossa equipe para escolher a melhor opção para seu grupo!', 'Talk to our team to choose the best option for your group!'],
       // Problem with boat
       ['E se houver problema com a lancha no dia?', 'What if there is a problem with the boat on the day?'],
@@ -5078,11 +5078,11 @@ const translations = [
 
   // ─── SCHEMA FAQ NAMES (boat pages) ───
   ['Quanto custa levar mais de 20 pessoas na WeBoat Rio Star 50?', 'How much does it cost to bring more than 20 people on the WeBoat Rio Star 50?'],
-  ['O que e o flybridge da WeBoat Ibiza 42?', 'What is the flybridge on the WeBoat Ibiza 42?'],
+  ['O que e o flybridge da WeBoat 420?', 'What is the flybridge on the WeBoat 420?'],
   ['Qual a diferenca de preco entre dias de semana e fim de semana?', 'What is the price difference between weekdays and weekends?'],
 
   // ─── SCHEMA FAQ ANSWERS (boat pages) ───
-  ['O flybridge e um segundo andar ao ar livre na parte superior da lancha, com solario, churrasqueira e vista panoramica 360 graus. E o diferencial exclusivo da Ibiza 42 entre as lanchas proprias WeBoat.', 'The flybridge is an outdoor second deck on top of the boat, with a solarium, BBQ grill and 360-degree panoramic view. It is the exclusive feature of the Ibiza 42 among WeBoat own boats.'],
+  ['O flybridge e um segundo andar ao ar livre na parte superior da lancha, com solario, churrasqueira e vista panoramica 360 graus. E o diferencial exclusivo da WeBoat 420 entre as lanchas proprias WeBoat.', 'The flybridge is an outdoor second deck on top of the boat, with a solarium, BBQ grill and 360-degree panoramic view. It is the exclusive feature of the WeBoat 420 among WeBoat own boats.'],
   ['Os precos de segunda a quinta sao promocionais: WeBoat 32 (R$ 2.300 vs R$ 2.700), WeBoat 390 (R$ 2.600 vs R$ 3.100), Oceanic 36 (R$ 2.400 vs R$ 2.800), Rio Star 50 (R$ 4.000 vs R$ 4.500). Economia de ate R$ 500 durante a semana.', 'Weekday prices (Mon-Thu) are promotional: WeBoat 32 (R$ 2,300 vs R$ 2,700), WeBoat 390 (R$ 2,600 vs R$ 3,100), Oceanic 36 (R$ 2,400 vs R$ 2,800), Rio Star 50 (R$ 4,000 vs R$ 4,500). Save up to R$ 500 on weekdays.'],
 
   // ─── SCHEMA DESCRIPTIONS (route pages) ───
@@ -5755,9 +5755,9 @@ pages.forEach(page => {
     // Contact + how-it-works fragments inside href (after partial translation)
     ['aluguel de lancha', 'boat rental'],
     ['Olá! Gostaria de saber como funciona o aluguel de lancha.', 'Hello! I would like to know how boat rental works.'],
-    // Ibiza 42 WhatsApp links
-    ['Ola! Tenho interesse na lancha WeBoat Ibiza 42.', 'Hello! I am interested in the WeBoat Ibiza 42 boat.'],
-    ['Ola! Quero reservar a lancha WeBoat Ibiza 42.', 'Hello! I want to book the WeBoat Ibiza 42 boat.'],
+    // WeBoat 420 WhatsApp links
+    ['Ola! Tenho interesse na lancha WeBoat 420.', 'Hello! I am interested in the WeBoat 420 boat.'],
+    ['Ola! Quero reservar a lancha WeBoat 420.', 'Hello! I want to book the WeBoat 420 boat.'],
     // Rio Star 50 WhatsApp fragment
     ['para grupo grande', 'for a large group'],
     // Carnival page WhatsApp fragments (after dictionary changes Carnaval->Carnival)
