@@ -243,9 +243,9 @@
             });
         }
 
-        // CPF mask
+        // CPF / CNPJ mask — detecta automaticamente pelo número de dígitos
         if (cpfInput) {
-            cpfInput.addEventListener('input', function() { mascaraCPF(this); });
+            cpfInput.addEventListener('input', function() { mascaraCPFouCNPJ(this); });
         }
 
         // Phone mask (only for +55)
@@ -354,8 +354,8 @@
         var cpf = '', passaporte = '';
         if (!isEstrangeiro) {
             cpf = cpfInput ? cpfInput.value.trim() : '';
-            if (!validarCPF(cpf)) {
-                showFieldError('customer-cpf', t('checkoutCpfInvalid', 'CPF inválido'));
+            if (!validarCPFouCNPJ(cpf)) {
+                showFieldError('customer-cpf', t('checkoutCpfInvalid', 'CPF ou CNPJ inválido'));
                 hasError = true;
             }
         } else {
