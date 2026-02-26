@@ -406,6 +406,71 @@
   }
 
   // ============================================
+  // WHATSAPP SOURCE TRACKING
+  // Captura fbclid/gclid da URL e injeta nos links wa.me ao clicar
+  // ============================================
+  function initWhatsAppTracking() {
+    // Determinar fonte pela URL atual
+    var params = new URLSearchParams(window.location.search);
+    var fbclid = params.get('fbclid');
+    var gclid  = params.get('gclid');
+
+    // Persistir clids na sessão (sobrescreve se chegou novo clique de anúncio)
+    if (fbclid) sessionStorage.setItem('wb_fbclid', fbclid);
+    if (gclid)  sessionStorage.setItem('wb_gclid',  gclid);
+
+    // Determinar fonte pelo referer + parâmetros
+    function detectarFonte() {
+      var stored = sessionStorage.getItem('wb_fonte');
+      if (stored) return stored;
+
+      var fonte = null;
+      if (sessionStorage.getItem('wb_gclid'))        fonte = 'google_ads';
+      else if (sessionStorage.getItem('wb_fbclid'))  fonte = 'meta_ads';
+      else {
+        var ref = document.referrer || '';
+        if (/google\./i.test(ref))     fonte = 'google_organic';
+        else if (/instagram\.|facebook\.|fb\.com/i.test(ref)) fonte = 'meta_organic';
+      }
+
+      if (fonte) sessionStorage.setItem('wb_fonte', fonte);
+      return fonte;
+    }
+
+    var fonte = detectarFonte();
+
+    // Interceptar cliques em links WhatsApp para injetar tags de tracking
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href*="wa.me"]');
+      if (!link) return;
+
+      var href = link.getAttribute('href');
+      if (!href || !href.includes('wa.me')) return;
+
+      var f   = sessionStorage.getItem('wb_fonte')  || fonte;
+      var fbc = sessionStorage.getItem('wb_fbclid');
+      var gc  = sessionStorage.getItem('wb_gclid');
+
+      if (!f && !fbc && !gc) return; // sem tracking, deixar href original
+
+      // Decodificar texto atual
+      var url   = new URL(href, window.location.origin);
+      var texto = decodeURIComponent(url.searchParams.get('text') || '');
+
+      // Montar sufixo de tracking (separado por pipe para o backend extrair)
+      var tag = f || '';
+      if (fbc) tag += (tag ? '|' : '') + 'fbclid=' + fbc;
+      if (gc)  tag += (tag ? '|' : '') + 'gclid='  + gc;
+
+      if (tag && !texto.includes(tag)) {
+        texto = texto + '\n' + tag;
+        url.searchParams.set('text', texto);
+        link.setAttribute('href', url.toString());
+      }
+    }, true); // capture phase para garantir execução antes do navegador navegar
+  }
+
+  // ============================================
   // INICIALIZAÇÃO
   // ============================================
   function init() {
@@ -419,6 +484,7 @@
     initBoatFilter();
     initTrustIndexLazy();
     initBackToTop();
+    initWhatsAppTracking();
 
     // Cleanup observers on page unload
     window.addEventListener('beforeunload', function() {
