@@ -451,21 +451,23 @@
       var fbc = sessionStorage.getItem('wb_fbclid');
       var gc  = sessionStorage.getItem('wb_gclid');
 
-      if (!f && !fbc && !gc) return; // sem tracking, deixar href original
+      // Beacon para backend ANTES de abrir WhatsApp
+      // Tracking vai pelo beacon (click_tracking table), não mais no texto da mensagem
+      var phoneMatch = href.match(/wa\.me\/(\d+)/);
+      var phoneHint = phoneMatch ? phoneMatch[1].slice(-4) : '';
+      var gaMatch = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
+      var gaClientId = gaMatch ? gaMatch[1] : null;
 
-      // Decodificar texto atual
-      var url   = new URL(href, window.location.origin);
-      var texto = decodeURIComponent(url.searchParams.get('text') || '');
-
-      // Montar sufixo de tracking (separado por pipe para o backend extrair)
-      var tag = f || '';
-      if (fbc) tag += (tag ? '|' : '') + 'fbclid=' + fbc;
-      if (gc)  tag += (tag ? '|' : '') + 'gclid='  + gc;
-
-      if (tag && !texto.includes(tag)) {
-        texto = texto + '\n' + tag;
-        url.searchParams.set('text', texto);
-        link.setAttribute('href', url.toString());
+      if (phoneHint) {
+        navigator.sendBeacon('https://api.weboatbrasil.com.br/public/track-click',
+          new Blob([JSON.stringify({
+            phone_hint: phoneHint,
+            fonte: f || null,
+            fbclid: fbc || null,
+            gclid: gc || null,
+            ga_client_id: gaClientId
+          })], { type: 'application/json' })
+        );
       }
     }, true); // capture phase para garantir execução antes do navegador navegar
   }
