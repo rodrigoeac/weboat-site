@@ -451,6 +451,14 @@
       var fbc = sessionStorage.getItem('wb_fbclid');
       var gc  = sessionStorage.getItem('wb_gclid');
 
+      // dataLayer push para GTM capturar (GA4 + Meta Pixel)
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: 'whatsapp_click',
+        whatsapp_fonte: f || sessionStorage.getItem('wb_fonte') || 'direto',
+        whatsapp_page: window.location.pathname
+      });
+
       // Beacon para backend ANTES de abrir WhatsApp
       // Tracking vai pelo beacon (click_tracking table), não mais no texto da mensagem
       var phoneMatch = href.match(/wa\.me\/(\d+)/);
