@@ -1,6 +1,7 @@
-# CLAUDE.md - Instruções Completas do Projeto WeBoat Brasil
+# CLAUDE.md - WeBoat Site
 
 > **LEIA ESTE ARQUIVO ANTES DE QUALQUER TAREFA**
+> Part of **WeBoat group** — parent: `~/automação whatsapp weboat/backend/`
 
 ---
 
