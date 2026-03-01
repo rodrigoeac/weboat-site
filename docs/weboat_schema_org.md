@@ -53,7 +53,7 @@
     "https://www.weboatbrasil.com.br/images/weboat-hero-4x3.jpg",
     "https://www.weboatbrasil.com.br/images/weboat-hero-16x9.jpg"
   ],
-  "telephone": "+55-21-97772-4114",
+  "telephone": "+55-21-96673-4346",
   "email": "contato@weboatbrasil.com.br",
   "address": {
     "@type": "PostalAddress",
@@ -165,7 +165,7 @@
   "sameAs": [
     "https://www.instagram.com/weboatbrasil",
     "https://www.facebook.com/weboatbrasil",
-    "https://wa.me/5521977724114"
+    "https://wa.me/5521966734346"
   ]
 }
 </script>
@@ -205,14 +205,14 @@
   "contactPoint": [
     {
       "@type": "ContactPoint",
-      "telephone": "+55-21-97772-4114",
+      "telephone": "+55-21-96673-4346",
       "contactType": "sales",
       "areaServed": "BR",
       "availableLanguage": ["Portuguese"]
     },
     {
       "@type": "ContactPoint",
-      "telephone": "+55-21-97772-4114",
+      "telephone": "+55-21-96673-4346",
       "contactType": "customer service",
       "areaServed": "BR",
       "availableLanguage": ["Portuguese"]
@@ -845,7 +845,7 @@
       "name": "Como funciona a reserva?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "A reserva é simples: entre em contato pelo WhatsApp (21) 97772-4114, escolha a lancha e data desejada, e pague um sinal de 50% via PIX ou cartão. O restante pode ser pago no dia do passeio. Confirmamos sua reserva em até 2 horas."
+        "text": "A reserva é simples: entre em contato pelo WhatsApp (21) 96673-4346, escolha a lancha e data desejada, e pague um sinal de 50% via PIX ou cartão. O restante pode ser pago no dia do passeio. Confirmamos sua reserva em até 2 horas."
       }
     },
     {
@@ -1374,7 +1374,7 @@
   },
   "about": {
     "@type": "ContactPoint",
-    "telephone": "+55-21-97772-4114",
+    "telephone": "+55-21-96673-4346",
     "contactType": "sales",
     "areaServed": "BR",
     "availableLanguage": "Portuguese",

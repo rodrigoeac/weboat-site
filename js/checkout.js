@@ -911,7 +911,7 @@
         doc.setFontSize(8);
         doc.setFont('helvetica', 'normal');
         doc.setTextColor(107, 114, 128);
-        doc.text('WeBoat Brasil — (21) 97772-4114 — weboatbrasil.com.br', w / 2, y, { align: 'center' });
+        doc.text('WeBoat Brasil — (21) 96673-4346 — weboatbrasil.com.br', w / 2, y, { align: 'center' });
 
         doc.save('reserva-weboat-' + (p.dataPasseio || 'confirmada') + '.pdf');
     }
@@ -925,7 +925,7 @@
         text += 'Pessoas: ' + p.numPessoas + '\n';
         text += 'Total: R$ ' + formatCurrency(pr.valorTotal) + '\n';
         text += 'Pago: R$ ' + formatCurrency(pr.valorEntrada) + '\n\n';
-        text += 'Marina da Gloria — (21) 97772-4114\n';
+        text += 'Marina da Gloria — (21) 96673-4346\n';
 
         if (navigator.share) {
             navigator.share({ title: 'Reserva WeBoat', text: text }).catch(function() {});
@@ -968,7 +968,7 @@
             String(now.getMinutes()).padStart(2, '0') +
             String(now.getSeconds()).padStart(2, '0');
 
-        var desc = data.lancha.nome + ' | ' + roteiro + ' | ' + p.numPessoas + ' ' + t('checkoutPeople', 'pessoas') + '\\nR$ ' + formatCurrency(data.preco.valorTotal) + '\\n\\nChegue 15 min antes.\\nWeBoat Brasil (21) 97772-4114';
+        var desc = data.lancha.nome + ' | ' + roteiro + ' | ' + p.numPessoas + ' ' + t('checkoutPeople', 'pessoas') + '\\nR$ ' + formatCurrency(data.preco.valorTotal) + '\\n\\nChegue 15 min antes.\\nWeBoat Brasil (21) 96673-4346';
 
         var ics = 'BEGIN:VCALENDAR\r\n' +
             'VERSION:2.0\r\n' +

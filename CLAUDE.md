@@ -18,8 +18,8 @@
 
 ```
 Nome: WeBoat Brasil
-WhatsApp: (21) 97772-4114
-Link WhatsApp: https://wa.me/5521977724114
+WhatsApp: (21) 96673-4346
+Link WhatsApp: https://wa.me/5521966734346
 Endereço: Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória - Glória, Rio de Janeiro - RJ, 20021-140
 Instagram: @weboatbrasil
 Site: https://www.weboatbrasil.com.br
@@ -542,7 +542,7 @@ COMMIT: "chore: SEO e finalização"
       "addressRegion": "RJ",
       "addressCountry": "BR"
     },
-    "telephone": "+5521977724114",
+    "telephone": "+5521966734346",
     "priceRange": "$$",
     "aggregateRating": {
       "@type": "AggregateRating",
@@ -572,7 +572,7 @@ COMMIT: "chore: SEO e finalização"
   </footer>
   
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5521977724114?text=[MENSAGEM]" 
+  <a href="https://wa.me/5521966734346?text=[MENSAGEM]" 
      class="whatsapp-float" 
      target="_blank" 
      rel="noopener noreferrer"
@@ -669,9 +669,10 @@ COMMIT: "chore: SEO e finalização"
 - GA4, Ads, Meta Pixel e demais tags gerenciados via GTM
 
 ### TODO — Pós-Migração
-- [x] **Google Tag Manager (GTM)** — GTM-K9LG4M2 instalado em 53 páginas
-- [ ] **Google Analytics 4 (GA4)** — configurar via GTM
-- [ ] **Meta Pixel (Facebook/Instagram)** — configurar via GTM
+- [x] **Google Tag Manager (GTM)** — GTM-K9LG4M2 instalado em 240 páginas
+- [x] **Google Analytics 4 (GA4)** — GA4 Config tag via GTM (`G-10PJH5SKW9`), pageviews + whatsapp_click
+- [x] **Meta Pixel (Facebook/Instagram)** — Base pixel + Contact event via GTM (`675535470097570`)
+- [ ] **GA4 → Google Ads link** — vincular GA4 ao Google Ads (`460-118-7054`) e importar `purchase` como conversão
 - [ ] **Microsoft Clarity** — opcional, heatmaps e session recordings
 - [x] **Google Search Console** — API configurada via gcloud (projeto `fresh-iridium-437618-c0`)
 - [ ] **DKIM** — configurar no Google Workspace para melhorar entregabilidade de email
@@ -751,13 +752,18 @@ find . -name "*.html" -o -name "*.css" -o -name "*.js" | xargs wc -l
 | Cor diferente | Usar `var(--nome-cor)`, nunca hex direto |
 | Layout quebrado | Verificar container e grid no CSS |
 | Mobile estranho | Checar breakpoints (min-width) |
-| WhatsApp não abre | Verificar formato: `https://wa.me/5521977724114` |
+| WhatsApp não abre | Verificar formato: `https://wa.me/5521966734346` |
 | Link quebrado | Verificar caminho relativo vs absoluto |
 
 ---
 
-**Última atualização:** 21 Fevereiro 2026
-**Versão:** 5.6 - All Inclusive rename (60 files), generation scripts updated
+**Última atualização:** 28 Fevereiro 2026
+**Versão:** 5.7 - GTM tracking (GA4 + Meta Pixel + dataLayer whatsapp_click)
+
+### Changelog v5.7 (GTM Tracking Setup)
+- **dataLayer push**: Added `whatsapp_click` event in `initWhatsAppTracking()` click handler (main.js:454-459) with `whatsapp_fonte` and `whatsapp_page` params. Fires before sendBeacon.
+- **GTM tags** (manual config in GTM-K9LG4M2): GA4 Config (`G-10PJH5SKW9`) on All Pages, GA4 whatsapp_click event, Meta Pixel base (`675535470097570`) with PageView, Meta Pixel Contact on whatsapp_click.
+- **Architecture**: Browser-side (GTM) handles pageviews + whatsapp_click. Server-side (backend) handles purchase via GA4 Measurement Protocol + Meta CAPI. Google Ads conversions via GA4 import (pending link).
 
 ### Changelog v5.6 (All Inclusive Rename)
 - **Service Rename**: "Combo Churrasco + Open Bar" → "All Inclusive" across entire site (60 files, 390+ line changes)

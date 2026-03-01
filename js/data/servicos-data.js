@@ -6,7 +6,7 @@
   'use strict';
 
   var TAXA_CHURRASQUEIRA = 250;
-  var WHATSAPP_NUMERO = '5521977724114';
+  var WHATSAPP_NUMERO = '5521966734346';
 
   var CATEGORIAS = [
     { id: 'churrasco', nome: 'Churrasco', icone: 'ph-fire' },

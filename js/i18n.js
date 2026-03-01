@@ -684,7 +684,7 @@ var WeBoatI18n = (function() {
   function waUrl(messageKey, params) {
     var msg = t(messageKey, params);
     var source = ' [via site - ' + lang + ']';
-    return 'https://wa.me/5521977724114?text=' + encodeURIComponent(msg + source);
+    return 'https://wa.me/5521966734346?text=' + encodeURIComponent(msg + source);
   }
 
   // Push language to GTM dataLayer

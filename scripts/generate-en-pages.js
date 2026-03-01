@@ -282,7 +282,7 @@ const pages = [
       ['"text": "Os valores de segunda a quinta são promocionais porque a demanda é menor. Sexta, sábado e domingo têm alta procura. Por exemplo, a WeBoat 32 custa R$ 2.300 seg-qui e R$ 2.700 sex-dom - economia de R$ 400."', '"text": "Monday to Thursday prices are promotional because demand is lower. Friday, Saturday and Sunday have high demand. For example, the WeBoat 32 costs R$ 2,300 Mon-Thu and R$ 2,700 Fri-Sun - savings of R$ 400."'],
       ['"text": "Sim, você pode trazer bebidas e petiscos sem custo adicional. As lanchas possuem coolers para armazenamento (gelo não incluso). Todas as lanchas possuem churrasqueira, mas o uso requer contratação de serviço adicional (R$ 250 a R$ 600)."', '"text": "Yes, you can bring your own drinks and snacks at no extra cost. The boats have coolers for storage (ice not included). All boats have a BBQ grill, but using it requires an additional service fee (R$ 250 to R$ 600)."'],
       ['"text": "As 5 lanchas próprias WeBoat têm prioridade no agendamento e atendimento direto da nossa equipe. As 21 lanchas parceiras ampliam as opções para grupos maiores e ocasiões especiais. Todas passam pela mesma vistoria de segurança e oferecem o padrão WeBoat de qualidade."', '"text": "The 5 own WeBoat boats have priority in scheduling and direct service from our team. The 21 partner boats expand options for larger groups and special occasions. All undergo the same safety inspection and offer the WeBoat quality standard."'],
-      ['"text": "Entre em contato pelo WhatsApp (21) 97772-4114, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão. O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes."', '"text": "Contact us via WhatsApp (21) 97772-4114, provide the date, number of people and desired route. We book with a 50% deposit via PIX or credit card. The remainder is paid on the day of the trip. Cancellation with refund up to 48 hours before."'],
+      ['"text": "Entre em contato pelo WhatsApp (21) 96673-4346, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão. O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes."', '"text": "Contact us via WhatsApp (21) 96673-4346, provide the date, number of people and desired route. We book with a 50% deposit via PIX or credit card. The remainder is paid on the day of the trip. Cancellation with refund up to 48 hours before."'],
       // Visible HTML — FAQ answers (long strings first to avoid word salad)
       ['"name": "Qual lancha é melhor para meu grupo?"', '"name": "Which boat is best for my group?"'],
       ['Qual lancha é melhor para meu grupo?', 'Which boat is best for my group?'],
@@ -304,7 +304,7 @@ const pages = [
       // Visible HTML — partner section
       ['Todas passam pela mesma vistoria de segurança e oferecem o padrão WeBoat de qualidade.', 'All undergo the same safety inspection and offer the WeBoat quality standard.'],
       // Visible FAQ answer — "Como reservar" (MUST come BEFORE ['pessoas','people'] to avoid corruption)
-      ['<strong>Entre em contato pelo WhatsApp (21) 97772-4114, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão.</strong>', '<strong>Contact us via WhatsApp (21) 97772-4114, let us know the date, number of people and desired route. We book with a 50% deposit via PIX or credit card.</strong>'],
+      ['<strong>Entre em contato pelo WhatsApp (21) 96673-4346, informe a data, número de pessoas e roteiro desejado. Reservamos com 50% de sinal via PIX ou cartão.</strong>', '<strong>Contact us via WhatsApp (21) 96673-4346, let us know the date, number of people and desired route. We book with a 50% deposit via PIX or credit card.</strong>'],
       ['O restante é pago no dia do passeio. Cancelamento com reembolso até 48h antes.', 'The remainder is paid on the day of the trip. Cancellation with refund up to 48 hours in advance.'],
       // alt text (boat cards — full strings BEFORE short entries like 'pessoas' -> 'people')
       ['Nossa maior lancha para 20-22 pessoas', 'Our largest boat for 20-22 people'],
@@ -2679,7 +2679,7 @@ const pages = [
       ['<strong>Localização:</strong> Marina da Glória, Loja 06 - Rio de Janeiro, RJ', '<strong>Location:</strong> Marina da Gloria, Store 06 - Rio de Janeiro, RJ'],
       ['<strong>Capacidade:</strong> Lanchas de 10 a 65 pessoas', '<strong>Capacity:</strong> Boats for 10 to 65 people'],
       ['<strong>Preços:</strong> A partir de R$ 2.300 (5 horas)', '<strong>Prices:</strong> From R$ 2,300 (5 hours)'],
-      ['<strong>Contato:</strong> WhatsApp (21) 97772-4114', '<strong>Contact:</strong> WhatsApp (21) 97772-4114'],
+      ['<strong>Contato:</strong> WhatsApp (21) 96673-4346', '<strong>Contact:</strong> WhatsApp (21) 96673-4346'],
       // History
       ['Como a WeBoat Brasil começou?', 'How Did WeBoat Brasil Start?'],
       ['A WeBoat nasceu depois do carnaval de 2021, quando três amigos fizeram um passeio de lancha no Rio e viram uma oportunidade de melhorar a experiência. A paisagem era incrível - Cristo, Pão de Açúcar, Baía de Guanabara - mas o atendimento deixou a desejar: preços confusos e instruções desencontradas.', 'WeBoat was born after Carnival 2021, when three friends took a boat trip in Rio and saw an opportunity to improve the experience. The scenery was incredible — Christ the Redeemer, Sugarloaf Mountain, Guanabara Bay — but the service fell short: confusing prices and mixed instructions.'],
@@ -2821,7 +2821,7 @@ const pages = [
       ['Serviços como churrasco, open bar e decoração são opcionais. Confira todos os <a href="/en/services/">serviços extras disponíveis</a>.', 'Services such as BBQ, open bar and decoration are optional. Check out all <a href="/en/services/">available extra services</a>.'],
       // Reservation
       ['A reserva é simples e rápida:', 'The booking is simple and quick:'],
-      ['Entre em contato pelo WhatsApp <a href="https://wa.me/5521977724114">(21) 97772-4114</a>', 'Contact us via WhatsApp at <a href="https://wa.me/5521977724114">(21) 97772-4114</a>'],
+      ['Entre em contato pelo WhatsApp <a href="https://wa.me/5521966734346">(21) 96673-4346</a>', 'Contact us via WhatsApp at <a href="https://wa.me/5521966734346">(21) 96673-4346</a>'],
       ['Escolha a lancha e data desejada', 'Choose the boat and desired date'],
       ['Pague um sinal de <strong>50%</strong> para confirmar', 'Pay a <strong>50%</strong> deposit to confirm'],
       ['O restante deve ser pago até o momento do embarque', 'The remainder must be paid by the time of boarding'],
@@ -3034,7 +3034,7 @@ const pages = [
       ['"description": "Entre em contato com a WeBoat Brasil para alugar uma lancha no Rio de Janeiro."', '"description": "Contact WeBoat Brasil for boat rental in Rio de Janeiro."'],
       // Schema.org FAQ answers (plain text — long strings before shorter substrings)
       ['"text": "Atendimento comercial: 8h às 20h (reservas e informações). Suporte para clientes em passeio: 24 horas. Mensagens fora do horário serão respondidas no próximo dia útil."', '"text": "Sales hours: 8am to 8pm (reservations and information). Support for clients on trips: 24 hours. Messages outside business hours will be answered on the next business day."'],
-      ['"text": "A reserva é simples! Entre em contato pelo WhatsApp (21) 97772-4114, escolha a lancha e data desejada, e pague um sinal de 50% para confirmar. O restante deve ser pago até o momento do embarque."', '"text": "Booking is simple! Contact us via WhatsApp (21) 97772-4114, choose the boat and desired date, and pay a 50% deposit to confirm. The remainder must be paid by the time of boarding."'],
+      ['"text": "A reserva é simples! Entre em contato pelo WhatsApp (21) 96673-4346, escolha a lancha e data desejada, e pague um sinal de 50% para confirmar. O restante deve ser pago até o momento do embarque."', '"text": "Booking is simple! Contact us via WhatsApp (21) 96673-4346, choose the boat and desired date, and pay a 50% deposit to confirm. The remainder must be paid by the time of boarding."'],
       ['"text": "PIX e transferência bancária são as formas preferenciais, sem taxas adicionais. Também aceitamos cartão de crédito (até 12x com juros) e débito, com taxas da operadora repassadas."', '"text": "PIX and bank transfer are the preferred methods, with no additional fees. We also accept credit card (up to 12 installments with interest) and debit, with operator fees passed on."'],
       ['"text": "Não há tempo mínimo ou máximo. Porém, em períodos de alta procura (verão, feriados, réveillon), recomendamos reservar com pelo menos 30 dias de antecedência para garantir as melhores opções."', '"text": "There is no minimum or maximum time. However, during high demand periods (summer, holidays, New Year\'s Eve), we recommend booking at least 30 days in advance to ensure the best options."'],
       ['Churrasco, open bar, decoração, DJ e fotógrafo para passeios de lancha', 'BBQ, open bar, decoration, DJ and photographer for boat trips'],
@@ -3054,7 +3054,7 @@ const pages = [
       ['Horários de Atendimento', 'Business Hours'],
       ['Todos os dias', 'Every day'],
       // *** FULL answer capsule paragraph MUST come BEFORE short ['Suporte para clientes'] and ['24 horas'] ***
-      ['A forma mais rápida de contato com a WeBoat Brasil é pelo <strong>WhatsApp (21) 97772-4114</strong>. O atendimento funciona todos os dias das 8h às 20h, com suporte 24 horas para clientes com reserva. Também é possível ligar ou enviar mensagem pelo formulário do site.', 'The fastest way to contact WeBoat Brasil is via <strong>WhatsApp (21) 97772-4114</strong>. Service is available every day from 8am to 8pm, with 24-hour support for clients with reservations. You can also call or send a message through the website form.'],
+      ['A forma mais rápida de contato com a WeBoat Brasil é pelo <strong>WhatsApp (21) 96673-4346</strong>. O atendimento funciona todos os dias das 8h às 20h, com suporte 24 horas para clientes com reserva. Também é possível ligar ou enviar mensagem pelo formulário do site.', 'The fastest way to contact WeBoat Brasil is via <strong>WhatsApp (21) 96673-4346</strong>. Service is available every day from 8am to 8pm, with 24-hour support for clients with reservations. You can also call or send a message through the website form.'],
       ['Suporte para clientes', 'Client support'],
       ['24 horas', '24 hours'],
       // Form
@@ -3107,7 +3107,7 @@ const pages = [
       // Mini FAQ
       ['Dúvidas sobre Reservas', 'Booking Questions'],
       ['Como faço para reservar uma lancha?', 'How do I book a boat?'],
-      ['A reserva é simples! Entre em contato pelo <strong>WhatsApp (21) 97772-4114</strong>, escolha a lancha e data desejada, e pague um sinal de <strong>50%</strong> para confirmar. O restante deve ser pago até o momento do embarque.', 'Booking is simple! Contact us via <strong>WhatsApp (21) 97772-4114</strong>, choose the boat and desired date, and pay a <strong>50%</strong> deposit to confirm. The remainder must be paid by the time of boarding.'],
+      ['A reserva é simples! Entre em contato pelo <strong>WhatsApp (21) 96673-4346</strong>, escolha a lancha e data desejada, e pague um sinal de <strong>50%</strong> para confirmar. O restante deve ser pago até o momento do embarque.', 'Booking is simple! Contact us via <strong>WhatsApp (21) 96673-4346</strong>, choose the boat and desired date, and pay a <strong>50%</strong> deposit to confirm. The remainder must be paid by the time of boarding.'],
       ['Quais formas de pagamento são aceitas?', 'What payment methods are accepted?'],
       ['<strong>PIX e transferência bancária</strong> são as formas preferenciais, sem taxas adicionais. Também aceitamos <strong>cartão de crédito</strong> (até 12x com juros) e <strong>débito</strong>, com taxas da operadora repassadas.', '<strong>PIX and bank transfer</strong> are the preferred methods, with no additional fees. We also accept <strong>credit card</strong> (up to 12 installments with interest) and <strong>debit</strong>, with operator fees passed on.'],
       ['Com quanto tempo de antecedência devo reservar?', 'How far in advance should I book?'],
@@ -3141,7 +3141,7 @@ const pages = [
       ['"text": "Leve protetor solar, roupa de banho, toalha e suas bebidas/petiscos (coolers inclusos na lancha). A lancha já tem tapete flutuante, macarrões e som Bluetooth."', '"text": "Bring sunscreen, swimwear, a towel and your drinks/snacks (coolers included on the boat). The boat already has a floating mat, pool noodles and Bluetooth speakers."'],
       // Schema.org HowToStep entries (plain text — must come before shorter substrings)
       ['"name": "WhatsApp para contato"', '"name": "WhatsApp for contact"'],
-      ['"text": "Envie uma mensagem pelo WhatsApp (21) 97772-4114 informando a data desejada, número de pessoas e ocasião. Nossa equipe responde em minutos."', '"text": "Send a WhatsApp message to (21) 97772-4114 with the desired date, number of people and occasion. Our team responds in minutes."'],
+      ['"text": "Envie uma mensagem pelo WhatsApp (21) 96673-4346 informando a data desejada, número de pessoas e ocasião. Nossa equipe responde em minutos."', '"text": "Send a WhatsApp message to (21) 96673-4346 with the desired date, number of people and occasion. Our team responds in minutes."'],
       ['"name": "Escolha a lancha e roteiro"', '"name": "Choose the boat and route"'],
       ['"text": "Com base no seu grupo e preferências, recomendamos a melhor lancha e roteiro. Temos 5 lanchas próprias e 21 parceiras para grupos de 10 a 65 pessoas."', '"text": "Based on your group and preferences, we recommend the best boat and route. We have 5 own boats and 21 partner boats for groups of 10 to 65 people."'],
       ['"name": "Reserve com 50% de sinal"', '"name": "Book with a 50% deposit"'],
@@ -3159,7 +3159,7 @@ const pages = [
       ['<strong>O aluguel de lancha na WeBoat funciona em 5 passos simples: 1) Contato pelo WhatsApp, 2) Escolha da lancha e roteiro, 3) Reserva com 50% de sinal, 4) Chegada na Marina da Glória, 5) Embarque e passeio.</strong>\n            Todo o processo leva menos de 30 minutos e você pode reservar com antecedência ou até no mesmo dia (sujeito a disponibilidade).', '<strong>Renting a boat at WeBoat works in 5 simple steps: 1) Contact via WhatsApp, 2) Choose your boat and route, 3) Book with 50% deposit, 4) Arrive at Marina da Gloria, 5) Board and enjoy.</strong>\n            The entire process takes less than 30 minutes and you can book in advance or even on the same day (subject to availability).'],
       // Step 1
       ['Entre em contato pelo WhatsApp', 'Contact us via WhatsApp'],
-      ['<strong>Envie uma mensagem para (21) 97772-4114 informando a data desejada, número de pessoas e ocasião (aniversário, despedida, passeio em família, etc.).</strong>\n              Nossa equipe responde em minutos e já envia sugestões de lanchas e roteiros para seu grupo.', '<strong>Send a message to (21) 97772-4114 with the desired date, number of people and occasion (birthday, bachelorette, family trip, etc.).</strong>\n              Our team responds in minutes and sends boat and route suggestions for your group.'],
+      ['<strong>Envie uma mensagem para (21) 96673-4346 informando a data desejada, número de pessoas e ocasião (aniversário, despedida, passeio em família, etc.).</strong>\n              Nossa equipe responde em minutos e já envia sugestões de lanchas e roteiros para seu grupo.', '<strong>Send a message to (21) 96673-4346 with the desired date, number of people and occasion (birthday, bachelorette, family trip, etc.).</strong>\n              Our team responds in minutes and sends boat and route suggestions for your group.'],
       ['Atendimento todos os dias das 8h às 20h', 'Service every day from 8am to 8pm'],
       ['Resposta em até 5 minutos', 'Response within 5 minutes'],
       ['Sem compromisso - tire suas dúvidas primeiro', 'No commitment - ask your questions first'],
@@ -3301,7 +3301,7 @@ const pages = [
       ['Qual a area mais indicada para primeira vez em passeio de lancha?', 'Which area is best for a first-time boat trip?'],
       ['<strong>Para primeira vez, recomendamos a Mureta da Urca ou Praia Vermelha. Sao áreas com aguas calmas dentro da Baia de Guanabara, ideais para familias e iniciantes.</strong>\n                    Veja nossos <a href="/roteiros/">roteiros disponíveis</a> para escolher o melhor para você.', '<strong>For a first time, we recommend Mureta da Urca or Praia Vermelha. These are areas with calm waters inside Guanabara Bay, ideal for families and beginners.</strong>\n                    Check our <a href="/en/routes/">available routes</a> to choose the best one for you.'],
       ['E possível combinar diferentes áreas em um único passeio?', 'Is it possible to combine different areas in a single trip?'],
-      ['<strong>Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas.</strong>\n                    Converse com nossa equipe pelo <a href="https://wa.me/5521977724114">WhatsApp</a> para montar o roteiro ideal.', '<strong>Yes! Our routes can be customized. The Full Tour, for example, combines Urca, Copacabana and Ilhas Cagarras in a single 5-hour trip.</strong>\n                    Talk to our team via <a href="https://wa.me/5521977724114">WhatsApp</a> to create the ideal route.'],
+      ['<strong>Sim! Nossos roteiros podem ser personalizados. A Volta Completa, por exemplo, combina Urca, Copacabana e Ilhas Cagarras em um único passeio de 5 horas.</strong>\n                    Converse com nossa equipe pelo <a href="https://wa.me/5521966734346">WhatsApp</a> para montar o roteiro ideal.', '<strong>Yes! Our routes can be customized. The Full Tour, for example, combines Urca, Copacabana and Ilhas Cagarras in a single 5-hour trip.</strong>\n                    Talk to our team via <a href="https://wa.me/5521966734346">WhatsApp</a> to create the ideal route.'],
       ['Qual area e melhor para mergulho e snorkeling?', 'Which area is best for diving and snorkeling?'],
       ['<strong>Para mergulho e snorkeling, as Ilhas Cagarras sao a melhor opção. O arquipelago tem aguas cristalinas e vida marinha abundante.</strong>\n                    Itaipu e Camboinhas também oferecem excelente visibilidade para atividades aquaticas.', '<strong>For diving and snorkeling, Ilhas Cagarras is the best option. The archipelago has crystal clear waters and abundant marine life.</strong>\n                    Itaipu and Camboinhas also offer excellent visibility for water activities.'],
       ['Qual a melhor area para ver o por do sol?', 'Which area is best for watching the sunset?'],
@@ -3610,7 +3610,7 @@ const pages = [
       ['Para quem prefere não dirigir, os aplicativos de transporte são a melhor alternativa, especialmente se o grupo pretende consumir bebidas durante o passeio.', 'For those who prefer not to drive, ride-hailing apps are the best alternative, especially if the group plans to have drinks during the trip.'],
       // WeBoat location
       ['Onde Fica a WeBoat na Marina', 'Where is WeBoat at the Marina'],
-      ['A <strong>WeBoat Brasil</strong> está localizada na <strong>Loja 06</strong> da Marina da Glória. Ao entrar na marina, siga pelas lojas do complexo comercial. Nossa equipe estará de camiseta da WeBoat, pronta para receber você. Se tiver qualquer dificuldade para nos encontrar, basta ligar para o nosso WhatsApp <strong>(21) 97772-4114</strong> que orientamos na hora.', '<strong>WeBoat Brasil</strong> is located at <strong>Shop 06</strong> at Marina da Gloria. When entering the marina, follow the shops in the commercial complex. Our team will be wearing WeBoat t-shirts, ready to welcome you. If you have any difficulty finding us, just call our WhatsApp <strong>(21) 97772-4114</strong> and we will guide you right away.'],
+      ['A <strong>WeBoat Brasil</strong> está localizada na <strong>Loja 06</strong> da Marina da Glória. Ao entrar na marina, siga pelas lojas do complexo comercial. Nossa equipe estará de camiseta da WeBoat, pronta para receber você. Se tiver qualquer dificuldade para nos encontrar, basta ligar para o nosso WhatsApp <strong>(21) 96673-4346</strong> que orientamos na hora.', '<strong>WeBoat Brasil</strong> is located at <strong>Shop 06</strong> at Marina da Gloria. When entering the marina, follow the shops in the commercial complex. Our team will be wearing WeBoat t-shirts, ready to welcome you. If you have any difficulty finding us, just call our WhatsApp <strong>(21) 96673-4346</strong> and we will guide you right away.'],
       // What to expect
       ['O Que Esperar no Dia do Passeio', 'What to Expect on Trip Day'],
       ['Para que tudo corra perfeitamente, veja o passo a passo do que acontece quando você chega para o seu passeio:', 'For everything to go perfectly, here is the step-by-step of what happens when you arrive for your trip:'],
@@ -3732,7 +3732,7 @@ const pages = [
       ['Solicitar a eliminação dos dados tratados com consentimento', 'Request deletion of data processed with consent'],
       ['Revogar o consentimento a qualquer momento', 'Revoke consent at any time'],
       ['Solicitar a portabilidade dos dados', 'Request data portability'],
-      ['Para exercer qualquer desses direitos, entre em contato pelo WhatsApp <a href="https://wa.me/5521977724114">(21) 97772-4114</a>. Responderemos em até 15 dias úteis.', 'To exercise any of these rights, contact us via WhatsApp <a href="https://wa.me/5521977724114">(21) 97772-4114</a>. We will respond within 15 business days.'],
+      ['Para exercer qualquer desses direitos, entre em contato pelo WhatsApp <a href="https://wa.me/5521966734346">(21) 96673-4346</a>. Responderemos em até 15 dias úteis.', 'To exercise any of these rights, contact us via WhatsApp <a href="https://wa.me/5521966734346">(21) 96673-4346</a>. We will respond within 15 business days.'],
       // Section 9 (moved to top of contentBlocks to avoid ordering issue)
       // Section 10
       ['10. Contato', '10. Contact'],
@@ -3764,7 +3764,7 @@ const pages = [
       ['Serviços opcionais como churrasco, open bar, decoração, DJ e fotógrafo podem ser contratados à parte.', 'Optional services such as barbecue, open bar, decoration, DJ, and photographer can be booked separately.'],
       // Section 3
       ['3. Reservas e Pagamento', '3. Reservations and Payment'],
-      ['As reservas são feitas mediante confirmação via WhatsApp <a href="https://wa.me/5521977724114">(21) 97772-4114</a>', 'Reservations are made upon confirmation via WhatsApp <a href="https://wa.me/5521977724114">(21) 97772-4114</a>'],
+      ['As reservas são feitas mediante confirmação via WhatsApp <a href="https://wa.me/5521966734346">(21) 96673-4346</a>', 'Reservations are made upon confirmation via WhatsApp <a href="https://wa.me/5521966734346">(21) 96673-4346</a>'],
       ['A reserva é confirmada com o pagamento de um <strong>sinal de 50% do valor total</strong>', 'The reservation is confirmed with a <strong>50% deposit of the total amount</strong>'],
       ['O pagamento restante (50%) deve ser efetuado até o momento do embarque', 'The remaining payment (50%) must be made by the time of boarding'],
       ['Formas de pagamento aceitas: PIX (preferencial, sem taxas), transferência bancária, cartão de crédito (até 12x com juros, taxas da operadora repassadas) e cartão de débito', 'Accepted payment methods: PIX (preferred, no fees), bank transfer, credit card (up to 12 installments with interest, processor fees applied), and debit card'],
@@ -5275,7 +5275,7 @@ function getEnHeader(ptPath, enPath, esPath, isTransparent) {
         </nav>
 
         <!-- CTA WhatsApp -->
-        <a href="https://wa.me/5521977724114?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]"
+        <a href="https://wa.me/5521966734346?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]"
            class="btn btn-whatsapp header__cta"
            target="_blank"
            rel="noopener noreferrer">
@@ -5333,7 +5333,7 @@ function getEnHeader(ptPath, enPath, esPath, isTransparent) {
           <li><a href="/en/faq/">FAQ</a></li>
           <li><a href="/en/blog/">Blog</a></li>
         </ul>
-        <a href="https://wa.me/5521977724114?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]"
+        <a href="https://wa.me/5521966734346?text=Hello! I would like information about boat rental in Rio de Janeiro. [via site - en]"
            class="btn btn-whatsapp btn--full"
            target="_blank"
            rel="noopener noreferrer">
@@ -5381,7 +5381,7 @@ function getEnFooter() {
             <a href="https://www.instagram.com/weboatbrasil" target="_blank" rel="noopener noreferrer" aria-label="WeBoat Instagram">
               <i class="ph ph-instagram-logo" aria-hidden="true"></i>
             </a>
-            <a href="https://wa.me/5521977724114" target="_blank" rel="noopener noreferrer" aria-label="WeBoat WhatsApp">
+            <a href="https://wa.me/5521966734346" target="_blank" rel="noopener noreferrer" aria-label="WeBoat WhatsApp">
               <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
             </a>
           </div>
@@ -5417,7 +5417,7 @@ function getEnFooter() {
           <ul class="footer__contact">
             <li>
               <i class="ph ph-whatsapp-logo" aria-hidden="true"></i>
-              <a href="https://wa.me/5521977724114">+55 (21) 97772-4114</a>
+              <a href="https://wa.me/5521966734346">+55 (21) 96673-4346</a>
             </li>
             <li>
               <i class="ph ph-map-pin" aria-hidden="true"></i>
@@ -5465,7 +5465,7 @@ function getEnFooter() {
 function getEnWhatsAppFloat(waMessage) {
   return `
   <!-- WhatsApp Float -->
-  <a href="https://wa.me/5521977724114?text=${encodeURIComponent(waMessage)}"
+  <a href="https://wa.me/5521966734346?text=${encodeURIComponent(waMessage)}"
      class="whatsapp-float"
      target="_blank"
      rel="noopener noreferrer"

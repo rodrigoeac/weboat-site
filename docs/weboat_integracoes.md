@@ -26,7 +26,7 @@
 ## Dados da Conta
 
 ```
-Número: +55 21 97772-4114
+Número: +55 21 96673-4346
 Nome do Perfil: WeBoat Brasil
 ```
 
@@ -36,7 +36,7 @@ Nome do Perfil: WeBoat Brasil
 ```html
 <!-- Botão WhatsApp Flutuante -->
 <a 
-  href="https://wa.me/5521977724114?text=Ol%C3%A1%21%20Quero%20fazer%20um%20or%C3%A7amento%20de%20aluguel%20de%20lancha%20no%20Rio%20de%20Janeiro.%20Podem%20me%20ajudar%3F"
+  href="https://wa.me/5521966734346?text=Ol%C3%A1%21%20Quero%20fazer%20um%20or%C3%A7amento%20de%20aluguel%20de%20lancha%20no%20Rio%20de%20Janeiro.%20Podem%20me%20ajudar%3F"
   target="_blank"
   rel="noopener noreferrer"
   class="whatsapp-float"
@@ -52,10 +52,10 @@ Nome do Perfil: WeBoat Brasil
 
 ### URL Formatada
 ```
-Base: https://wa.me/5521977724114
+Base: https://wa.me/5521966734346
 
 Com mensagem:
-https://wa.me/5521977724114?text=[MENSAGEM_ENCODED]
+https://wa.me/5521966734346?text=[MENSAGEM_ENCODED]
 ```
 
 ## Mensagens Pré-definidas por Contexto
@@ -116,7 +116,7 @@ Mensagem: "Olá! Quero reservar uma lancha para o Réveillon. Ainda tem disponib
 
 ```javascript
 // Função para gerar link do WhatsApp com mensagem dinâmica
-function getWhatsAppLink(message, phone = '5521977724114') {
+function getWhatsAppLink(message, phone = '5521966734346') {
   const encodedMessage = encodeURIComponent(message);
   return `https://wa.me/${phone}?text=${encodedMessage}`;
 }
@@ -258,7 +258,7 @@ function initMap() {
       <div class="map-info">
         <strong>WeBoat Brasil</strong><br>
         Marina da Glória - Loja 06<br>
-        <a href="tel:+5521977724114">(21) 97772-4114</a>
+        <a href="tel:+5521966734346">(21) 96673-4346</a>
       </div>
     `
   });
@@ -1096,7 +1096,7 @@ YouTube: https://www.youtube.com/@weboatbrasil (se existir)
   "name": "WeBoat Brasil",
   "description": "Aluguel de lancha no Rio de Janeiro para passeios privativos, festas e eventos.",
   "url": "https://www.weboatbrasil.com.br",
-  "telephone": "+55-21-97772-4114",
+  "telephone": "+55-21-96673-4346",
   "email": "contato@weboatbrasil.com.br",
   "address": {
     "@type": "PostalAddress",
@@ -1422,7 +1422,7 @@ CLS (Cumulative Layout Shift): < 0.1
 # 📞 INFORMAÇÕES DE CONTATO PARA INTEGRAÇÕES
 
 ```
-WhatsApp Business: +55 21 97772-4114
+WhatsApp Business: +55 21 96673-4346
 E-mail: contato@weboatbrasil.com.br
 Endereço: Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória - Glória, Rio de Janeiro - RJ, 20021-140
 Instagram: @weboatbrasil

@@ -378,7 +378,7 @@
    */
   function gerarLinkWhatsApp(proposta) {
     var msg = gerarMensagemWhatsApp(proposta);
-    var whatsappNum = (Servicos && Servicos.WHATSAPP_NUMERO) || '5521977724114';
+    var whatsappNum = (Servicos && Servicos.WHATSAPP_NUMERO) || '5521966734346';
     return 'https://wa.me/' + whatsappNum + '?text=' + encodeURIComponent(msg);
   }
 

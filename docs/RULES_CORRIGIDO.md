@@ -42,8 +42,8 @@ Este documento contém regras obrigatórias, restrições e diretrizes que o con
 
 ```
 ✅ DADOS OFICIAIS (use exatamente assim):
-- WhatsApp: (21) 97772-4114
-- Formato para link: +5521977724114
+- WhatsApp: (21) 96673-4346
+- Formato para link: +5521966734346
 - Endereço: Av. Infante Dom Henrique, S/N, Loja 06 - Marina da Glória - Glória, Rio de Janeiro - RJ, 20021-140
 - Instagram: @weboatbrasil
 
@@ -256,7 +256,7 @@ Button: DM Sans, 16px, weight 600
 
 ```
 ✅ OBRIGATÓRIO:
-- Número: +5521977724114
+- Número: +5521966734346
 - Mensagens pré-definidas conforme documentação
 - Tracking de cliques (GA4 + Meta Pixel)
 - Abrir em nova aba

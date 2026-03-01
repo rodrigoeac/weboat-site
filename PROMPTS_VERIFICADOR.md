@@ -49,8 +49,8 @@ Execute grep para encontrar e corrija automaticamente.
 
 ```
 Verifique WhatsApp em todo o projeto:
-1. Número correto: 5521977724114 (sem formatação)
-2. Link correto: https://wa.me/5521977724114
+1. Número correto: 5521966734346 (sem formatação)
+2. Link correto: https://wa.me/5521966734346
 3. Botão flutuante em TODAS as páginas HTML
 4. Mensagens contextualizadas por página
 
@@ -113,7 +113,7 @@ Execute correções em massa:
 find . -name "*.css" -exec sed -i '' "s/Playfair Display/Plus Jakarta Sans/g" {} \;
 
 2. Corrigir número WhatsApp:
-find . -name "*.html" -exec sed -i '' "s/wa\.me\/[0-9]*/wa.me\/5521977724114/g" {} \;
+find . -name "*.html" -exec sed -i '' "s/wa\.me\/[0-9]*/wa.me\/5521966734346/g" {} \;
 
 3. Relatar o que foi alterado.
 ```

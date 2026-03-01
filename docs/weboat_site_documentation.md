@@ -410,7 +410,7 @@ aluguel de lanchas do Rio de Janeiro, com:
 
 | Elemento | Detalhes |
 |----------|----------|
-| **WhatsApp** | (21) 97772-4114 - Botão flutuante em todas as páginas |
+| **WhatsApp** | (21) 96673-4346 - Botão flutuante em todas as páginas |
 | **Formulário** | Nome, telefone, data, pessoas, mensagem |
 | **E-mail** | contato@weboatbrasil.com.br |
 | **Endereço** | Marina da Glória, Loja 06 - Rio de Janeiro |

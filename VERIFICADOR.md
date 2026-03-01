@@ -55,13 +55,13 @@ grep -rE "#[0-9A-Fa-f]{3,6}" --include="*.css" . | grep -v "variables.css"
 ```bash
 # Verificar número correto
 grep -r "wa.me" --include="*.html" .
-grep -r "97772-4114" --include="*.html" .
+grep -r "96673-4346" --include="*.html" .
 grep -r "whatsapp" --include="*.html" .
 ```
 
 **Regras:**
-- Número: `5521977724114` (sem espaços, traços)
-- Link: `https://wa.me/5521977724114`
+- Número: `5521966734346` (sem espaços, traços)
+- Link: `https://wa.me/5521966734346`
 - Botão flutuante em TODAS as páginas
 - Mensagem contextualizada por página
 
@@ -200,7 +200,7 @@ find . -name "*.css" -exec sed -i '' "s/, serif/, sans-serif/g" {} \;
 
 ### Corrigir número WhatsApp
 ```bash
-find . -name "*.html" -exec sed -i '' "s/wa\.me\/[0-9]*/wa.me\/5521977724114/g" {} \;
+find . -name "*.html" -exec sed -i '' "s/wa\.me\/[0-9]*/wa.me\/5521966734346/g" {} \;
 ```
 
 ### Adicionar alt vazio em imagens sem alt

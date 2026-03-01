@@ -2455,7 +2455,7 @@ P: Como reservar um passeio de lancha no Rio de Janeiro?
 
 R: Reservar seu aluguel de lancha no RJ é simples:
 
-1. Entre em contato pelo WhatsApp (21) 97772-4114
+1. Entre em contato pelo WhatsApp (21) 96673-4346
 2. Informe: data, número de pessoas, ocasião
 3. Receba opções de lancha para alugar
 4. Escolha e pague 50% de sinal
@@ -2789,7 +2789,7 @@ Ponto de encontro para passeio de lancha:
 Cabine de segurança da Marina da Glória
 Procure nosso marinheiro com camisa WeBoat
 
-📞 WhatsApp: (21) 97772-4114
+📞 WhatsApp: (21) 96673-4346
 📧 E-mail: contato@weboatbrasil.com.br
 📸 Instagram: @weboatbrasil
 ```
@@ -2814,7 +2814,7 @@ Reserve seu Passeio de Lancha no Rio de Janeiro
 <title>Contato | Aluguel de Lancha RJ | Reserve seu Passeio de Lancha | WeBoat</title>
 
 <meta name="description" content="Entre em contato para aluguel de lancha no Rio de 
-Janeiro. WhatsApp (21) 97772-4114. Reserve seu passeio de lancha RJ. Marina da 
+Janeiro. WhatsApp (21) 96673-4346. Reserve seu passeio de lancha RJ. Marina da 
 Glória. Resposta rápida e atendimento personalizado.">
 ```
 
@@ -2837,7 +2837,7 @@ para seu aluguel de lancha RJ. Respondemos rapidinho!
 ### Canais
 ```
 📱 WhatsApp - Mais Rápido!
-(21) 97772-4114
+(21) 96673-4346
 Resposta em minutos sobre aluguel de lancha no RJ
 [Chamar no WhatsApp]
 
@@ -2901,7 +2901,7 @@ Aluguel de Lancha no Rio de Janeiro
 Passeios privativos de lancha RJ
 
 📍 Marina da Glória - Loja 06
-📞 (21) 97772-4114
+📞 (21) 96673-4346
 📧 contato@weboatbrasil.com.br
 
 Menu:

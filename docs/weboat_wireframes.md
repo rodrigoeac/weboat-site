@@ -34,7 +34,7 @@
 │                                                                             │
 │  🛥️ WEBOAT                    [FROTA] [ROTEIROS] [SERVIÇOS] [SOBRE] [FAQ]  │
 │     BRASIL                                                                  │
-│                                              📞 (21) 97772-4114  [RESERVAR] │
+│                                              📞 (21) 96673-4346  [RESERVAR] │
 │                                                                             │
 └─────────────────────────────────────────────────────────────────────────────┘
 
@@ -63,7 +63,7 @@ MOBILE (Hamburger Menu):
 │  │              │  │  • Frota     │  │     da Glória│  │  • Privacid. │    │
 │  │  Passeios de │  │  • Roteiros  │  │              │  │              │    │
 │  │  lancha no   │  │  • Serviços  │  │  📞 (21)     │  │              │    │
-│  │  Rio de      │  │  • Sobre     │  │  97772-4114  │  │              │    │
+│  │  Rio de      │  │  • Sobre     │  │  96673-4346  │  │              │    │
 │  │  Janeiro     │  │  • FAQ       │  │              │  │              │    │
 │  │              │  │  • Blog      │  │  📧 contato@ │  │              │    │
 │  │  [IG] [FB]   │  │  • Contato   │  │  weboatbrasil│  │              │    │
@@ -1139,7 +1139,7 @@ MOBILE (Hamburger Menu):
 │  │  │                                │  │      Henrique, S/N         ││   │
 │  │  │                                │  │      Glória, Rio de Janeiro││   │
 │  │  │                                │  │                            ││   │
-│  │  │                                │  │   📞 (21) 97772-4114       ││   │
+│  │  │                                │  │   📞 (21) 96673-4346       ││   │
 │  │  │                                │  │                            ││   │
 │  │  └────────────────────────────────┘  │   [VER NO MAPA]            ││   │
 │  │                                      │                            ││   │
@@ -1332,7 +1332,7 @@ MOBILE (Hamburger Menu):
 │  │                                    │  │                             │   │
 │  │     📱 WHATSAPP                    │  │     📧 E-MAIL               │   │
 │  │                                    │  │                             │   │
-│  │     (21) 97772-4114                │  │     contato@                │   │
+│  │     (21) 96673-4346                │  │     contato@                │   │
 │  │                                    │  │     weboatbrasil.com.br     │   │
 │  │     Resposta em minutos!           │  │                             │   │
 │  │                                    │  │     Respondemos em até      │   │
@@ -1507,7 +1507,7 @@ MOBILE (Hamburger Menu):
 │  ┌─────────────────────┐  │
 │  │                     │  │
 │  │  📱 WHATSAPP       │  │
-│  │  (21) 97772-4114   │  │
+│  │  (21) 96673-4346   │  │
 │  │                     │  │
 │  │  [FALAR AGORA]     │  │
 │  │                     │  │
@@ -1522,7 +1522,7 @@ MOBILE (Hamburger Menu):
 │  Marina da Glória         │
 │  Rio de Janeiro           │
 │                           │
-│  📞 (21) 97772-4114       │
+│  📞 (21) 96673-4346       │
 │                           │
 │  [IG] [FB] [YT]           │
 │                           │

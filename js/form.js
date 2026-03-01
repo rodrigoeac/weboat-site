@@ -120,7 +120,7 @@
       );
 
       // Redireciona para WhatsApp
-      var whatsappNum = (window.WeBoatServicos && window.WeBoatServicos.WHATSAPP_NUMERO) || '5521977724114';
+      var whatsappNum = (window.WeBoatServicos && window.WeBoatServicos.WHATSAPP_NUMERO) || '5521966734346';
       const whatsappUrl = 'https://wa.me/' + whatsappNum + '?text=' + textoWhatsApp;
       window.open(whatsappUrl, '_blank');
 

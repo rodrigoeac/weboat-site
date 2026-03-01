@@ -52,7 +52,7 @@ Todo aluguel inclui:
 
 ### Como funciona a reserva?
 
-1. Entre em contato pelo WhatsApp [(21) 97772-4114](https://wa.me/5521977724114)
+1. Entre em contato pelo WhatsApp [(21) 96673-4346](https://wa.me/5521966734346)
 2. Escolha a lancha e data desejada
 3. Pague um sinal de **50%** para confirmar
 4. O restante deve ser pago até o momento do embarque
