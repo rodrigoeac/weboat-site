@@ -8,8 +8,11 @@ Disallow: /templates/
 Disallow: /docs/
 Disallow: /*.md$
 
-# Sitemap
+# Sitemaps
 Sitemap: https://www.weboatbrasil.com.br/sitemap.xml
+Sitemap: https://www.weboatbrasil.com.br/sitemap-pt.xml
+Sitemap: https://www.weboatbrasil.com.br/sitemap-en.xml
+Sitemap: https://www.weboatbrasil.com.br/sitemap-es.xml
 
 # LLMs.txt (informações estruturadas para IA)
 # https://www.weboatbrasil.com.br/llms.txt

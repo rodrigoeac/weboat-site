@@ -3758,6 +3758,8 @@ const pages = [
 // PT → ES DICTIONARY
 // ═══════════════════════════════════════════════════════════
 const translations = [
+  // --- Schema.org inLanguage ---
+  ['"inLanguage": "pt-BR"', '"inLanguage": "es"'],
   // --- Navigation & UI ---
   ['Pular para o conteúdo', 'Ir al contenido principal'],
   ['Pular para conteúdo', 'Ir al contenido principal'],

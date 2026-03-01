@@ -44,11 +44,11 @@
       <img class="checkout-header__logo" src="/assets/images/logo/logo-white.svg" alt="WeBoat Brasil">
     </a>
     <div class="checkout-lang" id="checkout-lang">
-      <a href="/checkout/" class="checkout-lang__option">
+      <a href="/en/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1E7;&#x1F1F7;</span>
         <span>PT</span>
       </a>
-      <a href="/en/checkout/" class="checkout-lang__option checkout-lang__option--active" aria-current="page">
+      <a href="/en/checkout/" class="checkout-lang__option">
         <span class="checkout-lang__flag" aria-hidden="true">&#x1F1FA;&#x1F1F8;</span>
         <span>EN</span>
       </a>
@@ -157,7 +157,7 @@
 
           <div class="form-group" id="cpf-group">
             <label class="form-label" for="customer-cpf">CPF / CNPJ</label>
-            <input class="form-input" type="text" id="customer-cpf" name="cpf" placeholder="000.000.000-00 or 00.000.000/0000-00" inputmode="numeric" autocomplete="off" aria-describedby="customer-cpf-error">
+            <input class="form-input" type="text" id="customer-cpf" name="cpf" placeholder="000.000.000-00 ou 00.000.000/0000-00" inputmode="numeric" autocomplete="off" aria-describedby="customer-cpf-error">
             <span class="form-error" id="customer-cpf-error"></span>
           </div>
 
@@ -321,60 +321,60 @@
           </div>
           <h2 class="confirmation__title">Reservation Confirmed!</h2>
           <p class="confirmation__subtitle">
-            We sent the confirmation to <strong id="confirmation-email"></strong>
+            Enviamos a confirmacao para <strong id="confirmation-email"></strong>
           </p>
         </div>
 
-        <!-- Reservation summary -->
+        <!-- Resumo da reserva -->
         <div id="confirmation-summary" style="text-align:left; margin-top:var(--space-4);">
           <div class="proposal-summary" style="margin-bottom:var(--space-4);">
             <div class="proposal-summary__row"><span>Boat</span><strong id="conf-boat"></strong></div>
             <div class="proposal-summary__row"><span>Route</span><strong id="conf-route"></strong></div>
-            <div class="proposal-summary__row"><span>Date</span><strong id="conf-date"></strong></div>
-            <div class="proposal-summary__row"><span>Schedule</span><strong id="conf-time"></strong></div>
-            <div class="proposal-summary__row"><span>Guests</span><strong id="conf-people"></strong></div>
+            <div class="proposal-summary__row"><span>Data</span><strong id="conf-date"></strong></div>
+            <div class="proposal-summary__row"><span>Time Slot</span><strong id="conf-time"></strong></div>
+            <div class="proposal-summary__row"><span>Pessoas</span><strong id="conf-people"></strong></div>
           </div>
           <div class="proposal-breakdown" id="conf-breakdown"></div>
         </div>
 
-        <!-- Meeting Point -->
+        <!-- Ponto de Encontro -->
         <div id="conf-meeting-point" style="text-align:left; background:var(--sand); border-radius:var(--radius-lg); padding:var(--space-4); margin-top:var(--space-4);">
-          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Boarding Location</h3>
-          <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin:0 0 var(--space-3); line-height:1.5;">Marina da Gloria — Av. Infante Dom Henrique, S/N, Store 06, Gloria, Rio de Janeiro - RJ</p>
-          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Meeting Point</h3>
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Local de Boarding</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin:0 0 var(--space-3); line-height:1.5;">Marina da Gloria — Av. Infante Dom Henrique, S/N, Loja 06, Gloria, Rio de Janeiro - RJ</p>
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Ponto de Encontro</h3>
           <ol style="font-size:var(--text-body-sm); color:var(--charcoal); margin:0; padding-left:var(--space-4); line-height:1.8;">
-            <li>Upon arrival at the parking area, take the stairs down.</li>
-            <li>To the left of the stairs, find the <strong>security booth</strong> at the Pier entrance.</li>
-            <li>Wait for your boat captain at the meeting point — he will be wearing a <strong>company uniform</strong>.</li>
-            <li>The captain will assist you with boarding.</li>
+            <li>Ao chegar no estacionamento, desca as escadas de acesso.</li>
+            <li>A esquerda das escadas, localize a <strong>cabine de seguranca</strong> na entrada do Pier.</li>
+            <li>Aguarde o comandante — ele estara com <strong>uniforme da empresa</strong>.</li>
+            <li>O comandante auxiliara no seu boarding.</li>
           </ol>
           <a href="https://weboatbrasil.com.br/ponto-de-encontro" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%; margin-top:var(--space-3); text-align:center;">
-            Watch the video: How to get there
+            Assista ao video de como chegar
           </a>
-          <p style="font-size:var(--text-body-sm); color:var(--ocean-deep); font-weight:600; margin:var(--space-3) 0 0; text-align:center;">Please arrive 15 minutes before departure.</p>
+          <p style="font-size:var(--text-body-sm); color:var(--ocean-deep); font-weight:600; margin:var(--space-3) 0 0; text-align:center;">Chegue 15 minutos antes do hourrio do trip.</p>
         </div>
 
-        <!-- What to bring -->
+        <!-- O que trazer -->
         <div style="text-align:left; margin-top:var(--space-4);">
-          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">What to bring</h3>
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">O que trazer</h3>
           <p style="font-size:var(--text-body-sm); color:var(--charcoal); line-height:1.8; margin:0;">
-            Sunscreen (biodegradable preferred)<br>
-            Swimwear + change of clothes<br>
-            Towel<br>
-            Photo ID<br>
-            Motion sickness medication (if needed)
+            Protetor solar (de preferencia biodegradavel)<br>
+            Roupa de banho + troca de roupa<br>
+            Toalha<br>
+            Documento com foto<br>
+            Remedio para seasickness (se necessario)
           </p>
         </div>
 
-        <!-- Actions -->
+        <!-- Acoes -->
         <div class="confirmation__actions" style="margin-top:var(--space-6);">
           <button id="conf-save-btn" class="btn btn-primary" style="width:100%;">
-            <i class="ph ph-file-pdf" aria-hidden="true"></i> Save Reservation (PDF)
+            <i class="ph ph-file-pdf" aria-hidden="true"></i> Salvar Reserva (PDF)
           </button>
           <button id="conf-calendar-btn" class="btn" style="width:100%; margin-top:var(--space-2); background:var(--wave-blue); color:white; border:none;">
-            <i class="ph ph-calendar-plus" aria-hidden="true"></i> Add to Calendar
+            <i class="ph ph-calendar-plus" aria-hidden="true"></i> Adicionar ao Calendario
           </button>
-          <a href="https://wa.me/5521966734346?text=Hello! My reservation was confirmed and I would like more information." class="btn btn-whatsapp" target="_blank" rel="noopener">
+          <a href="https://wa.me/5521966734346?text=Hello! Minha reserva foi confirmada e gostaria de mais informacoes." class="btn btn-whatsapp" target="_blank" rel="noopener">
             <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chat on WhatsApp
           </a>
         </div>
