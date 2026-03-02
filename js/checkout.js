@@ -225,6 +225,10 @@
             var emailEl = document.getElementById('customer-email');
             if (emailEl) emailEl.value = data.customer.email;
         }
+        if (data.customer && data.customer.dataNascimento) {
+            var nascEl = document.getElementById('customer-nascimento');
+            if (nascEl) nascEl.value = data.customer.dataNascimento;
+        }
     }
 
     // ── Events ──
@@ -322,6 +326,7 @@
         var countryCode = phoneCountrySelect ? phoneCountrySelect.value : '+55';
         var phoneDigits = rawPhone.replace(/\D/g, '');
         var phone = phoneDigits ? (countryCode + phoneDigits) : '';
+        var dataNascimento = document.getElementById('customer-nascimento').value;
         var termos = document.getElementById('termos-aceite').checked;
         isEstrangeiro = foreignToggle ? foreignToggle.checked : false;
 
@@ -337,6 +342,11 @@
             hasError = true;
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             showFieldError('customer-email', t('checkoutEmailInvalid', 'Email inválido'));
+            hasError = true;
+        }
+
+        if (!dataNascimento) {
+            showFieldError('customer-nascimento', t('checkoutBirthRequired', 'Data de nascimento obrigatória'));
             hasError = true;
         }
 
@@ -386,7 +396,8 @@
                 passaporte: passaporte || undefined,
                 isEstrangeiro: isEstrangeiro,
                 phone: phone,
-                email: email
+                email: email,
+                dataNascimento: dataNascimento
             })
         })
         .then(function(res) {

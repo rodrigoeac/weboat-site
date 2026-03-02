@@ -91,7 +91,7 @@
         <i class="ph ph-warning-circle" aria-hidden="true"></i>
       </div>
       <h2 class="checkout-error__title">Error</h2>
-      <p class="checkout-error__message">Soundething went wrong.</p>
+      <p class="checkout-error__message">Something went wrong.</p>
       <a href="https://wa.me/5521966734346?text=Hello! I had a problem with the payment link." class="btn btn-whatsapp" target="_blank" rel="noopener">
         <i class="ph ph-whatsapp-logo" aria-hidden="true"></i> Chat on WhatsApp
       </a>
@@ -195,6 +195,12 @@
             <label class="form-label" for="customer-email">Email</label>
             <input class="form-input" type="email" id="customer-email" name="email" required aria-required="true" autocomplete="email" aria-describedby="customer-email-error">
             <span class="form-error" id="customer-email-error"></span>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="customer-nascimento">Date of birth</label>
+            <input class="form-input" type="date" id="customer-nascimento" name="dataNascimento" required aria-required="true" autocomplete="bday" aria-describedby="customer-nascimento-error">
+            <span class="form-error" id="customer-nascimento-error"></span>
           </div>
 
           <div class="checkout-terms">
