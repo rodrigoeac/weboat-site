@@ -342,6 +342,17 @@
           <div class="proposal-breakdown" id="conf-breakdown"></div>
         </div>
 
+        <!-- Upload Documento (cartão de crédito) -->
+        <div id="conf-documento" style="display:none; text-align:left; background:#FFF7ED; border:1px solid #FDBA74; border-radius:var(--radius-lg); padding:var(--space-4); margin-top:var(--space-4);">
+          <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-1);">Envie seu documento</h3>
+          <p style="font-size:var(--text-body-sm); color:var(--driftwood); margin:0 0 var(--space-3); line-height:1.5;">Para pagamentos com cartao, precisamos validar sua identidade. Envie uma foto da sua <strong>CNH</strong> ou <strong>RG</strong>.</p>
+          <input type="file" id="documento-input" accept="image/*,.pdf" style="display:none">
+          <button type="button" id="documento-btn" class="btn btn-primary" style="width:100%;">
+            <i class="ph ph-upload-simple" aria-hidden="true"></i> Selecionar arquivo
+          </button>
+          <div id="documento-status" style="margin-top:var(--space-2); font-size:var(--text-body-sm); color:var(--driftwood);"></div>
+        </div>
+
         <!-- Ponto de Encontro -->
         <div id="conf-meeting-point" style="text-align:left; background:var(--sand); border-radius:var(--radius-lg); padding:var(--space-4); margin-top:var(--space-4);">
           <h3 style="font-family:var(--font-heading); font-size:var(--text-body-lg); color:var(--ocean-deep); margin:0 0 var(--space-2);">Local de Embarque</h3>
@@ -390,7 +401,7 @@
 
   <!-- Scripts -->
   <script src="/js/cpf-validator.js?v=1771304079" defer></script>
-  <script src="/js/checkout.js?v=1771304080" defer></script>
+  <script src="/js/checkout.js?v=1771304081" defer></script>
   <script>
   (function(){var q=location.search;if(q){var links=document.querySelectorAll('#checkout-lang a');links.forEach(function(a){a.href+=q;});}})();
   </script>

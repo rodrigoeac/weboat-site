@@ -665,6 +665,54 @@
             }
         }
 
+        // Document upload section (credit card only)
+        var docSection = document.getElementById('conf-documento');
+        if (docSection && selectedMethod === 'credit_card' && (!data.reserva || !data.reserva.documento_url)) {
+            docSection.style.display = 'block';
+            var docInput = document.getElementById('documento-input');
+            var docBtn = document.getElementById('documento-btn');
+            var docStatus = document.getElementById('documento-status');
+            if (docBtn && docInput) {
+                docBtn.addEventListener('click', function() { docInput.click(); });
+                docInput.addEventListener('change', function() {
+                    var file = docInput.files[0];
+                    if (!file) return;
+                    if (file.size > 10 * 1024 * 1024) {
+                        docStatus.textContent = t('checkoutDocTooLarge', 'Arquivo muito grande (max 10MB)');
+                        docStatus.style.color = '#DC2626';
+                        return;
+                    }
+                    docBtn.disabled = true;
+                    docBtn.textContent = t('checkoutDocUploading', 'Enviando...');
+                    docStatus.textContent = '';
+                    var formData = new FormData();
+                    formData.append('documento', file);
+                    formData.append('tipo', 'identidade');
+                    fetch(API_BASE + '/checkout/' + encodeURIComponent(currentToken) + '/documento', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(function(res) {
+                        if (!res.ok) return res.json().then(function(d) { throw new Error(d.error); });
+                        return res.json();
+                    })
+                    .then(function() {
+                        docSection.style.background = '#F0FDF4';
+                        docSection.style.borderColor = '#86EFAC';
+                        docBtn.style.display = 'none';
+                        docStatus.style.color = '#16A34A';
+                        docStatus.textContent = t('checkoutDocSuccess', 'Documento enviado com sucesso!');
+                    })
+                    .catch(function(err) {
+                        docStatus.textContent = err.message || t('checkoutDocError', 'Erro ao enviar. Tente novamente.');
+                        docStatus.style.color = '#DC2626';
+                        docBtn.disabled = false;
+                        docBtn.innerHTML = '<i class="ph ph-upload-simple" aria-hidden="true"></i> ' + t('checkoutDocRetry', 'Tentar novamente');
+                    });
+                });
+            }
+        }
+
         // Save PDF button
         var saveBtn = document.getElementById('conf-save-btn');
         if (saveBtn) {
