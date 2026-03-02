@@ -410,23 +410,47 @@
   // Captura fbclid/gclid da URL e injeta nos links wa.me ao clicar
   // ============================================
   function initWhatsAppTracking() {
-    // Determinar fonte pela URL atual
     var params = new URLSearchParams(window.location.search);
-    var fbclid = params.get('fbclid');
-    var gclid  = params.get('gclid');
 
-    // Persistir clids na sessão (sobrescreve se chegou novo clique de anúncio)
-    if (fbclid) sessionStorage.setItem('wb_fbclid', fbclid);
-    if (gclid)  sessionStorage.setItem('wb_gclid',  gclid);
+    // Capturar parâmetros de tracking da URL
+    var fbclid     = params.get('fbclid');
+    var gclid      = params.get('gclid');
+    var utmSource  = params.get('utm_source');
+    var utmMedium  = params.get('utm_medium');
+    var utmCampaign = params.get('utm_campaign');
 
-    // Determinar fonte pelo referer + parâmetros
+    // Persistir na sessão (sobrescreve se chegou novo clique)
+    if (fbclid)      sessionStorage.setItem('wb_fbclid', fbclid);
+    if (gclid)       sessionStorage.setItem('wb_gclid',  gclid);
+    if (utmSource)   sessionStorage.setItem('wb_utm_source',  utmSource);
+    if (utmMedium)   sessionStorage.setItem('wb_utm_medium',  utmMedium);
+    if (utmCampaign) sessionStorage.setItem('wb_utm_campaign', utmCampaign);
+
+    // Determinar fonte pela combinação UTM + clids + referrer
     function detectarFonte() {
       var stored = sessionStorage.getItem('wb_fonte');
       if (stored) return stored;
 
+      var src = sessionStorage.getItem('wb_utm_source');
+      var med = sessionStorage.getItem('wb_utm_medium');
+      var isPaid = med && /cpc|paid|ppc/i.test(med);
+
       var fonte = null;
-      if (sessionStorage.getItem('wb_gclid'))        fonte = 'google_ads';
-      else if (sessionStorage.getItem('wb_fbclid'))  fonte = 'meta_ads';
+
+      // 1. UTM explícito (mais confiável)
+      if (src) {
+        if (/google/i.test(src))   fonte = isPaid ? 'google_ads' : 'google_organic';
+        else if (/meta|facebook|instagram|ig|fb/i.test(src)) fonte = isPaid ? 'meta_ads' : 'meta_organic';
+        else fonte = isPaid ? (src + '_ads') : src;
+      }
+      // 2. Click IDs (gclid = sempre ads, fbclid = pode ser orgânico)
+      else if (sessionStorage.getItem('wb_gclid')) {
+        fonte = 'google_ads';
+      }
+      else if (sessionStorage.getItem('wb_fbclid')) {
+        fonte = 'meta';  // fbclid sem UTM = indeterminado (pode ser ad ou orgânico)
+      }
+      // 3. Referrer (último recurso)
       else {
         var ref = document.referrer || '';
         if (/google\./i.test(ref))     fonte = 'google_organic';
@@ -439,7 +463,7 @@
 
     var fonte = detectarFonte();
 
-    // Interceptar cliques em links WhatsApp para injetar tags de tracking
+    // Interceptar cliques em links WhatsApp
     document.addEventListener('click', function(e) {
       var link = e.target.closest('a[href*="wa.me"]');
       if (!link) return;
@@ -451,16 +475,15 @@
       var fbc = sessionStorage.getItem('wb_fbclid');
       var gc  = sessionStorage.getItem('wb_gclid');
 
-      // dataLayer push para GTM capturar (GA4 + Meta Pixel)
+      // dataLayer push para GTM (GA4 + Meta Pixel)
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: 'whatsapp_click',
-        whatsapp_fonte: f || sessionStorage.getItem('wb_fonte') || 'direto',
+        whatsapp_fonte: f || 'direto',
         whatsapp_page: window.location.pathname
       });
 
-      // Beacon para backend ANTES de abrir WhatsApp
-      // Tracking vai pelo beacon (click_tracking table), não mais no texto da mensagem
+      // Beacon para backend (click_tracking table)
       var phoneMatch = href.match(/wa\.me\/(\d+)/);
       var phoneHint = phoneMatch ? phoneMatch[1].slice(-4) : '';
       var gaMatch = document.cookie.match(/_ga=GA\d+\.\d+\.(\d+\.\d+)/);
@@ -473,11 +496,14 @@
             fonte: f || null,
             fbclid: fbc || null,
             gclid: gc || null,
-            ga_client_id: gaClientId
-          })], { type: 'application/json' })
+            ga_client_id: gaClientId,
+            utm_source: sessionStorage.getItem('wb_utm_source') || null,
+            utm_medium: sessionStorage.getItem('wb_utm_medium') || null,
+            utm_campaign: sessionStorage.getItem('wb_utm_campaign') || null
+          })], { type: 'text/plain' })
         );
       }
-    }, true); // capture phase para garantir execução antes do navegador navegar
+    }, true);
   }
 
   // ============================================
