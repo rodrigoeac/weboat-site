@@ -378,6 +378,70 @@
    ============================================ */
 
 /* ============================================
+   INTERNATIONAL VISITORS SECTION
+   ============================================ */
+.international {
+  padding: var(--space-16) 0;
+  background: var(--pearl-gray);
+}
+
+.international__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-6);
+}
+
+.international__card {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: var(--space-8);
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-base);
+}
+
+.international__card:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-4px);
+}
+
+.international__icon {
+  font-size: 2rem;
+  color: var(--wave-blue);
+  margin-bottom: var(--space-4);
+}
+
+.international__card-title {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--ocean-deep);
+  margin-bottom: var(--space-3);
+}
+
+.international__card p {
+  color: var(--charcoal);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 767px) {
+  .international__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .international__card {
+    padding: var(--space-6);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .international__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ============================================
    CTA FINAL SECTION
    ============================================ */
 .cta-final {
