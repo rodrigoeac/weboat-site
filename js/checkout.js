@@ -325,6 +325,11 @@
         var rawPhone = phoneInput ? phoneInput.value.trim() : '';
         var countryCode = phoneCountrySelect ? phoneCountrySelect.value : '+55';
         var phoneDigits = rawPhone.replace(/\D/g, '');
+        // Evitar duplicação de código de país (ex: usuário digita 5521... com seletor em +55)
+        var ccDigits = countryCode.replace(/\D/g, '');
+        if (phoneDigits.startsWith(ccDigits) && phoneDigits.length > 11) {
+            phoneDigits = phoneDigits.substring(ccDigits.length);
+        }
         var phone = phoneDigits ? (countryCode + phoneDigits) : '';
         var dataNascimento = document.getElementById('customer-nascimento').value;
         var termos = document.getElementById('termos-aceite').checked;
@@ -364,7 +369,8 @@
         var cpf = '', passaporte = '';
         if (!isEstrangeiro) {
             cpf = cpfInput ? cpfInput.value.trim() : '';
-            if (!validarCPFouCNPJ(cpf)) {
+            // CPF opcional no step 1 — será pedido no step 2 se PIX for selecionado
+            if (cpf && !validarCPFouCNPJ(cpf)) {
                 showFieldError('customer-cpf', t('checkoutCpfInvalid', 'CPF ou CNPJ inválido'));
                 hasError = true;
             }
@@ -435,7 +441,10 @@
         paymentStarted = true;
         payBtn.disabled = true;
         payBtn.textContent = t('checkoutProcessing', 'Processando...');
+        doPayment();
+    }
 
+    function doPayment() {
         var payBody = { metodo: selectedMethod };
 
         fetch(API_BASE + '/checkout/' + encodeURIComponent(currentToken) + '/pay', {
@@ -448,10 +457,12 @@
             return res.json();
         })
         .then(function(data) {
-            if (selectedMethod === 'pix') {
+            if (selectedMethod === 'pix' && data.pixManual) {
+                showPixManual(data.pixManual);
+            } else if (selectedMethod === 'pix') {
                 showPixPayment(data.pix);
             } else if (selectedMethod === 'zelle') {
-                showZelleInstructions();
+                showZelleInstructions(data.zelle);
             } else if (data.redirectUrl) {
                 window.location.href = data.redirectUrl;
             }
@@ -494,22 +505,55 @@
         startPolling();
     }
 
-    function showZelleInstructions() {
+    function showZelleInstructions(zelleData) {
         document.getElementById('method-selection').style.display = 'none';
         if (zelleSection) {
             zelleSection.style.display = 'block';
 
             var zelleAmountEl = document.getElementById('zelle-amount');
-            if (zelleAmountEl && checkoutData && checkoutData.preco) {
-                var brlAmount = checkoutData.preco.valorEntrada;
-                var html = '<p style="margin-top:var(--space-3);"><strong>Amount due: R$ ' + formatCurrency(brlAmount) + '</strong></p>';
-                if (usdRate && usdRate > 0) {
-                    var usdAmount = Math.ceil((brlAmount / usdRate) * 100) / 100;
-                    html += '<p style="font-size:var(--text-body-sm); color:var(--driftwood);">Approximately <strong>US$ ' + usdAmount.toFixed(2) + '</strong> at today\'s rate (1 USD = R$ ' + usdRate.toFixed(2) + ')</p>';
+            if (zelleAmountEl) {
+                var html = '';
+                if (zelleData && zelleData.valorUSD) {
+                    // Use backend-calculated values (with spread applied)
+                    html += '<p style="margin-top:var(--space-3);"><strong>Amount due: US$ ' + zelleData.valorUSD.toFixed(2) + '</strong></p>';
+                    html += '<p style="font-size:var(--text-body-sm); color:var(--driftwood);">R$ ' + formatCurrency(zelleData.valorBRL) + ' at 1 USD = R$ ' + zelleData.cotacao.toFixed(2) + '</p>';
+                } else if (checkoutData && checkoutData.preco) {
+                    // Fallback to frontend rate
+                    var brlAmount = checkoutData.preco.valorEntrada;
+                    html += '<p style="margin-top:var(--space-3);"><strong>Amount due: R$ ' + formatCurrency(brlAmount) + '</strong></p>';
+                    if (usdRate && usdRate > 0) {
+                        var usdAmount = Math.ceil((brlAmount / usdRate) * 100) / 100;
+                        html += '<p style="font-size:var(--text-body-sm); color:var(--driftwood);">Approximately US$ ' + usdAmount.toFixed(2) + ' at 1 USD = R$ ' + usdRate.toFixed(2) + '</p>';
+                    }
                 }
                 zelleAmountEl.innerHTML = html;
             }
         }
+
+        startPolling();
+    }
+
+    function showPixManual(pixData) {
+        document.getElementById('method-selection').style.display = 'none';
+        var section = document.getElementById('pix-manual-section');
+        if (!section) {
+            // Create section dynamically
+            section = document.createElement('div');
+            section.id = 'pix-manual-section';
+            section.className = 'zelle-instructions';
+            var methodSelection = document.getElementById('method-selection');
+            methodSelection.parentNode.insertBefore(section, methodSelection.nextSibling);
+        }
+        section.style.display = 'block';
+        section.innerHTML = '<div class="zelle-instructions__title">' + t('checkoutPixManualTitle', 'PIX Manual') + '</div>'
+            + '<p>' + t('checkoutPixManualDesc', 'Envie o pagamento via PIX para:') + '</p>'
+            + '<p class="zelle-info"><strong>contato@weboatbrasil.com.br</strong></p>'
+            + '<p style="font-size:var(--text-caption); color:var(--driftwood);">' + t('checkoutPixManualKeyType', 'Chave PIX: Email') + '</p>'
+            + '<p class="zelle-info" style="margin-top:var(--space-3);"><strong>' + t('checkoutPixManualBeneficiary', 'Beneficiário') + ': WeBoat Brasil</strong></p>'
+            + '<div class="zelle-amount"><p style="margin-top:var(--space-3);"><strong>' + t('checkoutPixManualAmount', 'Valor') + ': R$ ' + formatCurrency(pixData.valor) + '</strong></p></div>'
+            + '<p style="margin-top:var(--space-3); color:var(--driftwood); font-size:var(--text-caption);">'
+            + t('checkoutPixManualNote', 'Após o pagamento, envie o comprovante pelo WhatsApp. Sua reserva será confirmada em até 24h úteis após a confirmação do pagamento.')
+            + '</p>';
 
         startPolling();
     }
@@ -1081,6 +1125,8 @@
             if (methodSelection) methodSelection.style.display = 'block';
             if (pixSection) pixSection.style.display = 'none';
             if (zelleSection) zelleSection.style.display = 'none';
+            var pixManualSection = document.getElementById('pix-manual-section');
+            if (pixManualSection) pixManualSection.style.display = 'none';
             // Reset payment state
             selectedMethod = null;
             if (payBtn) {
