@@ -433,13 +433,13 @@
 
       var src = sessionStorage.getItem('wb_utm_source');
       var med = sessionStorage.getItem('wb_utm_medium');
-      var isPaid = med && /cpc|paid|ppc/i.test(med);
+      var isPaid = med && /cpc|paid|ppc|trafegopago|pago/i.test(med);
 
       var fonte = null;
 
       // 1. UTM explícito (mais confiável)
       if (src) {
-        if (/google/i.test(src))   fonte = isPaid ? 'google_ads' : 'google_organic';
+        if (/google/i.test(src))   fonte = (isPaid || sessionStorage.getItem('wb_gclid')) ? 'google_ads' : 'google_organic';
         else if (/meta|facebook|instagram|ig|fb/i.test(src)) fonte = isPaid ? 'meta_ads' : 'meta_organic';
         else fonte = isPaid ? (src + '_ads') : src;
       }
